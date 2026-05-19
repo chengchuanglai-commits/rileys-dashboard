@@ -54,7 +54,6 @@ save_tool = {
                     "required": ["ticker", "name", "sector", "direction", "buy_zone", "target", "stop_loss", "reason"]
                 }
             },
-            "api_cost_usd": {"type": "number"}
         },
         "required": ["market", "note", "stock_picks"]
     }
@@ -65,7 +64,7 @@ def call_with_retry(max_attempts=5):
         try:
             return client.messages.create(
                 model="claude-sonnet-4-6",
-                max_tokens=4096,
+                max_tokens=8000,
                 tools=[
                     {"type": "web_search_20250305", "name": "web_search"},
                     save_tool
