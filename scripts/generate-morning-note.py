@@ -63,15 +63,15 @@ def call_with_retry(max_attempts=5):
     for attempt in range(max_attempts):
         try:
             return client.messages.create(
-                model="claude-sonnet-4-6",
-                max_tokens=8000,
+                model="claude-haiku-4-5-20251001",
+                max_tokens=4096,
                 tools=[
-                    {"type": "web_search_20250305", "name": "web_search"},
+                    {"type": "web_search_20250305", "name": "web_search", "max_uses": 3},
                     save_tool
                 ],
                 messages=[{
                     "role": "user",
-                    "content": f"今天是{today}。请用web_search搜索美股最新数据：①S&P500期货涨跌幅 ②10年期美债收益率及今日变化bps ③财报季EPS超预期率 ④来自科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF这10个不同板块各一支值得关注的股票（共10支）。全部搜索完成后，调用save_morning_note工具一次性保存所有数据，note和reason字段必须用中文。"
+                    "content": f"今天是{today}。请用web_search搜索：①今日美股市场概览（S&P500期货涨跌幅、10年期美债收益率及变化bps、财报季EPS超预期率） ②今日各板块值得关注的股票（科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF，每板块1支共10支）。搜索完成后调用save_morning_note工具保存，note和reason字段用中文。"
                 }]
             )
         except anthropic.RateLimitError:
@@ -113,10 +113,10 @@ for pick in picks:
     if pick.get("direction") not in ("buy", "sell", "watch"):
         pick["direction"] = "watch"
 
-# Calculate API cost (claude-sonnet-4-6 pricing)
+# Calculate API cost (claude-haiku-4-5 pricing: $0.80/MTok in, $4/MTok out)
 usage = response.usage
-input_cost  = usage.input_tokens  * 3.0  / 1_000_000
-output_cost = usage.output_tokens * 15.0 / 1_000_000
+input_cost  = usage.input_tokens  * 0.8 / 1_000_000
+output_cost = usage.output_tokens * 4.0 / 1_000_000
 data["api_cost_usd"] = round(input_cost + output_cost, 4)
 print(f"[debug] tokens in={usage.input_tokens} out={usage.output_tokens} cost=${data['api_cost_usd']}")
 
