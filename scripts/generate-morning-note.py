@@ -39,8 +39,6 @@ save_tool = {
             },
             "stock_picks": {
                 "type": "array",
-                "minItems": 5,
-                "maxItems": 5,
                 "items": {
                     "type": "object",
                     "properties": {
@@ -101,12 +99,17 @@ data["date"] = today
 data["generated_at"] = generated_at
 data["market_status"] = "pre-market"
 
-# Validate
+# Validate and fix stock_picks type (model sometimes returns JSON string instead of array)
 if "stock_picks" not in data:
     raise ValueError(f"stock_picks missing. Got keys: {list(data.keys())}")
-if len(data["stock_picks"]) != 5:
-    raise ValueError(f"Expected 5 picks, got {len(data['stock_picks'])}")
-for pick in data["stock_picks"]:
+picks = data["stock_picks"]
+if isinstance(picks, str):
+    picks = json.loads(picks)
+    data["stock_picks"] = picks
+print(f"[debug] stock_picks count: {len(picks)}, type: {type(picks)}")
+if len(picks) != 5:
+    raise ValueError(f"Expected 5 picks, got {len(picks)}")
+for pick in picks:
     if pick.get("direction") not in ("buy", "sell", "watch"):
         pick["direction"] = "watch"
 
