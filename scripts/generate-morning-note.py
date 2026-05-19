@@ -53,7 +53,8 @@ save_tool = {
                     },
                     "required": ["ticker", "name", "sector", "direction", "buy_zone", "target", "stop_loss", "reason"]
                 }
-            }
+            },
+            "api_cost_usd": {"type": "number"}
         },
         "required": ["market", "note", "stock_picks"]
     }
@@ -71,7 +72,7 @@ def call_with_retry(max_attempts=5):
                 ],
                 messages=[{
                     "role": "user",
-                    "content": f"今天是{today}。请用web_search搜索美股最新数据：①S&P500期货涨跌幅 ②10年期美债收益率及今日变化bps ③财报季EPS超预期率 ④科技/能源/医疗/消费/固收各一支值得关注的股票（共5支）。全部搜索完成后，调用save_morning_note工具一次性保存所有数据，note和reason字段必须用中文。"
+                    "content": f"今天是{today}。请用web_search搜索美股最新数据：①S&P500期货涨跌幅 ②10年期美债收益率及今日变化bps ③财报季EPS超预期率 ④来自科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF这10个不同板块各一支值得关注的股票（共10支）。全部搜索完成后，调用save_morning_note工具一次性保存所有数据，note和reason字段必须用中文。"
                 }]
             )
         except anthropic.RateLimitError:
@@ -107,11 +108,18 @@ if isinstance(picks, str):
     picks = json.loads(picks)
     data["stock_picks"] = picks
 print(f"[debug] stock_picks count: {len(picks)}, type: {type(picks)}")
-if len(picks) != 5:
-    raise ValueError(f"Expected 5 picks, got {len(picks)}")
+if len(picks) != 10:
+    raise ValueError(f"Expected 10 picks, got {len(picks)}")
 for pick in picks:
     if pick.get("direction") not in ("buy", "sell", "watch"):
         pick["direction"] = "watch"
+
+# Calculate API cost (claude-sonnet-4-6 pricing)
+usage = response.usage
+input_cost  = usage.input_tokens  * 3.0  / 1_000_000
+output_cost = usage.output_tokens * 15.0 / 1_000_000
+data["api_cost_usd"] = round(input_cost + output_cost, 4)
+print(f"[debug] tokens in={usage.input_tokens} out={usage.output_tokens} cost=${data['api_cost_usd']}")
 
 # Write morning-note.js
 js_content = (
