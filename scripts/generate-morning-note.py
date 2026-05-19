@@ -1,9 +1,10 @@
 import anthropic
 import json
 import os
+import time
 from datetime import datetime, timezone, timedelta
 
-client = anthropic.Anthropic()
+client = anthropic.Anthropic(max_retries=5)
 
 beijing_tz = timezone(timedelta(hours=8))
 now_beijing = datetime.now(beijing_tz)
@@ -60,33 +61,30 @@ save_tool = {
     }
 }
 
-response = client.messages.create(
-    model="claude-sonnet-4-6",
-    max_tokens=4096,
-    tools=[
-        {"type": "web_search_20250305", "name": "web_search"},
-        save_tool
-    ],
-    tool_choice={"type": "any"},
-    messages=[{
-        "role": "user",
-        "content": f"""今天是 {today}。请搜索当日最新的美股市场数据，然后调用 save_morning_note 工具保存金融晨报。
+def call_with_retry(max_attempts=5):
+    for attempt in range(max_attempts):
+        try:
+            return client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=2048,
+                tools=[
+                    {"type": "web_search_20250305", "name": "web_search"},
+                    save_tool
+                ],
+                tool_choice={"type": "any"},
+                messages=[{
+                    "role": "user",
+                    "content": f"今天是{today}。搜索美股最新数据：S&P500期货涨跌幅、10年期美债收益率及变化bps、财报季EPS超预期率，以及来自科技/能源/医疗/消费/固收5个板块各一支值得关注的股票。搜索完成后调用save_morning_note工具，所有note和reason字段用中文。"
+                }]
+            )
+        except anthropic.RateLimitError as e:
+            if attempt == max_attempts - 1:
+                raise
+            wait = 60 * (attempt + 1)
+            print(f"Rate limit hit, waiting {wait}s before retry {attempt + 2}/{max_attempts}...")
+            time.sleep(wait)
 
-搜索内容：
-1. S&P 500 期货今日涨跌幅（百分比）
-2. 10年期美债收益率及今日变化（单位bps）
-3. 当前财报季 EPS 超预期率（%）
-4. 今日全市场5支值得关注的股票，覆盖科技、能源、医疗、消费、固收不同板块
-
-要求：
-- stock_picks 恰好5支，覆盖上述5个不同板块各一支
-- direction 只能是 buy、sell、watch 之一
-- 所有 note 和 reason 字段用中文，对投资新手友好
-- market 中的数字使用真实搜索数据
-- generated_at 为 {generated_at}
-"""
-    }]
-)
+response = call_with_retry()
 
 # Extract tool_use block for save_morning_note
 data = None
