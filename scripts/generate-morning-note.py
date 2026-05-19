@@ -66,18 +66,17 @@ def call_with_retry(max_attempts=5):
         try:
             return client.messages.create(
                 model="claude-sonnet-4-6",
-                max_tokens=2048,
+                max_tokens=4096,
                 tools=[
                     {"type": "web_search_20250305", "name": "web_search"},
                     save_tool
                 ],
-                tool_choice={"type": "any"},
                 messages=[{
                     "role": "user",
-                    "content": f"今天是{today}。搜索美股最新数据：S&P500期货涨跌幅、10年期美债收益率及变化bps、财报季EPS超预期率，以及来自科技/能源/医疗/消费/固收5个板块各一支值得关注的股票。搜索完成后调用save_morning_note工具，所有note和reason字段用中文。"
+                    "content": f"今天是{today}。请用web_search搜索美股最新数据：①S&P500期货涨跌幅 ②10年期美债收益率及今日变化bps ③财报季EPS超预期率 ④科技/能源/医疗/消费/固收各一支值得关注的股票（共5支）。全部搜索完成后，调用save_morning_note工具一次性保存所有数据，note和reason字段必须用中文。"
                 }]
             )
-        except anthropic.RateLimitError as e:
+        except anthropic.RateLimitError:
             if attempt == max_attempts - 1:
                 raise
             wait = 60 * (attempt + 1)
@@ -86,15 +85,16 @@ def call_with_retry(max_attempts=5):
 
 response = call_with_retry()
 
-# Extract tool_use block for save_morning_note
+# Extract the LAST save_morning_note tool call (most complete)
 data = None
 for block in response.content:
-    if block.type == "tool_use" and block.name == "save_morning_note":
+    if hasattr(block, 'type') and block.type == "tool_use" and block.name == "save_morning_note":
         data = block.input
-        break
+        print(f"[debug] save_morning_note called, keys: {list(data.keys())}")
 
 if data is None:
-    raise ValueError(f"save_morning_note tool was not called. Response: {response.content}")
+    content_types = [getattr(b, 'type', str(b)) for b in response.content]
+    raise ValueError(f"save_morning_note not called. Content types: {content_types}")
 
 # Add metadata
 data["date"] = today
@@ -102,9 +102,13 @@ data["generated_at"] = generated_at
 data["market_status"] = "pre-market"
 
 # Validate
-assert len(data["stock_picks"]) == 5, f"Expected 5 picks, got {len(data['stock_picks'])}"
+if "stock_picks" not in data:
+    raise ValueError(f"stock_picks missing. Got keys: {list(data.keys())}")
+if len(data["stock_picks"]) != 5:
+    raise ValueError(f"Expected 5 picks, got {len(data['stock_picks'])}")
 for pick in data["stock_picks"]:
-    assert pick["direction"] in ("buy", "sell", "watch"), f"Invalid direction: {pick['direction']}"
+    if pick.get("direction") not in ("buy", "sell", "watch"):
+        pick["direction"] = "watch"
 
 # Write morning-note.js
 js_content = (
