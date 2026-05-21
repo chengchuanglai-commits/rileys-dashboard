@@ -120,6 +120,37 @@ output_cost = usage.output_tokens * 4.0 / 1_000_000
 data["api_cost_usd"] = round(input_cost + output_cost, 4)
 print(f"[debug] tokens in={usage.input_tokens} out={usage.output_tokens} cost=${data['api_cost_usd']}")
 
+# Calculate cumulative cost from history files
+history_dir = "dashboard/morning-note-history"
+os.makedirs(history_dir, exist_ok=True)
+cumulative = 0.0
+day_costs = []
+for fname in sorted(os.listdir(history_dir)):
+    if fname.endswith(".json") and fname != f"{today}.json":
+        try:
+            with open(os.path.join(history_dir, fname)) as fh:
+                h = json.load(fh)
+                c = h.get("api_cost_usd", 0) or 0
+                cumulative += c
+                day_costs.append(c)
+        except Exception:
+            pass
+cumulative += data["api_cost_usd"]
+day_costs.append(data["api_cost_usd"])
+avg_daily = sum(day_costs[-7:]) / max(len(day_costs[-7:]), 1)  # 7-day avg
+
+budget = float(os.environ.get("ANTHROPIC_BUDGET_USD", "20"))
+remaining = max(budget - cumulative, 0)
+days_left = int(remaining / avg_daily) if avg_daily > 0 else 999
+
+data["budget_usd"] = budget
+data["cumulative_cost_usd"] = round(cumulative, 4)
+data["avg_daily_cost_usd"] = round(avg_daily, 4)
+data["estimated_days_left"] = days_left
+data["balance_warning"] = days_left <= 7
+
+print(f"[budget] cumulative=${cumulative:.4f} avg_daily=${avg_daily:.4f} days_left={days_left} warning={data['balance_warning']}")
+
 # Write morning-note.js
 js_content = (
     "// 金融晨报数据 — 每日 07:30 自动更新\n"

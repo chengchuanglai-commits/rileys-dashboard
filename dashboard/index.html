@@ -346,6 +346,11 @@
         .mn-num-val { font-size:11px; font-weight:600; color:#111; }
         .mn-reason { font-size:10px; color:#888; padding-top:8px; border-top:1px solid #eee; line-height:1.5; }
         .mn-empty { color:#999; font-size:12px; text-align:center; padding:20px 0; }
+        .mn-budget-warn { display:none; background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:10px 14px; margin-bottom:12px; }
+        .mn-budget-warn.visible { display:flex; align-items:center; gap:10px; }
+        .mn-budget-warn-text { font-size:11px; color:#dc2626; font-weight:600; flex:1; }
+        .mn-budget-ok { display:none; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:8px 14px; margin-bottom:12px; }
+        .mn-budget-ok.visible { display:flex; align-items:center; gap:8px; font-size:10px; color:#16a34a; }
 
         /* ── Responsive ──────────────────────────── */
         @media (max-width:1100px) { .col-3 { grid-template-columns:1fr 1fr; } }
@@ -648,6 +653,15 @@
                     <button onclick="loadMorningNote()" style="background:none;border:none;color:#ccc;cursor:pointer;font-size:14px;padding:2px" title="刷新" onmouseover="this.style.color='#666'" onmouseout="this.style.color='#ccc'">↻</button>
                 </div>
             </div>
+            <!-- Budget warning banner -->
+            <div id="mn-budget-warn" class="mn-budget-warn">
+                <span style="font-size:18px">⚠️</span>
+                <span class="mn-budget-warn-text" id="mn-budget-warn-text">API 余额不足，请尽快充值</span>
+                <a href="https://console.anthropic.com/settings/billing" target="_blank" style="background:#dc2626;color:#fff;padding:4px 12px;border-radius:6px;font-size:10px;font-weight:700;text-decoration:none;white-space:nowrap">立即充值 →</a>
+            </div>
+            <div id="mn-budget-ok" class="mn-budget-ok">
+                <span>✓</span><span id="mn-budget-ok-text">余额充足</span>
+            </div>
             <div style="display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start">
                 <!-- Left: Key Numbers -->
                 <div style="border-right:1px solid #f0f0f0;padding-right:20px">
@@ -671,7 +685,7 @@
                         <div class="mn-key-card">
                             <div class="mn-key-lbl">今日 API 费用</div>
                             <div id="mn-cost-val" class="mn-key-val" style="font-size:16px">—</div>
-                            <div class="mn-key-sub"><a href="https://console.anthropic.com/settings/billing" target="_blank" style="color:#6366f1;text-decoration:none;font-weight:600">💳 充值 →</a></div>
+                            <div id="mn-cost-sub" class="mn-key-sub">预估剩余 — 天</div>
                         </div>
                     </div>
                 </div>
@@ -2056,6 +2070,24 @@ function renderMorningNote(d) {
     if (costEl && d.api_cost_usd != null) {
         costEl.textContent = '$' + d.api_cost_usd.toFixed(4);
         costEl.style.color = d.api_cost_usd > 0.1 ? '#dc2626' : '#111';
+    }
+    const costSub = document.getElementById('mn-cost-sub');
+    if (costSub && d.estimated_days_left != null) {
+        costSub.textContent = `预估剩余 ${d.estimated_days_left} 天`;
+        costSub.style.color = d.estimated_days_left <= 7 ? '#dc2626' : '#bbb';
+    }
+
+    // Budget warning banner
+    const warnEl  = document.getElementById('mn-budget-warn');
+    const warnTxt = document.getElementById('mn-budget-warn-text');
+    const okEl    = document.getElementById('mn-budget-ok');
+    const okTxt   = document.getElementById('mn-budget-ok-text');
+    if (d.balance_warning) {
+        if (warnEl) warnEl.classList.add('visible');
+        if (warnTxt) warnTxt.textContent = `⚠️ API 余额仅剩约 ${d.estimated_days_left} 天，请尽快充值（已累计消耗 $${d.cumulative_cost_usd?.toFixed(2) || '?'}）`;
+    } else if (d.estimated_days_left != null) {
+        if (okEl) okEl.classList.add('visible');
+        if (okTxt) okTxt.textContent = `余额充足，预估还可使用 ${d.estimated_days_left} 天（累计已消耗 $${d.cumulative_cost_usd?.toFixed(2) || '?'}）`;
     }
 
     // Right: note sections

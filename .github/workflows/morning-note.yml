@@ -27,6 +27,7 @@ jobs:
       - name: Generate morning note
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BUDGET_USD: "20"
         run: python scripts/generate-morning-note.py
 
       - name: Commit and push
