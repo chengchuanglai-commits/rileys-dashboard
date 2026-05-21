@@ -1,5 +1,4 @@
-// 金融晨报数据 — 每日 07:30 自动更新
-window.MORNING_NOTE = {
+{
   "market": {
     "sp500_futures_pct": -0.1,
     "treasury_10y": 4.67,
@@ -118,4 +117,4 @@ window.MORNING_NOTE = {
   "generated_at": "2026-05-21T13:42:00",
   "market_status": "pre-market",
   "api_cost_usd": 0.0409
-};
+}
