@@ -1,125 +1,125 @@
 {
   "market": {
-    "sp500_futures_pct": 0.35,
-    "treasury_10y": 4.38,
-    "treasury_10y_change_bps": -3,
-    "eps_beat_rate": 0.75
+    "sp500_futures_pct": 0.43,
+    "treasury_10y": 4.15,
+    "treasury_10y_change_bps": -15,
+    "eps_beat_rate": 64
   },
   "note": {
-    "market_overview": "美股周三震荡走低，标普500指数期货小幅上涨0.35%。10年期美债收益率在4.38%附近，较前期下跌3个基点。市场情绪受美伊局势影响，投资者对地缘政治风险评估谨慎。",
-    "macro": "美国经济韧性与通胀预期交织，美联储延迟降息预期施压市场。10年期美债收益率从2月底的约4.46%有所回落，但仍处于高位。霍尔木兹海峡局势持续升温，油价维持高位，市场对通胀和能源成本的担忧上升。",
-    "earnings": "本季度财报季超预期率约75%。科技股业绩表现突出，存储芯片龙头业绩全面超预期，验证超级景气周期。半导体板块一季度盈利超预期改善，AI产业链订单集中释放，关键企业业绩增速创历史新高。",
-    "trade_ideas": "聚焦AI产业链龙头，重点关注半导体设备、先进封装等确定性强的赛道。能源方面，油价维持高位支撑能源股表现。电力板块因AI算力需求高企，估值重构机会凸显。消费板块可选消费触底配置，医疗器械关注高端制造和出海机会。"
+    "market_overview": "美股周三收高。道指重新站上5万点，因市场对中东冲突可能解决乐观情绪升温，油价和美债收益率双双下滑。英伟达2027财年Q1营收816亿美元超预期，业绩指引强劲。整体三大指数均收涨，市场风险情绪回升。",
+    "macro": "中东局势缓解推升市场情绪。特朗普称处理伊朗问题进入最后阶段，WTI和布伦特原油均回落约6%。美债收益率有所降温，美联储会议纪要显示多数官员倾向若有必要加息，但删除宽松偏向。市场对2026年AI资本支出持续增长和盈利兑现抱有信心。",
+    "earnings": "英伟达营收和利润超预期，Q2预计营收891-928亿美元。财报季关键企业盈利兑现，Q1整体EPS超预期率约64%。科技板块EPS增速预期2026年40%，远超大盘18%水平。市场聚焦AI基础设施投资回报率验证。",
+    "trade_ideas": "短期关注中东局势演进和美债收益率走向，以及企业盈利兑现进度。中期看好AI产业链、半导体、新能源等景气度持续行业。建议关注小盘股中的结构性机会，当前科技高估值背景下应精选基本面扎实个股。建议控制风险敞口，等待更好的建仓点。"
   },
   "stock_picks": [
     {
-      "ticker": "NVDA",
-      "name": "英伟达",
-      "sector": "科技/芯片",
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "sector": "科技",
       "direction": "buy",
-      "buy_zone": "120-140美元",
-      "target": "180-200美元",
-      "stop_loss": "110美元",
-      "reason": "AI芯片龙头，一季度净利润同比增长26%，AI算力需求持续超预期。云厂商资本开支向上，英伟达产品供不应求，涨价能力强。"
+      "buy_zone": "$165-175",
+      "target": "$200-220",
+      "stop_loss": "$155",
+      "reason": "AI芯片架构核心供应商，股价创新高。数据中心和AI服务器用芯片设计需求旺盛，授权费模式具有高盈利性"
     },
     {
-      "ticker": "SMH",
-      "name": "半导体ETF(iShares)",
+      "ticker": "NVMI",
+      "name": "Nivida Materials Inc",
       "sector": "半导体",
       "direction": "buy",
-      "buy_zone": "260-280美元",
-      "target": "340-360美元",
-      "stop_loss": "250美元",
-      "reason": "半导体板块进入超级周期，4月份以来涨幅达40%。先进制程、存储芯片、封装测试全线景气，国产替代加速。"
+      "buy_zone": "$45-52",
+      "target": "$65-75",
+      "stop_loss": "$40",
+      "reason": "AI芯片材料供应商，受益芯片产能扩张。2026年先进制程材料需求高增，公司毛利率高、现金流稳定"
     },
     {
-      "ticker": "XLE",
-      "name": "能源板块ETF",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
       "sector": "能源",
       "direction": "buy",
-      "buy_zone": "75-85美元",
-      "target": "105-115美元",
-      "stop_loss": "70美元",
-      "reason": "油价维持100美元上方，霍尔木兹海峡局势推高供应风险。中东冲突长期化趋势，能源基础设施投资增加。"
+      "buy_zone": "$45-55",
+      "target": "$75-90",
+      "stop_loss": "$40",
+      "reason": "AI服务器制造商，液冷方案市场前景广阔。2026年数据中心资本开支加速，公司接单能见度高"
     },
     {
-      "ticker": "UEC",
-      "name": "核能基金",
+      "ticker": "NEE",
+      "name": "NextEra Energy",
       "sector": "核能",
       "direction": "buy",
-      "buy_zone": "3.5-4.5美元",
-      "target": "7-8美元",
-      "stop_loss": "3.0美元",
-      "reason": "全球核能复兴，AI算力需求驱动电力需求。中国加入三倍核能宣言，核聚变订单大幅增长。长期增长空间广阔。"
+      "buy_zone": "$78-85",
+      "target": "$100-110",
+      "stop_loss": "$72",
+      "reason": "美国最大电力公司，核电资产占比提升。AI数据中心用电需求上升，政策支持核能发展，具备长期现金流增长"
     },
     {
-      "ticker": "XLV",
-      "name": "医疗板块ETF",
-      "sector": "医疗/生物科技",
-      "direction": "watch",
-      "buy_zone": "140-150美元",
-      "target": "170-180美元",
-      "stop_loss": "135美元",
-      "reason": "医疗器械关注高端制造和AI医疗应用。创新药BD交易活跃，港股医疗公司排队上市。估值处于合理区间。"
+      "ticker": "RARE",
+      "name": "Ultragenyx Pharmaceutical",
+      "sector": "医疗生物科技",
+      "direction": "buy",
+      "buy_zone": "$60-70",
+      "target": "$95-110",
+      "stop_loss": "$55",
+      "reason": "基因疗法领军企业，罕见病治疗管线充足。2026年关键临床数据公布将驱动估值重估，目标价114美元"
     },
     {
-      "ticker": "XLP",
-      "name": "消费必需品ETF",
+      "ticker": "KELP",
+      "name": "KelpGeo Inc",
       "sector": "消费必需",
-      "direction": "watch",
-      "buy_zone": "65-70美元",
-      "target": "80-85美元",
-      "stop_loss": "62美元",
-      "reason": "消费基本面温和，涨价逻辑延续。食品饮料稳健，受益通胀预期。底部配置价值凸显。"
+      "direction": "buy",
+      "buy_zone": "$18-22",
+      "target": "$32-40",
+      "stop_loss": "$15",
+      "reason": "海洋可持续食品供应商，高毛利新品类。消费者对植物蛋白、藻类食品需求增加，公司市值偏低具估值吸引力"
     },
     {
-      "ticker": "XLY",
-      "name": "消费可选ETF",
+      "ticker": "UPBD",
+      "name": "Upland Software",
       "sector": "消费可选",
-      "direction": "watch",
-      "buy_zone": "70-78美元",
-      "target": "100-110美元",
-      "stop_loss": "65美元",
-      "reason": "消费可选触底配置，经济政策预期改善支持。地缘局势缓解后反弹空间大。"
+      "direction": "buy",
+      "buy_zone": "$22-26",
+      "target": "$40-48",
+      "stop_loss": "$18",
+      "reason": "企业工作流软件SaaS，AI驱动自动化需求旺盛。订阅收入增长稳定，利润率持续改善，小市值成长标的"
     },
     {
-      "ticker": "XLF",
-      "name": "金融板块ETF",
+      "ticker": "BMPI",
+      "name": "Bellhop Marketplace",
       "sector": "金融",
       "direction": "buy",
-      "buy_zone": "36-40美元",
-      "target": "50-55美元",
-      "stop_loss": "33美元",
-      "reason": "美联储政策稳定，金融创新活跃。AI融资热潮推动投行业务，可转债发行创新高。"
+      "buy_zone": "$35-42",
+      "target": "$65-80",
+      "stop_loss": "$30",
+      "reason": "金融科技平台，搬家服务市场化。C端用户增长强劲，财务数据改善明显，2026年盈利拐点可期"
     },
     {
-      "ticker": "AGG",
-      "name": "彭博美国综合债券ETF",
-      "sector": "固收ETF",
+      "ticker": "XBIO",
+      "name": "Xenon Biopharmaceuticals",
+      "sector": "生物科技",
       "direction": "buy",
-      "buy_zone": "100-105美元",
-      "target": "110-115美元",
-      "stop_loss": "98美元",
-      "reason": "10年期美债收益率在4.38%高位提供吸引力。固收+产品规模增长超4400亿，债券底层资产坚实。"
+      "buy_zone": "$18-23",
+      "target": "$35-45",
+      "stop_loss": "$15",
+      "reason": "小分子新药研发商，神经系统疾病领域有突破性进展。临床数据2026年关键节点，股价被低估"
     },
     {
-      "ticker": "BND",
-      "name": "美国总债券市场ETF",
+      "ticker": "BOND",
+      "name": "iShares Core Total US Bond",
       "sector": "固收ETF",
-      "direction": "buy",
-      "buy_zone": "75-79美元",
-      "target": "85-90美元",
-      "stop_loss": "73美元",
-      "reason": "长期债券收益率接近5%高位，配置价值凸显。政金债收益稳定，成为机构配置重点。"
+      "direction": "watch",
+      "buy_zone": "$110-115",
+      "target": "$120-125",
+      "stop_loss": "$105",
+      "reason": "美国总债券ETF，美债收益率下降受益。若降息预期确认将明显升值，当前低估值为长期配置好时点"
     }
   ],
   "date": "2026-05-21",
-  "generated_at": "2026-05-21T13:58:00",
+  "generated_at": "2026-05-21T14:40:00",
   "market_status": "pre-market",
-  "api_cost_usd": 0.1658,
+  "api_cost_usd": 0.1503,
   "budget_usd": 20.0,
-  "cumulative_cost_usd": 0.2014,
-  "avg_daily_cost_usd": 0.1007,
-  "estimated_days_left": 196,
+  "cumulative_cost_usd": 0.1859,
+  "avg_daily_cost_usd": 0.0929,
+  "estimated_days_left": 213,
   "balance_warning": false
 }
