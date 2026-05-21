@@ -71,7 +71,7 @@ def call_with_retry(max_attempts=5):
                 ],
                 messages=[{
                     "role": "user",
-                    "content": f"今天是{today}。请用web_search搜索：①今日美股市场概览（S&P500期货涨跌幅、10年期美债收益率及变化bps、财报季EPS超预期率） ②今日各板块值得关注的股票（科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF，每板块1支共10支）。搜索完成后调用save_morning_note工具保存，note和reason字段用中文。"
+                    "content": f"今天是{today}。请用web_search搜索：①今日美股市场概览（S&P500期货涨跌幅、10年期美债收益率及变化bps、财报季EPS超预期率） ②今日各板块值得关注的股票（科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF，每板块1支共10支）。选股要求：市值在$5亿–$100亿之间（小盘到中盘为主），禁止出现以下大市值股票：NVDA、AAPL、MSFT、AMZN、GOOGL、GOOG、META、TSLA、JPM、JNJ、XOM、BRK、V、MA、UNH、PG、HD、CVX、MRK、ABBV、BAC、KO、PEP、COST、WMT、AVGO、TSM、LLY、ORCL、NFLX、AMD、INTC、TLT、BND、SPY、QQQ。搜索完成后调用save_morning_note工具保存，note和reason字段用中文。"
                 }]
             )
         except anthropic.RateLimitError:
