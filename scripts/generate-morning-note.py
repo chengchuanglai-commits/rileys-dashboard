@@ -1,7 +1,9 @@
 import anthropic
 import json
 import os
+import sys
 import time
+import yfinance as yf
 from datetime import datetime, timezone, timedelta
 
 client = anthropic.Anthropic(max_retries=5)
@@ -10,6 +12,22 @@ beijing_tz = timezone(timedelta(hours=8))
 now_beijing = datetime.now(beijing_tz)
 today = now_beijing.strftime('%Y-%m-%d')
 generated_at = now_beijing.strftime('%Y-%m-%dT%H:%M:00')
+
+
+def fetch_market_data():
+    sp = yf.Ticker("ES=F")
+    hist = sp.history(period="2d")
+    sp500_pct = round(
+        (float(hist['Close'].iloc[-1]) - float(hist['Close'].iloc[-2])) /
+        float(hist['Close'].iloc[-2]) * 100, 2
+    )
+    tnx = yf.Ticker("^TNX")
+    tnx_hist = tnx.history(period="2d")
+    treasury_now = round(float(tnx_hist['Close'].iloc[-1]), 3)
+    treasury_prev = round(float(tnx_hist['Close'].iloc[-2]), 3)
+    treasury_bps = round((treasury_now - treasury_prev) * 100, 1)
+    return {"sp500_pct": sp500_pct, "treasury_10y": treasury_now, "treasury_bps": treasury_bps}
+
 
 save_tool = {
     "name": "save_morning_note",
@@ -59,7 +77,9 @@ save_tool = {
     }
 }
 
-def call_with_retry(max_attempts=5):
+
+def call_with_retry(market_data, max_attempts=5):
+    sign = "+" if market_data["sp500_pct"] >= 0 else ""
     for attempt in range(max_attempts):
         try:
             return client.messages.create(
@@ -71,7 +91,17 @@ def call_with_retry(max_attempts=5):
                 ],
                 messages=[{
                     "role": "user",
-                    "content": f"今天是{today}。请用web_search搜索：①今日美股市场概览（S&P500期货涨跌幅、10年期美债收益率及变化bps、财报季EPS超预期率） ②今日各板块值得关注的股票（科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF，每板块1支共10支）。选股要求：市值在$5亿–$100亿之间（小盘到中盘为主），禁止出现以下大市值股票：NVDA、AAPL、MSFT、AMZN、GOOGL、GOOG、META、TSLA、JPM、JNJ、XOM、BRK、V、MA、UNH、PG、HD、CVX、MRK、ABBV、BAC、KO、PEP、COST、WMT、AVGO、TSM、LLY、ORCL、NFLX、AMD、INTC、TLT、BND、SPY、QQQ。搜索完成后调用save_morning_note工具保存，note和reason字段用中文。"
+                    "content": f"""今天是{today}。
+
+市场数据（已确认，无需再搜索）：
+- S&P 500 期货：{sign}{market_data['sp500_pct']:.2f}%
+- 10年期美债：{market_data['treasury_10y']:.3f}%（{market_data['treasury_bps']:+.1f} bps）
+
+请用 web_search 完成以下任务（只搜索一次）：
+搜索今日各板块值得关注的小盘/中盘股（科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF，每板块1支共10支），同时记录当前财报季EPS超预期率。
+
+选股要求：市值在$5亿–$100亿之间（小盘到中盘为主），禁止出现以下大市值股票：NVDA、AAPL、MSFT、AMZN、GOOGL、GOOG、META、TSLA、JPM、JNJ、XOM、BRK、V、MA、UNH、PG、HD、CVX、MRK、ABBV、BAC、KO、PEP、COST、WMT、AVGO、TSM、LLY、ORCL、NFLX、AMD、INTC、TLT、BND、SPY、QQQ。
+搜索完成后调用save_morning_note工具保存，note和reason字段用中文。"""
                 }]
             )
         except anthropic.RateLimitError:
@@ -81,7 +111,52 @@ def call_with_retry(max_attempts=5):
             print(f"Rate limit hit, waiting {wait}s before retry {attempt + 2}/{max_attempts}...")
             time.sleep(wait)
 
-response = call_with_retry()
+
+def write_balance_warning_note(today):
+    data = {
+        "date": today,
+        "generated_at": generated_at,
+        "market_status": "pre-market",
+        "market": {"sp500_futures_pct": 0, "treasury_10y": 0, "treasury_10y_change_bps": 0, "eps_beat_rate": 0},
+        "note": {
+            "market_overview": "⚠️ Anthropic API 余额不足，请前往 console.anthropic.com/billing 充值后恢复。",
+            "macro": "",
+            "earnings": "",
+            "trade_ideas": ""
+        },
+        "stock_picks": [],
+        "api_cost_usd": 0,
+        "balance_warning": True,
+        "estimated_days_left": 0,
+        "cumulative_cost_usd": 0,
+        "avg_daily_cost_usd": 0,
+        "budget_usd": float(os.environ.get("ANTHROPIC_BUDGET_USD", "5"))
+    }
+    os.makedirs("dashboard", exist_ok=True)
+    js_content = (
+        "// 金融晨报数据 — 每日 07:30 自动更新\n"
+        f"window.MORNING_NOTE = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
+    )
+    with open("dashboard/morning-note.js", "w", encoding="utf-8") as f:
+        f.write(js_content)
+    os.makedirs("dashboard/morning-note-history", exist_ok=True)
+    with open(f"dashboard/morning-note-history/{today}.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"⚠️  Balance warning note written for {today}")
+
+
+# ── Main execution ──────────────────────────────────────────────────────────
+
+try:
+    market_data = fetch_market_data()
+    print(f"[market] S&P futures: {market_data['sp500_pct']:+.2f}% | 10Y: {market_data['treasury_10y']:.3f}% ({market_data['treasury_bps']:+.1f}bps)")
+    response = call_with_retry(market_data)
+except anthropic.BadRequestError as e:
+    if 'credit balance' in str(e).lower():
+        print(f"⚠️  Anthropic credit balance too low: {e}")
+        write_balance_warning_note(today)
+        sys.exit(0)
+    raise
 
 # Extract the LAST save_morning_note tool call (most complete)
 data = None
@@ -93,6 +168,11 @@ for block in response.content:
 if data is None:
     content_types = [getattr(b, 'type', str(b)) for b in response.content]
     raise ValueError(f"save_morning_note not called. Content types: {content_types}")
+
+# Override market data with yfinance values (more accurate than AI's text output)
+data["market"]["sp500_futures_pct"] = market_data["sp500_pct"]
+data["market"]["treasury_10y"] = market_data["treasury_10y"]
+data["market"]["treasury_10y_change_bps"] = market_data["treasury_bps"]
 
 # Add metadata
 data["date"] = today
@@ -139,7 +219,7 @@ cumulative += data["api_cost_usd"]
 day_costs.append(data["api_cost_usd"])
 avg_daily = sum(day_costs[-7:]) / max(len(day_costs[-7:]), 1)  # 7-day avg
 
-budget = float(os.environ.get("ANTHROPIC_BUDGET_USD", "20"))
+budget = float(os.environ.get("ANTHROPIC_BUDGET_USD", "5"))
 remaining = max(budget - cumulative, 0)
 days_left = int(remaining / avg_daily) if avg_daily > 0 else 999
 
