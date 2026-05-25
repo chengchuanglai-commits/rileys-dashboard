@@ -16,13 +16,13 @@ generated_at = now_beijing.strftime('%Y-%m-%dT%H:%M:00')
 
 def fetch_market_data():
     sp = yf.Ticker("ES=F")
-    hist = sp.history(period="2d")
+    hist = sp.history(period="5d")
     sp500_pct = round(
         (float(hist['Close'].iloc[-1]) - float(hist['Close'].iloc[-2])) /
         float(hist['Close'].iloc[-2]) * 100, 2
     )
     tnx = yf.Ticker("^TNX")
-    tnx_hist = tnx.history(period="2d")
+    tnx_hist = tnx.history(period="5d")
     treasury_now = round(float(tnx_hist['Close'].iloc[-1]), 3)
     treasury_prev = round(float(tnx_hist['Close'].iloc[-2]), 3)
     treasury_bps = round((treasury_now - treasury_prev) * 100, 1)
@@ -79,7 +79,6 @@ save_tool = {
 
 
 def call_with_retry(market_data, max_attempts=5):
-    sign = "+" if market_data["sp500_pct"] >= 0 else ""
     for attempt in range(max_attempts):
         try:
             return client.messages.create(
@@ -94,7 +93,7 @@ def call_with_retry(market_data, max_attempts=5):
                     "content": f"""今天是{today}。
 
 市场数据（已确认，无需再搜索）：
-- S&P 500 期货：{sign}{market_data['sp500_pct']:.2f}%
+- S&P 500 期货：{market_data['sp500_pct']:+.2f}%
 - 10年期美债：{market_data['treasury_10y']:.3f}%（{market_data['treasury_bps']:+.1f} bps）
 
 请用 web_search 完成以下任务（只搜索一次）：
@@ -110,6 +109,7 @@ def call_with_retry(market_data, max_attempts=5):
             wait = 60 * (attempt + 1)
             print(f"Rate limit hit, waiting {wait}s before retry {attempt + 2}/{max_attempts}...")
             time.sleep(wait)
+    raise RuntimeError("call_with_retry: all attempts exhausted without response")
 
 
 def write_balance_warning_note(today):
@@ -150,6 +150,11 @@ def write_balance_warning_note(today):
 try:
     market_data = fetch_market_data()
     print(f"[market] S&P futures: {market_data['sp500_pct']:+.2f}% | 10Y: {market_data['treasury_10y']:.3f}% ({market_data['treasury_bps']:+.1f}bps)")
+except Exception as e:
+    print(f"⚠️  yfinance fetch failed: {e}. Using zero values.")
+    market_data = {"sp500_pct": 0.0, "treasury_10y": 0.0, "treasury_bps": 0.0}
+
+try:
     response = call_with_retry(market_data)
 except anthropic.BadRequestError as e:
     if 'credit balance' in str(e).lower():
@@ -187,8 +192,10 @@ if isinstance(picks, str):
     picks = json.loads(picks)
     data["stock_picks"] = picks
 print(f"[debug] stock_picks count: {len(picks)}, type: {type(picks)}")
+if len(picks) == 0:
+    raise ValueError(f"Expected 10 picks, got 0")
 if len(picks) != 10:
-    raise ValueError(f"Expected 10 picks, got {len(picks)}")
+    print(f"[warn] Expected 10 picks, got {len(picks)} — continuing anyway")
 for pick in picks:
     if pick.get("direction") not in ("buy", "sell", "watch"):
         pick["direction"] = "watch"
