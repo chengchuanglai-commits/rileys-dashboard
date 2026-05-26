@@ -477,7 +477,7 @@ async function processMessage(msg) {
                 reply = '❌ 获取任务失败';
             }
 
-        } else if (/^完成\s+\d+$/.test(userText)) {
+        } else if (/^完成\s*\d+$/.test(userText)) {
             const idx = parseInt(userText.match(/\d+/)[0]) - 1;
             try {
                 const resp = await fetch(SYNC_URL);
@@ -486,18 +486,20 @@ async function processMessage(msg) {
                 if (idx < 0 || idx >= tasks.length) {
                     reply = `❌ 没有第 ${idx+1} 条任务`;
                 } else {
-                    tasks[idx].done = true;
+                    tasks[idx].done = !tasks[idx].done;
                     data.tasks = tasks;
                     data.tasks_date = new Date().toDateString();
                     await fetch(SYNC_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-                    reply = `✅ 已完成：${tasks[idx].text}`;
+                    reply = tasks[idx].done
+                        ? `✅ 已完成：${tasks[idx].text}`
+                        : `⬜ 已撤销完成：${tasks[idx].text}`;
                 }
             } catch (e) {
                 reply = '❌ 操作失败，请重试';
             }
 
-        } else if (/^备注\s+\d+\s+/.test(userText)) {
-            const m = userText.match(/^备注\s+(\d+)\s+(.+)$/);
+        } else if (/^备注\s*\d+\s+/.test(userText)) {
+            const m = userText.match(/^备注\s*(\d+)\s+(.+)$/);
             if (!m) {
                 reply = '请用格式：备注 1 备注内容';
             } else {
@@ -521,7 +523,7 @@ async function processMessage(msg) {
                 }
             }
 
-        } else if (/^删任务\s+\d+$/.test(userText)) {
+        } else if (/^删任务\s*\d+$/.test(userText)) {
             const idx = parseInt(userText.match(/\d+/)[0]) - 1;
             try {
                 const resp = await fetch(SYNC_URL);
