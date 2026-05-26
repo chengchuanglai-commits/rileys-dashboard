@@ -457,6 +457,89 @@ async function processMessage(msg) {
                 reply = '格式错误，请使用：/消费 金额 备注\n例：/消费 38 iCloud订阅';
             }
 
+        // 任务管理
+        } else if (userText === '任务') {
+            try {
+                const resp = await fetch(SYNC_URL);
+                const data = await resp.json();
+                const tasks = data.tasks || [];
+                if (tasks.length === 0) {
+                    reply = '📋 今日暂无任务';
+                } else {
+                    const lines = tasks.map((t, i) => {
+                        const status = t.done ? '✅' : '⬜';
+                        const note = t.note ? ` (备注: ${t.note})` : '';
+                        return `${status} ${i+1}. ${t.text}${note}`;
+                    });
+                    reply = '📋 今日任务\n' + lines.join('\n') + '\n\n完成 N / 备注 N 内容 / 删任务 N';
+                }
+            } catch (e) {
+                reply = '❌ 获取任务失败';
+            }
+
+        } else if (/^完成\s+\d+$/.test(userText)) {
+            const idx = parseInt(userText.match(/\d+/)[0]) - 1;
+            try {
+                const resp = await fetch(SYNC_URL);
+                const data = await resp.json();
+                const tasks = data.tasks || [];
+                if (idx < 0 || idx >= tasks.length) {
+                    reply = `❌ 没有第 ${idx+1} 条任务`;
+                } else {
+                    tasks[idx].done = true;
+                    data.tasks = tasks;
+                    data.tasks_date = new Date().toDateString();
+                    await fetch(SYNC_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                    reply = `✅ 已完成：${tasks[idx].text}`;
+                }
+            } catch (e) {
+                reply = '❌ 操作失败，请重试';
+            }
+
+        } else if (/^备注\s+\d+\s+/.test(userText)) {
+            const m = userText.match(/^备注\s+(\d+)\s+(.+)$/);
+            if (!m) {
+                reply = '请用格式：备注 1 备注内容';
+            } else {
+                const idx = parseInt(m[1]) - 1;
+                const note = m[2].trim();
+                try {
+                    const resp = await fetch(SYNC_URL);
+                    const data = await resp.json();
+                    const tasks = data.tasks || [];
+                    if (idx < 0 || idx >= tasks.length) {
+                        reply = `❌ 没有第 ${idx+1} 条任务`;
+                    } else {
+                        tasks[idx].note = note;
+                        data.tasks = tasks;
+                        data.tasks_date = new Date().toDateString();
+                        await fetch(SYNC_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                        reply = `📝 已添加备注：${tasks[idx].text}\n备注：${note}`;
+                    }
+                } catch (e) {
+                    reply = '❌ 操作失败，请重试';
+                }
+            }
+
+        } else if (/^删任务\s+\d+$/.test(userText)) {
+            const idx = parseInt(userText.match(/\d+/)[0]) - 1;
+            try {
+                const resp = await fetch(SYNC_URL);
+                const data = await resp.json();
+                const tasks = data.tasks || [];
+                if (idx < 0 || idx >= tasks.length) {
+                    reply = `❌ 没有第 ${idx+1} 条任务`;
+                } else {
+                    const removed = tasks.splice(idx, 1)[0];
+                    data.tasks = tasks;
+                    data.tasks_date = new Date().toDateString();
+                    await fetch(SYNC_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                    reply = `🗑 已删除：${removed.text}`;
+                }
+            } catch (e) {
+                reply = '❌ 操作失败，请重试';
+            }
+
         // 查看本月支出报告：/报告
         } else if (userText === '/报告') {
             const ym = getYearMonth(new Date());

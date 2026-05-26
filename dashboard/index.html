@@ -81,6 +81,7 @@
         .task-body { flex:1; min-width:0; }
         .task-text { font-size:13px; color:#111; line-height:1.5; word-break:break-word; }
         .task-text.done { text-decoration:line-through; color:#999; }
+        .task-note { font-size:11px; color:#aaa; margin-top:2px; font-style:italic; }
         .task-text[contenteditable="true"] {
             outline:none; background:#f5f5f5;
             border-radius:4px; padding:2px 6px;
@@ -1198,7 +1199,7 @@ function renderTasks(tasks) {
         <div class="task-item" data-i="${i}">
             <div class="chk ${t.done?'done':''}" onclick="toggleTask(${i})">${t.done?'✓':''}</div>
             <div class="task-body">
-                <span class="task-text ${t.done?'done':''}" id="tt-${i}">${escHtml(t.text)}</span>${t.tag?`<span class="tag ${TAG_CLS[t.tag]||''}">${TAG_LBL[t.tag]||''}</span>`:''}
+                <span class="task-text ${t.done?'done':''}" id="tt-${i}">${escHtml(t.text)}</span>${t.tag?`<span class="tag ${TAG_CLS[t.tag]||''}">${TAG_LBL[t.tag]||''}</span>`:''}${t.note?`<div class="task-note">📝 ${escHtml(t.note)}</div>`:''}
             </div>
             <div class="task-acts">
                 <button class="task-btn edit" title="编辑" onclick="editTask(${i})">✏</button>
