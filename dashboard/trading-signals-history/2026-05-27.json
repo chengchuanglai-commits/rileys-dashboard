@@ -1,5 +1,4 @@
-// TradingAgents 信号数据 — 每日 20:30 自动更新
-window.TRADING_SIGNALS = {
+{
   "date": "2026-05-27",
   "generated_at": "2026-05-27T00:15:00",
   "signals": [],
@@ -10,4 +9,4 @@ window.TRADING_SIGNALS = {
     "history": []
   },
   "api_cost_usd": 0
-};
+}
