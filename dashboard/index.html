@@ -1170,6 +1170,7 @@ function restoreFromSync(d) {
 // ─────────────────────────────────────────────────────────
 const DEFAULT_TASKS = [
     { text:'查看今日财经新闻（Bloomberg / WSJ）', tag:'f', done:false },
+    { text:'🧪 测试 TradingAgents 全流程 — 20:30 后查看 Dashboard AI 信号卡片', tag:'f', done:false },
     { text:'Seedclay — 完成今日研究任务',         tag:'p', done:false },
     { text:'完成今日运动训练',                   tag:'h', done:false },
 ];
@@ -2279,7 +2280,14 @@ function _calLocalDate(d) {
 function loadCalendar() {
     let events = JSON.parse(localStorage.getItem('calendar_events') || 'null');
     if (events === null) {
-        events = [{ id:'seed1', date:'2026-06-15', time:'09:00', title:'🛂 广州加拿大领事馆 — 孩子护照更换' }];
+        events = [
+            { id:'seed1', date:'2026-06-15', time:'09:00', title:'🛂 广州加拿大领事馆 — 孩子护照更换' },
+            { id:'seed-ta-test', date:'2026-05-27', time:'20:30', title:'🧪 测试 TradingAgents — 查看 Dashboard AI 信号卡片' }
+        ];
+        localStorage.setItem('calendar_events', JSON.stringify(events));
+    }
+    if (!events.find(e => e.id === 'seed-ta-test')) {
+        events.push({ id:'seed-ta-test', date:'2026-05-27', time:'20:30', title:'🧪 测试 TradingAgents — 查看 Dashboard AI 信号卡片' });
         localStorage.setItem('calendar_events', JSON.stringify(events));
     }
     renderCalendar(events);
