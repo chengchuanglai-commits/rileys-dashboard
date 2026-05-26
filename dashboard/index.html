@@ -478,6 +478,24 @@
 
     </div>
 
+    <!-- ── Calendar / Schedule ── -->
+    <div class="row col-1">
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">📅 日程安排</span>
+                <button class="btn-sm" onclick="toggleCalForm()">+ 添加</button>
+            </div>
+            <div id="cal-list"></div>
+            <div class="cal-form" id="cal-form">
+                <input type="date" id="cal-date" />
+                <input type="time" id="cal-time" value="09:00" />
+                <input type="text" id="cal-title" placeholder="事件内容" />
+                <button class="btn-sm" onclick="addCalendarEvent()">确认</button>
+                <button class="btn-sm" onclick="toggleCalForm()">取消</button>
+            </div>
+        </div>
+    </div>
+
     <!-- ── Row 2: Project ── -->
     <div class="row col-1">
         <div class="card proj-card">
