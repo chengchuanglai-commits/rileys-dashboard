@@ -1,5 +1,4 @@
-// 金融晨报数据 — 每日 07:30 自动更新
-window.MORNING_NOTE = {
+{
   "date": "2026-05-26",
   "generated_at": "2026-05-26T09:25:00",
   "market_status": "pre-market",
@@ -22,4 +21,4 @@ window.MORNING_NOTE = {
   "cumulative_cost_usd": 0,
   "avg_daily_cost_usd": 0,
   "budget_usd": 5.0
-};
+}
