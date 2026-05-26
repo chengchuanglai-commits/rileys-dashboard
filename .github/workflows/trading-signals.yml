@@ -1,0 +1,40 @@
+name: TradingAgents 每日信号
+
+on:
+  schedule:
+    - cron: '30 12 * * 1-5'  # 20:30 北京时间，周一至周五 (UTC+8 → 12:30 UTC)
+  workflow_dispatch:           # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install yfinance anthropic "git+https://github.com/TauricResearch/TradingAgents.git"
+
+      - name: Generate trading signals
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        run: python scripts/generate-trading-signals.py
+
+      - name: Commit and push
+        run: |
+          git config --global user.email "trading-signals-bot@users.noreply.github.com"
+          git config --global user.name "Trading Signals Bot"
+          git add dashboard/trading-signals.js dashboard/trading-signals-history/
+          git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
+          git push
