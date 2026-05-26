@@ -1137,7 +1137,8 @@ function collectSyncData() {
         portfolio:    JSON.parse(localStorage.getItem('portfolio') || 'null'),
         qt_api_url:   localStorage.getItem('qt_api_url'),
         ga_api_url:   localStorage.getItem('ga_api_url'),
-        workout:      wo
+        workout:           wo,
+        calendar_events:   JSON.parse(localStorage.getItem('calendar_events') || '[]')
     };
 }
 
@@ -1162,6 +1163,7 @@ function restoreFromSync(d) {
     if (d.qt_api_url && !localStorage.getItem('qt_api_url')) localStorage.setItem('qt_api_url', d.qt_api_url);
     if (d.ga_api_url && !localStorage.getItem('ga_api_url')) localStorage.setItem('ga_api_url', d.ga_api_url);
     if (d.workout) { Object.entries(d.workout).forEach(([k,v]) => localStorage.setItem(k, JSON.stringify(v))); loadWorkout && loadWorkout(); }
+    if (d.calendar_events) { localStorage.setItem('calendar_events', JSON.stringify(d.calendar_events)); loadCalendar(); }
 }
 
 // ─────────────────────────────────────────────────────────
