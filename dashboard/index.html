@@ -2267,6 +2267,87 @@ function switchMnTab(tab) {
     document.getElementById('mn-tab-note').classList.toggle('active',  tab === 'note');
     document.getElementById('mn-tab-picks').classList.toggle('active', tab === 'picks');
 }
+
+// ── Calendar agenda ──────────────────────────────────────
+function _calLocalDate(d) {
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function loadCalendar() {
+    let events = JSON.parse(localStorage.getItem('calendar_events') || 'null');
+    if (events === null) {
+        events = [{ id:'seed1', date:'2026-06-15', time:'09:00', title:'🛂 广州加拿大领事馆 — 孩子护照更换' }];
+        localStorage.setItem('calendar_events', JSON.stringify(events));
+    }
+    renderCalendar(events);
+}
+
+function saveCalendar(events) {
+    localStorage.setItem('calendar_events', JSON.stringify(events));
+    renderCalendar(events);
+    syncAll();
+}
+
+function renderCalendar(events) {
+    const el = document.getElementById('cal-list');
+    if (!el) return;
+    const today = new Date();
+    const todayStr = _calLocalDate(today);
+    const map = {};
+    events.forEach(ev => { (map[ev.date] = map[ev.date] || []).push(ev); });
+    Object.values(map).forEach(arr => arr.sort((a, b) => a.time.localeCompare(b.time)));
+    const WDAYS = ['周日','周一','周二','周三','周四','周五','周六'];
+    let html = '';
+    for (let i = 0; i < 7; i++) {
+        const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+        const ds = _calLocalDate(d);
+        const isToday = ds === todayStr;
+        const dayEvents = map[ds] || [];
+        if (!isToday && dayEvents.length === 0) continue;
+        const label = isToday
+            ? `<span class="cal-today-badge">今天</span>${ds.slice(5).replace('-','月')}日`
+            : `${ds.slice(5).replace('-','月')}日 ${WDAYS[d.getDay()]}`;
+        html += `<div class="cal-day"><div class="cal-day-lbl">${label}</div>`;
+        if (dayEvents.length === 0) {
+            html += `<div class="cal-empty">暂无安排</div>`;
+        } else {
+            dayEvents.forEach(ev => {
+                const cls = isToday ? 'today' : 'future';
+                html += `<div class="cal-event ${cls}"><span><span class="cal-time">${ev.time}</span>${ev.title}</span><button class="cal-del" onclick="deleteCalendarEvent('${ev.id}')">✕</button></div>`;
+            });
+        }
+        html += `</div>`;
+    }
+    if (!html) html = `<div class="cal-empty" style="padding:10px 0;text-align:center">未来7天暂无日程</div>`;
+    el.innerHTML = html;
+}
+
+function toggleCalForm() {
+    const f = document.getElementById('cal-form');
+    f.classList.toggle('open');
+    if (f.classList.contains('open')) {
+        document.getElementById('cal-date').value = _calLocalDate(new Date());
+        setTimeout(() => document.getElementById('cal-title').focus(), 50);
+    }
+}
+
+function addCalendarEvent() {
+    const date = document.getElementById('cal-date').value;
+    const time = document.getElementById('cal-time').value;
+    const title = document.getElementById('cal-title').value.trim();
+    if (!date || !time || !title) return;
+    const events = JSON.parse(localStorage.getItem('calendar_events') || '[]');
+    events.push({ id: Date.now().toString(36), date, time, title });
+    document.getElementById('cal-title').value = '';
+    toggleCalForm();
+    saveCalendar(events);
+}
+
+function deleteCalendarEvent(id) {
+    const events = JSON.parse(localStorage.getItem('calendar_events') || '[]').filter(e => e.id !== id);
+    saveCalendar(events);
+}
+loadCalendar();
 </script>
 </body>
 </html>
