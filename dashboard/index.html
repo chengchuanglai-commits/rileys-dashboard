@@ -352,6 +352,17 @@
         .mn-budget-ok { display:none; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:8px 14px; margin-bottom:12px; }
         .mn-budget-ok.visible { display:flex; align-items:center; gap:8px; font-size:10px; color:#16a34a; }
 
+        /* ── Trading Signals ─────────────────────────── */
+        .ts-signal-card { border:1px solid #e8e8e8; border-radius:10px; padding:14px 16px; margin-bottom:10px; background:#f8f8f8; }
+        .ts-action { font-size:10px; font-weight:700; padding:3px 12px; border-radius:10px; flex-shrink:0; }
+        .ts-action.buy  { background:#f0fdf4; color:#16a34a; }
+        .ts-action.sell { background:#fef2f2; color:#dc2626; }
+        .ts-action.hold { background:#fff7ed; color:#ea580c; }
+        .ts-dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+        .ts-dot.correct { background:#16a34a; }
+        .ts-dot.wrong   { background:#dc2626; }
+        .ts-dot.pending { background:#d1d5db; }
+
         /* ── Responsive ──────────────────────────── */
         @media (max-width:1100px) { .col-3 { grid-template-columns:1fr 1fr; } }
         @media (max-width:700px)  { .col-3,.col-2 { grid-template-columns:1fr; } }
@@ -376,6 +387,7 @@
         .cal-form input[type=text] { flex:1; min-width:140px; }
     </style>
     <script src="morning-note.js"></script>
+    <script src="trading-signals.js"></script>
 </head>
 <body>
 <div class="container">
@@ -758,6 +770,23 @@
                         <div style="font-size:9px;color:#bbb;padding-top:8px;margin-top:4px;border-top:1px solid #f0f0f0">仅供参考，不构成投资建议 · 数据每日 07:30 自动更新并存档</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Row 2.7: TradingAgents 信号 ── -->
+    <div class="row col-1" style="margin-bottom:16px">
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">🤖 AI 深度信号</span>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <span id="ts-date-badge" style="font-size:9px;background:#f0f0f0;padding:2px 10px;border-radius:10px;color:#888"></span>
+                    <span id="ts-accuracy-badge" style="font-size:9px;background:#f0f0f0;padding:2px 10px;border-radius:10px;color:#888"></span>
+                    <button onclick="loadTradingSignals()" style="background:none;border:none;color:#ccc;cursor:pointer;font-size:14px;padding:2px" title="刷新" onmouseover="this.style.color='#666'" onmouseout="this.style.color='#ccc'">↻</button>
+                </div>
+            </div>
+            <div id="ts-content">
+                <div class="mn-empty">今日 AI 深度信号将于 20:30 生成…</div>
             </div>
         </div>
     </div>
@@ -2044,12 +2073,72 @@ async function refreshNews(section) {
 // Init news on load
 (async () => {
     loadMorningNote();
+    loadTradingSignals();
     await Promise.all([
         loadSection('fin'),
         loadSection('ai'),
         loadSection('hype'),
     ]);
 })();
+
+// ── Trading Signals ───────────────────────────────────
+function loadTradingSignals() {
+    if (!window.TRADING_SIGNALS || !window.TRADING_SIGNALS.date) {
+        const el = document.getElementById('ts-content');
+        if (el) el.innerHTML = '<div class="mn-empty">今日 AI 深度信号将于 20:30 生成…</div>';
+        return;
+    }
+    renderTradingSignals(window.TRADING_SIGNALS);
+}
+
+function renderTradingSignals(d) {
+    const dateBadge = document.getElementById('ts-date-badge');
+    if (dateBadge && d.date) dateBadge.textContent = '🗓 ' + d.date;
+
+    const accBadge = document.getElementById('ts-accuracy-badge');
+    if (accBadge && d.accuracy && d.accuracy.rate !== null && d.accuracy.rate !== undefined) {
+        accBadge.textContent = '准确率 ' + Math.round(d.accuracy.rate * 100) + '%';
+        accBadge.style.background = d.accuracy.rate >= 0.6 ? '#f0fdf4' : '#fef2f2';
+        accBadge.style.color = d.accuracy.rate >= 0.6 ? '#16a34a' : '#dc2626';
+    }
+
+    const content = document.getElementById('ts-content');
+    if (!content) return;
+
+    if (!d.signals || d.signals.length === 0) {
+        content.innerHTML = '<div class="mn-empty">今日暂无信号</div>';
+        return;
+    }
+
+    const hist = (d.accuracy && d.accuracy.history) ? d.accuracy.history.slice(-10) : [];
+    const dotsHtml = hist.length ? `
+        <div style="margin-bottom:14px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <span style="font-size:9px;color:#999;margin-right:4px">历史准确性（最近${hist.length}次）</span>
+            ${hist.map(h => `<span class="ts-dot ${h === true ? 'correct' : h === false ? 'wrong' : 'pending'}"></span>`).join('')}
+        </div>` : '';
+
+    const sigHtml = d.signals.map(s => `
+        <div class="ts-signal-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <div>
+                    <span style="font-size:15px;font-weight:800;color:#111;margin-right:6px">${s.ticker}</span>
+                    <span style="font-size:10px;color:#999">${s.name || ''}</span>
+                </div>
+                <span class="ts-action ${(s.action || 'hold').toLowerCase()}">${s.action || 'HOLD'}</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">
+                <div><div class="mn-num-lbl">入场价</div><div class="mn-num-val">$${s.current_price != null ? s.current_price.toFixed(2) : '—'}</div></div>
+                <div><div class="mn-num-lbl">目标价 (+10%)</div><div class="mn-num-val" style="color:#16a34a">$${s.target_price != null ? s.target_price.toFixed(2) : '—'}</div></div>
+                <div><div class="mn-num-lbl">止损价 (-5%)</div><div class="mn-num-val" style="color:#dc2626">$${s.stop_loss != null ? s.stop_loss.toFixed(2) : '—'}</div></div>
+            </div>
+            <div style="font-size:10px;color:#888;line-height:1.6;padding-top:8px;border-top:1px solid #eee">${s.summary || ''}</div>
+        </div>`).join('');
+
+    content.innerHTML = dotsHtml + sigHtml + `
+        <div style="font-size:9px;color:#bbb;text-align:right;margin-top:4px;padding-top:6px;border-top:1px solid #f0f0f0">
+            TradingAgents · 每日 20:30 自动更新 · 本次花费 $${d.api_cost_usd != null ? d.api_cost_usd.toFixed(4) : '0'}
+        </div>`;
+}
 
 // ── Morning Note ──────────────────────────────────────
 function loadMorningNote() {
