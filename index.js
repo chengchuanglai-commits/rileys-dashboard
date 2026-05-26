@@ -463,6 +463,64 @@ async function processMessage(msg) {
             const summary = await generateMonthlySummary(ym);
             reply = summary || '本月暂无消费记录。';
 
+        } else if (userText === '日程') {
+            try {
+                const resp = await fetch(SYNC_URL);
+                const data = await resp.json();
+                const todayMs = Date.now();
+                const events = (data.calendar_events || [])
+                    .filter(ev => {
+                        const evMs = new Date(ev.date + 'T00:00:00').getTime();
+                        const diffDays = (evMs - todayMs) / 86400000;
+                        return diffDays > -1 && diffDays < 7;
+                    })
+                    .sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+                if (events.length === 0) {
+                    reply = '📅 未来7天暂无日程';
+                } else {
+                    const lines = events.map(ev => {
+                        const [, m, d] = ev.date.split('-');
+                        return `  ${parseInt(m)}/${parseInt(d)} ${ev.time} ${ev.title}`;
+                    });
+                    reply = '📅 未来7天日程\n' + lines.join('\n');
+                }
+            } catch (e) {
+                reply = '❌ 获取日程失败';
+            }
+
+        } else if (userText.startsWith('提醒')) {
+            const parts = userText.slice(2).trim().split(/\s+/);
+            if (parts.length < 3) {
+                reply = '请用格式：提醒 6/15 09:00 事件内容';
+            } else {
+                const date = parseCalendarDate(parts[0]);
+                const timeMatch = parts[1].match(/^(\d{1,2})[:\.](\d{2})$/) || parts[1].match(/^(\d{1,2})点(\d{0,2})$/);
+                const title = parts.slice(2).join(' ');
+                if (!date || !timeMatch) {
+                    reply = '日期或时间格式不对，请用：提醒 6/15 09:00 事件内容';
+                } else {
+                    const hh = timeMatch[1].padStart(2,'0');
+                    const mm = (timeMatch[2] || '00').padStart(2,'0');
+                    const time = `${hh}:${mm}`;
+                    try {
+                        const resp = await fetch(SYNC_URL);
+                        const data = await resp.json();
+                        const events = data.calendar_events || [];
+                        events.push({ id: Date.now().toString(36), date, time, title });
+                        data.calendar_events = events;
+                        await fetch(SYNC_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+                        const [, m, d] = date.split('-');
+                        reply = `✅ 已添加日程：${parseInt(m)}月${parseInt(d)}日 ${time} ${title}`;
+                    } catch (e) {
+                        reply = '❌ 添加日程失败，请重试';
+                    }
+                }
+            }
+
         } else {
         allRecords.push({ role: 'user', text: userText, time: new Date().toISOString().slice(0, 16).replace('T', ' ') });
         saveJSON(HISTORY_FILE, allRecords);
