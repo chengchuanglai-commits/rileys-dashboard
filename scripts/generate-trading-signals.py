@@ -172,45 +172,48 @@ if not selected_picks:
 else:
     def analyze_pick(pick):
         ticker = pick['ticker']
-        try:
-            state, decision = run_tradingagents(ticker)
-            action = parse_action(decision)
-            price = get_price(ticker)
-            target = round(price * 1.10, 2) if price else None
-            stop = round(price * 0.95, 2) if price else None
-            summary = summarize(decision)
-            print(f"[signal] {ticker}: {action} @ ${price} → target ${target} / stop ${stop}")
-            return {
-                "ticker": ticker,
-                "name": pick.get('name', ''),
-                "sector": pick.get('sector', ''),
-                "action": action,
-                "current_price": price,
-                "target_price": target,
-                "stop_loss": stop,
-                "summary": summary,
-            }
-        except Exception as e:
-            print(f"[error] TradingAgents failed for {ticker}: {e}")
-            return {
-                "ticker": ticker,
-                "name": pick.get('name', ''),
-                "sector": pick.get('sector', ''),
-                "action": "HOLD",
-                "current_price": get_price(ticker),
-                "target_price": None,
-                "stop_loss": None,
-                "summary": f"分析失败: {str(e)[:100]}",
-            }
+        for attempt in range(3):
+            try:
+                state, decision = run_tradingagents(ticker)
+                action = parse_action(decision)
+                price = get_price(ticker)
+                target = round(price * 1.10, 2) if price else None
+                stop = round(price * 0.95, 2) if price else None
+                summary = summarize(decision)
+                print(f"[signal] {ticker}: {action} @ ${price} → target ${target} / stop ${stop}")
+                return {
+                    "ticker": ticker,
+                    "name": pick.get('name', ''),
+                    "sector": pick.get('sector', ''),
+                    "action": action,
+                    "current_price": price,
+                    "target_price": target,
+                    "stop_loss": stop,
+                    "summary": summary,
+                }
+            except Exception as e:
+                if '529' in str(e) or 'overloaded' in str(e).lower():
+                    wait = 30 * (attempt + 1)
+                    print(f"[warn] API overloaded for {ticker}, retry {attempt+1}/3 in {wait}s...")
+                    time.sleep(wait)
+                else:
+                    print(f"[error] TradingAgents failed for {ticker}: {e}")
+                    break
+        price = get_price(ticker)
+        return {
+            "ticker": ticker,
+            "name": pick.get('name', ''),
+            "sector": pick.get('sector', ''),
+            "action": "HOLD",
+            "current_price": price,
+            "target_price": round(price * 1.10, 2) if price else None,
+            "stop_loss": round(price * 0.95, 2) if price else None,
+            "summary": f"API 过载，暂无深度分析",
+        }
 
-    signals_map = {}
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        futures = {executor.submit(analyze_pick, pick): pick['ticker'] for pick in selected_picks}
-        for future in as_completed(futures):
-            ticker = futures[future]
-            signals_map[ticker] = future.result()
-    # preserve original order
-    signals = [signals_map[p['ticker']] for p in selected_picks if p['ticker'] in signals_map]
+    signals = []
+    for pick in selected_picks:
+        signals.append(analyze_pick(pick))
 
     # claude-haiku-4-5 pricing: $0.80/MTok in, $4.00/MTok out
     api_cost = round(_total_input_tokens * 0.8 / 1_000_000 + _total_output_tokens * 4.0 / 1_000_000, 4)
