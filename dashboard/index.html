@@ -58,6 +58,18 @@
         }
         .btn-sm:hover { background:#eee; color:#333; border-color:#ccc; }
 
+        /* ── Health metrics ──────────────────────── */
+        .health-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:10px; }
+        .health-cell { background:#f8f8f8; border-radius:8px; padding:10px 6px; text-align:center; }
+        .health-val  { font-size:17px; font-weight:700; color:#111; font-variant-numeric:tabular-nums; line-height:1.2; }
+        .health-unit { font-size:10px; font-weight:400; color:#999; }
+        .health-lbl  { font-size:9px; color:#888; text-transform:uppercase; letter-spacing:.07em; margin-top:3px; }
+        .health-pills { display:flex; gap:8px; margin-bottom:14px; }
+        .health-pill  { background:#f8f8f8; border-radius:8px; padding:8px 10px; flex:1; display:flex; align-items:center; gap:8px; }
+        .health-pill-val { font-size:14px; font-weight:600; color:#111; line-height:1.2; }
+        .health-pill-lbl { font-size:9px; color:#888; text-transform:uppercase; letter-spacing:.06em; margin-top:1px; }
+        .health-empty { font-size:12px; color:#ccc; padding:14px 0 10px; text-align:center; }
+        .health-divider { border:none; border-top:1px solid #f0f0f0; margin:4px 0 14px; }
         /* ── Workout ─────────────────────────────── */
         .wo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px; }
         .wo-day {
@@ -450,11 +462,21 @@
 
         <div class="card">
             <div class="card-hd">
-                <span class="card-title">💪 运动计划（4分化）</span>
-                <span id="wo-stat" style="font-size:12px;color:#334155">0/4 本周</span>
+                <span class="card-title">❤ 健康中心</span>
+                <span id="health-date" style="font-size:10px;color:#bbb">—</span>
+            </div>
+            <!-- Apple Watch metrics -->
+            <div id="health-metrics">
+                <div class="health-empty">暂无数据 — 配置 Apple Watch 快捷指令后自动更新</div>
+            </div>
+            <hr class="health-divider">
+            <!-- Workout plan -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <span style="font-size:9px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.1em">本周训练</span>
+                <span id="wo-stat" style="font-size:11px;color:#aaa">0/4</span>
             </div>
             <div class="wo-grid" id="wo-grid"></div>
-            <div style="font-size:10px;color:#263352;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">本周完成</div>
+            <div style="font-size:9px;color:#aaa;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">本周完成</div>
             <div class="wo-week" id="wo-dots"></div>
         </div>
 
@@ -1131,7 +1153,8 @@ function collectSyncData() {
         ga_api_url:   localStorage.getItem('ga_api_url'),
         workout:           wo,
         calendar_events:   JSON.parse(localStorage.getItem('calendar_events') || '[]'),
-        asset_snapshots:   JSON.parse(localStorage.getItem('asset_snapshots') || '[]')
+        asset_snapshots:   JSON.parse(localStorage.getItem('asset_snapshots') || '[]'),
+        health_data:       JSON.parse(localStorage.getItem('health_data') || 'null')
     };
 }
 
@@ -1157,6 +1180,7 @@ function restoreFromSync(d) {
     if (d.workout) { Object.entries(d.workout).forEach(([k,v]) => localStorage.setItem(k, JSON.stringify(v))); loadWorkout && loadWorkout(); }
     if (d.calendar_events) { localStorage.setItem('calendar_events', JSON.stringify(d.calendar_events)); loadCalendar(); }
     if (d.asset_snapshots) { localStorage.setItem('asset_snapshots', JSON.stringify(d.asset_snapshots)); renderSnapshots(); }
+    if (d.health_data)    { localStorage.setItem('health_data', JSON.stringify(d.health_data)); renderHealthMetrics(d.health_data); }
 }
 
 function escHtml(s) {
@@ -1206,6 +1230,75 @@ function toggleWo(i) {
     syncAll();
 }
 loadWorkout();
+
+// ─────────────────────────────────────────────────────────
+// Health metrics (Apple Watch via Shortcuts → KV → Dashboard)
+// ─────────────────────────────────────────────────────────
+function loadHealthData() {
+    const d = JSON.parse(localStorage.getItem('health_data') || 'null');
+    renderHealthMetrics(d);
+}
+function renderHealthMetrics(d) {
+    const el = document.getElementById('health-metrics');
+    const dateEl = document.getElementById('health-date');
+    if (!el) return;
+    if (!d) {
+        el.innerHTML = '<div class="health-empty">暂无数据 — 配置 Apple Watch 快捷指令后自动更新</div>';
+        return;
+    }
+    if (dateEl) dateEl.textContent = d.date ? d.date.slice(5).replace('-','月')+'日' : '—';
+    const fmt = (v, fallback) => (v != null && v !== '') ? v : fallback;
+    const steps   = d.steps    ? Number(d.steps).toLocaleString()     : '—';
+    const cal     = d.calories ? Math.round(Number(d.calories))       : '—';
+    const exMin   = fmt(d.exercise_min, '—');
+    const stand   = d.stand_hours ? `${d.stand_hours}<span class="health-unit">/12</span>` : '—';
+    const hr      = fmt(d.heart_rate_resting, '—');
+    const sleep   = d.sleep_hours ? Number(d.sleep_hours).toFixed(1)  : '—';
+    const dist    = d.distance_km ? Number(d.distance_km).toFixed(1)  : '—';
+    el.innerHTML = `
+    <div class="health-grid">
+        <div class="health-cell">
+            <div class="health-val">${steps}</div>
+            <div class="health-lbl">步数</div>
+        </div>
+        <div class="health-cell">
+            <div class="health-val">${cal}<span class="health-unit"> kcal</span></div>
+            <div class="health-lbl">活动热量</div>
+        </div>
+        <div class="health-cell">
+            <div class="health-val">${exMin}<span class="health-unit"> 分</span></div>
+            <div class="health-lbl">锻炼时间</div>
+        </div>
+        <div class="health-cell">
+            <div class="health-val">${stand}</div>
+            <div class="health-lbl">站立小时</div>
+        </div>
+    </div>
+    <div class="health-pills">
+        <div class="health-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div>
+                <div class="health-pill-val">${hr} <span style="font-size:10px;font-weight:400;color:#999">bpm</span></div>
+                <div class="health-pill-lbl">静息心率</div>
+            </div>
+        </div>
+        <div class="health-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div>
+                <div class="health-pill-val">${sleep} <span style="font-size:10px;font-weight:400;color:#999">小时</span></div>
+                <div class="health-pill-lbl">睡眠</div>
+            </div>
+        </div>
+        <div class="health-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+                <div class="health-pill-val">${dist} <span style="font-size:10px;font-weight:400;color:#999">km</span></div>
+                <div class="health-pill-lbl">步行距离</div>
+            </div>
+        </div>
+    </div>`;
+}
+loadHealthData();
 
 // ─────────────────────────────────────────────────────────
 // Project milestones
