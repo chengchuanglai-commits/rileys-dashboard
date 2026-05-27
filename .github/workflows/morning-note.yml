@@ -36,4 +36,4 @@ jobs:
           git config --global user.name "Morning Note Bot"
           git add dashboard/morning-note.js dashboard/morning-note-history/
           git diff --staged --quiet || git commit -m "chore: 更新金融晨报 $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase && git push
