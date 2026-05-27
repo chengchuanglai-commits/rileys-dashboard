@@ -355,14 +355,18 @@
 
         /* ── Trading Signals ─────────────────────────── */
         .ts-signal-card { border:1px solid #e8e8e8; border-radius:10px; padding:14px 16px; margin-bottom:10px; background:#f8f8f8; }
-        .ts-action { font-size:10px; font-weight:700; padding:3px 12px; border-radius:10px; flex-shrink:0; }
-        .ts-action.buy  { background:#f0fdf4; color:#16a34a; }
-        .ts-action.sell { background:#fef2f2; color:#dc2626; }
-        .ts-action.hold { background:#fff7ed; color:#ea580c; }
+        .ts-action { font-size:11px; font-weight:800; padding:4px 14px; border-radius:10px; flex-shrink:0; letter-spacing:.5px; }
+        .ts-action.buy  { background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0; }
+        .ts-action.sell { background:#fef2f2; color:#dc2626; border:1px solid #fecaca; }
+        .ts-action.hold { background:#fff7ed; color:#ea580c; border:1px solid #fed7aa; }
+        .ts-sector { font-size:9px; padding:2px 8px; border-radius:8px; background:#f0f0f0; color:#666; }
         .ts-dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
         .ts-dot.correct { background:#16a34a; }
         .ts-dot.wrong   { background:#dc2626; }
         .ts-dot.pending { background:#d1d5db; }
+        .ts-summary { font-size:11px; color:#555; line-height:1.7; padding-top:10px; border-top:1px solid #eee; white-space:pre-wrap; word-break:break-word; }
+        .ts-summary-toggle { font-size:10px; color:#999; cursor:pointer; user-select:none; padding-top:4px; display:inline-block; }
+        .ts-summary-toggle:hover { color:#444; }
 
         /* ── Responsive ──────────────────────────── */
         @media (max-width:1100px) { .col-3 { grid-template-columns:1fr 1fr; } }
@@ -2121,22 +2125,42 @@ function renderTradingSignals(d) {
             ${hist.map(h => `<span class="ts-dot ${h === true ? 'correct' : h === false ? 'wrong' : 'pending'}"></span>`).join('')}
         </div>` : '';
 
-    const sigHtml = d.signals.map(s => `
+    const sigHtml = d.signals.map((s, i) => {
+        const summary = s.summary || '';
+        const SHORT = 120;
+        const needsToggle = summary.length > SHORT;
+        const shortText = needsToggle ? summary.slice(0, SHORT) + '…' : summary;
+        const idBase = `ts-sum-${i}`;
+        return `
         <div class="ts-signal-card">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-                <div>
-                    <span style="font-size:15px;font-weight:800;color:#111;margin-right:6px">${s.ticker}</span>
-                    <span style="font-size:10px;color:#999">${s.name || ''}</span>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
+                <div style="flex:1;min-width:0">
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                        <span style="font-size:16px;font-weight:800;color:#111">${s.ticker}</span>
+                        <span style="font-size:11px;color:#666">${s.name || ''}</span>
+                        ${s.sector ? `<span class="ts-sector">${s.sector}</span>` : ''}
+                    </div>
                 </div>
-                <span class="ts-action ${(s.action || 'hold').toLowerCase()}">${s.action || 'HOLD'}</span>
+                <span class="ts-action ${(s.action || 'hold').toLowerCase()}" style="margin-left:10px">${s.action || 'HOLD'}</span>
             </div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">
                 <div><div class="mn-num-lbl">入场价</div><div class="mn-num-val">$${s.current_price != null ? s.current_price.toFixed(2) : '—'}</div></div>
-                <div><div class="mn-num-lbl">目标价 (+10%)</div><div class="mn-num-val" style="color:#16a34a">$${s.target_price != null ? s.target_price.toFixed(2) : '—'}</div></div>
-                <div><div class="mn-num-lbl">止损价 (-5%)</div><div class="mn-num-val" style="color:#dc2626">$${s.stop_loss != null ? s.stop_loss.toFixed(2) : '—'}</div></div>
+                <div><div class="mn-num-lbl">目标价 +10%</div><div class="mn-num-val" style="color:#16a34a">$${s.target_price != null ? s.target_price.toFixed(2) : '—'}</div></div>
+                <div><div class="mn-num-lbl">止损价 −5%</div><div class="mn-num-val" style="color:#dc2626">$${s.stop_loss != null ? s.stop_loss.toFixed(2) : '—'}</div></div>
             </div>
-            <div style="font-size:10px;color:#888;line-height:1.6;padding-top:8px;border-top:1px solid #eee">${s.summary || ''}</div>
-        </div>`).join('');
+            ${summary ? `
+            <div class="ts-summary">
+                <span id="${idBase}-short">${shortText}</span>
+                <span id="${idBase}-full" style="display:none">${summary}</span>
+            </div>
+            ${needsToggle ? `<span class="ts-summary-toggle" onclick="
+                var s=document.getElementById('${idBase}-short'),f=document.getElementById('${idBase}-full'),t=this;
+                if(f.style.display==='none'){s.style.display='none';f.style.display='';t.textContent='收起 ▲';}
+                else{s.style.display='';f.style.display='none';t.textContent='展开全文 ▼';}
+            ">展开全文 ▼</span>` : ''}
+            ` : ''}
+        </div>`;
+    }).join('');
 
     content.innerHTML = dotsHtml + sigHtml + `
         <div style="font-size:9px;color:#bbb;text-align:right;margin-top:4px;padding-top:6px;border-top:1px solid #f0f0f0">

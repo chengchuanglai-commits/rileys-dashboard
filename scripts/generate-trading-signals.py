@@ -58,9 +58,9 @@ def parse_action(decision_str):
     return 'HOLD'
 
 
-def summarize(decision_str, max_chars=200):
+def summarize(decision_str, max_chars=600):
     lines = [l.strip() for l in decision_str.splitlines() if l.strip()]
-    text = ' '.join(lines)
+    text = '\n'.join(lines)
     return text[:max_chars] + ('…' if len(text) > max_chars else '')
 
 
