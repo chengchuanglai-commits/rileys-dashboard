@@ -38,11 +38,14 @@ jobs:
           ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
         run: python scripts/generate-trading-signals.py
 
+      - name: Sync to database
+        run: python scripts/sync-to-db.py
+
       - name: Commit and push
         run: |
           git config --global user.email "trading-signals-bot@users.noreply.github.com"
           git config --global user.name "Trading Signals Bot"
-          git add dashboard/trading-signals.js dashboard/trading-signals-history/
+          git add dashboard/trading-signals.js dashboard/trading-signals-history/ data/trading.db
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4 5; do
             git pull --rebase && git push && break
