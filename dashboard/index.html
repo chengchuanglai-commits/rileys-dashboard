@@ -309,6 +309,23 @@
         @media (max-width:1100px) { .col-3 { grid-template-columns:1fr 1fr; } }
         @media (max-width:700px)  { .col-3,.col-2 { grid-template-columns:1fr; } }
 
+        /* ── History cards ── */
+        .arch-item { display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:1px solid #f4f4f4; }
+        .arch-item:last-child { border-bottom:none; }
+        .arch-date { font-size:10px; color:#bbb; min-width:52px; font-variant-numeric:tabular-nums; }
+        .arch-status { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+        .arch-status.done     { background:#16a34a; }
+        .arch-status.deferred { background:#f59e0b; }
+        .arch-status.pending  { background:#d4d4d8; }
+        .arch-title { font-size:12px; color:#555; flex:1; }
+        .arch-empty { font-size:12px; color:#ccc; padding:12px 0; text-align:center; }
+        .snap-item { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid #f4f4f4; }
+        .snap-item:last-child { border-bottom:none; }
+        .snap-date { font-size:11px; color:#aaa; font-variant-numeric:tabular-nums; }
+        .snap-val  { font-size:13px; font-weight:600; color:#111; font-variant-numeric:tabular-nums; }
+        .snap-delta { font-size:10px; margin-left:6px; }
+        .snap-delta.pos { color:#16a34a; }
+        .snap-delta.neg { color:#ef4444; }
         /* ── Calendar agenda ── */
         .cal-day { margin-bottom:12px; }
         .cal-day-lbl { font-size:10px; color:#aaa; letter-spacing:.08em; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
@@ -367,7 +384,7 @@
     </div>
 
     <!-- ── Row 1: Accounts · Tasks · Workout ── -->
-    <div class="row col-3">
+    <div class="row col-2">
 
         <div class="card acct-card">
             <div class="card-hd">
@@ -459,6 +476,29 @@
                 <button class="btn-sm" onclick="toggleCalForm()">取消</button>
             </div>
         </div>
+    </div>
+
+    <!-- ── History ── -->
+    <div class="row col-2">
+
+        <!-- 日程归档 -->
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">🗂 日程归档</span>
+                <span id="arch-count" style="font-size:12px;color:#aaa">0 条</span>
+            </div>
+            <div id="arch-list" style="max-height:240px;overflow-y:auto"></div>
+        </div>
+
+        <!-- 资产快照 -->
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">📈 资产历史</span>
+                <span id="snap-count" style="font-size:12px;color:#aaa">0 条</span>
+            </div>
+            <div id="snap-list" style="max-height:240px;overflow-y:auto"></div>
+        </div>
+
     </div>
 
     <!-- ── Row 2: Project ── -->
@@ -995,6 +1035,7 @@ function renderAccounts(d, fx) {
     if (bmoSub && bmoSub.tagName !== 'INPUT') bmoSub.textContent =
         `TFSA ${fmtCAD(d.bmo_tfsa)} / RRSP ${fmtCAD(d.bmo_rrsp)} / 投资 ${fmtCAD(d.bmo_inv)}`;
     document.getElementById('total-val').textContent = fmtUSD(total);
+    saveAssetSnapshot(total);
 }
 
 function inlineEditAccount(key) {
@@ -1089,7 +1130,8 @@ function collectSyncData() {
         qt_api_url:   localStorage.getItem('qt_api_url'),
         ga_api_url:   localStorage.getItem('ga_api_url'),
         workout:           wo,
-        calendar_events:   JSON.parse(localStorage.getItem('calendar_events') || '[]')
+        calendar_events:   JSON.parse(localStorage.getItem('calendar_events') || '[]'),
+        asset_snapshots:   JSON.parse(localStorage.getItem('asset_snapshots') || '[]')
     };
 }
 
@@ -1114,6 +1156,7 @@ function restoreFromSync(d) {
     if (d.ga_api_url && !localStorage.getItem('ga_api_url')) localStorage.setItem('ga_api_url', d.ga_api_url);
     if (d.workout) { Object.entries(d.workout).forEach(([k,v]) => localStorage.setItem(k, JSON.stringify(v))); loadWorkout && loadWorkout(); }
     if (d.calendar_events) { localStorage.setItem('calendar_events', JSON.stringify(d.calendar_events)); loadCalendar(); }
+    if (d.asset_snapshots) { localStorage.setItem('asset_snapshots', JSON.stringify(d.asset_snapshots)); renderSnapshots(); }
 }
 
 function escHtml(s) {
@@ -1415,6 +1458,7 @@ function renderQtData(d, stale) {
                     + qt.cad*fx.CAD_USD + qt.usd;
         const el = document.getElementById('total-val');
         if (el) el.textContent = fmtUSD(total);
+        saveAssetSnapshot(total);
     });
 
     // ── Portfolio section ──
@@ -2178,11 +2222,13 @@ function loadCalendar() {
         localStorage.setItem('calendar_events', JSON.stringify(events));
     }
     renderCalendar(events);
+    renderArchive(events);
 }
 
 function saveCalendar(events) {
     localStorage.setItem('calendar_events', JSON.stringify(events));
     renderCalendar(events);
+    renderArchive(events);
     syncAll();
 }
 
@@ -2293,6 +2339,78 @@ function saveCalendarNote(id, value) {
 }
 
 loadCalendar();
+
+// ─────────────────────────────────────────────────────────
+// Archive: past calendar events
+// ─────────────────────────────────────────────────────────
+function renderArchive(events) {
+    const el = document.getElementById('arch-list');
+    const countEl = document.getElementById('arch-count');
+    if (!el) return;
+    const todayStr = _calLocalDate(new Date());
+    const past = (events || [])
+        .filter(ev => ev.date < todayStr)
+        .sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time));
+    if (countEl) countEl.textContent = past.length + ' 条';
+    if (!past.length) {
+        el.innerHTML = `<div class="arch-empty">暂无历史日程</div>`;
+        return;
+    }
+    el.innerHTML = past.map(ev => {
+        const st = ev.status || 'pending';
+        const dateLabel = ev.date.slice(5).replace('-', '月') + '日';
+        return `<div class="arch-item">
+            <span class="arch-date">${dateLabel} ${ev.time}</span>
+            <span class="arch-status ${st}"></span>
+            <span class="arch-title">${escHtml(ev.title)}</span>
+        </div>`;
+    }).join('');
+}
+
+// ─────────────────────────────────────────────────────────
+// Asset snapshots
+// ─────────────────────────────────────────────────────────
+function saveAssetSnapshot(totalUsd) {
+    if (!totalUsd || isNaN(totalUsd) || totalUsd <= 0) return;
+    const today = _calLocalDate(new Date());
+    const snaps = JSON.parse(localStorage.getItem('asset_snapshots') || '[]');
+    const existing = snaps.findIndex(s => s.date === today);
+    if (existing >= 0) {
+        snaps[existing].total = totalUsd;
+    } else {
+        snaps.push({ date: today, total: totalUsd });
+    }
+    const kept = snaps.sort((a, b) => b.date.localeCompare(a.date)).slice(0, 90);
+    localStorage.setItem('asset_snapshots', JSON.stringify(kept));
+    renderSnapshots();
+}
+
+function renderSnapshots() {
+    const el = document.getElementById('snap-list');
+    const countEl = document.getElementById('snap-count');
+    if (!el) return;
+    const snaps = JSON.parse(localStorage.getItem('asset_snapshots') || '[]')
+        .sort((a, b) => b.date.localeCompare(a.date));
+    if (countEl) countEl.textContent = snaps.length + ' 条';
+    if (!snaps.length) {
+        el.innerHTML = `<div class="arch-empty">暂无快照 — 更新账户余额后自动记录</div>`;
+        return;
+    }
+    el.innerHTML = snaps.map((s, i) => {
+        const prev = snaps[i + 1];
+        const delta = prev ? (s.total - prev.total) : null;
+        const deltaHtml = delta !== null
+            ? `<span class="snap-delta ${delta >= 0 ? 'pos' : 'neg'}">${delta >= 0 ? '+' : ''}$${Math.round(delta).toLocaleString()}</span>`
+            : '';
+        const dateLabel = s.date.slice(5).replace('-', '月') + '日';
+        return `<div class="snap-item">
+            <span class="snap-date">${dateLabel}</span>
+            <span class="snap-val">$${Math.round(s.total).toLocaleString()}${deltaHtml}</span>
+        </div>`;
+    }).join('');
+}
+
+renderSnapshots();
 </script>
 </body>
 </html>
