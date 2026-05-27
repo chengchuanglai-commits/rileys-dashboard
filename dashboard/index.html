@@ -58,69 +58,6 @@
         }
         .btn-sm:hover { background:#eee; color:#333; border-color:#ccc; }
 
-        /* ── Tasks ───────────────────────────────── */
-        .task-scroll { max-height:260px; overflow-y:auto; }
-        .task-scroll::-webkit-scrollbar { width:2px; }
-        .task-scroll::-webkit-scrollbar-thumb { background:#ddd; border-radius:2px; }
-
-        .task-item {
-            display:flex; align-items:flex-start; gap:10px;
-            padding:8px 0; border-bottom:1px solid #f0f0f0;
-            position:relative;
-        }
-        .task-item:last-child { border-bottom:none; }
-        .task-item:hover .task-acts { opacity:1; }
-
-        .chk {
-            width:16px; height:16px; border:1.5px solid #ddd; border-radius:4px;
-            flex-shrink:0; display:flex; align-items:center; justify-content:center;
-            margin-top:2px; font-size:10px; cursor:pointer; transition:all .15s;
-        }
-        .chk.done { background:#16a34a; border-color:#16a34a; color:#fff; }
-
-        .task-body { flex:1; min-width:0; }
-        .task-text { font-size:13px; color:#111; line-height:1.5; word-break:break-word; }
-        .task-text.done { text-decoration:line-through; color:#999; }
-        .task-note { font-size:11px; color:#aaa; margin-top:2px; font-style:italic; }
-        .task-text[contenteditable="true"] {
-            outline:none; background:#f5f5f5;
-            border-radius:4px; padding:2px 6px;
-            color:#111; caret-color:#111;
-        }
-
-        .tag {
-            display:inline-block; font-size:9px; font-weight:600;
-            padding:1px 7px; border-radius:10px; margin-left:5px; vertical-align:middle;
-            letter-spacing:.04em;
-        }
-        .tag-p { background:#f0f0f0; color:#999; }
-        .tag-h { background:#f0f0f0; color:#999; }
-        .tag-f { background:#f0f0f0; color:#999; }
-
-        .task-acts {
-            display:flex; gap:3px; opacity:0;
-            transition:opacity .15s; flex-shrink:0; margin-top:2px;
-        }
-        .task-btn {
-            width:22px; height:22px; border:none; background:transparent;
-            border-radius:5px; cursor:pointer; font-size:13px;
-            display:flex; align-items:center; justify-content:center;
-            transition:all .15s;
-        }
-        .task-btn.edit { color:#bbb; }
-        .task-btn.edit:hover { color:#444; background:#f0f0f0; }
-        .task-btn.del  { color:#bbb; }
-        .task-btn.del:hover  { color:#ef4444; background:#fff5f5; }
-
-        .task-input {
-            width:100%; background:#f5f5f5; border:1px solid #e8e8e8;
-            border-radius:8px; padding:9px 14px; color:#111;
-            font-size:13px; outline:none; margin-top:10px; font-family:inherit;
-            transition:border-color .2s;
-        }
-        .task-input:focus { border-color:#999; }
-        .task-input::placeholder { color:#aaa; }
-
         /* ── Workout ─────────────────────────────── */
         .wo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px; }
         .wo-day {
@@ -492,15 +429,6 @@
                 <div class="acct-lbl">总资产（≈ USD）</div>
                 <div class="acct-val total" id="total-val">$0</div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-hd">
-                <span class="card-title">✅ 今日任务</span>
-                <span id="task-stat" style="font-size:12px;color:#334155">0/0</span>
-            </div>
-            <div class="task-scroll" id="task-list"></div>
-            <input class="task-input" id="task-inp" placeholder="+ 新增任务，按 Enter 确认" onkeydown="addTask(event)">
         </div>
 
         <div class="card">
@@ -1155,8 +1083,6 @@ function collectSyncData() {
     return {
         _v: 2,
         accounts_v2:  JSON.parse(localStorage.getItem('accounts_v2') || 'null'),
-        tasks:        JSON.parse(localStorage.getItem('tasks') || 'null'),
-        tasks_date:   localStorage.getItem('tasks_date'),
         milestones:   JSON.parse(localStorage.getItem('milestones') || 'null'),
         ig_seedclay:  JSON.parse(localStorage.getItem('ig_seedclay') || 'null'),
         portfolio:    JSON.parse(localStorage.getItem('portfolio') || 'null'),
@@ -1179,7 +1105,6 @@ function syncAll() {
 
 function restoreFromSync(d) {
     if (d.accounts_v2) { localStorage.setItem('accounts_v2', JSON.stringify(d.accounts_v2)); fetchFX().then(fx => renderAccounts(d.accounts_v2, fx)); }
-    if (d.tasks && d.tasks_date === new Date().toDateString()) { localStorage.setItem('tasks', JSON.stringify(d.tasks)); localStorage.setItem('tasks_date', d.tasks_date); renderTasks(d.tasks); }
     if (d.milestones) { localStorage.setItem('milestones', JSON.stringify(d.milestones)); loadMilestones(); }
     if (d.seedclay_milestones) { localStorage.setItem('seedclay_milestones', JSON.stringify(d.seedclay_milestones)); loadMilestones(); }
     if (d.seedclay_metrics) { localStorage.setItem('seedclay_metrics', JSON.stringify(d.seedclay_metrics)); loadSeedclayMetrics(); }
@@ -1191,91 +1116,9 @@ function restoreFromSync(d) {
     if (d.calendar_events) { localStorage.setItem('calendar_events', JSON.stringify(d.calendar_events)); loadCalendar(); }
 }
 
-// ─────────────────────────────────────────────────────────
-const DEFAULT_TASKS = [
-    { text:'查看今日财经新闻（Bloomberg / WSJ）', tag:'f', done:false },
-    { text:'🧪 测试 TradingAgents 全流程 — 20:30 后查看 Dashboard AI 信号卡片', tag:'f', done:false },
-    { text:'Seedclay — 完成今日研究任务',         tag:'p', done:false },
-    { text:'完成今日运动训练',                   tag:'h', done:false },
-];
-const TAG_LBL = { p:'项目', h:'健康', f:'财经' };
-const TAG_CLS = { p:'tag-p', h:'tag-h', f:'tag-f' };
-
-function getTasks() {
-    return JSON.parse(localStorage.getItem('tasks')||'[]');
-}
-function saveTasks(tasks) {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    syncAll();
-}
-function loadTasks() {
-    const today = new Date().toDateString();
-    const saved = localStorage.getItem('tasks');
-    const savedDate = localStorage.getItem('tasks_date');
-    let tasks = (saved && savedDate===today) ? JSON.parse(saved) : DEFAULT_TASKS.map(t=>({...t}));
-    if (savedDate!==today) localStorage.setItem('tasks_date', today);
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    renderTasks(tasks);
-}
-function renderTasks(tasks) {
-    const done = tasks.filter(t=>t.done).length;
-    document.getElementById('task-stat').textContent = `${done}/${tasks.length}`;
-    document.getElementById('task-list').innerHTML = tasks.map((t,i)=>`
-        <div class="task-item" data-i="${i}">
-            <div class="chk ${t.done?'done':''}" onclick="toggleTask(${i})">${t.done?'✓':''}</div>
-            <div class="task-body">
-                <span class="task-text ${t.done?'done':''}" id="tt-${i}">${escHtml(t.text)}</span>${t.tag?`<span class="tag ${TAG_CLS[t.tag]||''}">${TAG_LBL[t.tag]||''}</span>`:''}${t.note?`<div class="task-note">📝 ${escHtml(t.note)}</div>`:''}
-            </div>
-            <div class="task-acts">
-                <button class="task-btn edit" title="编辑" onclick="editTask(${i})">✏</button>
-                <button class="task-btn del"  title="删除" onclick="deleteTask(${i})">✕</button>
-            </div>
-        </div>`).join('');
-}
 function escHtml(s) {
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-function toggleTask(i) {
-    const tasks = getTasks(); tasks[i].done=!tasks[i].done;
-    saveTasks(tasks); renderTasks(tasks);
-}
-function deleteTask(i) {
-    const tasks = getTasks(); tasks.splice(i,1);
-    saveTasks(tasks); renderTasks(tasks);
-}
-function editTask(i) {
-    const tasks = getTasks();
-    const el = document.getElementById('tt-'+i);
-    if (!el) return;
-    const orig = tasks[i].text;
-    el.textContent = orig;
-    el.contentEditable = 'true';
-    el.focus();
-    const sel = window.getSelection();
-    const range = document.createRange();
-    range.selectNodeContents(el);
-    sel.removeAllRanges(); sel.addRange(range);
-    el.onblur = () => {
-        el.contentEditable = 'false';
-        const nv = el.textContent.trim();
-        tasks[i].text = nv || orig;
-        saveTasks(tasks); renderTasks(tasks);
-    };
-    el.onkeydown = e => {
-        if (e.key==='Enter')  { e.preventDefault(); el.blur(); }
-        if (e.key==='Escape') { el.textContent=orig; el.contentEditable='false'; el.onblur=null; renderTasks(tasks); }
-    };
-}
-function addTask(e) {
-    if (e.key!=='Enter') return;
-    const inp = document.getElementById('task-inp');
-    const txt = inp.value.trim(); if (!txt) return;
-    const tasks = getTasks();
-    tasks.push({ text:txt, tag:'', done:false });
-    saveTasks(tasks); renderTasks(tasks);
-    inp.value = '';
-}
-loadTasks();
 
 // ─────────────────────────────────────────────────────────
 // Workout
