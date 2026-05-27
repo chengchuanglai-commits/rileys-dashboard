@@ -1,7 +1,7 @@
 // TradingAgents 信号数据 — 每日 20:30 自动更新
 window.TRADING_SIGNALS = {
   "date": "2026-05-27",
-  "generated_at": "2026-05-27T20:57:00",
+  "generated_at": "2026-05-27T21:15:00",
   "signals": [
     {
       "ticker": "UCTT",
@@ -9,9 +9,9 @@ window.TRADING_SIGNALS = {
       "sector": "半导体",
       "action": "HOLD",
       "current_price": 87.46,
-      "target_price": null,
-      "stop_loss": null,
-      "summary": "分析失败: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, "
+      "target_price": 96.21,
+      "stop_loss": 83.09,
+      "summary": "Overweight"
     },
     {
       "ticker": "WTTR",
@@ -19,9 +19,9 @@ window.TRADING_SIGNALS = {
       "sector": "能源",
       "action": "HOLD",
       "current_price": 19.35,
-      "target_price": null,
-      "stop_loss": null,
-      "summary": "分析失败: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, "
+      "target_price": 21.29,
+      "stop_loss": 18.38,
+      "summary": "Underweight"
     }
   ],
   "accuracy": {
@@ -30,5 +30,5 @@ window.TRADING_SIGNALS = {
     "rate": null,
     "history": []
   },
-  "api_cost_usd": 0.0023
+  "api_cost_usd": 0.5484
 };
