@@ -3,8 +3,8 @@ import os
 import sys
 import time
 import yfinance as yf
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
-from unittest.mock import patch
 
 beijing_tz = timezone(timedelta(hours=8))
 now_beijing = datetime.now(beijing_tz)
@@ -170,8 +170,7 @@ if not selected_picks:
         "signals": [], "accuracy": build_accuracy(), "api_cost_usd": 0.0
     }
 else:
-    signals = []
-    for pick in selected_picks:
+    def analyze_pick(pick):
         ticker = pick['ticker']
         try:
             state, decision = run_tradingagents(ticker)
@@ -180,7 +179,8 @@ else:
             target = round(price * 1.10, 2) if price else None
             stop = round(price * 0.95, 2) if price else None
             summary = summarize(decision)
-            signals.append({
+            print(f"[signal] {ticker}: {action} @ ${price} → target ${target} / stop ${stop}")
+            return {
                 "ticker": ticker,
                 "name": pick.get('name', ''),
                 "sector": pick.get('sector', ''),
@@ -189,11 +189,10 @@ else:
                 "target_price": target,
                 "stop_loss": stop,
                 "summary": summary,
-            })
-            print(f"[signal] {ticker}: {action} @ ${price} → target ${target} / stop ${stop}")
+            }
         except Exception as e:
             print(f"[error] TradingAgents failed for {ticker}: {e}")
-            signals.append({
+            return {
                 "ticker": ticker,
                 "name": pick.get('name', ''),
                 "sector": pick.get('sector', ''),
@@ -202,7 +201,16 @@ else:
                 "target_price": None,
                 "stop_loss": None,
                 "summary": f"分析失败: {str(e)[:100]}",
-            })
+            }
+
+    signals_map = {}
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        futures = {executor.submit(analyze_pick, pick): pick['ticker'] for pick in selected_picks}
+        for future in as_completed(futures):
+            ticker = futures[future]
+            signals_map[ticker] = future.result()
+    # preserve original order
+    signals = [signals_map[p['ticker']] for p in selected_picks if p['ticker'] in signals_map]
 
     # claude-haiku-4-5 pricing: $0.80/MTok in, $4.00/MTok out
     api_cost = round(_total_input_tokens * 0.8 / 1_000_000 + _total_output_tokens * 4.0 / 1_000_000, 4)
