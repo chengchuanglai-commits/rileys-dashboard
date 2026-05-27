@@ -1,8 +1,10 @@
 import json
 import os
 import sys
+import time
 import yfinance as yf
 from datetime import datetime, timezone, timedelta
+from unittest.mock import patch
 
 beijing_tz = timezone(timedelta(hours=8))
 now_beijing = datetime.now(beijing_tz)
@@ -12,6 +14,28 @@ generated_at = now_beijing.strftime('%Y-%m-%dT%H:%M:00')
 
 HISTORY_DIR = "dashboard/trading-signals-history"
 os.makedirs(HISTORY_DIR, exist_ok=True)
+
+# Token usage tracking — wraps anthropic.Anthropic to intercept all API calls
+_total_input_tokens = 0
+_total_output_tokens = 0
+
+def _patch_anthropic():
+    try:
+        import anthropic
+        original_create = anthropic.Anthropic().messages.create.__func__ if False else None
+        _orig = anthropic.resources.messages.Messages.create
+        def _tracked_create(self, *args, **kwargs):
+            global _total_input_tokens, _total_output_tokens
+            resp = _orig(self, *args, **kwargs)
+            if hasattr(resp, 'usage'):
+                _total_input_tokens  += getattr(resp.usage, 'input_tokens',  0)
+                _total_output_tokens += getattr(resp.usage, 'output_tokens', 0)
+            return resp
+        anthropic.resources.messages.Messages.create = _tracked_create
+    except Exception as e:
+        print(f"[warn] Token tracking patch failed: {e}")
+
+_patch_anthropic()
 
 
 def select_stocks():
@@ -143,7 +167,7 @@ if not selected_picks:
     print("[warn] No stocks selected. Writing empty signal file.")
     data = {
         "date": today, "generated_at": generated_at,
-        "signals": [], "accuracy": build_accuracy(), "api_cost_usd": 0
+        "signals": [], "accuracy": build_accuracy(), "api_cost_usd": 0.0
     }
 else:
     signals = []
@@ -180,12 +204,15 @@ else:
                 "summary": f"分析失败: {str(e)[:100]}",
             })
 
+    # claude-haiku-4-5 pricing: $0.80/MTok in, $4.00/MTok out
+    api_cost = round(_total_input_tokens * 0.8 / 1_000_000 + _total_output_tokens * 4.0 / 1_000_000, 4)
+    print(f"[cost] tokens in={_total_input_tokens} out={_total_output_tokens} cost=${api_cost}")
     data = {
         "date": today,
         "generated_at": generated_at,
         "signals": signals,
         "accuracy": build_accuracy(),
-        "api_cost_usd": 0
+        "api_cost_usd": api_cost
     }
 
 os.makedirs("dashboard", exist_ok=True)
