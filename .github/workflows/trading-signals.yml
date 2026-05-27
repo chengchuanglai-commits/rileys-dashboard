@@ -44,4 +44,8 @@ jobs:
           git config --global user.name "Trading Signals Bot"
           git add dashboard/trading-signals.js dashboard/trading-signals-history/
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
-          git pull --rebase && git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && break
+            echo "Push failed, retry $i/5 in 10s..."
+            sleep 10
+          done
