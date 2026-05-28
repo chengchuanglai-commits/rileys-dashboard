@@ -1,8 +1,31 @@
 // TradingAgents 信号数据 — 每日 20:30 自动更新
 window.TRADING_SIGNALS = {
   "date": "2026-05-28",
-  "generated_at": "2026-05-28T00:16:00",
-  "signals": [],
+  "generated_at": "2026-05-28T14:38:00",
+  "signals": [
+    {
+      "ticker": "MXL",
+      "name": "MaxLinear Inc.",
+      "sector": "科技/半导体",
+      "action": "HOLD",
+      "current_price": 101.1,
+      "target_price": 111.21,
+      "stop_loss": 96.04,
+      "summary": "**Rating**: Underweight **Executive Summary**: Reduce MXL exposure by 40-50% on any strength above $100, maintaining a smaller core position with strict stop-loss discipline at $87.46. The company exhibits genuine operational improvement (43% YoY revenue growth, 55% narrowing of operating losses) but deteriorating near-term cash dynamics and insufficient visibility to profitability justify positio…",
+      "report_file": "trading-signals-history/2026-05-28-MXL-report.json"
+    },
+    {
+      "ticker": "ALGT",
+      "name": "Allegiant Travel Company",
+      "sector": "消费可选",
+      "action": "HOLD",
+      "current_price": 91.0,
+      "target_price": 100.1,
+      "stop_loss": 86.45,
+      "summary": "**Rating**: Underweight **Executive Summary**: Trim existing ALGT positions by 25-30% at current $91 levels to lock in gains from the $69.87-to-$91 rally. Do not initiate new positions until better clarity on Q2 2026 earnings and integration execution emerges. Maintain dry powder for re-entry at $87-88 support or $75-80 if macro deterioration accelerates. The bear case's structural concerns—unsust…",
+      "report_file": "trading-signals-history/2026-05-28-ALGT-report.json"
+    }
+  ],
   "accuracy": {
     "total": 2,
     "correct": 0,
@@ -12,5 +35,5 @@ window.TRADING_SIGNALS = {
       false
     ]
   },
-  "api_cost_usd": 0.0
+  "api_cost_usd": 0.5925
 };
