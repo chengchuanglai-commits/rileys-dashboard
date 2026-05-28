@@ -11,7 +11,10 @@
       "target_price": 111.21,
       "stop_loss": 96.04,
       "summary": "**Rating**: Underweight **Executive Summary**: Reduce MXL exposure by 40-50% on any strength above $100, maintaining a smaller core position with strict stop-loss discipline at $87.46. The company exhibits genuine operational improvement (43% YoY revenue growth, 55% narrowing of operating losses) but deteriorating near-term cash dynamics and insufficient visibility to profitability justify positio…",
-      "report_file": "trading-signals-history/2026-05-28-MXL-report.json"
+      "report_file": "trading-signals-history/2026-05-28-MXL-report.json",
+      "actual_price": 98.18,
+      "pct_change": -2.89,
+      "correct": false
     },
     {
       "ticker": "ALGT",
@@ -22,7 +25,10 @@
       "target_price": 100.1,
       "stop_loss": 86.45,
       "summary": "**Rating**: Underweight **Executive Summary**: Trim existing ALGT positions by 25-30% at current $91 levels to lock in gains from the $69.87-to-$91 rally. Do not initiate new positions until better clarity on Q2 2026 earnings and integration execution emerges. Maintain dry powder for re-entry at $87-88 support or $75-80 if macro deterioration accelerates. The bear case's structural concerns—unsust…",
-      "report_file": "trading-signals-history/2026-05-28-ALGT-report.json"
+      "report_file": "trading-signals-history/2026-05-28-ALGT-report.json",
+      "actual_price": 91.12,
+      "pct_change": 0.13,
+      "correct": true
     }
   ],
   "accuracy": {
