@@ -82,10 +82,31 @@ def parse_action(decision_str):
     return 'HOLD'
 
 
-def summarize(decision_str, max_chars=600):
-    lines = [l.strip() for l in decision_str.splitlines() if l.strip()]
-    text = '\n'.join(lines)
-    return text[:max_chars] + ('…' if len(text) > max_chars else '')
+def extract_full_report(state):
+    """Extract all analysis sections from TradingAgents state."""
+    debate  = state.get("investment_debate_state") or {}
+    risk    = state.get("risk_debate_state") or {}
+    return {
+        "market":       state.get("market_report")            or "",
+        "sentiment":    state.get("sentiment_report")         or "",
+        "news":         state.get("news_report")              or "",
+        "fundamentals": state.get("fundamentals_report")      or "",
+        "debate":       debate.get("judge_decision")          or debate.get("history") or "",
+        "investment_plan": state.get("investment_plan")       or "",
+        "trader_plan":  state.get("trader_investment_plan")   or "",
+        "risk":         risk.get("judge_decision")            or risk.get("history")   or "",
+        "final":        state.get("final_trade_decision")     or "",
+    }
+
+
+def summarize(report):
+    """Build a 2-sentence summary from final decision + investment plan."""
+    final = (report.get("final") or "").strip()
+    plan  = (report.get("investment_plan") or "").strip()
+    text  = final if final else plan
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    out   = ' '.join(lines)
+    return out[:400] + ('…' if len(out) > 400 else '')
 
 
 def get_price(ticker):
@@ -175,11 +196,18 @@ else:
         for attempt in range(3):
             try:
                 state, decision = run_tradingagents(ticker)
-                action = parse_action(decision)
+                report = extract_full_report(state)
+                action = parse_action(decision or report.get("final", ""))
                 price = get_price(ticker)
                 target = round(price * 1.10, 2) if price else None
                 stop = round(price * 0.95, 2) if price else None
-                summary = summarize(decision)
+                summary = summarize(report)
+                # save full report as separate file
+                report_path = os.path.join(HISTORY_DIR, f"{today}-{ticker}-report.json")
+                with open(report_path, "w", encoding="utf-8") as rf:
+                    json.dump({"date": today, "ticker": ticker, "action": action,
+                               "current_price": price, "report": report}, rf,
+                              ensure_ascii=False, indent=2)
                 print(f"[signal] {ticker}: {action} @ ${price} → target ${target} / stop ${stop}")
                 return {
                     "ticker": ticker,
@@ -190,6 +218,7 @@ else:
                     "target_price": target,
                     "stop_loss": stop,
                     "summary": summary,
+                    "report_file": f"trading-signals-history/{today}-{ticker}-report.json",
                 }
             except Exception as e:
                 if '529' in str(e) or 'overloaded' in str(e).lower():
