@@ -1267,7 +1267,7 @@ function renderHealthMetrics(d) {
     const steps   = d.steps    ? Number(d.steps).toLocaleString()     : '—';
     const cal     = d.calories ? Math.round(Number(d.calories))       : '—';
     const exMin   = fmt(d.exercise_min, '—');
-    const stand   = d.stand_hours ? `${d.stand_hours}<span class="health-unit">/12</span>` : '—';
+    const spo2    = d.blood_oxygen ? `${Math.round(d.blood_oxygen)}` : '—';
     const hr      = fmt(d.heart_rate_resting, '—');
     const sleep   = d.sleep_hours ? Number(d.sleep_hours).toFixed(1)  : '—';
     const dist    = d.distance_km ? Number(d.distance_km).toFixed(1)  : '—';
@@ -1286,8 +1286,8 @@ function renderHealthMetrics(d) {
             <div class="health-lbl">锻炼时间</div>
         </div>
         <div class="health-cell">
-            <div class="health-val">${stand}</div>
-            <div class="health-lbl">站立小时</div>
+            <div class="health-val">${spo2}<span class="health-unit"> %</span></div>
+            <div class="health-lbl">血氧</div>
         </div>
     </div>
     <div class="health-pills">
