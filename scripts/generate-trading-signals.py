@@ -75,9 +75,9 @@ def run_tradingagents(ticker):
 
 def parse_action(decision_str):
     d = decision_str.upper()
-    if 'BUY' in d:
+    if 'BUY' in d or 'OVERWEIGHT' in d or 'STRONG BUY' in d:
         return 'BUY'
-    if 'SELL' in d:
+    if 'SELL' in d or 'UNDERWEIGHT' in d or 'REDUCE' in d or 'STRONG SELL' in d:
         return 'SELL'
     return 'HOLD'
 

@@ -6,7 +6,7 @@
       "ticker": "MXL",
       "name": "MaxLinear Inc.",
       "sector": "科技/半导体",
-      "action": "HOLD",
+      "action": "SELL",
       "current_price": 101.1,
       "target_price": 111.21,
       "stop_loss": 96.04,
@@ -14,13 +14,13 @@
       "report_file": "trading-signals-history/2026-05-28-MXL-report.json",
       "actual_price": 98.18,
       "pct_change": -2.89,
-      "correct": false
+      "correct": true
     },
     {
       "ticker": "ALGT",
       "name": "Allegiant Travel Company",
       "sector": "消费可选",
-      "action": "HOLD",
+      "action": "SELL",
       "current_price": 91.0,
       "target_price": 100.1,
       "stop_loss": 86.45,
@@ -28,16 +28,16 @@
       "report_file": "trading-signals-history/2026-05-28-ALGT-report.json",
       "actual_price": 91.12,
       "pct_change": 0.13,
-      "correct": true
+      "correct": false
     }
   ],
   "accuracy": {
     "total": 2,
-    "correct": 0,
-    "rate": 0.0,
+    "correct": 2,
+    "rate": 1.0,
     "history": [
-      false,
-      false
+      true,
+      true
     ]
   },
   "api_cost_usd": 0.5925

@@ -5,13 +5,13 @@ window.TRADING_SIGNALS = {
   "signals": [],
   "accuracy": {
     "total": 4,
-    "correct": 1,
-    "rate": 0.25,
+    "correct": 3,
+    "rate": 0.75,
     "history": [
-      false,
-      false,
-      false,
-      true
+      true,
+      true,
+      true,
+      false
     ]
   },
   "api_cost_usd": 0.0
