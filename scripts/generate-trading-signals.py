@@ -147,9 +147,25 @@ def get_price(ticker):
         hist = yf.Ticker(ticker).history(period="5d")
         if len(hist) == 0:
             return None
-        return round(float(hist['Close'].iloc[-1]), 2)
+        price = round(float(hist['Close'].iloc[-1]), 2)
+        # log the actual data date so we can detect stale data
+        data_date = hist.index[-1].strftime('%Y-%m-%d')
+        print(f"[price] {ticker}: ${price} (data date: {data_date})")
+        return price
     except Exception as e:
         print(f"[warn] yfinance price fetch failed for {ticker}: {e}")
+        return None
+
+
+def get_open_price(ticker):
+    """Get today's opening price for more accurate entry price comparison."""
+    try:
+        hist = yf.Ticker(ticker).history(period="5d")
+        if len(hist) == 0:
+            return None
+        open_price = round(float(hist['Open'].iloc[-1]), 2)
+        return open_price
+    except Exception:
         return None
 
 
@@ -168,19 +184,24 @@ def check_yesterday_accuracy():
         entry = sig.get('current_price')
         if not ticker or not action or not entry:
             continue
-        current = get_price(ticker)
+        current = get_price(ticker)     # today's close — exit price
+        open_px = get_open_price(ticker)  # today's open — actual entry price
         if current is None:
             continue
-        pct = (current - entry) / entry * 100
+        # use open price as real entry if available (more accurate than prev close)
+        real_entry = open_px if open_px else entry
+        pct = (current - real_entry) / real_entry * 100
         sig['actual_price'] = current
+        sig['open_price'] = open_px      # record open for transparency
         sig['pct_change'] = round(pct, 2)
+        sig['pct_from_prev_close'] = round((current - entry) / entry * 100, 2)
         if action == 'BUY':
             sig['correct'] = pct > 0
         elif action == 'SELL':
             sig['correct'] = pct < 0
         else:
             sig['correct'] = abs(pct) < 2
-        print(f"[accuracy] {ticker} {action}: entry=${entry} actual=${current} ({pct:+.2f}%) → {'✓' if sig['correct'] else '✗'}")
+        print(f"[accuracy] {ticker} {action}: prev_close=${entry} open=${open_px} close=${current} ({pct:+.2f}% from open) → {'✓' if sig['correct'] else '✗'}")
         updated = True
     if updated:
         with open(prev_file, 'w') as f:
@@ -230,8 +251,9 @@ else:
             try:
                 state, decision = run_tradingagents(ticker)
                 report = extract_full_report(state)
-                report = translate_report_to_chinese(report, ticker)
+                # parse action BEFORE translating — translated Chinese text breaks keyword matching
                 action = parse_action(decision or report.get("final", ""))
+                report = translate_report_to_chinese(report, ticker)
                 price = get_price(ticker)
                 target = round(price * 1.10, 2) if price else None
                 stop = round(price * 0.95, 2) if price else None
