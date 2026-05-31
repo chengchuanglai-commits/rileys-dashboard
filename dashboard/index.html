@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riley's Dashboard</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Dashboard">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="apple-touch-icon" href="icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,6 +62,16 @@
             cursor:pointer; font-family:inherit; transition:all .15s;
         }
         .btn-sm:hover { background:#eee; color:#333; border-color:#ccc; }
+        /* Icon-only buttons */
+        .icon-btn {
+            background:none; border:1px solid #e8e8e8; border-radius:8px; color:#bbb;
+            padding:0; width:30px; height:30px; cursor:pointer; display:inline-flex;
+            align-items:center; justify-content:center; transition:all .15s; flex-shrink:0;
+        }
+        .icon-btn:hover { background:#f0f0f0; color:#444; border-color:#ccc; }
+        .icon-btn svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+        .icon-btn.icon-primary { background:#f0f0f0; border-color:#e0e0e0; color:#666; }
+        .icon-btn.icon-primary:hover { background:#e4e4e4; color:#222; }
 
         /* ── Health metrics ──────────────────────── */
         .health-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:10px; }
@@ -254,6 +269,17 @@
         .p-stat { background:#f8f8f8; border:1px solid #e8e8e8; border-radius:10px; padding:14px 12px; text-align:center; }
         .p-stat-val { font-size:20px; font-weight:700; color:#111; font-family:'Poppins',sans-serif; }
         .p-stat-lbl { font-size:9px; color:#888; text-transform:uppercase; letter-spacing:.08em; margin-top:5px; }
+        /* Mobile two-row layout */
+        @media (max-width:480px) {
+            .p-stats { grid-template-columns:1fr 1fr; gap:8px; }
+            .p-stat-r1 { background:#fff; border:1.5px solid #e0e0e0; padding:16px 14px; }
+            .p-stat-r1 .p-stat-val { font-size:22px; }
+            .p-stat-r1 .p-stat-lbl { font-size:11px; }
+            .p-stat-r2 { background:#f8f8f8; border:1px solid #efefef; padding:10px 14px; border-radius:8px; }
+            .p-stat-r2 .p-stat-val { font-size:15px; font-weight:600; }
+            .p-stat-r2 .p-stat-lbl { font-size:10px; margin-top:2px; }
+            .p-stat-r2 .pos, .p-stat-r2 .neg { font-size:15px; }
+        }
         .platform-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; padding-top:14px; border-top:1px solid #f0f0f0; }
         .platform-btn {
             display:inline-flex; align-items:center; gap:5px;
@@ -336,6 +362,109 @@
         /* ── Responsive ──────────────────────────── */
         @media (max-width:1100px) { .col-3 { grid-template-columns:1fr 1fr; } }
         @media (max-width:700px)  { .col-3,.col-2 { grid-template-columns:1fr; } }
+
+        /* ── Sync dot ───────────────────────────── */
+        .sync-dot {
+            width:8px; height:8px; border-radius:50%; display:inline-block;
+            flex-shrink:0; background:#222; transition:background .3s;
+        }
+        .sync-dot.syncing { background:#bbb; animation:sync-pulse 1s ease-in-out infinite; }
+        .sync-dot.synced  { background:#16a34a; }
+        .sync-dot.error   { background:#ef4444; }
+        @keyframes sync-pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+        /* ── Portfolio mobile cards ─────────────── */
+        .porto-cards { display:flex; flex-direction:column; gap:8px; }
+        .porto-mc { background:#f8f8f8; border:1px solid #e8e8e8; border-radius:10px; padding:12px 14px; }
+        .porto-mc-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; }
+        .porto-mc-sym { font-size:16px; font-weight:800; color:#111; text-decoration:none; }
+        .porto-mc-pl  { font-size:15px; font-weight:700; }
+        .porto-mc-pct { font-size:11px; font-weight:500; opacity:.8; }
+        .porto-mc-btm { display:flex; justify-content:space-between; }
+        .porto-mc-val, .porto-mc-price { font-size:12px; color:#888; }
+
+        /* ── Mobile (≤480px) ─────────────────────── */
+        @media (max-width:480px) {
+            /* Container */
+            .container { padding:16px 14px; }
+
+            /* Header */
+            .site-name { font-size:17px; }
+            .clock { font-size:28px; }
+            .greeting-sub, .dateline { font-size:12px; }
+
+            /* Cards */
+            .card { padding:16px 14px; border-radius:12px; }
+
+            /* Account rows */
+            .acct-val { font-size:18px !important; }
+            .acct-lbl { font-size:11px; letter-spacing:.04em; }
+            .acct-edit-btn { font-size:14px; padding:4px 6px; min-width:32px; min-height:32px; }
+
+            /* Health grid → 2x2 */
+            .health-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+            .health-cell { padding:14px 10px; border-radius:10px; }
+            .health-val  { font-size:22px; }
+            .health-lbl  { font-size:10px; margin-top:4px; }
+            .health-unit { font-size:11px; }
+
+            /* Health pills → stacked */
+            .health-pills { flex-direction:column; gap:8px; }
+            .health-pill  { padding:12px 14px; border-radius:10px; }
+            .health-pill-val { font-size:16px; }
+            .health-pill-lbl { font-size:11px; }
+
+            /* Workout grid → 2x2 */
+            .wo-grid { grid-template-columns:repeat(2,1fr); }
+            .wo-day { padding:16px 6px; }
+            .wo-name { font-size:13px; }
+            .wo-lbl  { font-size:10px; }
+
+            /* Card titles */
+            .card-title { font-size:11px; }
+
+            /* News */
+            .news-art-title { font-size:13px; }
+            .news-art-src, .news-art-time { font-size:10px; }
+            .news-tab { padding:5px 14px; font-size:11px; min-height:32px; }
+
+            /* Portfolio stats */
+            .p-stats { grid-template-columns:repeat(2,1fr); }
+            .p-stat-val { font-size:18px; }
+
+            /* Analytics stats */
+            .analytics-stats { grid-template-columns:repeat(2,1fr); }
+
+            /* Calendar events */
+            .cal-ev { padding:12px; }
+            .cal-ev-title { font-size:14px; }
+            .cal-ev-time  { font-size:12px; }
+            .cal-status-btn { width:34px; height:34px; }
+
+            /* Buttons touch targets */
+            .btn-sm { padding:8px 16px; font-size:12px; min-height:36px; }
+            .news-refresh { padding:8px; font-size:18px; }
+
+            /* Morning note — stack left/right columns */
+            .mn-layout { grid-template-columns:1fr !important; gap:16px !important; }
+            .mn-layout > div:first-child { border-right:none !important; padding-right:0 !important; border-bottom:1px solid #f0f0f0; padding-bottom:16px; }
+            .mn-key-card { padding:12px 14px; }
+            .mn-key-val { font-size:18px; }
+            .mn-key-lbl { font-size:11px; }
+            .mn-section-text { font-size:13px; line-height:1.7; }
+            .mn-tab { padding:6px 14px; font-size:12px; min-height:36px; }
+            .mn-stock-nums { grid-template-columns:repeat(3,1fr); gap:10px; }
+            .mn-num-val { font-size:13px; }
+            .mn-num-lbl { font-size:11px; }
+            .mn-reason { font-size:11px; line-height:1.6; }
+            #mn-pane-note, #mn-pane-picks { max-height:none !important; overflow-y:visible; }
+
+            /* 项目追踪 — stack left/right */
+            .proj-layout { grid-template-columns:1fr !important; gap:20px !important; }
+
+            /* SeedClay 业务指标 — 6列→3列 */
+            #seedclay-metrics-row { grid-template-columns:repeat(3,1fr) !important; }
+        }
 
         /* ── History cards ── */
         .arch-item { display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:1px solid #f4f4f4; }
@@ -460,7 +589,7 @@
                     <div>
                         <div class="acct-lbl">
                             📈 Questrade
-                            <span id="qt-acct-badge" style="display:none;font-size:9px;font-weight:700;background:#f0f0f0;color:#555;padding:1px 6px;border-radius:8px;margin-left:4px">● 实时</span>
+                            <span class="sync-dot" id="acct-dot" style="margin-left:4px" title="Questrade 同步状态"></span>
                         </div>
                         <div class="acct-val" id="qt-equity" style="font-size:20px">—</div>
                     </div>
@@ -546,7 +675,7 @@
                 <span class="card-title">🚀 项目追踪</span>
                 <span class="proj-badge"><span class="badge-dot"></span>规划阶段</span>
             </div>
-            <div style="display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
+            <div class="proj-layout" style="display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
                 <div>
                     <div class="proj-name">Seedclay</div>
                     <div class="proj-sub">跨境电商 · 陶瓷泥套装</div>
@@ -604,9 +733,15 @@
                                 </div>
                             </div>
                             <div class="ig-actions">
-                                <a href="https://www.instagram.com/seedclayworld/" target="_blank" class="ig-btn">↗ 主页</a>
-                                <a href="https://socialblade.com/instagram/user/seedclayworld" target="_blank" class="ig-btn">📊 数据</a>
-                                <button class="ig-btn" onclick="editIg()">编辑</button>
+                                <a href="https://www.instagram.com/seedclayworld/" target="_blank" class="icon-btn" title="打开 Instagram 主页">
+                                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                </a>
+                                <a href="https://socialblade.com/instagram/user/seedclayworld" target="_blank" class="icon-btn" title="Social Blade 数据">
+                                    <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                </a>
+                                <button class="icon-btn" onclick="editIg()" title="编辑数据">
+                                    <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                </button>
                             </div>
                         </div>
                         <div class="ig-stats">
@@ -661,13 +796,21 @@
             <div class="card-hd">
                 <div style="display:flex;align-items:center;gap:8px">
                     <span class="card-title">🌐 Seedclay.com 网站数据</span>
-                    <span id="ga-badge" style="display:none;font-size:10px;font-weight:600;background:#f0f0f0;color:#555;padding:2px 8px;border-radius:10px">● 自动同步</span>
+                    <span class="sync-dot" id="ga-dot" title="GA4 同步状态"></span>
                 </div>
-                <div style="display:flex;gap:6px">
-                    <a href="https://analytics.google.com/" target="_blank" class="btn-sm">↗ 打开 GA4</a>
-                    <button class="btn-sm" onclick="refreshAnalytics()">↻ 刷新</button>
-                    <button class="btn-sm" onclick="editAnalyticsManual()">手动更新</button>
-                    <button class="btn-sm" style="background:#f0f0f0;color:#555;border-color:#e8e8e8" onclick="setupAnalyticsApi()">设置 API</button>
+                <div style="display:flex;gap:6px;align-items:center">
+                    <a href="https://analytics.google.com/" target="_blank" class="icon-btn" title="打开 GA4">
+                        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    <button class="icon-btn" onclick="refreshAnalytics()" title="刷新">
+                        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                    </button>
+                    <button class="icon-btn" onclick="editAnalyticsManual()" title="手动更新">
+                        <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    </button>
+                    <button class="icon-btn icon-primary" onclick="setupAnalyticsApi()" title="设置 API">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </button>
                 </div>
             </div>
 
@@ -728,8 +871,7 @@
                 <span class="card-title">📊 金融晨报</span>
                 <div style="display:flex;align-items:center;gap:10px">
                     <span id="mn-date-badge" style="font-size:9px;background:#f0f0f0;padding:2px 10px;border-radius:10px;color:#888"></span>
-                    <span id="mn-status-badge" style="font-size:9px;font-weight:700;background:#fef2f2;color:#dc2626;padding:2px 10px;border-radius:10px;display:none"></span>
-                    <span id="mn-updated-lbl" style="font-size:9px;color:#ccc"></span>
+                    <span class="sync-dot" id="mn-dot" title="晨报同步状态"></span>
                     <button onclick="loadMorningNote()" style="background:none;border:none;color:#ccc;cursor:pointer;font-size:14px;padding:2px" title="刷新" onmouseover="this.style.color='#666'" onmouseout="this.style.color='#ccc'">↻</button>
                 </div>
             </div>
@@ -742,7 +884,7 @@
             <div id="mn-budget-ok" class="mn-budget-ok">
                 <span>✓</span><span id="mn-budget-ok-text">余额充足</span>
             </div>
-            <div style="display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start">
+            <div class="mn-layout" style="display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start">
                 <!-- Left: Key Numbers -->
                 <div style="border-right:1px solid #f0f0f0;padding-right:20px">
                     <div class="card-title" style="margin-bottom:10px">关键数据</div>
@@ -811,8 +953,8 @@
             <div class="card-hd">
                 <span class="card-title">🤖 AI 深度信号</span>
                 <div style="display:flex;align-items:center;gap:8px">
-                    <span id="ts-date-badge" style="font-size:9px;background:#f0f0f0;padding:2px 10px;border-radius:10px;color:#888"></span>
                     <span id="ts-accuracy-badge" style="font-size:9px;background:#f0f0f0;padding:2px 10px;border-radius:10px;color:#888"></span>
+                    <span class="sync-dot" id="ts-dot" title="信号同步状态"></span>
                     <button onclick="loadTradingSignals()" style="background:none;border:none;color:#ccc;cursor:pointer;font-size:14px;padding:2px" title="刷新" onmouseover="this.style.color='#666'" onmouseout="this.style.color='#ccc'">↻</button>
                 </div>
             </div>
@@ -856,22 +998,27 @@
             <div class="card-hd">
                 <div style="display:flex;align-items:center;gap:8px">
                     <span class="card-title">📊 Questrade 持仓</span>
-                    <span id="porto-badge" style="display:none;font-size:10px;font-weight:600;background:#f0f0f0;color:#555;padding:2px 8px;border-radius:10px">● 实时同步</span>
+                    <span class="sync-dot" id="porto-dot" title="同步状态"></span>
                 </div>
                 <div style="display:flex;gap:6px;align-items:center">
-                    <span id="porto-upd" style="font-size:10px;color:#263352"></span>
-                    <button class="btn-sm" onclick="refreshQuestrade()">↻ 刷新</button>
-                    <button class="btn-sm" onclick="addPosition()">手动添加</button>
-                    <button class="btn-sm" style="background:#f0f0f0;color:#555;border-color:#e8e8e8" onclick="setupQtApi()">设置 Questrade</button>
+                    <button class="icon-btn" onclick="refreshQuestrade()" title="刷新">
+                        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                    </button>
+                    <button class="icon-btn" onclick="addPosition()" title="手动添加">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <button class="icon-btn icon-primary" onclick="setupQtApi()" title="设置 Questrade">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </button>
                 </div>
             </div>
 
             <!-- Summary stats -->
             <div class="p-stats">
-                <div class="p-stat"><div class="p-stat-val" id="ps-value">—</div><div class="p-stat-lbl">总市值</div></div>
-                <div class="p-stat"><div class="p-stat-val" id="ps-cost">—</div><div class="p-stat-lbl">总成本</div></div>
-                <div class="p-stat"><div class="p-stat-val" id="ps-pl">—</div><div class="p-stat-lbl">总盈亏</div></div>
-                <div class="p-stat"><div class="p-stat-val" id="ps-plpct">—</div><div class="p-stat-lbl">收益率</div></div>
+                <div class="p-stat p-stat-r1"><div class="p-stat-val" id="ps-value">—</div><div class="p-stat-lbl">总市值</div></div>
+                <div class="p-stat p-stat-r1"><div class="p-stat-val" id="ps-plpct">—</div><div class="p-stat-lbl">收益率</div></div>
+                <div class="p-stat p-stat-r2"><div class="p-stat-val" id="ps-cost">—</div><div class="p-stat-lbl">总成本</div></div>
+                <div class="p-stat p-stat-r2"><div class="p-stat-val" id="ps-pl">—</div><div class="p-stat-lbl">总盈亏</div></div>
             </div>
 
             <!-- Positions table -->
@@ -1000,6 +1147,12 @@
 </div><!-- /container -->
 
 <script>
+// Sync dot helper: state = 'syncing' | 'synced' | 'error' | '' (idle/black)
+function setSyncDot(id, state) {
+    const el = document.getElementById(id);
+    if (el) el.className = 'sync-dot' + (state ? ' ' + state : '');
+}
+
 // ─────────────────────────────────────────────────────────
 // Clock
 // ─────────────────────────────────────────────────────────
@@ -1033,6 +1186,8 @@ function loadAccounts() {
     };
     fetchFX().then(fx => renderAccounts(local, fx));
     // 从 Cloudflare KV 拉取最新数据（跨设备同步）
+    const DEFAULT_SYNC_URL = 'https://questrade-proxy.chengchuang-lai.workers.dev';
+    if (!localStorage.getItem('qt_api_url')) localStorage.setItem('qt_api_url', DEFAULT_SYNC_URL);
     const syncUrl = localStorage.getItem('qt_api_url');
     if (syncUrl) fetch(syncUrl.replace(/\/$/, '') + '/sync')
         .then(r => r.json()).then(remote => {
@@ -1147,6 +1302,22 @@ function inlineEditBmoSubs() {
 }
 
 loadAccounts();
+
+// 每天 08:00 自动从 KV 拉取最新数据
+(function scheduleDailySync() {
+    function msUntil8am() {
+        const now = new Date();
+        const next = new Date(now);
+        next.setHours(8, 0, 0, 0);
+        if (next <= now) next.setDate(next.getDate() + 1);
+        return next - now;
+    }
+    function doSync() {
+        loadAccounts();
+        setTimeout(doSync, msUntil8am());
+    }
+    setTimeout(doSync, msUntil8am());
+})();
 
 // ─────────────────────────────────────────────────────────
 // Tasks
@@ -1520,6 +1691,7 @@ async function loadQuestrade() {
         const c = JSON.parse(cached);
         if (Date.now() - c.ts < 60*60*1000) { renderQtData(c.data, false); return; }
     }
+    setSyncDot('porto-dot', 'syncing'); setSyncDot('acct-dot', 'syncing');
     await fetchQtData(url);
 }
 
@@ -1531,12 +1703,12 @@ async function fetchQtData(url) {
             localStorage.setItem('qt_cache', JSON.stringify({ data:d, ts:Date.now() }));
             renderQtData(d, false);
         } else {
-            document.getElementById('porto-upd').textContent = '⚠️ ' + (d.error||'连接失败');
+            setSyncDot('porto-dot', 'error'); setSyncDot('acct-dot', 'error');
         }
     } catch(e) {
         const cached = localStorage.getItem('qt_cache');
         if (cached) renderQtData(JSON.parse(cached).data, true);
-        else document.getElementById('porto-upd').textContent = '⚠️ 连接失败：' + e.message;
+        else { setSyncDot('porto-dot', 'error'); setSyncDot('acct-dot', 'error'); }
     }
 }
 
@@ -1551,11 +1723,10 @@ function renderQtData(d, stale) {
     });
     const qtEqEl = document.getElementById('qt-equity');
     const qtCashEl = document.getElementById('qt-cash');
-    const qtBadge  = document.getElementById('qt-acct-badge');
     if (qtEqEl) {
         qtEqEl.textContent  = 'C$'+cadEq.toFixed(0) + (usdEq>0 ? ' + $'+usdEq.toFixed(0) : '');
         qtCashEl.textContent = 'C$'+cadCash.toFixed(0) + (usdCash>0 ? ' / $'+usdCash.toFixed(0) : '');
-        if (qtBadge) qtBadge.style.display = stale ? 'none' : 'inline';
+        setSyncDot('acct-dot', stale ? '' : 'synced');
     }
     // Store for total calc
     localStorage.setItem('qt_equity_usd', JSON.stringify({ cad:cadEq, usd:usdEq }));
@@ -1574,12 +1745,7 @@ function renderQtData(d, stale) {
     const positions = [];
     (d.accounts||[]).forEach(a => (a.positions||[]).forEach(p => positions.push(p)));
 
-    const badge = document.getElementById('porto-badge');
-    if (badge) badge.style.display = stale ? 'none' : 'inline-block';
-
-    const upd = new Date(d.updated);
-    document.getElementById('porto-upd').textContent =
-        `Questrade ${stale?'缓存':'实时'}：${String(upd.getHours()).padStart(2,'0')}:${String(upd.getMinutes()).padStart(2,'0')}`;
+    setSyncDot('porto-dot', stale ? '' : 'synced');
 
     if (!positions.length) {
         document.getElementById('porto-list').innerHTML =
@@ -1592,30 +1758,55 @@ function renderQtData(d, stale) {
     }
 
     let totalValue=0, totalCost=0;
-    const rows = positions.map(p => {
-        const cur   = p.currency==='USD' ? '$' : 'C$';
-        const value = p.currentMarketValue||0;
-        const cost  = p.totalCost||0;
-        const pl    = p.openPnl||(value-cost);
-        const plPct = cost ? (pl/cost*100) : 0;
-        totalValue += value; totalCost += cost;
-        const cls = pl>=0?'pos':'neg';
-        return `<tr class="porto-row">
-            <td class="pt-ticker"><a href="https://finance.yahoo.com/quote/${p.symbol}" target="_blank" style="color:#777;text-decoration:none">${p.symbol}</a></td>
-            <td style="color:#64748b;font-size:11px;max-width:120px;overflow:hidden;text-overflow:ellipsis">${p.description||''}</td>
-            <td>${p.openQuantity}</td>
-            <td style="color:#64748b">${cur}${(p.averageEntryPrice||0).toFixed(2)}</td>
-            <td>${cur}${(p.currentPrice||0).toFixed(2)}</td>
-            <td class="${cls}" style="font-weight:600">${pl>=0?'+':'-'}${cur}${Math.abs(pl).toFixed(0)} <span style="font-size:10px;opacity:.7">(${plPct>=0?'+':''}${plPct.toFixed(1)}%)</span></td>
-            <td>${cur}${value.toFixed(0)}</td>
-        </tr>`;
-    }).join('');
+    const isMobile = window.innerWidth <= 480;
 
-    document.getElementById('porto-list').innerHTML = `
-        <table class="porto-table">
-            <thead><tr><th>代码</th><th>名称</th><th>持股数</th><th>成本价</th><th>现价</th><th>盈亏</th><th>市值</th></tr></thead>
-            <tbody>${rows}</tbody>
-        </table>`;
+    if (isMobile) {
+        const cards = positions.map(p => {
+            const cur   = p.currency==='USD' ? '$' : 'C$';
+            const value = p.currentMarketValue||0;
+            const cost  = p.totalCost||0;
+            const pl    = p.openPnl||(value-cost);
+            const plPct = cost ? (pl/cost*100) : 0;
+            totalValue += value; totalCost += cost;
+            const cls = pl>=0?'pos':'neg';
+            const plSign = pl>=0?'+':'-';
+            return `<div class="porto-mc">
+                <div class="porto-mc-top">
+                    <a class="porto-mc-sym" href="https://finance.yahoo.com/quote/${p.symbol}" target="_blank">${p.symbol}</a>
+                    <span class="porto-mc-pl ${cls}">${plSign}${cur}${Math.abs(pl).toFixed(0)} <span class="porto-mc-pct">(${plPct>=0?'+':''}${plPct.toFixed(1)}%)</span></span>
+                </div>
+                <div class="porto-mc-btm">
+                    <span class="porto-mc-val">市值 ${cur}${value.toFixed(0)}</span>
+                    <span class="porto-mc-price">现价 ${cur}${(p.currentPrice||0).toFixed(2)}</span>
+                </div>
+            </div>`;
+        }).join('');
+        document.getElementById('porto-list').innerHTML = `<div class="porto-cards">${cards}</div>`;
+    } else {
+        const rows = positions.map(p => {
+            const cur   = p.currency==='USD' ? '$' : 'C$';
+            const value = p.currentMarketValue||0;
+            const cost  = p.totalCost||0;
+            const pl    = p.openPnl||(value-cost);
+            const plPct = cost ? (pl/cost*100) : 0;
+            totalValue += value; totalCost += cost;
+            const cls = pl>=0?'pos':'neg';
+            return `<tr class="porto-row">
+                <td class="pt-ticker"><a href="https://finance.yahoo.com/quote/${p.symbol}" target="_blank" style="color:#777;text-decoration:none">${p.symbol}</a></td>
+                <td style="color:#64748b;font-size:11px;max-width:120px;overflow:hidden;text-overflow:ellipsis">${p.description||''}</td>
+                <td>${p.openQuantity}</td>
+                <td style="color:#64748b">${cur}${(p.averageEntryPrice||0).toFixed(2)}</td>
+                <td>${cur}${(p.currentPrice||0).toFixed(2)}</td>
+                <td class="${cls}" style="font-weight:600">${pl>=0?'+':'-'}${cur}${Math.abs(pl).toFixed(0)} <span style="font-size:10px;opacity:.7">(${plPct>=0?'+':''}${plPct.toFixed(1)}%)</span></td>
+                <td>${cur}${value.toFixed(0)}</td>
+            </tr>`;
+        }).join('');
+        document.getElementById('porto-list').innerHTML = `
+            <table class="porto-table">
+                <thead><tr><th>代码</th><th>名称</th><th>持股数</th><th>成本价</th><th>现价</th><th>盈亏</th><th>市值</th></tr></thead>
+                <tbody>${rows}</tbody>
+            </table>`;
+    }
 
     const totalPl = totalValue - totalCost;
     const totalPlPct = totalCost ? (totalPl/totalCost*100) : 0;
@@ -1632,7 +1823,7 @@ async function refreshQuestrade() {
     const url = localStorage.getItem('qt_api_url');
     if (!url) { alert('请先点击「设置 Questrade」'); return; }
     localStorage.removeItem('qt_cache');
-    document.getElementById('porto-upd').textContent = '同步中…';
+    setSyncDot('porto-dot', 'syncing'); setSyncDot('acct-dot', 'syncing');
     await fetchQtData(url);
 }
 
@@ -1643,7 +1834,7 @@ function setupQtApi() {
     if (url.trim()) {
         localStorage.setItem('qt_api_url', url.trim());
         localStorage.removeItem('qt_cache');
-        document.getElementById('porto-upd').textContent = '正在连接 Questrade…';
+        setSyncDot('porto-dot', 'syncing'); setSyncDot('acct-dot', 'syncing');
         fetchQtData(url.trim());
     }
 }
@@ -1759,7 +1950,7 @@ async function refreshPortfolioPrices() {
     const positions = getPortfolio();
     if (!positions.length) return;
     const symbols = [...new Set(positions.map(p=>p.ticker))];
-    document.getElementById('porto-upd').textContent = '获取中…';
+    setSyncDot('porto-dot', 'syncing');
     const prices = await fetchStockPrices(symbols);
     const hasData = Object.keys(prices).length > 0;
     // Save last known price and name per position
@@ -1772,10 +1963,7 @@ async function refreshPortfolioPrices() {
     savePortfolio(positions);
     localStorage.setItem('price_cache', JSON.stringify({ prices, ts:Date.now() }));
     renderPortfolio(prices);
-    const now = new Date();
-    document.getElementById('porto-upd').textContent = hasData
-        ? `更新：${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`
-        : '⚠️ 价格获取失败（需要 VPN）— 显示成本价';
+    setSyncDot('porto-dot', hasData ? 'synced' : 'error');
 }
 
 function loadPortfolio() {
@@ -1785,8 +1973,6 @@ function loadPortfolio() {
         const c = JSON.parse(cached);
         if (Date.now()-c.ts < 15*60*1000) {
             prices = c.prices;
-            const t = new Date(c.ts);
-            document.getElementById('porto-upd').textContent = `缓存：${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`;
         }
     }
     renderPortfolio(prices);
@@ -1892,8 +2078,7 @@ function renderGaData(today, week, updatedStr, isStale, isManual) {
     const rev = today.revenue ?? today.rev;
     gaSet('ga-revenue',  rev !== undefined ? '$' + parseFloat(rev).toFixed(0) : '—');
 
-    const badge = document.getElementById('ga-badge');
-    if (badge) badge.style.display = (!isManual && !isStale) ? 'inline-block' : 'none';
+    setSyncDot('ga-dot', (!isManual && !isStale) ? 'synced' : '');
 
     if (week && week.length) {
         const max = Math.max(...week.map(d=>d.users), 1);
@@ -1911,7 +2096,8 @@ function renderGaData(today, week, updatedStr, isStale, isManual) {
 
     const upd = new Date(updatedStr);
     const ts  = `${(upd.getMonth()+1)}/${upd.getDate()} ${String(upd.getHours()).padStart(2,'0')}:${String(upd.getMinutes()).padStart(2,'0')}`;
-    document.getElementById('ga-upd').textContent =
+    const updEl = document.getElementById('ga-upd');
+    if (updEl) updEl.textContent =
         isManual ? `手动更新：${ts}`
                  : isStale ? `缓存数据：${ts}`
                  : `自动同步：${ts}`;
@@ -1925,6 +2111,7 @@ async function loadAnalytics() {
             const c = JSON.parse(cached);
             if (Date.now()-c.ts < 60*60*1000) { renderGaData(c.d.today, c.d.week, c.d.updated, false, false); return; }
         }
+        setSyncDot('ga-dot', 'syncing');
         await fetchGaAuto(apiUrl);
     } else {
         const manual = localStorage.getItem('ga_manual');
@@ -1933,6 +2120,7 @@ async function loadAnalytics() {
 }
 
 async function fetchGaAuto(url) {
+    setSyncDot('ga-dot', 'syncing');
     try {
         const r = await fetch(url);
         const d = await r.json();
@@ -1943,9 +2131,10 @@ async function fetchGaAuto(url) {
         }
         throw new Error(d.error||'API error');
     } catch(e) {
+        setSyncDot('ga-dot', 'error');
         const cached = localStorage.getItem('ga_auto_cache');
         if (cached) { const c=JSON.parse(cached); renderGaData(c.d.today, c.d.week, c.d.updated, true, false); }
-        else document.getElementById('ga-upd').textContent = '⚠️ 无法连接 API — 检查 Apps Script URL 是否正确';
+        else { const updEl = document.getElementById('ga-upd'); if (updEl) updEl.textContent = '⚠️ 无法连接 API — 检查 Apps Script URL 是否正确'; }
     }
 }
 
@@ -1953,7 +2142,6 @@ async function refreshAnalytics() {
     const url = localStorage.getItem('ga_api_url');
     if (!url) { alert('请先点击「设置 API」配置 Apps Script URL'); return; }
     localStorage.removeItem('ga_auto_cache');
-    document.getElementById('ga-upd').textContent = '正在同步…';
     await fetchGaAuto(url);
 }
 
@@ -1964,7 +2152,6 @@ function setupAnalyticsApi() {
     if (url.trim()) {
         localStorage.setItem('ga_api_url', url.trim());
         localStorage.removeItem('ga_auto_cache');
-        document.getElementById('ga-upd').textContent = '正在连接…';
         fetchGaAuto(url.trim());
     }
 }
@@ -2108,17 +2295,16 @@ async function refreshNews(section) {
 // ── Trading Signals ───────────────────────────────────
 function loadTradingSignals() {
     if (!window.TRADING_SIGNALS || !window.TRADING_SIGNALS.date) {
+        setSyncDot('ts-dot', '');
         const el = document.getElementById('ts-content');
         if (el) el.innerHTML = '<div class="mn-empty">今日 AI 深度信号将于 20:30 生成…</div>';
         return;
     }
     renderTradingSignals(window.TRADING_SIGNALS);
+    setSyncDot('ts-dot', 'synced');
 }
 
 function renderTradingSignals(d) {
-    const dateBadge = document.getElementById('ts-date-badge');
-    if (dateBadge && d.date) dateBadge.textContent = '🗓 ' + d.date;
-
     const accBadge = document.getElementById('ts-accuracy-badge');
     if (accBadge && d.accuracy && d.accuracy.rate !== null && d.accuracy.rate !== undefined) {
         accBadge.textContent = '准确率 ' + Math.round(d.accuracy.rate * 100) + '%';
@@ -2175,7 +2361,7 @@ function renderTradingSignals(d) {
                 else{s.style.display='';f.style.display='none';t.textContent='展开全文 ▼';}
             ">展开全文 ▼</span>` : ''}
             ` : ''}
-            ${s.report_file ? `<div style="margin-top:8px"><span class="ts-report-btn" onclick="openTsReport('${s.ticker}','${s.action}','${s.report_file}')">📋 查看完整报告</span></div>` : ''}
+            ${(s.report || s.report_file) ? `<div style="margin-top:8px"><span class="ts-report-btn" onclick="openTsReport(${i},'${s.ticker}','${s.action}')">📋 查看完整报告</span></div>` : ''}
         </div>`;
     }).join('');
 
@@ -2189,7 +2375,9 @@ function renderTradingSignals(d) {
 function loadMorningNote() {
     if (window.MORNING_NOTE) {
         renderMorningNote(window.MORNING_NOTE);
+        setSyncDot('mn-dot', 'synced');
     } else {
+        setSyncDot('mn-dot', '');
         const el = document.getElementById('mn-market-overview');
         if (el) { el.textContent = '今日晨报生成中，请稍后刷新…'; el.classList.add('mn-empty'); }
         ['mn-macro','mn-earnings','mn-trade-ideas'].forEach(id => {
@@ -2203,15 +2391,6 @@ function renderMorningNote(d) {
     const dateBadge = document.getElementById('mn-date-badge');
     if (dateBadge && d.date) dateBadge.textContent = '🗓 ' + d.date;
 
-    const updLbl = document.getElementById('mn-updated-lbl');
-    if (updLbl && d.generated_at) updLbl.textContent = '最后更新 ' + d.generated_at.slice(11, 16);
-
-    const statusBadge = document.getElementById('mn-status-badge');
-    if (statusBadge) {
-        statusBadge.style.display = 'inline';
-        statusBadge.textContent = d.market_status === 'pre-market' ? '● 盘前' :
-                                  d.market_status === 'open'       ? '● 开盘中' : '● 收盘';
-    }
 
     // Left: key numbers
     const sp = d.market.sp500_futures_pct;
@@ -2545,31 +2724,26 @@ const TS_REPORT_LABELS = {
   final:           '🎯 最终决策',
 };
 
-function openTsReport(ticker, action, reportFile) {
+function openTsReport(idx, ticker, action) {
   document.getElementById('ts-modal-title').textContent = ticker + ' — 完整分析报告';
   const actionEl = document.getElementById('ts-modal-action');
   actionEl.textContent = action;
   actionEl.className = 'ts-modal-action ' + (action || 'hold').toLowerCase();
-  document.getElementById('ts-modal-body').innerHTML = '<div style="color:#aaa;font-size:12px;padding:20px 0">加载中…</div>';
-  document.getElementById('ts-modal-overlay').classList.add('open');
 
-  fetch(reportFile)
-    .then(r => r.json())
-    .then(d => {
-      const rpt = d.report || {};
-      const html = Object.entries(TS_REPORT_LABELS).map(([key, label]) => {
-        const text = (rpt[key] || '').trim();
-        if (!text) return '';
-        return `<div class="ts-report-section">
-          <h3>${label}</h3>
-          <div class="ts-report-body">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
-        </div>`;
-      }).join('');
-      document.getElementById('ts-modal-body').innerHTML = html || '<div style="color:#aaa">暂无详细报告数据</div>';
-    })
-    .catch(() => {
-      document.getElementById('ts-modal-body').innerHTML = '<div style="color:#f00;font-size:12px">报告加载失败，请稍后重试</div>';
-    });
+  const sig = window.TRADING_SIGNALS && window.TRADING_SIGNALS.signals && window.TRADING_SIGNALS.signals[idx];
+  const rpt = (sig && sig.report) || {};
+
+  const html = Object.entries(TS_REPORT_LABELS).map(([key, label]) => {
+    const text = (rpt[key] || '').trim();
+    if (!text) return '';
+    return `<div class="ts-report-section">
+      <h3>${label}</h3>
+      <div class="ts-report-body">${text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('ts-modal-body').innerHTML = html || '<div style="color:#aaa">暂无详细报告数据</div>';
+  document.getElementById('ts-modal-overlay').classList.add('open');
 }
 
 function closeTsModal() {

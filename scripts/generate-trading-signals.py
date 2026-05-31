@@ -99,6 +99,39 @@ def extract_full_report(state):
     }
 
 
+def translate_report_to_chinese(report, ticker):
+    """Translate all non-empty report sections to Chinese using Haiku."""
+    import anthropic
+    to_translate = {k: v.strip() for k, v in report.items() if v and v.strip()}
+    if not to_translate:
+        return report
+    try:
+        client = anthropic.Anthropic()
+        resp = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=8000,
+            messages=[{"role": "user", "content": (
+                f"将以下{ticker}股票分析报告各章节翻译成中文，保持专业金融术语。"
+                f"严格返回相同结构的JSON（只翻译值，不改变键名，不添加任何其他文字）：\n\n"
+                f"{json.dumps(to_translate, ensure_ascii=False)}"
+            )}]
+        )
+        text = resp.content[0].text.strip()
+        start = text.find('{')
+        end = text.rfind('}') + 1
+        if start >= 0 and end > start:
+            translated = json.loads(text[start:end])
+            result = dict(report)
+            result.update(translated)
+            print(f"[translate] {ticker}: translated {len(translated)} sections to Chinese")
+            return result
+        print(f"[warn] Translation response not parseable for {ticker}")
+        return report
+    except Exception as e:
+        print(f"[warn] Translation failed for {ticker}: {e}")
+        return report
+
+
 def summarize(report):
     """Build a 2-sentence summary from final decision + investment plan."""
     final = (report.get("final") or "").strip()
@@ -197,12 +230,13 @@ else:
             try:
                 state, decision = run_tradingagents(ticker)
                 report = extract_full_report(state)
+                report = translate_report_to_chinese(report, ticker)
                 action = parse_action(decision or report.get("final", ""))
                 price = get_price(ticker)
                 target = round(price * 1.10, 2) if price else None
                 stop = round(price * 0.95, 2) if price else None
                 summary = summarize(report)
-                # save full report as separate file
+                # save full report as backup file
                 report_path = os.path.join(HISTORY_DIR, f"{today}-{ticker}-report.json")
                 with open(report_path, "w", encoding="utf-8") as rf:
                     json.dump({"date": today, "ticker": ticker, "action": action,
@@ -218,7 +252,7 @@ else:
                     "target_price": target,
                     "stop_loss": stop,
                     "summary": summary,
-                    "report_file": f"trading-signals-history/{today}-{ticker}-report.json",
+                    "report": report,
                 }
             except Exception as e:
                 if '529' in str(e) or 'overloaded' in str(e).lower():
