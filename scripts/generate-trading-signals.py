@@ -102,14 +102,18 @@ def extract_full_report(state):
 def translate_report_to_chinese(report, ticker):
     """Translate all non-empty report sections to Chinese using Haiku."""
     import anthropic
-    to_translate = {k: v.strip() for k, v in report.items() if v and v.strip()}
+    MAX_CHARS = 2000  # truncate each section so total output fits in max_tokens
+    to_translate = {
+        k: (v.strip()[:MAX_CHARS] + ("…" if len(v.strip()) > MAX_CHARS else ""))
+        for k, v in report.items() if v and v.strip()
+    }
     if not to_translate:
         return report
     try:
         client = anthropic.Anthropic()
         resp = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=8000,
+            max_tokens=12000,
             messages=[{"role": "user", "content": (
                 f"将以下{ticker}股票分析报告各章节翻译成中文，保持专业金融术语。"
                 f"严格返回相同结构的JSON（只翻译值，不改变键名，不添加任何其他文字）：\n\n"
