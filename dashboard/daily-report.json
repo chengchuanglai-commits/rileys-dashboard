@@ -1,6 +1,6 @@
 {
   "date": "2026-06-01",
-  "generated_at": "2026-06-01T20:52:00",
+  "generated_at": "2026-06-01T21:44:00",
   "pipeline": {
     "morning_note_found": true,
     "signal_file_found": true,
@@ -24,24 +24,24 @@
     },
     {
       "check": "无警告",
-      "pass": true,
-      "detail": "0 条警告"
+      "pass": false,
+      "detail": "1 条警告"
     }
   ],
   "signals_today": [
     {
       "ticker": "CAMT",
-      "action": "SELL",
-      "current_price": 171.66,
-      "target_price": 188.83,
-      "stop_loss": 163.08
+      "action": "HOLD",
+      "current_price": 168.31,
+      "target_price": 185.14,
+      "stop_loss": 159.89
     },
     {
       "ticker": "IMOS",
       "action": "SELL",
-      "current_price": 70.26,
-      "target_price": 77.29,
-      "stop_loss": 66.75
+      "current_price": 67.75,
+      "target_price": 74.53,
+      "stop_loss": 64.36
     }
   ],
   "accuracy_update": {
@@ -64,6 +64,8 @@
       1.38
     ]
   },
-  "warnings": [],
-  "api_cost_usd": 0.7898
+  "warnings": [
+    "CAMT: 信号为 HOLD（可能是 API 失败的 fallback）"
+  ],
+  "api_cost_usd": 0.7888
 }
