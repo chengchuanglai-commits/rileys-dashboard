@@ -522,8 +522,13 @@
         .cal-form input[type=time] { width:80px; }
         .cal-form input[type=text] { flex:1; min-width:140px; }
     </style>
-    <script src="morning-note.js"></script>
-    <script src="trading-signals.js"></script>
+    <script>
+    (function(){
+      var d=new Date().toISOString().slice(0,10).replace(/-/g,'');
+      document.write('<scr'+'ipt src="morning-note.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="trading-signals.js?v='+d+'"><\/scr'+'ipt>');
+    })();
+    </script>
 </head>
 <body>
 <div class="container">
