@@ -79,30 +79,61 @@ save_tool = {
 
 
 def call_with_retry(market_data, max_attempts=5):
+    search_prompt = (
+        f"今天是{today}。\n\n"
+        f"市场数据（已确认）：\n"
+        f"- S&P 500 期货：{market_data['sp500_pct']:+.2f}%\n"
+        f"- 10年期美债：{market_data['treasury_10y']:.3f}%（{market_data['treasury_bps']:+.1f} bps）\n\n"
+        f"请用 web_search 搜索今日各板块值得关注的小盘/中盘股"
+        f"（科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF，每板块1支共10支），"
+        f"同时获取当前财报季EPS超预期率。\n\n"
+        f"选股要求：市值在$5亿–$100亿之间，禁止出现：NVDA、AAPL、MSFT、AMZN、GOOGL、GOOG、META、TSLA、"
+        f"JPM、JNJ、XOM、BRK、V、MA、UNH、PG、HD、CVX、MRK、ABBV、BAC、KO、PEP、COST、WMT、AVGO、TSM、"
+        f"LLY、ORCL、NFLX、AMD、INTC、TLT、BND、SPY、QQQ。"
+    )
+
     for attempt in range(max_attempts):
         try:
-            return client.messages.create(
+            # Turn 1: web research only
+            print(f"[morning] Turn 1: web search (attempt {attempt+1}/{max_attempts})...")
+            resp1 = client.messages.create(
                 model="claude-haiku-4-5-20251001",
                 max_tokens=8000,
-                tools=[
-                    {"type": "web_search_20250305", "name": "web_search"},
-                    save_tool
-                ],
-                messages=[{
-                    "role": "user",
-                    "content": f"""今天是{today}。
-
-市场数据（已确认，无需再搜索）：
-- S&P 500 期货：{market_data['sp500_pct']:+.2f}%
-- 10年期美债：{market_data['treasury_10y']:.3f}%（{market_data['treasury_bps']:+.1f} bps）
-
-请用 web_search 完成以下任务（只搜索一次）：
-搜索今日各板块值得关注的小盘/中盘股（科技/半导体/能源/核能/医疗/生物科技/消费必需/消费可选/金融/固收ETF，每板块1支共10支），同时记录当前财报季EPS超预期率。
-
-选股要求：市值在$5亿–$100亿之间（小盘到中盘为主），禁止出现以下大市值股票：NVDA、AAPL、MSFT、AMZN、GOOGL、GOOG、META、TSLA、JPM、JNJ、XOM、BRK、V、MA、UNH、PG、HD、CVX、MRK、ABBV、BAC、KO、PEP、COST、WMT、AVGO、TSM、LLY、ORCL、NFLX、AMD、INTC、TLT、BND、SPY、QQQ。
-搜索完成后调用save_morning_note工具保存，note和reason字段用中文。"""
-                }]
+                tools=[{"type": "web_search_20250305", "name": "web_search"}],
+                messages=[{"role": "user", "content": search_prompt}]
             )
+            ct1 = [getattr(b, 'type', str(b)) for b in resp1.content]
+            print(f"[morning] Turn 1 done. Content types: {ct1}")
+
+            research_text = "\n\n".join(
+                block.text for block in resp1.content
+                if hasattr(block, 'type') and block.type == 'text' and block.text.strip()
+            )
+
+            # Turn 2: force save_morning_note with gathered research
+            print(f"[morning] Turn 2: forcing save_morning_note...")
+            resp2 = client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=8000,
+                tools=[save_tool],
+                tool_choice={"type": "tool", "name": "save_morning_note"},
+                messages=[{"role": "user", "content": (
+                    f"根据以下市场研究结果，调用save_morning_note工具保存结构化数据。\n\n"
+                    f"今日市场数据：\n"
+                    f"- S&P 500 期货：{market_data['sp500_pct']:+.2f}%\n"
+                    f"- 10年期美债：{market_data['treasury_10y']:.3f}%（变动 {market_data['treasury_bps']:+.1f} bps）\n\n"
+                    f"研究结果：\n{research_text}\n\n"
+                    f"保存要求：\n"
+                    f"- market.eps_beat_rate: 当前财报季EPS超预期率（纯数字，如75.5）\n"
+                    f"- stock_picks: 正好10支股票，每板块1支，市值$5亿–$100亿\n"
+                    f"- note和stock_picks中的reason字段用中文\n"
+                    f"- direction只能是 buy/sell/watch 之一"
+                )}]
+            )
+            ct2 = [getattr(b, 'type', str(b)) for b in resp2.content]
+            print(f"[morning] Turn 2 done. Content types: {ct2}")
+            return resp1, resp2
+
         except anthropic.RateLimitError:
             if attempt == max_attempts - 1:
                 raise
@@ -155,7 +186,7 @@ except Exception as e:
     market_data = {"sp500_pct": 0.0, "treasury_10y": 0.0, "treasury_bps": 0.0}
 
 try:
-    response = call_with_retry(market_data)
+    resp1, response = call_with_retry(market_data)
 except anthropic.BadRequestError as e:
     if 'credit balance' in str(e).lower():
         print(f"⚠️  Anthropic credit balance too low: {e}")
@@ -163,7 +194,7 @@ except anthropic.BadRequestError as e:
         sys.exit(0)
     raise
 
-# Extract the LAST save_morning_note tool call (most complete)
+# Extract save_morning_note tool call from turn 2
 data = None
 for block in response.content:
     if hasattr(block, 'type') and block.type == "tool_use" and block.name == "save_morning_note":
@@ -200,12 +231,11 @@ for pick in picks:
     if pick.get("direction") not in ("buy", "sell", "watch"):
         pick["direction"] = "watch"
 
-# Calculate API cost (claude-haiku-4-5 pricing: $0.80/MTok in, $4/MTok out)
-usage = response.usage
-input_cost  = usage.input_tokens  * 0.8 / 1_000_000
-output_cost = usage.output_tokens * 4.0 / 1_000_000
-data["api_cost_usd"] = round(input_cost + output_cost, 4)
-print(f"[debug] tokens in={usage.input_tokens} out={usage.output_tokens} cost=${data['api_cost_usd']}")
+# Calculate API cost across both turns (claude-haiku-4-5: $0.80/MTok in, $4/MTok out)
+total_in  = resp1.usage.input_tokens  + response.usage.input_tokens
+total_out = resp1.usage.output_tokens + response.usage.output_tokens
+data["api_cost_usd"] = round(total_in * 0.8 / 1_000_000 + total_out * 4.0 / 1_000_000, 4)
+print(f"[debug] tokens in={total_in} out={total_out} cost=${data['api_cost_usd']}")
 
 # Calculate cumulative cost from history files
 history_dir = "dashboard/morning-note-history"
