@@ -251,7 +251,12 @@ check_yesterday_accuracy()
 
 selected_picks = select_stocks()
 if not selected_picks:
-    print("[warn] No stocks selected. Writing empty signal file.")
+    morning_file = f"dashboard/morning-note-history/{today}.json"
+    if not os.path.exists(morning_file):
+        # Morning note not generated yet — running too early, do not write empty file
+        print(f"[abort] Morning note for {today} not found. Exiting without writing signal file.")
+        sys.exit(0)
+    print("[warn] No stocks selected (morning note exists but no valid buy picks).")
     data = {
         "date": today, "generated_at": generated_at,
         "signals": [], "accuracy": build_accuracy(), "api_cost_usd": 0.0
