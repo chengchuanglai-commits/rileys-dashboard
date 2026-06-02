@@ -127,7 +127,10 @@ def call_with_retry(market_data, max_attempts=5):
                     f"- market.eps_beat_rate: 当前财报季EPS超预期率（纯数字，如75.5）\n"
                     f"- stock_picks: 正好10支股票，每板块1支，市值$5亿–$100亿\n"
                     f"- note和stock_picks中的reason字段用中文\n"
-                    f"- direction只能是 buy/sell/watch 之一"
+                    f"- direction只能是 buy/sell/watch 之一\n"
+                    f"- 严禁包含以下大市值股票（黑名单）：NVDA、AAPL、MSFT、AMZN、GOOGL、GOOG、META、TSLA、"
+                    f"JPM、JNJ、XOM、BRK、V、MA、UNH、PG、HD、CVX、MRK、ABBV、BAC、KO、PEP、COST、WMT、"
+                    f"AVGO、TSM、LLY、ORCL、NFLX、AMD、INTC、TLT、BND、SPY、QQQ"
                 )}]
             )
             ct2 = [getattr(b, 'type', str(b)) for b in resp2.content]
@@ -215,6 +218,12 @@ data["date"] = today
 data["generated_at"] = generated_at
 data["market_status"] = "pre-market"
 
+BLACKLIST = {
+    "NVDA","AAPL","MSFT","AMZN","GOOGL","GOOG","META","TSLA","JPM","JNJ","XOM",
+    "BRK","V","MA","UNH","PG","HD","CVX","MRK","ABBV","BAC","KO","PEP","COST",
+    "WMT","AVGO","TSM","LLY","ORCL","NFLX","AMD","INTC","TLT","BND","SPY","QQQ"
+}
+
 # Validate and fix stock_picks type (model sometimes returns JSON string instead of array)
 if "stock_picks" not in data:
     raise ValueError(f"stock_picks missing. Got keys: {list(data.keys())}")
@@ -222,9 +231,18 @@ picks = data["stock_picks"]
 if isinstance(picks, str):
     picks = json.loads(picks)
     data["stock_picks"] = picks
+
+# Filter out blacklisted large-cap stocks
+before = len(picks)
+picks = [p for p in picks if p.get("ticker","").upper() not in BLACKLIST]
+data["stock_picks"] = picks
+if len(picks) < before:
+    removed = before - len(picks)
+    print(f"[filter] Removed {removed} blacklisted ticker(s). Remaining: {len(picks)}")
+
 print(f"[debug] stock_picks count: {len(picks)}, type: {type(picks)}")
 if len(picks) == 0:
-    raise ValueError(f"Expected 10 picks, got 0")
+    raise ValueError(f"Expected picks, got 0 after blacklist filter")
 if len(picks) != 10:
     print(f"[warn] Expected 10 picks, got {len(picks)} — continuing anyway")
 for pick in picks:
@@ -288,3 +306,22 @@ print(f"✅ Morning note generated for {today}")
 print(f"   S&P futures: {data['market']['sp500_futures_pct']}%")
 print(f"   10Y Treasury: {data['market']['treasury_10y']}%")
 print(f"   Stock picks: {[p['ticker'] for p in data['stock_picks']]}")
+
+# Sync to Cloudflare KV so all devices get fresh data without redeployment
+import urllib.request, urllib.error
+SYNC_URL = 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+UA = {'User-Agent': 'DashboardSync/1.0'}
+try:
+    req = urllib.request.Request(SYNC_URL, headers=UA)
+    current = json.loads(urllib.request.urlopen(req, timeout=10).read())
+    if not isinstance(current, dict):
+        current = {}
+    current['morning_note'] = data
+    body = json.dumps(current, ensure_ascii=False).encode('utf-8')
+    req2 = urllib.request.Request(SYNC_URL, data=body,
+                                   headers={**UA, 'Content-Type': 'application/json'},
+                                   method='POST')
+    urllib.request.urlopen(req2, timeout=10)
+    print('✅ KV 同步成功 — 所有设备将在下次加载时获取最新晨报')
+except Exception as e:
+    print(f'⚠️ KV 同步失败（不影响本地文件）: {e}')

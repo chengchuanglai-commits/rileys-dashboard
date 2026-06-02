@@ -38,6 +38,12 @@ def _patch_anthropic():
 _patch_anthropic()
 
 
+BLACKLIST = {
+    "NVDA","AAPL","MSFT","AMZN","GOOGL","GOOG","META","TSLA","JPM","JNJ","XOM",
+    "BRK","V","MA","UNH","PG","HD","CVX","MRK","ABBV","BAC","KO","PEP","COST",
+    "WMT","AVGO","TSM","LLY","ORCL","NFLX","AMD","INTC","TLT","BND","SPY","QQQ"
+}
+
 def select_stocks():
     history_file = f"dashboard/morning-note-history/{today}.json"
     if not os.path.exists(history_file):
@@ -47,7 +53,9 @@ def select_stocks():
         data = json.load(f)
     picks = data.get('stock_picks', [])
     sp500 = data.get('market', {}).get('sp500_futures_pct', 0)
-    buy_picks = [p for p in picks if p.get('direction') == 'buy']
+    buy_picks = [p for p in picks
+                 if p.get('direction') == 'buy'
+                 and p.get('ticker', '').upper() not in BLACKLIST]
     if sp500 >= 0:
         preferred = ['科技', '半导体', '消费可选', '能源']
     else:
@@ -328,3 +336,22 @@ with open(archive_path, "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
 print(f"✅ Trading signals generated for {today}: {[s['ticker'] for s in data['signals']]}")
+
+# Sync to Cloudflare KV so all devices get fresh data without redeployment
+import urllib.request, urllib.error
+SYNC_URL = 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+UA = {'User-Agent': 'DashboardSync/1.0'}
+try:
+    req = urllib.request.Request(SYNC_URL, headers=UA)
+    current = json.loads(urllib.request.urlopen(req, timeout=10).read())
+    if not isinstance(current, dict):
+        current = {}
+    current['trading_signals'] = data
+    body = json.dumps(current, ensure_ascii=False).encode('utf-8')
+    req2 = urllib.request.Request(SYNC_URL, data=body,
+                                   headers={**UA, 'Content-Type': 'application/json'},
+                                   method='POST')
+    urllib.request.urlopen(req2, timeout=10)
+    print('✅ KV 同步成功 — 所有设备将在下次加载时获取最新信号')
+except Exception as e:
+    print(f'⚠️ KV 同步失败（不影响本地文件）: {e}')
