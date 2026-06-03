@@ -26,7 +26,8 @@
       "open_price": 168.0,
       "pct_change": -1.11,
       "pct_from_prev_close": -1.3,
-      "correct": true
+      "correct": true,
+      "correct_direction": true
     },
     {
       "ticker": "IMOS",
@@ -52,7 +53,8 @@
       "open_price": 65.89,
       "pct_change": 2.17,
       "pct_from_prev_close": -0.63,
-      "correct": false
+      "correct": false,
+      "correct_direction": true
     }
   ],
   "accuracy": {

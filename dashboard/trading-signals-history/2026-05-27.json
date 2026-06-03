@@ -13,7 +13,9 @@
       "summary": "Overweight",
       "actual_price": 89.73,
       "pct_change": 2.6,
-      "correct": true
+      "correct": true,
+      "pct_from_prev_close": 2.6,
+      "correct_direction": true
     },
     {
       "ticker": "WTTR",
@@ -26,7 +28,9 @@
       "summary": "Underweight",
       "actual_price": 18.85,
       "pct_change": -2.58,
-      "correct": true
+      "correct": true,
+      "pct_from_prev_close": -2.58,
+      "correct_direction": true
     }
   ],
   "accuracy": {

@@ -26,7 +26,8 @@
       "open_price": 74.3,
       "pct_change": -1.13,
       "pct_from_prev_close": 0.4,
-      "correct": true
+      "correct": true,
+      "correct_direction": true
     },
     {
       "ticker": "MU",
@@ -52,7 +53,8 @@
       "open_price": 1049.69,
       "pct_change": -0.51,
       "pct_from_prev_close": 0.76,
-      "correct": false
+      "correct": false,
+      "correct_direction": true
     }
   ],
   "accuracy": {

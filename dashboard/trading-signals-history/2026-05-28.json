@@ -14,7 +14,9 @@
       "report_file": "trading-signals-history/2026-05-28-MXL-report.json",
       "actual_price": 98.18,
       "pct_change": -2.89,
-      "correct": true
+      "correct": true,
+      "pct_from_prev_close": -2.89,
+      "correct_direction": true
     },
     {
       "ticker": "ALGT",
@@ -28,7 +30,9 @@
       "report_file": "trading-signals-history/2026-05-28-ALGT-report.json",
       "actual_price": 91.12,
       "pct_change": 0.13,
-      "correct": false
+      "correct": false,
+      "pct_from_prev_close": 0.13,
+      "correct_direction": false
     }
   ],
   "accuracy": {

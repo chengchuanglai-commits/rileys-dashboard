@@ -203,16 +203,25 @@ def check_yesterday_accuracy():
         # use open price as real entry if available (more accurate than prev close)
         real_entry = open_px if open_px else entry
         pct = (current - real_entry) / real_entry * 100
+        pct_signal = (current - entry) / entry * 100   # signal price → close (AI direction quality)
         sig['actual_price'] = current
-        sig['open_price'] = open_px      # record open for transparency
-        sig['pct_change'] = round(pct, 2)
-        sig['pct_from_prev_close'] = round((current - entry) / entry * 100, 2)
+        sig['open_price'] = open_px
+        sig['pct_change'] = round(pct, 2)                        # open → close (execution P&L)
+        sig['pct_from_prev_close'] = round(pct_signal, 2)        # signal → close (AI direction)
+        # correct_execution: did we make money after gap/slippage?
         if action == 'BUY':
             sig['correct'] = pct > 0
         elif action == 'SELL':
             sig['correct'] = pct < 0
         else:
             sig['correct'] = abs(pct) < 2
+        # correct_direction: was AI's directional call right (ignoring gap)?
+        if action == 'BUY':
+            sig['correct_direction'] = pct_signal > 0
+        elif action == 'SELL':
+            sig['correct_direction'] = pct_signal < 0
+        else:
+            sig['correct_direction'] = abs(pct_signal) < 2
         print(f"[accuracy] {ticker} {action}: prev_close=${entry} open=${open_px} close=${current} ({pct:+.2f}% from open) → {'✓' if sig['correct'] else '✗'}")
         updated = True
     if updated:

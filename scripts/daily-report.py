@@ -85,13 +85,15 @@ if os.path.exists(prev_file):
         "pending":  len(pending),
         "results":  [
             {
-                "ticker":    s.get("ticker"),
-                "action":    s.get("action"),
-                "entry":     s.get("current_price"),
-                "open":      s.get("open_price"),
-                "actual":    s.get("actual_price"),
-                "pct":       s.get("pct_change"),
-                "correct":   s.get("correct"),
+                "ticker":            s.get("ticker"),
+                "action":            s.get("action"),
+                "entry":             s.get("current_price"),
+                "open":              s.get("open_price"),
+                "actual":            s.get("actual_price"),
+                "pct":               s.get("pct_change"),
+                "pct_from_signal":   s.get("pct_from_prev_close"),
+                "correct":           s.get("correct"),
+                "correct_direction": s.get("correct_direction"),
             }
             for s in verified
         ],
@@ -102,11 +104,12 @@ if os.path.exists(prev_file):
 else:
     report["accuracy_update"] = {"date": yesterday, "total": 0, "note": "无历史信号文件"}
 
-# ── 3. 累计统计 ───────────────────────────────────────────────
+# ── 3. 累计统计（双指标）────────────────────────────────────────
 
-total = correct = 0
-sim_capital = 1000.0
+total = correct_exec = correct_dir = 0
+sim_exec = sim_dir = 1000.0
 daily_returns = []
+daily_returns_dir = []
 
 for fname in sorted(os.listdir(SIGNALS_DIR)):
     if not fname.endswith('.json') or '-report' in fname or fname == f"{today}.json":
@@ -117,40 +120,52 @@ for fname in sorted(os.listdir(SIGNALS_DIR)):
         day_signals = [s for s in h.get("signals", []) if "correct" in s]
         if not day_signals:
             continue
-        per_trade = sim_capital / len(day_signals)
-        day_end = 0.0
+        n = len(day_signals)
+        per_exec = sim_exec / n
+        per_dir  = sim_dir  / n
+        day_exec = day_dir  = 0.0
         for s in day_signals:
             total += 1
-            pct = s.get("pct_change", 0) or 0
-            action = s.get("action", "HOLD")
+            action     = s.get("action", "HOLD")
+            pct_open   = s.get("pct_change", 0) or 0           # open→close
+            pct_signal = s.get("pct_from_prev_close", 0) or 0  # signal→close
             if action == "BUY":
-                gain = per_trade * pct / 100
+                day_exec += per_exec * pct_open / 100
+                day_dir  += per_dir  * pct_signal / 100
             elif action == "SELL":
-                gain = per_trade * (-pct) / 100
-            else:
-                gain = 0
-            day_end += per_trade + gain
-            if s["correct"]:
-                correct += 1
-        daily_return = (day_end - sim_capital) / sim_capital * 100
-        daily_returns.append(round(daily_return, 3))
-        sim_capital = day_end
+                day_exec += per_exec * (-pct_open) / 100
+                day_dir  += per_dir  * (-pct_signal) / 100
+            if s.get("correct"):           correct_exec += 1
+            if s.get("correct_direction"): correct_dir  += 1
+        daily_returns.append(round((day_exec / sim_exec) * 100, 3))
+        daily_returns_dir.append(round((day_dir / sim_dir) * 100, 3))
+        sim_exec += day_exec
+        sim_dir  += day_dir
     except Exception as e:
         report["warnings"].append(f"统计文件读取失败 {fname}: {e}")
 
-accuracy_rate = round(correct / total, 3) if total > 0 else None
-sim_pnl = round(sim_capital - 1000.0, 2)
-sim_pnl_pct = round((sim_capital / 1000.0 - 1) * 100, 2)
+acc_exec = round(correct_exec / total, 3) if total > 0 else None
+acc_dir  = round(correct_dir  / total, 3) if total > 0 else None
 
 report["running_totals"] = {
     "total_signals_verified": total,
-    "correct": correct,
-    "accuracy_rate": accuracy_rate,
-    "accuracy_pct": f"{round(accuracy_rate*100,1)}%" if accuracy_rate else "N/A",
-    "simulated_capital": round(sim_capital, 2),
-    "simulated_pnl_usd": sim_pnl,
-    "simulated_pnl_pct": f"{sim_pnl_pct:+.2f}%",
+    # 执行准确率（开盘价入场，反映真实盈亏）
+    "correct": correct_exec,
+    "accuracy_rate": acc_exec,
+    "accuracy_pct": f"{round(acc_exec*100,1)}%" if acc_exec else "N/A",
+    "simulated_capital": round(sim_exec, 2),
+    "simulated_pnl_usd": round(sim_exec - 1000.0, 2),
+    "simulated_pnl_pct": f"{(sim_exec/1000-1)*100:+.2f}%",
     "daily_returns": daily_returns,
+    # 方向准确率（信号价入场，反映AI预测质量）
+    "correct_direction": correct_dir,
+    "accuracy_direction_rate": acc_dir,
+    "accuracy_direction_pct": f"{round(acc_dir*100,1)}%" if acc_dir else "N/A",
+    "simulated_capital_direction": round(sim_dir, 2),
+    "simulated_pnl_direction_usd": round(sim_dir - 1000.0, 2),
+    "simulated_pnl_direction_pct": f"{(sim_dir/1000-1)*100:+.2f}%",
+    "daily_returns_direction": daily_returns_dir,
+    "gap_cost_usd": round(sim_dir - sim_exec, 2),
 }
 
 # ── 4. 数据质量小结 ───────────────────────────────────────────
@@ -184,16 +199,21 @@ print(f"  Pipeline    晨报:{('✅' if morning_found else '⚠️ ')}  信号:{
 print(f"  成本        ${report['api_cost_usd']:.4f}")
 
 rt = report["running_totals"]
-print(f"  累计准确率  {rt['accuracy_pct']}  ({rt['correct']}/{rt['total_signals_verified']} 条已验证)")
-print(f"  模拟收益    {rt['simulated_pnl_pct']}  (${rt['simulated_capital']:.2f})")
+print(f"  {'指标':<10} {'执行准确率(开盘入场)':<22} {'方向准确率(信号价)'}")
+print(f"  {'准确率':<10} {rt['accuracy_pct']} ({rt['correct']}/{rt['total_signals_verified']}){'':<12} {rt['accuracy_direction_pct']} ({rt['correct_direction']}/{rt['total_signals_verified']})")
+print(f"  {'模拟本金':<10} ${rt['simulated_capital']:.2f}{'':<18} ${rt['simulated_capital_direction']:.2f}")
+print(f"  {'累计盈亏':<10} {rt['simulated_pnl_pct']}{'':<20} {rt['simulated_pnl_direction_pct']}")
+print(f"  跳空损失    ${rt['gap_cost_usd']:.2f}")
 
 au = report["accuracy_update"]
 if au.get("results"):
     print(f"\n  昨日 ({yesterday}) 验证结果:")
     for r in au["results"]:
-        mark = '✓' if r.get("correct") else '✗'
-        open_str = f"  开盘${r['open']}" if r.get('open') else ''
-        print(f"    {mark} {r['ticker']} {r['action']}  入场${r['entry']}{open_str}  收盘${r['actual']}  {r['pct']:+.2f}%")
+        exec_mark = '✓' if r.get("correct") else '✗'
+        dir_mark  = '✓' if r.get("correct_direction") else '✗'
+        open_str  = f"  开盘${r['open']}" if r.get('open') else ''
+        gap_note  = ' ←跳空' if exec_mark != dir_mark else ''
+        print(f"    执行{exec_mark}/方向{dir_mark} {r['ticker']} {r['action']}  入场${r['entry']}{open_str}  收盘${r['actual']}  {r['pct']:+.2f}%{gap_note}")
 
 if report["warnings"]:
     print(f"\n  ⚠️  警告 ({len(report['warnings'])}):")
