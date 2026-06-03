@@ -1,6 +1,6 @@
 {
   "date": "2026-06-03",
-  "generated_at": "2026-06-03T12:14:00",
+  "generated_at": "2026-06-03T12:38:00",
   "pipeline": {
     "morning_note_found": true,
     "signal_file_found": false,
@@ -51,39 +51,40 @@
         "action": "BUY",
         "entry": 1036.48,
         "open": 1049.69,
-        "actual": 1044.33,
-        "pct": -0.51,
-        "pct_from_signal": 0.76,
-        "correct": false,
+        "actual": 1064.1,
+        "pct": 1.37,
+        "pct_from_signal": 2.66,
+        "correct": true,
         "correct_direction": true
       }
     ]
   },
   "running_totals": {
     "total_signals_verified": 8,
-    "correct": 5,
-    "accuracy_rate": 0.625,
-    "accuracy_pct": "62.5%",
-    "simulated_capital": 1026.15,
-    "simulated_pnl_usd": 26.15,
-    "simulated_pnl_pct": "+2.61%",
+    "total_signals_active": 6,
+    "correct": 6,
+    "accuracy_rate": 0.75,
+    "accuracy_pct": "75.0%",
+    "simulated_capital": 1035.82,
+    "simulated_pnl_usd": 35.82,
+    "simulated_pnl_pct": "+3.58%",
     "daily_returns": [
       2.59,
       1.38,
       -1.085,
-      -0.255
+      0.685
     ],
     "correct_direction": 7,
     "accuracy_direction_rate": 0.875,
     "accuracy_direction_pct": "87.5%",
-    "simulated_capital_direction": 1047.3,
-    "simulated_pnl_direction_usd": 47.3,
-    "simulated_pnl_direction_pct": "+4.73%",
+    "simulated_capital_direction": 1057.21,
+    "simulated_pnl_direction_usd": 57.21,
+    "simulated_pnl_direction_pct": "+5.72%",
     "daily_returns_direction": [
       2.59,
       1.38,
       0.315,
-      0.38
+      1.33
     ],
     "total_gap_filtered": 6,
     "correct_gap": 5,
@@ -98,7 +99,20 @@
       0.0,
       0.0
     ],
-    "gap_cost_usd": 21.15
+    "gap_cost_usd": 21.39,
+    "total_limit": 5,
+    "correct_limit": 4,
+    "accuracy_limit_rate": 0.8,
+    "accuracy_limit_pct": "80.0%",
+    "simulated_capital_limit": 1074.55,
+    "simulated_pnl_limit_usd": 74.55,
+    "simulated_pnl_limit_pct": "+7.46%",
+    "daily_returns_limit": [
+      2.6,
+      1.38,
+      0.63,
+      2.66
+    ]
   },
   "warnings": [
     "信号文件不存在: dashboard/trading-signals-history/2026-06-03.json"

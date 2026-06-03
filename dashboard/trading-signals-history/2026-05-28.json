@@ -18,7 +18,10 @@
       "pct_from_prev_close": -2.89,
       "correct_direction": true,
       "gap_filtered": false,
-      "gap_pct": null
+      "gap_pct": null,
+      "day_high": 103.47,
+      "day_low": 93.62,
+      "limit_filled": true
     },
     {
       "ticker": "ALGT",
@@ -36,7 +39,10 @@
       "pct_from_prev_close": 0.13,
       "correct_direction": false,
       "gap_filtered": false,
-      "gap_pct": null
+      "gap_pct": null,
+      "day_high": 92.64,
+      "day_low": 88.38,
+      "limit_filled": true
     }
   ],
   "accuracy": {

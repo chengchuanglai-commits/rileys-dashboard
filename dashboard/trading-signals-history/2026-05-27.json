@@ -17,7 +17,10 @@
       "pct_from_prev_close": 2.6,
       "correct_direction": true,
       "gap_filtered": false,
-      "gap_pct": null
+      "gap_pct": null,
+      "day_high": 92.29,
+      "day_low": 85.86,
+      "limit_filled": true
     },
     {
       "ticker": "WTTR",
@@ -34,7 +37,10 @@
       "pct_from_prev_close": -2.58,
       "correct_direction": true,
       "gap_filtered": false,
-      "gap_pct": null
+      "gap_pct": null,
+      "day_high": 19.04,
+      "day_low": 18.39,
+      "limit_filled": false
     }
   ],
   "accuracy": {

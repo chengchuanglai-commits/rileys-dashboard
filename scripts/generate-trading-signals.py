@@ -154,31 +154,35 @@ def summarize(report):
     return out[:400] + ('…' if len(out) > 400 else '')
 
 
-def get_price(ticker):
+def get_day_ohlc(ticker):
+    """Fetch latest trading day OHLC in one API call. Returns (open, high, low, close)."""
     try:
         hist = yf.Ticker(ticker).history(period="5d")
         if len(hist) == 0:
-            return None
-        price = round(float(hist['Close'].iloc[-1]), 2)
-        # log the actual data date so we can detect stale data
+            return None, None, None, None
+        row = hist.iloc[-1]
         data_date = hist.index[-1].strftime('%Y-%m-%d')
-        print(f"[price] {ticker}: ${price} (data date: {data_date})")
-        return price
+        o = round(float(row['Open']), 2)
+        h = round(float(row['High']), 2)
+        l = round(float(row['Low']), 2)
+        c = round(float(row['Close']), 2)
+        print(f"[price] {ticker}: O=${o} H=${h} L=${l} C=${c} (data: {data_date})")
+        return o, h, l, c
     except Exception as e:
-        print(f"[warn] yfinance price fetch failed for {ticker}: {e}")
-        return None
+        print(f"[warn] yfinance OHLC fetch failed for {ticker}: {e}")
+        return None, None, None, None
+
+
+def get_price(ticker):
+    """Get latest close price."""
+    _, _, _, c = get_day_ohlc(ticker)
+    return c
 
 
 def get_open_price(ticker):
-    """Get today's opening price for more accurate entry price comparison."""
-    try:
-        hist = yf.Ticker(ticker).history(period="5d")
-        if len(hist) == 0:
-            return None
-        open_price = round(float(hist['Open'].iloc[-1]), 2)
-        return open_price
-    except Exception:
-        return None
+    """Get latest open price."""
+    o, _, _, _ = get_day_ohlc(ticker)
+    return o
 
 
 def check_yesterday_accuracy():
@@ -196,8 +200,7 @@ def check_yesterday_accuracy():
         entry = sig.get('current_price')
         if not ticker or not action or not entry:
             continue
-        current = get_price(ticker)     # today's close — exit price
-        open_px = get_open_price(ticker)  # today's open — actual entry price
+        open_px, day_high, day_low, current = get_day_ohlc(ticker)
         if current is None:
             continue
         # use open price as real entry if available (more accurate than prev close)
@@ -206,6 +209,8 @@ def check_yesterday_accuracy():
         pct_signal = (current - entry) / entry * 100   # signal price → close (AI direction quality)
         sig['actual_price'] = current
         sig['open_price'] = open_px
+        sig['day_high'] = day_high
+        sig['day_low'] = day_low
         sig['pct_change'] = round(pct, 2)                        # open → close (execution P&L)
         sig['pct_from_prev_close'] = round(pct_signal, 2)        # signal → close (AI direction)
         # correct_execution: did we make money after gap/slippage?
@@ -236,8 +241,16 @@ def check_yesterday_accuracy():
         else:
             sig['gap_filtered'] = False
             sig['gap_pct'] = None
+        # plan D: limit order at signal price — filled if price touches signal level intraday
+        if action == 'BUY':
+            sig['limit_filled'] = bool(day_low and day_low <= entry)
+        elif action == 'SELL':
+            sig['limit_filled'] = bool(day_high and day_high >= entry)
+        else:
+            sig['limit_filled'] = False
         gap_tag = ' [GAP SKIP]' if sig['gap_filtered'] else ''
-        print(f"[accuracy] {ticker} {action}: signal=${entry} open=${open_px} close=${current} ({pct:+.2f}% from open){gap_tag} → {'✓' if sig['correct'] else '✗'}")
+        limit_tag = ' [LIMIT✓]' if sig['limit_filled'] else ' [LIMIT✗]'
+        print(f"[accuracy] {ticker} {action}: signal=${entry} open=${open_px} close=${current} ({pct:+.2f}% from open){gap_tag}{limit_tag} → {'✓' if sig['correct'] else '✗'}")
         updated = True
     if updated:
         with open(prev_file, 'w') as f:

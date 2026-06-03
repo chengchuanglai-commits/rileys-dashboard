@@ -108,10 +108,13 @@ else:
 
 total = correct_exec = correct_dir = 0
 total_gap = correct_gap = 0          # gap-filtered: only count non-skipped trades
-sim_exec = sim_dir = sim_gap = 1000.0
+total_d = correct_d = 0              # plan D: limit order at signal price
+total_active = 0                     # non-HOLD signals
+sim_exec = sim_dir = sim_gap = sim_d = 1000.0
 daily_returns = []
 daily_returns_dir = []
 daily_returns_gap = []
+daily_returns_d = []
 
 for fname in sorted(os.listdir(SIGNALS_DIR)):
     if not fname.endswith('.json') or '-report' in fname or fname == f"{today}.json":
@@ -126,41 +129,55 @@ for fname in sorted(os.listdir(SIGNALS_DIR)):
         per_exec = sim_exec / n
         per_dir  = sim_dir  / n
         per_gap  = sim_gap  / n
-        day_exec = day_dir = day_gap = 0.0
+        day_exec = day_dir = day_gap = day_d = 0.0
+        # plan D: allocate only among limit_filled non-HOLD signals
+        d_sigs = [s for s in day_signals if s.get("limit_filled") and s.get("action") != "HOLD"]
+        per_d = sim_d / len(d_sigs) if d_sigs else 0
         for s in day_signals:
             total += 1
             action     = s.get("action", "HOLD")
             pct_open   = s.get("pct_change", 0) or 0
             pct_signal = s.get("pct_from_prev_close", 0) or 0
             skipped    = s.get("gap_filtered", False)
+            filled     = s.get("limit_filled", False)
             if action == "BUY":
                 day_exec += per_exec * pct_open / 100
                 day_dir  += per_dir  * pct_signal / 100
                 if not skipped: day_gap += per_gap * pct_open / 100
+                if filled:      day_d   += per_d   * pct_signal / 100
             elif action == "SELL":
                 day_exec += per_exec * (-pct_open) / 100
                 day_dir  += per_dir  * (-pct_signal) / 100
                 if not skipped: day_gap += per_gap * (-pct_open) / 100
+                if filled:      day_d   += per_d   * (-pct_signal) / 100
+            if action != "HOLD": total_active += 1
             if s.get("correct"):           correct_exec += 1
             if s.get("correct_direction"): correct_dir  += 1
             if not skipped:
                 total_gap += 1
                 if s.get("correct"): correct_gap += 1
+            if filled and action != "HOLD":
+                total_d += 1
+                if s.get("correct_direction"): correct_d += 1
         daily_returns.append(round((day_exec / sim_exec) * 100, 3))
         daily_returns_dir.append(round((day_dir / sim_dir) * 100, 3))
         daily_returns_gap.append(round((day_gap / sim_gap) * 100, 3))
+        daily_returns_d.append(round((day_d / sim_d) * 100, 3))
         sim_exec += day_exec
         sim_dir  += day_dir
         sim_gap  += day_gap
+        sim_d    += day_d
     except Exception as e:
         report["warnings"].append(f"统计文件读取失败 {fname}: {e}")
 
 acc_exec = round(correct_exec / total, 3) if total > 0 else None
 acc_dir  = round(correct_dir  / total, 3) if total > 0 else None
 acc_gap  = round(correct_gap  / total_gap, 3) if total_gap > 0 else None
+acc_d    = round(correct_d    / total_d,   3) if total_d   > 0 else None
 
 report["running_totals"] = {
     "total_signals_verified": total,
+    "total_signals_active": total_active,
     # A. 执行准确率（开盘价入场，含跳空）
     "correct": correct_exec,
     "accuracy_rate": acc_exec,
@@ -187,6 +204,15 @@ report["running_totals"] = {
     "simulated_pnl_gap_pct": f"{(sim_gap/1000-1)*100:+.2f}%",
     "daily_returns_gap": daily_returns_gap,
     "gap_cost_usd": round(sim_dir - sim_exec, 2),
+    # D. 限价单（信号价触及才入场）
+    "total_limit": total_d,
+    "correct_limit": correct_d,
+    "accuracy_limit_rate": acc_d,
+    "accuracy_limit_pct": f"{round(acc_d*100,1)}%" if acc_d else "N/A",
+    "simulated_capital_limit": round(sim_d, 2),
+    "simulated_pnl_limit_usd": round(sim_d - 1000.0, 2),
+    "simulated_pnl_limit_pct": f"{(sim_d/1000-1)*100:+.2f}%",
+    "daily_returns_limit": daily_returns_d,
 }
 
 # ── 4. 数据质量小结 ───────────────────────────────────────────
@@ -222,12 +248,24 @@ print(f"  成本        ${report['api_cost_usd']:.4f}")
 rt = report["running_totals"]
 n_all = rt['total_signals_verified']
 n_gap = rt['total_gap_filtered']
-skipped = n_all - n_gap
-print(f"  {'':12} {'执行(含跳空)':<20} {'AI方向(信号价)':<20} {'过滤跳空(>1%不入)'}")
-print(f"  {'准确率':<12} {rt['accuracy_pct']} ({rt['correct']}/{n_all}){'':<9} {rt['accuracy_direction_pct']} ({rt['correct_direction']}/{n_all}){'':<5} {rt['accuracy_gap_pct']} ({rt['correct_gap']}/{n_gap}, 跳过{skipped}笔)")
-print(f"  {'模拟本金':<12} ${rt['simulated_capital']:.2f}{'':<14} ${rt['simulated_capital_direction']:.2f}{'':<10} ${rt['simulated_capital_gap']:.2f}")
-print(f"  {'累计盈亏':<12} {rt['simulated_pnl_pct']}{'':<16} {rt['simulated_pnl_direction_pct']}{'':<12} {rt['simulated_pnl_gap_pct']}")
-print(f"  跳空损失(A vs B): -${rt['gap_cost_usd']:.2f}  |  过滤收益(C vs A): +${rt['simulated_capital_gap']-rt['simulated_capital']:.2f}")
+n_d   = rt['total_limit']
+skipped  = n_all - n_gap
+n_active = rt.get('total_signals_active', n_all)  # non-HOLD signals
+missed   = n_active - n_d if n_active >= n_d else 0
+print(f"  {'':12} {'A 开盘市价':<18} {'B AI方向':<18} {'C 过滤跳空':<18} {'D 限价单'}")
+print(f"  {'准确率':<12} {rt['accuracy_pct']} ({rt['correct']}/{n_all}){'':<5} "
+      f"{rt['accuracy_direction_pct']} ({rt['correct_direction']}/{n_all}){'':<3} "
+      f"{rt['accuracy_gap_pct']} ({rt['correct_gap']}/{n_gap}){'':<5} "
+      f"{rt['accuracy_limit_pct']} ({rt['correct_limit']}/{n_d})")
+print(f"  {'模拟本金':<12} ${rt['simulated_capital']:.2f}{'':<11} "
+      f"${rt['simulated_capital_direction']:.2f}{'':<8} "
+      f"${rt['simulated_capital_gap']:.2f}{'':<9} "
+      f"${rt['simulated_capital_limit']:.2f}")
+print(f"  {'累计盈亏':<12} {rt['simulated_pnl_pct']}{'':<13} "
+      f"{rt['simulated_pnl_direction_pct']}{'':<9} "
+      f"{rt['simulated_pnl_gap_pct']}{'':<10} "
+      f"{rt['simulated_pnl_limit_pct']}")
+print(f"  跳空损失(A-B):-${rt['gap_cost_usd']:.2f}  限价优势(D-A):+${rt['simulated_capital_limit']-rt['simulated_capital']:.2f}  错过{missed}笔")
 
 au = report["accuracy_update"]
 if au.get("results"):

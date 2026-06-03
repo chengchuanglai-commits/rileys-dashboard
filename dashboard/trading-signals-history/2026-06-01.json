@@ -29,7 +29,10 @@
       "correct": true,
       "correct_direction": true,
       "gap_filtered": false,
-      "gap_pct": -0.18
+      "gap_pct": -0.18,
+      "day_high": 169.77,
+      "day_low": 162.55,
+      "limit_filled": false
     },
     {
       "ticker": "IMOS",
@@ -58,7 +61,10 @@
       "correct": false,
       "correct_direction": true,
       "gap_filtered": true,
-      "gap_pct": -2.75
+      "gap_pct": -2.75,
+      "day_high": 68.78,
+      "day_low": 65.16,
+      "limit_filled": true
     }
   ],
   "accuracy": {
