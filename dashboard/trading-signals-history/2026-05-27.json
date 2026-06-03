@@ -15,7 +15,9 @@
       "pct_change": 2.6,
       "correct": true,
       "pct_from_prev_close": 2.6,
-      "correct_direction": true
+      "correct_direction": true,
+      "gap_filtered": false,
+      "gap_pct": null
     },
     {
       "ticker": "WTTR",
@@ -30,7 +32,9 @@
       "pct_change": -2.58,
       "correct": true,
       "pct_from_prev_close": -2.58,
-      "correct_direction": true
+      "correct_direction": true,
+      "gap_filtered": false,
+      "gap_pct": null
     }
   ],
   "accuracy": {

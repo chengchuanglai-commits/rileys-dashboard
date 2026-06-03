@@ -1,15 +1,15 @@
 {
   "date": "2026-06-03",
-  "generated_at": "2026-06-03T00:58:00",
+  "generated_at": "2026-06-03T12:14:00",
   "pipeline": {
-    "morning_note_found": false,
+    "morning_note_found": true,
     "signal_file_found": false,
     "signals_generated": 0
   },
   "data_quality": [
     {
       "check": "晨报文件",
-      "pass": false,
+      "pass": true,
       "detail": "2026-06-03"
     },
     {
@@ -25,7 +25,7 @@
     {
       "check": "无警告",
       "pass": false,
-      "detail": "2 条警告"
+      "detail": "1 条警告"
     }
   ],
   "signals_today": [],
@@ -42,7 +42,9 @@
         "open": 74.3,
         "actual": 73.46,
         "pct": -1.13,
-        "correct": true
+        "pct_from_signal": 0.4,
+        "correct": true,
+        "correct_direction": true
       },
       {
         "ticker": "MU",
@@ -51,7 +53,9 @@
         "open": 1049.69,
         "actual": 1044.33,
         "pct": -0.51,
-        "correct": false
+        "pct_from_signal": 0.76,
+        "correct": false,
+        "correct_direction": true
       }
     ]
   },
@@ -68,10 +72,35 @@
       1.38,
       -1.085,
       -0.255
-    ]
+    ],
+    "correct_direction": 7,
+    "accuracy_direction_rate": 0.875,
+    "accuracy_direction_pct": "87.5%",
+    "simulated_capital_direction": 1047.3,
+    "simulated_pnl_direction_usd": 47.3,
+    "simulated_pnl_direction_pct": "+4.73%",
+    "daily_returns_direction": [
+      2.59,
+      1.38,
+      0.315,
+      0.38
+    ],
+    "total_gap_filtered": 6,
+    "correct_gap": 5,
+    "accuracy_gap_rate": 0.833,
+    "accuracy_gap_pct": "83.3%",
+    "simulated_capital_gap": 1040.06,
+    "simulated_pnl_gap_usd": 40.06,
+    "simulated_pnl_gap_pct": "+4.01%",
+    "daily_returns_gap": [
+      2.59,
+      1.38,
+      0.0,
+      0.0
+    ],
+    "gap_cost_usd": 21.15
   },
   "warnings": [
-    "晨报文件不存在: dashboard/morning-note-history/2026-06-03.json（周末/节假日正常）",
     "信号文件不存在: dashboard/trading-signals-history/2026-06-03.json"
   ],
   "api_cost_usd": 0.0

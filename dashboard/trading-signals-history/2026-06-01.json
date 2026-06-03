@@ -27,7 +27,9 @@
       "pct_change": -1.11,
       "pct_from_prev_close": -1.3,
       "correct": true,
-      "correct_direction": true
+      "correct_direction": true,
+      "gap_filtered": false,
+      "gap_pct": -0.18
     },
     {
       "ticker": "IMOS",
@@ -54,7 +56,9 @@
       "pct_change": 2.17,
       "pct_from_prev_close": -0.63,
       "correct": false,
-      "correct_direction": true
+      "correct_direction": true,
+      "gap_filtered": true,
+      "gap_pct": -2.75
     }
   ],
   "accuracy": {

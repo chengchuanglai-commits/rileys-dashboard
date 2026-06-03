@@ -27,7 +27,9 @@
       "pct_change": -1.13,
       "pct_from_prev_close": 0.4,
       "correct": true,
-      "correct_direction": true
+      "correct_direction": true,
+      "gap_filtered": false,
+      "gap_pct": 1.54
     },
     {
       "ticker": "MU",
@@ -54,7 +56,9 @@
       "pct_change": -0.51,
       "pct_from_prev_close": 0.76,
       "correct": false,
-      "correct_direction": true
+      "correct_direction": true,
+      "gap_filtered": true,
+      "gap_pct": 1.27
     }
   ],
   "accuracy": {

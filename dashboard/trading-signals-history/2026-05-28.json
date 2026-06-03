@@ -16,7 +16,9 @@
       "pct_change": -2.89,
       "correct": true,
       "pct_from_prev_close": -2.89,
-      "correct_direction": true
+      "correct_direction": true,
+      "gap_filtered": false,
+      "gap_pct": null
     },
     {
       "ticker": "ALGT",
@@ -32,7 +34,9 @@
       "pct_change": 0.13,
       "correct": false,
       "pct_from_prev_close": 0.13,
-      "correct_direction": false
+      "correct_direction": false,
+      "gap_filtered": false,
+      "gap_pct": null
     }
   ],
   "accuracy": {

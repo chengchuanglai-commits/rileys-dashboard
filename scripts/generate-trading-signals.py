@@ -222,7 +222,22 @@ def check_yesterday_accuracy():
             sig['correct_direction'] = pct_signal < 0
         else:
             sig['correct_direction'] = abs(pct_signal) < 2
-        print(f"[accuracy] {ticker} {action}: prev_close=${entry} open=${open_px} close=${current} ({pct:+.2f}% from open) → {'✓' if sig['correct'] else '✗'}")
+        # gap filter: skip trade if open deviates from signal price by > 1%
+        GAP_THRESHOLD = 0.01
+        if open_px:
+            gap_pct = (open_px - entry) / entry
+            if action == 'BUY':
+                sig['gap_filtered'] = gap_pct > GAP_THRESHOLD     # gapped up too much, skip
+            elif action == 'SELL':
+                sig['gap_filtered'] = gap_pct < -GAP_THRESHOLD    # already dropped, skip
+            else:
+                sig['gap_filtered'] = False
+            sig['gap_pct'] = round(gap_pct * 100, 2)
+        else:
+            sig['gap_filtered'] = False
+            sig['gap_pct'] = None
+        gap_tag = ' [GAP SKIP]' if sig['gap_filtered'] else ''
+        print(f"[accuracy] {ticker} {action}: signal=${entry} open=${open_px} close=${current} ({pct:+.2f}% from open){gap_tag} → {'✓' if sig['correct'] else '✗'}")
         updated = True
     if updated:
         with open(prev_file, 'w') as f:

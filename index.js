@@ -2,6 +2,7 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const path = require('path');
+const http = require('http');
 
 const HISTORY_FILE = path.join(__dirname, 'data', 'self_history.json');
 const SUMMARY_FILE = path.join(__dirname, 'data', 'summaries.json');
@@ -663,6 +664,82 @@ process.on('uncaughtException', (e) => {
         initClient(client);
         startWithRetry(client);
     }, 30000);
+});
+
+// ── Local health data relay (iPhone → Mac → Cloudflare) ──────
+function todayStr() {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+async function forwardHealth(data, res) {
+    // Merge into existing KV so _v and other fields are preserved
+    const current = await fetch(SYNC_URL).then(r => r.json()).catch(() => ({}));
+    const merged = Object.assign({}, current, { health_data: data.health_data });
+    if (!merged._v) merged._v = 2;
+    const upstream = await fetch(SYNC_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(merged),
+    });
+    const result = await upstream.json();
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(result));
+    const d = data.health_data;
+    console.log(`📱 健康数据已同步 ${d?.date || ''} — 步数:${d?.steps ?? '-'} 卡路里:${d?.calories ?? '-'} 运动:${d?.exercise_min ?? '-'}min 心率:${d?.heart_rate_resting ?? '-'}bpm 距离:${d?.distance_km ?? '-'}km 血氧:${d?.blood_oxygen ?? '-'}% 睡眠:${d?.sleep_hours ?? '-'}h`);
+}
+
+const healthServer = http.createServer(async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    const urlObj = new URL(req.url, 'http://localhost');
+    if (urlObj.pathname !== '/health') { res.writeHead(404); return res.end(); }
+
+    // ── GET: /health?steps=N&calories=N&exercise_min=N&heart_rate=N&distance=N
+    if (req.method === 'GET') {
+        try {
+            const p = urlObj.searchParams;
+            const data = {
+                health_data: {
+                    date: p.get('date') || todayStr(),
+                    steps: Math.round(parseFloat(p.get('steps'))) || 0,
+                    calories: Math.round(parseFloat(p.get('calories'))) || 0,
+                    exercise_min: Math.round(parseFloat(p.get('exercise_min'))) || 0,
+                    heart_rate_resting: Math.round(parseFloat(p.get('heart_rate'))) || 0,
+                    distance_km: parseFloat((parseFloat(p.get('distance')) || 0).toFixed(2)),
+                    blood_oxygen: Math.round(parseFloat(p.get('blood_oxygen'))) || 0,
+                    sleep_hours: parseFloat((parseFloat(p.get('sleep_hours')) || 0).toFixed(1)),
+                }
+            };
+            await forwardHealth(data, res);
+        } catch (e) {
+            console.error('健康数据中继失败(GET):', e.message);
+            res.writeHead(400, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ ok: false, error: e.message }));
+        }
+        return;
+    }
+
+    // ── POST: existing JSON body format
+    if (req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => { body += chunk; });
+        req.on('end', async () => {
+            try {
+                const data = JSON.parse(body);
+                await forwardHealth(data, res);
+            } catch (e) {
+                console.error('健康数据中继失败(POST):', e.message);
+                res.writeHead(400, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ ok: false, error: e.message }));
+            }
+        });
+        return;
+    }
+
+    res.writeHead(405); res.end();
+});
+healthServer.listen(3001, '0.0.0.0', () => {
+    console.log('🏥 健康数据中继服务已启动 → http://0.0.0.0:3001/health');
 });
 
 initClient(client);

@@ -1373,6 +1373,9 @@ function restoreFromSync(d) {
     if (d.calendar_events) { localStorage.setItem('calendar_events', JSON.stringify(d.calendar_events)); loadCalendar(); }
     if (d.asset_snapshots) { localStorage.setItem('asset_snapshots', JSON.stringify(d.asset_snapshots)); renderSnapshots(); }
     if (d.health_data)    { localStorage.setItem('health_data', JSON.stringify(d.health_data)); renderHealthMetrics(d.health_data); }
+    // 晨报 & 交易信号 — KV 中有数据时覆盖静态文件版本
+    if (d.morning_note && d.morning_note.date) { window.MORNING_NOTE = d.morning_note; loadMorningNote(); }
+    if (d.trading_signals && d.trading_signals.date) { window.TRADING_SIGNALS = d.trading_signals; loadTradingSignals(); }
 }
 
 function escHtml(s) {
