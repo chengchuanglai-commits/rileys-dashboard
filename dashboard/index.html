@@ -2441,12 +2441,12 @@ function renderTradingSignals(d) {
                     var wrap=btn.nextElementSibling;
                     var open=wrap.style.height!=='0px'&&wrap.style.height!=='';
                     if(open){wrap.style.height='0px';btn.innerHTML='<svg width=&quot;12&quot; height=&quot;12&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; viewBox=&quot;0 0 24 24&quot;><path d=&quot;M19 9l-7 7-7-7&quot;/></svg> 展开 K 线图';}
-                    else{wrap.style.height='1000px';window._tvInject(wrap.querySelector('.tradingview-widget-container'));btn.innerHTML='<svg width=&quot;12&quot; height=&quot;12&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; viewBox=&quot;0 0 24 24&quot;><path d=&quot;M5 15l7-7 7 7&quot;/></svg> 收起';}
+                    else{wrap.style.height='800px';window._tvInject(wrap.querySelector('.tradingview-widget-container'));btn.innerHTML='<svg width=&quot;12&quot; height=&quot;12&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; viewBox=&quot;0 0 24 24&quot;><path d=&quot;M5 15l7-7 7 7&quot;/></svg> 收起';}
                 })(this)" style="width:100%;padding:8px 18px;background:#1a1a2e;border:none;color:#8b8fa8;font-size:11px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;letter-spacing:.04em;transition:background 150ms" onmouseover="this.style.background='#22223a'" onmouseout="this.style.background='#1a1a2e'">
                     <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg> 展开 K 线图
                 </button>
                 <div style="height:0px;overflow:hidden;transition:height 300ms ease">
-                    <div class="tradingview-widget-container" data-symbol="${tvSymbol(s.ticker)}" style="height:1000px">
+                    <div class="tradingview-widget-container" data-symbol="${tvSymbol(s.ticker)}" style="height:800px">
                         <div class="tradingview-widget-container__widget" style="height:100%"></div>
                     </div>
                 </div>
