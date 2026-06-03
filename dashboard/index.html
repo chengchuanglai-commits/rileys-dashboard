@@ -527,6 +527,7 @@
       var d=new Date().toISOString().slice(0,10).replace(/-/g,'');
       document.write('<scr'+'ipt src="morning-note.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="trading-signals.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="daily-report.js?v='+d+'"><\/scr'+'ipt>');
     })();
     </script>
 </head>
@@ -966,6 +967,29 @@
             <div id="ts-content">
                 <div class="mn-empty">今日 AI 深度信号将于 20:30 生成…</div>
             </div>
+        </div>
+    </div>
+
+    <!-- ── Row 2.8: 模拟资金曲线 ── -->
+    <div class="row col-1" style="margin-bottom:16px">
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">📈 方案D 模拟资金曲线（$1,000 起）</span>
+                <span style="display:flex;align-items:center;gap:4px;font-size:10px;color:#10b981;font-weight:600"><span style="width:20px;height:3px;background:#10b981;display:inline-block;border-radius:2px"></span>限价单入场</span>
+            </div>
+            <div id="sim-curve-chart" style="width:100%;padding:8px 0"></div>
+            <div id="sim-curve-stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px;padding-top:10px;border-top:1px solid #f0f0f0"></div>
+        </div>
+    </div>
+
+    <!-- ── Row 2.9: 选股历史 ── -->
+    <div class="row col-1" style="margin-bottom:16px">
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">📋 选股历史记录</span>
+                <span style="font-size:9px;color:#bbb">方案D：限价单入场</span>
+            </div>
+            <div id="sig-history-table" style="overflow-x:auto"></div>
         </div>
     </div>
 
@@ -2293,6 +2317,8 @@ async function refreshNews(section) {
 (async () => {
     loadMorningNote();
     loadTradingSignals();
+    loadSimCurve();
+    loadSigHistory();
     await Promise.all([
         loadSection('fin'),
         loadSection('ai'),
@@ -2358,6 +2384,9 @@ function renderTradingSignals(d) {
                 <div><div class="mn-num-lbl">目标价 +10%</div><div class="mn-num-val" style="color:#16a34a">$${s.target_price != null ? s.target_price.toFixed(2) : '—'}</div></div>
                 <div><div class="mn-num-lbl">止损价 −5%</div><div class="mn-num-val" style="color:#dc2626">$${s.stop_loss != null ? s.stop_loss.toFixed(2) : '—'}</div></div>
             </div>
+            <div class="tradingview-widget-container" data-symbol="NASDAQ:${s.ticker}" style="height:300px;margin:8px 0 12px">
+                <div class="tradingview-widget-container__widget" style="height:100%"></div>
+            </div>
             ${summary ? `
             <div class="ts-summary">
                 <span id="${idBase}-short">${shortText}</span>
@@ -2377,6 +2406,209 @@ function renderTradingSignals(d) {
         <div style="font-size:9px;color:#bbb;text-align:right;margin-top:4px;padding-top:6px;border-top:1px solid #f0f0f0">
             TradingAgents · 每日 20:30 自动更新 · 本次花费 $${d.api_cost_usd != null ? d.api_cost_usd.toFixed(4) : '0'}
         </div>`;
+
+    // Inject TradingView widget scripts after innerHTML is set (script tags in innerHTML don't execute)
+    content.querySelectorAll('.tradingview-widget-container').forEach(container => {
+        const symbol = container.dataset.symbol;
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+        script.async = true;
+        script.textContent = JSON.stringify({
+            symbol: symbol,
+            interval: 'D',
+            timezone: 'Asia/Shanghai',
+            theme: 'light',
+            style: '1',
+            locale: 'zh_CN',
+            allow_symbol_change: false,
+            hide_side_toolbar: true,
+            hide_top_toolbar: false,
+            save_image: false,
+            calendar: false,
+            hide_volume: false,
+            autosize: true
+        });
+        container.appendChild(script);
+    });
+}
+
+// ── Signal History Table ──────────────────────────────
+function loadSigHistory() {
+    const data = window.DAILY_REPORT;
+    if (!data || !data.running_totals) return;
+    const history = data.running_totals.signals_history || [];
+    const el = document.getElementById('sig-history-table');
+    if (!el) return;
+    if (!history.length) { el.innerHTML = '<div class="mn-empty">暂无历史记录</div>'; return; }
+
+    const actionBadge = a => {
+        const c = a === 'BUY' ? '#16a34a' : a === 'SELL' ? '#dc2626' : '#888';
+        return `<span style="font-size:10px;font-weight:700;color:${c};background:${c}18;padding:1px 7px;border-radius:10px">${a}</span>`;
+    };
+    const pctCell = (v, invert) => {
+        if (v == null) return '<td style="color:#bbb;text-align:right">—</td>';
+        const pos = invert ? v <= 0 : v >= 0;
+        const color = pos ? '#16a34a' : '#dc2626';
+        return `<td style="text-align:right;color:${color};font-weight:600">${v >= 0 ? '+' : ''}${v.toFixed(2)}%</td>`;
+    };
+
+    const rows = history.map(s => {
+        const filled = s.limit_filled;
+        const correct = s.correct;
+        const action = s.action || 'HOLD';
+        const isHold = action === 'HOLD';
+        const rowBg = !filled && !isHold ? 'background:#fafafa' : '';
+
+        // D方案盈亏：只有filled才有意义
+        let dPct = null;
+        if (filled && !isHold && s.pct_from_signal != null) {
+            dPct = action === 'BUY' ? s.pct_from_signal : -s.pct_from_signal;
+        }
+        const dCell = filled && !isHold
+            ? pctCell(dPct, false)
+            : `<td style="text-align:center;color:#ccc;font-size:11px">${isHold ? '—' : '未触价'}</td>`;
+
+        const resultIcon = correct === true ? '✓' : correct === false ? '✗' : '·';
+        const resultColor = correct === true ? '#16a34a' : correct === false ? '#dc2626' : '#bbb';
+
+        return `<tr style="${rowBg}">
+            <td style="color:#888;white-space:nowrap">${s.date.slice(5)}</td>
+            <td style="font-weight:700">${s.ticker}</td>
+            <td>${actionBadge(action)}</td>
+            <td style="text-align:right">$${s.signal_price != null ? s.signal_price.toFixed(2) : '—'}</td>
+            <td style="text-align:right;color:#888">${s.open_price != null ? '$' + s.open_price.toFixed(2) : '—'}</td>
+            <td style="text-align:right;color:#555">${s.close_price != null ? '$' + s.close_price.toFixed(2) : '—'}</td>
+            ${pctCell(s.pct_change, false)}
+            ${dCell}
+            <td style="text-align:center;font-weight:700;color:${resultColor}">${resultIcon}</td>
+        </tr>`;
+    }).join('');
+
+    el.innerHTML = `<table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead>
+            <tr style="border-bottom:2px solid #f0f0f0">
+                <th style="text-align:left;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">日期</th>
+                <th style="text-align:left;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">股票</th>
+                <th style="text-align:left;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">方向</th>
+                <th style="text-align:right;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">信号价</th>
+                <th style="text-align:right;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">开盘价</th>
+                <th style="text-align:right;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">收盘价</th>
+                <th style="text-align:right;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">涨跌%</th>
+                <th style="text-align:right;padding:6px 8px;font-size:9px;color:#10b981;font-weight:700;text-transform:uppercase;letter-spacing:.08em">D盈亏</th>
+                <th style="text-align:center;padding:6px 8px;font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.08em">结果</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${rows}
+        </tbody>
+    </table>
+    <div style="font-size:9px;color:#bbb;margin-top:8px;padding-top:6px;border-top:1px solid #f5f5f5">
+        灰底 = D方案未触及信号价（未入场） · ✓ = 方向正确 · ✗ = 方向错误
+    </div>`;
+}
+
+// ── Simulation Curve ──────────────────────────────────
+function loadSimCurve() {
+    const data = window.DAILY_REPORT;
+    if (!data || !data.running_totals) return;
+    const rt = data.running_totals;
+
+    const dates = rt.daily_dates || [];
+    const cumD = rt.cum_capital_d || [1000];
+    const labels = ['开始', ...dates.map(d => d.slice(5))];
+
+    const wrap = document.getElementById('sim-curve-chart');
+    if (!wrap) return;
+
+    const W = wrap.clientWidth || 600;
+    const H = 200;
+    const PAD = { top: 16, right: 20, bottom: 32, left: 54 };
+    const cW = W - PAD.left - PAD.right;
+    const cH = H - PAD.top - PAD.bottom;
+
+    const yMin = Math.min(...cumD);
+    const yMax = Math.max(...cumD);
+    const yPad = (yMax - yMin) * 0.2 || 20;
+    const yLo = Math.floor((yMin - yPad) / 5) * 5;
+    const yHi = Math.ceil((yMax + yPad) / 5) * 5;
+    const n = labels.length;
+
+    const xPx = i => PAD.left + (n <= 1 ? cW / 2 : (i / (n - 1)) * cW);
+    const yPx = v => PAD.top + cH - ((v - yLo) / (yHi - yLo)) * cH;
+
+    // filled area under the line
+    const areapts = [
+        `${xPx(0).toFixed(1)},${(PAD.top + cH).toFixed(1)}`,
+        ...cumD.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`),
+        `${xPx(cumD.length-1).toFixed(1)},${(PAD.top + cH).toFixed(1)}`,
+    ].join(' ');
+
+    const linepts = cumD.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
+
+    const step = (yHi - yLo) <= 60 ? 10 : 20;
+    const yTicks = [];
+    for (let v = Math.ceil(yLo / step) * step; v <= yHi; v += step) yTicks.push(v);
+
+    const grid = yTicks.map(v =>
+        `<line x1="${PAD.left}" y1="${yPx(v).toFixed(1)}" x2="${W - PAD.right}" y2="${yPx(v).toFixed(1)}" stroke="#f0f0f0" stroke-width="1"/>
+         <text x="${PAD.left - 6}" y="${yPx(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" font-size="10" fill="#bbb">$${v}</text>`
+    ).join('');
+
+    const xLabels = labels.map((l, i) =>
+        `<text x="${xPx(i).toFixed(1)}" y="${H - 4}" text-anchor="middle" font-size="10" fill="#bbb">${l}</text>`
+    ).join('');
+
+    const dotLabels = cumD.map((v, i) => {
+        const pct = ((v - 1000) / 10).toFixed(2);
+        const sign = v >= 1000 ? '+' : '';
+        return `<circle cx="${xPx(i).toFixed(1)}" cy="${yPx(v).toFixed(1)}" r="5" fill="#10b981" stroke="#fff" stroke-width="2">
+            <title>${labels[i]}: $${v.toFixed(2)} (${sign}${pct}%)</title>
+        </circle>
+        <text x="${xPx(i).toFixed(1)}" y="${(yPx(v) - 10).toFixed(1)}" text-anchor="middle" font-size="9" font-weight="600" fill="#10b981">${sign}${pct}%</text>`;
+    }).join('');
+
+    const svg = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
+        <defs>
+            <linearGradient id="dGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+            </linearGradient>
+        </defs>
+        ${grid}
+        ${xLabels}
+        <polygon points="${areapts}" fill="url(#dGrad)"/>
+        <polyline points="${linepts}" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        ${dotLabels}
+    </svg>`;
+
+    wrap.innerHTML = svg;
+
+    // Bottom stat (single plan)
+    const statsEl = document.getElementById('sim-curve-stats');
+    if (statsEl) {
+        const final = cumD[cumD.length - 1];
+        const pnl = final - 1000;
+        const pct = (pnl / 10).toFixed(2);
+        const pos = pnl >= 0;
+        statsEl.innerHTML = `
+            <div style="text-align:center;padding:8px 4px">
+                <div style="font-size:10px;color:#999;margin-bottom:2px">模拟本金</div>
+                <div style="font-size:22px;font-weight:800;color:#111">$${final.toFixed(2)}</div>
+            </div>
+            <div style="text-align:center;padding:8px 4px">
+                <div style="font-size:10px;color:#999;margin-bottom:2px">累计盈亏</div>
+                <div style="font-size:22px;font-weight:800;color:${pos?'#16a34a':'#dc2626'}">${pos?'+':''}${pct}%</div>
+            </div>
+            <div style="text-align:center;padding:8px 4px">
+                <div style="font-size:10px;color:#999;margin-bottom:2px">准确率</div>
+                <div style="font-size:22px;font-weight:800;color:#10b981">${rt.accuracy_limit_pct || 'N/A'}</div>
+            </div>
+            <div style="text-align:center;padding:8px 4px">
+                <div style="font-size:10px;color:#999;margin-bottom:2px">成交笔数</div>
+                <div style="font-size:22px;font-weight:800;color:#111">${rt.total_limit || 0}</div>
+            </div>`;
+    }
 }
 
 // ── Morning Note ──────────────────────────────────────

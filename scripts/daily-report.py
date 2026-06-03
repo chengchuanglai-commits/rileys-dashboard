@@ -111,15 +111,23 @@ total_gap = correct_gap = 0          # gap-filtered: only count non-skipped trad
 total_d = correct_d = 0              # plan D: limit order at signal price
 total_active = 0                     # non-HOLD signals
 sim_exec = sim_dir = sim_gap = sim_d = 1000.0
+daily_dates = []
 daily_returns = []
 daily_returns_dir = []
 daily_returns_gap = []
 daily_returns_d = []
+# cumulative capital per day (starts at 1000)
+cum_exec = [1000.0]
+cum_dir  = [1000.0]
+cum_gap  = [1000.0]
+cum_d    = [1000.0]
+signals_history = []  # all verified signals across all days
 
 for fname in sorted(os.listdir(SIGNALS_DIR)):
     if not fname.endswith('.json') or '-report' in fname or fname == f"{today}.json":
         continue
     try:
+        date_label = fname.replace('.json', '')
         with open(os.path.join(SIGNALS_DIR, fname)) as f:
             h = json.load(f)
         day_signals = [s for s in h.get("signals", []) if "correct" in s]
@@ -159,6 +167,23 @@ for fname in sorted(os.listdir(SIGNALS_DIR)):
             if filled and action != "HOLD":
                 total_d += 1
                 if s.get("correct_direction"): correct_d += 1
+        for s in day_signals:
+            signals_history.append({
+                "date":             date_label,
+                "ticker":           s.get("ticker"),
+                "name":             s.get("name", ""),
+                "action":           s.get("action", "HOLD"),
+                "signal_price":     s.get("current_price"),
+                "open_price":       s.get("open_price"),
+                "close_price":      s.get("actual_price"),
+                "pct_change":       s.get("pct_change"),
+                "pct_from_signal":  s.get("pct_from_prev_close"),
+                "correct":          s.get("correct"),
+                "correct_direction":s.get("correct_direction"),
+                "limit_filled":     s.get("limit_filled", False),
+                "gap_filtered":     s.get("gap_filtered", False),
+            })
+        daily_dates.append(date_label)
         daily_returns.append(round((day_exec / sim_exec) * 100, 3))
         daily_returns_dir.append(round((day_dir / sim_dir) * 100, 3))
         daily_returns_gap.append(round((day_gap / sim_gap) * 100, 3))
@@ -167,6 +192,10 @@ for fname in sorted(os.listdir(SIGNALS_DIR)):
         sim_dir  += day_dir
         sim_gap  += day_gap
         sim_d    += day_d
+        cum_exec.append(round(sim_exec, 2))
+        cum_dir.append(round(sim_dir, 2))
+        cum_gap.append(round(sim_gap, 2))
+        cum_d.append(round(sim_d, 2))
     except Exception as e:
         report["warnings"].append(f"统计文件读取失败 {fname}: {e}")
 
@@ -178,6 +207,14 @@ acc_d    = round(correct_d    / total_d,   3) if total_d   > 0 else None
 report["running_totals"] = {
     "total_signals_verified": total,
     "total_signals_active": total_active,
+    # 选股历史记录（时间倒序）
+    "signals_history": list(reversed(signals_history)),
+    # 曲线图用：日期标签 + 累计资金（含起始$1000）
+    "daily_dates": daily_dates,
+    "cum_capital_a": cum_exec,
+    "cum_capital_b": cum_dir,
+    "cum_capital_c": cum_gap,
+    "cum_capital_d": cum_d,
     # A. 执行准确率（开盘价入场，含跳空）
     "correct": correct_exec,
     "accuracy_rate": acc_exec,
@@ -231,6 +268,11 @@ report["data_quality"] = [
 # 固定路径（dashboard 读取）
 with open("dashboard/daily-report.json", "w", encoding="utf-8") as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
+
+# JS 变量文件（file:// 协议下 fetch 不可用，改为 script 注入）
+with open("dashboard/daily-report.js", "w", encoding="utf-8") as f:
+    f.write("// 每日自检报告 — 自动生成，勿手动修改\n")
+    f.write(f"window.DAILY_REPORT = {json.dumps(report, ensure_ascii=False)};\n")
 
 # 历史存档
 archive_path = os.path.join(REPORT_DIR, f"{today}.json")
