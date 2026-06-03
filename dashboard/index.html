@@ -2339,11 +2339,18 @@ function loadTradingSignals() {
 }
 
 function renderTradingSignals(d) {
+    // 优先使用 daily-report.js 的最新统计
+    const rt = window.DAILY_REPORT && window.DAILY_REPORT.running_totals;
+
     const accBadge = document.getElementById('ts-accuracy-badge');
-    if (accBadge && d.accuracy && d.accuracy.rate !== null && d.accuracy.rate !== undefined) {
-        accBadge.textContent = '准确率 ' + Math.round(d.accuracy.rate * 100) + '%';
-        accBadge.style.background = d.accuracy.rate >= 0.6 ? '#f0fdf4' : '#fef2f2';
-        accBadge.style.color = d.accuracy.rate >= 0.6 ? '#16a34a' : '#dc2626';
+    if (accBadge) {
+        const rate = rt ? rt.accuracy_limit_rate : (d.accuracy && d.accuracy.rate);
+        const pct  = rt ? rt.accuracy_limit_pct  : (rate != null ? Math.round(rate * 100) + '%' : null);
+        if (pct) {
+            accBadge.textContent = 'D方案 ' + pct;
+            accBadge.style.background = (rate || 0) >= 0.6 ? '#f0fdf4' : '#fef2f2';
+            accBadge.style.color      = (rate || 0) >= 0.6 ? '#16a34a' : '#dc2626';
+        }
     }
 
     const content = document.getElementById('ts-content');
@@ -2354,12 +2361,25 @@ function renderTradingSignals(d) {
         return;
     }
 
-    const hist = (d.accuracy && d.accuracy.history) ? d.accuracy.history.slice(-10) : [];
-    const dotsHtml = hist.length ? `
-        <div style="margin-bottom:14px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-            <span style="font-size:9px;color:#999;margin-right:4px">历史准确性（最近${hist.length}次）</span>
-            ${hist.map(h => `<span class="ts-dot ${h === true ? 'correct' : h === false ? 'wrong' : 'pending'}"></span>`).join('')}
-        </div>` : '';
+    // 历史点：从 daily-report signals_history（oldest→newest）
+    const sigHistory = rt && rt.signals_history ? [...rt.signals_history].reverse() : [];
+    const dots = sigHistory.length ? sigHistory : (d.accuracy && d.accuracy.history ? d.accuracy.history.map(h => ({ correct: h })) : []);
+    const dotsHtml = dots.length ? `
+        <div style="margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <span style="font-size:9px;color:#999;margin-right:2px">历史信号（${dots.length}条）</span>
+            ${dots.map(s => {
+                const ok = typeof s === 'boolean' ? s : s.correct;
+                const cls = ok === true ? 'correct' : ok === false ? 'wrong' : 'pending';
+                const tip = typeof s === 'object' ? `${s.date} ${s.ticker} ${s.action}` : '';
+                return `<span class="ts-dot ${cls}" title="${tip}"></span>`;
+            }).join('')}
+        </div>
+        ${rt ? `<div style="margin-bottom:14px;display:flex;gap:12px;flex-wrap:wrap">
+            <span style="font-size:10px;color:#888">A 市价 <b style="color:#6366f1">${rt.accuracy_pct}</b></span>
+            <span style="font-size:10px;color:#888">B 方向 <b style="color:#8b5cf6">${rt.accuracy_direction_pct}</b></span>
+            <span style="font-size:10px;color:#888">D 限价 <b style="color:#10b981">${rt.accuracy_limit_pct}</b>
+                <span style="color:#bbb">(${rt.correct_limit}/${rt.total_limit}笔成交)</span></b></span>
+        </div>` : ''}` : '';
 
     const sigHtml = d.signals.map((s, i) => {
         const summary = s.summary || '';
