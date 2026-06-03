@@ -329,21 +329,33 @@
         .mn-budget-ok.visible { display:flex; align-items:center; gap:8px; font-size:10px; color:#16a34a; }
 
         /* ── Trading Signals ─────────────────────────── */
-        .ts-signal-card { border:1px solid #e8e8e8; border-radius:10px; padding:14px 16px; margin-bottom:10px; background:#f8f8f8; }
-        .ts-action { font-size:11px; font-weight:800; padding:4px 14px; border-radius:10px; flex-shrink:0; letter-spacing:.5px; }
-        .ts-action.buy  { background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0; }
-        .ts-action.sell { background:#fef2f2; color:#dc2626; border:1px solid #fecaca; }
-        .ts-action.hold { background:#fff7ed; color:#ea580c; border:1px solid #fed7aa; }
-        .ts-sector { font-size:9px; padding:2px 8px; border-radius:8px; background:#f0f0f0; color:#666; }
+        .ts-signal-card { border:1px solid #e8e8e8; border-radius:12px; padding:0; margin-bottom:16px; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.06); overflow:hidden; transition:box-shadow 150ms ease; }
+        .ts-signal-card:hover { box-shadow:0 4px 20px rgba(0,0,0,.1); }
+        .ts-card-inner { padding:16px 18px; }
+        .ts-action { font-size:12px; font-weight:800; padding:5px 16px; border-radius:20px; flex-shrink:0; letter-spacing:.8px; text-transform:uppercase; }
+        .ts-action.buy  { background:#dcfce7; color:#15803d; }
+        .ts-action.sell { background:#fee2e2; color:#b91c1c; }
+        .ts-action.hold { background:#f3f4f6; color:#6b7280; }
+        .ts-card-accent { height:4px; width:100%; }
+        .ts-card-accent.buy  { background:linear-gradient(90deg,#16a34a,#4ade80); }
+        .ts-card-accent.sell { background:linear-gradient(90deg,#dc2626,#f87171); }
+        .ts-card-accent.hold { background:linear-gradient(90deg,#9ca3af,#d1d5db); }
+        .ts-sector { font-size:9px; padding:2px 8px; border-radius:6px; background:#f3f4f6; color:#6b7280; font-weight:500; }
+        .ts-ticker { font-size:20px; font-weight:800; color:#111; letter-spacing:-.3px; font-family:'Courier New',Courier,monospace; }
+        .ts-company { font-size:11px; color:#9ca3af; margin-top:1px; }
+        .ts-price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#f0f0f0; border-radius:10px; overflow:hidden; margin:12px 0; }
+        .ts-price-cell { background:#fff; padding:10px 12px; }
+        .ts-price-lbl { font-size:9px; color:#9ca3af; text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px; font-weight:600; }
+        .ts-price-val { font-size:15px; font-weight:700; font-family:'Courier New',Courier,monospace; }
         .ts-dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
         .ts-dot.correct { background:#16a34a; }
         .ts-dot.wrong   { background:#dc2626; }
         .ts-dot.pending { background:#d1d5db; }
-        .ts-summary { font-size:11px; color:#555; line-height:1.7; padding-top:10px; border-top:1px solid #eee; white-space:pre-wrap; word-break:break-word; }
-        .ts-summary-toggle { font-size:10px; color:#999; cursor:pointer; user-select:none; padding-top:4px; display:inline-block; }
-        .ts-summary-toggle:hover { color:#444; }
-        .ts-report-btn { font-size:10px; color:#6366f1; border:1px solid #e0e0ff; background:#f5f5ff; padding:3px 10px; border-radius:8px; cursor:pointer; margin-top:8px; display:inline-block; }
-        .ts-report-btn:hover { background:#eef; }
+        .ts-summary { font-size:11px; color:#555; line-height:1.75; padding-top:10px; border-top:1px solid #f0f0f0; white-space:pre-wrap; word-break:break-word; }
+        .ts-summary-toggle { font-size:10px; color:#6366f1; cursor:pointer; user-select:none; padding-top:5px; display:inline-block; font-weight:500; }
+        .ts-summary-toggle:hover { color:#4338ca; }
+        .ts-report-btn { font-size:10px; color:#6366f1; border:1px solid #e0e0ff; background:#f5f5ff; padding:4px 12px; border-radius:8px; cursor:pointer; display:inline-flex; align-items:center; gap:4px; transition:background 150ms; }
+        .ts-report-btn:hover { background:#ede9fe; }
         /* Report modal */
         .ts-modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:1000; overflow-y:auto; padding:24px 16px; }
         .ts-modal-overlay.open { display:flex; align-items:flex-start; justify-content:center; }
@@ -2381,44 +2393,69 @@ function renderTradingSignals(d) {
                 <span style="color:#bbb">(${rt.correct_limit}/${rt.total_limit}笔成交)</span></b></span>
         </div>` : ''}` : '';
 
+    // Exchange prefix lookup (default NASDAQ)
+    const NYSE_TICKERS = new Set(['WTTR','ALGT','XOM','JPM','BAC','WMT','GE','F','GM','T','VZ','PFE','MRK','JNJ','CVX','COP','SLB','PSX','OXY','HAL']);
+    const tvSymbol = ticker => (NYSE_TICKERS.has(ticker) ? 'NYSE:' : 'NASDAQ:') + ticker;
+
     const sigHtml = d.signals.map((s, i) => {
         const summary = s.summary || '';
-        const SHORT = 120;
+        const SHORT = 160;
         const needsToggle = summary.length > SHORT;
         const shortText = needsToggle ? summary.slice(0, SHORT) + '…' : summary;
         const idBase = `ts-sum-${i}`;
+        const action = (s.action || 'HOLD').toLowerCase();
+        const targetPct = s.target_price && s.current_price ? ((s.target_price - s.current_price) / s.current_price * 100).toFixed(1) : '10.0';
+        const stopPct   = s.stop_loss   && s.current_price ? ((s.stop_loss   - s.current_price) / s.current_price * 100).toFixed(1) : '-5.0';
         return `
         <div class="ts-signal-card">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-                <div style="flex:1;min-width:0">
-                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-                        <span style="font-size:16px;font-weight:800;color:#111">${s.ticker}</span>
-                        <span style="font-size:11px;color:#666">${s.name || ''}</span>
-                        ${s.sector ? `<span class="ts-sector">${s.sector}</span>` : ''}
+            <div class="ts-card-accent ${action}"></div>
+            <div class="ts-card-inner">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
+                    <div>
+                        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px">
+                            <span class="ts-ticker">${s.ticker}</span>
+                            <span class="ts-action ${action}">${s.action || 'HOLD'}</span>
+                            ${s.sector ? `<span class="ts-sector">${s.sector}</span>` : ''}
+                        </div>
+                        <div class="ts-company">${s.name || ''}</div>
+                    </div>
+                    <div style="text-align:right;font-size:9px;color:#bbb">${d.date || ''}</div>
+                </div>
+                <div class="ts-price-grid">
+                    <div class="ts-price-cell">
+                        <div class="ts-price-lbl">信号价</div>
+                        <div class="ts-price-val" style="color:#111">$${s.current_price != null ? s.current_price.toFixed(2) : '—'}</div>
+                    </div>
+                    <div class="ts-price-cell">
+                        <div class="ts-price-lbl">目标 +${targetPct}%</div>
+                        <div class="ts-price-val" style="color:#15803d">$${s.target_price != null ? s.target_price.toFixed(2) : '—'}</div>
+                    </div>
+                    <div class="ts-price-cell">
+                        <div class="ts-price-lbl">止损 ${stopPct}%</div>
+                        <div class="ts-price-val" style="color:#b91c1c">$${s.stop_loss != null ? s.stop_loss.toFixed(2) : '—'}</div>
                     </div>
                 </div>
-                <span class="ts-action ${(s.action || 'hold').toLowerCase()}" style="margin-left:10px">${s.action || 'HOLD'}</span>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">
-                <div><div class="mn-num-lbl">入场价</div><div class="mn-num-val">$${s.current_price != null ? s.current_price.toFixed(2) : '—'}</div></div>
-                <div><div class="mn-num-lbl">目标价 +10%</div><div class="mn-num-val" style="color:#16a34a">$${s.target_price != null ? s.target_price.toFixed(2) : '—'}</div></div>
-                <div><div class="mn-num-lbl">止损价 −5%</div><div class="mn-num-val" style="color:#dc2626">$${s.stop_loss != null ? s.stop_loss.toFixed(2) : '—'}</div></div>
-            </div>
-            <div class="tradingview-widget-container" data-symbol="NASDAQ:${s.ticker}" style="height:300px;margin:8px 0 12px">
+            <div class="tradingview-widget-container" data-symbol="${tvSymbol(s.ticker)}" style="height:400px">
                 <div class="tradingview-widget-container__widget" style="height:100%"></div>
             </div>
-            ${summary ? `
-            <div class="ts-summary">
-                <span id="${idBase}-short">${shortText}</span>
-                <span id="${idBase}-full" style="display:none">${summary}</span>
+            <div class="ts-card-inner" style="padding-top:12px">
+                ${summary ? `
+                <div class="ts-summary">
+                    <span id="${idBase}-short">${shortText}</span>
+                    <span id="${idBase}-full" style="display:none">${summary}</span>
+                </div>
+                ${needsToggle ? `<span class="ts-summary-toggle" onclick="
+                    var sh=document.getElementById('${idBase}-short'),fl=document.getElementById('${idBase}-full'),t=this;
+                    if(fl.style.display==='none'){sh.style.display='none';fl.style.display='';t.textContent='收起 ▲';}
+                    else{sh.style.display='';fl.style.display='none';t.textContent='展开全文 ▼';}
+                ">展开全文 ▼</span>` : ''}
+                ` : ''}
+                ${(s.report || s.report_file) ? `<div style="margin-top:10px"><span class="ts-report-btn" onclick="openTsReport(${i},'${s.ticker}','${s.action}')">
+                    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    查看完整分析报告
+                </span></div>` : ''}
             </div>
-            ${needsToggle ? `<span class="ts-summary-toggle" onclick="
-                var s=document.getElementById('${idBase}-short'),f=document.getElementById('${idBase}-full'),t=this;
-                if(f.style.display==='none'){s.style.display='none';f.style.display='';t.textContent='收起 ▲';}
-                else{s.style.display='';f.style.display='none';t.textContent='展开全文 ▼';}
-            ">展开全文 ▼</span>` : ''}
-            ` : ''}
-            ${(s.report || s.report_file) ? `<div style="margin-top:8px"><span class="ts-report-btn" onclick="openTsReport(${i},'${s.ticker}','${s.action}')">📋 查看完整报告</span></div>` : ''}
         </div>`;
     }).join('');
 
@@ -2438,15 +2475,16 @@ function renderTradingSignals(d) {
             symbol: symbol,
             interval: 'D',
             timezone: 'Asia/Shanghai',
-            theme: 'light',
+            theme: 'dark',
             style: '1',
             locale: 'zh_CN',
             allow_symbol_change: false,
-            hide_side_toolbar: true,
+            hide_side_toolbar: false,
             hide_top_toolbar: false,
             save_image: false,
             calendar: false,
             hide_volume: false,
+            support_host: 'https://www.tradingview.com',
             autosize: true
         });
         container.appendChild(script);
