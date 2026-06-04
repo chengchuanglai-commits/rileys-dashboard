@@ -3538,9 +3538,15 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTsModal
 
 // ── Dashboard Navigation ──
 
+let _sbScrolling = false;
+let _sbScrollTimer = null;
+
 function sbNav(el) {
   document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
   el.classList.add('active');
+  _sbScrolling = true;
+  clearTimeout(_sbScrollTimer);
+  _sbScrollTimer = setTimeout(() => { _sbScrolling = false; }, 1000);
   const target = document.getElementById(el.dataset.target);
   if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -3559,6 +3565,7 @@ function switchMainTab(el) {
   if (window.innerWidth <= 480) return;
   const items = document.querySelectorAll('.sb-item[data-target]');
   const observer = new IntersectionObserver(entries => {
+    if (_sbScrolling) return;
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.id;
