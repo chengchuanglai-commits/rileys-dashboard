@@ -688,8 +688,8 @@
         </div>
     </div>
 
-    <!-- ── Row 1: Accounts · Tasks · Workout ── -->
-    <div class="row col-2">
+    <!-- ── 账户总览 (invest) ── -->
+    <div class="row col-1" id="sec-accounts">
 
         <div class="card acct-card">
             <div class="card-hd">
@@ -752,7 +752,10 @@
                 <div class="acct-val total" id="total-val">$0</div>
             </div>
         </div>
+    </div><!-- /#sec-accounts -->
 
+    <!-- ── 健康中心 & 运动 (life) ── -->
+    <div class="row col-1" id="sec-health">
         <div class="card">
             <div class="card-hd">
                 <span class="card-title">❤ 健康中心</span>
@@ -764,7 +767,7 @@
             </div>
             <hr class="health-divider">
             <!-- Workout plan -->
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <div id="sec-workout" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
                 <span style="font-size:9px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.1em">本周训练</span>
                 <span id="wo-stat" style="font-size:11px;color:#aaa">0/4</span>
             </div>
@@ -772,8 +775,7 @@
             <div style="font-size:9px;color:#aaa;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">本周完成</div>
             <div class="wo-week" id="wo-dots"></div>
         </div>
-
-    </div>
+    </div><!-- /#sec-health -->
 
     <!-- ── Calendar / Schedule ── -->
     <div class="row col-1">
@@ -793,8 +795,8 @@
         </div>
     </div>
 
-    <!-- ── History ── -->
-    <div class="row col-2">
+    <!-- ── 日程归档 (life) ── -->
+    <div class="row col-1" id="sec-archive">
 
         <!-- 日程归档 -->
         <div class="card">
@@ -804,7 +806,10 @@
             </div>
             <div id="arch-list" style="max-height:240px;overflow-y:auto"></div>
         </div>
+    </div><!-- /#sec-archive -->
 
+    <!-- ── 资产历史 (invest) ── -->
+    <div class="row col-1" id="sec-asset-history">
         <!-- 资产快照 -->
         <div class="card">
             <div class="card-hd">
@@ -813,8 +818,7 @@
             </div>
             <div id="snap-list" style="max-height:240px;overflow-y:auto"></div>
         </div>
-
-    </div>
+    </div><!-- /#sec-asset-history -->
 
     <!-- ── Row 2: Project ── -->
     <div class="row col-1">
@@ -1221,8 +1225,8 @@
         </div>
     </div>
 
-    <!-- ── Row 4: Chart + Financial News ── -->
-    <div class="row col-2">
+    <!-- ── 指数走势 (invest) ── -->
+    <div class="row col-1" id="sec-chart">
 
         <div class="card" style="padding:0;overflow:hidden">
             <div style="padding:16px 22px 0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#111">📊 指数 & ETF 走势</div>
@@ -1233,7 +1237,10 @@
                 </script>
             </div>
         </div>
+    </div><!-- /#sec-chart -->
 
+    <!-- ── 财经资讯 (news) ── -->
+    <div class="row col-1" id="sec-news">
         <div class="card news-card">
             <div class="news-card-inner">
                 <div class="card-hd" style="margin-bottom:10px">
@@ -1254,8 +1261,7 @@
                 <div class="last-upd" id="fin-upd"></div>
             </div>
         </div>
-
-    </div>
+    </div><!-- /#sec-news -->
 
     <!-- ── Row 5: AI News + Fashion News ── -->
     <div class="row col-2">
