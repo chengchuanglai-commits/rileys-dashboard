@@ -67,3 +67,39 @@ jobs:
             echo "Push failed, retry $i/5 in 10s..."
             sleep 10
           done
+
+      - name: Notify failure via WhatsApp
+        if: failure()
+        env:
+          SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+          WORKFLOW_NAME: ${{ github.workflow }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 - <<'EOF'
+          import urllib.request, json, os
+          from datetime import datetime, timezone
+
+          url = os.environ['SYNC_URL']
+          workflow = os.environ['WORKFLOW_NAME']
+          run_id = os.environ.get('GITHUB_RUN_ID', '')
+
+          try:
+              with urllib.request.urlopen(url, timeout=10) as r:
+                  current = json.loads(r.read())
+          except Exception:
+              current = {}
+
+          notifications = current.get('pending_notifications', [])
+          notifications.append({
+              'workflow': workflow,
+              'run_id': run_id,
+              'time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'status': 'FAILED'
+          })
+          current['pending_notifications'] = notifications
+
+          data = json.dumps(current).encode('utf-8')
+          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
+          urllib.request.urlopen(req, timeout=10)
+          print(f'[Notify] Failure notification queued for: {workflow}')
+          EOF

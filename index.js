@@ -79,6 +79,7 @@ function initClient(c) {
         console.log(`✅ WhatsApp 已连接！(${myWid})`);
         scheduleMonthlyCheck();
         scheduleDailyBalanceReminder(c);
+        scheduleNotificationPoll(c);
         // 重连后检查余额是否过期
         await checkBalanceOnReconnect(c);
     });
@@ -364,6 +365,42 @@ function scheduleDailyBalanceReminder(c) {
         console.log(`下次余额提醒：${next.toLocaleString()}`);
     };
     scheduleNext();
+}
+
+// GitHub Actions 失败通知：轮询 KV 中的 pending_notifications
+async function pollGitHubNotifications(c) {
+    try {
+        const res = await fetch(SYNC_URL);
+        const data = await res.json().catch(() => null);
+        if (!data || !Array.isArray(data.pending_notifications) || data.pending_notifications.length === 0) return;
+
+        const notifications = data.pending_notifications;
+        data.pending_notifications = [];
+        await fetch(SYNC_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const chat = await c.getChatById(selfChatId).catch(() => null);
+        if (!chat) return;
+
+        for (const n of notifications) {
+            const workflow = n.workflow || 'Unknown workflow';
+            const time = n.time || '';
+            const runId = n.run_id || '';
+            const msg = `🚨 *GitHub Actions 失败警报*\n\n工作流：${workflow}\n时间：${time} UTC${runId ? `\n运行ID：${runId}` : ''}\n\n请到 GitHub Actions 查看日志。`;
+            await chat.sendMessage(msg);
+            console.log(`[通知] 已发送失败警报：${workflow}`);
+        }
+    } catch (e) {
+        console.error('[通知轮询] 失败：', e.message);
+    }
+}
+
+function scheduleNotificationPoll(c) {
+    pollGitHubNotifications(c);
+    setInterval(() => pollGitHubNotifications(c), 5 * 60 * 1000);
 }
 
 function scheduleMonthlyCheck() {
