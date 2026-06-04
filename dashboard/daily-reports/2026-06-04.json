@@ -1,6 +1,6 @@
 {
   "date": "2026-06-04",
-  "generated_at": "2026-06-04T08:26:00",
+  "generated_at": "2026-06-04T08:37:00",
   "pipeline": {
     "morning_note_found": false,
     "signal_file_found": true,
@@ -20,7 +20,7 @@
     {
       "check": "昨日准确率填充",
       "pass": true,
-      "detail": "0 条已验证"
+      "detail": "2 条已验证"
     },
     {
       "check": "无警告",
@@ -46,13 +46,68 @@
   ],
   "accuracy_update": {
     "date": "2026-06-03",
-    "total": 0,
-    "note": "无历史信号文件"
+    "total": 2,
+    "verified": 2,
+    "pending": 0,
+    "results": [
+      {
+        "ticker": "AMBA",
+        "action": "HOLD",
+        "entry": 78.38,
+        "open": 78.23,
+        "actual": 73.8,
+        "pct": -5.66,
+        "pct_from_signal": -5.84,
+        "correct": false,
+        "correct_direction": false
+      },
+      {
+        "ticker": "KLIC",
+        "action": "BUY",
+        "entry": 108.36,
+        "open": 109.08,
+        "actual": 108.4,
+        "pct": -0.62,
+        "pct_from_signal": 0.04,
+        "correct": false,
+        "correct_direction": true
+      }
+    ]
   },
   "running_totals": {
-    "total_signals_verified": 8,
-    "total_signals_active": 6,
+    "total_signals_verified": 10,
+    "total_signals_active": 7,
     "signals_history": [
+      {
+        "date": "2026-06-03",
+        "ticker": "KLIC",
+        "name": "Kulicke and Soffa Industries Inc.",
+        "action": "BUY",
+        "signal_price": 108.36,
+        "open_price": 109.08,
+        "close_price": 108.4,
+        "pct_change": -0.62,
+        "pct_from_signal": 0.04,
+        "correct": false,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-03",
+        "ticker": "AMBA",
+        "name": "Ambarella Inc.",
+        "action": "HOLD",
+        "signal_price": 78.38,
+        "open_price": 78.23,
+        "close_price": 73.8,
+        "pct_change": -5.66,
+        "pct_from_signal": -5.84,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": false,
+        "gap_filtered": false
+      },
       {
         "date": "2026-06-02",
         "ticker": "MU",
@@ -178,86 +233,95 @@
       "2026-05-27",
       "2026-05-28",
       "2026-06-01",
-      "2026-06-02"
+      "2026-06-02",
+      "2026-06-03"
     ],
     "cum_capital_a": [
       1000.0,
       1025.9,
       1040.06,
       1017.49,
-      1031.43
+      1031.43,
+      1025.03
     ],
     "cum_capital_b": [
       1000.0,
       1025.9,
       1040.06,
       1046.61,
-      1074.45
+      1074.45,
+      1074.88
     ],
     "cum_capital_c": [
       1000.0,
       1025.9,
       1040.06,
       1040.06,
-      1040.06
+      1040.06,
+      1033.61
     ],
     "cum_capital_d": [
       1000.0,
       1026.0,
       1040.16,
       1046.71,
-      1074.55
+      1074.55,
+      1074.98
     ],
     "correct": 6,
-    "accuracy_rate": 0.75,
-    "accuracy_pct": "75.0%",
-    "simulated_capital": 1031.43,
-    "simulated_pnl_usd": 31.43,
-    "simulated_pnl_pct": "+3.14%",
+    "accuracy_rate": 0.6,
+    "accuracy_pct": "60.0%",
+    "simulated_capital": 1025.03,
+    "simulated_pnl_usd": 25.03,
+    "simulated_pnl_pct": "+2.50%",
     "daily_returns": [
       2.59,
       1.38,
       -2.17,
-      1.37
+      1.37,
+      -0.62
     ],
-    "correct_direction": 7,
-    "accuracy_direction_rate": 0.875,
-    "accuracy_direction_pct": "87.5%",
-    "simulated_capital_direction": 1074.45,
-    "simulated_pnl_direction_usd": 74.45,
-    "simulated_pnl_direction_pct": "+7.44%",
+    "correct_direction": 8,
+    "accuracy_direction_rate": 0.8,
+    "accuracy_direction_pct": "80.0%",
+    "simulated_capital_direction": 1074.88,
+    "simulated_pnl_direction_usd": 74.88,
+    "simulated_pnl_direction_pct": "+7.49%",
     "daily_returns_direction": [
       2.59,
       1.38,
       0.63,
-      2.66
+      2.66,
+      0.04
     ],
-    "total_gap_filtered": 4,
+    "total_gap_filtered": 5,
     "correct_gap": 3,
-    "accuracy_gap_rate": 0.75,
-    "accuracy_gap_pct": "75.0%",
-    "simulated_capital_gap": 1040.06,
-    "simulated_pnl_gap_usd": 40.06,
-    "simulated_pnl_gap_pct": "+4.01%",
+    "accuracy_gap_rate": 0.6,
+    "accuracy_gap_pct": "60.0%",
+    "simulated_capital_gap": 1033.61,
+    "simulated_pnl_gap_usd": 33.61,
+    "simulated_pnl_gap_pct": "+3.36%",
     "daily_returns_gap": [
       2.59,
       1.38,
       0.0,
-      0.0
+      0.0,
+      -0.62
     ],
-    "gap_cost_usd": 43.02,
-    "total_limit": 5,
-    "correct_limit": 4,
-    "accuracy_limit_rate": 0.8,
-    "accuracy_limit_pct": "80.0%",
-    "simulated_capital_limit": 1074.55,
-    "simulated_pnl_limit_usd": 74.55,
-    "simulated_pnl_limit_pct": "+7.46%",
+    "gap_cost_usd": 49.85,
+    "total_limit": 6,
+    "correct_limit": 5,
+    "accuracy_limit_rate": 0.833,
+    "accuracy_limit_pct": "83.3%",
+    "simulated_capital_limit": 1074.98,
+    "simulated_pnl_limit_usd": 74.98,
+    "simulated_pnl_limit_pct": "+7.50%",
     "daily_returns_limit": [
       2.6,
       1.38,
       0.63,
-      2.66
+      2.66,
+      0.04
     ]
   },
   "warnings": [
