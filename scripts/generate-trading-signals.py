@@ -7,9 +7,18 @@ from datetime import datetime, timezone, timedelta
 
 beijing_tz = timezone(timedelta(hours=8))
 now_beijing = datetime.now(beijing_tz)
-today = now_beijing.strftime('%Y-%m-%d')
-yesterday = (now_beijing - timedelta(days=1)).strftime('%Y-%m-%d')
-generated_at = now_beijing.strftime('%Y-%m-%dT%H:%M:00')
+
+# BACKFILL_DATE 允许手动指定日期（GitHub Actions workflow_dispatch 传入）
+_backfill = os.environ.get('BACKFILL_DATE', '').strip()
+if _backfill:
+    today = _backfill
+    yesterday = (datetime.strptime(_backfill, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
+    generated_at = f"{_backfill}T20:30:00"
+    print(f"[backfill] 回填模式，目标日期: {today}")
+else:
+    today = now_beijing.strftime('%Y-%m-%d')
+    yesterday = (now_beijing - timedelta(days=1)).strftime('%Y-%m-%d')
+    generated_at = now_beijing.strftime('%Y-%m-%dT%H:%M:00')
 
 HISTORY_DIR = "dashboard/trading-signals-history"
 os.makedirs(HISTORY_DIR, exist_ok=True)
@@ -179,6 +188,32 @@ def get_day_ohlc(ticker):
         return None, None, None, None
 
 
+def get_ohlc_for_date(ticker, target_date):
+    """Fetch OHLC for a specific past trading date (for backfill verification)."""
+    try:
+        hist = yf.Ticker(ticker).history(period="10d")
+        for idx in hist.index:
+            if idx.strftime('%Y-%m-%d') == target_date:
+                row = hist.loc[idx]
+                o = round(float(row['Open']), 2)
+                h = round(float(row['High']), 2)
+                l = round(float(row['Low']), 2)
+                c = round(float(row['Close']), 2)
+                print(f"[backfill price] {ticker} on {target_date}: O=${o} H=${h} L=${l} C=${c}")
+                return o, h, l, c
+        print(f"[warn] {ticker}: no data found for {target_date}")
+        return None, None, None, None
+    except Exception as e:
+        print(f"[warn] get_ohlc_for_date failed for {ticker} on {target_date}: {e}")
+        return None, None, None, None
+
+
+def get_close_for_date(ticker, target_date):
+    """Get closing price for a specific past trading date (for backfill signal price)."""
+    _, _, _, c = get_ohlc_for_date(ticker, target_date)
+    return c
+
+
 def get_price(ticker):
     """Get latest close price."""
     _, _, _, c = get_day_ohlc(ticker)
@@ -327,7 +362,8 @@ else:
                 # parse action BEFORE translating — translated Chinese text breaks keyword matching
                 action = parse_action(decision or report.get("final", ""))
                 report = translate_report_to_chinese(report, ticker)
-                price = get_price(ticker)
+                # 回填模式：信号价 = 回填日期前一天的收盘价（正常交易前的信号基准）
+                price = get_close_for_date(ticker, yesterday) if _backfill else get_price(ticker)
                 target = round(price * 1.10, 2) if price else None
                 stop = round(price * 0.95, 2) if price else None
                 summary = summarize(report)
@@ -357,7 +393,7 @@ else:
                 else:
                     print(f"[error] TradingAgents failed for {ticker}: {e}")
                     break
-        price = get_price(ticker)
+        price = get_close_for_date(ticker, yesterday) if _backfill else get_price(ticker)
         return {
             "ticker": ticker,
             "name": pick.get('name', ''),
@@ -397,6 +433,68 @@ with open(archive_path, "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
 print(f"✅ Trading signals generated for {today}: {[s['ticker'] for s in data['signals']]}")
+
+# 回填模式：当天市场已收盘，立即填入实际 OHLC（不等次日运行）
+if _backfill and data['signals']:
+    print(f"[backfill] 立即验证 {today} 的信号（该日市场已收盘）...")
+    archive_path_bf = os.path.join(HISTORY_DIR, f"{today}.json")
+    with open(archive_path_bf) as f:
+        bf_data = json.load(f)
+    updated = False
+    for sig in bf_data.get('signals', []):
+        if 'correct' in sig:
+            continue
+        ticker = sig.get('ticker')
+        action = sig.get('action')
+        entry  = sig.get('current_price')
+        if not ticker or not action or not entry:
+            continue
+        open_px, day_high, day_low, current = get_ohlc_for_date(ticker, today)
+        if current is None:
+            print(f"[warn] 无法获取 {ticker} 在 {today} 的数据，跳过验证")
+            continue
+        real_entry = open_px if open_px else entry
+        pct = (current - real_entry) / real_entry * 100
+        pct_signal = (current - entry) / entry * 100
+        sig['actual_price'] = current
+        sig['open_price']   = open_px
+        sig['day_high']     = day_high
+        sig['day_low']      = day_low
+        sig['pct_change']          = round(pct, 2)
+        sig['pct_from_prev_close'] = round(pct_signal, 2)
+        if action == 'BUY':
+            sig['correct']           = pct > 0
+            sig['correct_direction'] = pct_signal > 0
+            gap_pct = (open_px - entry) / entry if open_px else 0
+            sig['gap_filtered']      = gap_pct > 0.01
+            sig['limit_filled']      = bool(day_low and day_low <= entry)
+        elif action == 'SELL':
+            sig['correct']           = pct < 0
+            sig['correct_direction'] = pct_signal < 0
+            gap_pct = (open_px - entry) / entry if open_px else 0
+            sig['gap_filtered']      = gap_pct < -0.01
+            sig['limit_filled']      = bool(day_high and day_high >= entry)
+        else:
+            sig['correct']           = abs(pct) < 2
+            sig['correct_direction'] = abs(pct_signal) < 2
+            sig['gap_filtered']      = False
+            sig['limit_filled']      = False
+        sig['gap_pct'] = round((open_px - entry) / entry * 100, 2) if open_px else None
+        lim_tag = ' [限价✓]' if sig['limit_filled'] else ' [限价✗]'
+        print(f"[backfill verify] {ticker} {action}: 信号${entry} 开${open_px} 收${current} ({pct:+.2f}%){lim_tag} → {'✓' if sig['correct'] else '✗'}")
+        updated = True
+    if updated:
+        with open(archive_path_bf, 'w') as f:
+            json.dump(bf_data, f, ensure_ascii=False, indent=2)
+        # 同步更新 trading-signals.js 和主 data 对象
+        data = bf_data
+        js_content = (
+            "// TradingAgents 信号数据 — 每日 20:30 自动更新\n"
+            f"window.TRADING_SIGNALS = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
+        )
+        with open("dashboard/trading-signals.js", "w", encoding="utf-8") as f:
+            f.write(js_content)
+        print(f"[backfill] 验证完成，已写回 {archive_path_bf}")
 
 # Sync to Cloudflare KV so all devices get fresh data without redeployment
 import urllib.request, urllib.error
