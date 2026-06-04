@@ -68,17 +68,21 @@ def select_stocks():
         data = json.load(f)
     picks = data.get('stock_picks', [])
     sp500 = data.get('market', {}).get('sp500_futures_pct', 0)
-    buy_picks = [p for p in picks
-                 if p.get('direction') == 'buy'
-                 and p.get('ticker', '').upper() not in BLACKLIST]
+    # Include both buy and sell direction candidates — TradingAgents decides final direction
+    all_picks = [p for p in picks if p.get('ticker', '').upper() not in BLACKLIST]
     if sp500 >= 0:
         preferred = ['科技', '半导体', '消费可选', '能源']
     else:
         preferred = ['医疗', '消费必需', '生物科技', '固收']
-    buy_picks.sort(key=lambda p: 1 if any(s in p.get('sector', '') for s in preferred) else 0, reverse=True)
-    selected = buy_picks[:2]
-    print(f"[select] Selected {[p['ticker'] for p in selected]} from {len(buy_picks)} buy picks (S&P {sp500:+.2f}%)")
-    return selected
+    # Prioritize buy-direction stocks in preferred sectors, then sell-direction, as fallback pool
+    all_picks.sort(key=lambda p: (
+        2 if p.get('direction') == 'buy' and any(s in p.get('sector', '') for s in preferred) else
+        1 if p.get('direction') == 'buy' else 0
+    ), reverse=True)
+    # Return up to 5 candidates — main loop stops when 2 BUY/SELL signals are found
+    candidates = all_picks[:5]
+    print(f"[select] Candidate pool: {[p['ticker'] for p in candidates]} (S&P {sp500:+.2f}%)")
+    return candidates
 
 
 def run_tradingagents(ticker):
@@ -431,8 +435,22 @@ else:
         }
 
     signals = []
+    hold_fallbacks = []
     for pick in selected_picks:
-        signals.append(analyze_pick(pick))
+        sig = analyze_pick(pick)
+        if sig['action'] != 'HOLD':
+            signals.append(sig)
+            print(f"[accept] {pick['ticker']}: {sig['action']} — added ({len(signals)}/2)")
+        else:
+            hold_fallbacks.append(sig)
+            print(f"[skip-hold] {pick['ticker']}: HOLD — trying next candidate")
+        if len(signals) >= 2:
+            break
+    # Fill up to 2 with HOLDs only if we ran out of directional signals
+    if len(signals) < 2:
+        needed = 2 - len(signals)
+        signals.extend(hold_fallbacks[:needed])
+        print(f"[warn] Only {len(signals) - needed} directional signals found, padded with {needed} HOLD(s)")
 
     # claude-haiku-4-5 pricing: $0.80/MTok in, $4.00/MTok out
     api_cost = round(_total_input_tokens * 0.8 / 1_000_000 + _total_output_tokens * 4.0 / 1_000_000, 4)
@@ -489,6 +507,60 @@ if _backfill and data['signals']:
         with open("dashboard/trading-signals.js", "w", encoding="utf-8") as f:
             f.write(js_content)
         print(f"[backfill] 验证完成，已写回 {archive_path_bf}")
+
+
+# ── Plan B 模拟盘：开仓登记 ──────────────────────────────────────
+def update_portfolio_b(new_signals, signal_date):
+    portfolio_path = "data/portfolio_b.json"
+    os.makedirs("data", exist_ok=True)
+    if os.path.exists(portfolio_path):
+        with open(portfolio_path) as f:
+            portfolio = json.load(f)
+    else:
+        portfolio = {"capital_usd": 1000, "open_positions": [], "closed_positions": []}
+
+    open_tickers = {p["ticker"] for p in portfolio["open_positions"]}
+    for sig in new_signals:
+        action = sig.get("action")
+        ticker = sig.get("ticker")
+        if action not in ("BUY", "SELL") or not ticker:
+            continue
+        if ticker in open_tickers:
+            print(f"[portfolio-b] {ticker} already open, skip")
+            continue
+        entry_price = sig.get("current_price")
+        if not entry_price:
+            continue
+        # Take profit +8%, stop loss -4% (from entry, direction-adjusted)
+        take_profit = round(entry_price * (1.08 if action == "BUY" else 0.92), 2)
+        stop_loss   = round(entry_price * (0.96 if action == "BUY" else 1.04), 2)
+        # Max hold = 5 trading days from signal date
+        sig_dt = datetime.strptime(signal_date, "%Y-%m-%d")
+        trading_days = 0
+        max_dt = sig_dt
+        while trading_days < 5:
+            max_dt += timedelta(days=1)
+            if max_dt.weekday() < 5:
+                trading_days += 1
+        position = {
+            "ticker": ticker,
+            "name": sig.get("name", ""),
+            "action": action,
+            "signal_date": signal_date,
+            "entry_price": entry_price,
+            "allocated_usd": 500,
+            "take_profit": take_profit,
+            "stop_loss": stop_loss,
+            "max_hold_date": max_dt.strftime("%Y-%m-%d"),
+            "daily_prices": {},
+        }
+        portfolio["open_positions"].append(position)
+        print(f"[portfolio-b] Opened {action} {ticker} @ ${entry_price} | TP ${take_profit} | SL ${stop_loss} | max {max_dt.strftime('%Y-%m-%d')}")
+
+    with open(portfolio_path, "w") as f:
+        json.dump(portfolio, f, ensure_ascii=False, indent=2)
+
+update_portfolio_b(data.get("signals", []), today)
 
 # Sync to Cloudflare KV so all devices get fresh data without redeployment
 import urllib.request, urllib.error

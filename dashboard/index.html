@@ -371,6 +371,22 @@
         .ts-report-section h3 { font-size:11px; font-weight:700; color:#666; text-transform:uppercase; letter-spacing:.5px; margin:0 0 6px; padding-bottom:4px; border-bottom:1px solid #f0f0f0; }
         .ts-report-body { font-size:12px; color:#333; line-height:1.8; white-space:pre-wrap; word-break:break-word; }
 
+        /* ── Plan B portfolio ────────────────────── */
+        .pb-stat { background:#f8f9fa; border-radius:10px; padding:10px 12px; text-align:center; }
+        .pb-stat-lbl { font-size:9px; color:#9ca3af; text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px; font-weight:600; }
+        .pb-stat-val { font-size:15px; font-weight:700; font-family:'Courier New',monospace; color:#111; }
+        .pb-pos-row { display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid #f0f0f0; }
+        .pb-pos-row:last-child { border-bottom:none; }
+        .pb-badge { font-size:10px; font-weight:700; padding:3px 10px; border-radius:8px; flex-shrink:0; }
+        .pb-badge.buy  { background:#dcfce7; color:#15803d; }
+        .pb-badge.sell { background:#fee2e2; color:#b91c1c; }
+        .pb-ticker { font-size:14px; font-weight:800; font-family:'Courier New',monospace; min-width:52px; }
+        .pb-meta { font-size:10px; color:#9ca3af; flex:1; }
+        .pb-pnl { font-size:13px; font-weight:700; min-width:64px; text-align:right; }
+        .pb-pnl.pos { color:#16a34a; }
+        .pb-pnl.neg { color:#dc2626; }
+        .pb-section-lbl { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:#bbb; margin-bottom:6px; }
+
         /* ── Responsive ──────────────────────────── */
         @media (max-width:1100px) { .col-3 { grid-template-columns:1fr 1fr; } }
         @media (max-width:700px)  { .col-3,.col-2 { grid-template-columns:1fr; } }
@@ -540,6 +556,7 @@
       document.write('<scr'+'ipt src="morning-note.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="trading-signals.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="daily-report.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-b.js?v='+d+'"><\/scr'+'ipt>');
     })();
     </script>
 </head>
@@ -1002,6 +1019,22 @@
                 <span style="font-size:9px;color:#bbb">方案D：限价单入场</span>
             </div>
             <div id="sig-history-table" style="overflow-x:auto"></div>
+        </div>
+    </div>
+
+    <!-- ── Row 2.95: Plan B 模拟盘 ── -->
+    <div class="row col-1" style="margin-bottom:16px">
+        <div class="card" id="portfolio-b-card">
+            <div class="card-hd">
+                <span class="card-title">💼 Plan B 模拟盘（信号价入场）</span>
+                <span id="pb-portfolio-value" style="font-size:13px;font-weight:700;font-family:'Courier New',monospace;color:#111"></span>
+            </div>
+            <!-- Summary row -->
+            <div id="pb-summary" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px"></div>
+            <!-- Open positions -->
+            <div id="pb-open" style="margin-bottom:12px"></div>
+            <!-- Closed positions (last 5) -->
+            <div id="pb-closed"></div>
         </div>
     </div>
 
@@ -2331,6 +2364,7 @@ async function refreshNews(section) {
     loadTradingSignals();
     loadSimCurve();
     loadSigHistory();
+    renderPortfolioB();
     await Promise.all([
         loadSection('fin'),
         loadSection('ai'),
@@ -2339,6 +2373,89 @@ async function refreshNews(section) {
 })();
 
 // ── Trading Signals ───────────────────────────────────
+function renderPortfolioB() {
+    const pb = window.PORTFOLIO_B;
+    const card = document.getElementById('portfolio-b-card');
+    if (!card) return;
+    if (!pb) {
+        card.style.display = 'none';
+        return;
+    }
+    card.style.display = '';
+    const s = pb.stats || {};
+    const startCapital = pb.capital_usd || 1000;
+    const value = s.portfolio_value || startCapital;
+    const pnlUsd = value - startCapital;
+    const pnlPct = (pnlUsd / startCapital * 100);
+
+    // Header value
+    const valEl = document.getElementById('pb-portfolio-value');
+    if (valEl) {
+        const sign = pnlUsd >= 0 ? '+' : '';
+        valEl.textContent = `$${value.toFixed(2)}`;
+        valEl.style.color = pnlUsd >= 0 ? '#16a34a' : '#dc2626';
+    }
+
+    // Summary stats
+    const summaryEl = document.getElementById('pb-summary');
+    if (summaryEl) {
+        const stats = [
+            { lbl: '起始本金', val: `$${startCapital}` },
+            { lbl: '总盈亏', val: `${pnlUsd >= 0 ? '+' : ''}$${pnlUsd.toFixed(2)} (${pnlPct >= 0 ? '+' : ''}${pnlPct.toFixed(1)}%)`, color: pnlUsd >= 0 ? '#16a34a' : '#dc2626' },
+            { lbl: '已平仓', val: `${s.total_trades || 0} 笔 | 胜率 ${s.win_rate || 0}%` },
+            { lbl: '当前持仓', val: `${(pb.open_positions || []).length} 只` },
+        ];
+        summaryEl.innerHTML = stats.map(st =>
+            `<div class="pb-stat"><div class="pb-stat-lbl">${st.lbl}</div><div class="pb-stat-val" style="${st.color ? 'color:'+st.color : ''}">${st.val}</div></div>`
+        ).join('');
+    }
+
+    // Open positions
+    const openEl = document.getElementById('pb-open');
+    const open = pb.open_positions || [];
+    if (openEl) {
+        if (!open.length) {
+            openEl.innerHTML = '';
+        } else {
+            const rows = open.map(pos => {
+                const prices = Object.values(pos.daily_prices || {});
+                const latest = prices.length ? prices[prices.length - 1] : null;
+                const pct = latest ? latest.pnl_pct : 0;
+                const closeDate = pos.max_hold_date || '';
+                return `<div class="pb-pos-row">
+                    <span class="pb-badge ${pos.action.toLowerCase()}">${pos.action}</span>
+                    <span class="pb-ticker">${pos.ticker}</span>
+                    <span class="pb-meta">入$${pos.entry_price} TP$${pos.take_profit} SL$${pos.stop_loss} 到期${closeDate}</span>
+                    <span class="pb-pnl ${pct >= 0 ? 'pos' : 'neg'}">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</span>
+                </div>`;
+            }).join('');
+            openEl.innerHTML = `<div class="pb-section-lbl">持仓中 (${open.length})</div>${rows}`;
+        }
+    }
+
+    // Closed positions (last 5)
+    const closedEl = document.getElementById('pb-closed');
+    const closed = (pb.closed_positions || []).slice(-5).reverse();
+    if (closedEl) {
+        if (!closed.length) {
+            closedEl.innerHTML = '';
+        } else {
+            const reasonMap = { take_profit: '止盈', stop_loss: '止损', max_hold: '到期', HOLD_signal: 'HOLD' };
+            const rows = closed.map(pos => {
+                const pct = pos.final_pnl_pct || 0;
+                const reason = reasonMap[pos.close_reason] || pos.close_reason || '';
+                return `<div class="pb-pos-row">
+                    <span class="pb-badge ${pos.action.toLowerCase()}">${pos.action}</span>
+                    <span class="pb-ticker">${pos.ticker}</span>
+                    <span class="pb-meta">${pos.signal_date} → ${pos.close_date} (${reason})</span>
+                    <span class="pb-pnl ${pct >= 0 ? 'pos' : 'neg'}">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</span>
+                </div>`;
+            }).join('');
+            closedEl.innerHTML = `<div class="pb-section-lbl" style="margin-top:10px;padding-top:10px;border-top:1px solid #f0f0f0">最近已平仓</div>${rows}`;
+        }
+    }
+}
+
 function loadTradingSignals() {
     if (!window.TRADING_SIGNALS || !window.TRADING_SIGNALS.date) {
         setSyncDot('ts-dot', '');

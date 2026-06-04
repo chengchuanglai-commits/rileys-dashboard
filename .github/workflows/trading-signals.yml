@@ -61,6 +61,7 @@ jobs:
           git add dashboard/trading-signals.js dashboard/trading-signals-history/ data/trading.db
           git add dashboard/daily-report.json dashboard/daily-report.js dashboard/daily-reports/ 2>/dev/null || true
           git add "dashboard/trading-signals-history/"*-report.json 2>/dev/null || true
+          git add dashboard/portfolio-b.js data/portfolio_b.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4 5; do
             git pull --rebase && git push && break
