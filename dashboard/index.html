@@ -962,7 +962,7 @@
             <!-- A vs B 统计面板 -->
             <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"></div>
             <!-- 双曲线图 -->
-            <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px"></div>
+            <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px;overflow:hidden"></div>
             <!-- 交易历史表格 -->
             <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
                 <div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">交易历史</div>
@@ -3033,7 +3033,10 @@ function loadSimCurve() {
 
     // ── Plan A data (= 原 Plan D：限价单入场，现有方案) ──
     const dates  = rt.daily_dates || [];
-    const cumA   = rt.cum_capital_d || [1000];        // 现有方案 = Plan D
+    const _rawCumA = rt.cum_capital_d || [1000];
+    const cumA   = _rawCumA.length > dates.length      // 对齐到 dates，跳掉头部多余的初始值
+        ? _rawCumA.slice(_rawCumA.length - dates.length)
+        : _rawCumA;                                    // 现有方案 = Plan D
     const aFinal = rt.simulated_capital_limit || 1000;
     const aPnl   = aFinal - 1000;
     const aPnlPct = (aPnl / 10).toFixed(2);
