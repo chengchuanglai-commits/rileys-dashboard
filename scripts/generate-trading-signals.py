@@ -236,79 +236,104 @@ def is_us_market_open():
     return market_open <= now_utc < market_close
 
 
-def check_yesterday_accuracy():
-    if is_us_market_open():
-        print("[warn] US market currently open — skipping accuracy fill to avoid incomplete OHLC; will run on next scheduled execution")
-        return
-    prev_file = os.path.join(HISTORY_DIR, f"{yesterday}.json")
-    if not os.path.exists(prev_file):
-        return
-    with open(prev_file) as f:
-        prev = json.load(f)
-    updated = False
-    for sig in prev.get('signals', []):
-        if 'correct' in sig:
-            continue
-        ticker = sig.get('ticker')
-        action = sig.get('action')
-        entry = sig.get('current_price')
-        if not ticker or not action or not entry:
-            continue
-        open_px, day_high, day_low, current = get_day_ohlc(ticker)
-        if current is None:
-            continue
-        # use open price as real entry if available (more accurate than prev close)
-        real_entry = open_px if open_px else entry
-        pct = (current - real_entry) / real_entry * 100
-        pct_signal = (current - entry) / entry * 100   # signal price → close (AI direction quality)
-        sig['actual_price'] = current
-        sig['open_price'] = open_px
-        sig['day_high'] = day_high
-        sig['day_low'] = day_low
-        sig['pct_change'] = round(pct, 2)                        # open → close (execution P&L)
-        sig['pct_from_prev_close'] = round(pct_signal, 2)        # signal → close (AI direction)
-        # correct_execution: did we make money after gap/slippage?
+def _verify_signal(sig, open_px, day_high, day_low, current):
+    """Fill verification fields into a signal dict in-place. Returns True if updated."""
+    entry  = sig.get('current_price')
+    action = sig.get('action', 'HOLD')
+    if not entry or current is None:
+        return False
+    real_entry = open_px if open_px else entry
+    pct        = (current - real_entry) / real_entry * 100
+    pct_signal = (current - entry)      / entry      * 100
+    sig['actual_price']        = current
+    sig['open_price']          = open_px
+    sig['day_high']            = day_high
+    sig['day_low']             = day_low
+    sig['pct_change']          = round(pct, 2)
+    sig['pct_from_prev_close'] = round(pct_signal, 2)
+    if action == 'BUY':
+        sig['correct']           = pct > 0
+        sig['correct_direction'] = pct_signal > 0
+    elif action == 'SELL':
+        sig['correct']           = pct < 0
+        sig['correct_direction'] = pct_signal < 0
+    else:
+        sig['correct']           = abs(pct) < 2
+        sig['correct_direction'] = abs(pct_signal) < 2
+    GAP_THRESHOLD = 0.01
+    if open_px:
+        gap_pct = (open_px - entry) / entry
         if action == 'BUY':
-            sig['correct'] = pct > 0
+            sig['gap_filtered'] = gap_pct > GAP_THRESHOLD
         elif action == 'SELL':
-            sig['correct'] = pct < 0
-        else:
-            sig['correct'] = abs(pct) < 2
-        # correct_direction: was AI's directional call right (ignoring gap)?
-        if action == 'BUY':
-            sig['correct_direction'] = pct_signal > 0
-        elif action == 'SELL':
-            sig['correct_direction'] = pct_signal < 0
-        else:
-            sig['correct_direction'] = abs(pct_signal) < 2
-        # gap filter: skip trade if open deviates from signal price by > 1%
-        GAP_THRESHOLD = 0.01
-        if open_px:
-            gap_pct = (open_px - entry) / entry
-            if action == 'BUY':
-                sig['gap_filtered'] = gap_pct > GAP_THRESHOLD     # gapped up too much, skip
-            elif action == 'SELL':
-                sig['gap_filtered'] = gap_pct < -GAP_THRESHOLD    # already dropped, skip
-            else:
-                sig['gap_filtered'] = False
-            sig['gap_pct'] = round(gap_pct * 100, 2)
+            sig['gap_filtered'] = gap_pct < -GAP_THRESHOLD
         else:
             sig['gap_filtered'] = False
-            sig['gap_pct'] = None
-        # plan D: limit order at signal price — filled if price touches signal level intraday
-        if action == 'BUY':
-            sig['limit_filled'] = bool(day_low and day_low <= entry)
-        elif action == 'SELL':
-            sig['limit_filled'] = bool(day_high and day_high >= entry)
-        else:
-            sig['limit_filled'] = False
-        gap_tag = ' [GAP SKIP]' if sig['gap_filtered'] else ''
-        limit_tag = ' [LIMIT✓]' if sig['limit_filled'] else ' [LIMIT✗]'
-        print(f"[accuracy] {ticker} {action}: signal=${entry} open=${open_px} close=${current} ({pct:+.2f}% from open){gap_tag}{limit_tag} → {'✓' if sig['correct'] else '✗'}")
-        updated = True
-    if updated:
-        with open(prev_file, 'w') as f:
-            json.dump(prev, f, ensure_ascii=False, indent=2)
+        sig['gap_pct'] = round(gap_pct * 100, 2)
+    else:
+        sig['gap_filtered'] = False
+        sig['gap_pct']      = None
+    if action == 'BUY':
+        sig['limit_filled'] = bool(day_low  and day_low  <= entry)
+    elif action == 'SELL':
+        sig['limit_filled'] = bool(day_high and day_high >= entry)
+    else:
+        sig['limit_filled'] = False
+    gap_tag   = ' [GAP SKIP]' if sig['gap_filtered'] else ''
+    limit_tag = ' [LIMIT✓]'   if sig['limit_filled'] else ' [LIMIT✗]'
+    print(f"[accuracy] {sig['ticker']} {action}: signal=${entry} open=${open_px} close=${current} ({pct:+.2f}%){gap_tag}{limit_tag} → {'✓' if sig['correct'] else '✗'}")
+    return True
+
+
+def check_unverified_accuracy():
+    """Scan ALL history files for unverified signals and fill in outcomes.
+
+    Fixes two bugs in the old check_yesterday_accuracy():
+      1. Only checked yesterday — if a run was delayed or skipped, that day was PERMANENTLY lost.
+      2. Used get_day_ohlc() (latest prices) for all files — if verifying an older file on a later
+         date, the wrong OHLC date was used (e.g. June 3 signals verified with June 5 prices).
+
+    Now: every unverified file is checked on every run, using the signal file's own date to
+    fetch the correct OHLC via get_ohlc_for_date(). This is robust to multi-day delays.
+    """
+    if is_us_market_open():
+        print("[warn] US market currently open — skipping accuracy fill to avoid incomplete OHLC")
+        return
+
+    for fname in sorted(os.listdir(HISTORY_DIR)):
+        if not fname.endswith('.json') or '-report' in fname or fname == f"{today}.json":
+            continue
+        file_date = fname.replace('.json', '')
+        fpath     = os.path.join(HISTORY_DIR, fname)
+        try:
+            with open(fpath) as f:
+                hist_data = json.load(f)
+        except Exception as e:
+            print(f"[warn] Could not read {fname}: {e}")
+            continue
+
+        pending = [s for s in hist_data.get('signals', []) if 'correct' not in s]
+        if not pending:
+            continue
+
+        print(f"[accuracy] {len(pending)} unverified signal(s) in {file_date} — fetching OHLC...")
+        updated = False
+        for sig in pending:
+            ticker = sig.get('ticker')
+            if not ticker:
+                continue
+            # Always use the signal file's own date for OHLC — this is the trade session
+            # (signal was generated pre-market for `file_date`; trade happened during `file_date`)
+            open_px, day_high, day_low, current = get_ohlc_for_date(ticker, file_date)
+            if current is None:
+                # Fallback: latest data (works if file_date is yesterday and market is closed)
+                open_px, day_high, day_low, current = get_day_ohlc(ticker)
+            if _verify_signal(sig, open_px, day_high, day_low, current):
+                updated = True
+
+        if updated:
+            with open(fpath, 'w') as f:
+                json.dump(hist_data, f, ensure_ascii=False, indent=2)
 
 
 def build_accuracy():
@@ -338,7 +363,7 @@ def build_accuracy():
 
 # ── Main ──────────────────────────────────────────────
 
-check_yesterday_accuracy()
+check_unverified_accuracy()
 
 selected_picks = select_stocks()
 if not selected_picks:
@@ -434,7 +459,7 @@ with open(archive_path, "w", encoding="utf-8") as f:
 
 print(f"✅ Trading signals generated for {today}: {[s['ticker'] for s in data['signals']]}")
 
-# 回填模式：当天市场已收盘，立即填入实际 OHLC（不等次日运行）
+# 回填模式：当天市场已收盘，立即填入实际 OHLC（复用 check_unverified_accuracy 逻辑）
 if _backfill and data['signals']:
     print(f"[backfill] 立即验证 {today} 的信号（该日市场已收盘）...")
     archive_path_bf = os.path.join(HISTORY_DIR, f"{today}.json")
@@ -445,48 +470,17 @@ if _backfill and data['signals']:
         if 'correct' in sig:
             continue
         ticker = sig.get('ticker')
-        action = sig.get('action')
-        entry  = sig.get('current_price')
-        if not ticker or not action or not entry:
+        if not ticker:
             continue
         open_px, day_high, day_low, current = get_ohlc_for_date(ticker, today)
         if current is None:
             print(f"[warn] 无法获取 {ticker} 在 {today} 的数据，跳过验证")
             continue
-        real_entry = open_px if open_px else entry
-        pct = (current - real_entry) / real_entry * 100
-        pct_signal = (current - entry) / entry * 100
-        sig['actual_price'] = current
-        sig['open_price']   = open_px
-        sig['day_high']     = day_high
-        sig['day_low']      = day_low
-        sig['pct_change']          = round(pct, 2)
-        sig['pct_from_prev_close'] = round(pct_signal, 2)
-        if action == 'BUY':
-            sig['correct']           = pct > 0
-            sig['correct_direction'] = pct_signal > 0
-            gap_pct = (open_px - entry) / entry if open_px else 0
-            sig['gap_filtered']      = gap_pct > 0.01
-            sig['limit_filled']      = bool(day_low and day_low <= entry)
-        elif action == 'SELL':
-            sig['correct']           = pct < 0
-            sig['correct_direction'] = pct_signal < 0
-            gap_pct = (open_px - entry) / entry if open_px else 0
-            sig['gap_filtered']      = gap_pct < -0.01
-            sig['limit_filled']      = bool(day_high and day_high >= entry)
-        else:
-            sig['correct']           = abs(pct) < 2
-            sig['correct_direction'] = abs(pct_signal) < 2
-            sig['gap_filtered']      = False
-            sig['limit_filled']      = False
-        sig['gap_pct'] = round((open_px - entry) / entry * 100, 2) if open_px else None
-        lim_tag = ' [限价✓]' if sig['limit_filled'] else ' [限价✗]'
-        print(f"[backfill verify] {ticker} {action}: 信号${entry} 开${open_px} 收${current} ({pct:+.2f}%){lim_tag} → {'✓' if sig['correct'] else '✗'}")
-        updated = True
+        if _verify_signal(sig, open_px, day_high, day_low, current):
+            updated = True
     if updated:
         with open(archive_path_bf, 'w') as f:
             json.dump(bf_data, f, ensure_ascii=False, indent=2)
-        # 同步更新 trading-signals.js 和主 data 对象
         data = bf_data
         js_content = (
             "// TradingAgents 信号数据 — 每日 20:30 自动更新\n"
