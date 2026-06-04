@@ -575,7 +575,8 @@
         /* ── Sidebar ── */
         #sidebar {
           width: 160px;
-          background: #1a1a2e;
+          background: #fff;
+          border-right: 1px solid #e8e8e8;
           position: sticky;
           top: 0;
           height: 100vh;
@@ -583,24 +584,29 @@
           flex-shrink: 0;
           z-index: 100;
         }
-        .sb-header { padding: 16px; border-bottom: 1px solid rgba(255,255,255,.08); }
-        .sb-title  { font-size: 13px; font-weight: 700; color: #fff; }
-        .sb-sub    { font-size: 10px; color: #666; margin-top: 2px; }
+        .sb-header { padding: 16px; border-bottom: 1px solid #e8e8e8; }
+        .sb-title  { font-size: 13px; font-weight: 700; color: #111; }
+        .sb-sub    { font-size: 10px; color: #999; margin-top: 2px; }
         .sb-nav    { padding: 12px 0; }
         .sb-group-lbl {
           padding: 0 16px 4px;
-          font-size: 9px; font-weight: 700; color: #555;
+          font-size: 9px; font-weight: 700; color: #bbb;
           text-transform: uppercase; letter-spacing: .1em;
         }
         .sb-item {
           display: flex; align-items: center; gap: 7px;
           margin: 0 8px 2px; border-radius: 8px;
-          padding: 7px 10px; font-size: 12px; color: #777;
+          padding: 7px 10px; font-size: 12px; color: #555;
           cursor: pointer; text-decoration: none;
           transition: background .15s, color .15s;
         }
-        .sb-item:hover  { background: rgba(255,255,255,.07); color: #aaa; }
-        .sb-item.active { background: rgba(255,255,255,.12); color: #fff; }
+        .sb-item:hover  { background: #f5f5f7; color: #111; }
+        .sb-item.active { background: #111; color: #fff; }
+        /* ── Weather widget ── */
+        .sb-weather { padding: 10px 16px; border-bottom: 1px solid #e8e8e8; }
+        .sb-weather-row { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #555; margin-bottom: 4px; }
+        .sb-weather-city { font-size: 9px; color: #bbb; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; min-width: 28px; }
+        .sb-weather-val { font-size: 11px; color: #333; font-weight: 500; }
 
         /* ── Main content ── */
         #main-content { flex: 1; min-width: 0; }
@@ -648,8 +654,18 @@
 
 <div id="sidebar">
   <div class="sb-header">
-    <div class="sb-title">Dashboard</div>
+    <div class="sb-title">Riley's Dashboard</div>
     <div class="sb-sub">个人中心</div>
+  </div>
+  <div class="sb-weather" id="sb-weather">
+    <div class="sb-weather-row">
+      <span class="sb-weather-city">深圳</span>
+      <span class="sb-weather-val" id="wx-shenzhen">…</span>
+    </div>
+    <div class="sb-weather-row">
+      <span class="sb-weather-city">多伦多</span>
+      <span class="sb-weather-val" id="wx-toronto">…</span>
+    </div>
   </div>
   <nav class="sb-nav">
     <div class="sb-group-lbl">生活</div>
@@ -747,72 +763,6 @@
     </section><!-- /#grp-life -->
 
     <section class="grp-section" data-grp="invest" id="grp-invest">
-
-    <!-- ── 账户总览 (invest) ── -->
-    <div class="row col-1" id="sec-accounts">
-
-        <div class="card acct-card">
-            <div class="card-hd">
-                <span class="card-title">💰 账户总览</span>
-            </div>
-            <!-- Per-account rows -->
-            <div class="acct-row">
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                    <div>
-                        <div class="acct-lbl">🏦 工行（CNY）<button class="acct-edit-btn" onclick="inlineEditAccount('icbc')" title="编辑">✏</button></div>
-                        <div class="acct-val" id="icbc-val" style="font-size:20px">¥0</div>
-                    </div>
-                    <div style="text-align:right">
-                        <div class="acct-lbl">≈ USD</div>
-                        <div style="font-size:13px;color:#64748b" id="icbc-usd">$0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="acct-row">
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                    <div>
-                        <div class="acct-lbl">🏦 HSBC HK（HKD）<button class="acct-edit-btn" onclick="inlineEditAccount('hsbc')" title="编辑">✏</button></div>
-                        <div class="acct-val" id="hsbc-val" style="font-size:20px">HK$0</div>
-                    </div>
-                    <div style="text-align:right">
-                        <div class="acct-lbl">≈ USD</div>
-                        <div style="font-size:13px;color:#64748b" id="hsbc-usd">$0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="acct-row">
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                    <div>
-                        <div class="acct-lbl">🏦 BMO Canada（CAD）<button class="acct-edit-btn" onclick="inlineEditAccount('bmo')" title="编辑">✏</button></div>
-                        <div class="acct-val" id="bmo-val" style="font-size:20px">C$0</div>
-                    </div>
-                    <div style="text-align:right">
-                        <div class="acct-lbl">TFSA / RRSP / 投资 <button class="acct-edit-btn" onclick="inlineEditBmoSubs()" title="编辑子账户">✏</button></div>
-                        <div style="font-size:13px;color:#64748b" id="bmo-sub">C$0 / C$0 / C$0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="acct-row">
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                    <div>
-                        <div class="acct-lbl">
-                            📈 Questrade
-                            <span class="sync-dot" id="acct-dot" style="margin-left:4px" title="Questrade 同步状态"></span>
-                        </div>
-                        <div class="acct-val" id="qt-equity" style="font-size:20px">—</div>
-                    </div>
-                    <div style="text-align:right">
-                        <div class="acct-lbl">可用现金</div>
-                        <div style="font-size:13px;color:#64748b" id="qt-cash">未配置</div>
-                    </div>
-                </div>
-            </div>
-            <div class="acct-row" style="border-top:1px solid #e8e8e8;margin-top:4px">
-                <div class="acct-lbl">总资产（≈ USD）</div>
-                <div class="acct-val total" id="total-val">$0</div>
-            </div>
-        </div>
-    </div><!-- /#sec-accounts -->
 
     <!-- ── Row 2.6: 金融晨报 ── -->
     <div class="row col-1" id="sec-morning">
@@ -914,27 +864,6 @@
         </div>
     </div>
 
-    <!-- ── Row 2.8: A vs B 模拟系统（统一面板）── -->
-    <div class="row col-1" id="sec-sim" style="margin-bottom:16px">
-        <div class="card" id="sim-card">
-            <div class="card-hd" style="margin-bottom:14px">
-                <span class="card-title">📊 模拟盘 — A 方案 vs B 方案</span>
-                <span style="font-size:9px;color:#bbb">A=限价入场(现有方案) · B=信号价 TP+8% / SL-4% / 最多5日</span>
-            </div>
-            <!-- A vs B 统计面板 -->
-            <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"></div>
-            <!-- 双曲线图 -->
-            <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px"></div>
-            <!-- 交易历史表格 -->
-            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
-                <div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">交易历史</div>
-                <div id="sig-history-table" style="overflow-x:auto"></div>
-            </div>
-            <!-- B 方案当前持仓 -->
-            <div id="sim-pb-open" style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0"></div>
-        </div>
-    </div>
-
     <!-- ── Row 3: Ticker tape ── -->
     <div style="margin-bottom:20px;border-radius:16px;overflow:hidden;border:1px solid #1e2840;background:#161b27">
         <div style="padding:14px 24px 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#4b5e7a">📈 实时市场行情</div>
@@ -1022,6 +951,93 @@
             </details>
         </div>
     </div>
+
+    <!-- ── Row 2.8: A vs B 模拟系统（统一面板）── -->
+    <div class="row col-1" id="sec-sim" style="margin-bottom:16px">
+        <div class="card" id="sim-card">
+            <div class="card-hd" style="margin-bottom:14px">
+                <span class="card-title">📊 模拟盘 — A 方案 vs B 方案</span>
+                <span style="font-size:9px;color:#bbb">A=限价入场(现有方案) · B=信号价 TP+8% / SL-4% / 最多5日</span>
+            </div>
+            <!-- A vs B 统计面板 -->
+            <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"></div>
+            <!-- 双曲线图 -->
+            <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px"></div>
+            <!-- 交易历史表格 -->
+            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
+                <div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">交易历史</div>
+                <div id="sig-history-table" style="overflow-x:auto"></div>
+            </div>
+            <!-- B 方案当前持仓 -->
+            <div id="sim-pb-open" style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0"></div>
+        </div>
+    </div>
+
+    <!-- ── 账户总览 (invest) ── -->
+    <div class="row col-1" id="sec-accounts">
+
+        <div class="card acct-card">
+            <div class="card-hd">
+                <span class="card-title">💰 账户总览</span>
+            </div>
+            <!-- Per-account rows -->
+            <div class="acct-row">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div>
+                        <div class="acct-lbl">🏦 工行（CNY）<button class="acct-edit-btn" onclick="inlineEditAccount('icbc')" title="编辑">✏</button></div>
+                        <div class="acct-val" id="icbc-val" style="font-size:20px">¥0</div>
+                    </div>
+                    <div style="text-align:right">
+                        <div class="acct-lbl">≈ USD</div>
+                        <div style="font-size:13px;color:#64748b" id="icbc-usd">$0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="acct-row">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div>
+                        <div class="acct-lbl">🏦 HSBC HK（HKD）<button class="acct-edit-btn" onclick="inlineEditAccount('hsbc')" title="编辑">✏</button></div>
+                        <div class="acct-val" id="hsbc-val" style="font-size:20px">HK$0</div>
+                    </div>
+                    <div style="text-align:right">
+                        <div class="acct-lbl">≈ USD</div>
+                        <div style="font-size:13px;color:#64748b" id="hsbc-usd">$0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="acct-row">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div>
+                        <div class="acct-lbl">🏦 BMO Canada（CAD）<button class="acct-edit-btn" onclick="inlineEditAccount('bmo')" title="编辑">✏</button></div>
+                        <div class="acct-val" id="bmo-val" style="font-size:20px">C$0</div>
+                    </div>
+                    <div style="text-align:right">
+                        <div class="acct-lbl">TFSA / RRSP / 投资 <button class="acct-edit-btn" onclick="inlineEditBmoSubs()" title="编辑子账户">✏</button></div>
+                        <div style="font-size:13px;color:#64748b" id="bmo-sub">C$0 / C$0 / C$0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="acct-row">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div>
+                        <div class="acct-lbl">
+                            📈 Questrade
+                            <span class="sync-dot" id="acct-dot" style="margin-left:4px" title="Questrade 同步状态"></span>
+                        </div>
+                        <div class="acct-val" id="qt-equity" style="font-size:20px">—</div>
+                    </div>
+                    <div style="text-align:right">
+                        <div class="acct-lbl">可用现金</div>
+                        <div style="font-size:13px;color:#64748b" id="qt-cash">未配置</div>
+                    </div>
+                </div>
+            </div>
+            <div class="acct-row" style="border-top:1px solid #e8e8e8;margin-top:4px">
+                <div class="acct-lbl">总资产（≈ USD）</div>
+                <div class="acct-val total" id="total-val">$0</div>
+            </div>
+        </div>
+    </div><!-- /#sec-accounts -->
 
     <!-- ── 指数走势 (invest) ── -->
     <div class="row col-1" id="sec-chart">
@@ -3560,6 +3576,19 @@ function switchMainTab(el) {
   if (window.innerWidth > 480) return;
   document.querySelectorAll('.grp-section').forEach(s => {
     if (s.dataset.grp !== 'life') s.classList.add('grp-hidden');
+  });
+})();
+
+(function loadWeather() {
+  const cities = [
+    { id: 'wx-shenzhen', q: 'Shenzhen' },
+    { id: 'wx-toronto',  q: 'Toronto'  }
+  ];
+  cities.forEach(c => {
+    fetch('https://wttr.in/' + c.q + '?format=%c+%t')
+      .then(r => r.text())
+      .then(t => { document.getElementById(c.id).textContent = t.trim(); })
+      .catch(() => { document.getElementById(c.id).textContent = '—'; });
   });
 })();
 </script>
