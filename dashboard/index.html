@@ -3519,6 +3519,49 @@ function closeTsModal() {
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTsModal(); });
+
+// ── Dashboard Navigation ──
+
+function sbNav(el) {
+  document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
+  el.classList.add('active');
+  const target = document.getElementById(el.dataset.target);
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function switchMainTab(el) {
+  const grp = el.dataset.grp;
+  document.querySelectorAll('.bt-item').forEach(i => i.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.grp-section').forEach(s => {
+    s.classList.toggle('grp-hidden', s.dataset.grp !== grp);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+(function initScrollSpy() {
+  if (window.innerWidth <= 480) return;
+  const items = document.querySelectorAll('.sb-item[data-target]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        items.forEach(i => i.classList.toggle('active', i.dataset.target === id));
+      }
+    });
+  }, { threshold: 0.25 });
+  items.forEach(i => {
+    const el = document.getElementById(i.dataset.target);
+    if (el) observer.observe(el);
+  });
+})();
+
+(function initMobileTabs() {
+  if (window.innerWidth > 480) return;
+  document.querySelectorAll('.grp-section').forEach(s => {
+    if (s.dataset.grp !== 'life') s.classList.add('grp-hidden');
+  });
+})();
 </script>
 </body>
 </html>
