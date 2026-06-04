@@ -3090,9 +3090,9 @@ function loadSimCurve() {
     // ── Dual curve chart ──
     const wrap = document.getElementById('sim-curve-chart');
     if (wrap && dates.length > 0) {
-        const W = wrap.clientWidth || 640;
+        const W = Math.max(wrap.offsetWidth || wrap.clientWidth || 400, 200);
         const H = 200;
-        const PAD = { top: 20, right: 20, bottom: 30, left: 56 };
+        const PAD = { top: 20, right: 60, bottom: 30, left: 56 };
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
@@ -3127,12 +3127,14 @@ function loadSimCurve() {
         const areaA = `${xPx(0)},${PAD.top+cH} ` + cumA.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumA.length-1)},${PAD.top+cH}`;
         const areaB = `${xPx(0)},${PAD.top+cH} ` + cumB.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumB.length-1)},${PAD.top+cH}`;
 
-        // Final value labels
+        // Final value labels — anchored inside right PAD area
         const aLast = cumA[cumA.length-1]; const bLast = cumB[cumB.length-1] || bFinal;
-        const labelA = `<text x="${(xPx(cumA.length-1)+4).toFixed(1)}" y="${yPx(aLast).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#3b82f6">$${aLast.toFixed(0)}</text>`;
-        const labelB = `<text x="${(xPx(cumB.length-1)+4).toFixed(1)}" y="${(yPx(bLast)-12).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
+        const lxA = W - PAD.right + 4;
+        const lxB = W - PAD.right + 4;
+        const labelA = `<text x="${lxA}" y="${yPx(aLast).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#3b82f6">$${aLast.toFixed(0)}</text>`;
+        const labelB = `<text x="${lxB}" y="${(yPx(bLast)-12).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
 
-        wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:visible">
+        wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:hidden;display:block">
             <defs>
                 <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity=".12"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity=".14"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0"/></linearGradient>
