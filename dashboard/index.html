@@ -1019,7 +1019,7 @@
         <div class="card" id="sim-card">
             <div class="card-hd" style="margin-bottom:14px">
                 <span class="card-title">📊 模拟盘 — A 方案 vs B 方案</span>
-                <span style="font-size:9px;color:#bbb">A=次日开盘入场 · B=信号价 TP+8% / SL-4% / 最多5日</span>
+                <span style="font-size:9px;color:#bbb">A=限价入场(现有方案) · B=信号价 TP+8% / SL-4% / 最多5日</span>
             </div>
             <!-- A vs B 统计面板 -->
             <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"></div>
@@ -2814,10 +2814,10 @@ function loadSigHistory() {
         const action = s.action || 'HOLD';
         const isHold = action === 'HOLD';
 
-        // A方案盈亏：次日开盘涨跌
+        // A方案盈亏：限价单入场（现有方案 = Plan D），用 pct_from_signal
         let aPct = null;
-        if (!isHold && s.pct_change != null) {
-            aPct = action === 'BUY' ? s.pct_change : -s.pct_change;
+        if (!isHold && s.limit_filled && s.pct_from_signal != null) {
+            aPct = action === 'BUY' ? s.pct_from_signal : -s.pct_from_signal;
         }
 
         // B方案盈亏
@@ -2866,7 +2866,7 @@ function loadSigHistory() {
         </tbody>
     </table>
     <div style="font-size:9px;color:#bbb;margin-top:8px;padding-top:6px;border-top:1px solid #f5f5f5">
-        灰底 = D方案未触及信号价（未入场） · ✓ = 方向正确 · ✗ = 方向错误
+        A盈亏仅限价单触及时显示 · 灰色"—"= 限价未触及（未入场） · ✓ = 方向正确 · ✗ = 方向错误
     </div>`;
 }
 
@@ -2877,16 +2877,15 @@ function loadSimCurve() {
     if (!data || !data.running_totals) return;
     const rt = data.running_totals;
 
-    // ── Plan A data ──
+    // ── Plan A data (= 原 Plan D：限价单入场，现有方案) ──
     const dates  = rt.daily_dates || [];
-    const cumA   = rt.cum_capital_a || [1000];
-    const aFinal = cumA[cumA.length - 1] || 1000;
+    const cumA   = rt.cum_capital_d || [1000];        // 现有方案 = Plan D
+    const aFinal = rt.simulated_capital_limit || 1000;
     const aPnl   = aFinal - 1000;
     const aPnlPct = (aPnl / 10).toFixed(2);
-    const aTotal  = rt.total_signals_verified || 0;
-    const aActive = rt.total_signals_active   || aTotal;
-    const aHolds  = aTotal - aActive;
-    const aAcc    = rt.accuracy_pct || 'N/A';
+    const aTotal  = rt.total_limit || 0;              // 实际触价笔数
+    const aHolds  = (rt.total_signals_verified || 0) - (rt.total_signals_active || 0);
+    const aAcc    = rt.accuracy_limit_pct || 'N/A';
 
     // ── Plan B data: build cumulative curve from closed positions ──
     const pbClosed = (pb && pb.closed_positions) ? pb.closed_positions : [];
@@ -2928,7 +2927,7 @@ function loadSimCurve() {
             </div>`;
         };
         statsEl.innerHTML =
-            panelHtml('a', 'A 方案 — 次日开盘入场', aFinal, aPnl, aPnlPct,
+            panelHtml('a', 'A 方案 — 限价入场 (现有)', aFinal, aPnl, aPnlPct,
                 '验证信号', aTotal, '准确率', aAcc, 'HOLD数', `${aHolds}`) +
             panelHtml('b', 'B 方案 — 信号价+TP/SL/5日', bFinal, bPnl, bPnlPct,
                 '已平仓', bTrades, '胜率', `${bWinRate}%`, '持仓中', pbOpen.length);
