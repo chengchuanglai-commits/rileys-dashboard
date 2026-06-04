@@ -1,6 +1,6 @@
 {
   "date": "2026-06-04",
-  "generated_at": "2026-06-04T08:37:00",
+  "generated_at": "2026-06-04T09:01:00",
   "pipeline": {
     "morning_note_found": false,
     "signal_file_found": true,
@@ -63,14 +63,14 @@
       },
       {
         "ticker": "KLIC",
-        "action": "BUY",
+        "action": "SELL",
         "entry": 108.36,
         "open": 109.08,
         "actual": 108.4,
         "pct": -0.62,
         "pct_from_signal": 0.04,
-        "correct": false,
-        "correct_direction": true
+        "correct": true,
+        "correct_direction": false
       }
     ]
   },
@@ -82,14 +82,14 @@
         "date": "2026-06-03",
         "ticker": "KLIC",
         "name": "Kulicke and Soffa Industries Inc.",
-        "action": "BUY",
+        "action": "SELL",
         "signal_price": 108.36,
         "open_price": 109.08,
         "close_price": 108.4,
         "pct_change": -0.62,
         "pct_from_signal": 0.04,
-        "correct": false,
-        "correct_direction": true,
+        "correct": true,
+        "correct_direction": false,
         "limit_filled": true,
         "gap_filtered": false
       },
@@ -242,7 +242,7 @@
       1040.06,
       1017.49,
       1031.43,
-      1025.03
+      1037.82
     ],
     "cum_capital_b": [
       1000.0,
@@ -250,7 +250,7 @@
       1040.06,
       1046.61,
       1074.45,
-      1074.88
+      1074.02
     ],
     "cum_capital_c": [
       1000.0,
@@ -258,7 +258,7 @@
       1040.06,
       1040.06,
       1040.06,
-      1033.61
+      1046.51
     ],
     "cum_capital_d": [
       1000.0,
@@ -266,62 +266,62 @@
       1040.16,
       1046.71,
       1074.55,
-      1074.98
+      1074.12
     ],
-    "correct": 6,
-    "accuracy_rate": 0.6,
-    "accuracy_pct": "60.0%",
-    "simulated_capital": 1025.03,
-    "simulated_pnl_usd": 25.03,
-    "simulated_pnl_pct": "+2.50%",
+    "correct": 7,
+    "accuracy_rate": 0.7,
+    "accuracy_pct": "70.0%",
+    "simulated_capital": 1037.82,
+    "simulated_pnl_usd": 37.82,
+    "simulated_pnl_pct": "+3.78%",
     "daily_returns": [
       2.59,
       1.38,
       -2.17,
       1.37,
-      -0.62
+      0.62
     ],
-    "correct_direction": 8,
-    "accuracy_direction_rate": 0.8,
-    "accuracy_direction_pct": "80.0%",
-    "simulated_capital_direction": 1074.88,
-    "simulated_pnl_direction_usd": 74.88,
-    "simulated_pnl_direction_pct": "+7.49%",
+    "correct_direction": 7,
+    "accuracy_direction_rate": 0.7,
+    "accuracy_direction_pct": "70.0%",
+    "simulated_capital_direction": 1074.02,
+    "simulated_pnl_direction_usd": 74.02,
+    "simulated_pnl_direction_pct": "+7.40%",
     "daily_returns_direction": [
       2.59,
       1.38,
       0.63,
       2.66,
-      0.04
+      -0.04
     ],
     "total_gap_filtered": 5,
-    "correct_gap": 3,
-    "accuracy_gap_rate": 0.6,
-    "accuracy_gap_pct": "60.0%",
-    "simulated_capital_gap": 1033.61,
-    "simulated_pnl_gap_usd": 33.61,
-    "simulated_pnl_gap_pct": "+3.36%",
+    "correct_gap": 4,
+    "accuracy_gap_rate": 0.8,
+    "accuracy_gap_pct": "80.0%",
+    "simulated_capital_gap": 1046.51,
+    "simulated_pnl_gap_usd": 46.51,
+    "simulated_pnl_gap_pct": "+4.65%",
     "daily_returns_gap": [
       2.59,
       1.38,
       0.0,
       0.0,
-      -0.62
+      0.62
     ],
-    "gap_cost_usd": 49.85,
+    "gap_cost_usd": 36.2,
     "total_limit": 6,
-    "correct_limit": 5,
-    "accuracy_limit_rate": 0.833,
-    "accuracy_limit_pct": "83.3%",
-    "simulated_capital_limit": 1074.98,
-    "simulated_pnl_limit_usd": 74.98,
-    "simulated_pnl_limit_pct": "+7.50%",
+    "correct_limit": 4,
+    "accuracy_limit_rate": 0.667,
+    "accuracy_limit_pct": "66.7%",
+    "simulated_capital_limit": 1074.12,
+    "simulated_pnl_limit_usd": 74.12,
+    "simulated_pnl_limit_pct": "+7.41%",
     "daily_returns_limit": [
       2.6,
       1.38,
       0.63,
       2.66,
-      0.04
+      -0.04
     ]
   },
   "warnings": [
