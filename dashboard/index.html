@@ -644,6 +644,36 @@
     </script>
 </head>
 <body>
+<div id="dashboard-shell">
+
+<div id="sidebar">
+  <div class="sb-header">
+    <div class="sb-title">Dashboard</div>
+    <div class="sb-sub">个人中心</div>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-group-lbl">生活</div>
+    <a class="sb-item active" data-grp="life" data-target="sec-health" onclick="sbNav(this)">❤️ 健康</a>
+    <a class="sb-item" data-grp="life" data-target="sec-calendar" onclick="sbNav(this)">📅 日程</a>
+    <a class="sb-item" data-grp="life" data-target="sec-workout" onclick="sbNav(this)">💪 运动</a>
+
+    <div class="sb-group-lbl" style="margin-top:12px">投资</div>
+    <a class="sb-item" data-grp="invest" data-target="sec-morning" onclick="sbNav(this)">📊 晨报</a>
+    <a class="sb-item" data-grp="invest" data-target="sec-signals" onclick="sbNav(this)">🤖 AI 信号</a>
+    <a class="sb-item" data-grp="invest" data-target="sec-questrade" onclick="sbNav(this)">📈 持仓</a>
+    <a class="sb-item" data-grp="invest" data-target="sec-sim" onclick="sbNav(this)">📉 模拟盘</a>
+    <a class="sb-item" data-grp="invest" data-target="sec-accounts" onclick="sbNav(this)">💰 账户 & 资产</a>
+
+    <div class="sb-group-lbl" style="margin-top:12px">项目</div>
+    <a class="sb-item" data-grp="project" data-target="sec-projects" onclick="sbNav(this)">🚀 项目追踪</a>
+    <a class="sb-item" data-grp="project" data-target="sec-ga" onclick="sbNav(this)">🌐 网站数据</a>
+
+    <div class="sb-group-lbl" style="margin-top:12px">资讯</div>
+    <a class="sb-item" data-grp="news" data-target="sec-news" onclick="sbNav(this)">📰 财经/AI/潮流</a>
+  </nav>
+</div>
+
+<div id="main-content">
 <div class="container">
 
     <!-- ── Header ── -->
@@ -1284,6 +1314,24 @@
     </div>
 
 </div><!-- /container -->
+</div><!-- /#main-content -->
+
+<div id="bottom-tabs">
+  <div class="bt-item active" data-grp="life" onclick="switchTab(this)">
+    <span class="bt-icon">❤️</span><span class="bt-lbl">生活</span>
+  </div>
+  <div class="bt-item" data-grp="invest" onclick="switchTab(this)">
+    <span class="bt-icon">💹</span><span class="bt-lbl">投资</span>
+  </div>
+  <div class="bt-item" data-grp="project" onclick="switchTab(this)">
+    <span class="bt-icon">🚀</span><span class="bt-lbl">项目</span>
+  </div>
+  <div class="bt-item" data-grp="news" onclick="switchTab(this)">
+    <span class="bt-icon">📰</span><span class="bt-lbl">资讯</span>
+  </div>
+</div>
+
+</div><!-- /#dashboard-shell -->
 
 <script>
 // Sync dot helper: state = 'syncing' | 'synced' | 'error' | '' (idle/black)
