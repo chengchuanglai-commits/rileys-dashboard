@@ -688,6 +688,66 @@
         </div>
     </div>
 
+    <section class="grp-section" data-grp="life" id="grp-life">
+
+    <!-- ── 健康中心 & 运动 (life) ── -->
+    <div class="row col-1" id="sec-health">
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">❤ 健康中心</span>
+                <span id="health-date" style="font-size:10px;color:#bbb">—</span>
+            </div>
+            <!-- Apple Watch metrics -->
+            <div id="health-metrics">
+                <div class="health-empty">暂无数据 — 配置 Apple Watch 快捷指令后自动更新</div>
+            </div>
+            <hr class="health-divider">
+            <!-- Workout plan -->
+            <div id="sec-workout" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <span style="font-size:9px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.1em">本周训练</span>
+                <span id="wo-stat" style="font-size:11px;color:#aaa">0/4</span>
+            </div>
+            <div class="wo-grid" id="wo-grid"></div>
+            <div style="font-size:9px;color:#aaa;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">本周完成</div>
+            <div class="wo-week" id="wo-dots"></div>
+        </div>
+    </div><!-- /#sec-health -->
+
+    <!-- ── Calendar / Schedule ── -->
+    <div class="row col-1" id="sec-calendar">
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">📅 日程安排</span>
+                <button class="btn-sm" onclick="toggleCalForm()">+ 添加</button>
+            </div>
+            <div id="cal-list"></div>
+            <div class="cal-form" id="cal-form">
+                <input type="date" id="cal-date" />
+                <input type="time" id="cal-time" value="09:00" />
+                <input type="text" id="cal-title" placeholder="事件内容" />
+                <button class="btn-sm" onclick="addCalendarEvent()">确认</button>
+                <button class="btn-sm" onclick="toggleCalForm()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── 日程归档 (life) ── -->
+    <div class="row col-1" id="sec-archive">
+
+        <!-- 日程归档 -->
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">🗂 日程归档</span>
+                <span id="arch-count" style="font-size:12px;color:#aaa">0 条</span>
+            </div>
+            <div id="arch-list" style="max-height:240px;overflow-y:auto"></div>
+        </div>
+    </div><!-- /#sec-archive -->
+
+    </section><!-- /#grp-life -->
+
+    <section class="grp-section" data-grp="invest" id="grp-invest">
+
     <!-- ── 账户总览 (invest) ── -->
     <div class="row col-1" id="sec-accounts">
 
@@ -753,268 +813,6 @@
             </div>
         </div>
     </div><!-- /#sec-accounts -->
-
-    <!-- ── 健康中心 & 运动 (life) ── -->
-    <div class="row col-1" id="sec-health">
-        <div class="card">
-            <div class="card-hd">
-                <span class="card-title">❤ 健康中心</span>
-                <span id="health-date" style="font-size:10px;color:#bbb">—</span>
-            </div>
-            <!-- Apple Watch metrics -->
-            <div id="health-metrics">
-                <div class="health-empty">暂无数据 — 配置 Apple Watch 快捷指令后自动更新</div>
-            </div>
-            <hr class="health-divider">
-            <!-- Workout plan -->
-            <div id="sec-workout" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-                <span style="font-size:9px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.1em">本周训练</span>
-                <span id="wo-stat" style="font-size:11px;color:#aaa">0/4</span>
-            </div>
-            <div class="wo-grid" id="wo-grid"></div>
-            <div style="font-size:9px;color:#aaa;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">本周完成</div>
-            <div class="wo-week" id="wo-dots"></div>
-        </div>
-    </div><!-- /#sec-health -->
-
-    <!-- ── Calendar / Schedule ── -->
-    <div class="row col-1" id="sec-calendar">
-        <div class="card">
-            <div class="card-hd">
-                <span class="card-title">📅 日程安排</span>
-                <button class="btn-sm" onclick="toggleCalForm()">+ 添加</button>
-            </div>
-            <div id="cal-list"></div>
-            <div class="cal-form" id="cal-form">
-                <input type="date" id="cal-date" />
-                <input type="time" id="cal-time" value="09:00" />
-                <input type="text" id="cal-title" placeholder="事件内容" />
-                <button class="btn-sm" onclick="addCalendarEvent()">确认</button>
-                <button class="btn-sm" onclick="toggleCalForm()">取消</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ── 日程归档 (life) ── -->
-    <div class="row col-1" id="sec-archive">
-
-        <!-- 日程归档 -->
-        <div class="card">
-            <div class="card-hd">
-                <span class="card-title">🗂 日程归档</span>
-                <span id="arch-count" style="font-size:12px;color:#aaa">0 条</span>
-            </div>
-            <div id="arch-list" style="max-height:240px;overflow-y:auto"></div>
-        </div>
-    </div><!-- /#sec-archive -->
-
-    <!-- ── 资产历史 (invest) ── -->
-    <div class="row col-1" id="sec-asset-history">
-        <!-- 资产快照 -->
-        <div class="card">
-            <div class="card-hd">
-                <span class="card-title">📈 资产历史</span>
-                <span id="snap-count" style="font-size:12px;color:#aaa">0 条</span>
-            </div>
-            <div id="snap-list" style="max-height:240px;overflow-y:auto"></div>
-        </div>
-    </div><!-- /#sec-asset-history -->
-
-    <!-- ── Row 2: Project ── -->
-    <div class="row col-1" id="sec-projects">
-        <div class="card proj-card">
-            <div class="card-hd">
-                <span class="card-title">🚀 项目追踪</span>
-                <span class="proj-badge"><span class="badge-dot"></span>规划阶段</span>
-            </div>
-            <div class="proj-layout" style="display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
-                <div>
-                    <div class="proj-name">Seedclay</div>
-                    <div class="proj-sub">跨境电商 · 陶瓷泥套装</div>
-                    <div class="proj-links">
-                        <a href="https://sculpd.com/" target="_blank" class="proj-link">↗ Sculpd</a>
-                        <a href="https://getpottd.com/" target="_blank" class="proj-link">↗ Pottd</a>
-                    </div>
-                    <!-- 小红书 占位 -->
-                    <div class="ig-block" style="opacity:0.45;pointer-events:none">
-                        <div class="ig-header">
-                            <div class="ig-brand">
-                                <div class="ig-logo">📕</div>
-                                <div>
-                                    <div class="ig-handle">小红书</div>
-                                </div>
-                            </div>
-                            <div class="ig-actions">
-                                <span style="font-size:11px;color:#888;background:#f0f0f0;padding:3px 10px;border-radius:6px">账号待创建</span>
-                            </div>
-                        </div>
-                        <div class="ig-stats">
-                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">粉丝</div></div>
-                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">笔记</div></div>
-                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">获赞</div></div>
-                        </div>
-                    </div>
-
-                    <!-- 抖音 占位 -->
-                    <div class="ig-block" style="opacity:0.45;pointer-events:none">
-                        <div class="ig-header">
-                            <div class="ig-brand">
-                                <div class="ig-logo">🎵</div>
-                                <div>
-                                    <div class="ig-handle">抖音</div>
-                                </div>
-                            </div>
-                            <div class="ig-actions">
-                                <span style="font-size:11px;color:#888;background:#f0f0f0;padding:3px 10px;border-radius:6px">账号待创建</span>
-                            </div>
-                        </div>
-                        <div class="ig-stats">
-                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">粉丝</div></div>
-                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">作品</div></div>
-                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">获赞</div></div>
-                        </div>
-                    </div>
-
-                    <!-- Instagram Stats -->
-                    <div class="ig-block">
-                        <div class="ig-header">
-                            <div class="ig-brand">
-                                <div class="ig-logo">📷</div>
-                                <div>
-                                    <div class="ig-handle">@seedclayworld</div>
-                                </div>
-                            </div>
-                            <div class="ig-actions">
-                                <a href="https://www.instagram.com/seedclayworld/" target="_blank" class="icon-btn" title="打开 Instagram 主页">
-                                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                </a>
-                                <a href="https://socialblade.com/instagram/user/seedclayworld" target="_blank" class="icon-btn" title="Social Blade 数据">
-                                    <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                                </a>
-                                <button class="icon-btn" onclick="editIg()" title="编辑数据">
-                                    <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="ig-stats">
-                            <div class="ig-stat">
-                                <div class="ig-stat-val" id="ig-followers">—</div>
-                                <div class="ig-stat-lbl">粉丝</div>
-                            </div>
-                            <div class="ig-stat">
-                                <div class="ig-stat-val" id="ig-posts">—</div>
-                                <div class="ig-stat-lbl">帖子</div>
-                            </div>
-                        </div>
-                        <div class="ig-upd" id="ig-upd">尚未记录 — 点击「编辑」手动更新</div>
-                    </div>
-                </div>
-                <div id="milestones"></div>
-            </div>
-            <!-- 业务指标 -->
-            <div id="seedclay-metrics-row" style="margin-top:20px;padding-top:16px;border-top:1px solid #f0f0f0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px">
-                <div style="text-align:center">
-                    <div class="ig-stat-val" id="sc-ig-followers">—</div>
-                    <div class="ig-stat-lbl">IG 粉丝</div>
-                </div>
-                <div style="text-align:center">
-                    <div class="ig-stat-val" id="sc-ig-posts">—</div>
-                    <div class="ig-stat-lbl">IG 帖子</div>
-                </div>
-                <div style="text-align:center">
-                    <div class="ig-stat-val" id="sc-orders">—</div>
-                    <div class="ig-stat-lbl">订单数</div>
-                </div>
-                <div style="text-align:center">
-                    <div class="ig-stat-val" id="sc-revenue">—</div>
-                    <div class="ig-stat-lbl">营收 USD</div>
-                </div>
-                <div style="text-align:center">
-                    <div class="ig-stat-val" id="sc-ad-spend">—</div>
-                    <div class="ig-stat-lbl">广告花费</div>
-                </div>
-                <div style="text-align:center">
-                    <div class="ig-stat-val" id="sc-cac">—</div>
-                    <div class="ig-stat-lbl">CAC</div>
-                </div>
-            </div>
-            <div id="sc-metrics-upd" style="font-size:10px;color:#aaa;margin-top:6px"></div>
-        </div>
-    </div>
-
-    <!-- ── Row 2.5: Website Analytics ── -->
-    <div class="row col-1" id="sec-ga">
-        <div class="card">
-            <div class="card-hd">
-                <div style="display:flex;align-items:center;gap:8px">
-                    <span class="card-title">🌐 Seedclay.com 网站数据</span>
-                    <span class="sync-dot" id="ga-dot" title="GA4 同步状态"></span>
-                </div>
-                <div style="display:flex;gap:6px;align-items:center">
-                    <a href="https://analytics.google.com/" target="_blank" class="icon-btn" title="打开 GA4">
-                        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </a>
-                    <button class="icon-btn" onclick="refreshAnalytics()" title="刷新">
-                        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-                    </button>
-                    <button class="icon-btn" onclick="editAnalyticsManual()" title="手动更新">
-                        <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                    </button>
-                    <button class="icon-btn icon-primary" onclick="setupAnalyticsApi()" title="设置 API">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="analytics-stats">
-                <div class="a-stat">
-                    <div class="a-stat-val" id="ga-users">—</div>
-                    <div class="a-stat-lbl">今日访客</div>
-                </div>
-                <div class="a-stat">
-                    <div class="a-stat-val" id="ga-sessions">—</div>
-                    <div class="a-stat-lbl">今日会话</div>
-                </div>
-                <div class="a-stat">
-                    <div class="a-stat-val" id="ga-carts">—</div>
-                    <div class="a-stat-lbl">加购次数</div>
-                </div>
-                <div class="a-stat">
-                    <div class="a-stat-val" id="ga-orders">—</div>
-                    <div class="a-stat-lbl">今日订单</div>
-                </div>
-                <div class="a-stat">
-                    <div class="a-stat-val" id="ga-revenue">—</div>
-                    <div class="a-stat-lbl">今日销售额</div>
-                </div>
-            </div>
-
-            <div>
-                <div style="font-size:10px;color:#263352;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">7 天访客趋势</div>
-                <div class="trend-chart" id="ga-chart">
-                    <div style="width:100%;text-align:center;color:#263352;font-size:12px;align-self:center">暂无数据</div>
-                </div>
-            </div>
-
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
-                <div id="ga-upd" style="font-size:10px;color:#263352">未配置 — 点击「设置 API」自动同步，或「手动更新」记录数据</div>
-            </div>
-
-            <!-- Setup Guide -->
-            <details class="setup-guide">
-                <summary>⚙️ 如何配置 Google Analytics 自动同步 → 点击展开教程</summary>
-                <ol class="setup-steps">
-                    <li>进入 <a href="https://analytics.google.com/" target="_blank">Google Analytics</a> → 左下角「管理（齿轮）」→「媒体资源设置」，找到 <b>媒体资源 ID</b>（纯数字，例如 <code>123456789</code>）</li>
-                    <li>打开 <a href="https://script.google.com/home/start" target="_blank">Google Apps Script</a> → 点击「新建项目」→ 删除默认代码，把下方 <b>全部代码</b> 粘贴进去，把第一行的 <code>YOUR_PROPERTY_ID</code> 替换成你的 ID</li>
-                    <li>点击顶部「部署」→「新建部署」→ 类型选「<b>网络应用</b>」→ 执行身份选「<b>我 (自己的 Gmail)</b>」→ 访问权限选「<b>所有人</b>」→「部署」</li>
-                    <li>弹出授权窗口 → 点「授权访问」→ 选你的 Google 账号 → 点「高级」→「转到（不安全）」→「允许」</li>
-                    <li>复制显示的「<b>网络应用 URL</b>」（以 <code>https://script.google.com/macros/s/</code> 开头）</li>
-                    <li>回到这里，点击上方 <b>「设置 API」</b>，粘贴 URL 保存 ✅</li>
-                </ol>
-                <pre class="code-block" id="ga-script-code">正在加载代码…</pre>
-            </details>
-        </div>
-    </div>
 
     <!-- ── Row 2.6: 金融晨报 ── -->
     <div class="row col-1" id="sec-morning">
@@ -1239,6 +1037,233 @@
         </div>
     </div><!-- /#sec-chart -->
 
+    <!-- ── 资产历史 (invest) ── -->
+    <div class="row col-1" id="sec-asset-history">
+        <!-- 资产快照 -->
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">📈 资产历史</span>
+                <span id="snap-count" style="font-size:12px;color:#aaa">0 条</span>
+            </div>
+            <div id="snap-list" style="max-height:240px;overflow-y:auto"></div>
+        </div>
+    </div><!-- /#sec-asset-history -->
+
+    <!-- ── Row 6: Economic Calendar ── -->
+    <div class="card" style="padding:0;overflow:hidden;margin-bottom:20px">
+        <div style="padding:16px 22px 0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#111">📅 经济日历</div>
+        <div class="tradingview-widget-container" style="height:340px">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+            {"colorTheme":"light","isTransparent":true,"width":"100%","height":"340","locale":"zh_CN","importanceFilter":"0,1","currencyFilter":"USD,EUR,JPY,CNY"}
+            </script>
+        </div>
+    </div>
+
+    </section><!-- /#grp-invest -->
+
+    <section class="grp-section" data-grp="project" id="grp-project">
+
+    <!-- ── Row 2: Project ── -->
+    <div class="row col-1" id="sec-projects">
+        <div class="card proj-card">
+            <div class="card-hd">
+                <span class="card-title">🚀 项目追踪</span>
+                <span class="proj-badge"><span class="badge-dot"></span>规划阶段</span>
+            </div>
+            <div class="proj-layout" style="display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
+                <div>
+                    <div class="proj-name">Seedclay</div>
+                    <div class="proj-sub">跨境电商 · 陶瓷泥套装</div>
+                    <div class="proj-links">
+                        <a href="https://sculpd.com/" target="_blank" class="proj-link">↗ Sculpd</a>
+                        <a href="https://getpottd.com/" target="_blank" class="proj-link">↗ Pottd</a>
+                    </div>
+                    <!-- 小红书 占位 -->
+                    <div class="ig-block" style="opacity:0.45;pointer-events:none">
+                        <div class="ig-header">
+                            <div class="ig-brand">
+                                <div class="ig-logo">📕</div>
+                                <div>
+                                    <div class="ig-handle">小红书</div>
+                                </div>
+                            </div>
+                            <div class="ig-actions">
+                                <span style="font-size:11px;color:#888;background:#f0f0f0;padding:3px 10px;border-radius:6px">账号待创建</span>
+                            </div>
+                        </div>
+                        <div class="ig-stats">
+                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">粉丝</div></div>
+                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">笔记</div></div>
+                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">获赞</div></div>
+                        </div>
+                    </div>
+
+                    <!-- 抖音 占位 -->
+                    <div class="ig-block" style="opacity:0.45;pointer-events:none">
+                        <div class="ig-header">
+                            <div class="ig-brand">
+                                <div class="ig-logo">🎵</div>
+                                <div>
+                                    <div class="ig-handle">抖音</div>
+                                </div>
+                            </div>
+                            <div class="ig-actions">
+                                <span style="font-size:11px;color:#888;background:#f0f0f0;padding:3px 10px;border-radius:6px">账号待创建</span>
+                            </div>
+                        </div>
+                        <div class="ig-stats">
+                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">粉丝</div></div>
+                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">作品</div></div>
+                            <div class="ig-stat"><div class="ig-stat-val">—</div><div class="ig-stat-lbl">获赞</div></div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Stats -->
+                    <div class="ig-block">
+                        <div class="ig-header">
+                            <div class="ig-brand">
+                                <div class="ig-logo">📷</div>
+                                <div>
+                                    <div class="ig-handle">@seedclayworld</div>
+                                </div>
+                            </div>
+                            <div class="ig-actions">
+                                <a href="https://www.instagram.com/seedclayworld/" target="_blank" class="icon-btn" title="打开 Instagram 主页">
+                                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                </a>
+                                <a href="https://socialblade.com/instagram/user/seedclayworld" target="_blank" class="icon-btn" title="Social Blade 数据">
+                                    <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                </a>
+                                <button class="icon-btn" onclick="editIg()" title="编辑数据">
+                                    <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="ig-stats">
+                            <div class="ig-stat">
+                                <div class="ig-stat-val" id="ig-followers">—</div>
+                                <div class="ig-stat-lbl">粉丝</div>
+                            </div>
+                            <div class="ig-stat">
+                                <div class="ig-stat-val" id="ig-posts">—</div>
+                                <div class="ig-stat-lbl">帖子</div>
+                            </div>
+                        </div>
+                        <div class="ig-upd" id="ig-upd">尚未记录 — 点击「编辑」手动更新</div>
+                    </div>
+                </div>
+                <div id="milestones"></div>
+            </div>
+            <!-- 业务指标 -->
+            <div id="seedclay-metrics-row" style="margin-top:20px;padding-top:16px;border-top:1px solid #f0f0f0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px">
+                <div style="text-align:center">
+                    <div class="ig-stat-val" id="sc-ig-followers">—</div>
+                    <div class="ig-stat-lbl">IG 粉丝</div>
+                </div>
+                <div style="text-align:center">
+                    <div class="ig-stat-val" id="sc-ig-posts">—</div>
+                    <div class="ig-stat-lbl">IG 帖子</div>
+                </div>
+                <div style="text-align:center">
+                    <div class="ig-stat-val" id="sc-orders">—</div>
+                    <div class="ig-stat-lbl">订单数</div>
+                </div>
+                <div style="text-align:center">
+                    <div class="ig-stat-val" id="sc-revenue">—</div>
+                    <div class="ig-stat-lbl">营收 USD</div>
+                </div>
+                <div style="text-align:center">
+                    <div class="ig-stat-val" id="sc-ad-spend">—</div>
+                    <div class="ig-stat-lbl">广告花费</div>
+                </div>
+                <div style="text-align:center">
+                    <div class="ig-stat-val" id="sc-cac">—</div>
+                    <div class="ig-stat-lbl">CAC</div>
+                </div>
+            </div>
+            <div id="sc-metrics-upd" style="font-size:10px;color:#aaa;margin-top:6px"></div>
+        </div>
+    </div>
+
+    <!-- ── Row 2.5: Website Analytics ── -->
+    <div class="row col-1" id="sec-ga">
+        <div class="card">
+            <div class="card-hd">
+                <div style="display:flex;align-items:center;gap:8px">
+                    <span class="card-title">🌐 Seedclay.com 网站数据</span>
+                    <span class="sync-dot" id="ga-dot" title="GA4 同步状态"></span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:center">
+                    <a href="https://analytics.google.com/" target="_blank" class="icon-btn" title="打开 GA4">
+                        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    <button class="icon-btn" onclick="refreshAnalytics()" title="刷新">
+                        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                    </button>
+                    <button class="icon-btn" onclick="editAnalyticsManual()" title="手动更新">
+                        <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    </button>
+                    <button class="icon-btn icon-primary" onclick="setupAnalyticsApi()" title="设置 API">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="analytics-stats">
+                <div class="a-stat">
+                    <div class="a-stat-val" id="ga-users">—</div>
+                    <div class="a-stat-lbl">今日访客</div>
+                </div>
+                <div class="a-stat">
+                    <div class="a-stat-val" id="ga-sessions">—</div>
+                    <div class="a-stat-lbl">今日会话</div>
+                </div>
+                <div class="a-stat">
+                    <div class="a-stat-val" id="ga-carts">—</div>
+                    <div class="a-stat-lbl">加购次数</div>
+                </div>
+                <div class="a-stat">
+                    <div class="a-stat-val" id="ga-orders">—</div>
+                    <div class="a-stat-lbl">今日订单</div>
+                </div>
+                <div class="a-stat">
+                    <div class="a-stat-val" id="ga-revenue">—</div>
+                    <div class="a-stat-lbl">今日销售额</div>
+                </div>
+            </div>
+
+            <div>
+                <div style="font-size:10px;color:#263352;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">7 天访客趋势</div>
+                <div class="trend-chart" id="ga-chart">
+                    <div style="width:100%;text-align:center;color:#263352;font-size:12px;align-self:center">暂无数据</div>
+                </div>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+                <div id="ga-upd" style="font-size:10px;color:#263352">未配置 — 点击「设置 API」自动同步，或「手动更新」记录数据</div>
+            </div>
+
+            <!-- Setup Guide -->
+            <details class="setup-guide">
+                <summary>⚙️ 如何配置 Google Analytics 自动同步 → 点击展开教程</summary>
+                <ol class="setup-steps">
+                    <li>进入 <a href="https://analytics.google.com/" target="_blank">Google Analytics</a> → 左下角「管理（齿轮）」→「媒体资源设置」，找到 <b>媒体资源 ID</b>（纯数字，例如 <code>123456789</code>）</li>
+                    <li>打开 <a href="https://script.google.com/home/start" target="_blank">Google Apps Script</a> → 点击「新建项目」→ 删除默认代码，把下方 <b>全部代码</b> 粘贴进去，把第一行的 <code>YOUR_PROPERTY_ID</code> 替换成你的 ID</li>
+                    <li>点击顶部「部署」→「新建部署」→ 类型选「<b>网络应用</b>」→ 执行身份选「<b>我 (自己的 Gmail)</b>」→ 访问权限选「<b>所有人</b>」→「部署」</li>
+                    <li>弹出授权窗口 → 点「授权访问」→ 选你的 Google 账号 → 点「高级」→「转到（不安全）」→「允许」</li>
+                    <li>复制显示的「<b>网络应用 URL</b>」（以 <code>https://script.google.com/macros/s/</code> 开头）</li>
+                    <li>回到这里，点击上方 <b>「设置 API」</b>，粘贴 URL 保存 ✅</li>
+                </ol>
+                <pre class="code-block" id="ga-script-code">正在加载代码…</pre>
+            </details>
+        </div>
+    </div>
+
+    </section><!-- /#grp-project -->
+
+    <section class="grp-section" data-grp="news" id="grp-news">
+
     <!-- ── 财经资讯 (news) ── -->
     <div class="row col-1" id="sec-news">
         <div class="card news-card">
@@ -1308,16 +1333,7 @@
 
     </div>
 
-    <!-- ── Row 6: Economic Calendar ── -->
-    <div class="card" style="padding:0;overflow:hidden;margin-bottom:20px">
-        <div style="padding:16px 22px 0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#111">📅 经济日历</div>
-        <div class="tradingview-widget-container" style="height:340px">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
-            {"colorTheme":"light","isTransparent":true,"width":"100%","height":"340","locale":"zh_CN","importanceFilter":"0,1","currencyFilter":"USD,EUR,JPY,CNY"}
-            </script>
-        </div>
-    </div>
+    </section><!-- /#grp-news -->
 
 </div><!-- /container -->
 </div><!-- /#main-content -->
