@@ -134,9 +134,11 @@ for fname in sorted(os.listdir(SIGNALS_DIR)):
         if not day_signals:
             continue
         n = len(day_signals)
-        per_exec = sim_exec / n
-        per_dir  = sim_dir  / n
-        per_gap  = sim_gap  / n
+        active_sigs = [s for s in day_signals if s.get("action", "HOLD") != "HOLD"]
+        n_active_day = len(active_sigs) if active_sigs else 1  # avoid /0
+        per_exec = sim_exec / n_active_day
+        per_dir  = sim_dir  / n_active_day
+        per_gap  = sim_gap  / n_active_day
         day_exec = day_dir = day_gap = day_d = 0.0
         # plan D: allocate only among limit_filled non-HOLD signals
         d_sigs = [s for s in day_signals if s.get("limit_filled") and s.get("action") != "HOLD"]
@@ -161,7 +163,7 @@ for fname in sorted(os.listdir(SIGNALS_DIR)):
             if action != "HOLD": total_active += 1
             if s.get("correct"):           correct_exec += 1
             if s.get("correct_direction"): correct_dir  += 1
-            if not skipped:
+            if not skipped and action != "HOLD":
                 total_gap += 1
                 if s.get("correct"): correct_gap += 1
             if filled and action != "HOLD":

@@ -179,6 +179,8 @@ for fpath in sorted(glob.glob(f"{MN_DIR}/*.json")):
         print(f"[warn] {fpath}: {e}")
 
 for fpath in sorted(glob.glob(f"{TS_DIR}/*.json")):
+    if "-report" in os.path.basename(fpath):
+        continue  # skip per-ticker analysis reports, only process daily summary files
     try:
         d = json.load(open(fpath))
         upsert_trading_signals(d)

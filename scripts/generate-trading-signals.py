@@ -3,7 +3,6 @@ import os
 import sys
 import time
 import yfinance as yf
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
 
 beijing_tz = timezone(timedelta(hours=8))
@@ -192,7 +191,20 @@ def get_open_price(ticker):
     return o
 
 
+def is_us_market_open():
+    """True when NYSE/NASDAQ are actively trading (conservative 13:00–21:00 UTC window covers DST)."""
+    now_utc = datetime.now(timezone.utc)
+    if now_utc.weekday() >= 5:
+        return False
+    market_open  = now_utc.replace(hour=13, minute=0,  second=0, microsecond=0)
+    market_close = now_utc.replace(hour=21, minute=0,  second=0, microsecond=0)
+    return market_open <= now_utc < market_close
+
+
 def check_yesterday_accuracy():
+    if is_us_market_open():
+        print("[warn] US market currently open — skipping accuracy fill to avoid incomplete OHLC; will run on next scheduled execution")
+        return
     prev_file = os.path.join(HISTORY_DIR, f"{yesterday}.json")
     if not os.path.exists(prev_file):
         return

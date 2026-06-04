@@ -1,6 +1,6 @@
 {
   "date": "2026-06-04",
-  "generated_at": "2026-06-04T08:23:00",
+  "generated_at": "2026-06-04T08:26:00",
   "pipeline": {
     "morning_note_found": false,
     "signal_file_found": true,
@@ -184,15 +184,15 @@
       1000.0,
       1025.9,
       1040.06,
-      1028.77,
-      1035.82
+      1017.49,
+      1031.43
     ],
     "cum_capital_b": [
       1000.0,
       1025.9,
       1040.06,
-      1043.33,
-      1057.21
+      1046.61,
+      1074.45
     ],
     "cum_capital_c": [
       1000.0,
@@ -211,31 +211,31 @@
     "correct": 6,
     "accuracy_rate": 0.75,
     "accuracy_pct": "75.0%",
-    "simulated_capital": 1035.82,
-    "simulated_pnl_usd": 35.82,
-    "simulated_pnl_pct": "+3.58%",
+    "simulated_capital": 1031.43,
+    "simulated_pnl_usd": 31.43,
+    "simulated_pnl_pct": "+3.14%",
     "daily_returns": [
       2.59,
       1.38,
-      -1.085,
-      0.685
+      -2.17,
+      1.37
     ],
     "correct_direction": 7,
     "accuracy_direction_rate": 0.875,
     "accuracy_direction_pct": "87.5%",
-    "simulated_capital_direction": 1057.21,
-    "simulated_pnl_direction_usd": 57.21,
-    "simulated_pnl_direction_pct": "+5.72%",
+    "simulated_capital_direction": 1074.45,
+    "simulated_pnl_direction_usd": 74.45,
+    "simulated_pnl_direction_pct": "+7.44%",
     "daily_returns_direction": [
       2.59,
       1.38,
-      0.315,
-      1.33
+      0.63,
+      2.66
     ],
-    "total_gap_filtered": 6,
-    "correct_gap": 5,
-    "accuracy_gap_rate": 0.833,
-    "accuracy_gap_pct": "83.3%",
+    "total_gap_filtered": 4,
+    "correct_gap": 3,
+    "accuracy_gap_rate": 0.75,
+    "accuracy_gap_pct": "75.0%",
     "simulated_capital_gap": 1040.06,
     "simulated_pnl_gap_usd": 40.06,
     "simulated_pnl_gap_pct": "+4.01%",
@@ -245,7 +245,7 @@
       0.0,
       0.0
     ],
-    "gap_cost_usd": 21.39,
+    "gap_cost_usd": 43.02,
     "total_limit": 5,
     "correct_limit": 4,
     "accuracy_limit_rate": 0.8,
