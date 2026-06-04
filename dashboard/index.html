@@ -564,6 +564,74 @@
         .cal-form input[type=date] { width:130px; }
         .cal-form input[type=time] { width:80px; }
         .cal-form input[type=text] { flex:1; min-width:140px; }
+
+        /* ── Navigation Shell ── */
+        #dashboard-shell {
+          display: flex;
+          align-items: flex-start;
+          min-height: 100vh;
+        }
+
+        /* ── Sidebar ── */
+        #sidebar {
+          width: 160px;
+          background: #1a1a2e;
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          overflow-y: auto;
+          flex-shrink: 0;
+          z-index: 100;
+        }
+        .sb-header { padding: 16px; border-bottom: 1px solid rgba(255,255,255,.08); }
+        .sb-title  { font-size: 13px; font-weight: 700; color: #fff; }
+        .sb-sub    { font-size: 10px; color: #555; margin-top: 2px; }
+        .sb-nav    { padding: 12px 0; }
+        .sb-group-lbl {
+          padding: 0 16px 4px;
+          font-size: 9px; font-weight: 700; color: #444;
+          text-transform: uppercase; letter-spacing: .1em;
+        }
+        .sb-item {
+          display: flex; align-items: center; gap: 7px;
+          margin: 0 8px 2px; border-radius: 8px;
+          padding: 7px 10px; font-size: 12px; color: #555;
+          cursor: pointer; text-decoration: none;
+          transition: background .15s, color .15s;
+        }
+        .sb-item:hover  { background: rgba(255,255,255,.07); color: #aaa; }
+        .sb-item.active { background: rgba(255,255,255,.12); color: #fff; }
+
+        /* ── Main content ── */
+        #main-content { flex: 1; min-width: 0; }
+
+        /* ── Group sections ── */
+        .grp-section { display: block; }
+
+        /* ── Bottom tab bar ── */
+        #bottom-tabs {
+          display: none;
+          position: fixed; bottom: 0; left: 0; right: 0;
+          height: 56px; background: #fff;
+          border-top: 1px solid #e8e8e8;
+          z-index: 200;
+        }
+        .bt-item {
+          flex: 1; display: flex; flex-direction: column;
+          align-items: center; justify-content: center;
+          cursor: pointer; gap: 2px;
+        }
+        .bt-icon { font-size: 20px; line-height: 1; }
+        .bt-lbl  { font-size: 9px; color: #999; font-weight: 500; }
+        .bt-item.active .bt-lbl { color: #007aff; font-weight: 600; }
+
+        /* ── Mobile overrides ── */
+        @media (max-width: 480px) {
+          #sidebar      { display: none; }
+          #bottom-tabs  { display: flex; }
+          #main-content { padding-bottom: 56px; }
+          .grp-section.grp-hidden { display: none; }
+        }
     </style>
     <script>
     (function(){
