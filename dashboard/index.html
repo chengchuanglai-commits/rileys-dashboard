@@ -3549,7 +3549,7 @@ function switchMainTab(el) {
         items.forEach(i => i.classList.toggle('active', i.dataset.target === id));
       }
     });
-  }, { threshold: 0.25 });
+  }, { threshold: 0.1 });
   items.forEach(i => {
     const el = document.getElementById(i.dataset.target);
     if (el) observer.observe(el);
