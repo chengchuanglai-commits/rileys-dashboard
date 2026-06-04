@@ -92,7 +92,7 @@ def run_tradingagents(ticker):
     config["llm_provider"] = "anthropic"
     config["deep_think_llm"] = "claude-haiku-4-5-20251001"
     config["quick_think_llm"] = "claude-haiku-4-5-20251001"
-    config["max_debate_rounds"] = 1
+    config["max_debate_rounds"] = 2
     config["online_tools"] = True
     print(f"[tradingagents] Analyzing {ticker}...")
     ta = TradingAgentsGraph(debug=False, config=config)

@@ -1,5 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
-window.PORTFOLIO_B = {
+{
   "capital_usd": 1000,
   "open_positions": [
     {
@@ -240,4 +239,4 @@ window.PORTFOLIO_B = {
     "portfolio_value": 1130.35,
     "updated_at": "2026-06-04"
   }
-};
+}

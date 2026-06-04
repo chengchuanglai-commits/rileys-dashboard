@@ -209,6 +209,8 @@ acc_d    = round(correct_d    / total_d,   3) if total_d   > 0 else None
 report["running_totals"] = {
     "total_signals_verified": total,
     "total_signals_active": total_active,
+    "total_signals_hold": total - total_active,
+    "hold_rate_pct": round((total - total_active) / total * 100, 1) if total > 0 else 0,
     # 选股历史记录（时间倒序）
     "signals_history": list(reversed(signals_history)),
     # 曲线图用：日期标签 + 累计资金（含起始$1000）

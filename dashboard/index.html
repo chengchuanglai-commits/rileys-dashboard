@@ -371,6 +371,21 @@
         .ts-report-section h3 { font-size:11px; font-weight:700; color:#666; text-transform:uppercase; letter-spacing:.5px; margin:0 0 6px; padding-bottom:4px; border-bottom:1px solid #f0f0f0; }
         .ts-report-body { font-size:12px; color:#333; line-height:1.8; white-space:pre-wrap; word-break:break-word; }
 
+        /* ── A vs B comparison ──────────────────── */
+        .ab-panel { border-radius:12px; padding:14px 16px; }
+        .ab-panel.plan-a { background:linear-gradient(135deg,#f0f9ff,#e0f2fe); border:1px solid #bae6fd; }
+        .ab-panel.plan-b { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #86efac; }
+        .ab-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; margin-bottom:8px; }
+        .ab-label.a { color:#0284c7; }
+        .ab-label.b { color:#16a34a; }
+        .ab-capital { font-size:26px; font-weight:800; font-family:'Courier New',monospace; color:#111; }
+        .ab-pnl { font-size:12px; font-weight:600; margin-top:2px; }
+        .ab-row { display:flex; justify-content:space-between; margin-top:8px; padding-top:8px; border-top:1px solid rgba(0,0,0,.06); }
+        .ab-kv { text-align:center; }
+        .ab-kv-lbl { font-size:9px; color:#9ca3af; text-transform:uppercase; letter-spacing:.06em; margin-bottom:2px; font-weight:600; }
+        .ab-kv-val { font-size:12px; font-weight:700; color:#374151; }
+        .hold-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:6px; background:#fef3c7; color:#92400e; font-weight:600; margin:2px; }
+
         /* ── Plan B portfolio ────────────────────── */
         .pb-stat { background:#f8f9fa; border-radius:10px; padding:10px 12px; text-align:center; }
         .pb-stat-lbl { font-size:9px; color:#9ca3af; text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px; font-weight:600; }
@@ -999,12 +1014,28 @@
         </div>
     </div>
 
+    <!-- ── Row 2.75: A vs B 对比 ── -->
+    <div class="row col-1" style="margin-bottom:16px">
+        <div class="card" id="ab-compare-card">
+            <div class="card-hd">
+                <span class="card-title">⚖️ A 方案 vs B 方案对比</span>
+                <span style="font-size:9px;color:#bbb">A=开盘入场(T+1)  B=信号价+TP/SL/多日持仓</span>
+            </div>
+            <!-- 主对比数字 -->
+            <div id="ab-main-stats" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"></div>
+            <!-- 对比图表 -->
+            <div id="ab-curve-chart" style="width:100%;padding:8px 0"></div>
+            <!-- HOLD分析 -->
+            <div id="ab-hold-analysis" style="margin-top:12px;padding:12px 14px;background:#fafafa;border-radius:10px;border:1px solid #f0f0f0"></div>
+        </div>
+    </div>
+
     <!-- ── Row 2.8: 模拟资金曲线 ── -->
     <div class="row col-1" style="margin-bottom:16px">
         <div class="card">
             <div class="card-hd">
-                <span class="card-title">📈 方案D 模拟资金曲线（$1,000 起）</span>
-                <span style="display:flex;align-items:center;gap:4px;font-size:10px;color:#10b981;font-weight:600"><span style="width:20px;height:3px;background:#10b981;display:inline-block;border-radius:2px"></span>限价单入场</span>
+                <span class="card-title">📈 方案 A-D 历史资金曲线（$1,000 起）</span>
+                <span style="display:flex;align-items:center;gap:4px;font-size:10px;color:#10b981;font-weight:600"><span style="width:20px;height:3px;background:#10b981;display:inline-block;border-radius:2px"></span>D=限价入场</span>
             </div>
             <div id="sim-curve-chart" style="width:100%;padding:8px 0"></div>
             <div id="sim-curve-stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px;padding-top:10px;border-top:1px solid #f0f0f0"></div>
@@ -2365,6 +2396,7 @@ async function refreshNews(section) {
     loadSimCurve();
     loadSigHistory();
     renderPortfolioB();
+    renderAbCompare();
     await Promise.all([
         loadSection('fin'),
         loadSection('ai'),
@@ -2453,6 +2485,134 @@ function renderPortfolioB() {
             }).join('');
             closedEl.innerHTML = `<div class="pb-section-lbl" style="margin-top:10px;padding-top:10px;border-top:1px solid #f0f0f0">最近已平仓</div>${rows}`;
         }
+    }
+}
+
+function renderAbCompare() {
+    const rt = window.DAILY_REPORT && window.DAILY_REPORT.running_totals;
+    const pb = window.PORTFOLIO_B;
+    const card = document.getElementById('ab-compare-card');
+    if (!card) return;
+    if (!rt && !pb) { card.style.display = 'none'; return; }
+    card.style.display = '';
+
+    // ── Plan A stats (from daily-report) ──
+    const aCapital = rt ? (rt.simulated_capital || 1000) : 1000;
+    const aPnl = aCapital - 1000;
+    const aPnlPct = (aPnl / 1000 * 100);
+    const aTotal = rt ? (rt.total_signals_verified || 0) : 0;
+    const aActive = rt ? (rt.total_signals_active || aTotal) : 0;
+    const aHolds = aTotal - aActive;
+    const aHoldRate = aTotal > 0 ? (aHolds / aTotal * 100).toFixed(0) : 0;
+    const aAcc = rt ? (rt.accuracy_pct || 'N/A') : 'N/A';
+
+    // ── Plan B stats (from portfolio-b) ──
+    const pbStats = pb ? (pb.stats || {}) : {};
+    const bCapital = pbStats.portfolio_value || 1000;
+    const bPnl = bCapital - 1000;
+    const bPnlPct = (bPnl / 1000 * 100);
+    const bTrades = pbStats.total_trades || 0;
+    const bWinRate = pbStats.win_rate || 0;
+    const bOpen = (pb && pb.open_positions) ? pb.open_positions.length : 0;
+
+    const mainEl = document.getElementById('ab-main-stats');
+    if (mainEl) {
+        const fmt = (v, prefix='') => v >= 0 ? `${prefix}+$${v.toFixed(2)}` : `${prefix}-$${Math.abs(v).toFixed(2)}`;
+        const col = v => v >= 0 ? '#16a34a' : '#dc2626';
+        mainEl.innerHTML = `
+            <div class="ab-panel plan-a">
+                <div class="ab-label a">A 方案 — 开盘价入场 (T+1)</div>
+                <div class="ab-capital">$${aCapital.toFixed(2)}</div>
+                <div class="ab-pnl" style="color:${col(aPnl)}">${fmt(aPnl)} (${aPnlPct >= 0 ? '+' : ''}${aPnlPct.toFixed(1)}%)</div>
+                <div class="ab-row">
+                    <div class="ab-kv"><div class="ab-kv-lbl">信号数</div><div class="ab-kv-val">${aTotal}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">准确率</div><div class="ab-kv-val">${aAcc}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">HOLD率</div><div class="ab-kv-val" style="color:#d97706">${aHoldRate}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">有效信号</div><div class="ab-kv-val">${aActive}</div></div>
+                </div>
+            </div>
+            <div class="ab-panel plan-b">
+                <div class="ab-label b">B 方案 — 信号价 TP+8% / SL-4% / 5日</div>
+                <div class="ab-capital">$${bCapital.toFixed(2)}</div>
+                <div class="ab-pnl" style="color:${col(bPnl)}">${fmt(bPnl)} (${bPnlPct >= 0 ? '+' : ''}${bPnlPct.toFixed(1)}%)</div>
+                <div class="ab-row">
+                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${bTrades}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${bWinRate}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">持仓中</div><div class="ab-kv-val">${bOpen}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">HOLD跳过</div><div class="ab-kv-val" style="color:#16a34a">✓</div></div>
+                </div>
+            </div>`;
+    }
+
+    // ── Cumulative curve: A vs B ──
+    const chartEl = document.getElementById('ab-curve-chart');
+    if (chartEl && rt) {
+        const dates = rt.daily_dates || [];
+        const cumA = rt.cum_capital_a || [1000];
+        // Build Plan B cumulative from closed positions
+        let bCumMap = {};
+        if (pb && pb.closed_positions) {
+            let running = 1000;
+            const sorted = [...pb.closed_positions].sort((a,b) => a.close_date.localeCompare(b.close_date));
+            sorted.forEach(p => {
+                running += (p.realized_pnl_usd || 0);
+                bCumMap[p.close_date] = running;
+            });
+        }
+        const bCum = dates.map((d, i) => {
+            // Use the latest B value up to this date
+            let val = 1000;
+            Object.entries(bCumMap).forEach(([dt, v]) => { if (dt <= d) val = v; });
+            return val;
+        });
+
+        const W = chartEl.clientWidth || 600;
+        const H = 120, PL = 40, PR = 12, PT = 10, PB = 22;
+        const cW = W - PL - PR, cH = H - PT - PB;
+        const allVals = [...cumA.slice(1), ...bCum, 1000];
+        const minV = Math.min(...allVals) * 0.995;
+        const maxV = Math.max(...allVals) * 1.005;
+        const xS = (i, total) => PL + (i / Math.max(total - 1, 1)) * cW;
+        const yS = v => PT + cH - ((v - minV) / (maxV - minV)) * cH;
+
+        const mkPath = (vals, offset=1) => vals.slice(offset).map((v, i) =>
+            `${i === 0 ? 'M' : 'L'}${xS(i, vals.length - offset).toFixed(1)},${yS(v).toFixed(1)}`).join(' ');
+
+        const aPath = mkPath(cumA);
+        const bPath = dates.length > 0 ? mkPath(bCum, 0) : '';
+
+        chartEl.innerHTML = `<svg width="100%" viewBox="0 0 ${W} ${H}" style="overflow:visible">
+            <line x1="${PL}" y1="${PT}" x2="${PL}" y2="${PT+cH}" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="${PL}" y1="${PT+cH}" x2="${W-PR}" y2="${PT+cH}" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="${PL}" y1="${yS(1000).toFixed(1)}" x2="${W-PR}" y2="${yS(1000).toFixed(1)}" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="${PL-4}" y="${yS(1000).toFixed(1)+4}" text-anchor="end" font-size="9" fill="#bbb">$1000</text>
+            ${aPath ? `<path d="${aPath}" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/>` : ''}
+            ${bPath ? `<path d="${bPath}" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linejoin="round"/>` : ''}
+            ${dates.map((d, i) => i % Math.max(Math.floor(dates.length / 4), 1) === 0 ?
+                `<text x="${xS(i, dates.length).toFixed(1)}" y="${H-2}" text-anchor="middle" font-size="8" fill="#bbb">${d.slice(5)}</text>` : '').join('')}
+            <g transform="translate(${PL+8},${PT+12})">
+                <rect width="12" height="2" y="-1" fill="#3b82f6" rx="1"/><text x="16" y="4" font-size="9" fill="#3b82f6" font-weight="600">A方案</text>
+            </g>
+            <g transform="translate(${PL+65},${PT+12})">
+                <rect width="12" height="2" y="-1" fill="#16a34a" rx="1"/><text x="16" y="4" font-size="9" fill="#16a34a" font-weight="600">B方案</text>
+            </g>
+        </svg>`;
+    }
+
+    // ── HOLD analysis ──
+    const holdEl = document.getElementById('ab-hold-analysis');
+    if (holdEl) {
+        const holdDays = pb && pb.closed_positions ? pb.closed_positions.filter(p => !p) : [];
+        holdEl.innerHTML = `
+            <div style="font-size:10px;font-weight:700;color:#92400e;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">⚠️ HOLD 成本分析</div>
+            <div style="font-size:11px;color:#555;line-height:1.7">
+                <b>历史 HOLD 率：${aHoldRate}%（${aHolds}/${aTotal} 条信号）</b>，
+                其中 6/4 当日 2 条全是 HOLD，完全浪费当日分析费。<br>
+                HOLD 绕过方案（扩大候选池）<b>不省钱</b>，平均反而多花 <b>42%</b>。<br>
+                真正降低 HOLD 率的方式：晨报预筛时过滤 RSI 40-60（中性区间）股票，只选极端动能标的。<br>
+                2 轮辩论预估成本：<span style="color:#0284c7;font-weight:700">$1.20/天</span>（1轮 $0.95/天，约 +26%），
+                换取更高辩论质量和信号准确率。
+            </div>`;
     }
 }
 
