@@ -45,10 +45,17 @@ BLACKLIST = {
 }
 
 def select_stocks():
+    # GitHub Actions cron can be delayed several hours; if script runs past midnight Beijing,
+    # fall back to yesterday's morning note (stocks are valid for the whole trading day)
     history_file = f"dashboard/morning-note-history/{today}.json"
     if not os.path.exists(history_file):
-        print(f"[warn] Morning note not found: {history_file}")
-        return []
+        fallback = f"dashboard/morning-note-history/{yesterday}.json"
+        if os.path.exists(fallback):
+            print(f"[warn] Today's morning note not found, using yesterday's: {fallback}")
+            history_file = fallback
+        else:
+            print(f"[warn] Morning note not found: {history_file}")
+            return []
     with open(history_file) as f:
         data = json.load(f)
     picks = data.get('stock_picks', [])
@@ -289,9 +296,9 @@ check_yesterday_accuracy()
 selected_picks = select_stocks()
 if not selected_picks:
     morning_file = f"dashboard/morning-note-history/{today}.json"
-    if not os.path.exists(morning_file):
-        # Morning note not generated yet — running too early, do not write empty file
-        print(f"[abort] Morning note for {today} not found. Exiting without writing signal file.")
+    fallback_file = f"dashboard/morning-note-history/{yesterday}.json"
+    if not os.path.exists(morning_file) and not os.path.exists(fallback_file):
+        print(f"[abort] Morning note for {today} (and {yesterday}) not found. Exiting without writing signal file.")
         sys.exit(0)
     print("[warn] No stocks selected (morning note exists but no valid buy picks).")
     data = {
