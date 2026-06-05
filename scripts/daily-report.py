@@ -446,6 +446,7 @@ def refresh_portfolio_c():
         portfolio = json.load(f)
 
     still_open = []
+    gap_filtered_today = 0
     for pos in portfolio.get("open_positions", []):
         ticker   = pos["ticker"]
         action   = pos["action"]
@@ -476,6 +477,7 @@ def refresh_portfolio_c():
             pos["day1_gap_pct"] = round(gap_pct, 2)
             if unfavorable > GAP_FILTER_PCT:
                 print(f"[portfolio-c] {action} {ticker} 跳空过滤: open={open_today} gap={gap_pct:+.1f}% (不利>{GAP_FILTER_PCT}%) → 取消")
+                gap_filtered_today += 1
                 continue   # 不加入 still_open，相当于取消
 
         raw_pct = (close_today - entry) / entry * 100
@@ -511,7 +513,7 @@ def refresh_portfolio_c():
         pos["allocated_usd"] * list(pos["daily_prices"].values())[-1]["pnl_pct"] / 100
         for pos in still_open if pos["daily_prices"]
     )
-    skipped = portfolio.get("stats", {}).get("skipped_gap", 0)
+    skipped = portfolio.get("stats", {}).get("skipped_gap", 0) + gap_filtered_today
     portfolio["stats"] = {
         "total_trades": len(all_closed),
         "win_trades": len(wins),

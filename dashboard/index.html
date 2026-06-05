@@ -1549,6 +1549,40 @@ function syncAll() {
         .catch(() => {});
 }
 
+// Called once on page init: restore from KV, then upload any local-only keys to KV
+function syncOnInit() {
+    fetch(KV_URL)
+        .then(r => r.json())
+        .then(kv => {
+            restoreFromSync(kv);
+            // Push local data for keys not yet in KV (primary-Mac → KV migration)
+            const localKeys = ['accounts_v2', 'asset_snapshots', 'calendar_events', 'health_data', 'milestones', 'seedclay_milestones', 'seedclay_metrics', 'ig_seedclay'];
+            const upload = {};
+            localKeys.forEach(k => {
+                if (!kv[k]) {
+                    const v = localStorage.getItem(k);
+                    if (v && v !== 'null' && v !== '[]' && v !== '{}') {
+                        try { upload[k] = JSON.parse(v); } catch(e) {}
+                    }
+                }
+            });
+            // workout keys (wo_YYYYWW format)
+            if (!kv.workout) {
+                const wo = {};
+                let hasWo = false;
+                Object.keys(localStorage).filter(k => k.startsWith('wo_')).forEach(k => {
+                    try { wo[k.slice(3)] = JSON.parse(localStorage.getItem(k)); hasWo = true; } catch(e) {}
+                });
+                if (hasWo) upload.workout = wo;
+            }
+            if (Object.keys(upload).length) {
+                const merged = Object.assign({}, kv, upload);
+                fetch(KV_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(merged) }).catch(()=>{});
+            }
+        })
+        .catch(() => {});
+}
+
 function pushKV(key, value) {
     fetch(KV_URL)
         .then(r => r.json())
@@ -1839,9 +1873,11 @@ async function fetchStockPrices(symbols) {
 }
 
 function renderPortfolio(prices = {}) {
+    const portoList = document.getElementById('porto-list');
+    if (!portoList) return;
     const positions = getPortfolio();
     if (!positions.length) {
-        document.getElementById('porto-list').innerHTML = '<div class="porto-empty">尚无持仓 — 点击「添加持仓」开始记录，或先用下方平台开户</div>';
+        portoList.innerHTML = '<div class="porto-empty">尚无持仓 — 点击「添加持仓」开始记录，或先用下方平台开户</div>';
         ['ps-value','ps-cost','ps-pl','ps-plpct'].forEach(id => {
             const el = document.getElementById(id);
             if (id==='ps-plpct') el.textContent = '0%';
@@ -1888,7 +1924,7 @@ function renderPortfolio(prices = {}) {
         </tr>`;
     }).join('');
 
-    document.getElementById('porto-list').innerHTML = `
+    portoList.innerHTML = `
         <table class="porto-table">
             <thead><tr>
                 <th>代码</th><th>名称</th><th>持股数</th><th>成本价</th>
@@ -2246,6 +2282,7 @@ async function refreshNews(section) {
 
 // Init news on load
 (async () => {
+    syncOnInit();   // pull KV data + upload any local-only keys for cross-device sync
     loadMorningNote();
     loadTradingSignals();
     loadSimCurve();
