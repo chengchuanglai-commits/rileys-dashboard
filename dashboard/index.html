@@ -947,7 +947,7 @@
         <div class="card" id="ibkr-card">
             <div class="card-hd" style="margin-bottom:14px">
                 <span class="card-title">🏦 IBKR 实盘计划</span>
-                <span style="font-size:9px;color:#bbb">加拿大账户 · 目标 $1,000 USD 起步</span>
+                <span style="font-size:9px;color:#bbb">加拿大账户 · 目标 $2,000 USD 起步</span>
             </div>
             <div id="ibkr-card-body"></div>
         </div>
@@ -2973,7 +2973,7 @@ function renderIbkrPlan() {
 
     const tasks = [
         { id: 'open_account',  text: '在 IBKR 官网开户', sub: 'interactivebrokers.ca → Individual Account → 加拿大护照', phase: 1 },
-        { id: 'bmo_eft',       text: 'BMO EFT 入金', sub: '添加 IBKR 为 payee，转入 $1,000 CAD，1–2 个工作日到账', phase: 1 },
+        { id: 'bmo_eft',       text: 'BMO EFT 入金', sub: '添加 IBKR 为 payee，转入 $2,000 USD（约 $2,750 CAD），1–2 个工作日到账', phase: 1 },
         { id: 'convert_usd',   text: '账户内换汇至 USD', sub: 'CAD → USD，IBKR 内置汇率优于银行', phase: 1 },
         { id: 'install_gw',    text: '安装 IB Gateway（电脑端）', sub: '保持后台运行，Python 脚本通过本地端口连接', phase: 2 },
         { id: 'test_api',      text: '测试 ib_insync 连接', sub: 'pip install ib_insync → 验证 API 连通性', phase: 2 },
