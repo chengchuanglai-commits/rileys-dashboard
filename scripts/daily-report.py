@@ -110,17 +110,17 @@ total = correct_exec = correct_dir = 0
 total_gap = correct_gap = 0          # gap-filtered: only count non-skipped trades
 total_d = correct_d = 0              # plan D: limit order at signal price
 total_active = 0                     # non-HOLD signals
-sim_exec = sim_dir = sim_gap = sim_d = 1000.0
+sim_exec = sim_dir = sim_gap = sim_d = 2000.0
 daily_dates = []
 daily_returns = []
 daily_returns_dir = []
 daily_returns_gap = []
 daily_returns_d = []
-# cumulative capital per day (starts at 1000)
-cum_exec = [1000.0]
-cum_dir  = [1000.0]
-cum_gap  = [1000.0]
-cum_d    = [1000.0]
+# cumulative capital per day (starts at 2000)
+cum_exec = [2000.0]
+cum_dir  = [2000.0]
+cum_gap  = [2000.0]
+cum_d    = [2000.0]
 signals_history = []  # all verified signals across all days
 
 for fname in sorted(os.listdir(SIGNALS_DIR)):
@@ -224,16 +224,16 @@ report["running_totals"] = {
     "accuracy_rate": acc_exec,
     "accuracy_pct": f"{round(acc_exec*100,1)}%" if acc_exec else "N/A",
     "simulated_capital": round(sim_exec, 2),
-    "simulated_pnl_usd": round(sim_exec - 1000.0, 2),
-    "simulated_pnl_pct": f"{(sim_exec/1000-1)*100:+.2f}%",
+    "simulated_pnl_usd": round(sim_exec - 2000.0, 2),
+    "simulated_pnl_pct": f"{(sim_exec/2000-1)*100:+.2f}%",
     "daily_returns": daily_returns,
     # B. 方向准确率（信号价，AI预测质量）
     "correct_direction": correct_dir,
     "accuracy_direction_rate": acc_dir,
     "accuracy_direction_pct": f"{round(acc_dir*100,1)}%" if acc_dir else "N/A",
     "simulated_capital_direction": round(sim_dir, 2),
-    "simulated_pnl_direction_usd": round(sim_dir - 1000.0, 2),
-    "simulated_pnl_direction_pct": f"{(sim_dir/1000-1)*100:+.2f}%",
+    "simulated_pnl_direction_usd": round(sim_dir - 2000.0, 2),
+    "simulated_pnl_direction_pct": f"{(sim_dir/2000-1)*100:+.2f}%",
     "daily_returns_direction": daily_returns_dir,
     # C. 跳空过滤后（>1%跳空不入场）
     "total_gap_filtered": total_gap,
@@ -241,8 +241,8 @@ report["running_totals"] = {
     "accuracy_gap_rate": acc_gap,
     "accuracy_gap_pct": f"{round(acc_gap*100,1)}%" if acc_gap else "N/A",
     "simulated_capital_gap": round(sim_gap, 2),
-    "simulated_pnl_gap_usd": round(sim_gap - 1000.0, 2),
-    "simulated_pnl_gap_pct": f"{(sim_gap/1000-1)*100:+.2f}%",
+    "simulated_pnl_gap_usd": round(sim_gap - 2000.0, 2),
+    "simulated_pnl_gap_pct": f"{(sim_gap/2000-1)*100:+.2f}%",
     "daily_returns_gap": daily_returns_gap,
     "gap_cost_usd": round(sim_dir - sim_exec, 2),
     # D. 限价单（信号价触及才入场）
@@ -251,8 +251,8 @@ report["running_totals"] = {
     "accuracy_limit_rate": acc_d,
     "accuracy_limit_pct": f"{round(acc_d*100,1)}%" if acc_d else "N/A",
     "simulated_capital_limit": round(sim_d, 2),
-    "simulated_pnl_limit_usd": round(sim_d - 1000.0, 2),
-    "simulated_pnl_limit_pct": f"{(sim_d/1000-1)*100:+.2f}%",
+    "simulated_pnl_limit_usd": round(sim_d - 2000.0, 2),
+    "simulated_pnl_limit_pct": f"{(sim_d/2000-1)*100:+.2f}%",
     "daily_returns_limit": daily_returns_d,
 }
 

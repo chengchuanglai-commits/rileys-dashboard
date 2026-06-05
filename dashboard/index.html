@@ -2683,9 +2683,9 @@ function renderAbCompare() {
     card.style.display = '';
 
     // ── Plan A stats (from daily-report) ──
-    const aCapital = rt ? (rt.simulated_capital || 1000) : 1000;
-    const aPnl = aCapital - 1000;
-    const aPnlPct = (aPnl / 1000 * 100);
+    const aCapital = rt ? (rt.simulated_capital || 2000) : 2000;
+    const aPnl = aCapital - 2000;
+    const aPnlPct = (aPnl / 2000 * 100);
     const aTotal = rt ? (rt.total_signals_verified || 0) : 0;
     const aActive = rt ? (rt.total_signals_active || aTotal) : 0;
     const aHolds = aTotal - aActive;
@@ -2694,9 +2694,9 @@ function renderAbCompare() {
 
     // ── Plan B stats (from portfolio-b) ──
     const pbStats = pb ? (pb.stats || {}) : {};
-    const bCapital = pbStats.portfolio_value || 1000;
-    const bPnl = bCapital - 1000;
-    const bPnlPct = (bPnl / 1000 * 100);
+    const bCapital = pbStats.portfolio_value || 2000;
+    const bPnl = bCapital - 2000;
+    const bPnlPct = (bPnl / 2000 * 100);
     const bTrades = pbStats.total_trades || 0;
     const bWinRate = pbStats.win_rate || 0;
     const bOpen = (pb && pb.open_positions) ? pb.open_positions.length : 0;
@@ -3079,9 +3079,9 @@ function loadSimCurve() {
     const cumA   = _rawCumA.length > dates.length
         ? _rawCumA.slice(_rawCumA.length - dates.length)
         : _rawCumA;
-    const aFinal = rt.simulated_capital_limit || 1000;
-    const aPnl   = aFinal - 1000;
-    const aPnlPct = (aPnl / 10).toFixed(2);
+    const aFinal = rt.simulated_capital_limit || 2000;
+    const aPnl   = aFinal - 2000;
+    const aPnlPct = (aPnl / 20).toFixed(2);
     const aTotal  = rt.total_limit || 0;
     const aHolds  = (rt.total_signals_verified || 0) - (rt.total_signals_active || 0);
     const aAcc    = rt.accuracy_limit_pct || 'N/A';
@@ -3090,14 +3090,14 @@ function loadSimCurve() {
     const pbClosed = (pb && pb.closed_positions) ? pb.closed_positions : [];
     const pbOpen   = (pb && pb.open_positions)   ? pb.open_positions   : [];
     const pbStats  = (pb && pb.stats)            ? pb.stats            : {};
-    const bFinal   = pbStats.portfolio_value || 1000;
-    const bPnl     = bFinal - 1000;
-    const bPnlPct  = (bPnl / 10).toFixed(2);
+    const bFinal   = pbStats.portfolio_value || 2000;
+    const bPnl     = bFinal - 2000;
+    const bPnlPct  = (bPnl / 20).toFixed(2);
     const bTrades  = pbStats.total_trades || 0;
     const bWinRate = pbStats.win_rate     || 0;
 
     const bCumByDate = {};
-    let bRunning = 1000;
+    let bRunning = 2000;
     [...pbClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
         .forEach(p => { bRunning += (p.realized_pnl_usd || 0); bCumByDate[p.close_date] = bRunning; });
     const cumB = dates.map(d => {
@@ -3110,15 +3110,15 @@ function loadSimCurve() {
     const pcClosed = (pc && pc.closed_positions) ? pc.closed_positions : [];
     const pcOpen   = (pc && pc.open_positions)   ? pc.open_positions   : [];
     const pcStats  = (pc && pc.stats)            ? pc.stats            : {};
-    const cFinal   = pcStats.portfolio_value || 1000;
-    const cPnl     = cFinal - 1000;
-    const cPnlPct  = (cPnl / 10).toFixed(2);
+    const cFinal   = pcStats.portfolio_value || 2000;
+    const cPnl     = cFinal - 2000;
+    const cPnlPct  = (cPnl / 20).toFixed(2);
     const cTrades  = pcStats.total_trades  || 0;
     const cWinRate = pcStats.win_rate      || 0;
     const cSkipped = pcStats.skipped_gap   || 0;
 
     const cCumByDate = {};
-    let cRunning = 1000;
+    let cRunning = 2000;
     [...pcClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
         .forEach(p => { cRunning += (p.realized_pnl_usd || 0); cCumByDate[p.close_date] = cRunning; });
     const cumC = dates.map(d => {
@@ -3162,7 +3162,7 @@ function loadSimCurve() {
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
-        const allVals = [...cumA, ...cumB, ...cumC, 1000];
+        const allVals = [...cumA, ...cumB, ...cumC, 2000];
         const yMin = Math.min(...allVals);
         const yMax = Math.max(...allVals);
         const yPad = Math.max((yMax - yMin) * 0.15, 15);

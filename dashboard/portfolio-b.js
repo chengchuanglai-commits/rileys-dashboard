@@ -1,31 +1,7 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
-  "capital_usd": 1000,
+  "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "action": "BUY",
-      "signal_date": "2026-06-02",
-      "entry_price": 1036.48,
-      "allocated_usd": 500,
-      "take_profit": 1119.4,
-      "stop_loss": 995.02,
-      "max_hold_date": "2026-06-09",
-      "daily_prices": {
-        "2026-06-03": {
-          "open": 1079.01,
-          "high": 1089.29,
-          "low": 1038.5,
-          "close": 1079.57,
-          "pnl_pct": 4.16
-        },
-        "2026-06-04": {
-          "close": 996.0,
-          "pnl_pct": -3.91
-        }
-      }
-    },
     {
       "ticker": "KLIC",
       "name": "Kulicke and Soffa Industries Inc.",
@@ -38,6 +14,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-10",
       "daily_prices": {
         "2026-06-04": {
+          "open": 104.03,
+          "high": 109.39,
+          "low": 103.06,
           "close": 107.52,
           "pnl_pct": 0.78
         }
@@ -53,12 +32,7 @@ window.PORTFOLIO_B = {
       "take_profit": 117.07,
       "stop_loss": 104.06,
       "max_hold_date": "2026-06-11",
-      "daily_prices": {
-        "2026-06-04": {
-          "close": 107.52,
-          "pnl_pct": -0.81
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "OKLO",
@@ -70,12 +44,7 @@ window.PORTFOLIO_B = {
       "take_profit": 60.16,
       "stop_loss": 68.01,
       "max_hold_date": "2026-06-12",
-      "daily_prices": {
-        "2026-06-04": {
-          "close": 65.39,
-          "pnl_pct": -0.0
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "ADMA",
@@ -87,12 +56,7 @@ window.PORTFOLIO_B = {
       "take_profit": 7.34,
       "stop_loss": 8.3,
       "max_hold_date": "2026-06-12",
-      "daily_prices": {
-        "2026-06-04": {
-          "close": 7.98,
-          "pnl_pct": -0.0
-        }
-      }
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -276,16 +240,48 @@ window.PORTFOLIO_B = {
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
       "realized_pnl_usd": 40.0
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "action": "BUY",
+      "signal_date": "2026-06-02",
+      "entry_price": 1036.48,
+      "allocated_usd": 500,
+      "take_profit": 1119.4,
+      "stop_loss": 995.02,
+      "max_hold_date": "2026-06-09",
+      "daily_prices": {
+        "2026-06-03": {
+          "open": 1079.01,
+          "high": 1089.29,
+          "low": 1038.5,
+          "close": 1079.57,
+          "pnl_pct": 4.16
+        },
+        "2026-06-04": {
+          "open": 1007.1,
+          "high": 1036.37,
+          "low": 971.68,
+          "close": 996.0,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-06-04",
+      "close_price": 995.02,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -20.0
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日",
   "stats": {
-    "total_trades": 5,
+    "total_trades": 6,
     "win_trades": 4,
-    "win_rate": 80.0,
-    "total_realized_pnl_usd": 109.55,
-    "open_unrealized_pnl_usd": -19.7,
-    "portfolio_value": 1089.85,
+    "win_rate": 66.7,
+    "total_realized_pnl_usd": 89.55,
+    "open_unrealized_pnl_usd": 3.9,
+    "portfolio_value": 2093.45,
     "updated_at": "2026-06-05"
   }
 };

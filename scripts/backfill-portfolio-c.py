@@ -17,7 +17,7 @@ TP_PCT = 8
 SL_PCT = 4
 MAX_HOLD_TRADING_DAYS = 5
 PER_POSITION_USD = 500
-STARTING_CAPITAL = 1000
+STARTING_CAPITAL = 2000
 GAP_FILTER_PCT = 1.5   # 不利跳空超过此值则跳过
 
 def next_n_trading_days(start_str, n):

@@ -1,34 +1,6 @@
 {
-  "capital_usd": 1000,
+  "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "action": "BUY",
-      "signal_date": "2026-06-02",
-      "entry_price": 1036.48,
-      "allocated_usd": 500,
-      "take_profit": 1119.4,
-      "stop_loss": 995.02,
-      "max_hold_date": "2026-06-09",
-      "day1_open": 1079.01,
-      "daily_prices": {
-        "2026-06-03": {
-          "open": 1079.01,
-          "high": 1089.29,
-          "low": 1038.5,
-          "close": 1079.57,
-          "pnl_pct": 4.16
-        },
-        "2026-06-04": {
-          "open": null,
-          "high": null,
-          "low": null,
-          "close": null,
-          "pnl_pct": null
-        }
-      }
-    },
     {
       "ticker": "KLIC",
       "name": "Kulicke and Soffa Industries Inc.",
@@ -39,14 +11,14 @@
       "take_profit": 99.69,
       "stop_loss": 112.69,
       "max_hold_date": "2026-06-10",
-      "day1_open": null,
+      "day1_open": 104.03,
       "daily_prices": {
         "2026-06-04": {
-          "open": null,
-          "high": null,
-          "low": null,
-          "close": null,
-          "pnl_pct": null
+          "open": 104.03,
+          "high": 109.39,
+          "low": 103.06,
+          "close": 107.52,
+          "pnl_pct": 0.78
         }
       }
     },
@@ -276,16 +248,49 @@
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
       "realized_pnl_usd": 40.0
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "action": "BUY",
+      "signal_date": "2026-06-02",
+      "entry_price": 1036.48,
+      "allocated_usd": 500,
+      "take_profit": 1119.4,
+      "stop_loss": 995.02,
+      "max_hold_date": "2026-06-09",
+      "day1_open": 1079.01,
+      "daily_prices": {
+        "2026-06-03": {
+          "open": 1079.01,
+          "high": 1089.29,
+          "low": 1038.5,
+          "close": 1079.57,
+          "pnl_pct": 4.16
+        },
+        "2026-06-04": {
+          "open": 1007.1,
+          "high": 1036.37,
+          "low": 971.68,
+          "close": 996.0,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-06-04",
+      "close_price": 995.02,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -20.0
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过",
   "stats": {
-    "total_trades": 5,
+    "total_trades": 6,
     "win_trades": 4,
-    "win_rate": 80.0,
-    "total_realized_pnl_usd": 109.55,
-    "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 1109.55,
+    "win_rate": 66.7,
+    "total_realized_pnl_usd": 89.55,
+    "open_unrealized_pnl_usd": 3.9,
+    "portfolio_value": 2093.45,
     "skipped_gap": 0,
     "updated_at": "2026-06-05"
   }

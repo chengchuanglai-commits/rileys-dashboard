@@ -17,7 +17,7 @@ TP_PCT = 8   # take profit %
 SL_PCT = 4   # stop loss %
 MAX_HOLD_TRADING_DAYS = 5
 PER_POSITION_USD = 500
-STARTING_CAPITAL = 1000
+STARTING_CAPITAL = 2000
 
 # ── 工具函数 ────────────────────────────────────────────────────
 

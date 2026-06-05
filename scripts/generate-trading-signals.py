@@ -517,7 +517,7 @@ def update_portfolio_b(new_signals, signal_date):
         with open(portfolio_path) as f:
             portfolio = json.load(f)
     else:
-        portfolio = {"capital_usd": 1000, "open_positions": [], "closed_positions": []}
+        portfolio = {"capital_usd": 2000, "open_positions": [], "closed_positions": []}
 
     open_tickers = {p["ticker"] for p in portfolio["open_positions"]}
     for sig in new_signals:
@@ -570,7 +570,7 @@ def update_portfolio_c(new_signals, signal_date):
         with open(portfolio_path) as f:
             portfolio = json.load(f)
     else:
-        portfolio = {"capital_usd": 1000, "open_positions": [], "closed_positions": [],
+        portfolio = {"capital_usd": 2000, "open_positions": [], "closed_positions": [],
                      "_note": "Plan C: TP+8%/SL-4%/5日 + 不利跳空>1.5%跳过"}
 
     open_tickers = {p["ticker"] for p in portfolio["open_positions"]}
