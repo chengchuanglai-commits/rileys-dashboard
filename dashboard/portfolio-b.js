@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 1000,
   "open_positions": [
@@ -19,6 +19,10 @@ window.PORTFOLIO_B = {
           "low": 1038.5,
           "close": 1079.57,
           "pnl_pct": 4.16
+        },
+        "2026-06-04": {
+          "close": 996.0,
+          "pnl_pct": -3.91
         }
       }
     },
@@ -32,7 +36,12 @@ window.PORTFOLIO_B = {
       "take_profit": 99.69,
       "stop_loss": 112.69,
       "max_hold_date": "2026-06-10",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-04": {
+          "close": 107.52,
+          "pnl_pct": 0.78
+        }
+      }
     },
     {
       "ticker": "KLIC",
@@ -44,7 +53,46 @@ window.PORTFOLIO_B = {
       "take_profit": 117.07,
       "stop_loss": 104.06,
       "max_hold_date": "2026-06-11",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-04": {
+          "close": 107.52,
+          "pnl_pct": -0.81
+        }
+      }
+    },
+    {
+      "ticker": "OKLO",
+      "name": "Oklo Inc.",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 65.39,
+      "allocated_usd": 500,
+      "take_profit": 60.16,
+      "stop_loss": 68.01,
+      "max_hold_date": "2026-06-12",
+      "daily_prices": {
+        "2026-06-04": {
+          "close": 65.39,
+          "pnl_pct": -0.0
+        }
+      }
+    },
+    {
+      "ticker": "ADMA",
+      "name": "ADMA Biologics",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 7.98,
+      "allocated_usd": 500,
+      "take_profit": 7.34,
+      "stop_loss": 8.3,
+      "max_hold_date": "2026-06-12",
+      "daily_prices": {
+        "2026-06-04": {
+          "close": 7.98,
+          "pnl_pct": -0.0
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -236,8 +284,8 @@ window.PORTFOLIO_B = {
     "win_trades": 4,
     "win_rate": 80.0,
     "total_realized_pnl_usd": 109.55,
-    "open_unrealized_pnl_usd": 20.8,
-    "portfolio_value": 1130.35,
-    "updated_at": "2026-06-04"
+    "open_unrealized_pnl_usd": -19.7,
+    "portfolio_value": 1089.85,
+    "updated_at": "2026-06-05"
   }
 };
