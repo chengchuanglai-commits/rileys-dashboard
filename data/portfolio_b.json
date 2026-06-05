@@ -2,47 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "KLIC",
-      "name": "Kulicke and Soffa Industries Inc.",
-      "action": "SELL",
-      "signal_date": "2026-06-03",
-      "entry_price": 108.36,
-      "allocated_usd": 500,
-      "take_profit": 99.69,
-      "stop_loss": 112.69,
-      "max_hold_date": "2026-06-10",
-      "daily_prices": {
-        "2026-06-04": {
-          "open": 104.03,
-          "high": 109.39,
-          "low": 103.06,
-          "close": 107.52,
-          "pnl_pct": 0.78
-        },
-        "2026-06-05": {
-          "close": 101.11,
-          "pnl_pct": 6.69
-        }
-      }
-    },
-    {
-      "ticker": "ADMA",
-      "name": "ADMA Biologics",
-      "action": "SELL",
-      "signal_date": "2026-06-05",
-      "entry_price": 7.98,
-      "allocated_usd": 500,
-      "take_profit": 7.34,
-      "stop_loss": 8.3,
-      "max_hold_date": "2026-06-12",
-      "daily_prices": {
-        "2026-06-05": {
-          "close": 8.02,
-          "pnl_pct": -0.5
-        }
-      }
-    },
-    {
       "ticker": "LRCX",
       "name": "Lam Research Corporation",
       "action": "BUY",
@@ -52,12 +11,7 @@
       "take_profit": 343.98,
       "stop_loss": 305.76,
       "max_hold_date": "2026-06-12",
-      "daily_prices": {
-        "2026-06-05": {
-          "close": 316.9,
-          "pnl_pct": -0.5
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "FLR",
@@ -69,12 +23,7 @@
       "take_profit": 44.48,
       "stop_loss": 50.28,
       "max_hold_date": "2026-06-12",
-      "daily_prices": {
-        "2026-06-05": {
-          "close": 48.35,
-          "pnl_pct": -0.0
-        }
-      }
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -294,6 +243,38 @@
     {
       "ticker": "KLIC",
       "name": "Kulicke and Soffa Industries Inc.",
+      "action": "SELL",
+      "signal_date": "2026-06-03",
+      "entry_price": 108.36,
+      "allocated_usd": 500,
+      "take_profit": 99.69,
+      "stop_loss": 112.69,
+      "max_hold_date": "2026-06-10",
+      "daily_prices": {
+        "2026-06-04": {
+          "open": 104.03,
+          "high": 109.39,
+          "low": 103.06,
+          "close": 107.52,
+          "pnl_pct": 0.78
+        },
+        "2026-06-05": {
+          "open": 103.9,
+          "high": 104.75,
+          "low": 99.62,
+          "close": 100.18,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-05",
+      "close_price": 99.69,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 40.0
+    },
+    {
+      "ticker": "KLIC",
+      "name": "Kulicke and Soffa Industries Inc.",
       "action": "BUY",
       "signal_date": "2026-06-04",
       "entry_price": 108.4,
@@ -305,8 +286,8 @@
         "2026-06-05": {
           "open": 103.9,
           "high": 104.75,
-          "low": 101.0,
-          "close": 103.43,
+          "low": 99.62,
+          "close": 100.18,
           "pnl_pct": -4.0
         }
       },
@@ -315,28 +296,6 @@
       "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
       "realized_pnl_usd": -20.0
-    },
-    {
-      "ticker": "OKLO",
-      "name": "Oklo Inc.",
-      "action": "SELL",
-      "signal_date": "2026-06-05",
-      "entry_price": 65.39,
-      "allocated_usd": 500,
-      "take_profit": 60.16,
-      "stop_loss": 68.01,
-      "max_hold_date": "2026-06-12",
-      "daily_prices": {
-        "2026-06-05": {
-          "close": 59.35,
-          "pnl_pct": 9.24
-        }
-      },
-      "close_date": "2026-06-05",
-      "close_price": 59.35,
-      "final_pnl_pct": 9.24,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 46.18
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日",
@@ -344,9 +303,9 @@
     "total_trades": 8,
     "win_trades": 5,
     "win_rate": 62.5,
-    "total_realized_pnl_usd": 115.73,
-    "open_unrealized_pnl_usd": 28.45,
-    "portfolio_value": 2144.18,
-    "updated_at": "2026-06-06"
+    "total_realized_pnl_usd": 109.55,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2109.55,
+    "updated_at": "2026-06-05"
   }
 }
