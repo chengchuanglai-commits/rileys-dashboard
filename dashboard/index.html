@@ -2296,6 +2296,34 @@ async function refreshNews(section) {
     ]);
 })();
 
+// 盘中自动刷新：每30分钟重新加载 portfolio JS 文件并刷新模拟盘面板
+(function setupPortfolioAutoRefresh() {
+    const INTERVAL_MS = 10 * 60 * 1000; // 10 分钟
+    function isMarketHours() {
+        const now = new Date();
+        const utcH = now.getUTCHours(), utcM = now.getUTCMinutes(), utcD = now.getUTCDay();
+        if (utcD === 0 || utcD === 6) return false; // 周末
+        const utcMins = utcH * 60 + utcM;
+        return utcMins >= 13 * 60 + 30 && utcMins < 20 * 60; // 13:30-20:00 UTC = 美东 9:30-16:00
+    }
+    function reloadPortfolioScripts() {
+        if (!isMarketHours()) return;
+        const v = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, ''); // 精确到分钟
+        const load = src => new Promise(res => {
+            const s = document.createElement('script');
+            s.src = src + '?v=' + v;
+            s.onload = res; s.onerror = res;
+            document.head.appendChild(s);
+        });
+        Promise.all([load('portfolio-b.js'), load('portfolio-c.js')]).then(() => {
+            loadSimCurve();
+            loadSigHistory();
+            renderSimPbOpen();
+        });
+    }
+    setInterval(reloadPortfolioScripts, INTERVAL_MS);
+})();
+
 // ── Trading Signals ───────────────────────────────────
 function renderPortfolioB() {
     const pb = window.PORTFOLIO_B;
