@@ -12,7 +12,7 @@ window.PORTFOLIO_C = {
       "take_profit": 99.69,
       "stop_loss": 112.69,
       "max_hold_date": "2026-06-10",
-      "day1_open": 103.9,
+      "day1_open": 104.03,
       "daily_prices": {
         "2026-06-04": {
           "open": 104.03,
@@ -22,12 +22,13 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.78
         },
         "2026-06-05": {
-          "close": 102.0,
-          "pnl_pct": 5.87
+          "open": 103.9,
+          "high": 104.75,
+          "low": 101.0,
+          "close": 103.43,
+          "pnl_pct": 4.55
         }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": -4.12
+      }
     },
     {
       "ticker": "OKLO",
@@ -39,15 +40,8 @@ window.PORTFOLIO_C = {
       "take_profit": 60.16,
       "stop_loss": 68.01,
       "max_hold_date": "2026-06-12",
-      "day1_open": 64.8,
-      "daily_prices": {
-        "2026-06-05": {
-          "close": 61.59,
-          "pnl_pct": 5.81
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": -0.9
+      "day1_open": null,
+      "daily_prices": {}
     },
     {
       "ticker": "ADMA",
@@ -59,15 +53,8 @@ window.PORTFOLIO_C = {
       "take_profit": 7.34,
       "stop_loss": 8.3,
       "max_hold_date": "2026-06-12",
-      "day1_open": 8.07,
-      "daily_prices": {
-        "2026-06-05": {
-          "close": 8.03,
-          "pnl_pct": -0.63
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": 1.13
+      "day1_open": null,
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -297,8 +284,8 @@ window.PORTFOLIO_C = {
     "win_trades": 4,
     "win_rate": 66.7,
     "total_realized_pnl_usd": 89.55,
-    "open_unrealized_pnl_usd": 55.25,
-    "portfolio_value": 2144.8,
+    "open_unrealized_pnl_usd": 22.75,
+    "portfolio_value": 2112.3,
     "skipped_gap": 1,
     "updated_at": "2026-06-05"
   }
