@@ -2979,14 +2979,14 @@ function renderIbkrPlan() {
         { id: 'test_api',      text: '测试 ib_insync 连接', sub: 'pip install ib_insync → 验证 API 连通性', phase: 2 },
         { id: 'build_script',  text: '开发自动下单脚本', sub: 'GitHub Actions 信号 → ib_insync → IBKR 下单', phase: 2 },
         { id: 'first_trade',   text: '执行第一笔实盘 BUY', sub: '只执行 BUY 信号，$200/笔起，SELL 暂跳过', phase: 2 },
-        { id: 'margin',        text: '账户到 $2,000 → 申请 Margin', sub: '开通做空权限，SELL 信号全面接入', phase: 3 },
+        { id: 'margin',        text: '申请 Margin 账户', sub: '账户批准后即可申请（起始 $2,000 已满足门槛），开通做空权限', phase: 3 },
         { id: 'auto_sell',     text: '接入 SELL 信号（做空）', sub: '全信号自动执行，正式进入全自动模式', phase: 3 },
     ];
 
     const phaseInfo = {
         1: { label: '阶段 1', title: '开户 & 入金', sub: '加拿大护照 + BMO → IBKR', color: 'active' },
         2: { label: '阶段 2', title: '接入 API & 首单', sub: '安装 IB Gateway，运行首笔 BUY', color: 'locked' },
-        3: { label: '阶段 3', title: '全信号自动化', sub: '账户到 $2,000 开空，全自动盘操', color: 'locked' },
+        3: { label: '阶段 3', title: '全信号自动化', sub: '申请 Margin 开空，全自动盘操', color: 'locked' },
     };
 
     // ── 已勾数量 / 进度 ──
@@ -3034,8 +3034,8 @@ function renderIbkrPlan() {
         <div class="ibkr-phases">${phaseHtml}</div>
         <ul class="ibkr-checklist">${itemsHtml}</ul>
         <div class="ibkr-alert">
-            ⚠️ <strong>$1,000 阶段限制：</strong>仅执行 <strong>BUY 信号</strong>，SELL 信号跳过（做空需 Margin，门槛 $2,000）<br>
-            每笔建议 <strong>$200</strong>（20%仓位），最多同时 3 笔。IBKR Canada 不受美国 PDT 限制。
+            ⚠️ <strong>初期策略：</strong>仅执行 <strong>BUY 信号</strong>，SELL 信号在 Margin 账户批准后接入（起始 $2,000 已满足门槛）<br>
+            每笔建议 <strong>$200</strong>（10%仓位），最多同时 3 笔。IBKR Canada 不受美国 PDT 限制。
         </div>`;
 }
 
