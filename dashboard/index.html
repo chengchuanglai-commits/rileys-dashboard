@@ -375,9 +375,11 @@
         .ab-panel { border-radius:12px; padding:14px 16px; }
         .ab-panel.plan-a { background:linear-gradient(135deg,#f0f9ff,#e0f2fe); border:1px solid #bae6fd; }
         .ab-panel.plan-b { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #86efac; }
+        .ab-panel.plan-c { background:linear-gradient(135deg,#f5f3ff,#ede9fe); border:1px solid #c4b5fd; }
         .ab-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; margin-bottom:8px; }
         .ab-label.a { color:#0284c7; }
         .ab-label.b { color:#16a34a; }
+        .ab-label.c { color:#7c3aed; }
         .ab-capital { font-size:26px; font-weight:800; font-family:'Courier New',monospace; color:#111; }
         .ab-pnl { font-size:12px; font-weight:600; margin-top:2px; }
         .ab-row { display:flex; justify-content:space-between; margin-top:8px; padding-top:8px; border-top:1px solid rgba(0,0,0,.06); }
@@ -672,6 +674,7 @@
       document.write('<scr'+'ipt src="trading-signals.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="daily-report.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-b.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-c.js?v='+d+'"><\/scr'+'ipt>');
     })();
     </script>
 </head>
@@ -982,11 +985,11 @@
     <div class="row col-1" id="sec-sim" style="margin-bottom:16px">
         <div class="card" id="sim-card">
             <div class="card-hd" style="margin-bottom:14px">
-                <span class="card-title">📊 模拟盘 — A 方案 vs B 方案</span>
-                <span style="font-size:9px;color:#bbb">A=限价入场(现有方案) · B=信号价 TP+8% / SL-4% / 最多5日</span>
+                <span class="card-title">📊 模拟盘 — A / B / C 方案对比</span>
+                <span style="font-size:9px;color:#bbb">A=限价入场 · B=TP+8%/SL-4%/5日 · C=B+跳空过滤</span>
             </div>
             <!-- A vs B 统计面板 -->
-            <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"></div>
+            <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px"></div>
             <!-- 双曲线图 -->
             <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px;overflow:hidden"></div>
             <!-- 交易历史表格 -->
@@ -3066,23 +3069,24 @@ function loadSigHistory() {
 function loadSimCurve() {
     const data = window.DAILY_REPORT;
     const pb   = window.PORTFOLIO_B;
+    const pc   = window.PORTFOLIO_C;
     if (!data || !data.running_totals) return;
     const rt = data.running_totals;
 
     // ── Plan A data (= 原 Plan D：限价单入场，现有方案) ──
     const dates  = rt.daily_dates || [];
     const _rawCumA = rt.cum_capital_d || [1000];
-    const cumA   = _rawCumA.length > dates.length      // 对齐到 dates，跳掉头部多余的初始值
+    const cumA   = _rawCumA.length > dates.length
         ? _rawCumA.slice(_rawCumA.length - dates.length)
-        : _rawCumA;                                    // 现有方案 = Plan D
+        : _rawCumA;
     const aFinal = rt.simulated_capital_limit || 1000;
     const aPnl   = aFinal - 1000;
     const aPnlPct = (aPnl / 10).toFixed(2);
-    const aTotal  = rt.total_limit || 0;              // 实际触价笔数
+    const aTotal  = rt.total_limit || 0;
     const aHolds  = (rt.total_signals_verified || 0) - (rt.total_signals_active || 0);
     const aAcc    = rt.accuracy_limit_pct || 'N/A';
 
-    // ── Plan B data: build cumulative curve from closed positions ──
+    // ── Plan B data ──
     const pbClosed = (pb && pb.closed_positions) ? pb.closed_positions : [];
     const pbOpen   = (pb && pb.open_positions)   ? pb.open_positions   : [];
     const pbStats  = (pb && pb.stats)            ? pb.stats            : {};
@@ -3092,7 +3096,6 @@ function loadSimCurve() {
     const bTrades  = pbStats.total_trades || 0;
     const bWinRate = pbStats.win_rate     || 0;
 
-    // Build B curve aligned to Plan A dates
     const bCumByDate = {};
     let bRunning = 1000;
     [...pbClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
@@ -3102,7 +3105,27 @@ function loadSimCurve() {
         Object.entries(bCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
         return val;
     });
-    // Also add open unrealized to final B value (already in pbStats.portfolio_value)
+
+    // ── Plan C data (B + gap filter) ──
+    const pcClosed = (pc && pc.closed_positions) ? pc.closed_positions : [];
+    const pcOpen   = (pc && pc.open_positions)   ? pc.open_positions   : [];
+    const pcStats  = (pc && pc.stats)            ? pc.stats            : {};
+    const cFinal   = pcStats.portfolio_value || 1000;
+    const cPnl     = cFinal - 1000;
+    const cPnlPct  = (cPnl / 10).toFixed(2);
+    const cTrades  = pcStats.total_trades  || 0;
+    const cWinRate = pcStats.win_rate      || 0;
+    const cSkipped = pcStats.skipped_gap   || 0;
+
+    const cCumByDate = {};
+    let cRunning = 1000;
+    [...pcClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
+        .forEach(p => { cRunning += (p.realized_pnl_usd || 0); cCumByDate[p.close_date] = cRunning; });
+    const cumC = dates.map(d => {
+        let val = 1000;
+        Object.entries(cCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
+        return val;
+    });
 
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
@@ -3125,10 +3148,12 @@ function loadSimCurve() {
             panelHtml('a', 'A 方案 — 限价入场 (现有)', aFinal, aPnl, aPnlPct,
                 '验证信号', aTotal, '准确率', aAcc, 'HOLD数', `${aHolds}`) +
             panelHtml('b', 'B 方案 — 信号价+TP/SL/5日', bFinal, bPnl, bPnlPct,
-                '已平仓', bTrades, '胜率', `${bWinRate}%`, '持仓中', pbOpen.length);
+                '已平仓', bTrades, '胜率', `${bWinRate}%`, '持仓中', pbOpen.length) +
+            panelHtml('c', 'C 方案 — B+跳空过滤', cFinal, cPnl, cPnlPct,
+                '已平仓', cTrades, '胜率', `${cWinRate}%`, '跳空跳过', cSkipped);
     }
 
-    // ── Dual curve chart ──
+    // ── Triple curve chart ──
     const wrap = document.getElementById('sim-curve-chart');
     if (wrap && dates.length > 0) {
         const W = Math.max(wrap.offsetWidth || wrap.clientWidth || 400, 200);
@@ -3137,7 +3162,7 @@ function loadSimCurve() {
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
-        const allVals = [...cumA, ...cumB, 1000];
+        const allVals = [...cumA, ...cumB, ...cumC, 1000];
         const yMin = Math.min(...allVals);
         const yMax = Math.max(...allVals);
         const yPad = Math.max((yMax - yMin) * 0.15, 15);
@@ -3160,32 +3185,36 @@ function loadSimCurve() {
         const xLabels = dates.map((d, i) => (i === 0 || i === dates.length-1 || i % Math.max(Math.floor(n/4),1) === 0)
             ? `<text x="${xPx(i).toFixed(1)}" y="${H-4}" text-anchor="middle" font-size="10" fill="#bbb">${d.slice(5)}</text>` : '').join('');
 
-        // Polyline points
         const ptA = cumA.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptB = cumB.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
+        const ptC = cumC.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
 
-        // Area fills
         const areaA = `${xPx(0)},${PAD.top+cH} ` + cumA.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumA.length-1)},${PAD.top+cH}`;
         const areaB = `${xPx(0)},${PAD.top+cH} ` + cumB.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumB.length-1)},${PAD.top+cH}`;
+        const areaC = `${xPx(0)},${PAD.top+cH} ` + cumC.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumC.length-1)},${PAD.top+cH}`;
 
-        // Final value labels — anchored inside right PAD area
-        const aLast = cumA[cumA.length-1]; const bLast = cumB[cumB.length-1] || bFinal;
-        const lxA = W - PAD.right + 4;
-        const lxB = W - PAD.right + 4;
-        const labelA = `<text x="${lxA}" y="${yPx(aLast).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#3b82f6">$${aLast.toFixed(0)}</text>`;
-        const labelB = `<text x="${lxB}" y="${(yPx(bLast)-12).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
+        const aLast = cumA[cumA.length-1];
+        const bLast = cumB[cumB.length-1] || bFinal;
+        const cLast = cumC[cumC.length-1] || cFinal;
+        const lx = W - PAD.right + 4;
+        const labelA = `<text x="${lx}" y="${(yPx(aLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#3b82f6">$${aLast.toFixed(0)}</text>`;
+        const labelB = `<text x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
+        const labelC = `<text x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
 
         wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:hidden;display:block">
             <defs>
                 <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity=".12"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity=".14"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".10"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
             </defs>
             ${grid}${xLabels}
             <polygon points="${areaA}" fill="url(#gA)"/>
             <polygon points="${areaB}" fill="url(#gB)"/>
+            <polygon points="${areaC}" fill="url(#gC)"/>
             <polyline points="${ptA}" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-            ${labelA}${labelB}
+            <polyline points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5,3" stroke-linejoin="round" stroke-linecap="round"/>
+            ${labelA}${labelB}${labelC}
             <g transform="translate(${PAD.left+8},${PAD.top+10})">
                 <rect width="16" height="2.5" y="-1" fill="#3b82f6" rx="1.5"/>
                 <text x="20" y="4" font-size="10" fill="#3b82f6" font-weight="600">A方案</text>
@@ -3193,6 +3222,10 @@ function loadSimCurve() {
             <g transform="translate(${PAD.left+72},${PAD.top+10})">
                 <rect width="16" height="2.5" y="-1" fill="#16a34a" rx="1.5"/>
                 <text x="20" y="4" font-size="10" fill="#16a34a" font-weight="600">B方案</text>
+            </g>
+            <g transform="translate(${PAD.left+136},${PAD.top+10})">
+                <line x1="0" y1="0" x2="16" y2="0" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4,2"/>
+                <text x="20" y="4" font-size="10" fill="#7c3aed" font-weight="600">C方案</text>
             </g>
         </svg>`;
     }
