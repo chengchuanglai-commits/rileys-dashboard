@@ -1444,8 +1444,8 @@ function inlineEditAccount(key) {
         const nd = JSON.parse(localStorage.getItem('accounts_v2') || '{}');
         nd[key] = parseFloat(inp.value) || 0;
         localStorage.setItem('accounts_v2', JSON.stringify(nd));
+        pushKV('accounts_v2', nd);
         fetchFX().then(fx => renderAccounts(nd, fx));
-        syncAll();
     });
     inp.addEventListener('keydown', e => {
         if (e.key === 'Enter') inp.blur();
@@ -1485,8 +1485,8 @@ function inlineEditBmoSubs() {
             const nd = JSON.parse(localStorage.getItem('accounts_v2') || '{}');
             fields.forEach(f => { nd[f.key] = parseFloat(inps[f.key].value) || 0; });
             localStorage.setItem('accounts_v2', JSON.stringify(nd));
+            pushKV('accounts_v2', nd);
             fetchFX().then(fx => renderAccounts(nd, fx));
-            syncAll();
         }
     });
     Object.values(inps).forEach(inp => {
@@ -1540,8 +1540,28 @@ function collectSyncData() {
     };
 }
 
+const KV_URL = 'https://questrade-proxy.chengchuang-lai.workers.dev/sync';
+
 function syncAll() {
-    // Cross-device sync removed (Questrade proxy no longer used)
+    fetch(KV_URL)
+        .then(r => r.json())
+        .then(d => restoreFromSync(d))
+        .catch(() => {});
+}
+
+function pushKV(key, value) {
+    fetch(KV_URL)
+        .then(r => r.json())
+        .then(current => {
+            if (typeof current !== 'object' || current === null) current = {};
+            current[key] = value;
+            return fetch(KV_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(current)
+            });
+        })
+        .catch(() => {});
 }
 
 function restoreFromSync(d) {
@@ -1604,8 +1624,9 @@ function toggleWo(i) {
     const idx = done.indexOf(i);
     idx===-1 ? done.push(i) : done.splice(idx,1);
     localStorage.setItem(key, JSON.stringify(done));
+    const wo = {}; wo[key] = done;
+    pushKV('workout', wo);
     loadWorkout();
-    syncAll();
 }
 loadWorkout();
 
@@ -3134,9 +3155,9 @@ function loadCalendar() {
 
 function saveCalendar(events) {
     localStorage.setItem('calendar_events', JSON.stringify(events));
+    pushKV('calendar_events', events);
     renderCalendar(events);
     renderArchive(events);
-    syncAll();
 }
 
 function renderCalendar(events) {
@@ -3289,6 +3310,7 @@ function saveAssetSnapshot(totalUsd) {
     }
     const kept = snaps.sort((a, b) => b.date.localeCompare(a.date)).slice(0, 90);
     localStorage.setItem('asset_snapshots', JSON.stringify(kept));
+    pushKV('asset_snapshots', kept);
     renderSnapshots();
 }
 
