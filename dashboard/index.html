@@ -2833,7 +2833,7 @@ function loadSimCurve() {
     [...pbClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
         .forEach(p => { bRunning += (p.realized_pnl_usd || 0); bCumByDate[p.close_date] = bRunning; });
     const cumB = dates.map(d => {
-        let val = 1000;
+        let val = 2000;
         Object.entries(bCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
         return val;
     });
@@ -2854,7 +2854,7 @@ function loadSimCurve() {
     [...pcClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
         .forEach(p => { cRunning += (p.realized_pnl_usd || 0); cCumByDate[p.close_date] = cRunning; });
     const cumC = dates.map(d => {
-        let val = 1000;
+        let val = 2000;
         Object.entries(cCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
         return val;
     });
@@ -2910,7 +2910,7 @@ function loadSimCurve() {
         for (let v = Math.ceil(yLo / step) * step; v <= yHi; v += step) ticks.push(v);
 
         const grid = ticks.map(v => `
-            <line x1="${PAD.left}" y1="${yPx(v).toFixed(1)}" x2="${W-PAD.right}" y2="${yPx(v).toFixed(1)}" stroke="${v===1000?'#d1d5db':'#f3f4f6'}" stroke-width="${v===1000?'1.5':'1'}" stroke-dasharray="${v===1000?'5,3':''}"/>
+            <line x1="${PAD.left}" y1="${yPx(v).toFixed(1)}" x2="${W-PAD.right}" y2="${yPx(v).toFixed(1)}" stroke="${v===2000?'#d1d5db':'#f3f4f6'}" stroke-width="${v===2000?'1.5':'1'}" stroke-dasharray="${v===2000?'5,3':''}"/>
             <text x="${PAD.left-6}" y="${yPx(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" font-size="10" fill="#bbb">$${v}</text>`
         ).join('');
 
