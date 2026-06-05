@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -21,25 +21,10 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.78
         },
         "2026-06-05": {
-          "open": 103.9,
-          "high": 104.75,
-          "low": 101.0,
-          "close": 103.43,
-          "pnl_pct": 4.55
+          "close": 101.11,
+          "pnl_pct": 6.69
         }
       }
-    },
-    {
-      "ticker": "OKLO",
-      "name": "Oklo Inc.",
-      "action": "SELL",
-      "signal_date": "2026-06-05",
-      "entry_price": 65.39,
-      "allocated_usd": 500,
-      "take_profit": 60.16,
-      "stop_loss": 68.01,
-      "max_hold_date": "2026-06-12",
-      "daily_prices": {}
     },
     {
       "ticker": "ADMA",
@@ -51,7 +36,46 @@ window.PORTFOLIO_B = {
       "take_profit": 7.34,
       "stop_loss": 8.3,
       "max_hold_date": "2026-06-12",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-05": {
+          "close": 8.02,
+          "pnl_pct": -0.5
+        }
+      }
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research Corporation",
+      "action": "BUY",
+      "signal_date": "2026-06-05",
+      "entry_price": 318.5,
+      "allocated_usd": 500,
+      "take_profit": 343.98,
+      "stop_loss": 305.76,
+      "max_hold_date": "2026-06-12",
+      "daily_prices": {
+        "2026-06-05": {
+          "close": 316.9,
+          "pnl_pct": -0.5
+        }
+      }
+    },
+    {
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 48.35,
+      "allocated_usd": 500,
+      "take_profit": 44.48,
+      "stop_loss": 50.28,
+      "max_hold_date": "2026-06-12",
+      "daily_prices": {
+        "2026-06-05": {
+          "close": 48.35,
+          "pnl_pct": -0.0
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -292,16 +316,38 @@ window.PORTFOLIO_B = {
       "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
       "realized_pnl_usd": -20.0
+    },
+    {
+      "ticker": "OKLO",
+      "name": "Oklo Inc.",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 65.39,
+      "allocated_usd": 500,
+      "take_profit": 60.16,
+      "stop_loss": 68.01,
+      "max_hold_date": "2026-06-12",
+      "daily_prices": {
+        "2026-06-05": {
+          "close": 59.35,
+          "pnl_pct": 9.24
+        }
+      },
+      "close_date": "2026-06-05",
+      "close_price": 59.35,
+      "final_pnl_pct": 9.24,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 46.18
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日",
   "stats": {
-    "total_trades": 7,
-    "win_trades": 4,
-    "win_rate": 57.1,
-    "total_realized_pnl_usd": 69.55,
-    "open_unrealized_pnl_usd": 22.75,
-    "portfolio_value": 2092.3,
-    "updated_at": "2026-06-05"
+    "total_trades": 8,
+    "win_trades": 5,
+    "win_rate": 62.5,
+    "total_realized_pnl_usd": 115.73,
+    "open_unrealized_pnl_usd": 28.45,
+    "portfolio_value": 2144.18,
+    "updated_at": "2026-06-06"
   }
 };
