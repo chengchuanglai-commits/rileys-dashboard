@@ -705,7 +705,6 @@
     <div class="sb-group-lbl" style="margin-top:12px">投资</div>
     <a class="sb-item" data-grp="invest" data-target="sec-morning" onclick="sbNav(this)">📊 晨报</a>
     <a class="sb-item" data-grp="invest" data-target="sec-signals" onclick="sbNav(this)">🤖 AI 信号</a>
-    <a class="sb-item" data-grp="invest" data-target="sec-questrade" onclick="sbNav(this)">📈 持仓</a>
     <a class="sb-item" data-grp="invest" data-target="sec-sim" onclick="sbNav(this)">📉 模拟盘</a>
     <a class="sb-item" data-grp="invest" data-target="sec-accounts" onclick="sbNav(this)">💰 账户 & 资产</a>
 
@@ -922,65 +921,6 @@
     </div>
 
     <!-- ── Row 3.5: Stock Portfolio ── -->
-    <div class="row col-1" id="sec-questrade">
-        <div class="card">
-            <div class="card-hd">
-                <div style="display:flex;align-items:center;gap:8px">
-                    <span class="card-title">📊 Questrade 持仓</span>
-                    <span class="sync-dot" id="porto-dot" title="同步状态"></span>
-                </div>
-                <div style="display:flex;gap:6px;align-items:center">
-                    <button class="icon-btn" onclick="refreshQuestrade()" title="刷新">
-                        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-                    </button>
-                    <button class="icon-btn" onclick="addPosition()" title="手动添加">
-                        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                    </button>
-                    <button class="icon-btn icon-primary" onclick="setupQtApi()" title="设置 Questrade">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Summary stats -->
-            <div class="p-stats">
-                <div class="p-stat p-stat-r1"><div class="p-stat-val" id="ps-value">—</div><div class="p-stat-lbl">总市值</div></div>
-                <div class="p-stat p-stat-r1"><div class="p-stat-val" id="ps-plpct">—</div><div class="p-stat-lbl">收益率</div></div>
-                <div class="p-stat p-stat-r2"><div class="p-stat-val" id="ps-cost">—</div><div class="p-stat-lbl">总成本</div></div>
-                <div class="p-stat p-stat-r2"><div class="p-stat-val" id="ps-pl">—</div><div class="p-stat-lbl">总盈亏</div></div>
-            </div>
-
-            <!-- Positions table -->
-            <div class="porto-wrap">
-                <div id="porto-list"><div class="porto-empty">点击「设置 Questrade」自动同步持仓，或「手动添加」记录</div></div>
-            </div>
-
-            <!-- Quick links -->
-            <div class="platform-row">
-                <a href="https://my.questrade.com/" target="_blank" class="platform-btn">🏦 Questrade 账户</a>
-                <a href="https://finance.yahoo.com/screener/" target="_blank" class="platform-btn">🔍 选股工具</a>
-                <a href="https://simplywall.st/" target="_blank" class="platform-btn">📋 个股分析</a>
-                <a href="https://www.macrotrends.net/" target="_blank" class="platform-btn">📉 宏观数据</a>
-            </div>
-
-            <!-- Questrade Setup Guide -->
-            <details class="setup-guide">
-                <summary>⚙️ 配置 Questrade 自动同步 → 点击展开教程</summary>
-                <ol class="setup-steps">
-                    <li>注册/登录 <a href="https://dash.cloudflare.com/" target="_blank">Cloudflare</a>（免费账号即可）</li>
-                    <li><b>Workers &amp; Pages → Create → Create Worker</b> → 删除默认代码，粘贴下方全部代码 → 点「Save and Deploy」</li>
-                    <li>部署成功后复制 Worker URL（格式：<code>xxx.workers.dev</code>）</li>
-                    <li>回到这里点 <b>「设置 Questrade」</b>，粘贴 Worker URL 保存 ✅</li>
-                </ol>
-                <div style="font-size:11px;color:#4b5e7a;margin:10px 0 6px">⚠️ Token 约 30 天后过期，届时重新在 Questrade My Apps 生成新 token，更新代码第二行后重新部署即可。</div>
-                <div style="display:flex;justify-content:flex-end;margin-bottom:6px">
-                    <button id="qt-copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('qt-script-code').textContent).then(()=>{this.textContent='✅ 已复制';setTimeout(()=>this.textContent='📋 一键复制代码',2000)})" style="background:#f0f0f0;color:#555;border:1px solid #e8e8e8;border-radius:6px;padding:5px 14px;cursor:pointer;font-size:12px">📋 一键复制代码</button>
-                </div>
-                <pre class="code-block" id="qt-script-code">加载中…</pre>
-            </details>
-        </div>
-    </div>
-
     <!-- ── Row 2.8: A vs B 模拟系统（统一面板）── -->
     <div class="row col-1" id="sec-sim" style="margin-bottom:16px">
         <div class="card" id="sim-card">
@@ -1060,15 +1000,12 @@
             <div class="acct-row">
                 <div style="display:flex;justify-content:space-between;align-items:center">
                     <div>
-                        <div class="acct-lbl">
-                            📈 Questrade
-                            <span class="sync-dot" id="acct-dot" style="margin-left:4px" title="Questrade 同步状态"></span>
-                        </div>
-                        <div class="acct-val" id="qt-equity" style="font-size:20px">—</div>
+                        <div class="acct-lbl">🏦 IBKR Canada（USD）<button class="acct-edit-btn" onclick="inlineEditAccount('ibkr')" title="编辑">✏</button></div>
+                        <div class="acct-val" id="ibkr-val" style="font-size:20px">$0</div>
                     </div>
                     <div style="text-align:right">
-                        <div class="acct-lbl">可用现金</div>
-                        <div style="font-size:13px;color:#64748b" id="qt-cash">未配置</div>
+                        <div class="acct-lbl">≈ USD</div>
+                        <div style="font-size:13px;color:#64748b" id="ibkr-usd">$0</div>
                     </div>
                 </div>
             </div>
@@ -1447,19 +1384,9 @@ const fmtCAD = n => 'C$'  + n.toLocaleString('en-CA',{maximumFractionDigits:0});
 
 function loadAccounts() {
     const local = JSON.parse(localStorage.getItem('accounts_v2') || 'null') || {
-        icbc:0, hsbc:0, bmo:0, bmo_tfsa:0, bmo_rrsp:0, bmo_inv:0, futu:0
+        icbc:0, hsbc:0, bmo:0, bmo_tfsa:0, bmo_rrsp:0, bmo_inv:0, ibkr:0
     };
     fetchFX().then(fx => renderAccounts(local, fx));
-    // 从 Cloudflare KV 拉取最新数据（跨设备同步）
-    const DEFAULT_SYNC_URL = 'https://questrade-proxy.chengchuang-lai.workers.dev';
-    if (!localStorage.getItem('qt_api_url')) localStorage.setItem('qt_api_url', DEFAULT_SYNC_URL);
-    const syncUrl = localStorage.getItem('qt_api_url');
-    if (syncUrl) fetch(syncUrl.replace(/\/$/, '') + '/sync')
-        .then(r => r.json()).then(remote => {
-            if (remote && typeof remote === 'object' && remote._v >= 2) {
-                restoreFromSync(remote);
-            }
-        }).catch(() => {});
 }
 
 async function fetchFX() {
@@ -1479,12 +1406,14 @@ function renderAccounts(d, fx) {
     const icbc_usd = d.icbc * fx.CNY_USD;
     const hsbc_usd = d.hsbc * fx.HKD_USD;
     const bmo_usd  = d.bmo  * fx.CAD_USD;
-    const total    = icbc_usd + hsbc_usd + bmo_usd;
+    const ibkr_usd = d.ibkr || 0;
+    const total    = icbc_usd + hsbc_usd + bmo_usd + ibkr_usd;
 
     const icbcEl = document.getElementById('icbc-val');
     const hsbcEl = document.getElementById('hsbc-val');
     const bmoEl  = document.getElementById('bmo-val');
     const bmoSub = document.getElementById('bmo-sub');
+    const ibkrEl = document.getElementById('ibkr-val');
     if (icbcEl && icbcEl.tagName !== 'INPUT') icbcEl.textContent = fmtCNY(d.icbc);
     document.getElementById('icbc-usd').textContent = '≈ ' + fmtUSD(icbc_usd);
     if (hsbcEl && hsbcEl.tagName !== 'INPUT') hsbcEl.textContent = fmtHKD(d.hsbc);
@@ -1492,13 +1421,15 @@ function renderAccounts(d, fx) {
     if (bmoEl  && bmoEl.tagName  !== 'INPUT') bmoEl.textContent  = fmtCAD(d.bmo);
     if (bmoSub && bmoSub.tagName !== 'INPUT') bmoSub.textContent =
         `TFSA ${fmtCAD(d.bmo_tfsa)} / RRSP ${fmtCAD(d.bmo_rrsp)} / 投资 ${fmtCAD(d.bmo_inv)}`;
+    if (ibkrEl && ibkrEl.tagName !== 'INPUT') ibkrEl.textContent = fmtUSD(ibkr_usd);
+    document.getElementById('ibkr-usd').textContent = fmtUSD(ibkr_usd);
     document.getElementById('total-val').textContent = fmtUSD(total);
     saveAssetSnapshot(total);
 }
 
 function inlineEditAccount(key) {
     const d = JSON.parse(localStorage.getItem('accounts_v2') || '{}');
-    const elId = { icbc:'icbc-val', hsbc:'hsbc-val', bmo:'bmo-val' }[key];
+    const elId = { icbc:'icbc-val', hsbc:'hsbc-val', bmo:'bmo-val', ibkr:'ibkr-val' }[key];
     const el = document.getElementById(elId);
     if (!el || el.tagName === 'INPUT') return;
 
@@ -1601,7 +1532,6 @@ function collectSyncData() {
         milestones:   JSON.parse(localStorage.getItem('milestones') || 'null'),
         ig_seedclay:  JSON.parse(localStorage.getItem('ig_seedclay') || 'null'),
         portfolio:    JSON.parse(localStorage.getItem('portfolio') || 'null'),
-        qt_api_url:   localStorage.getItem('qt_api_url'),
         ga_api_url:   localStorage.getItem('ga_api_url'),
         workout:           wo,
         calendar_events:   JSON.parse(localStorage.getItem('calendar_events') || '[]'),
@@ -1611,13 +1541,7 @@ function collectSyncData() {
 }
 
 function syncAll() {
-    const url = localStorage.getItem('qt_api_url');
-    if (!url) return;
-    fetch(url.replace(/\/$/, '') + '/sync', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(collectSyncData())
-    }).catch(() => {});
+    // Cross-device sync removed (Questrade proxy no longer used)
 }
 
 function restoreFromSync(d) {
@@ -1627,7 +1551,6 @@ function restoreFromSync(d) {
     if (d.seedclay_metrics) { localStorage.setItem('seedclay_metrics', JSON.stringify(d.seedclay_metrics)); loadSeedclayMetrics(); }
     if (d.ig_seedclay) { localStorage.setItem('ig_seedclay', JSON.stringify(d.ig_seedclay)); loadIg(); }
     if (d.portfolio) { localStorage.setItem('portfolio', JSON.stringify(d.portfolio)); }
-    if (d.qt_api_url && !localStorage.getItem('qt_api_url')) localStorage.setItem('qt_api_url', d.qt_api_url);
     if (d.ga_api_url && !localStorage.getItem('ga_api_url')) localStorage.setItem('ga_api_url', d.ga_api_url);
     if (d.workout) { Object.entries(d.workout).forEach(([k,v]) => localStorage.setItem(k, JSON.stringify(v))); loadWorkout && loadWorkout(); }
     if (d.calendar_events) { localStorage.setItem('calendar_events', JSON.stringify(d.calendar_events)); loadCalendar(); }
@@ -1859,255 +1782,6 @@ function editIg() {
     syncAll();
 }
 loadIg();
-
-// ─────────────────────────────────────────────────────────
-// Questrade (via Google Apps Script proxy)
-// ─────────────────────────────────────────────────────────
-const QT_CODE = `// ══════════════════════════════════════════════════
-// Questrade Dashboard — Cloudflare Worker 代码
-// 粘贴到 Cloudflare Worker 编辑器后直接部署即可
-// Token 过期后更新第 2 行，重新部署
-// ══════════════════════════════════════════════════
-
-const CONSUMER_KEY  = 'YOUR_CONSUMER_KEY';   // 从 Questrade My Apps 页面复制
-const REFRESH_TOKEN = 'YOUR_REFRESH_TOKEN';  // 从 Questrade My Apps → New device 生成
-
-export default {
-  async fetch(request, env) {
-    const cors = {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    };
-    if (request.method === 'OPTIONS') return new Response(null, { headers: cors });
-
-    const path = new URL(request.url).pathname;
-
-    // ── /sync 接口：跨设备账户数据同步 ──
-    if (path === '/sync') {
-      if (request.method === 'GET') {
-        const data = env.QT_STORE ? await env.QT_STORE.get('user_data') : null;
-        return new Response(data || 'null', { headers: cors });
-      }
-      if (request.method === 'POST') {
-        const body = await request.text();
-        if (env.QT_STORE) await env.QT_STORE.put('user_data', body);
-        return new Response(JSON.stringify({ ok: true }), { headers: cors });
-      }
-    }
-
-    // ── / 接口：Questrade 账户数据 ──
-    try {
-      let base, authHdr;
-
-      // 先尝试用缓存的 access_token（30分钟有效，避免频繁消耗 refresh_token）
-      const cached = env.QT_STORE ? await env.QT_STORE.get('access_cache', 'json') : null;
-      if (cached && cached.expires_at > Date.now()) {
-        base    = cached.api_server;
-        authHdr = { 'Authorization': 'Bearer ' + cached.access_token };
-      } else {
-        // access_token 过期或不存在，重新用 refresh_token 换取
-        const storedToken = env.QT_STORE ? await env.QT_STORE.get('refresh_token') : null;
-        const refreshToken = storedToken || REFRESH_TOKEN;
-        const tokenRes = await fetch(
-          'https://login.questrade.com/oauth2/token?grant_type=refresh_token&refresh_token=' + encodeURIComponent(refreshToken),
-          { method: 'GET' }
-        );
-        if (!tokenRes.ok) {
-          return new Response(JSON.stringify({ ok:false, error:'Token交换失败 HTTP ' + tokenRes.status + ': ' + await tokenRes.text() }), { headers:cors });
-        }
-        const tok = await tokenRes.json();
-        // 保存轮换后的新 refresh_token 和缓存的 access_token
-        if (env.QT_STORE) {
-          await env.QT_STORE.put('refresh_token', tok.refresh_token);
-          await env.QT_STORE.put('access_cache', JSON.stringify({
-            access_token: tok.access_token,
-            api_server:   tok.api_server,
-            expires_at:   Date.now() + 25 * 60 * 1000  // 25分钟后过期（留余量）
-          }));
-        }
-        base    = tok.api_server;
-        authHdr = { 'Authorization': 'Bearer ' + tok.access_token };
-      }
-
-      const acctData = await (await fetch(base + 'v1/accounts', { headers: authHdr })).json();
-      const accts    = acctData.accounts || [];
-
-      const accounts = await Promise.all(accts.map(async acct => {
-        const [bal, pos] = await Promise.all([
-          fetch(base + 'v1/accounts/' + acct.number + '/balances',  { headers: authHdr }).then(r => r.json()),
-          fetch(base + 'v1/accounts/' + acct.number + '/positions', { headers: authHdr }).then(r => r.json())
-        ]);
-        return { number: acct.number, type: acct.type, balances: bal.combinedBalances || [], positions: pos.positions || [] };
-      }));
-
-      return new Response(JSON.stringify({ ok:true, updated: new Date().toISOString(), accounts }), { headers:cors });
-    } catch(e) {
-      return new Response(JSON.stringify({ ok:false, error: e.toString() }), { headers:cors });
-    }
-  }
-};`;
-
-document.getElementById('qt-script-code').textContent = QT_CODE;
-
-async function loadQuestrade() {
-    const url = localStorage.getItem('qt_api_url');
-    if (!url) return;
-    const cached = localStorage.getItem('qt_cache');
-    if (cached) {
-        const c = JSON.parse(cached);
-        if (Date.now() - c.ts < 60*60*1000) { renderQtData(c.data, false); return; }
-    }
-    setSyncDot('porto-dot', 'syncing'); setSyncDot('acct-dot', 'syncing');
-    await fetchQtData(url);
-}
-
-async function fetchQtData(url) {
-    try {
-        const r = await fetch(url);
-        const d = await r.json();
-        if (d.ok) {
-            localStorage.setItem('qt_cache', JSON.stringify({ data:d, ts:Date.now() }));
-            renderQtData(d, false);
-        } else {
-            setSyncDot('porto-dot', 'error'); setSyncDot('acct-dot', 'error');
-        }
-    } catch(e) {
-        const cached = localStorage.getItem('qt_cache');
-        if (cached) renderQtData(JSON.parse(cached).data, true);
-        else { setSyncDot('porto-dot', 'error'); setSyncDot('acct-dot', 'error'); }
-    }
-}
-
-function renderQtData(d, stale) {
-    // ── Accounts card update ──
-    let cadEq=0, cadCash=0, usdEq=0, usdCash=0;
-    (d.accounts||[]).forEach(a => {
-        (a.balances||[]).forEach(b => {
-            if (b.currency==='CAD') { cadEq+=b.totalEquity||0; cadCash+=b.cash||0; }
-            if (b.currency==='USD') { usdEq+=b.totalEquity||0; usdCash+=b.cash||0; }
-        });
-    });
-    const qtEqEl = document.getElementById('qt-equity');
-    const qtCashEl = document.getElementById('qt-cash');
-    if (qtEqEl) {
-        qtEqEl.textContent  = 'C$'+cadEq.toFixed(0) + (usdEq>0 ? ' + $'+usdEq.toFixed(0) : '');
-        qtCashEl.textContent = 'C$'+cadCash.toFixed(0) + (usdCash>0 ? ' / $'+usdCash.toFixed(0) : '');
-        setSyncDot('acct-dot', stale ? '' : 'synced');
-    }
-    // Store for total calc
-    localStorage.setItem('qt_equity_usd', JSON.stringify({ cad:cadEq, usd:usdEq }));
-    // Recalculate total in accounts card
-    fetchFX().then(fx => {
-        const d2 = JSON.parse(localStorage.getItem('accounts_v2')||'{}');
-        const qt  = JSON.parse(localStorage.getItem('qt_equity_usd')||'{"cad":0,"usd":0}');
-        const total = (d2.icbc||0)*fx.CNY_USD + (d2.hsbc||0)*fx.HKD_USD + (d2.bmo||0)*fx.CAD_USD
-                    + qt.cad*fx.CAD_USD + qt.usd;
-        const el = document.getElementById('total-val');
-        if (el) el.textContent = fmtUSD(total);
-        saveAssetSnapshot(total);
-    });
-
-    // ── Portfolio section ──
-    const positions = [];
-    (d.accounts||[]).forEach(a => (a.positions||[]).forEach(p => positions.push(p)));
-
-    setSyncDot('porto-dot', stale ? '' : 'synced');
-
-    if (!positions.length) {
-        document.getElementById('porto-list').innerHTML =
-            '<div class="porto-empty">Questrade 账户暂无持仓 — 完成入金并买入第一只股票后自动显示</div>';
-        ['ps-value','ps-cost','ps-pl','ps-plpct'].forEach(id => {
-            document.getElementById(id).textContent = 'C$0';
-            document.getElementById(id).className = 'p-stat-val';
-        });
-        return;
-    }
-
-    let totalValue=0, totalCost=0;
-    const isMobile = window.innerWidth <= 480;
-
-    if (isMobile) {
-        const cards = positions.map(p => {
-            const cur   = p.currency==='USD' ? '$' : 'C$';
-            const value = p.currentMarketValue||0;
-            const cost  = p.totalCost||0;
-            const pl    = p.openPnl||(value-cost);
-            const plPct = cost ? (pl/cost*100) : 0;
-            totalValue += value; totalCost += cost;
-            const cls = pl>=0?'pos':'neg';
-            const plSign = pl>=0?'+':'-';
-            return `<div class="porto-mc">
-                <div class="porto-mc-top">
-                    <a class="porto-mc-sym" href="https://finance.yahoo.com/quote/${p.symbol}" target="_blank">${p.symbol}</a>
-                    <span class="porto-mc-pl ${cls}">${plSign}${cur}${Math.abs(pl).toFixed(0)} <span class="porto-mc-pct">(${plPct>=0?'+':''}${plPct.toFixed(1)}%)</span></span>
-                </div>
-                <div class="porto-mc-btm">
-                    <span class="porto-mc-val">市值 ${cur}${value.toFixed(0)}</span>
-                    <span class="porto-mc-price">现价 ${cur}${(p.currentPrice||0).toFixed(2)}</span>
-                </div>
-            </div>`;
-        }).join('');
-        document.getElementById('porto-list').innerHTML = `<div class="porto-cards">${cards}</div>`;
-    } else {
-        const rows = positions.map(p => {
-            const cur   = p.currency==='USD' ? '$' : 'C$';
-            const value = p.currentMarketValue||0;
-            const cost  = p.totalCost||0;
-            const pl    = p.openPnl||(value-cost);
-            const plPct = cost ? (pl/cost*100) : 0;
-            totalValue += value; totalCost += cost;
-            const cls = pl>=0?'pos':'neg';
-            return `<tr class="porto-row">
-                <td class="pt-ticker"><a href="https://finance.yahoo.com/quote/${p.symbol}" target="_blank" style="color:#777;text-decoration:none">${p.symbol}</a></td>
-                <td style="color:#64748b;font-size:11px;max-width:120px;overflow:hidden;text-overflow:ellipsis">${p.description||''}</td>
-                <td>${p.openQuantity}</td>
-                <td style="color:#64748b">${cur}${(p.averageEntryPrice||0).toFixed(2)}</td>
-                <td>${cur}${(p.currentPrice||0).toFixed(2)}</td>
-                <td class="${cls}" style="font-weight:600">${pl>=0?'+':'-'}${cur}${Math.abs(pl).toFixed(0)} <span style="font-size:10px;opacity:.7">(${plPct>=0?'+':''}${plPct.toFixed(1)}%)</span></td>
-                <td>${cur}${value.toFixed(0)}</td>
-            </tr>`;
-        }).join('');
-        document.getElementById('porto-list').innerHTML = `
-            <table class="porto-table">
-                <thead><tr><th>代码</th><th>名称</th><th>持股数</th><th>成本价</th><th>现价</th><th>盈亏</th><th>市值</th></tr></thead>
-                <tbody>${rows}</tbody>
-            </table>`;
-    }
-
-    const totalPl = totalValue - totalCost;
-    const totalPlPct = totalCost ? (totalPl/totalCost*100) : 0;
-    const plCls = totalPl>=0?'pos':'neg';
-    document.getElementById('ps-value').textContent  = 'C$'+totalValue.toFixed(0);
-    document.getElementById('ps-cost').textContent   = 'C$'+totalCost.toFixed(0);
-    document.getElementById('ps-pl').textContent     = `${totalPl>=0?'+':'-'}C$${Math.abs(totalPl).toFixed(0)}`;
-    document.getElementById('ps-plpct').textContent  = `${totalPlPct>=0?'+':''}${totalPlPct.toFixed(2)}%`;
-    document.getElementById('ps-pl').className       = 'p-stat-val '+plCls;
-    document.getElementById('ps-plpct').className    = 'p-stat-val '+plCls;
-}
-
-async function refreshQuestrade() {
-    const url = localStorage.getItem('qt_api_url');
-    if (!url) { alert('请先点击「设置 Questrade」'); return; }
-    localStorage.removeItem('qt_cache');
-    setSyncDot('porto-dot', 'syncing'); setSyncDot('acct-dot', 'syncing');
-    await fetchQtData(url);
-}
-
-function setupQtApi() {
-    const cur = localStorage.getItem('qt_api_url')||'';
-    const url = prompt('粘贴 Questrade Cloudflare Worker URL：\n（格式：https://xxx.workers.dev）', cur);
-    if (url===null) return;
-    if (url.trim()) {
-        localStorage.setItem('qt_api_url', url.trim());
-        localStorage.removeItem('qt_cache');
-        setSyncDot('porto-dot', 'syncing'); setSyncDot('acct-dot', 'syncing');
-        fetchQtData(url.trim());
-    }
-}
-
-loadQuestrade();
 
 // ─────────────────────────────────────────────────────────
 // Stock Portfolio
