@@ -927,6 +927,7 @@
             <div class="card-hd" style="margin-bottom:14px">
                 <span class="card-title">📊 模拟盘 — A / B / C 方案对比</span>
                 <span style="font-size:9px;color:#bbb">A=限价入场 · B=TP+8%/SL-4%/5日 · C=B+跳空过滤</span>
+                <span id="sim-refresh-info" style="font-size:9px;color:#bbb;margin-left:auto"></span>
             </div>
             <!-- A vs B 统计面板 -->
             <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px"></div>
@@ -2835,6 +2836,14 @@ function loadSimCurve() {
     const pc   = window.PORTFOLIO_C;
     if (!data || !data.running_totals) return;
     const rt = data.running_totals;
+
+    // 更新刷新时间戳
+    const infoEl = document.getElementById('sim-refresh-info');
+    if (infoEl) {
+        const now = new Date();
+        const hm = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
+        infoEl.textContent = `数据更新 ${hm}`;
+    }
 
     // ── Plan A data (= 原 Plan D：限价单入场，现有方案) ──
     const dates  = rt.daily_dates || [];
