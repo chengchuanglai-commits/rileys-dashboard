@@ -729,6 +729,7 @@
         <div>
             <div class="clock" id="clock">00:00:00</div>
             <div class="dateline" id="dateline"></div>
+            <div id="ny-time" style="font-size:11px;color:#9ca3af;text-align:right;margin-top:2px;font-variant-numeric:tabular-nums"></div>
         </div>
     </div>
 
@@ -1369,6 +1370,18 @@ function tick() {
     const h = n.getHours();
     document.getElementById('greeting').textContent =
         h<6?'深夜了 🌙':h<12?'早上好 ☀️':h<14?'中午好 🌤️':h<18?'下午好 🌤️':'晚上好 🌙';
+
+    // 纽约时间（自动处理夏令时）
+    const nyStr = n.toLocaleTimeString('en-US', { timeZone:'America/New_York', hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false });
+    const nyDate = new Date(n.toLocaleString('en-US', { timeZone:'America/New_York' }));
+    const nyH = nyDate.getHours(), nyM = nyDate.getMinutes(), nyDay = nyDate.getDay();
+    const isWeekday = nyDay >= 1 && nyDay <= 5;
+    const minsNY = nyH * 60 + nyM;
+    const isOpen = isWeekday && minsNY >= 9 * 60 + 30 && minsNY < 16 * 60;
+    const nyEl = document.getElementById('ny-time');
+    if (nyEl) {
+        nyEl.innerHTML = `🗽 ${nyStr} <span style="font-size:9px;font-weight:700;padding:1px 5px;border-radius:4px;${isOpen ? 'background:#dcfce7;color:#16a34a' : 'background:#f3f4f6;color:#9ca3af'}">${isOpen ? '开盘中' : '已收盘'}</span>`;
+    }
 }
 setInterval(tick, 1000); tick();
 
