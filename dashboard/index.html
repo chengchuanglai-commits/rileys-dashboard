@@ -675,6 +675,29 @@
       document.write('<scr'+'ipt src="daily-report.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-b.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-c.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="version.js?v='+d+'"><\/scr'+'ipt>');
+    })();
+    </script>
+    <script>
+    // 版本自检：每5分钟检查一次，版本变更时自动重载页面
+    (function(){
+      function checkVersion(){
+        var s=document.createElement('script');
+        s.src='version.js?v='+Date.now();
+        s.onload=function(){
+          if(window._dashboardVersionLoaded && window.DASHBOARD_VERSION!==window._dashboardVersionLoaded){
+            location.reload(true);
+          }
+          document.head.removeChild(s);
+        };
+        s.onerror=function(){ document.head.removeChild(s); };
+        document.head.appendChild(s);
+      }
+      // 记录初始版本（等 version.js 加载完后再记录）
+      window.addEventListener('load',function(){
+        window._dashboardVersionLoaded=window.DASHBOARD_VERSION;
+        setInterval(checkVersion, 5*60*1000);
+      });
     })();
     </script>
 </head>
