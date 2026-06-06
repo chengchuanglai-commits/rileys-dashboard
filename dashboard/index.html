@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260606075834";
+      var BUILD="20260606085126";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -385,10 +385,12 @@
         .ab-panel.plan-a { background:linear-gradient(135deg,#f0f9ff,#e0f2fe); border:1px solid #bae6fd; }
         .ab-panel.plan-b { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #86efac; }
         .ab-panel.plan-c { background:linear-gradient(135deg,#f5f3ff,#ede9fe); border:1px solid #c4b5fd; }
+        .ab-panel.plan-d { background:linear-gradient(135deg,#fff7ed,#ffedd5); border:2px solid #fb923c; }
         .ab-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; margin-bottom:8px; }
         .ab-label.a { color:#0284c7; }
         .ab-label.b { color:#16a34a; }
         .ab-label.c { color:#7c3aed; }
+        .ab-label.d { color:#ea580c; }
         .ab-capital { font-size:26px; font-weight:800; font-family:'Courier New',monospace; color:#111; }
         .ab-pnl { font-size:12px; font-weight:600; margin-top:2px; }
         .ab-row { display:flex; justify-content:space-between; margin-top:8px; padding-top:8px; border-top:1px solid rgba(0,0,0,.06); }
@@ -684,6 +686,7 @@
       document.write('<scr'+'ipt src="daily-report.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-b.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-c.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-d.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="version.js?v='+d+'"><\/scr'+'ipt>');
@@ -2622,110 +2625,145 @@ function renderSimPbOpen() {
 function renderAbCompare() {
     const rt = window.DAILY_REPORT && window.DAILY_REPORT.running_totals;
     const pb = window.PORTFOLIO_B;
+    const pc = window.PORTFOLIO_C;
+    const pd = window.PORTFOLIO_D;
     const card = document.getElementById('ab-compare-card');
     if (!card) return;
     if (!rt && !pb) { card.style.display = 'none'; return; }
     card.style.display = '';
 
-    // ── Plan A stats (from daily-report) ──
+    const fmt = v => v >= 0 ? `+$${v.toFixed(2)}` : `-$${Math.abs(v).toFixed(2)}`;
+    const col = v => v >= 0 ? '#16a34a' : '#dc2626';
+
+    // ── Plan A stats ──
     const aCapital = rt ? (rt.simulated_capital || 2000) : 2000;
     const aPnl = aCapital - 2000;
-    const aPnlPct = (aPnl / 2000 * 100);
+    const aPnlPct = aPnl / 2000 * 100;
     const aTotal = rt ? (rt.total_signals_verified || 0) : 0;
     const aActive = rt ? (rt.total_signals_active || aTotal) : 0;
     const aHolds = aTotal - aActive;
     const aHoldRate = aTotal > 0 ? (aHolds / aTotal * 100).toFixed(0) : 0;
     const aAcc = rt ? (rt.accuracy_pct || 'N/A') : 'N/A';
 
-    // ── Plan B stats (from portfolio-b) ──
-    const pbStats = pb ? (pb.stats || {}) : {};
-    const bCapital = pbStats.portfolio_value || 2000;
-    const bPnl = bCapital - 2000;
-    const bPnlPct = (bPnl / 2000 * 100);
-    const bTrades = pbStats.total_trades || 0;
-    const bWinRate = pbStats.win_rate || 0;
-    const bOpen = (pb && pb.open_positions) ? pb.open_positions.length : 0;
+    // ── Plan B/C/D stats ──
+    const getStats = p => p ? (p.stats || {}) : {};
+    const bSt = getStats(pb), cSt = getStats(pc), dSt = getStats(pd);
+    const bCap = bSt.portfolio_value || 2000, bPnl = bCap - 2000, bPnlPct = bPnl / 2000 * 100;
+    const cCap = cSt.portfolio_value || 2000, cPnl = cCap - 2000, cPnlPct = cPnl / 2000 * 100;
+    const dCap = dSt.portfolio_value || 2000, dPnl = dCap - 2000, dPnlPct = dPnl / 2000 * 100;
+
+    // 找最高盈利方案
+    const pnlMap = {A: aPnl, B: bPnl, C: cPnl, D: dPnl};
+    const bestPlan = Object.entries(pnlMap).sort((a,b) => b[1]-a[1])[0][0];
+    const trophy = plan => plan === bestPlan ? ' <span style="font-size:11px">🏆</span>' : '';
 
     const mainEl = document.getElementById('ab-main-stats');
     if (mainEl) {
-        const fmt = (v, prefix='') => v >= 0 ? `${prefix}+$${v.toFixed(2)}` : `${prefix}-$${Math.abs(v).toFixed(2)}`;
-        const col = v => v >= 0 ? '#16a34a' : '#dc2626';
         mainEl.innerHTML = `
             <div class="ab-panel plan-a">
-                <div class="ab-label a">A 方案 — 开盘价入场 (T+1)</div>
+                <div class="ab-label a">A 方案${trophy('A')} — 开盘价入场</div>
                 <div class="ab-capital">$${aCapital.toFixed(2)}</div>
-                <div class="ab-pnl" style="color:${col(aPnl)}">${fmt(aPnl)} (${aPnlPct >= 0 ? '+' : ''}${aPnlPct.toFixed(1)}%)</div>
+                <div class="ab-pnl" style="color:${col(aPnl)}">${fmt(aPnl)} (${aPnlPct>=0?'+':''}${aPnlPct.toFixed(1)}%)</div>
                 <div class="ab-row">
                     <div class="ab-kv"><div class="ab-kv-lbl">信号数</div><div class="ab-kv-val">${aTotal}</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">准确率</div><div class="ab-kv-val">${aAcc}</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">HOLD率</div><div class="ab-kv-val" style="color:#d97706">${aHoldRate}%</div></div>
-                    <div class="ab-kv"><div class="ab-kv-lbl">有效信号</div><div class="ab-kv-val">${aActive}</div></div>
                 </div>
             </div>
             <div class="ab-panel plan-b">
-                <div class="ab-label b">B 方案 — 信号价 TP+8% / SL-4% / 5日</div>
-                <div class="ab-capital">$${bCapital.toFixed(2)}</div>
-                <div class="ab-pnl" style="color:${col(bPnl)}">${fmt(bPnl)} (${bPnlPct >= 0 ? '+' : ''}${bPnlPct.toFixed(1)}%)</div>
+                <div class="ab-label b">B 方案${trophy('B')} — TP+8% / SL-4% / 5日</div>
+                <div class="ab-capital">$${bCap.toFixed(2)}</div>
+                <div class="ab-pnl" style="color:${col(bPnl)}">${fmt(bPnl)} (${bPnlPct>=0?'+':''}${bPnlPct.toFixed(1)}%)</div>
                 <div class="ab-row">
-                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${bTrades}</div></div>
-                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${bWinRate}%</div></div>
-                    <div class="ab-kv"><div class="ab-kv-lbl">持仓中</div><div class="ab-kv-val">${bOpen}</div></div>
-                    <div class="ab-kv"><div class="ab-kv-lbl">HOLD跳过</div><div class="ab-kv-val" style="color:#16a34a">✓</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${bSt.total_trades||0}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${bSt.win_rate||0}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">持仓中</div><div class="ab-kv-val">${pb?pb.open_positions.length:0}</div></div>
+                </div>
+            </div>
+            <div class="ab-panel plan-c">
+                <div class="ab-label c">C 方案${trophy('C')} — TP+8% / SL-4% / 5日 / 1.5%跳空</div>
+                <div class="ab-capital">$${cCap.toFixed(2)}</div>
+                <div class="ab-pnl" style="color:${col(cPnl)}">${fmt(cPnl)} (${cPnlPct>=0?'+':''}${cPnlPct.toFixed(1)}%)</div>
+                <div class="ab-row">
+                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${cSt.total_trades||0}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${cSt.win_rate||0}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">跳空跳过</div><div class="ab-kv-val" style="color:#7c3aed">${cSt.skipped_gap||0}</div></div>
+                </div>
+            </div>
+            <div class="ab-panel plan-d">
+                <div class="ab-label d">D 方案${trophy('D')} — TP+15% / SL-3% / 2日 / 1%跳空 ✨新</div>
+                <div class="ab-capital">$${dCap.toFixed(2)}</div>
+                <div class="ab-pnl" style="color:${col(dPnl)}">${fmt(dPnl)} (${dPnlPct>=0?'+':''}${dPnlPct.toFixed(1)}%)</div>
+                <div class="ab-row">
+                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${dSt.total_trades||0}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${dSt.win_rate||0}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">跳空跳过</div><div class="ab-kv-val" style="color:#ea580c">${dSt.skipped_gap||0}</div></div>
                 </div>
             </div>`;
     }
 
-    // ── Cumulative curve: A vs B ──
+    // ── Cumulative curve: A / B / C / D ──
     const chartEl = document.getElementById('ab-curve-chart');
     if (chartEl && rt) {
         const dates = rt.daily_dates || [];
         const cumA = rt.cum_capital_a || [1000];
-        // Build Plan B cumulative from closed positions
-        let bCumMap = {};
-        if (pb && pb.closed_positions) {
+
+        const buildCumMap = portfolio => {
+            const map = {};
+            if (!portfolio || !portfolio.closed_positions) return map;
             let running = 1000;
-            const sorted = [...pb.closed_positions].sort((a,b) => a.close_date.localeCompare(b.close_date));
-            sorted.forEach(p => {
-                running += (p.realized_pnl_usd || 0);
-                bCumMap[p.close_date] = running;
-            });
-        }
-        const bCum = dates.map((d, i) => {
-            // Use the latest B value up to this date
+            const sorted = [...portfolio.closed_positions].sort((a,b) => a.close_date.localeCompare(b.close_date));
+            sorted.forEach(p => { running += (p.realized_pnl_usd || 0); map[p.close_date] = running; });
+            return map;
+        };
+        const toCum = map => dates.map(d => {
             let val = 1000;
-            Object.entries(bCumMap).forEach(([dt, v]) => { if (dt <= d) val = v; });
+            Object.entries(map).forEach(([dt, v]) => { if (dt <= d) val = v; });
             return val;
         });
 
+        const bCum = toCum(buildCumMap(pb));
+        const cCum = toCum(buildCumMap(pc));
+        const dCum = toCum(buildCumMap(pd));
+
         const W = chartEl.clientWidth || 600;
-        const H = 120, PL = 40, PR = 12, PT = 10, PB = 22;
+        const H = 130, PL = 40, PR = 12, PT = 10, PB = 22;
         const cW = W - PL - PR, cH = H - PT - PB;
-        const allVals = [...cumA.slice(1), ...bCum, 1000];
+        const allVals = [...cumA.slice(1), ...bCum, ...cCum, ...dCum, 1000];
         const minV = Math.min(...allVals) * 0.995;
         const maxV = Math.max(...allVals) * 1.005;
         const xS = (i, total) => PL + (i / Math.max(total - 1, 1)) * cW;
         const yS = v => PT + cH - ((v - minV) / (maxV - minV)) * cH;
-
-        const mkPath = (vals, offset=1) => vals.slice(offset).map((v, i) =>
+        const mkPath = (vals, offset=0) => vals.slice(offset).map((v, i) =>
             `${i === 0 ? 'M' : 'L'}${xS(i, vals.length - offset).toFixed(1)},${yS(v).toFixed(1)}`).join(' ');
 
-        const aPath = mkPath(cumA);
-        const bPath = dates.length > 0 ? mkPath(bCum, 0) : '';
+        const aPath = mkPath(cumA, 1);
+        const bPath = dates.length > 0 ? mkPath(bCum) : '';
+        const cPath = dates.length > 0 ? mkPath(cCum) : '';
+        const dPath = dates.length > 0 ? mkPath(dCum) : '';
 
         chartEl.innerHTML = `<svg width="100%" viewBox="0 0 ${W} ${H}" style="overflow:visible">
             <line x1="${PL}" y1="${PT}" x2="${PL}" y2="${PT+cH}" stroke="#f0f0f0" stroke-width="1"/>
             <line x1="${PL}" y1="${PT+cH}" x2="${W-PR}" y2="${PT+cH}" stroke="#f0f0f0" stroke-width="1"/>
             <line x1="${PL}" y1="${yS(1000).toFixed(1)}" x2="${W-PR}" y2="${yS(1000).toFixed(1)}" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,3"/>
-            <text x="${PL-4}" y="${yS(1000).toFixed(1)+4}" text-anchor="end" font-size="9" fill="#bbb">$1000</text>
-            ${aPath ? `<path d="${aPath}" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/>` : ''}
-            ${bPath ? `<path d="${bPath}" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linejoin="round"/>` : ''}
+            <text x="${PL-4}" y="${(yS(1000)+4).toFixed(1)}" text-anchor="end" font-size="9" fill="#bbb">$1000</text>
+            ${aPath ? `<path d="${aPath}" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="5,3"/>` : ''}
+            ${bPath ? `<path d="${bPath}" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round"/>` : ''}
+            ${cPath ? `<path d="${cPath}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>` : ''}
+            ${dPath ? `<path d="${dPath}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round"/>` : ''}
             ${dates.map((d, i) => i % Math.max(Math.floor(dates.length / 4), 1) === 0 ?
                 `<text x="${xS(i, dates.length).toFixed(1)}" y="${H-2}" text-anchor="middle" font-size="8" fill="#bbb">${d.slice(5)}</text>` : '').join('')}
-            <g transform="translate(${PL+8},${PT+12})">
-                <rect width="12" height="2" y="-1" fill="#3b82f6" rx="1"/><text x="16" y="4" font-size="9" fill="#3b82f6" font-weight="600">A方案</text>
+            <g transform="translate(${PL+4},${PT+12})">
+                <rect width="10" height="2" y="-1" fill="#3b82f6" rx="1"/><text x="14" y="4" font-size="9" fill="#3b82f6" font-weight="600">A</text>
             </g>
-            <g transform="translate(${PL+65},${PT+12})">
-                <rect width="12" height="2" y="-1" fill="#16a34a" rx="1"/><text x="16" y="4" font-size="9" fill="#16a34a" font-weight="600">B方案</text>
+            <g transform="translate(${PL+34},${PT+12})">
+                <rect width="10" height="2" y="-1" fill="#16a34a" rx="1"/><text x="14" y="4" font-size="9" fill="#16a34a" font-weight="600">B</text>
+            </g>
+            <g transform="translate(${PL+64},${PT+12})">
+                <rect width="10" height="2" y="-1" fill="#7c3aed" rx="1"/><text x="14" y="4" font-size="9" fill="#7c3aed" font-weight="600">C</text>
+            </g>
+            <g transform="translate(${PL+94},${PT+12})">
+                <rect width="10" height="3" y="-1.5" fill="#ea580c" rx="1"/><text x="14" y="4" font-size="9" fill="#ea580c" font-weight="700">D ✨</text>
             </g>
         </svg>`;
     }
@@ -2733,16 +2771,11 @@ function renderAbCompare() {
     // ── HOLD analysis ──
     const holdEl = document.getElementById('ab-hold-analysis');
     if (holdEl) {
-        const holdDays = pb && pb.closed_positions ? pb.closed_positions.filter(p => !p) : [];
         holdEl.innerHTML = `
             <div style="font-size:10px;font-weight:700;color:#92400e;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">⚠️ HOLD 成本分析</div>
             <div style="font-size:11px;color:#555;line-height:1.7">
-                <b>历史 HOLD 率：${aHoldRate}%（${aHolds}/${aTotal} 条信号）</b>，
-                其中 6/4 当日 2 条全是 HOLD，完全浪费当日分析费。<br>
-                HOLD 绕过方案（扩大候选池）<b>不省钱</b>，平均反而多花 <b>42%</b>。<br>
-                真正降低 HOLD 率的方式：晨报预筛时过滤 RSI 40-60（中性区间）股票，只选极端动能标的。<br>
-                2 轮辩论预估成本：<span style="color:#0284c7;font-weight:700">$1.20/天</span>（1轮 $0.95/天，约 +26%），
-                换取更高辩论质量和信号准确率。
+                <b>历史 HOLD 率：${aHoldRate}%（${aHolds}/${aTotal} 条信号）</b>，HOLD 信号不开仓，但仍消耗 API 分析费。<br>
+                真正降低 HOLD 率：晨报预筛时过滤 RSI 40-60（中性区间）股票，只选极端动能标的。
             </div>`;
     }
 }

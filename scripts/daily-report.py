@@ -539,6 +539,109 @@ def refresh_portfolio_c():
 
 refresh_portfolio_c()
 
+# ── Plan D 模拟盘：TP+15% / SL-3% / 2日 / 不利跳空>1%过滤 ──
+D_GAP_FILTER_PCT = 1.0
+
+def refresh_portfolio_d():
+    path = "data/portfolio_d.json"
+    if not os.path.exists(path):
+        return
+    with open(path) as f:
+        portfolio = json.load(f)
+
+    still_open = []
+    gap_filtered_today = 0
+    for pos in portfolio.get("open_positions", []):
+        ticker   = pos["ticker"]
+        action   = pos["action"]
+        entry    = pos["entry_price"]
+        tp       = pos["take_profit"]
+        sl       = pos["stop_loss"]
+        max_date = pos["max_hold_date"]
+
+        try:
+            df = yf.Ticker(ticker).history(period="5d")
+            if df.empty:
+                still_open.append(pos)
+                continue
+            close_today = round(float(df["Close"].iloc[-1]), 2)
+            open_today  = round(float(df["Open"].iloc[-1]), 2)
+            date_today  = df.index[-1].strftime("%Y-%m-%d")
+        except Exception as e:
+            print(f"[portfolio-d] {ticker} 价格获取失败: {e}")
+            still_open.append(pos)
+            continue
+
+        if not pos.get("gap_checked"):
+            gap_pct = (open_today - entry) / entry * 100
+            unfavorable = -gap_pct if action == "BUY" else gap_pct
+            pos["gap_checked"] = True
+            pos["day1_open"] = open_today
+            pos["day1_gap_pct"] = round(gap_pct, 2)
+            if unfavorable > D_GAP_FILTER_PCT:
+                print(f"[portfolio-d] {action} {ticker} 跳空过滤: open={open_today} gap={gap_pct:+.1f}% → 取消")
+                gap_filtered_today += 1
+                continue
+
+        raw_pct = (close_today - entry) / entry * 100
+        pnl_pct = raw_pct if action == "BUY" else -raw_pct
+        pos["daily_prices"][date_today] = {"close": close_today, "pnl_pct": round(pnl_pct, 2)}
+
+        close_reason = None
+        if action == "BUY":
+            if close_today >= tp:   close_reason = "take_profit"
+            elif close_today <= sl: close_reason = "stop_loss"
+        else:
+            if close_today <= tp:   close_reason = "take_profit"
+            elif close_today >= sl: close_reason = "stop_loss"
+        if date_today >= max_date:
+            close_reason = close_reason or "max_hold"
+
+        if close_reason:
+            realized_usd = round(pos["allocated_usd"] * pnl_pct / 100, 2)
+            closed = {**pos, "close_date": date_today, "close_price": close_today,
+                      "final_pnl_pct": round(pnl_pct, 2), "close_reason": close_reason,
+                      "realized_pnl_usd": realized_usd}
+            portfolio["closed_positions"].append(closed)
+            print(f"[portfolio-d] Closed {action} {ticker} @ ${close_today} ({close_reason}) {pnl_pct:+.2f}% / ${realized_usd:+.2f}")
+        else:
+            still_open.append(pos)
+
+    portfolio["open_positions"] = still_open
+
+    all_closed = portfolio.get("closed_positions", [])
+    wins = [p for p in all_closed if p.get("final_pnl_pct", 0) > 0]
+    total_realized = sum(p.get("realized_pnl_usd", 0) for p in all_closed)
+    open_unrealized = sum(
+        pos["allocated_usd"] * list(pos["daily_prices"].values())[-1]["pnl_pct"] / 100
+        for pos in still_open if pos["daily_prices"]
+    )
+    skipped = portfolio.get("stats", {}).get("skipped_gap", 0) + gap_filtered_today
+    portfolio["stats"] = {
+        "total_trades": len(all_closed),
+        "win_trades": len(wins),
+        "win_rate": round(len(wins) / len(all_closed) * 100, 1) if all_closed else 0,
+        "total_realized_pnl_usd": round(total_realized, 2),
+        "open_unrealized_pnl_usd": round(open_unrealized, 2),
+        "portfolio_value": round(portfolio["capital_usd"] + total_realized + open_unrealized, 2),
+        "skipped_gap": skipped,
+        "updated_at": today,
+    }
+
+    with open(path, "w") as f:
+        json.dump(portfolio, f, ensure_ascii=False, indent=2)
+
+    with open("dashboard/portfolio-d.js", "w", encoding="utf-8") as f:
+        f.write("// Plan D 模拟盘持仓 — 每日自动更新\n")
+        f.write(f"window.PORTFOLIO_D = {json.dumps(portfolio, ensure_ascii=False, indent=2)};\n")
+
+    s = portfolio["stats"]
+    print(f"\n  💼 Plan D 模拟盘  持仓:{len(still_open)}  已平:{s['total_trades']}  "
+          f"胜率:{s['win_rate']}%  已实现:{s['total_realized_pnl_usd']:+.2f}  "
+          f"跳过跳空:{s['skipped_gap']}  组合价值:${s['portfolio_value']}")
+
+refresh_portfolio_d()
+
 dq_pass = all(c["pass"] for c in report["data_quality"])
 print(f"\n  自检状态    {'✅ 全部通过' if dq_pass else '⚠️  有项目未通过'}")
 print(f"{'='*55}\n")

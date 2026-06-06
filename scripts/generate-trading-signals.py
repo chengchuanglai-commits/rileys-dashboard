@@ -610,6 +610,54 @@ def update_portfolio_c(new_signals, signal_date):
 
 update_portfolio_c(data.get("signals", []), today)
 
+# ── Plan D：TP+15% / SL-3% / 2交易日 / 不利跳空>1%过滤（首日收盘后检查）──
+def update_portfolio_d(new_signals, signal_date):
+    portfolio_path = "data/portfolio_d.json"
+    os.makedirs("data", exist_ok=True)
+    if os.path.exists(portfolio_path):
+        with open(portfolio_path) as f:
+            portfolio = json.load(f)
+    else:
+        portfolio = {"capital_usd": 2000, "open_positions": [], "closed_positions": [],
+                     "_note": "Plan D: TP+15%/SL-3%/2日 + 不利跳空>1%跳过"}
+
+    open_tickers = {p["ticker"] for p in portfolio["open_positions"]}
+    for sig in new_signals:
+        action = sig.get("action")
+        ticker = sig.get("ticker")
+        if action not in ("BUY", "SELL") or not ticker:
+            continue
+        if ticker in open_tickers:
+            print(f"[portfolio-d] {ticker} already open, skip")
+            continue
+        entry_price = sig.get("current_price")
+        if not entry_price:
+            continue
+        take_profit = round(entry_price * (1.15 if action == "BUY" else 0.85), 2)
+        stop_loss   = round(entry_price * (0.97 if action == "BUY" else 1.03), 2)
+        sig_dt = datetime.strptime(signal_date, "%Y-%m-%d")
+        trading_days, max_dt = 0, sig_dt
+        while trading_days < 2:
+            max_dt += timedelta(days=1)
+            if max_dt.weekday() < 5:
+                trading_days += 1
+        position = {
+            "ticker": ticker, "name": sig.get("name", ""),
+            "action": action, "signal_date": signal_date,
+            "entry_price": entry_price, "allocated_usd": 500,
+            "take_profit": take_profit, "stop_loss": stop_loss,
+            "max_hold_date": max_dt.strftime("%Y-%m-%d"),
+            "gap_checked": False,
+            "daily_prices": {},
+        }
+        portfolio["open_positions"].append(position)
+        print(f"[portfolio-d] Opened {action} {ticker} @ ${entry_price} (gap check pending)")
+
+    with open(portfolio_path, "w") as f:
+        json.dump(portfolio, f, ensure_ascii=False, indent=2)
+
+update_portfolio_d(data.get("signals", []), today)
+
 # Sync to Cloudflare KV so all devices get fresh data without redeployment
 import urllib.request, urllib.error
 SYNC_URL = 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
