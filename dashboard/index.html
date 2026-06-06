@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260606035900";
+      var BUILD="20260606075834";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -685,6 +685,7 @@
       document.write('<scr'+'ipt src="portfolio-b.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-c.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="historical-backtest.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="version.js?v='+d+'"><\/scr'+'ipt>');
     })();
     </script>
@@ -983,6 +984,15 @@
                 </div>
                 <div id="bt-table" style="overflow-x:auto"></div>
                 <div id="bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
+            </div>
+            <!-- 大规模历史回测验证 -->
+            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+                    <span style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em">📊 大规模历史验证</span>
+                    <span id="hist-bt-meta" style="font-size:9px;color:#bbb"></span>
+                </div>
+                <div id="hist-bt-table" style="overflow-x:auto"></div>
+                <div id="hist-bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
             </div>
             <!-- B 方案当前持仓 -->
             <div id="sim-pb-open" style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0"></div>
@@ -2348,6 +2358,7 @@ async function refreshNews(section) {
     loadSigHistory();
     renderSimPbOpen();
     loadBacktestResults();
+    loadHistoricalBacktest();
     renderIbkrPlan();
     await Promise.all([
         loadSection('fin'),
@@ -2383,6 +2394,7 @@ async function refreshNews(section) {
             loadSigHistory();
             renderSimPbOpen();
             loadBacktestResults();
+            loadHistoricalBacktest();
         });
     }
     setInterval(reloadPortfolioScripts, INTERVAL_MS);
@@ -2527,6 +2539,58 @@ function loadBacktestResults() {
         `当前最优参数：TP ${best.tp}% / SL ${best.sl}% / ${best.hold}日 / ${best.gap > 0 ? best.gap + '%跳空过滤' : '无过滤'} — 总盈亏 <strong>+$${best.total_pnl}</strong>`,
         `现有 B 方案排名 <strong>#${bRank}</strong>，C 方案排名 <strong>#${cRank}</strong>（黄底高亮）`,
     ].filter(Boolean).map(s => `<div>${s}</div>`).join('');
+}
+
+function loadHistoricalBacktest() {
+    const hb = window.HIST_BACKTEST;
+    const metaEl   = document.getElementById('hist-bt-meta');
+    const tableEl  = document.getElementById('hist-bt-table');
+    const insightEl= document.getElementById('hist-bt-insight');
+    if (!hb || !tableEl) return;
+
+    const top = hb.top_strategies || [];
+    const univ = hb.universe_size || 0;
+    const entries = hb.total_entries || 0;
+    const combos  = hb.combos_tested || 0;
+    if (metaEl) metaEl.textContent = `${univ}只股票 · ${entries}笔模拟 · ${combos}种参数 · ${hb.hist_months}个月数据`;
+
+    if (!top.length) { tableEl.innerHTML = '<div style="color:#bbb;font-size:11px">暂无数据</div>'; return; }
+
+    const th = s => `<th style="padding:4px 8px;font-size:9px;color:#9ca3af;font-weight:600;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid #f0f0f0">${s}</th>`;
+    const isCurrent = r => (r.tp===8 && r.sl===4 && r.hold===5);
+
+    const rows = top.slice(0, 15).map((r, i) => {
+        const ev60Color = r.ev_at_60pct >= 10 ? '#16a34a' : r.ev_at_60pct >= 0 ? '#ca8a04' : '#dc2626';
+        const badge = i === 0 ? ' <span style="background:#fef9c3;color:#854d0e;font-size:8px;padding:1px 4px;border-radius:3px">🏆</span>' : '';
+        const curr = isCurrent(r) ? ' style="background:#fffbeb"' : '';
+        return `<tr${curr}>
+            <td style="padding:4px 8px;font-size:10px;color:#6b7280">#${i+1}${badge}</td>
+            <td style="padding:4px 8px;font-size:10px;font-weight:600">TP ${r.tp}%</td>
+            <td style="padding:4px 8px;font-size:10px">SL ${r.sl}%</td>
+            <td style="padding:4px 8px;font-size:10px">${r.hold}日</td>
+            <td style="padding:4px 8px;font-size:10px">${r.gap > 0 ? r.gap+'%过滤' : '无过滤'}</td>
+            <td style="padding:4px 8px;font-size:10px">${r.n}笔</td>
+            <td style="padding:4px 8px;font-size:10px">${r.win_rate}%</td>
+            <td style="padding:4px 8px;font-size:10px">${r.tp_rate}% / ${r.sl_rate}%</td>
+            <td style="padding:4px 8px;font-size:10px">${r.profit_factor}</td>
+            <td style="padding:4px 8px;font-size:11px;font-weight:700;color:${ev60Color}">$${r.ev_at_60pct}</td>
+        </tr>`;
+    }).join('');
+
+    tableEl.innerHTML = `<table style="width:100%;border-collapse:collapse">
+        <thead><tr style="background:#f9fafb">
+            ${th('排名')}${th('止盈')}${th('止损')}${th('持仓')}${th('跳空过滤')}${th('笔数')}${th('胜率')}${th('TP/SL触发')}${th('盈亏比')}${th('EV@60%')}
+        </tr></thead>
+        <tbody>${rows}</tbody>
+    </table>`;
+
+    const bRank = hb.plan_b_rank, cRank = hb.plan_c_rank;
+    const best = top[0];
+    if (insightEl) insightEl.innerHTML = [
+        `大规模历史最优：TP ${best.tp}% / SL ${best.sl}% / ${best.hold}日 / ${best.gap > 0 ? best.gap + '%跳空过滤' : '无过滤'} — EV@60%: <strong>$${best.ev_at_60pct}/笔</strong> · 盈亏比 ${best.profit_factor}`,
+        `B 方案 (TP8%/SL4%/5日) 在大规模验证中排名 <strong>#${bRank}</strong>，C 方案排名 <strong>#${cRank}</strong>（黄底）`,
+        `注：EV 基于 60% 方向胜率假设，入场随机（非AI信号），反映出场参数本身的统计优势。`,
+    ].map(s => `<div>${s}</div>`).join('');
 }
 
 function renderSimPbOpen() {
