@@ -2947,14 +2947,38 @@ function loadSimCurve() {
         return val;
     });
 
+    // ── 计算 B/C 盈亏比 ──
+    const calcPF = (closed) => {
+        const wins = closed.filter(p => (p.realized_pnl_usd || 0) > 0);
+        const loss = closed.filter(p => (p.realized_pnl_usd || 0) < 0);
+        if (!loss.length) return wins.length ? '∞' : 'N/A';
+        const avgWin = wins.reduce((s, p) => s + p.realized_pnl_usd, 0) / (wins.length || 1);
+        const avgLoss = Math.abs(loss.reduce((s, p) => s + p.realized_pnl_usd, 0)) / loss.length;
+        return (avgWin / avgLoss).toFixed(2);
+    };
+    const calcAvg = (closed) => {
+        if (!closed.length) return 'N/A';
+        const avg = closed.reduce((s, p) => s + (p.realized_pnl_usd || 0), 0) / closed.length;
+        return (avg >= 0 ? '+' : '') + '$' + avg.toFixed(2);
+    };
+    const bPF  = calcPF(pbClosed);
+    const bAvg = calcAvg(pbClosed);
+    const cPF  = calcPF(pcClosed);
+    const cAvg = calcAvg(pcClosed);
+
+    // ── 标记最优方案 ──
+    const best = Math.max(aPnl, bPnl, cPnl);
+
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
     if (statsEl) {
-        const panelHtml = (cls, label, capital, pnl, pnlPct, k1l, k1v, k2l, k2v, k3l, k3v) => {
+        const panelHtml = (cls, label, capital, pnl, pnlPct, k1l, k1v, k2l, k2v, k3l, k3v, isBest) => {
             const pc = pnl >= 0 ? '#16a34a' : '#dc2626';
             const sign = pnl >= 0 ? '+' : '';
-            return `<div class="ab-panel plan-${cls}">
-                <div class="ab-label ${cls}">${label}</div>
+            const bestBadge = isBest ? '<span style="font-size:10px;background:#fef9c3;color:#854d0e;padding:1px 6px;border-radius:4px;margin-left:6px;font-weight:700">🏆 最优</span>' : '';
+            const border = isBest ? 'border:1.5px solid #eab308;' : '';
+            return `<div class="ab-panel plan-${cls}" style="${border}">
+                <div class="ab-label ${cls}">${label}${bestBadge}</div>
                 <div class="ab-capital">$${capital.toFixed(2)}</div>
                 <div class="ab-pnl" style="color:${pc}">${sign}$${Math.abs(pnl).toFixed(2)} (${sign}${pnlPct}%)</div>
                 <div class="ab-row">
@@ -2965,12 +2989,12 @@ function loadSimCurve() {
             </div>`;
         };
         statsEl.innerHTML =
-            panelHtml('a', 'A 方案 — 限价入场 (现有)', aFinal, aPnl, aPnlPct,
-                '验证信号', aTotal, '准确率', aAcc, 'HOLD数', `${aHolds}`) +
-            panelHtml('b', 'B 方案 — 信号价+TP/SL/5日', bFinal, bPnl, bPnlPct,
-                '已平仓', bTrades, '胜率', `${bWinRate}%`, '持仓中', pbOpen.length) +
-            panelHtml('c', 'C 方案 — B+跳空过滤', cFinal, cPnl, cPnlPct,
-                '已平仓', cTrades, '胜率', `${cWinRate}%`, '跳空跳过', cSkipped);
+            panelHtml('a', 'A — 限价入场 (现有)', aFinal, aPnl, aPnlPct,
+                '验证信号', aTotal, '准确率', aAcc, 'HOLD数', `${aHolds}`, aPnl === best) +
+            panelHtml('b', 'B — 信号价 TP+8%/SL-4%/5日', bFinal, bPnl, bPnlPct,
+                '已平仓', bTrades, '盈亏比', bPF, '平均每笔', bAvg, bPnl === best) +
+            panelHtml('c', 'C — B+跳空过滤', cFinal, cPnl, cPnlPct,
+                '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best);
     }
 
     // ── Triple curve chart ──
