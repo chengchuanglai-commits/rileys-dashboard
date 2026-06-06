@@ -1,34 +1,7 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
-  "open_positions": [
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research Corporation",
-      "action": "BUY",
-      "signal_date": "2026-06-05",
-      "entry_price": 318.5,
-      "allocated_usd": 500,
-      "take_profit": 343.98,
-      "stop_loss": 305.76,
-      "max_hold_date": "2026-06-12",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "FLR",
-      "name": "Fluor Corporation",
-      "action": "SELL",
-      "signal_date": "2026-06-05",
-      "entry_price": 48.35,
-      "allocated_usd": 500,
-      "take_profit": 44.48,
-      "stop_loss": 50.28,
-      "max_hold_date": "2026-06-12",
-      "day1_open": null,
-      "daily_prices": {}
-    }
-  ],
+  "open_positions": [],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -281,17 +254,42 @@ window.PORTFOLIO_C = {
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
       "realized_pnl_usd": 40.0
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research Corporation",
+      "action": "BUY",
+      "signal_date": "2026-06-05",
+      "entry_price": 318.5,
+      "allocated_usd": 500,
+      "take_profit": 343.98,
+      "stop_loss": 305.76,
+      "max_hold_date": "2026-06-12",
+      "day1_open": 318.74,
+      "daily_prices": {
+        "2026-06-05": {
+          "close": 303.28,
+          "pnl_pct": -4.78
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.08,
+      "close_date": "2026-06-05",
+      "close_price": 303.28,
+      "final_pnl_pct": -4.78,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -23.89
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过",
   "stats": {
-    "total_trades": 7,
+    "total_trades": 8,
     "win_trades": 5,
-    "win_rate": 71.4,
-    "total_realized_pnl_usd": 129.55,
-    "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2129.55,
-    "skipped_gap": 1,
-    "updated_at": "2026-06-05"
+    "win_rate": 62.5,
+    "total_realized_pnl_usd": 105.66,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2105.66,
+    "skipped_gap": 2,
+    "updated_at": "2026-06-06"
   }
 };
