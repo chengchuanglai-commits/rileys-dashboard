@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
+    (function(){
+      var BUILD="20260606035900";
+      if(new URLSearchParams(location.search).get('_v')!==BUILD){
+        location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
+      }
+    })();
+    </script>
     <title>Riley's Dashboard</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">

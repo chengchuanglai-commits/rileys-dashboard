@@ -45,7 +45,10 @@ jobs:
         run: python scripts/daily-report.py
 
       - name: Bump version
-        run: echo "window.DASHBOARD_VERSION = \"$(date -u +%Y%m%d%H%M%S)\";" > dashboard/version.js
+        run: |
+          V=$(date -u +%Y%m%d%H%M%S)
+          echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
+          sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
 
       - name: Commit and push
         run: |
@@ -54,7 +57,7 @@ jobs:
           git add dashboard/portfolio-b.js data/portfolio_b.json
           git add dashboard/portfolio-c.js data/portfolio_c.json
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
-          git add dashboard/version.js
+          git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 刷新持仓+报告 $(date -u +'%Y-%m-%d %H:%M') UTC"
           for i in 1 2 3 4 5; do
             git pull --rebase && git push && break
