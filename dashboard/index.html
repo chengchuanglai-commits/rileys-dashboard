@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260606085126";
+      var BUILD="20260606085835";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -967,11 +967,11 @@
         <div class="card" id="sim-card">
             <div class="card-hd" style="margin-bottom:14px">
                 <span class="card-title">📊 模拟盘 — A / B / C 方案对比</span>
-                <span style="font-size:9px;color:#bbb">A=限价入场 · B=TP+8%/SL-4%/5日 · C=B+跳空过滤</span>
+                <span style="font-size:9px;color:#bbb">A=限价入场 · B=TP+8%/SL-4%/5日 · C=B+跳空过滤 · D=TP+15%/SL-3%/2日</span>
                 <span id="sim-refresh-info" style="font-size:9px;color:#bbb;margin-left:auto"></span>
             </div>
-            <!-- A vs B 统计面板 -->
-            <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px"></div>
+            <!-- A vs B vs C vs D 统计面板 -->
+            <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-bottom:16px"></div>
             <!-- 双曲线图 -->
             <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px;overflow:hidden"></div>
             <!-- 交易历史表格 -->
@@ -3048,6 +3048,7 @@ function loadSimCurve() {
     const data = window.DAILY_REPORT;
     const pb   = window.PORTFOLIO_B;
     const pc   = window.PORTFOLIO_C;
+    const pd   = window.PORTFOLIO_D;
     if (!data || !data.running_totals) return;
     const rt = data.running_totals;
 
@@ -3113,7 +3114,28 @@ function loadSimCurve() {
         return val;
     });
 
-    // ── 计算 B/C 盈亏比 ──
+    // ── Plan D data ──
+    const pdClosed = (pd && pd.closed_positions) ? pd.closed_positions : [];
+    const pdOpen   = (pd && pd.open_positions)   ? pd.open_positions   : [];
+    const pdStats  = (pd && pd.stats)            ? pd.stats            : {};
+    const dFinal   = pdStats.portfolio_value || 2000;
+    const dPnl     = dFinal - 2000;
+    const dPnlPct  = (dPnl / 20).toFixed(2);
+    const dTrades  = pdStats.total_trades  || 0;
+    const dWinRate = pdStats.win_rate      || 0;
+    const dSkipped = pdStats.skipped_gap   || 0;
+
+    const dCumByDate = {};
+    let dRunning = 2000;
+    [...pdClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
+        .forEach(p => { dRunning += (p.realized_pnl_usd || 0); dCumByDate[p.close_date] = dRunning; });
+    const cumD = dates.map(d => {
+        let val = 2000;
+        Object.entries(dCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
+        return val;
+    });
+
+    // ── 计算 B/C/D 盈亏比 ──
     const calcPF = (closed) => {
         const wins = closed.filter(p => (p.realized_pnl_usd || 0) > 0);
         const loss = closed.filter(p => (p.realized_pnl_usd || 0) < 0);
@@ -3131,9 +3153,11 @@ function loadSimCurve() {
     const bAvg = calcAvg(pbClosed);
     const cPF  = calcPF(pcClosed);
     const cAvg = calcAvg(pcClosed);
+    const dPF  = calcPF(pdClosed);
+    const dAvg = calcAvg(pdClosed);
 
     // ── 标记最优方案 ──
-    const best = Math.max(aPnl, bPnl, cPnl);
+    const best = Math.max(aPnl, bPnl, cPnl, dPnl);
 
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
@@ -3141,8 +3165,8 @@ function loadSimCurve() {
         const panelHtml = (cls, label, capital, pnl, pnlPct, k1l, k1v, k2l, k2v, k3l, k3v, isBest) => {
             const pc = pnl >= 0 ? '#16a34a' : '#dc2626';
             const sign = pnl >= 0 ? '+' : '';
-            const bestBadge = isBest ? '<span style="font-size:10px;background:#fef9c3;color:#854d0e;padding:1px 6px;border-radius:4px;margin-left:6px;font-weight:700">🏆 最优</span>' : '';
-            const border = isBest ? 'border:1.5px solid #eab308;' : '';
+            const bestBadge = isBest ? '<span style="font-size:10px;background:#fef9c3;color:#854d0e;padding:1px 6px;border-radius:4px;margin-left:6px;font-weight:700">🏆</span>' : '';
+            const border = isBest ? 'border:2px solid #eab308;' : '';
             return `<div class="ab-panel plan-${cls}" style="${border}">
                 <div class="ab-label ${cls}">${label}${bestBadge}</div>
                 <div class="ab-capital">$${capital.toFixed(2)}</div>
@@ -3155,12 +3179,14 @@ function loadSimCurve() {
             </div>`;
         };
         statsEl.innerHTML =
-            panelHtml('a', 'A — 限价入场 (现有)', aFinal, aPnl, aPnlPct,
+            panelHtml('a', 'A — 限价入场', aFinal, aPnl, aPnlPct,
                 '验证信号', aTotal, '准确率', aAcc, 'HOLD数', `${aHolds}`, aPnl === best) +
-            panelHtml('b', 'B — 信号价 TP+8%/SL-4%/5日', bFinal, bPnl, bPnlPct,
+            panelHtml('b', 'B — TP+8%/SL-4%/5日', bFinal, bPnl, bPnlPct,
                 '已平仓', bTrades, '盈亏比', bPF, '平均每笔', bAvg, bPnl === best) +
-            panelHtml('c', 'C — B+跳空过滤', cFinal, cPnl, cPnlPct,
-                '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best);
+            panelHtml('c', 'C — B+1.5%跳空', cFinal, cPnl, cPnlPct,
+                '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best) +
+            panelHtml('d', 'D — TP+15%/SL-3%/2日 ✨', dFinal, dPnl, dPnlPct,
+                '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best);
     }
 
     // ── Triple curve chart ──
@@ -3172,7 +3198,7 @@ function loadSimCurve() {
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
-        const allVals = [...cumA, ...cumB, ...cumC, 2000];
+        const allVals = [...cumA, ...cumB, ...cumC, ...cumD, 2000];
         const yMin = Math.min(...allVals);
         const yMax = Math.max(...allVals);
         const yPad = Math.max((yMax - yMin) * 0.15, 15);
@@ -3198,44 +3224,55 @@ function loadSimCurve() {
         const ptA = cumA.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptB = cumB.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptC = cumC.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
+        const ptD = cumD.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
 
         const areaA = `${xPx(0)},${PAD.top+cH} ` + cumA.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumA.length-1)},${PAD.top+cH}`;
         const areaB = `${xPx(0)},${PAD.top+cH} ` + cumB.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumB.length-1)},${PAD.top+cH}`;
         const areaC = `${xPx(0)},${PAD.top+cH} ` + cumC.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumC.length-1)},${PAD.top+cH}`;
+        const areaD = `${xPx(0)},${PAD.top+cH} ` + cumD.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumD.length-1)},${PAD.top+cH}`;
 
         const aLast = cumA[cumA.length-1];
         const bLast = cumB[cumB.length-1] || bFinal;
         const cLast = cumC[cumC.length-1] || cFinal;
+        const dLast = cumD[cumD.length-1] || dFinal;
         const lx = W - PAD.right + 4;
         const labelA = `<text x="${lx}" y="${(yPx(aLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#3b82f6">$${aLast.toFixed(0)}</text>`;
         const labelB = `<text x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
         const labelC = `<text x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
+        const labelD = `<text x="${lx}" y="${(yPx(dLast)+20).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#ea580c">$${dFinal.toFixed(0)}</text>`;
 
         wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:hidden;display:block">
             <defs>
-                <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity=".12"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient>
-                <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity=".14"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0"/></linearGradient>
-                <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".10"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity=".10"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity=".12"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".08"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ea580c" stop-opacity=".15"/><stop offset="100%" stop-color="#ea580c" stop-opacity="0"/></linearGradient>
             </defs>
             ${grid}${xLabels}
             <polygon points="${areaA}" fill="url(#gA)"/>
             <polygon points="${areaB}" fill="url(#gB)"/>
             <polygon points="${areaC}" fill="url(#gC)"/>
-            <polyline points="${ptA}" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-            <polyline points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-            <polyline points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5,3" stroke-linejoin="round" stroke-linecap="round"/>
-            ${labelA}${labelB}${labelC}
-            <g transform="translate(${PAD.left+8},${PAD.top+10})">
-                <rect width="16" height="2.5" y="-1" fill="#3b82f6" rx="1.5"/>
-                <text x="20" y="4" font-size="10" fill="#3b82f6" font-weight="600">A方案</text>
+            <polygon points="${areaD}" fill="url(#gD)"/>
+            <polyline points="${ptA}" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
+            <polyline points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <polyline points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <polyline points="${ptD}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+            ${labelA}${labelB}${labelC}${labelD}
+            <g transform="translate(${PAD.left+4},${PAD.top+10})">
+                <line x1="0" y1="0" x2="14" y2="0" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <text x="18" y="4" font-size="10" fill="#3b82f6" font-weight="600">A</text>
+            </g>
+            <g transform="translate(${PAD.left+38},${PAD.top+10})">
+                <rect width="14" height="2.5" y="-1" fill="#16a34a" rx="1.5"/>
+                <text x="18" y="4" font-size="10" fill="#16a34a" font-weight="600">B</text>
             </g>
             <g transform="translate(${PAD.left+72},${PAD.top+10})">
-                <rect width="16" height="2.5" y="-1" fill="#16a34a" rx="1.5"/>
-                <text x="20" y="4" font-size="10" fill="#16a34a" font-weight="600">B方案</text>
+                <rect width="14" height="2.5" y="-1" fill="#7c3aed" rx="1.5"/>
+                <text x="18" y="4" font-size="10" fill="#7c3aed" font-weight="600">C</text>
             </g>
-            <g transform="translate(${PAD.left+136},${PAD.top+10})">
-                <line x1="0" y1="0" x2="16" y2="0" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4,2"/>
-                <text x="20" y="4" font-size="10" fill="#7c3aed" font-weight="600">C方案</text>
+            <g transform="translate(${PAD.left+106},${PAD.top+10})">
+                <rect width="14" height="3" y="-1.5" fill="#ea580c" rx="1.5"/>
+                <text x="18" y="4" font-size="10" fill="#ea580c" font-weight="700">D ✨</text>
             </g>
         </svg>`;
     }
