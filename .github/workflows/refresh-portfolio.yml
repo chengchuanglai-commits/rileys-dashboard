@@ -41,13 +41,17 @@ jobs:
           python scripts/backfill-portfolio-b.py
           python scripts/backfill-portfolio-c.py
 
+      - name: Regenerate daily report
+        run: python scripts/daily-report.py
+
       - name: Commit and push
         run: |
           git config --global user.email "portfolio-refresh-bot@users.noreply.github.com"
           git config --global user.name "Portfolio Refresh Bot"
           git add dashboard/portfolio-b.js data/portfolio_b.json
           git add dashboard/portfolio-c.js data/portfolio_c.json
-          git diff --staged --quiet || git commit -m "chore: 刷新持仓 $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: 刷新持仓+报告 $(date -u +'%Y-%m-%d %H:%M') UTC"
           for i in 1 2 3 4 5; do
             git pull --rebase && git push && break
             echo "Push failed, retry $i/5 in 10s..."
