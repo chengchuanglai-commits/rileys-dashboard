@@ -54,6 +54,9 @@ jobs:
       - name: Generate daily self-check report
         run: python scripts/daily-report.py
 
+      - name: Run backtest optimizer
+        run: python scripts/backtest-optimizer.py
+
       - name: Bump version
         run: |
           V=$(date -u +%Y%m%d%H%M%S)
@@ -69,6 +72,7 @@ jobs:
           git add "dashboard/trading-signals-history/"*-report.json 2>/dev/null || true
           git add dashboard/portfolio-b.js data/portfolio_b.json 2>/dev/null || true
           git add dashboard/portfolio-c.js data/portfolio_c.json 2>/dev/null || true
+          git add dashboard/backtest-results.js data/backtest_results.json 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4 5; do

@@ -684,6 +684,7 @@
       document.write('<scr'+'ipt src="daily-report.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-b.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-c.js?v='+d+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="backtest-results.js?v='+d+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="version.js?v='+d+'"><\/scr'+'ipt>');
     })();
     </script>
@@ -973,6 +974,15 @@
             <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
                 <div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">交易历史</div>
                 <div id="sig-history-table" style="overflow-x:auto"></div>
+            </div>
+            <!-- 策略优化排名 -->
+            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+                    <span style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em">🔬 策略优化排名</span>
+                    <span id="bt-meta" style="font-size:9px;color:#bbb"></span>
+                </div>
+                <div id="bt-table" style="overflow-x:auto"></div>
+                <div id="bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
             </div>
             <!-- B 方案当前持仓 -->
             <div id="sim-pb-open" style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0"></div>
@@ -2337,6 +2347,7 @@ async function refreshNews(section) {
     loadSimCurve();
     loadSigHistory();
     renderSimPbOpen();
+    loadBacktestResults();
     renderIbkrPlan();
     await Promise.all([
         loadSection('fin'),
@@ -2371,6 +2382,7 @@ async function refreshNews(section) {
             loadSimCurve();
             loadSigHistory();
             renderSimPbOpen();
+            loadBacktestResults();
         });
     }
     setInterval(reloadPortfolioScripts, INTERVAL_MS);
@@ -2458,6 +2470,63 @@ function renderPortfolioB() {
             closedEl.innerHTML = `<div class="pb-section-lbl" style="margin-top:10px;padding-top:10px;border-top:1px solid #f0f0f0">最近已平仓</div>${rows}`;
         }
     }
+}
+
+function loadBacktestResults() {
+    const bt = window.BACKTEST_RESULTS;
+    const metaEl = document.getElementById('bt-meta');
+    const tableEl = document.getElementById('bt-table');
+    const insightEl = document.getElementById('bt-insight');
+    if (!bt || !tableEl) return;
+
+    const top = bt.top_strategies || [];
+    const n = bt.total_signals || 0;
+    const combos = bt.total_combos_tested || 0;
+    if (metaEl) metaEl.textContent = `共测试 ${combos} 种参数组合 · 基于 ${n} 笔历史信号 · 更新 ${bt.generated_at || ''}`;
+
+    if (!top.length) { tableEl.innerHTML = '<div style="color:#bbb;font-size:11px">暂无数据</div>'; return; }
+
+    const th = s => `<th style="padding:4px 8px;font-size:9px;color:#9ca3af;font-weight:600;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid #f0f0f0">${s}</th>`;
+    const isCurrent = r => (r.tp===8 && r.sl===4 && r.hold===5 && r.gap===1.5 && r.entry==='signal_price') ||
+                           (r.tp===8 && r.sl===4 && r.hold===5 && r.gap===0   && r.entry==='signal_price');
+
+    const rows = top.slice(0, 15).map((r, i) => {
+        const pnlCol = r.total_pnl >= 0 ? '#16a34a' : '#dc2626';
+        const sign = r.total_pnl >= 0 ? '+' : '';
+        const badge = i === 0 ? ' <span style="background:#fef9c3;color:#854d0e;font-size:8px;padding:1px 4px;border-radius:3px">🏆</span>' : '';
+        const curr = isCurrent(r) ? ' style="background:#fffbeb"' : '';
+        const entryShort = r.entry === 'signal_price' ? '信号价' : '开盘价';
+        return `<tr${curr}>
+            <td style="padding:4px 8px;font-size:10px;color:#6b7280">#${i+1}${badge}</td>
+            <td style="padding:4px 8px;font-size:10px;font-weight:600">TP ${r.tp}%</td>
+            <td style="padding:4px 8px;font-size:10px">SL ${r.sl}%</td>
+            <td style="padding:4px 8px;font-size:10px">${r.hold}日</td>
+            <td style="padding:4px 8px;font-size:10px">${r.gap > 0 ? r.gap+'%跳空过滤' : '无过滤'}</td>
+            <td style="padding:4px 8px;font-size:10px">${entryShort}</td>
+            <td style="padding:4px 8px;font-size:10px">${r.trades}笔</td>
+            <td style="padding:4px 8px;font-size:10px">${r.win_rate}%</td>
+            <td style="padding:4px 8px;font-size:11px;font-weight:700;color:${pnlCol}">${sign}$${r.total_pnl}</td>
+            <td style="padding:4px 8px;font-size:10px">${r.profit_factor}</td>
+            <td style="padding:4px 8px;font-size:10px;color:${pnlCol}">${sign}$${r.avg_per_trade}/笔</td>
+        </tr>`;
+    }).join('');
+
+    tableEl.innerHTML = `<table style="width:100%;border-collapse:collapse">
+        <thead><tr style="background:#f9fafb">
+            ${th('排名')}${th('止盈')}${th('止损')}${th('持仓')}${th('跳空过滤')}${th('入场')}${th('笔数')}${th('胜率')}${th('总盈亏')}${th('盈亏比')}${th('平均/笔')}
+        </tr></thead>
+        <tbody>${rows}</tbody>
+    </table>`;
+
+    // 参数趋势分析
+    const bRank = bt.plan_b_rank, cRank = bt.plan_c_rank;
+    const best = top[0];
+    const sampleWarn = n < 30 ? `⚠️ 当前仅 ${n} 笔信号，参数优化结果仅供参考，30笔后趋势更可靠。` : '';
+    if (insightEl) insightEl.innerHTML = [
+        sampleWarn,
+        `当前最优参数：TP ${best.tp}% / SL ${best.sl}% / ${best.hold}日 / ${best.gap > 0 ? best.gap + '%跳空过滤' : '无过滤'} — 总盈亏 <strong>+$${best.total_pnl}</strong>`,
+        `现有 B 方案排名 <strong>#${bRank}</strong>，C 方案排名 <strong>#${cRank}</strong>（黄底高亮）`,
+    ].filter(Boolean).map(s => `<div>${s}</div>`).join('');
 }
 
 function renderSimPbOpen() {
