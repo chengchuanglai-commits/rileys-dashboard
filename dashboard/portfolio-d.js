@@ -1,7 +1,28 @@
 // Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticker": "TISI",
+      "name": "TISI",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 17.93,
+      "allocated_usd": 500,
+      "take_profit": 15.24,
+      "stop_loss": 18.47,
+      "max_hold_date": "2026-06-10",
+      "gap_checked": true,
+      "daily_prices": {
+        "2026-06-08": {
+          "close": 17.46,
+          "pnl_pct": 2.62
+        }
+      },
+      "day1_open": 17.55,
+      "day1_gap_pct": -2.12
+    }
+  ],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -245,9 +266,9 @@ window.PORTFOLIO_D = {
     "win_trades": 5,
     "win_rate": 62.5,
     "total_realized_pnl_usd": 151.86,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2151.86,
-    "skipped_gap": 2,
-    "updated_at": "2026-06-06"
+    "open_unrealized_pnl_usd": 13.1,
+    "portfolio_value": 2164.96,
+    "skipped_gap": 3,
+    "updated_at": "2026-06-08"
   }
 };
