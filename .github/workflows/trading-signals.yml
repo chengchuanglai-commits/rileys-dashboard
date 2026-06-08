@@ -42,6 +42,7 @@ jobs:
         run: pip install yfinance anthropic lxml "git+https://github.com/TauricResearch/TradingAgents.git"
 
       - name: Notify start via WhatsApp
+        continue-on-error: true
         env:
           SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
         run: |
@@ -56,8 +57,11 @@ jobs:
 
           message = f"🚀 {today} 交易任务开始\n扫描 S&P 600 → AI 分析 → 生成信号\n预计 40 分钟后完成"
 
+          UA = 'Mozilla/5.0 (compatible; trading-bot/1.0)'
+
           try:
-              with urllib.request.urlopen(url, timeout=10) as r:
+              get_req = urllib.request.Request(url, headers={'User-Agent': UA})
+              with urllib.request.urlopen(get_req, timeout=10) as r:
                   current = json.loads(r.read())
           except Exception:
               current = {}
@@ -71,7 +75,7 @@ jobs:
           current['pending_notifications'] = notifications
 
           data = json.dumps(current, ensure_ascii=False).encode('utf-8')
-          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
+          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json', 'User-Agent': UA}, method='POST')
           urllib.request.urlopen(req, timeout=10)
           print(f'[Notify] Start notification queued: {message}')
           EOF
@@ -123,6 +127,7 @@ jobs:
 
       - name: Notify success via WhatsApp
         if: success()
+        continue-on-error: true
         env:
           SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
         run: |
@@ -182,8 +187,10 @@ jobs:
           message = "\n".join(parts)
 
           # Queue notification
+          UA = 'Mozilla/5.0 (compatible; trading-bot/1.0)'
           try:
-              with urllib.request.urlopen(url, timeout=10) as r:
+              get_req = urllib.request.Request(url, headers={'User-Agent': UA})
+              with urllib.request.urlopen(get_req, timeout=10) as r:
                   current = json.loads(r.read())
           except Exception:
               current = {}
@@ -198,7 +205,7 @@ jobs:
           current['pending_notifications'] = notifications
 
           data = json.dumps(current, ensure_ascii=False).encode('utf-8')
-          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
+          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json', 'User-Agent': UA}, method='POST')
           urllib.request.urlopen(req, timeout=10)
           print(f'[Notify] Success notification queued')
           print(f'Message preview:\n{message}')
@@ -206,6 +213,7 @@ jobs:
 
       - name: Notify failure via WhatsApp
         if: failure()
+        continue-on-error: true
         env:
           SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
           WORKFLOW_NAME: ${{ github.workflow }}
@@ -219,8 +227,10 @@ jobs:
           workflow = os.environ['WORKFLOW_NAME']
           run_id = os.environ.get('GITHUB_RUN_ID', '')
 
+          UA = 'Mozilla/5.0 (compatible; trading-bot/1.0)'
           try:
-              with urllib.request.urlopen(url, timeout=10) as r:
+              get_req = urllib.request.Request(url, headers={'User-Agent': UA})
+              with urllib.request.urlopen(get_req, timeout=10) as r:
                   current = json.loads(r.read())
           except Exception:
               current = {}
@@ -235,7 +245,7 @@ jobs:
           current['pending_notifications'] = notifications
 
           data = json.dumps(current).encode('utf-8')
-          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
+          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json', 'User-Agent': UA}, method='POST')
           urllib.request.urlopen(req, timeout=10)
           print(f'[Notify] Failure notification queued for: {workflow}')
           EOF
