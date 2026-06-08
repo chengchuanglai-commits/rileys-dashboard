@@ -41,6 +41,41 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance anthropic lxml "git+https://github.com/TauricResearch/TradingAgents.git"
 
+      - name: Notify start via WhatsApp
+        env:
+          SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+        run: |
+          python3 - <<'EOF'
+          import urllib.request, json, os
+          from datetime import datetime, timezone, date
+
+          url = os.environ['SYNC_URL']
+          now = datetime.now(timezone.utc)
+          today = date.today().isoformat()
+          time_str = now.strftime('%H:%M UTC')
+
+          message = f"🚀 {today} 交易任务开始\n扫描 S&P 600 → AI 分析 → 生成信号\n预计 40 分钟后完成"
+
+          try:
+              with urllib.request.urlopen(url, timeout=10) as r:
+                  current = json.loads(r.read())
+          except Exception:
+              current = {}
+
+          notifications = current.get('pending_notifications', [])
+          notifications.append({
+              'time': now.strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'status': 'STARTED',
+              'message': message
+          })
+          current['pending_notifications'] = notifications
+
+          data = json.dumps(current, ensure_ascii=False).encode('utf-8')
+          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
+          urllib.request.urlopen(req, timeout=10)
+          print(f'[Notify] Start notification queued: {message}')
+          EOF
+
       - name: Run stock screener
         run: python scripts/screen-stocks.py
 
