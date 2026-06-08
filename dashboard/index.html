@@ -454,6 +454,7 @@
         .sync-dot.synced  { background:#16a34a; }
         .sync-dot.error   { background:#ef4444; }
         @keyframes sync-pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.2} }
 
         /* ── Portfolio mobile cards ─────────────── */
         .porto-cards { display:flex; flex-direction:column; gap:8px; }
@@ -2725,7 +2726,69 @@ function renderSimPbOpen(livePrices) {
     el.innerHTML = `<div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:flex;align-items:center;gap:8px">全部持仓 (${open.length}) ${liveInfo}</div>${rows}`;
 }
 
-// 实时价格轮询：仅盘中每30秒刷新
+function patchLivePortfolioCards(livePrices) {
+    const CAPITAL = 2000;
+    const calcLive = (portfolio) => {
+        if (!portfolio) return null;
+        const realized = portfolio.stats?.total_realized_pnl_usd || 0;
+        let unrealized = 0;
+        for (const pos of (portfolio.open_positions || [])) {
+            const lp = livePrices[pos.ticker];
+            if (lp && pos.entry_price) {
+                const allocated = pos.allocated_usd || 500;
+                const pct = pos.action === 'SELL'
+                    ? (pos.entry_price - lp) / pos.entry_price
+                    : (lp - pos.entry_price) / pos.entry_price;
+                unrealized += allocated * pct;
+            }
+        }
+        return CAPITAL + realized + unrealized;
+    };
+
+    const liveValues = {
+        b: calcLive(window.PORTFOLIO_B),
+        c: calcLive(window.PORTFOLIO_C),
+        d: calcLive(window.PORTFOLIO_D),
+    };
+
+    // Find best plan for trophy
+    const bestVal = Math.max(...Object.values(liveValues).filter(v => v !== null));
+
+    ['b', 'c', 'd'].forEach(cls => {
+        const val = liveValues[cls];
+        if (val === null) return;
+        const pnl = val - CAPITAL;
+        const pnlPct = (pnl / 20).toFixed(2);
+        const sign = pnl >= 0 ? '+' : '';
+        const color = pnl >= 0 ? '#16a34a' : '#dc2626';
+
+        const capEl = document.getElementById(`lv-cap-${cls}`);
+        const pnlEl = document.getElementById(`lv-pnl-${cls}`);
+        if (capEl) {
+            const prev = parseFloat(capEl.dataset.prev || val);
+            capEl.dataset.prev = val;
+            capEl.style.color = val > prev ? '#16a34a' : val < prev ? '#dc2626' : '';
+            capEl.textContent = `$${val.toFixed(2)}`;
+            setTimeout(() => { if (capEl) capEl.style.color = ''; }, 800);
+        }
+        if (pnlEl) {
+            pnlEl.style.color = color;
+            pnlEl.textContent = `${sign}$${Math.abs(pnl).toFixed(2)} (${sign}${pnlPct}%)`;
+        }
+    });
+
+    // Live timestamp
+    const infoEl = document.getElementById('sim-refresh-info');
+    if (infoEl) {
+        const now = new Date();
+        const ts = now.getHours().toString().padStart(2,'0') + ':' +
+                   now.getMinutes().toString().padStart(2,'0') + ':' +
+                   now.getSeconds().toString().padStart(2,'0');
+        infoEl.innerHTML = `<span style="color:#16a34a;animation:pulse 1s infinite">●</span> LIVE ${ts}`;
+    }
+}
+
+// 实时价格轮询：仅盘中每5秒刷新
 (function startLivePricePoll() {
     function isMarketHours() {
         const now = new Date();
@@ -2738,11 +2801,12 @@ function renderSimPbOpen(livePrices) {
         const prices = await fetchLivePrices();
         if (Object.keys(prices).length) {
             window._livePrices = prices;
+            patchLivePortfolioCards(prices);
             renderSimPbOpen(prices);
         }
     }
-    tick(); // 页面加载时若在盘中立即拉取
-    setInterval(tick, 30000);
+    tick();
+    setInterval(tick, 5000);
 })();
 
 function renderAbCompare() {
@@ -3292,8 +3356,8 @@ function loadSimCurve() {
             const border = isBest ? 'border:2px solid #eab308;' : '';
             return `<div class="ab-panel plan-${cls}" style="${border}">
                 <div class="ab-label ${cls}">${label}${bestBadge}</div>
-                <div class="ab-capital">$${capital.toFixed(2)}</div>
-                <div class="ab-pnl" style="color:${pc}">${sign}$${Math.abs(pnl).toFixed(2)} (${sign}${pnlPct}%)</div>
+                <div class="ab-capital" id="lv-cap-${cls}" style="transition:color .3s">$${capital.toFixed(2)}</div>
+                <div class="ab-pnl" id="lv-pnl-${cls}" style="color:${pc};transition:color .3s">${sign}$${Math.abs(pnl).toFixed(2)} (${sign}${pnlPct}%)</div>
                 <div class="ab-row">
                     <div class="ab-kv"><div class="ab-kv-lbl">${k1l}</div><div class="ab-kv-val">${k1v}</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">${k2l}</div><div class="ab-kv-val">${k2v}</div></div>
