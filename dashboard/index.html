@@ -2614,31 +2614,115 @@ function loadHistoricalBacktest() {
     ].map(s => `<div>${s}</div>`).join('');
 }
 
-function renderSimPbOpen() {
+// 所有开仓组合的实时价格缓存 {ticker: price}
+window._livePrices = {};
+
+async function fetchLivePrices() {
+    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D];
+    const tickers = [...new Set(
+        portfolios.flatMap(p => (p && p.open_positions || []).map(pos => pos.ticker))
+    )].filter(Boolean);
+    if (!tickers.length) return {};
+
+    try {
+        const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${tickers.join(',')}&fields=regularMarketPrice,regularMarketChangePercent`;
+        const res = await fetch(url);
+        const data = await res.json();
+        const results = data?.quoteResponse?.result || [];
+        const prices = {};
+        results.forEach(q => { if (q.regularMarketPrice) prices[q.symbol] = q.regularMarketPrice; });
+        return prices;
+    } catch (e) {
+        return {};
+    }
+}
+
+function renderSimPbOpen(livePrices) {
+    const lp = livePrices || window._livePrices || {};
     const pb  = window.PORTFOLIO_B;
     const el  = document.getElementById('sim-pb-open');
     if (!el || !pb) return;
-    const open = pb.open_positions || [];
+
+    // Collect all open positions across B/C/D
+    const allPortfolios = [
+        {plan:'B', data: window.PORTFOLIO_B},
+        {plan:'C', data: window.PORTFOLIO_C},
+        {plan:'D', data: window.PORTFOLIO_D},
+    ];
+    const allOpen = allPortfolios.flatMap(({plan, data}) =>
+        (data && data.open_positions || []).map(pos => ({...pos, _plan: plan}))
+    );
+    // deduplicate by ticker+plan
+    const seen = new Set();
+    const open = allOpen.filter(pos => {
+        const key = pos._plan + ':' + pos.ticker;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+    });
+
     if (!open.length) { el.innerHTML = ''; return; }
 
-    const reasonMap = {take_profit:'止盈',stop_loss:'止损',max_hold:'到期'};
+    const hasLive = Object.keys(lp).length > 0;
+    const now = new Date();
+    const timeStr = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0') + ':' + now.getSeconds().toString().padStart(2,'0');
+
     const rows = open.map(pos => {
-        const prices = Object.values(pos.daily_prices || {});
-        const latest = prices.length ? prices[prices.length-1] : null;
-        const pct = latest ? latest.pnl_pct : 0;
+        const livePrice = lp[pos.ticker];
+        let pct, currentPrice, isLive = false;
+        if (livePrice) {
+            pct = pos.action === 'SELL'
+                ? (pos.entry_price - livePrice) / pos.entry_price * 100
+                : (livePrice - pos.entry_price) / pos.entry_price * 100;
+            currentPrice = livePrice;
+            isLive = true;
+        } else {
+            const prices = Object.values(pos.daily_prices || {});
+            const latest = prices.length ? prices[prices.length-1] : null;
+            pct = latest ? latest.pnl_pct : 0;
+            currentPrice = null;
+        }
         const entryUsd = pos.allocated_usd || 500;
-        const unrealUsd = (entryUsd * pct / 100);
+        const unrealUsd = entryUsd * pct / 100;
         const pColor = pct >= 0 ? '#16a34a' : '#dc2626';
+        const liveBadge = isLive ? `<span style="font-size:8px;background:#dcfce7;color:#16a34a;padding:1px 4px;border-radius:3px;margin-left:4px">LIVE</span>` : '';
+        const priceStr = currentPrice ? ` · 现$${currentPrice.toFixed(2)}` : '';
         return `<div class="pb-pos-row">
+            <span style="font-size:9px;color:#9ca3af;min-width:14px">${pos._plan}</span>
             <span class="pb-badge ${pos.action.toLowerCase()}">${pos.action}</span>
-            <span class="pb-ticker">${pos.ticker}</span>
-            <span class="pb-meta">入$${pos.entry_price} · TP $${pos.take_profit} · SL $${pos.stop_loss} · 到期 ${pos.max_hold_date}</span>
+            <span class="pb-ticker">${pos.ticker}${liveBadge}</span>
+            <span class="pb-meta">入$${pos.entry_price}${priceStr} · TP $${pos.take_profit} · SL $${pos.stop_loss} · 到期 ${pos.max_hold_date}</span>
             <span class="pb-pnl ${pct>=0?'pos':'neg'}">${pct>=0?'+':''}${pct.toFixed(2)}%<span style="font-size:10px;color:${pColor};display:block">${unrealUsd>=0?'+':''}$${unrealUsd.toFixed(2)}</span></span>
         </div>`;
     }).join('');
 
-    el.innerHTML = `<div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">B 方案当前持仓 (${open.length})</div>${rows}`;
+    const liveInfo = hasLive
+        ? `<span style="color:#16a34a;font-weight:600">● LIVE</span> <span style="color:#9ca3af">${timeStr}</span>`
+        : `<span style="color:#d1d5db">● 昨收</span>`;
+    el.innerHTML = `<div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:flex;align-items:center;gap:8px">全部持仓 (${open.length}) ${liveInfo}</div>${rows}`;
 }
+
+// 实时价格轮询：盘中30秒，盘后5分钟
+(function startLivePricePoll() {
+    async function tick() {
+        const prices = await fetchLivePrices();
+        if (Object.keys(prices).length) {
+            window._livePrices = prices;
+            renderSimPbOpen(prices);
+        }
+    }
+    function isMarketHours() {
+        const u = new Date().getUTCHours() * 60 + new Date().getUTCMinutes();
+        const day = new Date().getUTCDay();
+        return day > 0 && day < 6 && u >= 13 * 60 + 30 && u < 20 * 60;
+    }
+    tick(); // 首次立即拉取
+    setInterval(() => tick(), isMarketHours() ? 30000 : 300000);
+    setInterval(() => {
+        const interval = isMarketHours() ? 30000 : 300000;
+        tick();
+    }, 60000); // 每分钟重判断是否进入/退出盘中
+})();
 
 function renderAbCompare() {
     const rt = window.DAILY_REPORT && window.DAILY_REPORT.running_totals;
