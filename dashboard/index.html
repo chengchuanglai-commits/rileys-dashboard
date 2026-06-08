@@ -2634,13 +2634,10 @@ async function fetchLivePrices() {
     const statusEl = document.getElementById('live-status');
     if (statusEl) statusEl.textContent = '拉取中…';
     try {
-        const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${tickers.join(',')}&fields=regularMarketPrice`;
-        const res = await fetch(url, {headers: {'Accept': 'application/json'}});
+        const url = `https://questrade-proxy.chengchuang-lai.workers.dev/prices?symbols=${tickers.join(',')}`;
+        const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        const results = data?.quoteResponse?.result || [];
-        const prices = {};
-        results.forEach(q => { if (q.regularMarketPrice) prices[q.symbol] = q.regularMarketPrice; });
+        const prices = await res.json();
         const now = new Date();
         const ts = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0') + ':' + now.getSeconds().toString().padStart(2,'0');
         if (statusEl) statusEl.textContent = `更新 ${ts}`;
