@@ -1004,8 +1004,15 @@
                 <div id="hist-bt-table" style="overflow-x:auto"></div>
                 <div id="hist-bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
             </div>
-            <!-- B 方案当前持仓 -->
-            <div id="sim-pb-open" style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0"></div>
+            <!-- 持仓实时报价 -->
+            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+                    <span style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em">当前持仓</span>
+                    <button id="live-refresh-btn" onclick="manualLiveRefresh()" style="font-size:9px;padding:1px 7px;border:1px solid #d1d5db;border-radius:4px;background:#fff;cursor:pointer;color:#6b7280">⟳ 刷新报价</button>
+                    <span id="live-status" style="font-size:9px;color:#9ca3af"></span>
+                </div>
+                <div id="sim-pb-open"></div>
+            </div>
         </div>
     </div>
 
@@ -2624,17 +2631,36 @@ async function fetchLivePrices() {
     )].filter(Boolean);
     if (!tickers.length) return {};
 
+    const statusEl = document.getElementById('live-status');
+    if (statusEl) statusEl.textContent = '拉取中…';
     try {
-        const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${tickers.join(',')}&fields=regularMarketPrice,regularMarketChangePercent`;
-        const res = await fetch(url);
+        const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${tickers.join(',')}&fields=regularMarketPrice`;
+        const res = await fetch(url, {headers: {'Accept': 'application/json'}});
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         const results = data?.quoteResponse?.result || [];
         const prices = {};
         results.forEach(q => { if (q.regularMarketPrice) prices[q.symbol] = q.regularMarketPrice; });
+        const now = new Date();
+        const ts = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0') + ':' + now.getSeconds().toString().padStart(2,'0');
+        if (statusEl) statusEl.textContent = `更新 ${ts}`;
         return prices;
     } catch (e) {
+        console.warn('[LivePrice] fetch failed:', e.message);
+        if (statusEl) statusEl.textContent = `拉取失败: ${e.message}`;
         return {};
     }
+}
+
+async function manualLiveRefresh() {
+    const btn = document.getElementById('live-refresh-btn');
+    if (btn) { btn.disabled = true; btn.textContent = '⟳ 拉取中…'; }
+    const prices = await fetchLivePrices();
+    if (Object.keys(prices).length) {
+        window._livePrices = prices;
+        renderSimPbOpen(prices);
+    }
+    if (btn) { btn.disabled = false; btn.textContent = '⟳ 刷新报价'; }
 }
 
 function renderSimPbOpen(livePrices) {
