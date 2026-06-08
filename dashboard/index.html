@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260608153456";
+      var BUILD="20260608154951";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -681,15 +681,22 @@
     <script>
     (function(){
       var d=new Date().toISOString().slice(0,10).replace(/-/g,'');
-      document.write('<scr'+'ipt src="morning-note.js?v='+d+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="trading-signals.js?v='+d+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="daily-report.js?v='+d+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="portfolio-b.js?v='+d+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="portfolio-c.js?v='+d+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="portfolio-d.js?v='+d+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="backtest-results.js?v='+d+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="historical-backtest.js?v='+d+'"><\/scr'+'ipt>');
+      // version.js 先加载，它的 DASHBOARD_VERSION 用作后续文件的 cache-buster
       document.write('<scr'+'ipt src="version.js?v='+d+'"><\/scr'+'ipt>');
+    })();
+    </script>
+    <script>
+    (function(){
+      // version.js 已执行，DASHBOARD_VERSION 是每次 workflow 推送时的精确时间戳
+      var v = (window.DASHBOARD_VERSION || new Date().toISOString().slice(0,10).replace(/-/g,''));
+      document.write('<scr'+'ipt src="morning-note.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="trading-signals.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="daily-report.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-b.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-c.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-d.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
     })();
     </script>
     <script>
@@ -999,6 +1006,17 @@
             </div>
             <!-- B 方案当前持仓 -->
             <div id="sim-pb-open" style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0"></div>
+        </div>
+    </div>
+
+    <!-- ── VPN 搭建计划 ── -->
+    <div class="row col-1" id="sec-vpn" style="margin-bottom:16px">
+        <div class="card" id="vpn-card">
+            <div class="card-hd" style="margin-bottom:14px">
+                <span class="card-title">🔐 VPN 搭建计划</span>
+                <span style="font-size:9px;color:#bbb">GL.iNet Brume 2 · 多伦多住宅 IP · 本周完成</span>
+            </div>
+            <div id="vpn-card-body"></div>
         </div>
     </div>
 
@@ -3277,6 +3295,87 @@ function loadSimCurve() {
         </svg>`;
     }
 }
+
+// ── VPN 搭建计划 ──────────────────────────────────────
+function renderVpnPlan() {
+    const el = document.getElementById('vpn-card-body');
+    if (!el) return;
+
+    const STORAGE_KEY = 'vpn_checklist_v1';
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+
+    const tasks = [
+        { id: 'order_router',   text: '在 Amazon.ca 下单 GL.iNet GL-MT2500', sub: '搜索 "GL.iNet GL-MT2500 Brume 2" · 约 CAD $89 · Prime 3-5 天送达', phase: 1 },
+        { id: 'router_arrived', text: '路由器送达多伦多父母家', sub: '到货后进入阶段 2', phase: 1 },
+        { id: 'plug_in',        text: '视频指导父母：插网线', sub: '用网线将 GL-MT2500 的 WAN 口插入父母现有路由器的空闲 LAN 口', phase: 2 },
+        { id: 'admin_access',   text: '确认管理页面可访问', sub: '浏览器打开 192.168.8.1，看到 GL.iNet 登录界面即成功', phase: 2 },
+        { id: 'openvpn_setup',  text: '配置 OpenVPN 服务端（TCP 443）', sub: '主用协议 · 伪装成 HTTPS 流量 · 国内最稳定', phase: 3 },
+        { id: 'wg_setup',       text: '配置 WireGuard 服务端（备用）', sub: '速度更快，作为 OpenVPN 的备用通道', phase: 3 },
+        { id: 'client_mac',     text: 'Mac 安装客户端并测试', sub: 'Tunnelblick（OpenVPN）+ WireGuard App · 测试国内连通性', phase: 3 },
+        { id: 'client_iphone',  text: 'iPhone 安装客户端并测试', sub: 'OpenVPN Connect + WireGuard App · 验证 IP 为多伦多住宅 IP', phase: 3 },
+    ];
+
+    const phaseInfo = {
+        1: { label: '阶段 1', title: '购买路由器', sub: 'Amazon.ca · CAD $89 · 3-5 天送达', color: 'active' },
+        2: { label: '阶段 2', title: '硬件安装', sub: '视频指导父母插网线，无技术门槛', color: 'locked' },
+        3: { label: '阶段 3', title: 'VPN 配置', sub: 'OpenVPN TCP443 主用 + WireGuard 备用', color: 'locked' },
+    };
+
+    const checked = id => !!saved[id];
+    const total   = tasks.length;
+    const done    = tasks.filter(t => checked(t.id)).length;
+    const pct     = Math.round(done / total * 100);
+
+    const p1done = tasks.filter(t=>t.phase===1).every(t=>checked(t.id));
+    const p2done = tasks.filter(t=>t.phase===2).every(t=>checked(t.id));
+    phaseInfo[1].color = p1done ? 'done' : 'active';
+    phaseInfo[2].color = p1done ? (p2done ? 'done' : 'active') : 'locked';
+    phaseInfo[3].color = p2done ? (tasks.filter(t=>t.phase===3).every(t=>checked(t.id)) ? 'done' : 'active') : 'locked';
+
+    const phaseHtml = Object.values(phaseInfo).map(p => `
+        <div class="ibkr-phase ${p.color}">
+            <div class="ibkr-phase-badge ${p.color}">${p.label}</div>
+            <div class="ibkr-phase-title">${p.title}</div>
+            <div class="ibkr-phase-sub">${p.sub}</div>
+        </div>`).join('');
+
+    const checkSvg = `<svg width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    const itemsHtml = tasks.map(t => {
+        const ck = checked(t.id);
+        return `<li onclick="vpnToggle('${t.id}')" title="点击切换完成状态">
+            <div class="ibkr-check ${ck ? 'checked' : ''}">${checkSvg}</div>
+            <div>
+                <div class="ibkr-item-text ${ck ? 'done-text' : ''}">${t.text}</div>
+                <div class="ibkr-item-sub">${t.sub}</div>
+            </div>
+        </li>`;
+    }).join('');
+
+    el.innerHTML = `
+        <div class="ibkr-progress-bar" title="${done}/${total} 完成">
+            <div class="ibkr-progress-fill" style="width:${pct}%"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <span style="font-size:11px;color:#6b7280">进度 ${done} / ${total} 步</span>
+            <span style="font-size:11px;font-weight:700;color:${pct===100?'#16a34a':'#3b82f6'}">${pct===100?'✅ 已完成':pct+'%'}</span>
+        </div>
+        <div class="ibkr-phases">${phaseHtml}</div>
+        <ul class="ibkr-checklist">${itemsHtml}</ul>
+        <div class="ibkr-alert">
+            🔐 <strong>目标：</strong>多伦多住宅 IP，用于电商银行验证 + AI 交易项目稳定连网<br>
+            路由器到货后告知 Claude，一步步完成阶段 2 & 3 配置
+        </div>`;
+}
+
+window.vpnToggle = function(id) {
+    const STORAGE_KEY = 'vpn_checklist_v1';
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    saved[id] = !saved[id];
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+    renderVpnPlan();
+};
+
+renderVpnPlan();
 
 // ── IBKR 实盘计划 ─────────────────────────────────────
 function renderIbkrPlan() {
