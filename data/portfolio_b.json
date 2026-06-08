@@ -17,8 +17,8 @@
           "pnl_pct": 1.63
         },
         "2026-06-08": {
-          "close": 48.81,
-          "pnl_pct": -0.95
+          "close": 49.19,
+          "pnl_pct": -1.74
         }
       }
     },
@@ -34,8 +34,8 @@
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-08": {
-          "close": 17.46,
-          "pnl_pct": 2.62
+          "close": 17.71,
+          "pnl_pct": 1.23
         }
       }
     },
@@ -51,7 +51,41 @@
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-08": {
-          "close": 39.33,
+          "close": 39.44,
+          "pnl_pct": -0.28
+        }
+      }
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-06-08": {
+          "close": 12.35,
+          "pnl_pct": 0.08
+        }
+      }
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 27.55,
+      "allocated_usd": 500,
+      "take_profit": 25.35,
+      "stop_loss": 28.65,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-06-08": {
+          "close": 27.55,
           "pnl_pct": -0.0
         }
       }
@@ -357,8 +391,8 @@
     "win_trades": 5,
     "win_rate": 55.6,
     "total_realized_pnl_usd": 85.66,
-    "open_unrealized_pnl_usd": 8.35,
-    "portfolio_value": 2094.01,
-    "updated_at": "2026-06-08"
+    "open_unrealized_pnl_usd": -3.55,
+    "portfolio_value": 2082.11,
+    "updated_at": "2026-06-09"
   }
 }

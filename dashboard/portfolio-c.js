@@ -15,12 +15,52 @@ window.PORTFOLIO_C = {
       "gap_checked": true,
       "daily_prices": {
         "2026-06-08": {
-          "close": 17.46,
-          "pnl_pct": 2.62
+          "close": 17.71,
+          "pnl_pct": 1.23
         }
       },
       "day1_open": 17.55,
       "day1_gap_pct": -2.12
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "gap_checked": true,
+      "daily_prices": {
+        "2026-06-08": {
+          "close": 12.35,
+          "pnl_pct": 0.08
+        }
+      },
+      "day1_open": 12.15,
+      "day1_gap_pct": -1.7
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 27.55,
+      "allocated_usd": 500,
+      "take_profit": 25.35,
+      "stop_loss": 28.65,
+      "max_hold_date": "2026-06-16",
+      "gap_checked": true,
+      "daily_prices": {
+        "2026-06-08": {
+          "close": 27.55,
+          "pnl_pct": -0.0
+        }
+      },
+      "day1_open": 27.6,
+      "day1_gap_pct": 0.18
     }
   ],
   "closed_positions": [
@@ -308,9 +348,9 @@ window.PORTFOLIO_C = {
     "win_trades": 5,
     "win_rate": 62.5,
     "total_realized_pnl_usd": 105.66,
-    "open_unrealized_pnl_usd": 13.1,
-    "portfolio_value": 2118.76,
+    "open_unrealized_pnl_usd": 6.55,
+    "portfolio_value": 2112.21,
     "skipped_gap": 3,
-    "updated_at": "2026-06-08"
+    "updated_at": "2026-06-09"
   }
 };
