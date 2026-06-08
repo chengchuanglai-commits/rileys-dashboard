@@ -386,12 +386,17 @@ async function pollGitHubNotifications(c) {
         if (!chat) return;
 
         for (const n of notifications) {
-            const workflow = n.workflow || 'Unknown workflow';
-            const time = n.time || '';
-            const runId = n.run_id || '';
-            const msg = `🚨 *GitHub Actions 失败警报*\n\n工作流：${workflow}\n时间：${time} UTC${runId ? `\n运行ID：${runId}` : ''}\n\n请到 GitHub Actions 查看日志。`;
+            let msg;
+            if (n.message) {
+                msg = n.message;
+            } else {
+                const workflow = n.workflow || 'Unknown workflow';
+                const time = n.time || '';
+                const runId = n.run_id || '';
+                msg = `🚨 *GitHub Actions 失败警报*\n\n工作流：${workflow}\n时间：${time} UTC${runId ? `\n运行ID：${runId}` : ''}\n\n请到 GitHub Actions 查看日志。`;
+            }
             await chat.sendMessage(msg);
-            console.log(`[通知] 已发送失败警报：${workflow}`);
+            console.log(`[通知] 已发送通知：${n.status || 'unknown'}`);
         }
     } catch (e) {
         console.error('[通知轮询] 失败：', e.message);

@@ -86,6 +86,89 @@ jobs:
             sleep 10
           done
 
+      - name: Notify success via WhatsApp
+        if: success()
+        env:
+          SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+        run: |
+          python3 - <<'EOF'
+          import urllib.request, json, os
+          from datetime import datetime, timezone, date
+
+          url = os.environ['SYNC_URL']
+          today = date.today().isoformat()
+
+          # Read today's signals
+          signal_file = f"dashboard/trading-signals-history/{today}.json"
+          signals_data = {}
+          if os.path.exists(signal_file):
+              with open(signal_file) as f:
+                  signals_data = json.load(f)
+
+          # Read market regime
+          regime_label = "🟡 震荡"
+          vix_str = ""
+          spy_ma_str = ""
+          try:
+              with open("data/screened-stocks.json") as f:
+                  screened = json.load(f)
+              regime = screened.get("regime") or "neutral"
+              regime_data = screened.get("regime_data") or {}
+              emoji_map = {"bull": "🟢 牛市", "bear": "🔴 熊市", "neutral": "🟡 震荡"}
+              regime_label = emoji_map.get(regime, "🟡 震荡")
+              vix = regime_data.get("vix", 0)
+              spy_ma = regime_data.get("spy_vs_200ma", 0)
+              vix_str = f"VIX: {vix:.1f}"
+              spy_ma_str = f"SPY vs 200MA: {spy_ma:+.1f}%"
+          except Exception:
+              pass
+
+          # Format signal lines
+          signal_lines = []
+          for s in signals_data.get("signals", [])[:5]:
+              action = s.get("action", "?")
+              ticker = s.get("ticker", "?")
+              price = s.get("current_price", 0)
+              tp = s.get("target_price", 0)
+              sl = s.get("stop_loss", 0)
+              icon = "🟢" if action == "BUY" else "🔴"
+              signal_lines.append(f"{icon} {action} {ticker} @ ${price:.2f}\n   TP ${tp:.2f} | SL ${sl:.2f} | 2日")
+
+          if not signal_lines:
+              signal_lines = ["(今日无信号)"]
+
+          parts = [f"📊 {today} 交易信号\n"]
+          parts.extend(signal_lines)
+          market_parts = [p for p in [vix_str, spy_ma_str] if p]
+          parts.append(f"\n市场状态：{regime_label}")
+          if market_parts:
+              parts.append(" | ".join(market_parts))
+
+          message = "\n".join(parts)
+
+          # Queue notification
+          try:
+              with urllib.request.urlopen(url, timeout=10) as r:
+                  current = json.loads(r.read())
+          except Exception:
+              current = {}
+
+          notifications = current.get('pending_notifications', [])
+          notifications.append({
+              'workflow': 'TradingAgents 每日信号',
+              'time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'status': 'SUCCESS',
+              'message': message
+          })
+          current['pending_notifications'] = notifications
+
+          data = json.dumps(current, ensure_ascii=False).encode('utf-8')
+          req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
+          urllib.request.urlopen(req, timeout=10)
+          print(f'[Notify] Success notification queued')
+          print(f'Message preview:\n{message}')
+          EOF
+
       - name: Notify failure via WhatsApp
         if: failure()
         env:
