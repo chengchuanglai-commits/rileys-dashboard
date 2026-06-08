@@ -53,8 +53,28 @@ BLACKLIST = {
 }
 
 def select_stocks():
-    # GitHub Actions cron can be delayed several hours; if script runs past midnight Beijing,
-    # fall back to yesterday's morning note (stocks are valid for the whole trading day)
+    # Priority 1: quantitative screener output (screen-stocks.py)
+    screened_path = "data/screened-stocks.json"
+    if os.path.exists(screened_path):
+        with open(screened_path) as f:
+            data = json.load(f)
+        candidates = [
+            c for c in data.get("candidates", [])
+            if c.get("ticker", "").upper() not in BLACKLIST
+        ]
+        if candidates:
+            sp500 = data.get("sp500_pct", 0)
+            tickers = [c["ticker"] for c in candidates[:5]]
+            print(f"[select] Screened candidates ({data.get('date','')}): {tickers} (S&P {sp500:+.2f}%)")
+            return [
+                {"ticker": c["ticker"], "name": c["ticker"],
+                 "sector": "SELL_CANDIDATE" if c.get("sell_candidate") else "",
+                 "direction": "sell" if c.get("sell_candidate") else "buy"}
+                for c in candidates[:5]
+            ]
+
+    # Fallback: morning note (original logic)
+    print("[select] screened-stocks.json not found, falling back to morning note")
     history_file = f"dashboard/morning-note-history/{today}.json"
     if not os.path.exists(history_file):
         fallback = f"dashboard/morning-note-history/{yesterday}.json"
@@ -66,22 +86,19 @@ def select_stocks():
             return []
     with open(history_file) as f:
         data = json.load(f)
-    picks = data.get('stock_picks', [])
-    sp500 = data.get('market', {}).get('sp500_futures_pct', 0)
-    # Include both buy and sell direction candidates — TradingAgents decides final direction
-    all_picks = [p for p in picks if p.get('ticker', '').upper() not in BLACKLIST]
+    picks = data.get("stock_picks", [])
+    sp500 = data.get("market", {}).get("sp500_futures_pct", 0)
+    all_picks = [p for p in picks if p.get("ticker", "").upper() not in BLACKLIST]
     if sp500 >= 0:
-        preferred = ['科技', '半导体', '消费可选', '能源']
+        preferred = ["科技", "半导体", "消费可选", "能源"]
     else:
-        preferred = ['医疗', '消费必需', '生物科技', '固收']
-    # Prioritize buy-direction stocks in preferred sectors, then sell-direction, as fallback pool
+        preferred = ["医疗", "消费必需", "生物科技", "固收"]
     all_picks.sort(key=lambda p: (
-        2 if p.get('direction') == 'buy' and any(s in p.get('sector', '') for s in preferred) else
-        1 if p.get('direction') == 'buy' else 0
+        2 if p.get("direction") == "buy" and any(s in p.get("sector", "") for s in preferred) else
+        1 if p.get("direction") == "buy" else 0
     ), reverse=True)
-    # Return up to 5 candidates — main loop stops when 2 BUY/SELL signals are found
     candidates = all_picks[:5]
-    print(f"[select] Candidate pool: {[p['ticker'] for p in candidates]} (S&P {sp500:+.2f}%)")
+    print(f"[select] Morning note fallback: {[p['ticker'] for p in candidates]} (S&P {sp500:+.2f}%)")
     return candidates
 
 

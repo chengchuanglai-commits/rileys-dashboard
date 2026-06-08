@@ -39,7 +39,10 @@ jobs:
           restore-keys: ${{ runner.os }}-pip-tradingagents-
 
       - name: Install dependencies
-        run: pip install yfinance anthropic "git+https://github.com/TauricResearch/TradingAgents.git"
+        run: pip install yfinance anthropic lxml "git+https://github.com/TauricResearch/TradingAgents.git"
+
+      - name: Run stock screener
+        run: python scripts/screen-stocks.py
 
       - name: Generate trading signals
         env:
@@ -74,6 +77,7 @@ jobs:
           git add dashboard/portfolio-c.js data/portfolio_c.json 2>/dev/null || true
           git add dashboard/portfolio-d.js data/portfolio_d.json 2>/dev/null || true
           git add dashboard/backtest-results.js data/backtest_results.json 2>/dev/null || true
+          git add data/screened-stocks.json 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4 5; do
