@@ -2702,26 +2702,24 @@ function renderSimPbOpen(livePrices) {
     el.innerHTML = `<div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:flex;align-items:center;gap:8px">全部持仓 (${open.length}) ${liveInfo}</div>${rows}`;
 }
 
-// 实时价格轮询：盘中30秒，盘后5分钟
+// 实时价格轮询：仅盘中每30秒刷新
 (function startLivePricePoll() {
+    function isMarketHours() {
+        const now = new Date();
+        const u = now.getUTCHours() * 60 + now.getUTCMinutes();
+        const day = now.getUTCDay();
+        return day > 0 && day < 6 && u >= 13 * 60 + 30 && u < 20 * 60;
+    }
     async function tick() {
+        if (!isMarketHours()) return;
         const prices = await fetchLivePrices();
         if (Object.keys(prices).length) {
             window._livePrices = prices;
             renderSimPbOpen(prices);
         }
     }
-    function isMarketHours() {
-        const u = new Date().getUTCHours() * 60 + new Date().getUTCMinutes();
-        const day = new Date().getUTCDay();
-        return day > 0 && day < 6 && u >= 13 * 60 + 30 && u < 20 * 60;
-    }
-    tick(); // 首次立即拉取
-    setInterval(() => tick(), isMarketHours() ? 30000 : 300000);
-    setInterval(() => {
-        const interval = isMarketHours() ? 30000 : 300000;
-        tick();
-    }, 60000); // 每分钟重判断是否进入/退出盘中
+    tick(); // 页面加载时若在盘中立即拉取
+    setInterval(tick, 30000);
 })();
 
 function renderAbCompare() {
