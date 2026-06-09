@@ -233,7 +233,7 @@ window.PORTFOLIO_D = {
           "pnl_pct": 1.87
         },
         "2026-06-09": {
-          "open": 335.5,
+          "open": 335.49,
           "high": 349.09,
           "low": 306.01,
           "close": 327.16,

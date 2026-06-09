@@ -16,7 +16,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-12",
       "regime": "neutral",
-      "vix": 19.82,
+      "vix": 19.87,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -35,7 +35,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-12",
       "regime": "neutral",
-      "vix": 19.82,
+      "vix": 19.87,
       "daily_prices": {},
       "gap_checked": true
     }
