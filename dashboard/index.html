@@ -383,6 +383,8 @@
         /* ── A vs B comparison ──────────────────── */
         .ab-panel { border-radius:12px; padding:14px 16px; }
         .ab-panel.plan-a { background:linear-gradient(135deg,#f0f9ff,#e0f2fe); border:1px solid #bae6fd; }
+        .ab-panel.plan-e { background:linear-gradient(135deg,#ecfeff,#cffafe); border:1px solid #67e8f9; }
+        .ab-label.e { color:#0891b2; }
         .ab-panel.plan-b { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #86efac; }
         .ab-panel.plan-c { background:linear-gradient(135deg,#f5f3ff,#ede9fe); border:1px solid #c4b5fd; }
         .ab-panel.plan-d { background:linear-gradient(135deg,#fff7ed,#ffedd5); border:2px solid #fb923c; }
@@ -3245,18 +3247,27 @@ function loadSimCurve() {
         infoEl.textContent = `数据更新 ${hm}`;
     }
 
-    // ── Plan A data (= 原 Plan D：限价单入场，现有方案) ──
+    // ── Plan E data (智能市场适应) ──
+    const pe     = window.PORTFOLIO_E;
     const dates  = rt.daily_dates || [];
-    const _rawCumA = rt.cum_capital_d || [1000];
-    const cumA   = _rawCumA.length > dates.length
-        ? _rawCumA.slice(_rawCumA.length - dates.length)
-        : _rawCumA;
-    const aFinal = rt.simulated_capital_limit || 2000;
-    const aPnl   = aFinal - 2000;
-    const aPnlPct = (aPnl / 20).toFixed(2);
-    const aTotal  = rt.total_limit || 0;
-    const aHolds  = (rt.total_signals_verified || 0) - (rt.total_signals_active || 0);
-    const aAcc    = rt.accuracy_limit_pct || 'N/A';
+    const peStats  = (pe && pe.stats) ? pe.stats : {};
+    const eFinal   = peStats.portfolio_value || 2000;
+    const ePnl     = eFinal - 2000;
+    const ePnlPct  = (ePnl / 20).toFixed(2);
+    const peClosed = (pe && pe.closed_positions) ? pe.closed_positions : [];
+    const eTrades  = peStats.total_trades || 0;
+    const eWinRate = peStats.win_rate || 0;
+    const eFiltered = (peStats.skipped_direction || 0) + (peStats.skipped_fear || 0);
+
+    const eCumByDate = {};
+    let eRunning = 2000;
+    [...peClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
+        .forEach(p => { eRunning += (p.realized_pnl_usd || 0); eCumByDate[p.close_date] = eRunning; });
+    const cumE = dates.map(d => {
+        let val = 2000;
+        Object.entries(eCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
+        return val;
+    });
 
     // ── Plan B data ──
     const pbClosed = (pb && pb.closed_positions) ? pb.closed_positions : [];
@@ -3341,8 +3352,11 @@ function loadSimCurve() {
     const dPF  = calcPF(pdClosed);
     const dAvg = calcAvg(pdClosed);
 
+    const ePF  = calcPF(peClosed);
+    const eAvg = calcAvg(peClosed);
+
     // ── 标记最优方案 ──
-    const best = Math.max(aPnl, bPnl, cPnl, dPnl);
+    const best = Math.max(ePnl, bPnl, cPnl, dPnl);
 
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
@@ -3364,8 +3378,8 @@ function loadSimCurve() {
             </div>`;
         };
         statsEl.innerHTML =
-            panelHtml('a', 'A — 限价入场', aFinal, aPnl, aPnlPct,
-                '验证信号', aTotal, '准确率', aAcc, 'HOLD数', `${aHolds}`, aPnl === best) +
+            panelHtml('e', 'E — 智能市场适应 ✦', eFinal, ePnl, ePnlPct,
+                '已平仓', eTrades, '胜率', `${eWinRate}%`, '过滤BUY', `${eFiltered}`, ePnl === best) +
             panelHtml('b', 'B — TP+8%/SL-4%/5日', bFinal, bPnl, bPnlPct,
                 '已平仓', bTrades, '盈亏比', bPF, '平均每笔', bAvg, bPnl === best) +
             panelHtml('c', 'C — B+1.5%跳空', cFinal, cPnl, cPnlPct,
@@ -3383,7 +3397,7 @@ function loadSimCurve() {
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
-        const allVals = [...cumA, ...cumB, ...cumC, ...cumD, 2000];
+        const allVals = [...cumE, ...cumB, ...cumC, ...cumD, 2000];
         const yMin = Math.min(...allVals);
         const yMax = Math.max(...allVals);
         const yPad = Math.max((yMax - yMin) * 0.15, 15);
@@ -3406,22 +3420,22 @@ function loadSimCurve() {
         const xLabels = dates.map((d, i) => (i === 0 || i === dates.length-1 || i % Math.max(Math.floor(n/4),1) === 0)
             ? `<text x="${xPx(i).toFixed(1)}" y="${H-4}" text-anchor="middle" font-size="10" fill="#bbb">${d.slice(5)}</text>` : '').join('');
 
-        const ptA = cumA.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
+        const ptE = cumE.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptB = cumB.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptC = cumC.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptD = cumD.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
 
-        const areaA = `${xPx(0)},${PAD.top+cH} ` + cumA.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumA.length-1)},${PAD.top+cH}`;
+        const areaE = `${xPx(0)},${PAD.top+cH} ` + cumE.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumE.length-1)},${PAD.top+cH}`;
         const areaB = `${xPx(0)},${PAD.top+cH} ` + cumB.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumB.length-1)},${PAD.top+cH}`;
         const areaC = `${xPx(0)},${PAD.top+cH} ` + cumC.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumC.length-1)},${PAD.top+cH}`;
         const areaD = `${xPx(0)},${PAD.top+cH} ` + cumD.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumD.length-1)},${PAD.top+cH}`;
 
-        const aLast = cumA[cumA.length-1];
+        const eLast = cumE[cumE.length-1] || eFinal;
         const bLast = cumB[cumB.length-1] || bFinal;
         const cLast = cumC[cumC.length-1] || cFinal;
         const dLast = cumD[cumD.length-1] || dFinal;
         const lx = W - PAD.right + 4;
-        const labelA = `<text x="${lx}" y="${(yPx(aLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#3b82f6">$${aLast.toFixed(0)}</text>`;
+        const labelE = `<text x="${lx}" y="${(yPx(eLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#0891b2">$${eFinal.toFixed(0)}</text>`;
         const labelB = `<text x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
         const labelC = `<text x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
         const labelD = `<text x="${lx}" y="${(yPx(dLast)+20).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#ea580c">$${dFinal.toFixed(0)}</text>`;
@@ -3430,22 +3444,23 @@ function loadSimCurve() {
             <defs>
                 <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity=".10"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity=".12"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gE" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0891b2" stop-opacity=".12"/><stop offset="100%" stop-color="#0891b2" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".08"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ea580c" stop-opacity=".15"/><stop offset="100%" stop-color="#ea580c" stop-opacity="0"/></linearGradient>
             </defs>
             ${grid}${xLabels}
-            <polygon points="${areaA}" fill="url(#gA)"/>
+            <polygon points="${areaE}" fill="url(#gE)"/>
             <polygon points="${areaB}" fill="url(#gB)"/>
             <polygon points="${areaC}" fill="url(#gC)"/>
             <polygon points="${areaD}" fill="url(#gD)"/>
-            <polyline points="${ptA}" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
+            <polyline points="${ptE}" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
             <polyline points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptD}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-            ${labelA}${labelB}${labelC}${labelD}
+            ${labelE}${labelB}${labelC}${labelD}
             <g transform="translate(${PAD.left+4},${PAD.top+10})">
-                <line x1="0" y1="0" x2="14" y2="0" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2"/>
-                <text x="18" y="4" font-size="10" fill="#3b82f6" font-weight="600">A</text>
+                <line x1="0" y1="0" x2="14" y2="0" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <text x="18" y="4" font-size="10" fill="#0891b2" font-weight="600">E</text>
             </g>
             <g transform="translate(${PAD.left+38},${PAD.top+10})">
                 <rect width="14" height="2.5" y="-1" fill="#16a34a" rx="1.5"/>
