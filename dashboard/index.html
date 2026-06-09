@@ -399,6 +399,8 @@
         .ab-kv { text-align:center; }
         .ab-kv-lbl { font-size:9px; color:#9ca3af; text-transform:uppercase; letter-spacing:.06em; margin-bottom:2px; font-weight:600; }
         .ab-kv-val { font-size:12px; font-weight:700; color:#374151; }
+        .ab-comm { font-size:9px; color:#9ca3af; margin-top:5px; padding-top:4px; }
+        .ab-comm-val { color:#ef4444; font-weight:600; }
         .hold-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:6px; background:#fef3c7; color:#92400e; font-weight:600; margin:2px; }
 
         /* ── Plan B portfolio ────────────────────── */
@@ -2482,10 +2484,12 @@ function renderPortfolioB() {
                 const latest = prices.length ? prices[prices.length - 1] : null;
                 const pct = latest ? latest.pnl_pct : 0;
                 const closeDate = pos.max_hold_date || '';
+                const sharesStr = pos.shares ? `${pos.shares}股·$${pos.actual_position_usd||''} · ` : '';
+                const commStr = pos.entry_commission ? `佣$${pos.entry_commission} · ` : '';
                 return `<div class="pb-pos-row">
                     <span class="pb-badge ${pos.action.toLowerCase()}">${pos.action}</span>
                     <span class="pb-ticker">${pos.ticker}</span>
-                    <span class="pb-meta">入$${pos.entry_price} TP$${pos.take_profit} SL$${pos.stop_loss} 到期${closeDate}</span>
+                    <span class="pb-meta">${sharesStr}${commStr}入$${pos.entry_price} TP$${pos.take_profit} SL$${pos.stop_loss} 到期${closeDate}</span>
                     <span class="pb-pnl ${pct >= 0 ? 'pos' : 'neg'}">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</span>
                 </div>`;
             }).join('');
@@ -2504,10 +2508,12 @@ function renderPortfolioB() {
             const rows = closed.map(pos => {
                 const pct = pos.final_pnl_pct || 0;
                 const reason = reasonMap[pos.close_reason] || pos.close_reason || '';
+                const sharesInfo = pos.shares ? `${pos.shares}股·$${pos.actual_position_usd} · ` : '';
+                const commInfo = pos.commission_total ? `佣-$${pos.commission_total} · ` : '';
                 return `<div class="pb-pos-row">
                     <span class="pb-badge ${pos.action.toLowerCase()}">${pos.action}</span>
                     <span class="pb-ticker">${pos.ticker}</span>
-                    <span class="pb-meta">${pos.signal_date} → ${pos.close_date} (${reason})</span>
+                    <span class="pb-meta">${pos.signal_date} → ${pos.close_date} (${reason}) · ${sharesInfo}${commInfo}净$${(pos.realized_pnl_usd>=0?'+':'')}${pos.realized_pnl_usd?.toFixed(2)}</span>
                     <span class="pb-pnl ${pct >= 0 ? 'pos' : 'neg'}">${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%</span>
                 </div>`;
             }).join('');
@@ -2710,16 +2716,18 @@ function renderSimPbOpen(livePrices) {
             pct = latest ? latest.pnl_pct : 0;
             currentPrice = null;
         }
-        const entryUsd = pos.allocated_usd || 500;
-        const unrealUsd = entryUsd * pct / 100;
+        const actualUsd = pos.actual_position_usd || (pos.shares ? pos.shares * pos.entry_price : pos.allocated_usd || 500);
+        const unrealUsd = actualUsd * pct / 100;
         const pColor = pct >= 0 ? '#16a34a' : '#dc2626';
         const liveBadge = isLive ? `<span style="font-size:8px;background:#dcfce7;color:#16a34a;padding:1px 4px;border-radius:3px;margin-left:4px">LIVE</span>` : '';
         const priceStr = currentPrice ? ` · 现$${currentPrice.toFixed(2)}` : '';
+        const sharesTag = pos.shares ? `<span style="font-size:9px;color:#9ca3af"> · ${pos.shares}股/$${actualUsd.toFixed(0)}</span>` : '';
+        const commTag = pos.entry_commission ? `<span style="font-size:9px;color:#ef4444"> · 佣$${pos.entry_commission}</span>` : '';
         return `<div class="pb-pos-row">
             <span style="font-size:9px;color:#9ca3af;min-width:14px">${pos._plan}</span>
             <span class="pb-badge ${pos.action.toLowerCase()}">${pos.action}</span>
             <span class="pb-ticker">${pos.ticker}${liveBadge}</span>
-            <span class="pb-meta">入$${pos.entry_price}${priceStr} · TP $${pos.take_profit} · SL $${pos.stop_loss} · 到期 ${pos.max_hold_date}</span>
+            <span class="pb-meta">入$${pos.entry_price}${priceStr} · TP $${pos.take_profit} · SL $${pos.stop_loss} · 到期 ${pos.max_hold_date}${sharesTag}${commTag}</span>
             <span class="pb-pnl ${pct>=0?'pos':'neg'}">${pct>=0?'+':''}${pct.toFixed(2)}%<span style="font-size:10px;color:${pColor};display:block">${unrealUsd>=0?'+':''}$${unrealUsd.toFixed(2)}</span></span>
         </div>`;
     }).join('');
@@ -2739,11 +2747,11 @@ function patchLivePortfolioCards(livePrices) {
         for (const pos of (portfolio.open_positions || [])) {
             const lp = livePrices[pos.ticker];
             if (lp && pos.entry_price) {
-                const allocated = pos.allocated_usd || 500;
+                const actualUsd = pos.actual_position_usd || (pos.shares ? pos.shares * pos.entry_price : pos.allocated_usd || 500);
                 const pct = pos.action === 'SELL'
                     ? (pos.entry_price - lp) / pos.entry_price
                     : (lp - pos.entry_price) / pos.entry_price;
-                unrealized += allocated * pct;
+                unrealized += actualUsd * pct;
             }
         }
         return CAPITAL + realized + unrealized;
@@ -3361,11 +3369,14 @@ function loadSimCurve() {
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
     if (statsEl) {
-        const panelHtml = (cls, label, capital, pnl, pnlPct, k1l, k1v, k2l, k2v, k3l, k3v, isBest) => {
+        const panelHtml = (cls, label, capital, pnl, pnlPct, k1l, k1v, k2l, k2v, k3l, k3v, isBest, commission) => {
             const pc = pnl >= 0 ? '#16a34a' : '#dc2626';
             const sign = pnl >= 0 ? '+' : '';
             const bestBadge = isBest ? '<span style="font-size:10px;background:#fef9c3;color:#854d0e;padding:1px 6px;border-radius:4px;margin-left:6px;font-weight:700">🏆</span>' : '';
             const border = isBest ? 'border:2px solid #eab308;' : '';
+            const commLine = commission != null
+                ? `<div class="ab-comm">IBKR佣金已扣 <span class="ab-comm-val">-$${commission.toFixed(2)}</span></div>`
+                : '';
             return `<div class="ab-panel plan-${cls}" style="${border}">
                 <div class="ab-label ${cls}">${label}${bestBadge}</div>
                 <div class="ab-capital" id="lv-cap-${cls}" style="transition:color .3s">$${capital.toFixed(2)}</div>
@@ -3375,17 +3386,24 @@ function loadSimCurve() {
                     <div class="ab-kv"><div class="ab-kv-lbl">${k2l}</div><div class="ab-kv-val">${k2v}</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">${k3l}</div><div class="ab-kv-val">${k3v}</div></div>
                 </div>
+                ${commLine}
             </div>`;
         };
+
+        const eComm = peStats.total_commission_usd ?? null;
+        const bComm = pbStats.total_commission_usd ?? null;
+        const cComm = pcStats.total_commission_usd ?? null;
+        const dComm = pdStats.total_commission_usd ?? null;
+
         statsEl.innerHTML =
             panelHtml('e', 'E — 智能市场适应 ✦', eFinal, ePnl, ePnlPct,
-                '已平仓', eTrades, '胜率', `${eWinRate}%`, '过滤BUY', `${eFiltered}`, ePnl === best) +
+                '已平仓', eTrades, '胜率', `${eWinRate}%`, '过滤BUY', `${eFiltered}`, ePnl === best, eComm) +
             panelHtml('b', 'B — TP+8%/SL-4%/5日', bFinal, bPnl, bPnlPct,
-                '已平仓', bTrades, '盈亏比', bPF, '平均每笔', bAvg, bPnl === best) +
+                '已平仓', bTrades, '盈亏比', bPF, '平均每笔', bAvg, bPnl === best, bComm) +
             panelHtml('c', 'C — B+1.5%跳空', cFinal, cPnl, cPnlPct,
-                '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best) +
+                '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best, cComm) +
             panelHtml('d', 'D — TP+15%/SL-3%/2日 ✨', dFinal, dPnl, dPnlPct,
-                '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best);
+                '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best, dComm);
     }
 
     // ── Triple curve chart ──
