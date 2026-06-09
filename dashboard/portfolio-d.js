@@ -1,38 +1,7 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
-  "open_positions": [
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 27.55,
-      "allocated_usd": 500,
-      "shares": 18,
-      "actual_position_usd": 495.9,
-      "entry_commission": 1.0,
-      "take_profit": 23.42,
-      "stop_loss": 28.38,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {}
-    }
-  ],
+  "open_positions": [],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -266,18 +235,18 @@ window.PORTFOLIO_D = {
         "2026-06-09": {
           "open": 335.49,
           "high": 349.09,
-          "low": 310.12,
-          "close": 313.04,
-          "pnl_pct": -1.71
+          "low": 306.01,
+          "close": 320.09,
+          "pnl_pct": -3.0
         }
       },
       "close_date": "2026-06-09",
-      "close_price": 313.04,
-      "final_pnl_pct": -1.71,
-      "close_reason": "max_hold",
+      "close_price": 308.94,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -7.45
+      "realized_pnl_usd": -11.55
     },
     {
       "ticker": "FLR",
@@ -303,8 +272,8 @@ window.PORTFOLIO_D = {
         "2026-06-09": {
           "open": 49.85,
           "high": 51.55,
-          "low": 47.63,
-          "close": 48.08,
+          "low": 47.54,
+          "close": 48.74,
           "pnl_pct": -3.0
         }
       },
@@ -364,7 +333,7 @@ window.PORTFOLIO_D = {
           "open": 39.51,
           "high": 40.93,
           "low": 39.37,
-          "close": 40.71,
+          "close": 40.07,
           "pnl_pct": -3.0
         }
       },
@@ -382,12 +351,10 @@ window.PORTFOLIO_D = {
     "total_trades": 10,
     "win_trades": 5,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 99.34,
+    "total_realized_pnl_usd": 95.24,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2099.34,
-    "total_commission_usd": 20.0,
-    "skipped_gap": 1,
-    "skipped_zero_shares": 1,
+    "portfolio_value": 2095.24,
+    "skipped_gap": 3,
     "updated_at": "2026-06-10"
   }
 };

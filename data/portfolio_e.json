@@ -16,7 +16,7 @@
       "max_hold_days": 2,
       "max_hold_date": "2026-06-11",
       "regime": "caution",
-      "vix": 22.39,
+      "vix": 20.38,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -35,7 +35,7 @@
       "max_hold_days": 2,
       "max_hold_date": "2026-06-11",
       "regime": "caution",
-      "vix": 22.39,
+      "vix": 20.38,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -342,7 +342,7 @@
           "open": 39.51,
           "high": 40.93,
           "low": 39.37,
-          "close": 40.58,
+          "close": 40.07,
           "pnl_pct": -3.0
         }
       },
@@ -367,6 +367,6 @@
     "skipped_fear": 0,
     "skipped_direction": 4,
     "skipped_gap": 0,
-    "updated_at": "2026-06-10"
+    "updated_at": "2026-06-09"
   }
 }

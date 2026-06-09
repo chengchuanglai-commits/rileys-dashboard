@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -17,9 +17,6 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-09": {
-          "open": 17.79,
-          "high": 18.5,
-          "low": 16.94,
           "close": 18.23,
           "pnl_pct": -1.67
         }
@@ -38,7 +35,12 @@ window.PORTFOLIO_B = {
       "take_profit": 11.37,
       "stop_loss": 12.85,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-09": {
+          "close": 11.91,
+          "pnl_pct": 3.64
+        }
+      }
     },
     {
       "ticker": "STRS",
@@ -53,7 +55,12 @@ window.PORTFOLIO_B = {
       "take_profit": 25.35,
       "stop_loss": 28.65,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-09": {
+          "close": 28.2,
+          "pnl_pct": -2.36
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -354,8 +361,8 @@ window.PORTFOLIO_B = {
         "2026-06-09": {
           "open": 335.49,
           "high": 349.09,
-          "low": 310.12,
-          "close": 314.19,
+          "low": 306.01,
+          "close": 320.09,
           "pnl_pct": 8.0
         }
       },
@@ -391,8 +398,8 @@ window.PORTFOLIO_B = {
         "2026-06-09": {
           "open": 49.85,
           "high": 51.55,
-          "low": 47.63,
-          "close": 48.12,
+          "low": 47.54,
+          "close": 48.74,
           "pnl_pct": -3.99
         }
       },
@@ -422,7 +429,7 @@ window.PORTFOLIO_B = {
           "open": 39.51,
           "high": 40.93,
           "low": 39.37,
-          "close": 40.62,
+          "close": 40.07,
           "pnl_pct": -3.99
         }
       },
@@ -441,10 +448,8 @@ window.PORTFOLIO_B = {
     "win_trades": 6,
     "win_rate": 60.0,
     "total_realized_pnl_usd": 83.14,
-    "open_unrealized_pnl_usd": -9.08,
-    "portfolio_value": 2074.06,
-    "total_commission_usd": 20.0,
-    "skipped_zero_shares": 1,
+    "open_unrealized_pnl_usd": -1.95,
+    "portfolio_value": 2081.19,
     "updated_at": "2026-06-10"
   }
 };

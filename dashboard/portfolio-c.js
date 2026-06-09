@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -18,45 +18,12 @@ window.PORTFOLIO_C = {
       "day1_open": 17.79,
       "daily_prices": {
         "2026-06-09": {
-          "open": 17.79,
-          "high": 18.5,
-          "low": 16.94,
           "close": 18.23,
           "pnl_pct": -1.67
         }
-      }
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 27.55,
-      "allocated_usd": 500,
-      "shares": 18,
-      "actual_position_usd": 495.9,
-      "entry_commission": 1.0,
-      "take_profit": 25.35,
-      "stop_loss": 28.65,
-      "max_hold_date": "2026-06-16",
-      "day1_open": null,
-      "daily_prices": {}
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -0.78
     }
   ],
   "closed_positions": [
@@ -334,8 +301,8 @@ window.PORTFOLIO_C = {
         "2026-06-09": {
           "open": 335.49,
           "high": 349.09,
-          "low": 310.12,
-          "close": 313.64,
+          "low": 306.01,
+          "close": 320.09,
           "pnl_pct": 8.0
         }
       },
@@ -372,8 +339,8 @@ window.PORTFOLIO_C = {
         "2026-06-09": {
           "open": 49.85,
           "high": 51.55,
-          "low": 47.63,
-          "close": 48.13,
+          "low": 47.54,
+          "close": 48.74,
           "pnl_pct": -3.99
         }
       },
@@ -404,7 +371,7 @@ window.PORTFOLIO_C = {
           "open": 39.51,
           "high": 40.93,
           "low": 39.37,
-          "close": 40.58,
+          "close": 40.07,
           "pnl_pct": -3.99
         }
       },
@@ -423,11 +390,9 @@ window.PORTFOLIO_C = {
     "win_trades": 6,
     "win_rate": 66.7,
     "total_realized_pnl_usd": 102.48,
-    "open_unrealized_pnl_usd": -11.08,
-    "portfolio_value": 2091.4,
-    "total_commission_usd": 18.0,
-    "skipped_gap": 1,
-    "skipped_zero_shares": 1,
+    "open_unrealized_pnl_usd": -8.35,
+    "portfolio_value": 2094.13,
+    "skipped_gap": 3,
     "updated_at": "2026-06-10"
   }
 };
