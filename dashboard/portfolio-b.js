@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -9,13 +9,19 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-08",
       "entry_price": 17.93,
       "allocated_usd": 500,
+      "shares": 27,
+      "actual_position_usd": 484.11,
+      "entry_commission": 1.0,
       "take_profit": 16.5,
       "stop_loss": 18.65,
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-09": {
-          "close": 17.89,
-          "pnl_pct": 0.22
+          "open": 17.79,
+          "high": 18.5,
+          "low": 16.94,
+          "close": 18.23,
+          "pnl_pct": -1.67
         }
       }
     },
@@ -26,15 +32,13 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-09",
       "entry_price": 12.36,
       "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
       "take_profit": 11.37,
       "stop_loss": 12.85,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-09": {
-          "close": 11.63,
-          "pnl_pct": 5.91
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "STRS",
@@ -43,15 +47,13 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-09",
       "entry_price": 27.55,
       "allocated_usd": 500,
+      "shares": 18,
+      "actual_position_usd": 495.9,
+      "entry_commission": 1.0,
       "take_profit": 25.35,
       "stop_loss": 28.65,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-09": {
-          "close": 27.76,
-          "pnl_pct": -0.76
-        }
-      }
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -62,6 +64,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-05-27",
       "entry_price": 87.46,
       "allocated_usd": 500,
+      "shares": 5,
+      "actual_position_usd": 437.3,
+      "entry_commission": 1.0,
       "take_profit": 94.46,
       "stop_loss": 83.96,
       "max_hold_date": "2026-06-03",
@@ -85,7 +90,9 @@ window.PORTFOLIO_B = {
       "close_price": 83.96,
       "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -20.0
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -19.49
     },
     {
       "ticker": "WTTR",
@@ -94,6 +101,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-05-27",
       "entry_price": 19.35,
       "allocated_usd": 500,
+      "shares": 25,
+      "actual_position_usd": 483.75,
+      "entry_commission": 1.0,
       "take_profit": 17.8,
       "stop_loss": 20.12,
       "max_hold_date": "2026-06-03",
@@ -138,7 +148,9 @@ window.PORTFOLIO_B = {
       "close_price": 18.98,
       "final_pnl_pct": 1.91,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 9.55
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 7.24
     },
     {
       "ticker": "MXL",
@@ -147,6 +159,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-05-28",
       "entry_price": 101.1,
       "allocated_usd": 500,
+      "shares": 4,
+      "actual_position_usd": 404.4,
+      "entry_commission": 1.0,
       "take_profit": 93.01,
       "stop_loss": 105.14,
       "max_hold_date": "2026-06-04",
@@ -163,7 +178,9 @@ window.PORTFOLIO_B = {
       "close_price": 93.01,
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
-      "realized_pnl_usd": 40.0
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 30.35
     },
     {
       "ticker": "ALGT",
@@ -172,6 +189,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-05-28",
       "entry_price": 91.0,
       "allocated_usd": 500,
+      "shares": 5,
+      "actual_position_usd": 455.0,
+      "entry_commission": 1.0,
       "take_profit": 83.72,
       "stop_loss": 94.64,
       "max_hold_date": "2026-06-04",
@@ -209,7 +229,9 @@ window.PORTFOLIO_B = {
       "close_price": 83.72,
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
-      "realized_pnl_usd": 40.0
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 34.4
     },
     {
       "ticker": "IMOS",
@@ -218,6 +240,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-01",
       "entry_price": 67.75,
       "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 474.25,
+      "entry_commission": 1.0,
       "take_profit": 62.33,
       "stop_loss": 70.46,
       "max_hold_date": "2026-06-08",
@@ -234,39 +259,9 @@ window.PORTFOLIO_B = {
       "close_price": 62.33,
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
-      "realized_pnl_usd": 40.0
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "action": "BUY",
-      "signal_date": "2026-06-02",
-      "entry_price": 1036.48,
-      "allocated_usd": 500,
-      "take_profit": 1119.4,
-      "stop_loss": 995.02,
-      "max_hold_date": "2026-06-09",
-      "daily_prices": {
-        "2026-06-03": {
-          "open": 1079.01,
-          "high": 1089.29,
-          "low": 1038.5,
-          "close": 1079.57,
-          "pnl_pct": 4.16
-        },
-        "2026-06-04": {
-          "open": 1007.1,
-          "high": 1036.37,
-          "low": 971.68,
-          "close": 996.0,
-          "pnl_pct": -4.0
-        }
-      },
-      "close_date": "2026-06-04",
-      "close_price": 995.02,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -20.0
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 35.94
     },
     {
       "ticker": "KLIC",
@@ -275,6 +270,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-03",
       "entry_price": 108.36,
       "allocated_usd": 500,
+      "shares": 4,
+      "actual_position_usd": 433.44,
+      "entry_commission": 1.0,
       "take_profit": 99.69,
       "stop_loss": 112.69,
       "max_hold_date": "2026-06-10",
@@ -298,7 +296,9 @@ window.PORTFOLIO_B = {
       "close_price": 99.69,
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
-      "realized_pnl_usd": 40.0
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 32.68
     },
     {
       "ticker": "KLIC",
@@ -307,6 +307,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-04",
       "entry_price": 108.4,
       "allocated_usd": 500,
+      "shares": 4,
+      "actual_position_usd": 433.6,
+      "entry_commission": 1.0,
       "take_profit": 117.07,
       "stop_loss": 104.06,
       "max_hold_date": "2026-06-11",
@@ -323,7 +326,9 @@ window.PORTFOLIO_B = {
       "close_price": 104.06,
       "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -20.0
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -19.34
     },
     {
       "ticker": "LRCX",
@@ -332,6 +337,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-05",
       "entry_price": 318.5,
       "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 318.5,
+      "entry_commission": 1.0,
       "take_profit": 343.98,
       "stop_loss": 305.76,
       "max_hold_date": "2026-06-12",
@@ -346,8 +354,8 @@ window.PORTFOLIO_B = {
         "2026-06-09": {
           "open": 335.49,
           "high": 349.09,
-          "low": 318.76,
-          "close": 319.1,
+          "low": 310.12,
+          "close": 314.19,
           "pnl_pct": 8.0
         }
       },
@@ -355,7 +363,9 @@ window.PORTFOLIO_B = {
       "close_price": 343.98,
       "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
-      "realized_pnl_usd": 40.0
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 23.48
     },
     {
       "ticker": "FLR",
@@ -364,6 +374,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-05",
       "entry_price": 48.35,
       "allocated_usd": 500,
+      "shares": 10,
+      "actual_position_usd": 483.5,
+      "entry_commission": 1.0,
       "take_profit": 44.48,
       "stop_loss": 50.28,
       "max_hold_date": "2026-06-12",
@@ -378,8 +391,8 @@ window.PORTFOLIO_B = {
         "2026-06-09": {
           "open": 49.85,
           "high": 51.55,
-          "low": 48.27,
-          "close": 48.27,
+          "low": 47.63,
+          "close": 48.12,
           "pnl_pct": -3.99
         }
       },
@@ -387,7 +400,9 @@ window.PORTFOLIO_B = {
       "close_price": 50.28,
       "final_pnl_pct": -3.99,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -19.95
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.29
     },
     {
       "ticker": "VLGEA",
@@ -396,6 +411,9 @@ window.PORTFOLIO_B = {
       "signal_date": "2026-06-08",
       "entry_price": 39.33,
       "allocated_usd": 500,
+      "shares": 12,
+      "actual_position_usd": 471.96,
+      "entry_commission": 1.0,
       "take_profit": 36.18,
       "stop_loss": 40.9,
       "max_hold_date": "2026-06-15",
@@ -404,7 +422,7 @@ window.PORTFOLIO_B = {
           "open": 39.51,
           "high": 40.93,
           "low": 39.37,
-          "close": 40.31,
+          "close": 40.62,
           "pnl_pct": -3.99
         }
       },
@@ -412,17 +430,21 @@ window.PORTFOLIO_B = {
       "close_price": 40.9,
       "final_pnl_pct": -3.99,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -19.95
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -20.83
     }
   ],
-  "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日",
+  "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 11,
+    "total_trades": 10,
     "win_trades": 6,
-    "win_rate": 54.5,
-    "total_realized_pnl_usd": 109.65,
-    "open_unrealized_pnl_usd": 26.85,
-    "portfolio_value": 2136.5,
-    "updated_at": "2026-06-09"
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 83.14,
+    "open_unrealized_pnl_usd": -9.08,
+    "portfolio_value": 2074.06,
+    "total_commission_usd": 20.0,
+    "skipped_zero_shares": 1,
+    "updated_at": "2026-06-10"
   }
 };

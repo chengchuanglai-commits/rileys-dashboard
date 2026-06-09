@@ -9,6 +9,7 @@ Plan E — 智能市场适应方案
 恐慌      > 25       跳过        —      —      —      —
 
 跳空过滤：不利跳空 > 1.5% 跳过
+佣金：IBKR $0.005/股，最低 $1.00/单（入场+出场各一次）
 """
 import json, os
 from datetime import datetime, timedelta
@@ -29,6 +30,9 @@ REGIMES = [
     (25,  "caution", False, 350,  8.0, 2.5, 2),
     (999, "fear",    False,   0,  0.0, 0.0, 0),  # skip
 ]
+
+def ibkr_commission(shares):
+    return round(max(1.00, shares * 0.005), 2)
 
 _vix_cache = {}
 _spy_cache = {}
@@ -142,7 +146,7 @@ portfolio = {
     "capital_usd": STARTING_CAPITAL,
     "open_positions": [],
     "closed_positions": [],
-    "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini"
+    "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1"
 }
 
 all_signals = []
@@ -187,6 +191,16 @@ for signal_date, s in all_signals:
         skipped_direction += 1
         continue
 
+    # 计算整数股数和佣金
+    shares = int(pos_usd / entry_price)
+    if shares == 0:
+        print(f" → 跳过（价格过高，${entry_price:.2f}/股，${pos_usd}仓位买不到1股）")
+        continue
+
+    actual_position_usd = round(shares * entry_price, 2)
+    entry_comm = ibkr_commission(shares)
+    exit_comm = ibkr_commission(shares)
+
     close_date, close_price, close_reason, final_pnl_pct, daily_prices, gap_filtered = \
         simulate_position(ticker, action, entry_price, signal_date, tp_pct, sl_pct, max_days)
 
@@ -200,6 +214,9 @@ for signal_date, s in all_signals:
         "signal_date": signal_date,
         "entry_price": entry_price,
         "allocated_usd": pos_usd,
+        "shares": shares,
+        "actual_position_usd": actual_position_usd,
+        "entry_commission": entry_comm,
         "take_profit": tp_price,
         "stop_loss": sl_price,
         "max_hold_days": max_days,
@@ -220,25 +237,29 @@ for signal_date, s in all_signals:
             first_date = list(daily_prices.keys())[0]
             pos["day1_open"] = daily_prices[first_date].get("open")
         portfolio["open_positions"].append(pos)
-        print(f" → 开仓中")
+        print(f" → 开仓中 ({shares}股 实际${actual_position_usd})")
     else:
-        realized_pnl = round(pos_usd * final_pnl_pct / 100, 2)
+        gross_pnl = round(actual_position_usd * final_pnl_pct / 100, 2)
+        realized_pnl = round(gross_pnl - entry_comm - exit_comm, 2)
         pos.update({
             "close_date": close_date,
             "close_price": close_price,
             "final_pnl_pct": final_pnl_pct,
             "close_reason": close_reason,
+            "exit_commission": exit_comm,
+            "commission_total": round(entry_comm + exit_comm, 2),
             "realized_pnl_usd": realized_pnl,
         })
         portfolio["closed_positions"].append(pos)
-        print(f" → {close_reason} {final_pnl_pct:+.1f}% ${realized_pnl:+.2f}")
+        print(f" → {close_reason} {final_pnl_pct:+.1f}% gross=${gross_pnl:+.2f} comm=-${entry_comm+exit_comm:.2f} net=${realized_pnl:+.2f}")
 
 # 统计
 closed = portfolio["closed_positions"]
 wins = [p for p in closed if p.get("realized_pnl_usd", 0) > 0]
 total_realized = sum(p.get("realized_pnl_usd", 0) for p in closed)
+total_commission = sum(p.get("commission_total", 0) for p in closed)
 open_unrealized = sum(
-    p.get("allocated_usd", 0) * list(p["daily_prices"].values())[-1]["pnl_pct"] / 100
+    p.get("actual_position_usd", p.get("allocated_usd", 0)) * list(p["daily_prices"].values())[-1]["pnl_pct"] / 100 - p.get("entry_commission", 0)
     for p in portfolio["open_positions"] if p.get("daily_prices")
 )
 
@@ -249,6 +270,7 @@ portfolio["stats"] = {
     "total_realized_pnl_usd": round(total_realized, 2),
     "open_unrealized_pnl_usd": round(open_unrealized, 2),
     "portfolio_value": round(STARTING_CAPITAL + total_realized + open_unrealized, 2),
+    "total_commission_usd": round(total_commission, 2),
     "skipped_fear": skipped_fear,
     "skipped_direction": skipped_direction,
     "skipped_gap": skipped_gap,
@@ -259,7 +281,7 @@ print(f"\n=== Plan E 结果 ===")
 print(f"执行交易: {len(closed)}笔  开仓: {len(portfolio['open_positions'])}笔")
 print(f"跳过（恐慌）: {skipped_fear}  跳过（方向）: {skipped_direction}  跳过（跳空）: {skipped_gap}")
 print(f"胜率: {portfolio['stats']['win_rate']}%")
-print(f"总盈亏: ${total_realized:+.2f}  组合价值: ${portfolio['stats']['portfolio_value']:.2f}")
+print(f"总盈亏: ${total_realized:+.2f}  佣金: -${total_commission:.2f}  组合价值: ${portfolio['stats']['portfolio_value']:.2f}")
 
 with open(PORTFOLIO_PATH, "w") as f:
     json.dump(portfolio, f, indent=2, ensure_ascii=False)
