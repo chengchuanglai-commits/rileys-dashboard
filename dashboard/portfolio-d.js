@@ -233,10 +233,10 @@ window.PORTFOLIO_D = {
           "pnl_pct": 1.87
         },
         "2026-06-09": {
-          "open": 335.49,
+          "open": 335.5,
           "high": 349.09,
           "low": 306.01,
-          "close": 320.09,
+          "close": 327.16,
           "pnl_pct": -3.0
         }
       },
@@ -273,7 +273,7 @@ window.PORTFOLIO_D = {
           "open": 49.85,
           "high": 51.55,
           "low": 47.54,
-          "close": 48.74,
+          "close": 49.48,
           "pnl_pct": -3.0
         }
       },
@@ -303,7 +303,7 @@ window.PORTFOLIO_D = {
           "open": 17.79,
           "high": 18.5,
           "low": 16.94,
-          "close": 18.23,
+          "close": 17.5,
           "pnl_pct": -3.01
         }
       },
@@ -333,7 +333,7 @@ window.PORTFOLIO_D = {
           "open": 39.51,
           "high": 40.93,
           "low": 39.37,
-          "close": 40.07,
+          "close": 39.7,
           "pnl_pct": -3.0
         }
       },
