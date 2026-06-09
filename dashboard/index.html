@@ -696,6 +696,7 @@
       document.write('<scr'+'ipt src="portfolio-b.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-c.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-d.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-e.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
     })();
@@ -2626,7 +2627,7 @@ function loadHistoricalBacktest() {
 window._livePrices = {};
 
 async function fetchLivePrices() {
-    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D];
+    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D, window.PORTFOLIO_E];
     const tickers = [...new Set(
         portfolios.flatMap(p => (p && p.open_positions || []).map(pos => pos.ticker))
     )].filter(Boolean);
@@ -2672,6 +2673,7 @@ function renderSimPbOpen(livePrices) {
         {plan:'B', data: window.PORTFOLIO_B},
         {plan:'C', data: window.PORTFOLIO_C},
         {plan:'D', data: window.PORTFOLIO_D},
+        {plan:'E', data: window.PORTFOLIO_E},
     ];
     const allOpen = allPortfolios.flatMap(({plan, data}) =>
         (data && data.open_positions || []).map(pos => ({...pos, _plan: plan}))
@@ -2749,12 +2751,13 @@ function patchLivePortfolioCards(livePrices) {
         b: calcLive(window.PORTFOLIO_B),
         c: calcLive(window.PORTFOLIO_C),
         d: calcLive(window.PORTFOLIO_D),
+        e: calcLive(window.PORTFOLIO_E),
     };
 
     // Find best plan for trophy
     const bestVal = Math.max(...Object.values(liveValues).filter(v => v !== null));
 
-    ['b', 'c', 'd'].forEach(cls => {
+    ['b', 'c', 'd', 'e'].forEach(cls => {
         const val = liveValues[cls];
         if (val === null) return;
         const pnl = val - CAPITAL;
@@ -2822,25 +2825,20 @@ function renderAbCompare() {
     const fmt = v => v >= 0 ? `+$${v.toFixed(2)}` : `-$${Math.abs(v).toFixed(2)}`;
     const col = v => v >= 0 ? '#16a34a' : '#dc2626';
 
-    // ── Plan A stats ──
-    const aCapital = rt ? (rt.simulated_capital || 2000) : 2000;
-    const aPnl = aCapital - 2000;
-    const aPnlPct = aPnl / 2000 * 100;
-    const aTotal = rt ? (rt.total_signals_verified || 0) : 0;
-    const aActive = rt ? (rt.total_signals_active || aTotal) : 0;
-    const aHolds = aTotal - aActive;
-    const aHoldRate = aTotal > 0 ? (aHolds / aTotal * 100).toFixed(0) : 0;
-    const aAcc = rt ? (rt.accuracy_pct || 'N/A') : 'N/A';
+    // ── Plan E stats ──
+    const pe = window.PORTFOLIO_E;
+    const getStats = p => p ? (p.stats || {}) : {};
+    const eSt = getStats(pe);
+    const eCap = eSt.portfolio_value || 2000, ePnl = eCap - 2000, ePnlPct = ePnl / 2000 * 100;
 
     // ── Plan B/C/D stats ──
-    const getStats = p => p ? (p.stats || {}) : {};
     const bSt = getStats(pb), cSt = getStats(pc), dSt = getStats(pd);
     const bCap = bSt.portfolio_value || 2000, bPnl = bCap - 2000, bPnlPct = bPnl / 2000 * 100;
     const cCap = cSt.portfolio_value || 2000, cPnl = cCap - 2000, cPnlPct = cPnl / 2000 * 100;
     const dCap = dSt.portfolio_value || 2000, dPnl = dCap - 2000, dPnlPct = dPnl / 2000 * 100;
 
     // 找最高盈利方案
-    const pnlMap = {A: aPnl, B: bPnl, C: cPnl, D: dPnl};
+    const pnlMap = {E: ePnl, B: bPnl, C: cPnl, D: dPnl};
     const bestPlan = Object.entries(pnlMap).sort((a,b) => b[1]-a[1])[0][0];
     const trophy = plan => plan === bestPlan ? ' <span style="font-size:11px">🏆</span>' : '';
 
@@ -2848,13 +2846,13 @@ function renderAbCompare() {
     if (mainEl) {
         mainEl.innerHTML = `
             <div class="ab-panel plan-a">
-                <div class="ab-label a">A 方案${trophy('A')} — 开盘价入场</div>
-                <div class="ab-capital">$${aCapital.toFixed(2)}</div>
-                <div class="ab-pnl" style="color:${col(aPnl)}">${fmt(aPnl)} (${aPnlPct>=0?'+':''}${aPnlPct.toFixed(1)}%)</div>
+                <div class="ab-label a">E 方案${trophy('E')} — 智能市场适应</div>
+                <div class="ab-capital" id="lv-cap-e" style="transition:color .3s">$${eCap.toFixed(2)}</div>
+                <div class="ab-pnl" id="lv-pnl-e" style="color:${col(ePnl)};transition:color .3s">${fmt(ePnl)} (${ePnlPct>=0?'+':''}${ePnlPct.toFixed(1)}%)</div>
                 <div class="ab-row">
-                    <div class="ab-kv"><div class="ab-kv-lbl">信号数</div><div class="ab-kv-val">${aTotal}</div></div>
-                    <div class="ab-kv"><div class="ab-kv-lbl">准确率</div><div class="ab-kv-val">${aAcc}</div></div>
-                    <div class="ab-kv"><div class="ab-kv-lbl">HOLD率</div><div class="ab-kv-val" style="color:#d97706">${aHoldRate}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${eSt.total_trades||0}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${eSt.win_rate||0}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">过滤BUY</div><div class="ab-kv-val" style="color:#d97706">${(eSt.skipped_direction||0)+(eSt.skipped_fear||0)}</div></div>
                 </div>
             </div>
             <div class="ab-panel plan-b">

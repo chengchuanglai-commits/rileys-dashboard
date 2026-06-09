@@ -36,11 +36,12 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance
 
-      - name: Refresh portfolio B, C & D
+      - name: Refresh portfolio B, C, D & E
         run: |
           python scripts/backfill-portfolio-b.py
           python scripts/backfill-portfolio-c.py
           python scripts/backfill-portfolio-d.py
+          python scripts/backfill-portfolio-e.py
 
       - name: Regenerate daily report
         run: python scripts/daily-report.py
@@ -58,6 +59,7 @@ jobs:
           git add dashboard/portfolio-b.js data/portfolio_b.json
           git add dashboard/portfolio-c.js data/portfolio_c.json
           git add dashboard/portfolio-d.js data/portfolio_d.json 2>/dev/null || true
+          git add dashboard/portfolio-e.js data/portfolio_e.json 2>/dev/null || true
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 刷新持仓+报告 $(date -u +'%Y-%m-%d %H:%M') UTC"
