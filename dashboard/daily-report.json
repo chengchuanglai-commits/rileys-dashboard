@@ -1,15 +1,15 @@
 {
   "date": "2026-06-09",
-  "generated_at": "2026-06-09T01:38:00",
+  "generated_at": "2026-06-09T23:57:00",
   "pipeline": {
-    "morning_note_found": false,
+    "morning_note_found": true,
     "signal_file_found": true,
     "signals_generated": 2
   },
   "data_quality": [
     {
       "check": "晨报文件",
-      "pass": false,
+      "pass": true,
       "detail": "2026-06-09"
     },
     {
@@ -25,7 +25,7 @@
     {
       "check": "无警告",
       "pass": false,
-      "detail": "2 条警告"
+      "detail": "1 条警告"
     }
   ],
   "signals_today": [
@@ -343,7 +343,6 @@
     ]
   },
   "warnings": [
-    "晨报文件不存在: dashboard/morning-note-history/2026-06-09.json（周末/节假日正常）",
     "昨日信号未完成验证: ['TISI', 'VLGEA']（可能是节假日，次交易日自动补填）"
   ],
   "api_cost_usd": 0.985

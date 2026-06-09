@@ -1,68 +1,7 @@
 // Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
-  "open_positions": [
-    {
-      "ticker": "TISI",
-      "name": "TISI",
-      "action": "SELL",
-      "signal_date": "2026-06-08",
-      "entry_price": 17.93,
-      "allocated_usd": 500,
-      "take_profit": 15.24,
-      "stop_loss": 18.47,
-      "max_hold_date": "2026-06-10",
-      "gap_checked": true,
-      "daily_prices": {
-        "2026-06-08": {
-          "close": 17.71,
-          "pnl_pct": 1.23
-        }
-      },
-      "day1_open": 17.55,
-      "day1_gap_pct": -2.12
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "gap_checked": true,
-      "daily_prices": {
-        "2026-06-08": {
-          "close": 12.35,
-          "pnl_pct": 0.08
-        }
-      },
-      "day1_open": 12.15,
-      "day1_gap_pct": -1.7
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 27.55,
-      "allocated_usd": 500,
-      "take_profit": 23.42,
-      "stop_loss": 28.38,
-      "max_hold_date": "2026-06-11",
-      "gap_checked": true,
-      "daily_prices": {
-        "2026-06-08": {
-          "close": 27.55,
-          "pnl_pct": -0.0
-        }
-      },
-      "day1_open": 27.6,
-      "day1_gap_pct": 0.18
-    }
-  ],
+  "open_positions": [],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -285,29 +224,118 @@ window.PORTFOLIO_D = {
       "stop_loss": 308.94,
       "max_hold_date": "2026-06-09",
       "daily_prices": {
-        "2026-06-05": {
-          "close": 303.28,
-          "pnl_pct": -4.78
+        "2026-06-08": {
+          "open": 318.55,
+          "high": 330.68,
+          "low": 315.0,
+          "close": 324.45,
+          "pnl_pct": 1.87
+        },
+        "2026-06-09": {
+          "open": 335.49,
+          "high": 349.09,
+          "low": 318.76,
+          "close": 319.1,
+          "pnl_pct": 0.19
         }
       },
-      "gap_checked": true,
-      "day1_open": 320.37,
-      "day1_gap_pct": 0.59,
-      "close_date": "2026-06-05",
-      "close_price": 303.28,
-      "final_pnl_pct": -4.78,
+      "close_date": "2026-06-09",
+      "close_price": 319.1,
+      "final_pnl_pct": 0.19,
+      "close_reason": "max_hold",
+      "realized_pnl_usd": 0.95
+    },
+    {
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 48.35,
+      "allocated_usd": 500,
+      "take_profit": 41.1,
+      "stop_loss": 49.8,
+      "max_hold_date": "2026-06-09",
+      "daily_prices": {
+        "2026-06-08": {
+          "open": 47.58,
+          "high": 49.68,
+          "low": 47.12,
+          "close": 49.52,
+          "pnl_pct": -2.42
+        },
+        "2026-06-09": {
+          "open": 49.85,
+          "high": 51.55,
+          "low": 48.27,
+          "close": 48.27,
+          "pnl_pct": -3.0
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 49.8,
+      "final_pnl_pct": -3.0,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -23.89
+      "realized_pnl_usd": -15.0
+    },
+    {
+      "ticker": "TISI",
+      "name": "TISI",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 17.93,
+      "allocated_usd": 500,
+      "take_profit": 15.24,
+      "stop_loss": 18.47,
+      "max_hold_date": "2026-06-10",
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 17.79,
+          "high": 18.5,
+          "low": 16.94,
+          "close": 17.89,
+          "pnl_pct": -3.01
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 18.47,
+      "final_pnl_pct": -3.01,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -15.05
+    },
+    {
+      "ticker": "VLGEA",
+      "name": "VLGEA",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 39.33,
+      "allocated_usd": 500,
+      "take_profit": 33.43,
+      "stop_loss": 40.51,
+      "max_hold_date": "2026-06-10",
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 39.51,
+          "high": 40.93,
+          "low": 39.37,
+          "close": 40.31,
+          "pnl_pct": -3.0
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 40.51,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -15.0
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤",
   "stats": {
-    "total_trades": 8,
-    "win_trades": 5,
-    "win_rate": 62.5,
-    "total_realized_pnl_usd": 151.86,
-    "open_unrealized_pnl_usd": 6.55,
-    "portfolio_value": 2158.41,
+    "total_trades": 11,
+    "win_trades": 6,
+    "win_rate": 54.5,
+    "total_realized_pnl_usd": 131.65,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2131.65,
     "skipped_gap": 3,
     "updated_at": "2026-06-09"
   }

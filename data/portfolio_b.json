@@ -2,27 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "FLR",
-      "name": "Fluor Corporation",
-      "action": "SELL",
-      "signal_date": "2026-06-05",
-      "entry_price": 48.35,
-      "allocated_usd": 500,
-      "take_profit": 44.48,
-      "stop_loss": 50.28,
-      "max_hold_date": "2026-06-12",
-      "daily_prices": {
-        "2026-06-05": {
-          "close": 47.56,
-          "pnl_pct": 1.63
-        },
-        "2026-06-08": {
-          "close": 49.19,
-          "pnl_pct": -1.74
-        }
-      }
-    },
-    {
       "ticker": "TISI",
       "name": "TISI",
       "action": "SELL",
@@ -33,26 +12,9 @@
       "stop_loss": 18.65,
       "max_hold_date": "2026-06-15",
       "daily_prices": {
-        "2026-06-08": {
-          "close": 17.71,
-          "pnl_pct": 1.23
-        }
-      }
-    },
-    {
-      "ticker": "VLGEA",
-      "name": "VLGEA",
-      "action": "SELL",
-      "signal_date": "2026-06-08",
-      "entry_price": 39.33,
-      "allocated_usd": 500,
-      "take_profit": 36.18,
-      "stop_loss": 40.9,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-08": {
-          "close": 39.44,
-          "pnl_pct": -0.28
+        "2026-06-09": {
+          "close": 17.89,
+          "pnl_pct": 0.22
         }
       }
     },
@@ -67,9 +29,9 @@
       "stop_loss": 12.85,
       "max_hold_date": "2026-06-16",
       "daily_prices": {
-        "2026-06-08": {
-          "close": 12.35,
-          "pnl_pct": 0.08
+        "2026-06-09": {
+          "close": 11.63,
+          "pnl_pct": 5.91
         }
       }
     },
@@ -84,9 +46,9 @@
       "stop_loss": 28.65,
       "max_hold_date": "2026-06-16",
       "daily_prices": {
-        "2026-06-08": {
-          "close": 27.55,
-          "pnl_pct": -0.0
+        "2026-06-09": {
+          "close": 27.76,
+          "pnl_pct": -0.76
         }
       }
     }
@@ -373,26 +335,93 @@
       "stop_loss": 305.76,
       "max_hold_date": "2026-06-12",
       "daily_prices": {
-        "2026-06-05": {
-          "close": 303.28,
-          "pnl_pct": -4.78
+        "2026-06-08": {
+          "open": 318.55,
+          "high": 330.68,
+          "low": 315.0,
+          "close": 324.45,
+          "pnl_pct": 1.87
+        },
+        "2026-06-09": {
+          "open": 335.49,
+          "high": 349.09,
+          "low": 318.76,
+          "close": 319.1,
+          "pnl_pct": 8.0
         }
       },
-      "close_date": "2026-06-05",
-      "close_price": 303.28,
-      "final_pnl_pct": -4.78,
+      "close_date": "2026-06-09",
+      "close_price": 343.98,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 40.0
+    },
+    {
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 48.35,
+      "allocated_usd": 500,
+      "take_profit": 44.48,
+      "stop_loss": 50.28,
+      "max_hold_date": "2026-06-12",
+      "daily_prices": {
+        "2026-06-08": {
+          "open": 47.58,
+          "high": 49.68,
+          "low": 47.12,
+          "close": 49.52,
+          "pnl_pct": -2.42
+        },
+        "2026-06-09": {
+          "open": 49.85,
+          "high": 51.55,
+          "low": 48.27,
+          "close": 48.27,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 50.28,
+      "final_pnl_pct": -3.99,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -23.89
+      "realized_pnl_usd": -19.95
+    },
+    {
+      "ticker": "VLGEA",
+      "name": "VLGEA",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 39.33,
+      "allocated_usd": 500,
+      "take_profit": 36.18,
+      "stop_loss": 40.9,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 39.51,
+          "high": 40.93,
+          "low": 39.37,
+          "close": 40.31,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 40.9,
+      "final_pnl_pct": -3.99,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -19.95
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日",
   "stats": {
-    "total_trades": 9,
-    "win_trades": 5,
-    "win_rate": 55.6,
-    "total_realized_pnl_usd": 85.66,
-    "open_unrealized_pnl_usd": -3.55,
-    "portfolio_value": 2082.11,
+    "total_trades": 11,
+    "win_trades": 6,
+    "win_rate": 54.5,
+    "total_realized_pnl_usd": 109.65,
+    "open_unrealized_pnl_usd": 26.85,
+    "portfolio_value": 2136.5,
     "updated_at": "2026-06-09"
   }
 }

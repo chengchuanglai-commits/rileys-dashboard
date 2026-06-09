@@ -12,55 +12,15 @@ window.PORTFOLIO_C = {
       "take_profit": 16.5,
       "stop_loss": 18.65,
       "max_hold_date": "2026-06-15",
-      "gap_checked": true,
+      "day1_open": 17.79,
       "daily_prices": {
-        "2026-06-08": {
-          "close": 17.71,
-          "pnl_pct": 1.23
+        "2026-06-09": {
+          "close": 17.89,
+          "pnl_pct": 0.22
         }
       },
-      "day1_open": 17.55,
-      "day1_gap_pct": -2.12
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
       "gap_checked": true,
-      "daily_prices": {
-        "2026-06-08": {
-          "close": 12.35,
-          "pnl_pct": 0.08
-        }
-      },
-      "day1_open": 12.15,
-      "day1_gap_pct": -1.7
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 27.55,
-      "allocated_usd": 500,
-      "take_profit": 25.35,
-      "stop_loss": 28.65,
-      "max_hold_date": "2026-06-16",
-      "gap_checked": true,
-      "daily_prices": {
-        "2026-06-08": {
-          "close": 27.55,
-          "pnl_pct": -0.0
-        }
-      },
-      "day1_open": 27.6,
-      "day1_gap_pct": 0.18
+      "day1_gap_pct": -0.78
     }
   ],
   "closed_positions": [
@@ -326,30 +286,97 @@ window.PORTFOLIO_C = {
       "take_profit": 343.98,
       "stop_loss": 305.76,
       "max_hold_date": "2026-06-12",
-      "day1_open": 318.74,
+      "day1_open": 318.55,
       "daily_prices": {
-        "2026-06-05": {
-          "close": 303.28,
-          "pnl_pct": -4.78
+        "2026-06-08": {
+          "open": 318.55,
+          "high": 330.68,
+          "low": 315.0,
+          "close": 324.45,
+          "pnl_pct": 1.87
+        },
+        "2026-06-09": {
+          "open": 335.49,
+          "high": 349.09,
+          "low": 318.76,
+          "close": 319.1,
+          "pnl_pct": 8.0
         }
       },
-      "gap_checked": true,
-      "day1_gap_pct": 0.08,
-      "close_date": "2026-06-05",
-      "close_price": 303.28,
-      "final_pnl_pct": -4.78,
+      "close_date": "2026-06-09",
+      "close_price": 343.98,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 40.0
+    },
+    {
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 48.35,
+      "allocated_usd": 500,
+      "take_profit": 44.48,
+      "stop_loss": 50.28,
+      "max_hold_date": "2026-06-12",
+      "day1_open": 47.58,
+      "daily_prices": {
+        "2026-06-08": {
+          "open": 47.58,
+          "high": 49.68,
+          "low": 47.12,
+          "close": 49.52,
+          "pnl_pct": -2.42
+        },
+        "2026-06-09": {
+          "open": 49.85,
+          "high": 51.55,
+          "low": 48.27,
+          "close": 48.27,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 50.28,
+      "final_pnl_pct": -3.99,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -23.89
+      "realized_pnl_usd": -19.95
+    },
+    {
+      "ticker": "VLGEA",
+      "name": "VLGEA",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 39.33,
+      "allocated_usd": 500,
+      "take_profit": 36.18,
+      "stop_loss": 40.9,
+      "max_hold_date": "2026-06-15",
+      "day1_open": 39.51,
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 39.51,
+          "high": 40.93,
+          "low": 39.37,
+          "close": 40.31,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 40.9,
+      "final_pnl_pct": -3.99,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -19.95
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过",
   "stats": {
-    "total_trades": 8,
-    "win_trades": 5,
-    "win_rate": 62.5,
-    "total_realized_pnl_usd": 105.66,
-    "open_unrealized_pnl_usd": 6.55,
-    "portfolio_value": 2112.21,
+    "total_trades": 10,
+    "win_trades": 6,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 129.65,
+    "open_unrealized_pnl_usd": 1.1,
+    "portfolio_value": 2130.75,
     "skipped_gap": 3,
     "updated_at": "2026-06-09"
   }
