@@ -2,7 +2,7 @@ name: 盘中持仓刷新
 
 on:
   schedule:
-    - cron: '*/10 13-20 * * 1-5'  # 美东盘中 9:30-16:00，每10分钟（UTC 13-20）
+    - cron: '*/30 13-20 * * 1-5'  # 美东盘中 9:30-16:00，每30分钟（UTC 13-20）
   workflow_dispatch:
 
 permissions:
@@ -36,10 +36,11 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance
 
-      - name: Refresh portfolio B & C
+      - name: Refresh portfolio B, C & D
         run: |
           python scripts/backfill-portfolio-b.py
           python scripts/backfill-portfolio-c.py
+          python scripts/backfill-portfolio-d.py
 
       - name: Regenerate daily report
         run: python scripts/daily-report.py
@@ -56,6 +57,7 @@ jobs:
           git config --global user.name "Portfolio Refresh Bot"
           git add dashboard/portfolio-b.js data/portfolio_b.json
           git add dashboard/portfolio-c.js data/portfolio_c.json
+          git add dashboard/portfolio-d.js data/portfolio_d.json 2>/dev/null || true
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 刷新持仓+报告 $(date -u +'%Y-%m-%d %H:%M') UTC"
