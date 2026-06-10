@@ -64,13 +64,13 @@ def select_stocks():
         ]
         if candidates:
             sp500 = data.get("sp500_pct", 0)
-            tickers = [c["ticker"] for c in candidates[:5]]
+            tickers = [c["ticker"] for c in candidates[:10]]
             print(f"[select] Screened candidates ({data.get('date','')}): {tickers} (S&P {sp500:+.2f}%)")
             return [
                 {"ticker": c["ticker"], "name": c["ticker"],
                  "sector": "SELL_CANDIDATE" if c.get("sell_candidate") else "",
                  "direction": "sell" if c.get("sell_candidate") else "buy"}
-                for c in candidates[:5]
+                for c in candidates[:10]
             ]
 
     # Fallback: morning note (original logic)
@@ -97,7 +97,7 @@ def select_stocks():
         2 if p.get("direction") == "buy" and any(s in p.get("sector", "") for s in preferred) else
         1 if p.get("direction") == "buy" else 0
     ), reverse=True)
-    candidates = all_picks[:5]
+    candidates = all_picks[:10]
     print(f"[select] Morning note fallback: {[p['ticker'] for p in candidates]} (S&P {sp500:+.2f}%)")
     return candidates
 
@@ -457,15 +457,15 @@ else:
         sig = analyze_pick(pick)
         if sig['action'] != 'HOLD':
             signals.append(sig)
-            print(f"[accept] {pick['ticker']}: {sig['action']} — added ({len(signals)}/2)")
+            print(f"[accept] {pick['ticker']}: {sig['action']} — added ({len(signals)}/4)")
         else:
             hold_fallbacks.append(sig)
             print(f"[skip-hold] {pick['ticker']}: HOLD — trying next candidate")
-        if len(signals) >= 2:
+        if len(signals) >= 4:
             break
-    # Fill up to 2 with HOLDs only if we ran out of directional signals
-    if len(signals) < 2:
-        needed = 2 - len(signals)
+    # Fill up to 4 with HOLDs only if we ran out of directional signals
+    if len(signals) < 4:
+        needed = 4 - len(signals)
         signals.extend(hold_fallbacks[:needed])
         print(f"[warn] Only {len(signals) - needed} directional signals found, padded with {needed} HOLD(s)")
 
