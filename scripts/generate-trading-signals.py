@@ -24,20 +24,22 @@ HISTORY_DIR = "dashboard/trading-signals-history"
 os.makedirs(HISTORY_DIR, exist_ok=True)
 
 # Token usage tracking — wraps anthropic.Anthropic to intercept all API calls
+import threading
 _total_input_tokens = 0
 _total_output_tokens = 0
+_token_lock = threading.Lock()
 
 def _patch_anthropic():
     try:
         import anthropic
-        original_create = anthropic.Anthropic().messages.create.__func__ if False else None
         _orig = anthropic.resources.messages.Messages.create
         def _tracked_create(self, *args, **kwargs):
             global _total_input_tokens, _total_output_tokens
             resp = _orig(self, *args, **kwargs)
             if hasattr(resp, 'usage'):
-                _total_input_tokens  += getattr(resp.usage, 'input_tokens',  0)
-                _total_output_tokens += getattr(resp.usage, 'output_tokens', 0)
+                with _token_lock:
+                    _total_input_tokens  += getattr(resp.usage, 'input_tokens',  0)
+                    _total_output_tokens += getattr(resp.usage, 'output_tokens', 0)
             return resp
         anthropic.resources.messages.Messages.create = _tracked_create
     except Exception as e:
@@ -451,23 +453,39 @@ else:
             "summary": f"API 过载，暂无深度分析",
         }
 
+    # 并行分析前 6 只候选，期望从中得到 3 条 BUY/SELL
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    parallel_picks = selected_picks[:6]
+    print(f"[parallel] 并行分析 {len(parallel_picks)} 只候选股...")
+    result_map = {}
+    with ThreadPoolExecutor(max_workers=len(parallel_picks)) as executor:
+        future_to_pick = {executor.submit(analyze_pick, pick): pick for pick in parallel_picks}
+        for future in as_completed(future_to_pick):
+            pick = future_to_pick[future]
+            try:
+                sig = future.result()
+                result_map[pick['ticker']] = sig
+                print(f"[done] {pick['ticker']}: {sig['action']}")
+            except Exception as e:
+                print(f"[error] {pick['ticker']} 分析失败: {e}")
+
+    # 按原始排名顺序收集结果
     signals = []
     hold_fallbacks = []
-    for pick in selected_picks:
-        sig = analyze_pick(pick)
+    for pick in parallel_picks:
+        sig = result_map.get(pick['ticker'])
+        if sig is None:
+            continue
         if sig['action'] != 'HOLD':
             signals.append(sig)
-            print(f"[accept] {pick['ticker']}: {sig['action']} — added ({len(signals)}/3)")
         else:
             hold_fallbacks.append(sig)
-            print(f"[skip-hold] {pick['ticker']}: HOLD — trying next candidate")
-        if len(signals) >= 3:
-            break
-    # Fill up to 3 with HOLDs only if we ran out of directional signals
+
+    signals = signals[:3]
     if len(signals) < 3:
         needed = 3 - len(signals)
         signals.extend(hold_fallbacks[:needed])
-        print(f"[warn] Only {len(signals) - needed} directional signals found, padded with {needed} HOLD(s)")
+        print(f"[warn] 只有 {len(signals) - needed} 条方向信号，用 {needed} 条 HOLD 补足")
 
     # claude-haiku-4-5 pricing: $0.80/MTok in, $4.00/MTok out
     api_cost = round(_total_input_tokens * 0.8 / 1_000_000 + _total_output_tokens * 4.0 / 1_000_000, 4)
