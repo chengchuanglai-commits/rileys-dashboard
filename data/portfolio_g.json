@@ -1,83 +1,6 @@
 {
   "capital_usd": 2000,
-  "open_positions": [
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research Corporation",
-      "action": "BUY",
-      "signal_date": "2026-06-05",
-      "entry_price": 318.5,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 318.5,
-      "entry_commission": 1.0,
-      "take_profit": 366.27,
-      "stop_loss": 308.94,
-      "max_hold_date": "2026-06-09",
-      "daily_prices": {
-        "2026-06-08": {
-          "open": 318.55,
-          "high": 330.68,
-          "low": 315.0,
-          "close": 324.45,
-          "pnl_pct": 1.87
-        }
-      }
-    },
-    {
-      "ticker": "FLR",
-      "name": "Fluor Corporation",
-      "action": "SELL",
-      "signal_date": "2026-06-05",
-      "entry_price": 48.35,
-      "allocated_usd": 500,
-      "shares": 10,
-      "actual_position_usd": 483.5,
-      "entry_commission": 1.0,
-      "take_profit": 41.1,
-      "stop_loss": 49.8,
-      "max_hold_date": "2026-06-09",
-      "daily_prices": {
-        "2026-06-08": {
-          "open": 47.58,
-          "high": 49.68,
-          "low": 47.12,
-          "close": 49.52,
-          "pnl_pct": -2.42
-        }
-      }
-    },
-    {
-      "ticker": "TISI",
-      "name": "TISI",
-      "action": "SELL",
-      "signal_date": "2026-06-08",
-      "entry_price": 17.93,
-      "allocated_usd": 500,
-      "shares": 27,
-      "actual_position_usd": 484.11,
-      "entry_commission": 1.0,
-      "take_profit": 15.24,
-      "stop_loss": 18.47,
-      "max_hold_date": "2026-06-10",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "VLGEA",
-      "name": "VLGEA",
-      "action": "SELL",
-      "signal_date": "2026-06-08",
-      "entry_price": 39.33,
-      "allocated_usd": 500,
-      "shares": 12,
-      "actual_position_usd": 471.96,
-      "entry_commission": 1.0,
-      "take_profit": 33.43,
-      "stop_loss": 40.51,
-      "max_hold_date": "2026-06-10",
-      "daily_prices": {}
-    }
-  ],
+  "open_positions": [],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -286,17 +209,151 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 38.79
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research Corporation",
+      "action": "BUY",
+      "signal_date": "2026-06-05",
+      "entry_price": 318.5,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 318.5,
+      "entry_commission": 1.0,
+      "take_profit": 366.27,
+      "stop_loss": 308.94,
+      "max_hold_date": "2026-06-09",
+      "daily_prices": {
+        "2026-06-08": {
+          "open": 318.55,
+          "high": 330.68,
+          "low": 315.0,
+          "close": 324.45,
+          "pnl_pct": 1.87
+        },
+        "2026-06-09": {
+          "open": 335.5,
+          "high": 349.09,
+          "low": 306.01,
+          "close": 327.16,
+          "pnl_pct": -3.0
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 308.94,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -11.55
+    },
+    {
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 48.35,
+      "allocated_usd": 500,
+      "shares": 10,
+      "actual_position_usd": 483.5,
+      "entry_commission": 1.0,
+      "take_profit": 41.1,
+      "stop_loss": 49.8,
+      "max_hold_date": "2026-06-09",
+      "daily_prices": {
+        "2026-06-08": {
+          "open": 47.58,
+          "high": 49.68,
+          "low": 47.12,
+          "close": 49.52,
+          "pnl_pct": -2.42
+        },
+        "2026-06-09": {
+          "open": 49.85,
+          "high": 51.55,
+          "low": 47.54,
+          "close": 49.48,
+          "pnl_pct": -3.0
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 49.8,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.51
+    },
+    {
+      "ticker": "TISI",
+      "name": "TISI",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 17.93,
+      "allocated_usd": 500,
+      "shares": 27,
+      "actual_position_usd": 484.11,
+      "entry_commission": 1.0,
+      "take_profit": 15.24,
+      "stop_loss": 18.47,
+      "max_hold_date": "2026-06-10",
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 17.79,
+          "high": 18.5,
+          "low": 16.94,
+          "close": 17.5,
+          "pnl_pct": -3.01
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 18.47,
+      "final_pnl_pct": -3.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.57
+    },
+    {
+      "ticker": "VLGEA",
+      "name": "VLGEA",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 39.33,
+      "allocated_usd": 500,
+      "shares": 12,
+      "actual_position_usd": 471.96,
+      "entry_commission": 1.0,
+      "take_profit": 33.43,
+      "stop_loss": 40.51,
+      "max_hold_date": "2026-06-10",
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 39.43,
+          "high": 40.93,
+          "low": 39.37,
+          "close": 39.7,
+          "pnl_pct": -3.0
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 40.51,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.16
     }
   ],
   "_note": "Plan G：与D参数相同，新增最多4笔并发限制 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 6,
+    "total_trades": 10,
     "win_trades": 5,
-    "win_rate": 83.3,
-    "total_realized_pnl_usd": 156.03,
-    "open_unrealized_pnl_usd": -7.74,
-    "portfolio_value": 2148.29,
-    "total_commission_usd": 12.0,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 95.24,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2095.24,
+    "total_commission_usd": 20.0,
     "skipped_gap": 1,
     "skipped_zero_shares": 1,
     "skipped_concurrent": 2,

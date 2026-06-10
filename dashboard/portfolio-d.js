@@ -233,7 +233,7 @@ window.PORTFOLIO_D = {
           "pnl_pct": 1.87
         },
         "2026-06-09": {
-          "open": 335.49,
+          "open": 335.5,
           "high": 349.09,
           "low": 306.01,
           "close": 327.16,
@@ -330,7 +330,7 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-10",
       "daily_prices": {
         "2026-06-09": {
-          "open": 39.51,
+          "open": 39.43,
           "high": 40.93,
           "low": 39.37,
           "close": 39.7,
@@ -355,6 +355,6 @@ window.PORTFOLIO_D = {
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2095.24,
     "skipped_gap": 3,
-    "updated_at": "2026-06-10"
+    "updated_at": "2026-06-11"
   }
 };

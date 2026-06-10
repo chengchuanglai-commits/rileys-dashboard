@@ -19,25 +19,6 @@ window.PORTFOLIO_E = {
       "vix": 19.87,
       "daily_prices": {},
       "gap_checked": true
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 27.55,
-      "allocated_usd": 500,
-      "shares": 18,
-      "actual_position_usd": 495.9,
-      "entry_commission": 1.0,
-      "take_profit": 24.8,
-      "stop_loss": 28.38,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-12",
-      "regime": "neutral",
-      "vix": 19.87,
-      "daily_prices": {},
-      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -339,7 +320,7 @@ window.PORTFOLIO_E = {
       "vix": 18.92,
       "daily_prices": {
         "2026-06-09": {
-          "open": 39.51,
+          "open": 39.43,
           "high": 40.93,
           "low": 39.37,
           "close": 39.7,
@@ -366,7 +347,7 @@ window.PORTFOLIO_E = {
     "total_commission_usd": 16.0,
     "skipped_fear": 0,
     "skipped_direction": 4,
-    "skipped_gap": 0,
-    "updated_at": "2026-06-09"
+    "skipped_gap": 1,
+    "updated_at": "2026-06-10"
   }
 };

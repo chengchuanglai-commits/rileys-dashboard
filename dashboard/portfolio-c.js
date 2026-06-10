@@ -15,15 +15,22 @@ window.PORTFOLIO_C = {
       "take_profit": 16.5,
       "stop_loss": 18.65,
       "max_hold_date": "2026-06-15",
-      "day1_open": 17.79,
+      "day1_open": 17.71,
       "daily_prices": {
         "2026-06-09": {
+          "open": 17.79,
+          "high": 18.5,
+          "low": 16.94,
           "close": 17.5,
           "pnl_pct": 2.4
+        },
+        "2026-06-10": {
+          "close": 17.03,
+          "pnl_pct": 5.02
         }
       },
       "gap_checked": true,
-      "day1_gap_pct": -0.78
+      "day1_gap_pct": -1.23
     }
   ],
   "closed_positions": [
@@ -299,7 +306,7 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.87
         },
         "2026-06-09": {
-          "open": 335.49,
+          "open": 335.5,
           "high": 349.09,
           "low": 306.01,
           "close": 327.16,
@@ -365,10 +372,10 @@ window.PORTFOLIO_C = {
       "take_profit": 36.18,
       "stop_loss": 40.9,
       "max_hold_date": "2026-06-15",
-      "day1_open": 39.51,
+      "day1_open": 39.43,
       "daily_prices": {
         "2026-06-09": {
-          "open": 39.51,
+          "open": 39.43,
           "high": 40.93,
           "low": 39.37,
           "close": 39.7,
@@ -390,9 +397,9 @@ window.PORTFOLIO_C = {
     "win_trades": 6,
     "win_rate": 66.7,
     "total_realized_pnl_usd": 102.48,
-    "open_unrealized_pnl_usd": 12.0,
-    "portfolio_value": 2114.48,
+    "open_unrealized_pnl_usd": 25.1,
+    "portfolio_value": 2127.58,
     "skipped_gap": 3,
-    "updated_at": "2026-06-10"
+    "updated_at": "2026-06-11"
   }
 };

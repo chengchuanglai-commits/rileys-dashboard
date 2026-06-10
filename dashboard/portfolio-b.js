@@ -17,8 +17,15 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-09": {
+          "open": 17.79,
+          "high": 18.5,
+          "low": 16.94,
           "close": 17.5,
           "pnl_pct": 2.4
+        },
+        "2026-06-10": {
+          "close": 17.03,
+          "pnl_pct": 5.02
         }
       }
     },
@@ -37,28 +44,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-09": {
-          "close": 11.58,
-          "pnl_pct": 6.31
-        }
-      }
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 27.55,
-      "allocated_usd": 500,
-      "shares": 18,
-      "actual_position_usd": 495.9,
-      "entry_commission": 1.0,
-      "take_profit": 25.35,
-      "stop_loss": 28.65,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-09": {
-          "close": 28.59,
-          "pnl_pct": -3.77
+          "close": 11.55,
+          "pnl_pct": 6.55
         }
       }
     }
@@ -359,7 +346,7 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.87
         },
         "2026-06-09": {
-          "open": 335.49,
+          "open": 335.5,
           "high": 349.09,
           "low": 306.01,
           "close": 327.16,
@@ -426,7 +413,7 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-09": {
-          "open": 39.51,
+          "open": 39.43,
           "high": 40.93,
           "low": 39.37,
           "close": 39.7,
@@ -440,16 +427,46 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -20.83
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 27.55,
+      "allocated_usd": 500,
+      "shares": 18,
+      "actual_position_usd": 495.9,
+      "entry_commission": 1.0,
+      "take_profit": 25.35,
+      "stop_loss": 28.65,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-06-10": {
+          "open": 28.98,
+          "high": 29.4,
+          "low": 28.62,
+          "close": 29.1,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-10",
+      "close_price": 28.65,
+      "final_pnl_pct": -3.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.79
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 10,
+    "total_trades": 11,
     "win_trades": 6,
-    "win_rate": 60.0,
-    "total_realized_pnl_usd": 83.14,
-    "open_unrealized_pnl_usd": 24.7,
-    "portfolio_value": 2107.84,
-    "updated_at": "2026-06-10"
+    "win_rate": 54.5,
+    "total_realized_pnl_usd": 61.35,
+    "open_unrealized_pnl_usd": 57.85,
+    "portfolio_value": 2119.2,
+    "updated_at": "2026-06-11"
   }
 };
