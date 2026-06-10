@@ -453,10 +453,10 @@ else:
             "summary": f"API 过载，暂无深度分析",
         }
 
-    # 并行分析前 6 只候选，期望从中得到 3 条 BUY/SELL
+    # 并行分析前 6 只候选，取其中 4 条 BUY/SELL（并行耗时不变，直接取 4 条）
     from concurrent.futures import ThreadPoolExecutor, as_completed
     parallel_picks = selected_picks[:6]
-    print(f"[parallel] 并行分析 {len(parallel_picks)} 只候选股...")
+    print(f"[parallel] 并行分析 {len(parallel_picks)} 只候选股，目标取 4 条 BUY/SELL...")
     result_map = {}
     with ThreadPoolExecutor(max_workers=len(parallel_picks)) as executor:
         future_to_pick = {executor.submit(analyze_pick, pick): pick for pick in parallel_picks}
@@ -481,9 +481,9 @@ else:
         else:
             hold_fallbacks.append(sig)
 
-    signals = signals[:3]
-    if len(signals) < 3:
-        needed = 3 - len(signals)
+    signals = signals[:4]
+    if len(signals) < 4:
+        needed = 4 - len(signals)
         signals.extend(hold_fallbacks[:needed])
         print(f"[warn] 只有 {len(signals) - needed} 条方向信号，用 {needed} 条 HOLD 补足")
 
