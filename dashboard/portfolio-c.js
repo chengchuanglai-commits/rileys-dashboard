@@ -353,8 +353,8 @@ window.PORTFOLIO_C = {
         "2026-06-10": {
           "open": 17.71,
           "high": 17.86,
-          "low": 16.36,
-          "close": 16.58,
+          "low": 16.14,
+          "close": 16.34,
           "pnl_pct": 7.98
         }
       },

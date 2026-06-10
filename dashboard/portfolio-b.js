@@ -395,8 +395,8 @@ window.PORTFOLIO_B = {
         "2026-06-10": {
           "open": 17.71,
           "high": 17.86,
-          "low": 16.36,
-          "close": 16.58,
+          "low": 16.14,
+          "close": 16.34,
           "pnl_pct": 7.98
         }
       },
@@ -455,8 +455,8 @@ window.PORTFOLIO_B = {
         "2026-06-10": {
           "open": 28.98,
           "high": 29.4,
-          "low": 28.62,
-          "close": 29.05,
+          "low": 28.49,
+          "close": 28.89,
           "pnl_pct": -3.99
         }
       },
