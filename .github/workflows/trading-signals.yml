@@ -105,6 +105,9 @@ jobs:
       - name: Update Plan F portfolio
         run: python scripts/backfill-portfolio-f.py
 
+      - name: Update Plan G portfolio
+        run: python scripts/backfill-portfolio-g.py
+
       - name: Bump version
         run: |
           V=$(date -u +%Y%m%d%H%M%S)
@@ -123,6 +126,7 @@ jobs:
           git add dashboard/portfolio-d.js data/portfolio_d.json 2>/dev/null || true
           git add dashboard/portfolio-e.js data/portfolio_e.json 2>/dev/null || true
           git add dashboard/portfolio-f.js data/portfolio_f.json 2>/dev/null || true
+          git add dashboard/portfolio-g.js data/portfolio_g.json 2>/dev/null || true
           git add dashboard/backtest-results.js data/backtest_results.json 2>/dev/null || true
           git add data/screened-stocks.json 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html

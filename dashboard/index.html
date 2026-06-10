@@ -403,6 +403,8 @@
         .ab-comm-val { color:#ef4444; font-weight:600; }
         .ab-panel.plan-f { background:linear-gradient(135deg,#fdf4ff,#fae8ff); border:1px solid #e879f9; }
         .ab-label.f { color:#a21caf; }
+        .ab-panel.plan-g { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #4ade80; }
+        .ab-label.g { color:#15803d; }
         .hold-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:6px; background:#fef3c7; color:#92400e; font-weight:600; margin:2px; }
 
         /* ── Plan B portfolio ────────────────────── */
@@ -704,6 +706,7 @@
       document.write('<scr'+'ipt src="portfolio-d.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-e.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-f.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-g.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
     })();
@@ -2638,7 +2641,7 @@ function loadHistoricalBacktest() {
 window._livePrices = {};
 
 async function fetchLivePrices() {
-    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D, window.PORTFOLIO_E, window.PORTFOLIO_F];
+    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D, window.PORTFOLIO_E, window.PORTFOLIO_F, window.PORTFOLIO_G];
     const tickers = [...new Set(
         portfolios.flatMap(p => (p && p.open_positions || []).map(pos => pos.ticker))
     )].filter(Boolean);
@@ -2686,6 +2689,7 @@ function renderSimPbOpen(livePrices) {
         {plan:'D', data: window.PORTFOLIO_D},
         {plan:'E', data: window.PORTFOLIO_E},
         {plan:'F', data: window.PORTFOLIO_F},
+        {plan:'G', data: window.PORTFOLIO_G},
     ];
     const allOpen = allPortfolios.flatMap(({plan, data}) =>
         (data && data.open_positions || []).map(pos => ({...pos, _plan: plan}))
@@ -2767,12 +2771,13 @@ function patchLivePortfolioCards(livePrices) {
         d: calcLive(window.PORTFOLIO_D),
         e: calcLive(window.PORTFOLIO_E),
         f: calcLive(window.PORTFOLIO_F),
+        g: calcLive(window.PORTFOLIO_G),
     };
 
     // Find best plan for trophy
     const bestVal = Math.max(...Object.values(liveValues).filter(v => v !== null));
 
-    ['b', 'c', 'd', 'e', 'f'].forEach(cls => {
+    ['b', 'c', 'd', 'e', 'f', 'g'].forEach(cls => {
         const val = liveValues[cls];
         if (val === null) return;
         const pnl = val - CAPITAL;
@@ -2856,7 +2861,10 @@ function renderAbCompare() {
     const pf = window.PORTFOLIO_F;
     const fSt = getStats(pf);
     const fCap = fSt.portfolio_value || 2000, fPnl = fCap - 2000, fPnlPct = fPnl / 2000 * 100;
-    const pnlMap = {E: ePnl, B: bPnl, C: cPnl, D: dPnl, F: fPnl};
+    const pg = window.PORTFOLIO_G;
+    const gSt = getStats(pg);
+    const gCap = gSt.portfolio_value || 2000, gPnl = gCap - 2000, gPnlPct = gPnl / 2000 * 100;
+    const pnlMap = {E: ePnl, B: bPnl, C: cPnl, D: dPnl, F: fPnl, G: gPnl};
     const bestPlan = Object.entries(pnlMap).sort((a,b) => b[1]-a[1])[0][0];
     const trophy = plan => plan === bestPlan ? ' <span style="font-size:11px">🏆</span>' : '';
 
@@ -2911,6 +2919,16 @@ function renderAbCompare() {
                     <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${fSt.total_trades||0}</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${fSt.win_rate||0}%</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">佣金</div><div class="ab-kv-val" style="color:#ef4444">-$${fSt.total_commission_usd||0}</div></div>
+                </div>
+            </div>
+            <div class="ab-panel plan-g">
+                <div class="ab-label g">G 方案${trophy('G')} — D参数+并发≤4限制</div>
+                <div class="ab-capital">$${gCap.toFixed(2)}</div>
+                <div class="ab-pnl" style="color:${col(gPnl)}">${fmt(gPnl)} (${gPnlPct>=0?'+':''}${gPnlPct.toFixed(1)}%)</div>
+                <div class="ab-row">
+                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${gSt.total_trades||0}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${gSt.win_rate||0}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">跳过并发</div><div class="ab-kv-val" style="color:#15803d">${gSt.skipped_concurrent||0}</div></div>
                 </div>
             </div>`;
     }
@@ -3404,8 +3422,31 @@ function loadSimCurve() {
     const fPF  = calcPF(pfClosed);
     const fAvg = calcAvg(pfClosed);
 
+    // ── Plan G data (并发限制) ──
+    const pgPort    = window.PORTFOLIO_G;
+    const pgClosed  = (pgPort && pgPort.closed_positions) ? pgPort.closed_positions : [];
+    const pgStats   = (pgPort && pgPort.stats) ? pgPort.stats : {};
+    const gFinal    = pgStats.portfolio_value || 2000;
+    const gPnl      = gFinal - 2000;
+    const gPnlPct   = (gPnl / 20).toFixed(2);
+    const gTrades   = pgStats.total_trades || 0;
+    const gComm     = pgStats.total_commission_usd ?? null;
+
+    const gCumByDate = {};
+    let gRunning = 2000;
+    [...pgClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
+        .forEach(p => { gRunning += (p.realized_pnl_usd || 0); gCumByDate[p.close_date] = gRunning; });
+    const cumG = dates.map(d => {
+        let val = 2000;
+        Object.entries(gCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
+        return val;
+    });
+
+    const gPF  = calcPF(pgClosed);
+    const gAvg = calcAvg(pgClosed);
+
     // ── 标记最优方案 ──
-    const best = Math.max(ePnl, bPnl, cPnl, dPnl, fPnl);
+    const best = Math.max(ePnl, bPnl, cPnl, dPnl, fPnl, gPnl);
 
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
@@ -3446,7 +3487,9 @@ function loadSimCurve() {
             panelHtml('d', 'D — TP+15%/SL-3%/2日 ✨', dFinal, dPnl, dPnlPct,
                 '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best, dComm) +
             panelHtml('f', 'F — 分档出场×2 TP15% ✦', fFinal, fPnl, fPnlPct,
-                '已平仓', fTrades, '盈亏比', fPF, '平均每笔', fAvg, fPnl === best, fComm);
+                '已平仓', fTrades, '盈亏比', fPF, '平均每笔', fAvg, fPnl === best, fComm) +
+            panelHtml('g', 'G — D参数+并发≤4 ✦', gFinal, gPnl, gPnlPct,
+                '已平仓', gTrades, '盈亏比', gPF, '平均每笔', gAvg, gPnl === best, gComm);
     }
 
     // ── Triple curve chart ──
@@ -3458,7 +3501,7 @@ function loadSimCurve() {
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
-        const allVals = [...cumE, ...cumB, ...cumC, ...cumD, ...cumF, 2000];
+        const allVals = [...cumE, ...cumB, ...cumC, ...cumD, ...cumF, ...cumG, 2000];
         const yMin = Math.min(...allVals);
         const yMax = Math.max(...allVals);
         const yPad = Math.max((yMax - yMin) * 0.15, 15);
@@ -3486,24 +3529,28 @@ function loadSimCurve() {
         const ptC = cumC.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptD = cumD.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptF = cumF.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
+        const ptG = cumG.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
 
         const areaE = `${xPx(0)},${PAD.top+cH} ` + cumE.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumE.length-1)},${PAD.top+cH}`;
         const areaB = `${xPx(0)},${PAD.top+cH} ` + cumB.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumB.length-1)},${PAD.top+cH}`;
         const areaC = `${xPx(0)},${PAD.top+cH} ` + cumC.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumC.length-1)},${PAD.top+cH}`;
         const areaD = `${xPx(0)},${PAD.top+cH} ` + cumD.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumD.length-1)},${PAD.top+cH}`;
         const areaF = `${xPx(0)},${PAD.top+cH} ` + cumF.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumF.length-1)},${PAD.top+cH}`;
+        const areaG = `${xPx(0)},${PAD.top+cH} ` + cumG.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumG.length-1)},${PAD.top+cH}`;
 
         const eLast = cumE[cumE.length-1] || eFinal;
         const bLast = cumB[cumB.length-1] || bFinal;
         const cLast = cumC[cumC.length-1] || cFinal;
         const dLast = cumD[cumD.length-1] || dFinal;
         const fLast = cumF[cumF.length-1] || fFinal;
+        const gLast = cumG[cumG.length-1] || gFinal;
         const lx = W - PAD.right + 4;
         const labelE = `<text x="${lx}" y="${(yPx(eLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#0891b2">$${eFinal.toFixed(0)}</text>`;
         const labelB = `<text x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
         const labelC = `<text x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
         const labelD = `<text x="${lx}" y="${(yPx(dLast)+20).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#ea580c">$${dFinal.toFixed(0)}</text>`;
         const labelF = `<text x="${lx}" y="${(yPx(fLast)+32).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#a21caf">$${fFinal.toFixed(0)}</text>`;
+        const labelG = `<text x="${lx}" y="${(yPx(gLast)+44).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#15803d">$${gFinal.toFixed(0)}</text>`;
 
         wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:hidden;display:block">
             <defs>
@@ -3513,6 +3560,7 @@ function loadSimCurve() {
                 <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".08"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ea580c" stop-opacity=".15"/><stop offset="100%" stop-color="#ea580c" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gF" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a21caf" stop-opacity=".18"/><stop offset="100%" stop-color="#a21caf" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#15803d" stop-opacity=".18"/><stop offset="100%" stop-color="#15803d" stop-opacity="0"/></linearGradient>
             </defs>
             ${grid}${xLabels}
             <polygon points="${areaE}" fill="url(#gE)"/>
@@ -3520,12 +3568,14 @@ function loadSimCurve() {
             <polygon points="${areaC}" fill="url(#gC)"/>
             <polygon points="${areaD}" fill="url(#gD)"/>
             <polygon points="${areaF}" fill="url(#gF)"/>
+            <polygon points="${areaG}" fill="url(#gG)"/>
             <polyline points="${ptE}" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
             <polyline points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptD}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptF}" fill="none" stroke="#a21caf" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4,3"/>
-            ${labelE}${labelB}${labelC}${labelD}${labelF}
+            <polyline points="${ptG}" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3,2"/>
+            ${labelE}${labelB}${labelC}${labelD}${labelF}${labelG}
             <g transform="translate(${PAD.left+4},${PAD.top+10})">
                 <line x1="0" y1="0" x2="14" y2="0" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4,2"/>
                 <text x="18" y="4" font-size="10" fill="#0891b2" font-weight="600">E</text>
@@ -3545,6 +3595,10 @@ function loadSimCurve() {
             <g transform="translate(${PAD.left+146},${PAD.top+10})">
                 <line x1="0" y1="0" x2="14" y2="0" stroke="#a21caf" stroke-width="2" stroke-dasharray="4,3"/>
                 <text x="18" y="4" font-size="10" fill="#a21caf" font-weight="700">F ✦</text>
+            </g>
+            <g transform="translate(${PAD.left+186},${PAD.top+10})">
+                <line x1="0" y1="0" x2="14" y2="0" stroke="#15803d" stroke-width="2" stroke-dasharray="3,2"/>
+                <text x="18" y="4" font-size="10" fill="#15803d" font-weight="700">G ★</text>
             </g>
         </svg>`;
     }
