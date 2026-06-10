@@ -1,37 +1,6 @@
 {
   "capital_usd": 2000,
-  "open_positions": [
-    {
-      "ticker": "TISI",
-      "name": "TISI",
-      "action": "SELL",
-      "signal_date": "2026-06-08",
-      "entry_price": 17.93,
-      "allocated_usd": 500,
-      "shares": 27,
-      "actual_position_usd": 484.11,
-      "entry_commission": 1.0,
-      "take_profit": 16.5,
-      "stop_loss": 18.65,
-      "max_hold_date": "2026-06-15",
-      "day1_open": 17.71,
-      "daily_prices": {
-        "2026-06-09": {
-          "open": 17.79,
-          "high": 18.5,
-          "low": 16.94,
-          "close": 17.5,
-          "pnl_pct": 2.4
-        },
-        "2026-06-10": {
-          "close": 17.03,
-          "pnl_pct": 5.02
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": -1.23
-    }
-  ],
+  "open_positions": [],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -359,6 +328,44 @@
       "realized_pnl_usd": -21.29
     },
     {
+      "ticker": "TISI",
+      "name": "TISI",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 17.93,
+      "allocated_usd": 500,
+      "shares": 27,
+      "actual_position_usd": 484.11,
+      "entry_commission": 1.0,
+      "take_profit": 16.5,
+      "stop_loss": 18.65,
+      "max_hold_date": "2026-06-15",
+      "day1_open": 17.79,
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 17.79,
+          "high": 18.5,
+          "low": 16.94,
+          "close": 17.5,
+          "pnl_pct": 2.4
+        },
+        "2026-06-10": {
+          "open": 17.71,
+          "high": 17.86,
+          "low": 16.36,
+          "close": 16.58,
+          "pnl_pct": 7.98
+        }
+      },
+      "close_date": "2026-06-10",
+      "close_price": 16.5,
+      "final_pnl_pct": 7.98,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 36.63
+    },
+    {
       "ticker": "VLGEA",
       "name": "VLGEA",
       "action": "SELL",
@@ -392,12 +399,12 @@
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 9,
-    "win_trades": 6,
-    "win_rate": 66.7,
-    "total_realized_pnl_usd": 102.48,
-    "open_unrealized_pnl_usd": 25.1,
-    "portfolio_value": 2127.58,
+    "total_trades": 10,
+    "win_trades": 7,
+    "win_rate": 70.0,
+    "total_realized_pnl_usd": 139.11,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2139.11,
     "skipped_gap": 3,
     "updated_at": "2026-06-11"
   }
