@@ -457,15 +457,15 @@ else:
         sig = analyze_pick(pick)
         if sig['action'] != 'HOLD':
             signals.append(sig)
-            print(f"[accept] {pick['ticker']}: {sig['action']} — added ({len(signals)}/4)")
+            print(f"[accept] {pick['ticker']}: {sig['action']} — added ({len(signals)}/3)")
         else:
             hold_fallbacks.append(sig)
             print(f"[skip-hold] {pick['ticker']}: HOLD — trying next candidate")
-        if len(signals) >= 4:
+        if len(signals) >= 3:
             break
-    # Fill up to 4 with HOLDs only if we ran out of directional signals
-    if len(signals) < 4:
-        needed = 4 - len(signals)
+    # Fill up to 3 with HOLDs only if we ran out of directional signals
+    if len(signals) < 3:
+        needed = 3 - len(signals)
         signals.extend(hold_fallbacks[:needed])
         print(f"[warn] Only {len(signals) - needed} directional signals found, padded with {needed} HOLD(s)")
 
