@@ -401,6 +401,8 @@
         .ab-kv-val { font-size:12px; font-weight:700; color:#374151; }
         .ab-comm { font-size:9px; color:#9ca3af; margin-top:5px; padding-top:4px; }
         .ab-comm-val { color:#ef4444; font-weight:600; }
+        .ab-panel.plan-f { background:linear-gradient(135deg,#fdf4ff,#fae8ff); border:1px solid #e879f9; }
+        .ab-label.f { color:#a21caf; }
         .hold-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:6px; background:#fef3c7; color:#92400e; font-weight:600; margin:2px; }
 
         /* ── Plan B portfolio ────────────────────── */
@@ -701,6 +703,7 @@
       document.write('<scr'+'ipt src="portfolio-c.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-d.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-e.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-f.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
     })();
@@ -2635,7 +2638,7 @@ function loadHistoricalBacktest() {
 window._livePrices = {};
 
 async function fetchLivePrices() {
-    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D, window.PORTFOLIO_E];
+    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D, window.PORTFOLIO_E, window.PORTFOLIO_F];
     const tickers = [...new Set(
         portfolios.flatMap(p => (p && p.open_positions || []).map(pos => pos.ticker))
     )].filter(Boolean);
@@ -2682,6 +2685,7 @@ function renderSimPbOpen(livePrices) {
         {plan:'C', data: window.PORTFOLIO_C},
         {plan:'D', data: window.PORTFOLIO_D},
         {plan:'E', data: window.PORTFOLIO_E},
+        {plan:'F', data: window.PORTFOLIO_F},
     ];
     const allOpen = allPortfolios.flatMap(({plan, data}) =>
         (data && data.open_positions || []).map(pos => ({...pos, _plan: plan}))
@@ -2762,12 +2766,13 @@ function patchLivePortfolioCards(livePrices) {
         c: calcLive(window.PORTFOLIO_C),
         d: calcLive(window.PORTFOLIO_D),
         e: calcLive(window.PORTFOLIO_E),
+        f: calcLive(window.PORTFOLIO_F),
     };
 
     // Find best plan for trophy
     const bestVal = Math.max(...Object.values(liveValues).filter(v => v !== null));
 
-    ['b', 'c', 'd', 'e'].forEach(cls => {
+    ['b', 'c', 'd', 'e', 'f'].forEach(cls => {
         const val = liveValues[cls];
         if (val === null) return;
         const pnl = val - CAPITAL;
@@ -2848,7 +2853,10 @@ function renderAbCompare() {
     const dCap = dSt.portfolio_value || 2000, dPnl = dCap - 2000, dPnlPct = dPnl / 2000 * 100;
 
     // 找最高盈利方案
-    const pnlMap = {E: ePnl, B: bPnl, C: cPnl, D: dPnl};
+    const pf = window.PORTFOLIO_F;
+    const fSt = getStats(pf);
+    const fCap = fSt.portfolio_value || 2000, fPnl = fCap - 2000, fPnlPct = fPnl / 2000 * 100;
+    const pnlMap = {E: ePnl, B: bPnl, C: cPnl, D: dPnl, F: fPnl};
     const bestPlan = Object.entries(pnlMap).sort((a,b) => b[1]-a[1])[0][0];
     const trophy = plan => plan === bestPlan ? ' <span style="font-size:11px">🏆</span>' : '';
 
@@ -2893,6 +2901,16 @@ function renderAbCompare() {
                     <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${dSt.total_trades||0}</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${dSt.win_rate||0}%</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">跳空跳过</div><div class="ab-kv-val" style="color:#ea580c">${dSt.skipped_gap||0}</div></div>
+                </div>
+            </div>
+            <div class="ab-panel plan-f">
+                <div class="ab-label f">F 方案${trophy('F')} — 分档出场 2档×TP15%/3日</div>
+                <div class="ab-capital">$${fCap.toFixed(2)}</div>
+                <div class="ab-pnl" style="color:${col(fPnl)}">${fmt(fPnl)} (${fPnlPct>=0?'+':''}${fPnlPct.toFixed(1)}%)</div>
+                <div class="ab-row">
+                    <div class="ab-kv"><div class="ab-kv-lbl">已平仓</div><div class="ab-kv-val">${fSt.total_trades||0}</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">胜率</div><div class="ab-kv-val">${fSt.win_rate||0}%</div></div>
+                    <div class="ab-kv"><div class="ab-kv-lbl">佣金</div><div class="ab-kv-val" style="color:#ef4444">-$${fSt.total_commission_usd||0}</div></div>
                 </div>
             </div>`;
     }
@@ -3363,8 +3381,31 @@ function loadSimCurve() {
     const ePF  = calcPF(peClosed);
     const eAvg = calcAvg(peClosed);
 
+    // ── Plan F data (分档出场) ──
+    const pfPort    = window.PORTFOLIO_F;
+    const pfClosed  = (pfPort && pfPort.closed_positions) ? pfPort.closed_positions : [];
+    const pfStats   = (pfPort && pfPort.stats) ? pfPort.stats : {};
+    const fFinal    = pfStats.portfolio_value || 2000;
+    const fPnl      = fFinal - 2000;
+    const fPnlPct   = (fPnl / 20).toFixed(2);
+    const fTrades   = pfStats.total_trades || 0;
+    const fComm     = pfStats.total_commission_usd ?? null;
+
+    const fCumByDate = {};
+    let fRunning = 2000;
+    [...pfClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
+        .forEach(p => { fRunning += (p.realized_pnl_usd || 0); fCumByDate[p.close_date] = fRunning; });
+    const cumF = dates.map(d => {
+        let val = 2000;
+        Object.entries(fCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
+        return val;
+    });
+
+    const fPF  = calcPF(pfClosed);
+    const fAvg = calcAvg(pfClosed);
+
     // ── 标记最优方案 ──
-    const best = Math.max(ePnl, bPnl, cPnl, dPnl);
+    const best = Math.max(ePnl, bPnl, cPnl, dPnl, fPnl);
 
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
@@ -3403,7 +3444,9 @@ function loadSimCurve() {
             panelHtml('c', 'C — B+1.5%跳空', cFinal, cPnl, cPnlPct,
                 '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best, cComm) +
             panelHtml('d', 'D — TP+15%/SL-3%/2日 ✨', dFinal, dPnl, dPnlPct,
-                '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best, dComm);
+                '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best, dComm) +
+            panelHtml('f', 'F — 分档出场×2 TP15% ✦', fFinal, fPnl, fPnlPct,
+                '已平仓', fTrades, '盈亏比', fPF, '平均每笔', fAvg, fPnl === best, fComm);
     }
 
     // ── Triple curve chart ──
@@ -3415,7 +3458,7 @@ function loadSimCurve() {
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
-        const allVals = [...cumE, ...cumB, ...cumC, ...cumD, 2000];
+        const allVals = [...cumE, ...cumB, ...cumC, ...cumD, ...cumF, 2000];
         const yMin = Math.min(...allVals);
         const yMax = Math.max(...allVals);
         const yPad = Math.max((yMax - yMin) * 0.15, 15);
@@ -3442,21 +3485,25 @@ function loadSimCurve() {
         const ptB = cumB.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptC = cumC.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptD = cumD.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
+        const ptF = cumF.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
 
         const areaE = `${xPx(0)},${PAD.top+cH} ` + cumE.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumE.length-1)},${PAD.top+cH}`;
         const areaB = `${xPx(0)},${PAD.top+cH} ` + cumB.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumB.length-1)},${PAD.top+cH}`;
         const areaC = `${xPx(0)},${PAD.top+cH} ` + cumC.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumC.length-1)},${PAD.top+cH}`;
         const areaD = `${xPx(0)},${PAD.top+cH} ` + cumD.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumD.length-1)},${PAD.top+cH}`;
+        const areaF = `${xPx(0)},${PAD.top+cH} ` + cumF.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumF.length-1)},${PAD.top+cH}`;
 
         const eLast = cumE[cumE.length-1] || eFinal;
         const bLast = cumB[cumB.length-1] || bFinal;
         const cLast = cumC[cumC.length-1] || cFinal;
         const dLast = cumD[cumD.length-1] || dFinal;
+        const fLast = cumF[cumF.length-1] || fFinal;
         const lx = W - PAD.right + 4;
         const labelE = `<text x="${lx}" y="${(yPx(eLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#0891b2">$${eFinal.toFixed(0)}</text>`;
         const labelB = `<text x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
         const labelC = `<text x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
         const labelD = `<text x="${lx}" y="${(yPx(dLast)+20).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#ea580c">$${dFinal.toFixed(0)}</text>`;
+        const labelF = `<text x="${lx}" y="${(yPx(fLast)+32).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#a21caf">$${fFinal.toFixed(0)}</text>`;
 
         wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:hidden;display:block">
             <defs>
@@ -3465,17 +3512,20 @@ function loadSimCurve() {
                 <linearGradient id="gE" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0891b2" stop-opacity=".12"/><stop offset="100%" stop-color="#0891b2" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".08"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ea580c" stop-opacity=".15"/><stop offset="100%" stop-color="#ea580c" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gF" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a21caf" stop-opacity=".18"/><stop offset="100%" stop-color="#a21caf" stop-opacity="0"/></linearGradient>
             </defs>
             ${grid}${xLabels}
             <polygon points="${areaE}" fill="url(#gE)"/>
             <polygon points="${areaB}" fill="url(#gB)"/>
             <polygon points="${areaC}" fill="url(#gC)"/>
             <polygon points="${areaD}" fill="url(#gD)"/>
+            <polygon points="${areaF}" fill="url(#gF)"/>
             <polyline points="${ptE}" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
             <polyline points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
             <polyline points="${ptD}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-            ${labelE}${labelB}${labelC}${labelD}
+            <polyline points="${ptF}" fill="none" stroke="#a21caf" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4,3"/>
+            ${labelE}${labelB}${labelC}${labelD}${labelF}
             <g transform="translate(${PAD.left+4},${PAD.top+10})">
                 <line x1="0" y1="0" x2="14" y2="0" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4,2"/>
                 <text x="18" y="4" font-size="10" fill="#0891b2" font-weight="600">E</text>
@@ -3491,6 +3541,10 @@ function loadSimCurve() {
             <g transform="translate(${PAD.left+106},${PAD.top+10})">
                 <rect width="14" height="3" y="-1.5" fill="#ea580c" rx="1.5"/>
                 <text x="18" y="4" font-size="10" fill="#ea580c" font-weight="700">D ✨</text>
+            </g>
+            <g transform="translate(${PAD.left+146},${PAD.top+10})">
+                <line x1="0" y1="0" x2="14" y2="0" stroke="#a21caf" stroke-width="2" stroke-dasharray="4,3"/>
+                <text x="18" y="4" font-size="10" fill="#a21caf" font-weight="700">F ✦</text>
             </g>
         </svg>`;
     }
