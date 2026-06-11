@@ -481,11 +481,13 @@ else:
         else:
             hold_fallbacks.append(sig)
 
+    # 只发真实的 BUY/SELL（上限4条），不再用 HOLD 凑数——HOLD是"无好机会"的诚实判断，
+    # 凑满4条会逼着交易更弱标的、降质量。有几条发几条(0-4)。hold_fallbacks 仅保留供日志/分析。
     signals = signals[:4]
-    if len(signals) < 4:
-        needed = 4 - len(signals)
-        signals.extend(hold_fallbacks[:needed])
-        print(f"[warn] 只有 {len(signals) - needed} 条方向信号，用 {needed} 条 HOLD 补足")
+    if not signals:
+        print("[info] 今日 6 只候选 AI 全判 HOLD，无可操作信号")
+    elif len(signals) < 4:
+        print(f"[info] 今日仅 {len(signals)} 条方向信号（其余候选 AI 判 HOLD，不凑数）")
 
     # claude-haiku-4-5 pricing: $0.80/MTok in, $4.00/MTok out
     api_cost = round(_total_input_tokens * 0.8 / 1_000_000 + _total_output_tokens * 4.0 / 1_000_000, 4)
