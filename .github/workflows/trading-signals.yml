@@ -13,6 +13,12 @@ on:
 permissions:
   contents: write
 
+# 防止两个 run 同时跑/同时提交（6/10 撞车导致信号丢失的根因）。
+# 第二个被触发的 run 排队等待，不取消正在跑的（避免已花的 API 分析费白费）。
+concurrency:
+  group: trading-signals
+  cancel-in-progress: false
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
@@ -131,11 +137,16 @@ jobs:
           git add data/screened-stocks.json 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
+          pushed=0
           for i in 1 2 3 4 5; do
-            git pull --rebase && git push && break
+            if git pull --rebase && git push; then pushed=1; break; fi
             echo "Push failed, retry $i/5 in 10s..."
             sleep 10
           done
+          if [ "$pushed" -ne 1 ]; then
+            echo "::error::Push failed after 5 retries — 信号未进库，job 标记失败以触发告警"
+            exit 1
+          fi
 
       - name: Notify success via WhatsApp
         if: success()
