@@ -1,4 +1,4 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
@@ -17,13 +17,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-11",
       "daily_prices": {
         "2026-06-10": {
-          "open": 11.78,
-          "high": 12.3,
-          "low": 10.85,
           "close": 11.5,
           "pnl_pct": 6.96
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_open": 11.78,
+      "day1_gap_pct": -4.69
     },
     {
       "ticker": "PBHC",
@@ -38,7 +38,15 @@ window.PORTFOLIO_D = {
       "take_profit": 12.92,
       "stop_loss": 15.66,
       "max_hold_date": "2026-06-15",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-11": {
+          "close": 14.96,
+          "pnl_pct": 1.58
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 15.25,
+      "day1_gap_pct": 0.33
     },
     {
       "ticker": "MFIN",
@@ -53,7 +61,15 @@ window.PORTFOLIO_D = {
       "take_profit": 8.41,
       "stop_loss": 10.19,
       "max_hold_date": "2026-06-15",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-11": {
+          "close": 9.77,
+          "pnl_pct": 1.21
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 9.95,
+      "day1_gap_pct": 0.61
     },
     {
       "ticker": "ARCB",
@@ -68,22 +84,15 @@ window.PORTFOLIO_D = {
       "take_profit": 143.7,
       "stop_loss": 174.13,
       "max_hold_date": "2026-06-15",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "CBRL",
-      "name": "CBRL",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 43.76,
-      "allocated_usd": 500,
-      "shares": 11,
-      "actual_position_usd": 481.36,
-      "entry_commission": 1.0,
-      "take_profit": 37.2,
-      "stop_loss": 45.07,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-11": {
+          "close": 168.82,
+          "pnl_pct": 0.14
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 168.33,
+      "day1_gap_pct": -0.43
     }
   ],
   "closed_positions": [
@@ -436,11 +445,9 @@ window.PORTFOLIO_D = {
     "win_trades": 5,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 95.24,
-    "open_unrealized_pnl_usd": 33.41,
-    "portfolio_value": 2128.65,
-    "total_commission_usd": 20.0,
-    "skipped_gap": 2,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-11"
+    "open_unrealized_pnl_usd": 49.45,
+    "portfolio_value": 2144.69,
+    "skipped_gap": 3,
+    "updated_at": "2026-06-12"
   }
 };

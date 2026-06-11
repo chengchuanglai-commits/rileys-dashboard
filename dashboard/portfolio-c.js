@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,8 +15,15 @@ window.PORTFOLIO_C = {
       "take_profit": 13.98,
       "stop_loss": 15.81,
       "max_hold_date": "2026-06-18",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 15.25,
+      "daily_prices": {
+        "2026-06-11": {
+          "close": 14.96,
+          "pnl_pct": 1.58
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.33
     },
     {
       "ticker": "MFIN",
@@ -31,8 +38,15 @@ window.PORTFOLIO_C = {
       "take_profit": 9.1,
       "stop_loss": 10.29,
       "max_hold_date": "2026-06-18",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 9.95,
+      "daily_prices": {
+        "2026-06-11": {
+          "close": 9.77,
+          "pnl_pct": 1.21
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.61
     },
     {
       "ticker": "ARCB",
@@ -47,24 +61,15 @@ window.PORTFOLIO_C = {
       "take_profit": 155.54,
       "stop_loss": 175.82,
       "max_hold_date": "2026-06-18",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "CBRL",
-      "name": "CBRL",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 43.76,
-      "allocated_usd": 500,
-      "shares": 11,
-      "actual_position_usd": 481.36,
-      "entry_commission": 1.0,
-      "take_profit": 40.26,
-      "stop_loss": 45.51,
-      "max_hold_date": "2026-06-18",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 168.33,
+      "daily_prices": {
+        "2026-06-11": {
+          "close": 168.82,
+          "pnl_pct": 0.14
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -0.43
     }
   ],
   "closed_positions": [
@@ -500,11 +505,9 @@ window.PORTFOLIO_C = {
     "win_trades": 8,
     "win_rate": 72.7,
     "total_realized_pnl_usd": 176.71,
-    "open_unrealized_pnl_usd": -4.0,
-    "portfolio_value": 2172.71,
-    "total_commission_usd": 22.0,
-    "skipped_gap": 2,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-11"
+    "open_unrealized_pnl_usd": 14.65,
+    "portfolio_value": 2191.36,
+    "skipped_gap": 3,
+    "updated_at": "2026-06-12"
   }
 };
