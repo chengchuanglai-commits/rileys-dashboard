@@ -405,6 +405,8 @@
         .ab-label.f { color:#a21caf; }
         .ab-panel.plan-g { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #4ade80; }
         .ab-label.g { color:#15803d; }
+        .ab-panel.plan-h { background:linear-gradient(135deg,#fff7ed,#fed7aa); border:2px solid #f97316; }
+        .ab-label.h { color:#c2410c; }
         .hold-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:6px; background:#fef3c7; color:#92400e; font-weight:600; margin:2px; }
 
         /* ── Plan B portfolio ────────────────────── */
@@ -707,6 +709,7 @@
       document.write('<scr'+'ipt src="portfolio-e.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-f.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-g.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-h.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="signal-edge.js?v='+v+'"><\/scr'+'ipt>');
@@ -2705,6 +2708,7 @@ function renderSimPbOpen(livePrices) {
         {plan:'E', data: window.PORTFOLIO_E},
         {plan:'F', data: window.PORTFOLIO_F},
         {plan:'G', data: window.PORTFOLIO_G},
+        {plan:'H', data: window.PORTFOLIO_H},
     ];
     const allOpen = allPortfolios.flatMap(({plan, data}) =>
         (data && data.open_positions || []).map(pos => ({...pos, _plan: plan}))
@@ -3498,8 +3502,31 @@ function loadSimCurve() {
     const gPF  = calcPF(pgClosed);
     const gAvg = calcAvg(pgClosed);
 
+    // ── Plan H data (历史最优 TP15/SL2/2日) ──
+    const phPort    = window.PORTFOLIO_H;
+    const phClosed  = (phPort && phPort.closed_positions) ? phPort.closed_positions : [];
+    const phStats   = (phPort && phPort.stats) ? phPort.stats : {};
+    const hFinal    = phStats.portfolio_value || 2000;
+    const hPnl      = hFinal - 2000;
+    const hPnlPct   = (hPnl / 20).toFixed(2);
+    const hTrades   = phStats.total_trades || 0;
+    const hComm     = phStats.total_commission_usd ?? null;
+
+    const hCumByDate = {};
+    let hRunning = 2000;
+    [...phClosed].sort((a, b) => a.close_date.localeCompare(b.close_date))
+        .forEach(p => { hRunning += (p.realized_pnl_usd || 0); hCumByDate[p.close_date] = hRunning; });
+    const cumH = dates.map(d => {
+        let val = 2000;
+        Object.entries(hCumByDate).forEach(([dt, v]) => { if (dt <= d) val = v; });
+        return val;
+    });
+
+    const hPF  = calcPF(phClosed);
+    const hAvg = calcAvg(phClosed);
+
     // ── 标记最优方案 ──
-    const best = Math.max(ePnl, bPnl, cPnl, dPnl, fPnl, gPnl);
+    const best = Math.max(ePnl, bPnl, cPnl, dPnl, fPnl, gPnl, hPnl);
 
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
@@ -3542,7 +3569,9 @@ function loadSimCurve() {
             panelHtml('f', 'F — 分档出场×2 TP15% ✦', fFinal, fPnl, fPnlPct,
                 '已平仓', fTrades, '盈亏比', fPF, '平均每笔', fAvg, fPnl === best, fComm) +
             panelHtml('g', 'G — D参数+并发≤4 ✦', gFinal, gPnl, gPnlPct,
-                '已平仓', gTrades, '盈亏比', gPF, '平均每笔', gAvg, gPnl === best, gComm);
+                '已平仓', gTrades, '盈亏比', gPF, '平均每笔', gAvg, gPnl === best, gComm) +
+            panelHtml('h', 'H — 历史最优 TP15/SL2/2日 ✨', hFinal, hPnl, hPnlPct,
+                '已平仓', hTrades, '盈亏比', hPF, '平均每笔', hAvg, hPnl === best, hComm);
     }
 
     // ── Triple curve chart ──
