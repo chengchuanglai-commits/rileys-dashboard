@@ -2,7 +2,7 @@ name: TradingAgents 每日信号
 
 on:
   schedule:
-    - cron: '30 12 * * 1-5'  # 20:30 北京时间，周一至周五 (UTC+8 → 12:30 UTC)
+    - cron: '30 11 * * 1-5'  # 11:30 UTC = 美东 7:30 AM(开盘前2h，盘前出信号留足准备时间) = 北京19:30
   workflow_dispatch:           # 支持手动触发
     inputs:
       backfill_date:

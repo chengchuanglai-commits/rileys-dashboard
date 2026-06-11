@@ -951,7 +951,7 @@
                 </div>
             </div>
             <div id="ts-content">
-                <div class="mn-empty">今日 AI 深度信号将于 20:30 生成…</div>
+                <div class="mn-empty">今日 AI 深度信号将于 19:30 生成…</div>
             </div>
         </div>
     </div>
@@ -3072,7 +3072,7 @@ function loadTradingSignals() {
     if (!window.TRADING_SIGNALS || !window.TRADING_SIGNALS.date) {
         setSyncDot('ts-dot', '');
         const el = document.getElementById('ts-content');
-        if (el) el.innerHTML = '<div class="mn-empty">今日 AI 深度信号将于 20:30 生成…</div>';
+        if (el) el.innerHTML = '<div class="mn-empty">今日 AI 深度信号将于 19:30 生成…</div>';
         return;
     }
     renderTradingSignals(window.TRADING_SIGNALS);
@@ -3202,7 +3202,7 @@ function renderTradingSignals(d) {
 
     content.innerHTML = dotsHtml + sigHtml + `
         <div style="font-size:9px;color:#bbb;text-align:right;margin-top:4px;padding-top:6px;border-top:1px solid #f0f0f0">
-            TradingAgents · 每日 20:30 自动更新 · 本次花费 $${d.api_cost_usd != null ? d.api_cost_usd.toFixed(4) : '0'}
+            TradingAgents · 每日 19:30 自动更新 · 本次花费 $${d.api_cost_usd != null ? d.api_cost_usd.toFixed(4) : '0'}
         </div>`;
 
     // TradingView lazy inject — called when user expands the chart panel

@@ -1,4 +1,4 @@
-// TradingAgents 信号数据 — 每日 20:30 自动更新
+// TradingAgents 信号数据 — 每日 19:30 自动更新
 window.TRADING_SIGNALS = {
   "date": "2026-06-09",
   "generated_at": "2026-06-09T01:13:00",

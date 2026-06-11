@@ -13,7 +13,7 @@ _backfill = os.environ.get('BACKFILL_DATE', '').strip()
 if _backfill:
     today = _backfill
     yesterday = (datetime.strptime(_backfill, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
-    generated_at = f"{_backfill}T20:30:00"
+    generated_at = f"{_backfill}T19:30:00"
     print(f"[backfill] 回填模式，目标日期: {today}")
 else:
     today = now_beijing.strftime('%Y-%m-%d')
@@ -500,7 +500,7 @@ else:
 
 os.makedirs("dashboard", exist_ok=True)
 js_content = (
-    "// TradingAgents 信号数据 — 每日 20:30 自动更新\n"
+    "// TradingAgents 信号数据 — 每日 19:30 自动更新\n"
     f"window.TRADING_SIGNALS = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
 )
 with open("dashboard/trading-signals.js", "w", encoding="utf-8") as f:
@@ -536,7 +536,7 @@ if _backfill and data['signals']:
             json.dump(bf_data, f, ensure_ascii=False, indent=2)
         data = bf_data
         js_content = (
-            "// TradingAgents 信号数据 — 每日 20:30 自动更新\n"
+            "// TradingAgents 信号数据 — 每日 19:30 自动更新\n"
             f"window.TRADING_SIGNALS = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
         )
         with open("dashboard/trading-signals.js", "w", encoding="utf-8") as f:
