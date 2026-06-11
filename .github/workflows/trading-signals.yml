@@ -16,7 +16,7 @@ permissions:
 # 防止两个 run 同时跑/同时提交（6/10 撞车导致信号丢失的根因）。
 # 第二个被触发的 run 排队等待，不取消正在跑的（避免已花的 API 分析费白费）。
 concurrency:
-  group: trading-signals
+  group: trading-pipeline   # 与 refresh-portfolio.yml 共用，防两个提交portfolio的run撞车
   cancel-in-progress: false
 
 jobs:

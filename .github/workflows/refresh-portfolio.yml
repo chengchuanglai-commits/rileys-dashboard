@@ -8,6 +8,12 @@ on:
 permissions:
   contents: write
 
+# 与信号工作流共用同一并发组，防止两个会提交 portfolio 的 run 同时跑撞车
+# （盘中刷新若超过30分钟会和下一次刷新撞车；慢信号run若拖到13:00也会和刷新撞车）
+concurrency:
+  group: trading-pipeline
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -69,8 +75,13 @@ jobs:
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 刷新持仓+报告 $(date -u +'%Y-%m-%d %H:%M') UTC"
+          pushed=0
           for i in 1 2 3 4 5; do
-            git pull --rebase && git push && break
+            if git pull --rebase && git push; then pushed=1; break; fi
             echo "Push failed, retry $i/5 in 10s..."
             sleep 10
           done
+          if [ "$pushed" -ne 1 ]; then
+            echo "::error::盘中刷新 push 5次全失败 — 持仓数据未更新"
+            exit 1
+          fi
