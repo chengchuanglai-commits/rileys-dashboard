@@ -1,30 +1,23 @@
 """
-Plan B 历史回溯模拟
-从所有已验证信号重建 portfolio_b.json，用于 A vs B 对比分析。
-
-⚠️ 观察候选淘汰：2026-06-11 的 12 个月历史回测中，本参数(TP8/SL4/5日)排名 ~#349/700，
-   属中下游。TP8/SL4 是 2:1 赔率，需高胜率才划算，大样本不支持。留作对照，暂不淘汰。
-   优选方向见 Plan H(TP15/SL2/2日，历史 PF 最高)。
-
-入场规则：信号价（prev close） + BUY/SELL 方向
-出场规则：TP +8%、SL -4%、最大持仓 5 交易日（用 yfinance 日线 high/low 判断触达）
+Plan H 历史回溯模拟 — 历史回测最优参数（TP15/SL2/2日/gap1.0）
+来源：historical-backtest.py 在 12 个月 ~1620 笔随机入场上，此参数组 PF 最高(~2.18)。
+与 Plan D 唯一差别：止损 SL 从 -3% 收紧到 -2%（D vs H 是控制变量对照）。
 佣金：IBKR $0.005/股，最低 $1.00/单（入场+出场各一次）
 """
-import json, os, sys
+import json, os
 from datetime import datetime, timedelta
 import yfinance as yf
 
 SIGNALS_DIR = "dashboard/trading-signals-history"
-PORTFOLIO_PATH = "data/portfolio_b.json"
+PORTFOLIO_PATH = "data/portfolio_h.json"
 os.makedirs("data", exist_ok=True)
 
-TP_PCT = 8   # take profit %
-SL_PCT = 4   # stop loss %
-MAX_HOLD_TRADING_DAYS = 5
+TP_PCT = 15
+SL_PCT = 2
+MAX_HOLD_TRADING_DAYS = 2
+GAP_FILTER_PCT = 1.0
 PER_POSITION_USD = 500
 STARTING_CAPITAL = 2000
-
-# ── 工具函数 ────────────────────────────────────────────────────
 
 def ibkr_commission(shares):
     return round(max(1.00, shares * 0.005), 2)
@@ -39,28 +32,23 @@ def next_n_trading_days(start_str, n):
     return days
 
 def simulate_position(ticker, action, entry_price, signal_date):
-    """
-    从 signal_date 后的 MAX_HOLD_TRADING_DAYS 个交易日模拟持仓。
-    使用 yfinance 日线 Open/High/Low/Close 判断 TP/SL/到期。
-    返回: (close_date, close_price, close_reason, pnl_pct, daily_prices_dict)
-    """
-    tp_price = round(entry_price * (1 + TP_PCT / 100 if action == "BUY" else 1 - TP_PCT / 100), 2)
-    sl_price = round(entry_price * (1 - SL_PCT / 100 if action == "BUY" else 1 + SL_PCT / 100), 2)
+    tp_price = round(entry_price * (1 + TP_PCT/100 if action=="BUY" else 1 - TP_PCT/100), 2)
+    sl_price = round(entry_price * (1 - SL_PCT/100 if action=="BUY" else 1 + SL_PCT/100), 2)
 
     target_dates = next_n_trading_days(signal_date, MAX_HOLD_TRADING_DAYS)
     fetch_end = (datetime.strptime(target_dates[-1], "%Y-%m-%d") + timedelta(days=2)).strftime("%Y-%m-%d")
 
     try:
         df = yf.Ticker(ticker).history(start=signal_date, end=fetch_end)
-        df.index = df.index.tz_localize(None) if df.index.tz is not None else df.index
+        df.index = df.index.tz_localize(None) if df.index.tz else df.index
     except Exception as e:
         print(f"  [warn] yfinance failed for {ticker}: {e}")
-        return None, None, None, None, {}
+        return None, None, None, None, {}, False
 
     daily_prices = {}
     today_str = datetime.now().strftime("%Y-%m-%d")
 
-    for target_date in target_dates:
+    for i, target_date in enumerate(target_dates):
         row = None
         for idx, r in df.iterrows():
             if idx.strftime("%Y-%m-%d") == target_date:
@@ -69,7 +57,7 @@ def simulate_position(ticker, action, entry_price, signal_date):
 
         if row is None:
             if target_date > today_str:
-                return None, None, "open", None, daily_prices
+                return None, None, "open", None, daily_prices, False
             continue
 
         o  = round(float(row["Open"]),  2)
@@ -77,8 +65,19 @@ def simulate_position(ticker, action, entry_price, signal_date):
         lo = round(float(row["Low"]),   2)
         cl = round(float(row["Close"]), 2)
 
+        # 跳过 yfinance NaN bar（OTC 股数据延迟时会出现，否则污染组合净值）
+        if any(x != x for x in (o, hi, lo, cl)):
+            continue
+
+        # Day-1 gap filter
+        if i == 0 and GAP_FILTER_PCT > 0:
+            gap = (o - entry_price) / entry_price * 100
+            unfavorable = -gap if action == "BUY" else gap
+            if unfavorable > GAP_FILTER_PCT:
+                return None, None, "gap_filtered", None, {}, True
+
         close_reason = None
-        close_price = cl
+        close_price  = cl
         if action == "BUY":
             if lo <= sl_price:
                 close_reason, close_price = "stop_loss", sl_price
@@ -95,23 +94,21 @@ def simulate_position(ticker, action, entry_price, signal_date):
         daily_prices[target_date] = {"open": o, "high": hi, "low": lo, "close": cl, "pnl_pct": round(pnl_pct, 2)}
 
         if close_reason:
-            return target_date, close_price, close_reason, round(pnl_pct, 2), daily_prices
+            return target_date, close_price, close_reason, round(pnl_pct, 2), daily_prices, False
 
         if target_date == target_dates[-1]:
             raw_pct = (cl - entry_price) / entry_price * 100
             pnl_pct = raw_pct if action == "BUY" else -raw_pct
             daily_prices[target_date]["pnl_pct"] = round(pnl_pct, 2)
-            return target_date, cl, "max_hold", round(pnl_pct, 2), daily_prices
+            return target_date, cl, "max_hold", round(pnl_pct, 2), daily_prices, False
 
-    return None, None, "open", None, daily_prices
-
-# ── 读取所有历史信号 ──────────────────────────────────────────────
+    return None, None, "open", None, daily_prices, False
 
 portfolio = {
     "capital_usd": STARTING_CAPITAL,
     "open_positions": [],
     "closed_positions": [],
-    "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1"
+    "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）"
 }
 
 all_signals = []
@@ -124,18 +121,16 @@ for fname in sorted(os.listdir(SIGNALS_DIR)):
     for s in d.get("signals", []):
         all_signals.append((date_str, s))
 
-print(f"Found {len(all_signals)} signals across {len([f for f in os.listdir(SIGNALS_DIR) if f.endswith('.json') and '-report' not in f])} days")
+print(f"Found {len(all_signals)} signals")
 
-# ── 逐个信号模拟 ──────────────────────────────────────────────────
-
+skipped_gap = 0
 skipped_zero_shares = 0
 for signal_date, s in all_signals:
     ticker = s.get("ticker")
     action = s.get("action")
     entry_price = s.get("current_price")
-
     if action not in ("BUY", "SELL") or not entry_price:
-        print(f"  Skip {signal_date} {ticker} {action} (HOLD or no price)")
+        print(f"  Skip {signal_date} {ticker} {action}")
         continue
 
     shares = int(PER_POSITION_USD / entry_price)
@@ -149,20 +144,23 @@ for signal_date, s in all_signals:
     exit_comm = ibkr_commission(shares)
 
     print(f"  Simulating {action} {ticker} @ ${entry_price} x{shares}sh [{signal_date}]...")
-    close_date, close_price, close_reason, final_pnl_pct, daily_prices = simulate_position(
+    close_date, close_price, close_reason, final_pnl_pct, daily_prices, gap_filt = simulate_position(
         ticker, action, entry_price, signal_date
     )
 
+    if gap_filt:
+        print(f"    → Gap filtered (unfavorable >{GAP_FILTER_PCT}%)")
+        skipped_gap += 1
+        continue
+
     if action == "BUY":
-        tp = round(entry_price * (1 + TP_PCT / 100), 2)
-        sl = round(entry_price * (1 - SL_PCT / 100), 2)
+        tp = round(entry_price * (1 + TP_PCT/100), 2)
+        sl = round(entry_price * (1 - SL_PCT/100), 2)
     else:
-        tp = round(entry_price * (1 - TP_PCT / 100), 2)
-        sl = round(entry_price * (1 + SL_PCT / 100), 2)
+        tp = round(entry_price * (1 - TP_PCT/100), 2)
+        sl = round(entry_price * (1 + SL_PCT/100), 2)
 
     max_dates = next_n_trading_days(signal_date, MAX_HOLD_TRADING_DAYS)
-    max_hold_date = max_dates[-1]
-
     position = {
         "ticker": ticker,
         "name": s.get("name", ""),
@@ -175,13 +173,14 @@ for signal_date, s in all_signals:
         "entry_commission": entry_comm,
         "take_profit": tp,
         "stop_loss": sl,
-        "max_hold_date": max_hold_date,
+        "max_hold_date": max_dates[-1],
         "daily_prices": daily_prices,
     }
 
     if close_reason == "open":
         portfolio["open_positions"].append(position)
-        print(f"    → Still OPEN (latest pnl: {list(daily_prices.values())[-1]['pnl_pct'] if daily_prices else 'N/A'}%)")
+        latest = list(daily_prices.values())[-1] if daily_prices else {}
+        print(f"    → Still OPEN (latest pnl: {latest.get('pnl_pct', 'N/A')}%)")
     elif close_date:
         gross_pnl = round(actual_position_usd * final_pnl_pct / 100, 2)
         realized_pnl = round(gross_pnl - entry_comm - exit_comm, 2)
@@ -192,10 +191,6 @@ for signal_date, s in all_signals:
                   "realized_pnl_usd": realized_pnl}
         portfolio["closed_positions"].append(closed)
         print(f"    → Closed {close_reason} @ ${close_price} {final_pnl_pct:+.2f}% gross=${gross_pnl:+.2f} comm=-${entry_comm+exit_comm:.2f} net=${realized_pnl:+.2f}")
-    else:
-        print(f"    → No data available, skipping")
-
-# ── 计算统计 ─────────────────────────────────────────────────────
 
 all_closed = portfolio["closed_positions"]
 wins = [p for p in all_closed if p.get("realized_pnl_usd", 0) > 0]
@@ -214,29 +209,28 @@ portfolio["stats"] = {
     "open_unrealized_pnl_usd": round(open_unrealized, 2),
     "portfolio_value": round(STARTING_CAPITAL + total_realized + open_unrealized, 2),
     "total_commission_usd": round(total_commission, 2),
+    "skipped_gap": skipped_gap,
     "skipped_zero_shares": skipped_zero_shares,
     "updated_at": datetime.now().strftime("%Y-%m-%d"),
 }
 
-# ── 保存 ──────────────────────────────────────────────────────────
-
 with open(PORTFOLIO_PATH, "w") as f:
     json.dump(portfolio, f, ensure_ascii=False, indent=2)
 
-with open("dashboard/portfolio-b.js", "w", encoding="utf-8") as f:
-    f.write("// Plan B 模拟盘持仓 — 历史回溯 + 实时更新\n")
-    f.write(f"window.PORTFOLIO_B = {json.dumps(portfolio, ensure_ascii=False, indent=2)};\n")
+with open("dashboard/portfolio-h.js", "w", encoding="utf-8") as f:
+    f.write("// Plan H 模拟盘持仓 — 历史最优参数(TP15/SL2/2日) 回溯 + 实时更新\n")
+    f.write(f"window.PORTFOLIO_H = {json.dumps(portfolio, ensure_ascii=False, indent=2)};\n")
 
 s = portfolio["stats"]
 print(f"\n{'='*55}")
-print(f"  💼 Plan B 模拟盘回溯结果")
+print(f"  💼 Plan H 模拟盘回溯结果（历史最优参数）")
 print(f"{'='*55}")
+print(f"  参数：TP+{TP_PCT}% / SL-{SL_PCT}% / {MAX_HOLD_TRADING_DAYS}日 / 跳空>{GAP_FILTER_PCT}%过滤")
 print(f"  起始本金: ${STARTING_CAPITAL}")
-print(f"  总交易:   {s['total_trades']} 笔  胜率: {s['win_rate']}%")
+print(f"  总交易:   {s['total_trades']} 笔  胜率: {s['win_rate']}%  跳过: {s['skipped_gap']} 笔")
 print(f"  已实现:   ${s['total_realized_pnl_usd']:+.2f}  (佣金 -${s['total_commission_usd']:.2f})")
 print(f"  浮盈:     ${s['open_unrealized_pnl_usd']:+.2f}")
 print(f"  组合价值: ${s['portfolio_value']}")
-print(f"  持仓中:   {len(portfolio['open_positions'])} 只")
 print()
 print("  已平仓明细:")
 for p in all_closed:

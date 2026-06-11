@@ -114,6 +114,9 @@ jobs:
       - name: Update Plan G portfolio
         run: python scripts/backfill-portfolio-g.py
 
+      - name: Update Plan H portfolio (历史最优参数)
+        run: python scripts/backfill-portfolio-h.py
+
       - name: Analyze signal edge (vs SPY)
         run: python scripts/analyze-signal-edge.py
         continue-on-error: true
@@ -137,6 +140,7 @@ jobs:
           git add dashboard/portfolio-e.js data/portfolio_e.json 2>/dev/null || true
           git add dashboard/portfolio-f.js data/portfolio_f.json 2>/dev/null || true
           git add dashboard/portfolio-g.js data/portfolio_g.json 2>/dev/null || true
+          git add dashboard/portfolio-h.js data/portfolio_h.json 2>/dev/null || true
           git add dashboard/backtest-results.js data/backtest_results.json 2>/dev/null || true
           git add data/screened-stocks.json data/screened-stocks-history/ 2>/dev/null || true
           git add dashboard/signal-edge.js 2>/dev/null || true
