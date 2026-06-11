@@ -17,8 +17,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-11": {
-          "close": 15.06,
-          "pnl_pct": 0.92
+          "close": 14.85,
+          "pnl_pct": 2.3
         }
       }
     },
@@ -37,8 +37,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-11": {
-          "close": 9.87,
-          "pnl_pct": 0.2
+          "close": 9.81,
+          "pnl_pct": 0.81
         }
       }
     },
@@ -57,8 +57,28 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-11": {
-          "close": 172.93,
-          "pnl_pct": -2.29
+          "close": 172.67,
+          "pnl_pct": -2.14
+        }
+      }
+    },
+    {
+      "ticker": "CBRL",
+      "name": "CBRL",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 43.76,
+      "allocated_usd": 500,
+      "shares": 11,
+      "actual_position_usd": 481.36,
+      "entry_commission": 1.0,
+      "take_profit": 40.26,
+      "stop_loss": 45.51,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-11": {
+          "close": 45.5,
+          "pnl_pct": -3.98
         }
       }
     }
@@ -537,41 +557,16 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.79
-    },
-    {
-      "ticker": "CBRL",
-      "name": "CBRL",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 43.76,
-      "allocated_usd": 500,
-      "shares": 11,
-      "actual_position_usd": 481.36,
-      "entry_commission": 1.0,
-      "take_profit": 40.26,
-      "stop_loss": 45.51,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-11": {
-          "close": 45.99,
-          "pnl_pct": -5.1
-        }
-      },
-      "close_date": "2026-06-11",
-      "close_price": 45.99,
-      "final_pnl_pct": -5.1,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -25.48
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 14,
+    "total_trades": 13,
     "win_trades": 8,
-    "win_rate": 57.1,
-    "total_realized_pnl_usd": 110.1,
-    "open_unrealized_pnl_usd": -5.85,
-    "portfolio_value": 2104.25,
+    "win_rate": 61.5,
+    "total_realized_pnl_usd": 135.58,
+    "open_unrealized_pnl_usd": -15.05,
+    "portfolio_value": 2120.53,
     "updated_at": "2026-06-12"
   }
 };
