@@ -3539,7 +3539,7 @@ function loadSimCurve() {
             const commLine = commission != null
                 ? `<div class="ab-comm">IBKR佣金已扣 <span class="ab-comm-val">-$${commission.toFixed(2)}</span></div>`
                 : '';
-            return `<div class="ab-panel plan-${cls}" style="${border}">
+            return `<div class="ab-panel plan-${cls}" data-plan="${cls}" onclick="focusSeries('${cls}')" title="点击高亮该方案曲线" style="cursor:pointer;${border}">
                 <div class="ab-label ${cls}">${label}${bestBadge}</div>
                 <div class="ab-capital" id="lv-cap-${cls}" style="transition:color .3s">$${capital.toFixed(2)}</div>
                 <div class="ab-pnl" id="lv-pnl-${cls}" style="color:${pc};transition:color .3s">${sign}$${Math.abs(pnl).toFixed(2)} (${sign}${pnlPct}%)</div>
@@ -3583,7 +3583,7 @@ function loadSimCurve() {
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
-        const allVals = [...cumE, ...cumB, ...cumC, ...cumD, ...cumF, ...cumG, 2000];
+        const allVals = [...cumE, ...cumB, ...cumC, ...cumD, ...cumF, ...cumG, ...cumH, 2000];
         const yMin = Math.min(...allVals);
         const yMax = Math.max(...allVals);
         const yPad = Math.max((yMax - yMin) * 0.15, 15);
@@ -3612,6 +3612,7 @@ function loadSimCurve() {
         const ptD = cumD.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptF = cumF.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
         const ptG = cumG.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
+        const ptH = cumH.map((v, i) => `${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ');
 
         const areaE = `${xPx(0)},${PAD.top+cH} ` + cumE.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumE.length-1)},${PAD.top+cH}`;
         const areaB = `${xPx(0)},${PAD.top+cH} ` + cumB.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumB.length-1)},${PAD.top+cH}`;
@@ -3619,6 +3620,7 @@ function loadSimCurve() {
         const areaD = `${xPx(0)},${PAD.top+cH} ` + cumD.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumD.length-1)},${PAD.top+cH}`;
         const areaF = `${xPx(0)},${PAD.top+cH} ` + cumF.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumF.length-1)},${PAD.top+cH}`;
         const areaG = `${xPx(0)},${PAD.top+cH} ` + cumG.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumG.length-1)},${PAD.top+cH}`;
+        const areaH = `${xPx(0)},${PAD.top+cH} ` + cumH.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumH.length-1)},${PAD.top+cH}`;
 
         const eLast = cumE[cumE.length-1] || eFinal;
         const bLast = cumB[cumB.length-1] || bFinal;
@@ -3626,13 +3628,15 @@ function loadSimCurve() {
         const dLast = cumD[cumD.length-1] || dFinal;
         const fLast = cumF[cumF.length-1] || fFinal;
         const gLast = cumG[cumG.length-1] || gFinal;
+        const hLast = cumH[cumH.length-1] || hFinal;
         const lx = W - PAD.right + 4;
-        const labelE = `<text x="${lx}" y="${(yPx(eLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#0891b2">$${eFinal.toFixed(0)}</text>`;
-        const labelB = `<text x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
-        const labelC = `<text x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
-        const labelD = `<text x="${lx}" y="${(yPx(dLast)+20).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#ea580c">$${dFinal.toFixed(0)}</text>`;
-        const labelF = `<text x="${lx}" y="${(yPx(fLast)+32).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#a21caf">$${fFinal.toFixed(0)}</text>`;
-        const labelG = `<text x="${lx}" y="${(yPx(gLast)+44).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#15803d">$${gFinal.toFixed(0)}</text>`;
+        const labelE = `<text class="series s-e" x="${lx}" y="${(yPx(eLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#0891b2">$${eFinal.toFixed(0)}</text>`;
+        const labelB = `<text class="series s-b" x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
+        const labelC = `<text class="series s-c" x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
+        const labelD = `<text class="series s-d" x="${lx}" y="${(yPx(dLast)+20).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#ea580c">$${dFinal.toFixed(0)}</text>`;
+        const labelF = `<text class="series s-f" x="${lx}" y="${(yPx(fLast)+32).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#a21caf">$${fFinal.toFixed(0)}</text>`;
+        const labelG = `<text class="series s-g" x="${lx}" y="${(yPx(gLast)+44).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#15803d">$${gFinal.toFixed(0)}</text>`;
+        const labelH = `<text class="series s-h" x="${lx}" y="${(yPx(hLast)+56).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#c2410c">$${hFinal.toFixed(0)}</text>`;
 
         wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:hidden;display:block">
             <defs>
@@ -3643,21 +3647,24 @@ function loadSimCurve() {
                 <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ea580c" stop-opacity=".15"/><stop offset="100%" stop-color="#ea580c" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gF" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a21caf" stop-opacity=".18"/><stop offset="100%" stop-color="#a21caf" stop-opacity="0"/></linearGradient>
                 <linearGradient id="gG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#15803d" stop-opacity=".18"/><stop offset="100%" stop-color="#15803d" stop-opacity="0"/></linearGradient>
+                <linearGradient id="gH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f97316" stop-opacity=".18"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></linearGradient>
             </defs>
             ${grid}${xLabels}
-            <polygon points="${areaE}" fill="url(#gE)"/>
-            <polygon points="${areaB}" fill="url(#gB)"/>
-            <polygon points="${areaC}" fill="url(#gC)"/>
-            <polygon points="${areaD}" fill="url(#gD)"/>
-            <polygon points="${areaF}" fill="url(#gF)"/>
-            <polygon points="${areaG}" fill="url(#gG)"/>
-            <polyline points="${ptE}" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
-            <polyline points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-            <polyline points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-            <polyline points="${ptD}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-            <polyline points="${ptF}" fill="none" stroke="#a21caf" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4,3"/>
-            <polyline points="${ptG}" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3,2"/>
-            ${labelE}${labelB}${labelC}${labelD}${labelF}${labelG}
+            <polygon class="series s-e" points="${areaE}" fill="url(#gE)"/>
+            <polygon class="series s-b" points="${areaB}" fill="url(#gB)"/>
+            <polygon class="series s-c" points="${areaC}" fill="url(#gC)"/>
+            <polygon class="series s-d" points="${areaD}" fill="url(#gD)"/>
+            <polygon class="series s-f" points="${areaF}" fill="url(#gF)"/>
+            <polygon class="series s-g" points="${areaG}" fill="url(#gG)"/>
+            <polygon class="series s-h" points="${areaH}" fill="url(#gH)"/>
+            <polyline class="series s-e" points="${ptE}" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
+            <polyline class="series s-b" points="${ptB}" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <polyline class="series s-c" points="${ptC}" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <polyline class="series s-d" points="${ptD}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+            <polyline class="series s-f" points="${ptF}" fill="none" stroke="#a21caf" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4,3"/>
+            <polyline class="series s-g" points="${ptG}" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3,2"/>
+            <polyline class="series s-h" points="${ptH}" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6,2"/>
+            ${labelE}${labelB}${labelC}${labelD}${labelF}${labelG}${labelH}
             <g transform="translate(${PAD.left+4},${PAD.top+10})">
                 <line x1="0" y1="0" x2="14" y2="0" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4,2"/>
                 <text x="18" y="4" font-size="10" fill="#0891b2" font-weight="600">E</text>
@@ -3682,8 +3689,32 @@ function loadSimCurve() {
                 <line x1="0" y1="0" x2="14" y2="0" stroke="#15803d" stroke-width="2" stroke-dasharray="3,2"/>
                 <text x="18" y="4" font-size="10" fill="#15803d" font-weight="700">G ★</text>
             </g>
+            <g transform="translate(${PAD.left+220},${PAD.top+10})">
+                <line x1="0" y1="0" x2="14" y2="0" stroke="#f97316" stroke-width="2.5" stroke-dasharray="6,2"/>
+                <text x="18" y="4" font-size="10" fill="#c2410c" font-weight="700">H ✨</text>
+            </g>
         </svg>`;
+        applyChartFocus();
     }
+}
+
+// ── 折线图聚焦：点方案卡片高亮对应曲线，再点取消 ──
+window._chartFocus = window._chartFocus || null;
+function applyChartFocus() {
+    const f = window._chartFocus;
+    document.querySelectorAll('#sim-curve-chart .series').forEach(el => {
+        const mine = !f || el.classList.contains('s-' + f);
+        el.style.opacity = mine ? '1' : '0.07';
+    });
+    document.querySelectorAll('#sim-ab-stats .ab-panel').forEach(c => {
+        const on = f && c.dataset.plan === f;
+        c.style.boxShadow = on ? '0 0 0 2px #111827' : '';
+        c.style.opacity = (!f || on) ? '1' : '0.5';
+    });
+}
+function focusSeries(plan) {
+    window._chartFocus = (window._chartFocus === plan) ? null : plan;
+    applyChartFocus();
 }
 
 // ── VPN 搭建计划 ──────────────────────────────────────
