@@ -88,6 +88,7 @@ def main():
     spy = fetch_closes(BENCH, start, end_buf)
     print()
 
+    summary = []   # 供 dashboard 用
     # 对每个持仓窗 N 汇总
     for n in HORIZONS:
         rows = []
@@ -127,8 +128,30 @@ def main():
         print(f"  平均alpha:    {avg_alpha:+5.2f}% / 笔   ← 剔除大盘后的真实 edge")
         verdict = "✅ 初步有正 edge" if avg_alpha > 0 and p > 0.5 else ("⚠️ 与噪声难区分" if 0.4 < p < 0.6 else "❌ 无 edge")
         print(f"  判定: {verdict}（样本{'偏小，仅供参考' if k < 30 else ''}）\n")
+        summary.append({
+            "horizon": n, "n": k,
+            "hit_rate": round(p * 100, 1),
+            "ci_lo": round(ci_lo * 100), "ci_hi": round(ci_hi * 100),
+            "beat_spy_pct": round(hit_a / k * 100, 1),
+            "avg_pnl": round(avg_pnl, 2), "avg_alpha": round(avg_alpha, 2),
+            "verdict": verdict,
+        })
 
     print("注：样本 <30 时置信区间很宽，结论仅为方向性参考，不能作为实盘依据。")
+
+    # 写 dashboard 数据文件
+    out = {
+        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "sample_total": len(signals),
+        "date_range": [dmin, dmax],
+        "benchmark": BENCH,
+        "horizons": summary,
+    }
+    os.makedirs("dashboard", exist_ok=True)
+    with open("dashboard/signal-edge.js", "w") as f:
+        f.write("// 信号 edge 分析 — analyze-signal-edge.py 自动生成\n")
+        f.write("window.SIGNAL_EDGE = " + json.dumps(out, ensure_ascii=False, indent=2) + ";\n")
+    print("→ dashboard/signal-edge.js 已更新")
 
 if __name__ == "__main__":
     main()

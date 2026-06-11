@@ -114,6 +114,10 @@ jobs:
       - name: Update Plan G portfolio
         run: python scripts/backfill-portfolio-g.py
 
+      - name: Analyze signal edge (vs SPY)
+        run: python scripts/analyze-signal-edge.py
+        continue-on-error: true
+
       - name: Bump version
         run: |
           V=$(date -u +%Y%m%d%H%M%S)
@@ -135,6 +139,7 @@ jobs:
           git add dashboard/portfolio-g.js data/portfolio_g.json 2>/dev/null || true
           git add dashboard/backtest-results.js data/backtest_results.json 2>/dev/null || true
           git add data/screened-stocks.json data/screened-stocks-history/ 2>/dev/null || true
+          git add dashboard/signal-edge.js 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
           pushed=0

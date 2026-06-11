@@ -709,6 +709,7 @@
       document.write('<scr'+'ipt src="portfolio-g.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="signal-edge.js?v='+v+'"><\/scr'+'ipt>');
     })();
     </script>
     <script>
@@ -948,6 +949,19 @@
             </div>
             <div id="ts-content">
                 <div class="mn-empty">今日 AI 深度信号将于 20:30 生成…</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Row 2.8: 信号 Edge（vs SPY 基准） ── -->
+    <div class="row col-1" id="sec-edge" style="margin-bottom:16px">
+        <div class="card">
+            <div class="card-hd">
+                <span class="card-title">📐 信号 Edge（vs SPY 基准）</span>
+                <span id="se-meta" style="font-size:9px;color:#888"></span>
+            </div>
+            <div id="se-content">
+                <div class="mn-empty">edge 分析将随每日信号更新…</div>
             </div>
         </div>
     </div>
@@ -2394,6 +2408,7 @@ async function refreshNews(section) {
     syncOnInit();   // pull KV data + upload any local-only keys for cross-device sync
     loadMorningNote();
     loadTradingSignals();
+    loadSignalEdge();
     loadSimCurve();
     loadSigHistory();
     renderSimPbOpen();
@@ -3009,6 +3024,44 @@ function renderAbCompare() {
                 真正降低 HOLD 率：晨报预筛时过滤 RSI 40-60（中性区间）股票，只选极端动能标的。
             </div>`;
     }
+}
+
+function loadSignalEdge() {
+    const el = document.getElementById('se-content');
+    if (!el) return;
+    const d = window.SIGNAL_EDGE;
+    if (!d || !d.horizons || !d.horizons.length) {
+        el.innerHTML = '<div class="mn-empty">edge 分析将随每日信号更新…</div>';
+        return;
+    }
+    const meta = document.getElementById('se-meta');
+    if (meta) meta.textContent = `n=${d.sample_total} 条 · ${d.date_range[0]}~${d.date_range[1]} · 基准 ${d.benchmark}`;
+
+    const small = d.sample_total < 30;
+    const col = a => a > 0 ? '#16a34a' : a < 0 ? '#dc2626' : '#888';
+    const rows = d.horizons.map(h => `
+        <tr style="border-top:1px solid #eee">
+            <td style="padding:8px 10px;font-weight:700">${h.horizon} 日</td>
+            <td style="padding:8px 10px;text-align:right">${h.hit_rate}%<span style="color:#bbb;font-size:9px"> [${h.ci_lo}-${h.ci_hi}]</span></td>
+            <td style="padding:8px 10px;text-align:right">${h.beat_spy_pct}%</td>
+            <td style="padding:8px 10px;text-align:right;color:${col(h.avg_alpha)};font-weight:700">${h.avg_alpha > 0 ? '+' : ''}${h.avg_alpha}%</td>
+            <td style="padding:8px 10px;text-align:right;color:#999;font-size:10px">${h.n}</td>
+        </tr>`).join('');
+    el.innerHTML = `
+        <table style="width:100%;border-collapse:collapse;font-size:11px">
+            <thead><tr style="color:#888;font-size:9px;text-transform:uppercase;letter-spacing:.05em">
+                <th style="padding:4px 10px;text-align:left">持仓窗</th>
+                <th style="padding:4px 10px;text-align:right">方向命中 [CI]</th>
+                <th style="padding:4px 10px;text-align:right">跑赢SPY</th>
+                <th style="padding:4px 10px;text-align:right">平均α</th>
+                <th style="padding:4px 10px;text-align:right">样本</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+        </table>
+        <div style="margin-top:10px;font-size:10px;color:${small ? '#b45309' : '#888'};line-height:1.6">
+            ${small ? '⚠️ 样本 &lt;30，置信区间宽，仅方向性参考，<b>不能作为实盘依据</b>。' : ''}
+            α = 剔除大盘 beta 后的真实超额收益（做多/做空都按方向计）。样本随每日信号累积，数字会越来越可信。
+        </div>`;
 }
 
 function loadTradingSignals() {
