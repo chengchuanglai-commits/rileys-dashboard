@@ -298,6 +298,13 @@ def main():
     with open(OUTPUT_PATH, "w") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    # 候选归档：每天存一份带日期副本，供信号 edge 长期分析（否则每日被覆盖丢失）
+    archive_dir = "data/screened-stocks-history"
+    os.makedirs(archive_dir, exist_ok=True)
+    with open(os.path.join(archive_dir, f"{today}.json"), "w") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    print(f"[screen] 候选归档 → {archive_dir}/{today}.json")
+
     regime_label = {"bull": "🟢 牛市", "bear": "🔴 熊市", "neutral": "🟡 震荡"}[regime]
     print(f"\n[screen] Done: scanned={len(tickers)} passed={len(candidates)} skipped={skipped}")
     print(f"[screen] 市场状态: {regime_label} → Top {len(top)} candidates saved")
