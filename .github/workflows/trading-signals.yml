@@ -127,6 +127,13 @@ jobs:
         run: python scripts/analyze-signal-edge.py
         continue-on-error: true
 
+      - name: Check API budget (余额不足提醒)
+        if: always()
+        continue-on-error: true
+        env:
+          SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+        run: python scripts/check-api-budget.py
+
       - name: Bump version
         run: |
           V=$(date -u +%Y%m%d%H%M%S)
