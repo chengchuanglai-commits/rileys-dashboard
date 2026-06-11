@@ -26,18 +26,33 @@ window.PORTFOLIO_H = {
       }
     },
     {
-      "ticker": "STRS",
-      "name": "STRS",
+      "ticker": "MFIN",
+      "name": "MFIN",
       "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 27.55,
+      "signal_date": "2026-06-11",
+      "entry_price": 10.14,
       "allocated_usd": 500,
-      "shares": 18,
-      "actual_position_usd": 495.9,
+      "shares": 49,
+      "actual_position_usd": 496.86,
       "entry_commission": 1.0,
-      "take_profit": 23.42,
-      "stop_loss": 28.1,
-      "max_hold_date": "2026-06-11",
+      "take_profit": 8.62,
+      "stop_loss": 10.34,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 168.4,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 336.8,
+      "entry_commission": 1.0,
+      "take_profit": 143.14,
+      "stop_loss": 171.77,
+      "max_hold_date": "2026-06-15",
       "daily_prices": {}
     }
   ],
@@ -380,7 +395,7 @@ window.PORTFOLIO_H = {
     "open_unrealized_pnl_usd": 33.41,
     "portfolio_value": 2132.21,
     "total_commission_usd": 20.0,
-    "skipped_gap": 1,
+    "skipped_gap": 2,
     "skipped_zero_shares": 1,
     "updated_at": "2026-06-11"
   }

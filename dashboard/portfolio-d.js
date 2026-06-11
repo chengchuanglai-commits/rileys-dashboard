@@ -1,7 +1,61 @@
-// Plan D 模拟盘持仓 — 每日自动更新
+// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {
+        "2026-06-10": {
+          "open": 11.78,
+          "high": 12.3,
+          "low": 10.85,
+          "close": 11.5,
+          "pnl_pct": 6.96
+        }
+      }
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 10.14,
+      "allocated_usd": 500,
+      "shares": 49,
+      "actual_position_usd": 496.86,
+      "entry_commission": 1.0,
+      "take_profit": 8.62,
+      "stop_loss": 10.44,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 168.4,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 336.8,
+      "entry_commission": 1.0,
+      "take_profit": 143.14,
+      "stop_loss": 173.45,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {}
+    }
+  ],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -352,9 +406,11 @@ window.PORTFOLIO_D = {
     "win_trades": 5,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 95.24,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2095.24,
-    "skipped_gap": 3,
+    "open_unrealized_pnl_usd": 33.41,
+    "portfolio_value": 2128.65,
+    "total_commission_usd": 20.0,
+    "skipped_gap": 2,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-11"
   }
 };

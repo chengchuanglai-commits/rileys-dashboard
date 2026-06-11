@@ -1,6 +1,37 @@
 window.PORTFOLIO_G = {
   "capital_usd": 2000,
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 10.14,
+      "allocated_usd": 500,
+      "shares": 49,
+      "actual_position_usd": 496.86,
+      "entry_commission": 1.0,
+      "take_profit": 8.62,
+      "stop_loss": 10.44,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 168.4,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 336.8,
+      "entry_commission": 1.0,
+      "take_profit": 143.14,
+      "stop_loss": 173.45,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {}
+    }
+  ],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -357,6 +388,6 @@ window.PORTFOLIO_G = {
     "skipped_gap": 1,
     "skipped_zero_shares": 1,
     "skipped_concurrent": 2,
-    "updated_at": "2026-06-10"
+    "updated_at": "2026-06-11"
   }
 };
