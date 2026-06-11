@@ -1,6 +1,6 @@
 {
   "date": "2026-06-11",
-  "generated_at": "2026-06-11T21:37:00",
+  "generated_at": "2026-06-11T23:23:00",
   "pipeline": {
     "morning_note_found": true,
     "signal_file_found": true,
@@ -24,38 +24,38 @@
     },
     {
       "check": "无警告",
-      "pass": false,
-      "detail": "2 条警告"
+      "pass": true,
+      "detail": "0 条警告"
     }
   ],
   "signals_today": [
     {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 15.2,
+      "target_price": 16.72,
+      "stop_loss": 14.44
+    },
+    {
       "ticker": "MFIN",
       "action": "SELL",
-      "current_price": 10.14,
-      "target_price": 11.15,
-      "stop_loss": 9.63
+      "current_price": 9.89,
+      "target_price": 10.88,
+      "stop_loss": 9.4
     },
     {
       "ticker": "ARCB",
       "action": "SELL",
-      "current_price": 168.4,
-      "target_price": 185.24,
-      "stop_loss": 159.98
+      "current_price": 169.06,
+      "target_price": 185.97,
+      "stop_loss": 160.61
     },
     {
-      "ticker": "NUVL",
-      "action": "HOLD",
-      "current_price": 123.29,
-      "target_price": 135.62,
-      "stop_loss": 117.13
-    },
-    {
-      "ticker": "PBHC",
-      "action": "HOLD",
-      "current_price": 14.92,
-      "target_price": 16.41,
-      "stop_loss": 14.17
+      "ticker": "CBRL",
+      "action": "SELL",
+      "current_price": 43.76,
+      "target_price": 48.14,
+      "stop_loss": 41.57
     }
   ],
   "accuracy_update": {
@@ -354,9 +354,6 @@
       -0.81
     ]
   },
-  "warnings": [
-    "NUVL: 信号为 HOLD（可能是 API 失败的 fallback）",
-    "PBHC: 信号为 HOLD（可能是 API 失败的 fallback）"
-  ],
-  "api_cost_usd": 2.9944
+  "warnings": [],
+  "api_cost_usd": 3.1324
 }
