@@ -545,57 +545,8 @@ if _backfill and data['signals']:
 
 
 # ── Plan B 模拟盘：开仓登记 ──────────────────────────────────────
-def update_portfolio_b(new_signals, signal_date):
-    portfolio_path = "data/portfolio_b.json"
-    os.makedirs("data", exist_ok=True)
-    if os.path.exists(portfolio_path):
-        with open(portfolio_path) as f:
-            portfolio = json.load(f)
-    else:
-        portfolio = {"capital_usd": 2000, "open_positions": [], "closed_positions": []}
-
-    open_tickers = {p["ticker"] for p in portfolio["open_positions"]}
-    for sig in new_signals:
-        action = sig.get("action")
-        ticker = sig.get("ticker")
-        if action not in ("BUY", "SELL") or not ticker:
-            continue
-        if ticker in open_tickers:
-            print(f"[portfolio-b] {ticker} already open, skip")
-            continue
-        entry_price = sig.get("current_price")
-        if not entry_price:
-            continue
-        # Take profit +8%, stop loss -4% (from entry, direction-adjusted)
-        take_profit = round(entry_price * (1.08 if action == "BUY" else 0.92), 2)
-        stop_loss   = round(entry_price * (0.96 if action == "BUY" else 1.04), 2)
-        # Max hold = 5 trading days from signal date
-        sig_dt = datetime.strptime(signal_date, "%Y-%m-%d")
-        trading_days = 0
-        max_dt = sig_dt
-        while trading_days < 5:
-            max_dt += timedelta(days=1)
-            if max_dt.weekday() < 5:
-                trading_days += 1
-        position = {
-            "ticker": ticker,
-            "name": sig.get("name", ""),
-            "action": action,
-            "signal_date": signal_date,
-            "entry_price": entry_price,
-            "allocated_usd": 500,
-            "take_profit": take_profit,
-            "stop_loss": stop_loss,
-            "max_hold_date": max_dt.strftime("%Y-%m-%d"),
-            "daily_prices": {},
-        }
-        portfolio["open_positions"].append(position)
-        print(f"[portfolio-b] Opened {action} {ticker} @ ${entry_price} | TP ${take_profit} | SL ${stop_loss} | max {max_dt.strftime('%Y-%m-%d')}")
-
-    with open(portfolio_path, "w") as f:
-        json.dump(portfolio, f, ensure_ascii=False, indent=2)
-
-update_portfolio_b(data.get("signals", []), today)
+# Plan B 持仓更新已统一由 scripts/backfill-portfolio-b.py 负责（工作流单独步骤），
+# 此处原内联轻量开仓器已移除，避免"两套B更新器"不一致。
 
 # ── Plan C：与 Plan B 相同逻辑开仓，跳空过滤在 daily-report.py 收盘后判断 ──
 def update_portfolio_c(new_signals, signal_date):

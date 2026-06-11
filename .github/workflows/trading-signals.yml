@@ -105,6 +105,12 @@ jobs:
       - name: Run backtest optimizer
         run: python scripts/backtest-optimizer.py
 
+      - name: Update Plan B/C/D portfolios
+        run: |
+          python scripts/backfill-portfolio-b.py
+          python scripts/backfill-portfolio-c.py
+          python scripts/backfill-portfolio-d.py
+
       - name: Update Plan E portfolio
         run: python scripts/backfill-portfolio-e.py
 
