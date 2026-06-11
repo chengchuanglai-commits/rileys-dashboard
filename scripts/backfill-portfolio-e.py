@@ -105,6 +105,8 @@ def simulate_position(ticker, action, entry_price, signal_date, tp_pct, sl_pct, 
         hi = round(float(row["High"]),  2)
         lo = round(float(row["Low"]),   2)
         cl = round(float(row["Close"]), 2)
+        if any(v != v for v in (o, hi, lo, cl)):  # 跳过 yfinance NaN bar(OTC延迟)，否则污染净值
+            continue
 
         # Day-1 gap filter (stricter: 1.5%)
         if i == 0 and GAP_FILTER_PCT > 0:

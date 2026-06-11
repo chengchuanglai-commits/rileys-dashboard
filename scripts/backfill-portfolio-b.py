@@ -76,6 +76,8 @@ def simulate_position(ticker, action, entry_price, signal_date):
         hi = round(float(row["High"]),  2)
         lo = round(float(row["Low"]),   2)
         cl = round(float(row["Close"]), 2)
+        if any(v != v for v in (o, hi, lo, cl)):  # 跳过 yfinance NaN bar(OTC延迟)，否则污染净值
+            continue
 
         close_reason = None
         close_price = cl
