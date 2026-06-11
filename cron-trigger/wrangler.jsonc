@@ -1,0 +1,11 @@
+{
+  // Cloudflare Worker —— 准点触发 GitHub trading-signals 工作流
+  // 解决 GitHub schedule 延迟数小时/丢运行的问题（Cloudflare cron 秒级准点）
+  "name": "rileys-signal-cron",
+  "main": "src/index.js",
+  "compatibility_date": "2026-01-01",
+  "triggers": {
+    // 工作日 11:30 UTC = 美东 7:30 AM（盘前）= 北京 19:30，与信号工作流目标一致
+    "crons": ["30 11 * * 1-5"]
+  }
+}
