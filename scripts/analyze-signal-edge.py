@@ -16,7 +16,9 @@ from datetime import datetime
 import yfinance as yf
 
 HISTORY_DIR = "dashboard/trading-signals-history"
+CANDIDATE_DIR = "data/screened-stocks-history"   # 每日候选归档(从2026-06-11起累积)
 HORIZONS = [1, 3, 5]          # 评估的持仓交易日数
+CAND_HORIZON = 3              # AI增量edge用的持仓窗
 BENCH = "SPY"
 
 # ── 收集所有已发出的信号 ───────────────────────────────────────
@@ -63,6 +65,114 @@ def fetch_closes(ticker, start, end):
     except Exception as e:
         print(f"  [warn] {ticker} fetch failed: {e}")
         return {}
+
+# ── 批量取多票收盘价（单次 yf.download，比逐票 .history 可靠）──────────
+def fetch_closes_batch(tickers, start, end):
+    out = {t: {} for t in tickers}
+    try:
+        df = yf.download(tickers, start=start, end=end, group_by="ticker",
+                         progress=False, auto_adjust=True, threads=True)
+    except Exception as e:
+        print(f"  [warn] batch download failed: {e}")
+        return out
+    multi = len(tickers) > 1
+    for t in tickers:
+        try:
+            sub = df[t]["Close"] if multi else df["Close"]
+        except Exception:
+            continue
+        for idx, c in sub.items():
+            try:
+                c = float(c)
+            except Exception:
+                continue
+            if c == c and c > 0:
+                out[t][str(idx)[:10]] = round(c, 4)
+    return out
+
+# ── AI 增量 edge：AI选中的候选 vs 没选的候选，谁表现好 ──────────────
+def analyze_candidate_edge():
+    """回答'AI 是否比纯选股器多赚'：对比 AI选中 vs AI未选 两组候选的 alpha。
+    需要 data/screened-stocks-history/ 归档(2026-06-11起累积)。"""
+    if not os.path.isdir(CANDIDATE_DIR):
+        print("\n=== AI 增量 edge：暂无候选归档，需等每日归档累积 ===")
+        return
+    from datetime import timedelta
+    recs = []
+    days = 0
+    for fname in sorted(os.listdir(CANDIDATE_DIR)):
+        if not fname.endswith(".json"):
+            continue
+        date = fname.replace(".json", "")
+        try:
+            arch = json.load(open(os.path.join(CANDIDATE_DIR, fname)))
+        except Exception:
+            continue
+        cands = arch.get("candidates", [])
+        if not cands:
+            continue
+        days += 1
+        # 该日 AI 选中的信号 ticker→action
+        ai = {}
+        sp = os.path.join(HISTORY_DIR, f"{date}.json")
+        if os.path.exists(sp):
+            try:
+                for s in json.load(open(sp)).get("signals", []):
+                    if s.get("action") in ("BUY", "SELL"):
+                        ai[s.get("ticker")] = s["action"]
+            except Exception:
+                pass
+        for c in cands:
+            tk, price = c.get("ticker"), c.get("price")
+            if not tk or not price:
+                continue
+            if tk in ai:
+                grp, direction = "selected", ai[tk]
+            else:
+                grp, direction = "rejected", ("SELL" if c.get("sell_candidate") else "BUY")
+            recs.append({"date": date, "ticker": tk, "entry": float(price), "dir": direction, "grp": grp})
+
+    if not recs:
+        print("\n=== AI 增量 edge：候选归档为空 ===")
+        return
+
+    tickers = sorted(set(r["ticker"] for r in recs))
+    dmin = min(r["date"] for r in recs); dmax = max(r["date"] for r in recs)
+    end_buf = (datetime.strptime(dmax, "%Y-%m-%d") + timedelta(days=15)).strftime("%Y-%m-%d")
+    # 批量下载（单次调用，避免逐票串行被 yfinance 限流截断）
+    allpx = fetch_closes_batch(tickers + [BENCH], dmin, end_buf)
+    px = {t: allpx.get(t, {}) for t in tickers}
+    spy = allpx.get(BENCH, {})
+
+    for r in recs:
+        closes = px.get(r["ticker"], {})
+        exit_px = fwd_close(closes, r["date"], CAND_HORIZON)
+        spy_e = spy.get(r["date"]); spy_x = fwd_close(spy, r["date"], CAND_HORIZON)
+        if exit_px is None or spy_e is None or spy_x is None:
+            r["alpha"] = None; continue
+        sret = (exit_px - r["entry"]) / r["entry"]
+        spyret = (spy_x - spy_e) / spy_e
+        sign = 1 if r["dir"] == "BUY" else -1
+        r["alpha"] = (sret - spyret) * sign
+        r["hit"] = (sret * sign) > 0
+
+    def agg(grp):
+        rs = [r for r in recs if r["grp"] == grp and r.get("alpha") is not None]
+        if not rs: return None
+        k = len(rs); hit = sum(1 for r in rs if r["hit"]); aa = sum(r["alpha"] for r in rs) / k * 100
+        return k, hit / k * 100, aa
+
+    sel, rej = agg("selected"), agg("rejected")
+    print(f"\n=== 🏆 AI 增量 edge（{CAND_HORIZON}日持仓 · {days}个归档日）===")
+    print("  问题：AI 从~20候选里选的，是否比没选的表现好？(选中α - 未选α)")
+    if sel: print(f"  AI 选中:  n={sel[0]:3d}  命中{sel[1]:5.1f}%  平均α {sel[2]:+.2f}%")
+    if rej: print(f"  AI 未选:  n={rej[0]:3d}  命中{rej[1]:5.1f}%  平均α {rej[2]:+.2f}%")
+    if sel and rej:
+        d = sel[2] - rej[2]
+        print(f"  ➜ AI 增量α: {d:+.2f}%/笔  {'✅ AI有增量价值' if d > 0 else '⚠️ AI暂未显现优于选股器'}")
+    valid = len([r for r in recs if r.get('alpha') is not None])
+    print(f"  注：共{valid}条候选有效。每组<50笔时仅占位，需多周归档才有统计意义。")
+
 
 # ── 主流程 ─────────────────────────────────────────────────────
 def main():
@@ -152,6 +262,9 @@ def main():
         f.write("// 信号 edge 分析 — analyze-signal-edge.py 自动生成\n")
         f.write("window.SIGNAL_EDGE = " + json.dumps(out, ensure_ascii=False, indent=2) + ";\n")
     print("→ dashboard/signal-edge.js 已更新")
+
+    # AI 增量 edge（AI选中 vs 未选的候选）
+    analyze_candidate_edge()
 
 if __name__ == "__main__":
     main()
