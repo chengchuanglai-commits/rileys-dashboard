@@ -21,10 +21,10 @@ window.PORTFOLIO_F = {
       "daily_prices": {
         "2026-06-12": {
           "open": 14.88,
-          "high": 15.4,
+          "high": 15.45,
           "low": 13.72,
-          "close": 15.4,
-          "pnl_pct": -1.32
+          "close": 15.45,
+          "pnl_pct": -1.64
         }
       },
       "t1_exit_date": "2026-06-12",
@@ -54,8 +54,8 @@ window.PORTFOLIO_F = {
           "open": 9.71,
           "high": 9.95,
           "low": 9.71,
-          "close": 9.79,
-          "pnl_pct": 1.01
+          "close": 9.81,
+          "pnl_pct": 0.81
         }
       }
     },
@@ -567,8 +567,8 @@ window.PORTFOLIO_F = {
     "win_trades": 6,
     "win_rate": 60.0,
     "total_realized_pnl_usd": 123.92,
-    "open_unrealized_pnl_usd": 17.02,
-    "portfolio_value": 2140.94,
+    "open_unrealized_pnl_usd": 15.26,
+    "portfolio_value": 2139.18,
     "total_commission_usd": 26.0,
     "skipped_gap": 4,
     "skipped_zero_shares": 2,
