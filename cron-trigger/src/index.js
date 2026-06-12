@@ -41,15 +41,32 @@ export default {
     ctx.waitUntil(dispatch(env));
   },
 
-  // HTTP：健康检查 + 带口令的手动测试触发
+  // HTTP：健康检查 / 只读PAT诊断 / 带口令的手动测试触发
   async fetch(request, env) {
     const url = new URL(request.url);
     const token = url.searchParams.get("token");
+    const check = url.searchParams.get("check");
+    // 只读诊断：GET 工作流验证 PAT 是否有效+有权限（不触发运行、不花钱）
+    if (env.TRIGGER_TOKEN && check === env.TRIGGER_TOKEN) {
+      const res = await fetch(
+        `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}`,
+        { headers: {
+            "Authorization": `Bearer ${env.GH_PAT}`,
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "rileys-signal-cron",
+            "X-GitHub-Api-Version": "2022-11-28",
+        }});
+      const body = await res.text();
+      return new Response(res.ok
+        ? `✅ PAT 有效，能访问工作流 (${res.status})`
+        : `❌ PAT 问题: ${res.status} ${body.slice(0,300)}`,
+        { status: res.ok ? 200 : 502 });
+    }
     if (env.TRIGGER_TOKEN && token === env.TRIGGER_TOKEN) {
       const r = await dispatch(env);
       return new Response(r.ok ? "✅ dispatched trading-signals" : `❌ failed: ${r.detail}`,
         { status: r.ok ? 200 : 502 });
     }
-    return new Response("rileys-signal-cron alive · cron 30 11 * * 1-5 UTC · 加 ?token=<TRIGGER_TOKEN> 手动触发", { status: 200 });
+    return new Response("rileys-signal-cron alive · cron 30 11 * * 1-5 UTC · ?check=<TOKEN> 只读诊断 · ?token=<TOKEN> 手动触发", { status: 200 });
   },
 };
