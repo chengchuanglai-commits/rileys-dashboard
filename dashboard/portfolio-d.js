@@ -1,4 +1,4 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
@@ -17,13 +17,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.88,
-          "high": 15.15,
-          "low": 13.72,
-          "close": 14.83,
-          "pnl_pct": 2.43
+          "close": 15.4,
+          "pnl_pct": -1.32
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_open": 14.88,
+      "day1_gap_pct": -2.11
     },
     {
       "ticker": "MFIN",
@@ -40,13 +40,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-12": {
-          "open": 9.71,
-          "high": 9.88,
-          "low": 9.71,
-          "close": 9.86,
-          "pnl_pct": 0.3
+          "close": 9.83,
+          "pnl_pct": 0.61
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_open": 9.71,
+      "day1_gap_pct": -1.82
     },
     {
       "ticker": "ARCB",
@@ -61,7 +61,15 @@ window.PORTFOLIO_D = {
       "take_profit": 147.56,
       "stop_loss": 178.81,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-12": {
+          "close": 172.86,
+          "pnl_pct": 0.43
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 174.6,
+      "day1_gap_pct": 0.58
     }
   ],
   "closed_positions": [
@@ -451,11 +459,9 @@ window.PORTFOLIO_D = {
     "win_trades": 6,
     "win_rate": 54.5,
     "total_realized_pnl_usd": 167.25,
-    "open_unrealized_pnl_usd": 11.3,
-    "portfolio_value": 2178.55,
-    "total_commission_usd": 22.0,
+    "open_unrealized_pnl_usd": -1.4,
+    "portfolio_value": 2165.85,
     "skipped_gap": 4,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-12"
+    "updated_at": "2026-06-13"
   }
 };

@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -17,11 +17,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-12": {
-          "open": 9.71,
-          "high": 9.88,
-          "low": 9.71,
-          "close": 9.86,
-          "pnl_pct": 0.3
+          "close": 9.83,
+          "pnl_pct": 0.61
         }
       }
     },
@@ -38,7 +35,12 @@ window.PORTFOLIO_B = {
       "take_profit": 159.71,
       "stop_loss": 180.54,
       "max_hold_date": "2026-06-19",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-12": {
+          "close": 172.86,
+          "pnl_pct": 0.43
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -532,9 +534,9 @@ window.PORTFOLIO_B = {
       "daily_prices": {
         "2026-06-12": {
           "open": 14.88,
-          "high": 15.15,
+          "high": 15.4,
           "low": 13.72,
-          "close": 14.83,
+          "close": 15.4,
           "pnl_pct": 8.03
         }
       },
@@ -563,7 +565,7 @@ window.PORTFOLIO_B = {
         "2026-06-12": {
           "open": 174.6,
           "high": 175.89,
-          "low": 172.79,
+          "low": 171.75,
           "close": 172.86,
           "pnl_pct": -4.0
         }
@@ -592,9 +594,9 @@ window.PORTFOLIO_B = {
       "daily_prices": {
         "2026-06-12": {
           "open": 46.72,
-          "high": 47.67,
+          "high": 47.76,
           "low": 44.64,
-          "close": 47.12,
+          "close": 46.82,
           "pnl_pct": -4.0
         }
       },
@@ -613,10 +615,8 @@ window.PORTFOLIO_B = {
     "win_trades": 9,
     "win_rate": 56.2,
     "total_realized_pnl_usd": 135.87,
-    "open_unrealized_pnl_usd": 0.48,
-    "portfolio_value": 2136.35,
-    "total_commission_usd": 32.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-12"
+    "open_unrealized_pnl_usd": 5.2,
+    "portfolio_value": 2141.07,
+    "updated_at": "2026-06-13"
   }
 };

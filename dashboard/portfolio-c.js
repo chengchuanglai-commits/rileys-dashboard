@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -18,13 +18,12 @@ window.PORTFOLIO_C = {
       "day1_open": 9.71,
       "daily_prices": {
         "2026-06-12": {
-          "open": 9.71,
-          "high": 9.88,
-          "low": 9.71,
-          "close": 9.86,
-          "pnl_pct": 0.3
+          "close": 9.83,
+          "pnl_pct": 0.61
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -1.82
     },
     {
       "ticker": "ARCB",
@@ -39,8 +38,15 @@ window.PORTFOLIO_C = {
       "take_profit": 159.71,
       "stop_loss": 180.54,
       "max_hold_date": "2026-06-19",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 174.6,
+      "daily_prices": {
+        "2026-06-12": {
+          "close": 172.86,
+          "pnl_pct": 0.43
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.58
     }
   ],
   "closed_positions": [
@@ -486,9 +492,9 @@ window.PORTFOLIO_C = {
       "daily_prices": {
         "2026-06-12": {
           "open": 14.88,
-          "high": 15.15,
+          "high": 15.4,
           "low": 13.72,
-          "close": 14.83,
+          "close": 15.4,
           "pnl_pct": 8.03
         }
       },
@@ -507,11 +513,9 @@ window.PORTFOLIO_C = {
     "win_trades": 9,
     "win_rate": 75.0,
     "total_realized_pnl_usd": 213.77,
-    "open_unrealized_pnl_usd": -0.52,
-    "portfolio_value": 2213.25,
-    "total_commission_usd": 24.0,
+    "open_unrealized_pnl_usd": 5.2,
+    "portfolio_value": 2218.97,
     "skipped_gap": 4,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-12"
+    "updated_at": "2026-06-13"
   }
 };
