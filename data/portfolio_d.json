@@ -39,8 +39,8 @@
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-12": {
-          "close": 9.83,
-          "pnl_pct": 0.61
+          "close": 9.79,
+          "pnl_pct": 1.01
         }
       },
       "gap_checked": true,
@@ -62,8 +62,8 @@
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-12": {
-          "close": 172.86,
-          "pnl_pct": 0.43
+          "close": 175.97,
+          "pnl_pct": -1.37
         }
       },
       "gap_checked": true,
@@ -458,8 +458,8 @@
     "win_trades": 6,
     "win_rate": 54.5,
     "total_realized_pnl_usd": 167.25,
-    "open_unrealized_pnl_usd": -1.4,
-    "portfolio_value": 2165.85,
+    "open_unrealized_pnl_usd": -8.4,
+    "portfolio_value": 2158.85,
     "skipped_gap": 4,
     "updated_at": "2026-06-13"
   }

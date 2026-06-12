@@ -18,8 +18,8 @@ window.PORTFOLIO_C = {
       "day1_open": 9.71,
       "daily_prices": {
         "2026-06-12": {
-          "close": 9.83,
-          "pnl_pct": 0.61
+          "close": 9.79,
+          "pnl_pct": 1.01
         }
       },
       "gap_checked": true,
@@ -41,8 +41,8 @@ window.PORTFOLIO_C = {
       "day1_open": 174.6,
       "daily_prices": {
         "2026-06-12": {
-          "close": 172.86,
-          "pnl_pct": 0.43
+          "close": 175.97,
+          "pnl_pct": -1.37
         }
       },
       "gap_checked": true,
@@ -513,8 +513,8 @@ window.PORTFOLIO_C = {
     "win_trades": 9,
     "win_rate": 75.0,
     "total_realized_pnl_usd": 213.77,
-    "open_unrealized_pnl_usd": 5.2,
-    "portfolio_value": 2218.97,
+    "open_unrealized_pnl_usd": -1.8,
+    "portfolio_value": 2211.97,
     "skipped_gap": 4,
     "updated_at": "2026-06-13"
   }

@@ -50,8 +50,8 @@ window.PORTFOLIO_E = {
           "open": 9.71,
           "high": 9.95,
           "low": 9.71,
-          "close": 9.83,
-          "pnl_pct": 0.61
+          "close": 9.79,
+          "pnl_pct": 1.01
         }
       },
       "gap_checked": true,
@@ -72,7 +72,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-17",
       "regime": "neutral",
-      "vix": 19.32,
+      "vix": 18.31,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -431,8 +431,8 @@ window.PORTFOLIO_E = {
     "win_trades": 6,
     "win_rate": 66.7,
     "total_realized_pnl_usd": 145.82,
-    "open_unrealized_pnl_usd": -5.4,
-    "portfolio_value": 2140.42,
+    "open_unrealized_pnl_usd": -3.43,
+    "portfolio_value": 2142.39,
     "total_commission_usd": 18.0,
     "skipped_fear": 0,
     "skipped_direction": 4,

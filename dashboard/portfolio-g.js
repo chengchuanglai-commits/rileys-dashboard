@@ -42,8 +42,8 @@ window.PORTFOLIO_G = {
           "open": 9.71,
           "high": 9.95,
           "low": 9.71,
-          "close": 9.83,
-          "pnl_pct": 0.61
+          "close": 9.79,
+          "pnl_pct": 1.01
         }
       }
     },
@@ -413,8 +413,8 @@ window.PORTFOLIO_G = {
     "win_trades": 5,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 95.24,
-    "open_unrealized_pnl_usd": -5.4,
-    "portfolio_value": 2089.84,
+    "open_unrealized_pnl_usd": -3.43,
+    "portfolio_value": 2091.81,
     "total_commission_usd": 20.0,
     "skipped_gap": 3,
     "skipped_zero_shares": 1,
