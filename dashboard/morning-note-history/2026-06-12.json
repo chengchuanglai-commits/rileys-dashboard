@@ -1,5 +1,4 @@
-// 金融晨报数据 — 每日 07:30 自动更新
-window.MORNING_NOTE = {
+{
   "market": {
     "sp500_futures_pct": 1.69,
     "treasury_10y": 4.463,
@@ -123,4 +122,4 @@ window.MORNING_NOTE = {
   "avg_daily_cost_usd": 0.0879,
   "estimated_days_left": 44,
   "balance_warning": false
-};
+}
