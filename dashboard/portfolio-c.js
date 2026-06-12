@@ -3,22 +3,6 @@ window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 15.2,
-      "allocated_usd": 500,
-      "shares": 32,
-      "actual_position_usd": 486.4,
-      "entry_commission": 1.0,
-      "take_profit": 13.98,
-      "stop_loss": 15.81,
-      "max_hold_date": "2026-06-18",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
       "ticker": "MFIN",
       "name": "MFIN",
       "action": "SELL",
@@ -31,38 +15,30 @@ window.PORTFOLIO_C = {
       "take_profit": 9.1,
       "stop_loss": 10.29,
       "max_hold_date": "2026-06-18",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 9.71,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 9.71,
+          "high": 9.88,
+          "low": 9.71,
+          "close": 9.86,
+          "pnl_pct": 0.3
+        }
+      }
     },
     {
       "ticker": "ARCB",
       "name": "ARCB",
       "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 169.06,
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
       "allocated_usd": 500,
       "shares": 2,
-      "actual_position_usd": 338.12,
+      "actual_position_usd": 347.2,
       "entry_commission": 1.0,
-      "take_profit": 155.54,
-      "stop_loss": 175.82,
-      "max_hold_date": "2026-06-18",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "CBRL",
-      "name": "CBRL",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 43.76,
-      "allocated_usd": 500,
-      "shares": 11,
-      "actual_position_usd": 481.36,
-      "entry_commission": 1.0,
-      "take_profit": 40.26,
-      "stop_loss": 45.51,
-      "max_hold_date": "2026-06-18",
+      "take_profit": 159.71,
+      "stop_loss": 180.54,
+      "max_hold_date": "2026-06-19",
       "day1_open": null,
       "daily_prices": {}
     }
@@ -492,18 +468,49 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 37.6
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 15.2,
+      "allocated_usd": 500,
+      "shares": 32,
+      "actual_position_usd": 486.4,
+      "entry_commission": 1.0,
+      "take_profit": 13.98,
+      "stop_loss": 15.81,
+      "max_hold_date": "2026-06-18",
+      "day1_open": 14.88,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 14.88,
+          "high": 15.15,
+          "low": 13.72,
+          "close": 14.83,
+          "pnl_pct": 8.03
+        }
+      },
+      "close_date": "2026-06-12",
+      "close_price": 13.98,
+      "final_pnl_pct": 8.03,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 37.06
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 11,
-    "win_trades": 8,
-    "win_rate": 72.7,
-    "total_realized_pnl_usd": 176.71,
-    "open_unrealized_pnl_usd": -4.0,
-    "portfolio_value": 2172.71,
-    "total_commission_usd": 22.0,
-    "skipped_gap": 2,
+    "total_trades": 12,
+    "win_trades": 9,
+    "win_rate": 75.0,
+    "total_realized_pnl_usd": 213.77,
+    "open_unrealized_pnl_usd": -0.52,
+    "portfolio_value": 2213.25,
+    "total_commission_usd": 24.0,
+    "skipped_gap": 4,
     "skipped_zero_shares": 1,
     "updated_at": "2026-06-12"
   }

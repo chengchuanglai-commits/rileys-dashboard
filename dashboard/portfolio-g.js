@@ -14,7 +14,15 @@ window.PORTFOLIO_G = {
       "take_profit": 12.92,
       "stop_loss": 15.66,
       "max_hold_date": "2026-06-15",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 14.88,
+          "high": 15.15,
+          "low": 13.72,
+          "close": 14.83,
+          "pnl_pct": 2.43
+        }
+      }
     },
     {
       "ticker": "MFIN",
@@ -29,36 +37,29 @@ window.PORTFOLIO_G = {
       "take_profit": 8.41,
       "stop_loss": 10.19,
       "max_hold_date": "2026-06-15",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 9.71,
+          "high": 9.88,
+          "low": 9.71,
+          "close": 9.86,
+          "pnl_pct": 0.3
+        }
+      }
     },
     {
       "ticker": "ARCB",
       "name": "ARCB",
       "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 169.06,
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
       "allocated_usd": 500,
       "shares": 2,
-      "actual_position_usd": 338.12,
+      "actual_position_usd": 347.2,
       "entry_commission": 1.0,
-      "take_profit": 143.7,
-      "stop_loss": 174.13,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "CBRL",
-      "name": "CBRL",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 43.76,
-      "allocated_usd": 500,
-      "shares": 11,
-      "actual_position_usd": 481.36,
-      "entry_commission": 1.0,
-      "take_profit": 37.2,
-      "stop_loss": 45.07,
-      "max_hold_date": "2026-06-15",
+      "take_profit": 147.56,
+      "stop_loss": 178.81,
+      "max_hold_date": "2026-06-16",
       "daily_prices": {}
     }
   ],
@@ -412,10 +413,10 @@ window.PORTFOLIO_G = {
     "win_trades": 5,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 95.24,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2095.24,
+    "open_unrealized_pnl_usd": 11.3,
+    "portfolio_value": 2106.54,
     "total_commission_usd": 20.0,
-    "skipped_gap": 1,
+    "skipped_gap": 3,
     "skipped_zero_shares": 1,
     "skipped_concurrent": 2,
     "updated_at": "2026-06-12"

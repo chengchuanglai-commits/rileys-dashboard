@@ -17,8 +17,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-16",
       "regime": "neutral",
       "vix": 19.44,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 14.88,
+          "high": 15.15,
+          "low": 13.72,
+          "close": 14.83,
+          "pnl_pct": 2.43
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 14.88
     },
     {
       "ticker": "MFIN",
@@ -36,44 +45,34 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-16",
       "regime": "neutral",
       "vix": 19.44,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 9.71,
+          "high": 9.88,
+          "low": 9.71,
+          "close": 9.86,
+          "pnl_pct": 0.3
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 9.71
     },
     {
       "ticker": "ARCB",
       "name": "ARCB",
       "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 169.06,
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
       "allocated_usd": 500,
       "shares": 2,
-      "actual_position_usd": 338.12,
+      "actual_position_usd": 347.2,
       "entry_commission": 1.0,
-      "take_profit": 152.15,
-      "stop_loss": 174.13,
+      "take_profit": 156.24,
+      "stop_loss": 178.81,
       "max_hold_days": 3,
-      "max_hold_date": "2026-06-16",
+      "max_hold_date": "2026-06-17",
       "regime": "neutral",
-      "vix": 19.44,
-      "daily_prices": {},
-      "gap_checked": true
-    },
-    {
-      "ticker": "CBRL",
-      "name": "CBRL",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 43.76,
-      "allocated_usd": 500,
-      "shares": 11,
-      "actual_position_usd": 481.36,
-      "entry_commission": 1.0,
-      "take_profit": 39.38,
-      "stop_loss": 45.07,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-16",
-      "regime": "neutral",
-      "vix": 19.44,
+      "vix": 18.79,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -432,12 +431,12 @@ window.PORTFOLIO_E = {
     "win_trades": 6,
     "win_rate": 66.7,
     "total_realized_pnl_usd": 145.82,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2145.82,
+    "open_unrealized_pnl_usd": 11.3,
+    "portfolio_value": 2157.12,
     "total_commission_usd": 18.0,
     "skipped_fear": 0,
     "skipped_direction": 4,
-    "skipped_gap": 1,
+    "skipped_gap": 3,
     "updated_at": "2026-06-12"
   }
 };
