@@ -418,6 +418,6 @@ window.PORTFOLIO_G = {
     "skipped_gap": 1,
     "skipped_zero_shares": 1,
     "skipped_concurrent": 2,
-    "updated_at": "2026-06-11"
+    "updated_at": "2026-06-12"
   }
 };

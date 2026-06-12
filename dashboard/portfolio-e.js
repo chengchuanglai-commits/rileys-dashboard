@@ -438,6 +438,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 4,
     "skipped_gap": 1,
-    "updated_at": "2026-06-11"
+    "updated_at": "2026-06-12"
   }
 };

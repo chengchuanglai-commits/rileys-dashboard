@@ -3,29 +3,6 @@ window.PORTFOLIO_H = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.61,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {
-        "2026-06-10": {
-          "open": 11.78,
-          "high": 12.3,
-          "low": 10.85,
-          "close": 11.5,
-          "pnl_pct": 6.96
-        }
-      }
-    },
-    {
       "ticker": "PBHC",
       "name": "PBHC",
       "action": "SELL",
@@ -414,19 +391,56 @@ window.PORTFOLIO_H = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -11.49
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.61,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {
+        "2026-06-10": {
+          "open": 11.78,
+          "high": 12.3,
+          "low": 10.85,
+          "close": 11.5,
+          "pnl_pct": 6.96
+        },
+        "2026-06-11": {
+          "open": 11.89,
+          "high": 12.0,
+          "low": 10.26,
+          "close": 11.55,
+          "pnl_pct": 14.97
+        }
+      },
+      "close_date": "2026-06-11",
+      "close_price": 10.51,
+      "final_pnl_pct": 14.97,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 72.01
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 10,
-    "win_trades": 4,
-    "win_rate": 40.0,
-    "total_realized_pnl_usd": 98.8,
-    "open_unrealized_pnl_usd": 33.41,
-    "portfolio_value": 2132.21,
-    "total_commission_usd": 20.0,
+    "total_trades": 11,
+    "win_trades": 5,
+    "win_rate": 45.5,
+    "total_realized_pnl_usd": 170.81,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2170.81,
+    "total_commission_usd": 22.0,
     "skipped_gap": 2,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-11"
+    "updated_at": "2026-06-12"
   }
 };

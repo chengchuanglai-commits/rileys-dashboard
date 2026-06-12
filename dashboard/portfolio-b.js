@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,12 +15,7 @@ window.PORTFOLIO_B = {
       "take_profit": 13.98,
       "stop_loss": 15.81,
       "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-11": {
-          "close": 14.85,
-          "pnl_pct": 2.3
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "MFIN",
@@ -35,12 +30,7 @@ window.PORTFOLIO_B = {
       "take_profit": 9.1,
       "stop_loss": 10.29,
       "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-11": {
-          "close": 9.81,
-          "pnl_pct": 0.81
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "ARCB",
@@ -55,12 +45,7 @@ window.PORTFOLIO_B = {
       "take_profit": 155.54,
       "stop_loss": 175.82,
       "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-11": {
-          "close": 172.67,
-          "pnl_pct": -2.14
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "CBRL",
@@ -75,12 +60,7 @@ window.PORTFOLIO_B = {
       "take_profit": 40.26,
       "stop_loss": 45.51,
       "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-11": {
-          "close": 45.5,
-          "pnl_pct": -3.98
-        }
-      }
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -565,8 +545,10 @@ window.PORTFOLIO_B = {
     "win_trades": 8,
     "win_rate": 61.5,
     "total_realized_pnl_usd": 135.58,
-    "open_unrealized_pnl_usd": -15.05,
-    "portfolio_value": 2120.53,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2135.58,
+    "total_commission_usd": 26.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-12"
   }
 };
