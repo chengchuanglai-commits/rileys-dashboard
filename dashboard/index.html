@@ -407,6 +407,8 @@
         .ab-label.g { color:#15803d; }
         .ab-panel.plan-h { background:linear-gradient(135deg,#fff7ed,#fed7aa); border:2px solid #f97316; }
         .ab-label.h { color:#c2410c; }
+        .ab-panel.plan-hds { background:linear-gradient(135deg,#eef2ff,#e0e7ff); border:2px solid #6366f1; }
+        .ab-label.hds { color:#4338ca; }
         .hold-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:6px; background:#fef3c7; color:#92400e; font-weight:600; margin:2px; }
 
         /* ── Plan B portfolio ────────────────────── */
@@ -710,6 +712,7 @@
       document.write('<scr'+'ipt src="portfolio-f.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-g.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-h.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-hds.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="signal-edge.js?v='+v+'"><\/scr'+'ipt>');
@@ -2709,6 +2712,7 @@ function renderSimPbOpen(livePrices) {
         {plan:'F', data: window.PORTFOLIO_F},
         {plan:'G', data: window.PORTFOLIO_G},
         {plan:'H', data: window.PORTFOLIO_H},
+        {plan:'HDS', data: window.PORTFOLIO_HDS},
     ];
     const allOpen = allPortfolios.flatMap(({plan, data}) =>
         (data && data.open_positions || []).map(pos => ({...pos, _plan: plan}))
@@ -3525,7 +3529,19 @@ function loadSimCurve() {
     const hPF  = calcPF(phClosed);
     const hAvg = calcAvg(phClosed);
 
-    // ── 标记最优方案 ──
+    // ── H-DS data (DeepSeek信号 + H规则，A/B对比；不参与下方策略 trophy) ──
+    const phdsPort   = window.PORTFOLIO_HDS;
+    const phdsClosed = (phdsPort && phdsPort.closed_positions) ? phdsPort.closed_positions : [];
+    const phdsStats  = (phdsPort && phdsPort.stats) ? phdsPort.stats : {};
+    const hdsFinal   = phdsStats.portfolio_value || 2000;
+    const hdsPnl     = hdsFinal - 2000;
+    const hdsPnlPct  = (hdsPnl / 20).toFixed(2);
+    const hdsTrades  = phdsStats.total_trades || 0;
+    const hdsComm    = phdsStats.total_commission_usd ?? null;
+    const hdsPF  = calcPF(phdsClosed);
+    const hdsAvg = calcAvg(phdsClosed);
+
+    // ── 标记最优方案（只比 B-H 策略，H-DS 是模型对比不掺和）──
     const best = Math.max(ePnl, bPnl, cPnl, dPnl, fPnl, gPnl, hPnl);
 
     // ── Stats panels ──
@@ -3571,7 +3587,9 @@ function loadSimCurve() {
             panelHtml('g', 'G — D参数+并发≤4 ✦', gFinal, gPnl, gPnlPct,
                 '已平仓', gTrades, '盈亏比', gPF, '平均每笔', gAvg, gPnl === best, gComm) +
             panelHtml('h', 'H — 历史最优 TP15/SL2/2日 ✨', hFinal, hPnl, hPnlPct,
-                '已平仓', hTrades, '盈亏比', hPF, '平均每笔', hAvg, hPnl === best, hComm);
+                '已平仓', hTrades, '盈亏比', hPF, '平均每笔', hAvg, hPnl === best, hComm) +
+            panelHtml('hds', 'H-DS — DeepSeek信号·H规则 🤖', hdsFinal, hdsPnl, hdsPnlPct,
+                '已平仓', hdsTrades, '盈亏比', hdsPF, '平均每笔', hdsAvg, false, hdsComm);
     }
 
     // ── Triple curve chart ──

@@ -51,6 +51,7 @@ jobs:
           python scripts/backfill-portfolio-f.py
           python scripts/backfill-portfolio-g.py
           python scripts/backfill-portfolio-h.py
+          python scripts/backfill-portfolio-hds.py
 
       - name: Regenerate daily report
         run: python scripts/daily-report.py
@@ -72,6 +73,7 @@ jobs:
           git add dashboard/portfolio-f.js data/portfolio_f.json 2>/dev/null || true
           git add dashboard/portfolio-g.js data/portfolio_g.json 2>/dev/null || true
           git add dashboard/portfolio-h.js data/portfolio_h.json 2>/dev/null || true
+          git add dashboard/portfolio-hds.js data/portfolio_hds.json 2>/dev/null || true
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 刷新持仓+报告 $(date -u +'%Y-%m-%d %H:%M') UTC"
