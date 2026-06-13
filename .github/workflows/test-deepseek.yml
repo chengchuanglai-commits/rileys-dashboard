@@ -1,0 +1,44 @@
+name: 测试 DeepSeek 影子 (手动)
+
+# 只验证 DeepSeek 影子能否跑通 TradingAgents 框架，不重跑 Haiku、不提交。
+# 用现成的某日 Haiku report 文件作标的，DeepSeek 对同一批再分析一遍。
+# 成本 ≈ 只有 DeepSeek 那部分。验证完可删此 workflow。
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '测试日期 (YYYY-MM-DD，需该日已有 Haiku report 文件)'
+        required: true
+        default: '2026-06-12'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install yfinance "git+https://github.com/TauricResearch/TradingAgents.git"
+      - name: 跑 DeepSeek 影子 (指定日期)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          BACKFILL_DATE: ${{ inputs.date }}
+        run: python scripts/generate-deepseek-shadow.py
+      - name: 跑 H-DS 回测 (DeepSeek信号+H规则)
+        run: python scripts/backfill-portfolio-hds.py
+      - name: 打印结果验证
+        run: |
+          echo "===== DeepSeek 影子信号 (${{ inputs.date }}) ====="
+          cat "dashboard/trading-signals-history/${{ inputs.date }}-deepseek.json" 2>/dev/null || echo "未生成(看上面日志报错)"
+          echo ""
+          echo "===== H-DS 模拟盘 ====="
+          python3 -c "import json; d=json.load(open('data/portfolio_hds.json')); s=d['stats']; print('净值',s['portfolio_value'],'笔数',s['total_trades'])" 2>/dev/null || echo "无"

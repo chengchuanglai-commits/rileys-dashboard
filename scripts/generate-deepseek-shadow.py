@@ -20,7 +20,7 @@ if not os.environ.get("DEEPSEEK_API_KEY"):
 # TradingAgents 的 openai 客户端读 OPENAI_API_KEY；DeepSeek 是 OpenAI 兼容接口
 os.environ["OPENAI_API_KEY"] = os.environ["DEEPSEEK_API_KEY"]
 
-today = date.today().isoformat()
+today = os.environ.get("BACKFILL_DATE") or date.today().isoformat()   # 支持回填指定日期(测试用)
 HISTORY_DIR = "dashboard/trading-signals-history"
 
 
