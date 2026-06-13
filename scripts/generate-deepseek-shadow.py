@@ -46,7 +46,7 @@ def run_deepseek(ticker):
     from tradingagents.graph.trading_graph import TradingAgentsGraph
     from tradingagents.default_config import DEFAULT_CONFIG
     config = DEFAULT_CONFIG.copy()
-    config["llm_provider"] = "openai"                 # OpenAI 兼容客户端
+    config["llm_provider"] = "deepseek"               # 关键：deepseek provider 用 Chat Completions(不是openai的Responses API,后者DeepSeek不支持→404)
     config["backend_url"] = "https://api.deepseek.com"
     config["deep_think_llm"] = "deepseek-v4-pro"      # V4 Pro（最强，跑多空辩论；V4 本身是推理模型，对应R1意图）
     config["quick_think_llm"] = "deepseek-v4-flash"   # V4 Flash（便宜快，轻分析）
