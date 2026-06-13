@@ -2,7 +2,7 @@
 DeepSeek 影子分析 —— 与 Haiku 做 A/B 对比，只记录不交易。
 
 对当天 Haiku 分析过的同一批候选股（读 {today}-{ticker}-report.json 拿到确切的 6 只），
-用 DeepSeek R1(deep_think) + V3(quick_think) 再分析一遍，存到
+用 DeepSeek V4-pro(deep_think) + V4-flash(quick_think) 再分析一遍，存到
 dashboard/trading-signals-history/{today}-deepseek.json。
 
 设计要点：
@@ -48,8 +48,8 @@ def run_deepseek(ticker):
     config = DEFAULT_CONFIG.copy()
     config["llm_provider"] = "openai"                 # OpenAI 兼容客户端
     config["backend_url"] = "https://api.deepseek.com"
-    config["deep_think_llm"] = "deepseek-reasoner"    # R1，跑多空辩论
-    config["quick_think_llm"] = "deepseek-chat"       # V3，便宜快
+    config["deep_think_llm"] = "deepseek-v4-pro"      # V4 Pro（最强，跑多空辩论；V4 本身是推理模型，对应R1意图）
+    config["quick_think_llm"] = "deepseek-v4-flash"   # V4 Flash（便宜快，轻分析）
     config["max_debate_rounds"] = 2
     config["online_tools"] = True
     # 不设 temperature（默认 None）——R1 reasoner 不接受 temperature
@@ -103,7 +103,7 @@ def main():
     actionable = [v for v in verdicts if v.get("action") in ("BUY", "SELL")][:4]
     out = {
         "date": today,
-        "model": "deepseek-reasoner",
+        "model": "deepseek-v4-pro",
         "signals": actionable,         # 进 H-DS 模拟盘的
         "all_verdicts": verdicts,      # 全部判断(含HOLD)，供分歧裁决用
     }
