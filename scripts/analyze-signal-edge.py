@@ -90,6 +90,93 @@ def fetch_closes_batch(tickers, start, end):
                 out[t][str(idx)[:10]] = round(c, 4)
     return out
 
+# ── Haiku vs DeepSeek A/B：信号对比 + 配对分歧裁决 ──────────────────
+def analyze_model_ab(N=3):
+    """对比 Haiku(主信号) vs DeepSeek(影子) 的判断质量。需 {date}-deepseek.json。
+    口径：同一(date,ticker)用相同入场(信号日收盘)、N日后出场；HOLD=不开仓=0收益。
+    重点是【分歧裁决】——两模型意见不同的票，谁的判断更赚。"""
+    import glob
+    from datetime import timedelta
+    ds_files = sorted(glob.glob(os.path.join(HISTORY_DIR, "*-deepseek.json")))
+    if not ds_files:
+        print("\n=== 🤖 Haiku vs DeepSeek A/B：暂无 DeepSeek 影子数据（周一首跑后才有）===")
+        return
+
+    haiku, deepseek = {}, {}   # (date,ticker) -> action
+    for dsf in ds_files:
+        d = os.path.basename(dsf).replace("-deepseek.json", "")
+        try:
+            dd = json.load(open(dsf))
+        except Exception:
+            continue
+        for v in dd.get("all_verdicts", []):
+            tk = v.get("ticker")
+            if tk:
+                deepseek[(d, tk)] = v.get("action")
+        # Haiku 同日同票判断：读 report 文件（含 HOLD）
+        for rf in glob.glob(os.path.join(HISTORY_DIR, f"{d}-*-report.json")):
+            if "-deepseek" in os.path.basename(rf):
+                continue
+            try:
+                rd = json.load(open(rf))
+            except Exception:
+                continue
+            tk = rd.get("ticker")
+            if tk:
+                haiku[(d, tk)] = rd.get("action")
+
+    pairs = [k for k in deepseek if k in haiku]
+    if not pairs:
+        print("\n=== 🤖 Haiku vs DeepSeek A/B：还没有两模型都分析过的配对 ===")
+        return
+
+    tickers = sorted(set(tk for (_, tk) in pairs))
+    dmin = min(d for (d, _) in pairs); dmax = max(d for (d, _) in pairs)
+    end_buf = (datetime.strptime(dmax, "%Y-%m-%d") + timedelta(days=15)).strftime("%Y-%m-%d")
+    px = fetch_closes_batch(tickers, dmin, end_buf)
+
+    def pnl(action, closes, d):
+        if action not in ("BUY", "SELL"):
+            return 0.0   # HOLD/无判断 = 不开仓 = 0
+        entry = closes.get(d)
+        exitp = fwd_close(closes, d, N)
+        if not entry or not exitp:
+            return None
+        r = (exitp - entry) / entry
+        return r if action == "BUY" else -r
+
+    agree = disagree = h_wins = ds_wins = ties = valid = 0
+    net = 0.0
+    h_sum = ds_sum = 0.0
+    for (d, tk) in pairs:
+        ah, ad = haiku[(d, tk)], deepseek[(d, tk)]
+        closes = px.get(tk, {})
+        ph, pd_ = pnl(ah, closes, d), pnl(ad, closes, d)
+        if ph is None or pd_ is None:
+            continue
+        valid += 1; h_sum += ph; ds_sum += pd_
+        if ah == ad:
+            agree += 1
+        else:
+            disagree += 1; net += (pd_ - ph)
+            if pd_ > ph: ds_wins += 1
+            elif ph > pd_: h_wins += 1
+            else: ties += 1
+
+    if valid == 0:
+        print(f"\n=== 🤖 Haiku vs DeepSeek A/B：{len(pairs)}个配对的{N}日前向窗口还没走完，等等 ===")
+        return
+
+    print(f"\n=== 🤖 Haiku vs DeepSeek A/B（{N}日持仓 · {valid}个有效配对）===")
+    print(f"  一致 {agree}({agree/valid*100:.0f}%) · 分歧 {disagree}")
+    print(f"  各自平均每笔方向收益: Haiku {h_sum/valid*100:+.2f}%  vs  DeepSeek {ds_sum/valid*100:+.2f}%")
+    if disagree:
+        verdict = "DeepSeek 更准 ✅" if net > 0 else ("Haiku 更准" if net < 0 else "打平")
+        print(f"  🎯 分歧裁决({disagree}个): DeepSeek赢 {ds_wins} · Haiku赢 {h_wins} · 平 {ties}")
+        print(f"     分歧净收益差(DeepSeek−Haiku): {net/disagree*100:+.2f}%/笔  → {verdict}")
+    print(f"  注: 配对<30仅方向性参考。决策原则: DeepSeek 质量不明显掉 + 更便宜 → 可换(降本)。")
+
+
 # ── AI 增量 edge：AI选中的候选 vs 没选的候选，谁表现好 ──────────────
 def analyze_candidate_edge():
     """回答'AI 是否比纯选股器多赚'：对比 AI选中 vs AI未选 两组候选的 alpha。
@@ -265,6 +352,9 @@ def main():
 
     # AI 增量 edge（AI选中 vs 未选的候选）
     analyze_candidate_edge()
+
+    # Haiku vs DeepSeek A/B（信号对比 + 分歧裁决）
+    analyze_model_ab()
 
 if __name__ == "__main__":
     main()
