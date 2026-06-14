@@ -1,5 +1,5 @@
 // Plan H-DS 模拟盘持仓 — 历史最优参数(TP15/SL2/2日) 回溯 + 实时更新
-window.PORTFOLIO_HDSDS = {
+window.PORTFOLIO_HDS = {
   "capital_usd": 2000,
   "open_positions": [
     {

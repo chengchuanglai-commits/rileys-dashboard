@@ -220,7 +220,7 @@ with open(PORTFOLIO_PATH, "w") as f:
 
 with open("dashboard/portfolio-hds.js", "w", encoding="utf-8") as f:
     f.write("// Plan H-DS 模拟盘持仓 — 历史最优参数(TP15/SL2/2日) 回溯 + 实时更新\n")
-    f.write(f"window.PORTFOLIO_HDSDS = {json.dumps(portfolio, ensure_ascii=False, indent=2)};\n")
+    f.write(f"window.PORTFOLIO_HDS = {json.dumps(portfolio, ensure_ascii=False, indent=2)};\n")
 
 s = portfolio["stats"]
 print(f"\n{'='*55}")
