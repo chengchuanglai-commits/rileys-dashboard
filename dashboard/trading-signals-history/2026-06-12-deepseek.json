@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-12",
+  "model": "deepseek-v4-pro",
+  "signals": [],
+  "all_verdicts": [
+    {
+      "ticker": "MFIN",
+      "action": "HOLD",
+      "current_price": 9.81,
+      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+    },
+    {
+      "ticker": "PBHC",
+      "action": "HOLD",
+      "current_price": 15.45,
+      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+    },
+    {
+      "ticker": "WEYS",
+      "action": "HOLD",
+      "current_price": 37.0,
+      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+    },
+    {
+      "ticker": "ARCB",
+      "action": "HOLD",
+      "current_price": 173.04,
+      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+    },
+    {
+      "ticker": "NUVL",
+      "action": "HOLD",
+      "current_price": 123.25,
+      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+    },
+    {
+      "ticker": "HOFT",
+      "action": "HOLD",
+      "current_price": 15.35,
+      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+    }
+  ]
+}

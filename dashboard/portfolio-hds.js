@@ -3,7 +3,7 @@ window.PORTFOLIO_HDSDS = {
   "capital_usd": 2000,
   "open_positions": [],
   "closed_positions": [],
-  "_note": "H-DS 模拟盘：DeepSeek(R1) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
+  "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 0,
     "win_trades": 0,
