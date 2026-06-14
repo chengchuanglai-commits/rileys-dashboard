@@ -1,0 +1,51 @@
+name: 批量回填 DeepSeek 历史 (手动)
+
+# 对一串历史日期跑 DeepSeek 影子分析，最后统一重建 H-DS 回测并提交。
+# 一个 runner 跑完所有日期(只装一次依赖)，比逐日 dispatch 省钱省时。
+# 每个日期需该日已有 Haiku report 文件。
+
+on:
+  workflow_dispatch:
+    inputs:
+      dates:
+        description: '日期列表(空格分隔, YYYY-MM-DD)'
+        required: true
+        default: '2026-05-28 2026-06-01 2026-06-02 2026-06-03 2026-06-04 2026-06-05 2026-06-08 2026-06-09 2026-06-11'
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install yfinance "git+https://github.com/TauricResearch/TradingAgents.git"
+      - name: 逐日跑 DeepSeek 影子
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: |
+          for d in ${{ inputs.dates }}; do
+            echo "===== 回填 $d ====="
+            BACKFILL_DATE="$d" python scripts/generate-deepseek-shadow.py || echo "[$d] 失败,继续下一天"
+          done
+      - name: 统一重建 H-DS 回测
+        run: python scripts/backfill-portfolio-hds.py
+      - name: 提交
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard/trading-signals-history/*-deepseek.json data/portfolio_hds.json dashboard/portfolio-hds.js
+          printf 'window.DASHBOARD_VERSION = "%s";\n' "$(date -u +%Y%m%d%H%M%S)" > dashboard/version.js
+          git add dashboard/version.js
+          git commit -m "H-DS: 批量回填 DeepSeek 历史信号 + 重建回测" -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" || { echo "无变化"; exit 0; }
+          for i in 1 2 3; do git pull --rebase origin main && git push origin main && exit 0; sleep 3; done
+          exit 1
