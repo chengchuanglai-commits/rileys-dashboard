@@ -1,43 +1,78 @@
 {
   "date": "2026-06-12",
   "model": "deepseek-v4-pro",
-  "signals": [],
-  "all_verdicts": [
+  "signals": [
     {
-      "ticker": "MFIN",
-      "action": "HOLD",
-      "current_price": 9.81,
-      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+      "ticker": "WEYS",
+      "action": "BUY",
+      "current_price": 37.0,
+      "target_price": 40.7,
+      "stop_loss": 35.15
     },
     {
       "ticker": "PBHC",
-      "action": "HOLD",
+      "action": "BUY",
       "current_price": 15.45,
-      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
-    },
-    {
-      "ticker": "WEYS",
-      "action": "HOLD",
-      "current_price": 37.0,
-      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+      "target_price": 17.0,
+      "stop_loss": 14.68
     },
     {
       "ticker": "ARCB",
-      "action": "HOLD",
+      "action": "SELL",
       "current_price": 173.04,
-      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+      "target_price": 190.34,
+      "stop_loss": 164.39
+    },
+    {
+      "ticker": "HOFT",
+      "action": "SELL",
+      "current_price": 15.35,
+      "target_price": 16.89,
+      "stop_loss": 14.58
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "WEYS",
+      "action": "BUY",
+      "current_price": 37.0,
+      "target_price": 40.7,
+      "stop_loss": 35.15
+    },
+    {
+      "ticker": "PBHC",
+      "action": "BUY",
+      "current_price": 15.45,
+      "target_price": 17.0,
+      "stop_loss": 14.68
+    },
+    {
+      "ticker": "ARCB",
+      "action": "SELL",
+      "current_price": 173.04,
+      "target_price": 190.34,
+      "stop_loss": 164.39
+    },
+    {
+      "ticker": "HOFT",
+      "action": "SELL",
+      "current_price": 15.35,
+      "target_price": 16.89,
+      "stop_loss": 14.58
+    },
+    {
+      "ticker": "MFIN",
+      "action": "BUY",
+      "current_price": 9.81,
+      "target_price": 10.79,
+      "stop_loss": 9.32
     },
     {
       "ticker": "NUVL",
       "action": "HOLD",
       "current_price": 123.25,
-      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
-    },
-    {
-      "ticker": "HOFT",
-      "action": "HOLD",
-      "current_price": 15.35,
-      "error": "FRED_API_KEY environment variable is not set. Get a free key at https://fred.stlouisfed.org/docs/api/api_key.html."
+      "target_price": 135.58,
+      "stop_loss": 117.09
     }
   ]
 }
