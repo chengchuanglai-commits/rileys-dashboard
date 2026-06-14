@@ -54,8 +54,6 @@ jobs:
           git add dashboard/trading-signals-history/${{ inputs.date }}-deepseek.json data/portfolio_hds.json dashboard/portfolio-hds.js
           printf 'window.DASHBOARD_VERSION = "%s";\n' "$(date -u +%Y%m%d%H%M%S)" > dashboard/version.js
           git add dashboard/version.js
-          git commit -m "H-DS: 落库 ${{ inputs.date }} DeepSeek 影子信号 + 回测
-
-Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" || { echo "无变化"; exit 0; }
+          git commit -m "H-DS: 落库 ${{ inputs.date }} DeepSeek 影子信号 + 回测" -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" || { echo "无变化"; exit 0; }
           for i in 1 2 3; do git pull --rebase origin main && git push origin main && exit 0; sleep 3; done
           exit 1
