@@ -93,6 +93,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           BACKFILL_DATE: ${{ inputs.backfill_date }}
         run: python scripts/generate-trading-signals.py
 
@@ -301,6 +302,7 @@ jobs:
         continue-on-error: true
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/generate-deepseek-shadow.py
 
       - name: H-DS 模拟盘 (DeepSeek信号+H规则)

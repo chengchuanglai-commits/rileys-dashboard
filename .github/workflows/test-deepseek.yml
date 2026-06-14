@@ -35,6 +35,7 @@ jobs:
       - name: 跑 DeepSeek 影子 (指定日期)
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           BACKFILL_DATE: ${{ inputs.date }}
         run: python scripts/generate-deepseek-shadow.py
       - name: 跑 H-DS 回测 (DeepSeek信号+H规则)
