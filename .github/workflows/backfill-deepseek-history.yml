@@ -44,8 +44,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add dashboard/trading-signals-history/*-deepseek.json data/portfolio_hds.json dashboard/portfolio-hds.js
-          printf 'window.DASHBOARD_VERSION = "%s";\n' "$(date -u +%Y%m%d%H%M%S)" > dashboard/version.js
-          git add dashboard/version.js
+          V=$(date -u +%Y%m%d%H%M%S)
+          printf 'window.DASHBOARD_VERSION = "%s";\n' "$V" > dashboard/version.js
+          sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
+          git add dashboard/version.js dashboard/index.html
           git commit -m "H-DS: 批量回填 DeepSeek 历史信号 + 重建回测" -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" || { echo "无变化"; exit 0; }
           for i in 1 2 3; do git pull --rebase origin main && git push origin main && exit 0; sleep 3; done
           exit 1

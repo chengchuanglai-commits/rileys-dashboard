@@ -320,6 +320,7 @@ jobs:
           git add dashboard/portfolio-hds.js data/portfolio_hds.json 2>/dev/null || true
           V=$(date -u +%Y%m%d%H%M%S)
           echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
-          git add dashboard/version.js
+          sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
+          git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: DeepSeek 影子 + H-DS $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4 5; do git pull --rebase && git push && break; echo "retry $i"; sleep 10; done
