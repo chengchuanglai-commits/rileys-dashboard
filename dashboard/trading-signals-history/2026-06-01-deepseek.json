@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-01",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "CAMT",
+      "action": "BUY",
+      "current_price": 193.27,
+      "target_price": 212.6,
+      "stop_loss": 183.61
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "IMOS",
+      "action": "HOLD",
+      "current_price": 61.95,
+      "error": "FRED request failed: Bad Request.  The series does not exist."
+    },
+    {
+      "ticker": "CAMT",
+      "action": "BUY",
+      "current_price": 193.27,
+      "target_price": 212.6,
+      "stop_loss": 183.61
+    }
+  ]
+}

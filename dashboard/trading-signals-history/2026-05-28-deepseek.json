@@ -1,0 +1,29 @@
+{
+  "date": "2026-05-28",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "MXL",
+      "action": "SELL",
+      "current_price": 84.46,
+      "target_price": 92.91,
+      "stop_loss": 80.24
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "MXL",
+      "action": "SELL",
+      "current_price": 84.46,
+      "target_price": 92.91,
+      "stop_loss": 80.24
+    },
+    {
+      "ticker": "ALGT",
+      "action": "HOLD",
+      "current_price": 91.59,
+      "target_price": 100.75,
+      "stop_loss": 87.01
+    }
+  ]
+}

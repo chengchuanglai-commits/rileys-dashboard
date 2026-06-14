@@ -1,0 +1,36 @@
+{
+  "date": "2026-06-02",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "DXCM",
+      "action": "BUY",
+      "current_price": 75.37,
+      "target_price": 82.91,
+      "stop_loss": 71.6
+    },
+    {
+      "ticker": "MU",
+      "action": "BUY",
+      "current_price": 981.61,
+      "target_price": 1079.77,
+      "stop_loss": 932.53
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "DXCM",
+      "action": "BUY",
+      "current_price": 75.37,
+      "target_price": 82.91,
+      "stop_loss": 71.6
+    },
+    {
+      "ticker": "MU",
+      "action": "BUY",
+      "current_price": 981.61,
+      "target_price": 1079.77,
+      "stop_loss": 932.53
+    }
+  ]
+}

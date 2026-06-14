@@ -1,0 +1,56 @@
+{
+  "date": "2026-06-08",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "STRS",
+      "action": "SELL",
+      "current_price": 28.73,
+      "target_price": 31.6,
+      "stop_loss": 27.29
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 16.66,
+      "target_price": 18.33,
+      "stop_loss": 15.83
+    },
+    {
+      "ticker": "TCNNF",
+      "action": "SELL",
+      "current_price": 10.35,
+      "target_price": 11.38,
+      "stop_loss": 9.83
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "VLGEA",
+      "action": "HOLD",
+      "current_price": 41.59,
+      "error": "FRED request failed: Bad Request.  Invalid value for variable series_id.  Series IDs should be 25 or less alphanumeric characters."
+    },
+    {
+      "ticker": "STRS",
+      "action": "SELL",
+      "current_price": 28.73,
+      "target_price": 31.6,
+      "stop_loss": 27.29
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 16.66,
+      "target_price": 18.33,
+      "stop_loss": 15.83
+    },
+    {
+      "ticker": "TCNNF",
+      "action": "SELL",
+      "current_price": 10.35,
+      "target_price": 11.38,
+      "stop_loss": 9.83
+    }
+  ]
+}

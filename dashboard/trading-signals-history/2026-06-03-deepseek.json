@@ -1,0 +1,21 @@
+{
+  "date": "2026-06-03",
+  "model": "deepseek-v4-pro",
+  "signals": [],
+  "all_verdicts": [
+    {
+      "ticker": "KLIC",
+      "action": "HOLD",
+      "current_price": 113.13,
+      "target_price": 124.44,
+      "stop_loss": 107.47
+    },
+    {
+      "ticker": "AMBA",
+      "action": "HOLD",
+      "current_price": 67.78,
+      "target_price": 74.56,
+      "stop_loss": 64.39
+    }
+  ]
+}

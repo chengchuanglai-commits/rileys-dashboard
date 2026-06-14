@@ -1,0 +1,91 @@
+{
+  "date": "2026-06-11",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "PBHC",
+      "action": "BUY",
+      "current_price": 15.45,
+      "target_price": 17.0,
+      "stop_loss": 14.68
+    },
+    {
+      "ticker": "ARCB",
+      "action": "BUY",
+      "current_price": 173.04,
+      "target_price": 190.34,
+      "stop_loss": 164.39
+    },
+    {
+      "ticker": "NUVL",
+      "action": "SELL",
+      "current_price": 123.25,
+      "target_price": 135.58,
+      "stop_loss": 117.09
+    },
+    {
+      "ticker": "STRS",
+      "action": "SELL",
+      "current_price": 28.73,
+      "target_price": 31.6,
+      "stop_loss": 27.29
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "MFIN",
+      "action": "HOLD",
+      "current_price": 9.81,
+      "error": "FRED request failed: Bad Request.  Invalid value for variable series_id.  Series IDs should be 25 or less alphanumeric characters."
+    },
+    {
+      "ticker": "PBHC",
+      "action": "BUY",
+      "current_price": 15.45,
+      "target_price": 17.0,
+      "stop_loss": 14.68
+    },
+    {
+      "ticker": "ARCB",
+      "action": "BUY",
+      "current_price": 173.04,
+      "target_price": 190.34,
+      "stop_loss": 164.39
+    },
+    {
+      "ticker": "UNTY",
+      "action": "HOLD",
+      "current_price": 56.63,
+      "target_price": 62.29,
+      "stop_loss": 53.8
+    },
+    {
+      "ticker": "NUVL",
+      "action": "SELL",
+      "current_price": 123.25,
+      "target_price": 135.58,
+      "stop_loss": 117.09
+    },
+    {
+      "ticker": "STRS",
+      "action": "SELL",
+      "current_price": 28.73,
+      "target_price": 31.6,
+      "stop_loss": 27.29
+    },
+    {
+      "ticker": "WEYS",
+      "action": "HOLD",
+      "current_price": 37.0,
+      "target_price": 40.7,
+      "stop_loss": 35.15
+    },
+    {
+      "ticker": "CBRL",
+      "action": "SELL",
+      "current_price": 46.69,
+      "target_price": 51.36,
+      "stop_loss": 44.36
+    }
+  ]
+}
