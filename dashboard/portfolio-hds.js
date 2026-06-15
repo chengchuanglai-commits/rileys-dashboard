@@ -3,29 +3,6 @@ window.PORTFOLIO_HDS = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "WEYS",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-12",
-      "entry_price": 37.0,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 481.0,
-      "entry_commission": 1.0,
-      "take_profit": 42.55,
-      "stop_loss": 36.26,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 37.25,
-          "high": 37.25,
-          "low": 36.43,
-          "close": 36.43,
-          "pnl_pct": -1.54
-        }
-      }
-    },
-    {
       "ticker": "PBHC",
       "name": "",
       "action": "BUY",
@@ -41,10 +18,10 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-06-15": {
           "open": 16.08,
-          "high": 16.11,
-          "low": 15.6,
-          "close": 15.6,
-          "pnl_pct": 0.97
+          "high": 16.22,
+          "low": 15.22,
+          "close": 15.22,
+          "pnl_pct": -1.49
         }
       }
     },
@@ -65,9 +42,9 @@ window.PORTFOLIO_HDS = {
         "2026-06-15": {
           "open": 172.51,
           "high": 172.79,
-          "low": 163.57,
-          "close": 164.54,
-          "pnl_pct": 4.91
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.17
         }
       }
     },
@@ -320,8 +297,8 @@ window.PORTFOLIO_HDS = {
         "2026-06-15": {
           "open": 172.51,
           "high": 172.79,
-          "low": 163.57,
-          "close": 164.54,
+          "low": 162.32,
+          "close": 164.1,
           "pnl_pct": -2.0
         }
       },
@@ -358,17 +335,17 @@ window.PORTFOLIO_HDS = {
           "open": 123.3,
           "high": 123.47,
           "low": 123.24,
-          "close": 123.43,
-          "pnl_pct": -0.15
+          "close": 123.35,
+          "pnl_pct": -0.08
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 123.43,
-      "final_pnl_pct": -0.15,
+      "close_price": 123.35,
+      "final_pnl_pct": -0.08,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.74
+      "realized_pnl_usd": -2.39
     },
     {
       "ticker": "STRS",
@@ -394,7 +371,7 @@ window.PORTFOLIO_HDS = {
         "2026-06-15": {
           "open": 29.04,
           "high": 29.04,
-          "low": 28.61,
+          "low": 28.48,
           "close": 28.69,
           "pnl_pct": 0.14
         }
@@ -406,17 +383,47 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -1.32
+    },
+    {
+      "ticker": "WEYS",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-12",
+      "entry_price": 37.0,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 481.0,
+      "entry_commission": 1.0,
+      "take_profit": 42.55,
+      "stop_loss": 36.26,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 37.25,
+          "high": 37.25,
+          "low": 36.12,
+          "close": 36.28,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 36.26,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -11.62
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 9,
+    "total_trades": 10,
     "win_trades": 4,
-    "win_rate": 44.4,
-    "total_realized_pnl_usd": 89.57,
-    "open_unrealized_pnl_usd": 11.38,
-    "portfolio_value": 2100.95,
-    "total_commission_usd": 18.0,
+    "win_rate": 40.0,
+    "total_realized_pnl_usd": 78.3,
+    "open_unrealized_pnl_usd": 8.53,
+    "portfolio_value": 2086.83,
+    "total_commission_usd": 20.0,
     "skipped_gap": 9,
     "skipped_zero_shares": 1,
     "updated_at": "2026-06-15"
