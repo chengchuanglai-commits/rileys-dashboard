@@ -1,0 +1,57 @@
+{
+  "date": "2026-06-15",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "SBFG",
+      "action": "BUY",
+      "current_price": 23.31,
+      "target_price": 25.64,
+      "stop_loss": 22.14
+    },
+    {
+      "ticker": "NUVL",
+      "action": "SELL",
+      "current_price": 123.25,
+      "target_price": 135.58,
+      "stop_loss": 117.09
+    },
+    {
+      "ticker": "MFIN",
+      "action": "SELL",
+      "current_price": 9.81,
+      "target_price": 10.79,
+      "stop_loss": 9.32
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "HOFT",
+      "action": "HOLD",
+      "current_price": 15.35,
+      "target_price": 16.89,
+      "stop_loss": 14.58
+    },
+    {
+      "ticker": "SBFG",
+      "action": "BUY",
+      "current_price": 23.31,
+      "target_price": 25.64,
+      "stop_loss": 22.14
+    },
+    {
+      "ticker": "NUVL",
+      "action": "SELL",
+      "current_price": 123.25,
+      "target_price": 135.58,
+      "stop_loss": 117.09
+    },
+    {
+      "ticker": "MFIN",
+      "action": "SELL",
+      "current_price": 9.81,
+      "target_price": 10.79,
+      "stop_loss": 9.32
+    }
+  ]
+}
