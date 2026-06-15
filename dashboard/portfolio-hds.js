@@ -3,75 +3,6 @@ window.PORTFOLIO_HDS = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "ARCB",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-11",
-      "entry_price": 173.04,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 346.08,
-      "entry_commission": 1.0,
-      "take_profit": 199.0,
-      "stop_loss": 169.58,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 174.61,
-          "high": 176.69,
-          "low": 171.75,
-          "close": 173.04,
-          "pnl_pct": 0.0
-        }
-      }
-    },
-    {
-      "ticker": "NUVL",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 123.25,
-      "allocated_usd": 500,
-      "shares": 4,
-      "actual_position_usd": 493.0,
-      "entry_commission": 1.0,
-      "take_profit": 104.76,
-      "stop_loss": 125.72,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 123.36,
-          "high": 123.45,
-          "low": 123.16,
-          "close": 123.25,
-          "pnl_pct": -0.0
-        }
-      }
-    },
-    {
-      "ticker": "STRS",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 28.73,
-      "allocated_usd": 500,
-      "shares": 17,
-      "actual_position_usd": 488.41,
-      "entry_commission": 1.0,
-      "take_profit": 24.42,
-      "stop_loss": 29.3,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 28.85,
-          "high": 29.07,
-          "low": 28.59,
-          "close": 28.73,
-          "pnl_pct": -0.0
-        }
-      }
-    },
-    {
       "ticker": "WEYS",
       "name": "",
       "action": "BUY",
@@ -84,7 +15,15 @@ window.PORTFOLIO_HDS = {
       "take_profit": 42.55,
       "stop_loss": 36.26,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 37.25,
+          "high": 37.25,
+          "low": 36.52,
+          "close": 36.69,
+          "pnl_pct": -0.84
+        }
+      }
     },
     {
       "ticker": "PBHC",
@@ -99,7 +38,15 @@ window.PORTFOLIO_HDS = {
       "take_profit": 17.77,
       "stop_loss": 15.14,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 16.08,
+          "high": 16.08,
+          "low": 16.08,
+          "close": 16.08,
+          "pnl_pct": 4.08
+        }
+      }
     },
     {
       "ticker": "ARCB",
@@ -114,52 +61,15 @@ window.PORTFOLIO_HDS = {
       "take_profit": 147.08,
       "stop_loss": 176.5,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "HOFT",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-12",
-      "entry_price": 15.35,
-      "allocated_usd": 500,
-      "shares": 32,
-      "actual_position_usd": 491.2,
-      "entry_commission": 1.0,
-      "take_profit": 13.05,
-      "stop_loss": 15.66,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "SBFG",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-15",
-      "entry_price": 23.31,
-      "allocated_usd": 500,
-      "shares": 21,
-      "actual_position_usd": 489.51,
-      "entry_commission": 1.0,
-      "take_profit": 26.81,
-      "stop_loss": 22.84,
-      "max_hold_date": "2026-06-17",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "NUVL",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-15",
-      "entry_price": 123.25,
-      "allocated_usd": 500,
-      "shares": 4,
-      "actual_position_usd": 493.0,
-      "entry_commission": 1.0,
-      "take_profit": 104.76,
-      "stop_loss": 125.72,
-      "max_hold_date": "2026-06-17",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 163.57,
+          "close": 164.85,
+          "pnl_pct": 4.73
+        }
+      }
     },
     {
       "ticker": "MFIN",
@@ -385,18 +295,129 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 72.42
+    },
+    {
+      "ticker": "ARCB",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-11",
+      "entry_price": 173.04,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 346.08,
+      "entry_commission": 1.0,
+      "take_profit": 199.0,
+      "stop_loss": 169.58,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 174.61,
+          "high": 176.69,
+          "low": 171.75,
+          "close": 173.04,
+          "pnl_pct": 0.0
+        },
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 163.57,
+          "close": 164.85,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 169.58,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.92
+    },
+    {
+      "ticker": "NUVL",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 123.25,
+      "allocated_usd": 500,
+      "shares": 4,
+      "actual_position_usd": 493.0,
+      "entry_commission": 1.0,
+      "take_profit": 104.76,
+      "stop_loss": 125.72,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 123.36,
+          "high": 123.45,
+          "low": 123.16,
+          "close": 123.25,
+          "pnl_pct": -0.0
+        },
+        "2026-06-15": {
+          "open": 123.3,
+          "high": 123.47,
+          "low": 123.24,
+          "close": 123.42,
+          "pnl_pct": -0.14
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 123.42,
+      "final_pnl_pct": -0.14,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -2.69
+    },
+    {
+      "ticker": "STRS",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 28.73,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 488.41,
+      "entry_commission": 1.0,
+      "take_profit": 24.42,
+      "stop_loss": 29.3,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 28.85,
+          "high": 29.07,
+          "low": 28.59,
+          "close": 28.73,
+          "pnl_pct": -0.0
+        },
+        "2026-06-15": {
+          "open": 29.04,
+          "high": 29.04,
+          "low": 28.61,
+          "close": 28.65,
+          "pnl_pct": 0.28
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 28.65,
+      "final_pnl_pct": 0.28,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.63
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 6,
+    "total_trades": 9,
     "win_trades": 4,
-    "win_rate": 66.7,
-    "total_realized_pnl_usd": 102.55,
-    "open_unrealized_pnl_usd": -3.0,
-    "portfolio_value": 2099.55,
-    "total_commission_usd": 12.0,
-    "skipped_gap": 8,
+    "win_rate": 44.4,
+    "total_realized_pnl_usd": 90.31,
+    "open_unrealized_pnl_usd": 29.5,
+    "portfolio_value": 2119.81,
+    "total_commission_usd": 18.0,
+    "skipped_gap": 9,
     "skipped_zero_shares": 1,
     "updated_at": "2026-06-15"
   }
