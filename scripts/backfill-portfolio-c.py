@@ -48,7 +48,7 @@ def simulate_position(ticker, action, entry_price, signal_date):
         df.index = df.index.tz_localize(None) if df.index.tz is not None else df.index
     except Exception as e:
         print(f"  [warn] yfinance failed for {ticker}: {e}")
-        return None, None, None, None, {}, None
+        return None, None, "open", None, {}, None
 
     today_str = datetime.now().strftime("%Y-%m-%d")
     daily_prices = {}
