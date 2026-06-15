@@ -20,7 +20,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 周末闸门：不管谁触发(Cloudflare cron 若漏了 1-5、误触发、手动空跑)，
+  # 周末不开盘就整个跳过，避免空跑烧 Haiku token。手动带 backfill_date 回填仍放行。
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - name: 周末闸门
+        id: check
+        run: |
+          DOW=$(date -u +%u)   # 1=周一 .. 7=周日
+          if [ "$DOW" -ge 6 ] && [ -z "${{ inputs.backfill_date }}" ]; then
+            echo "周末($(date -u +%A) UTC)且无 backfill_date → 跳过全流程,避免空跑烧 Haiku token"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
   analyze:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 100
     env:
