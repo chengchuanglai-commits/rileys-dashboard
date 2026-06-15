@@ -33,6 +33,43 @@ jobs:
           ANTHROPIC_BUDGET_USD: "5"
         run: python scripts/generate-morning-note.py
 
+      - name: 推送晨报到飞书
+        if: success()
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, glob
+          files = sorted(glob.glob("dashboard/morning-note-history/*.json"))
+          if not files:
+              print("无晨报文件,跳过"); raise SystemExit(0)
+          d = json.load(open(files[-1], encoding="utf-8"))
+          note = d.get("note", {}) or {}
+          mkt = d.get("market", {}) or {}
+          date = d.get("date", "")
+
+          def clip(s, n=180):
+              s = (s or "").strip().replace("\n", " ")
+              return s[:n] + ("…" if len(s) > n else "")
+
+          lines = [f"🌅 {date} 金融晨报\n"]
+          if mkt:
+              lines.append(f"📊 S&P期货 {mkt.get('sp500_futures_pct','?')}% | 10Y {mkt.get('treasury_10y','?')}% | EPS超预期 {mkt.get('eps_beat_rate','?')}%\n")
+          if note.get("market_overview"): lines.append(f"📈 市场：{clip(note['market_overview'])}\n")
+          if note.get("macro"):           lines.append(f"🌐 宏观：{clip(note['macro'])}\n")
+          picks = d.get("stock_picks", []) or []
+          if picks:
+              lines.append(f"⭐ 今日精选（{len(picks)}）：")
+              for p in picks[:10]:
+                  icon = "🟢" if p.get("direction") == "buy" else "👀"
+                  lines.append(f"{icon} {p.get('ticker','?')} {p.get('sector','')} 买入{p.get('buy_zone','')} 目标{p.get('target','')}")
+          lines.append("\n—— 交易信号系统自动生成")
+          os.environ["NOTIFY_MESSAGE"] = "\n".join(lines)
+          import runpy
+          runpy.run_path("scripts/notify-webhook.py", run_name="__main__")
+          EOF
+
       - name: Sync to database
         run: python scripts/sync-to-db.py
 
@@ -61,6 +98,7 @@ jobs:
           SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
           WORKFLOW_NAME: ${{ github.workflow }}
           GITHUB_RUN_ID: ${{ github.run_id }}
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: |
           python3 - <<'EOF'
           import urllib.request, json, os
@@ -89,4 +127,15 @@ jobs:
           req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
           urllib.request.urlopen(req, timeout=10)
           print(f'[Notify] Failure notification queued for: {workflow}')
+
+          # 同时直发飞书(国内稳定渠道,不经任何本地Mac)
+          wh = os.environ.get('NOTIFY_WEBHOOK', '').strip()
+          if wh:
+              try:
+                  fm = f'🚨 金融晨报任务失败\n工作流：{workflow}\n运行ID：{run_id}\n请到 GitHub Actions 查看日志\n（交易信号系统）'
+                  fb = json.dumps({'msg_type': 'text', 'content': {'text': fm}}, ensure_ascii=False).encode('utf-8')
+                  urllib.request.urlopen(urllib.request.Request(wh, data=fb, headers={'Content-Type': 'application/json'}), timeout=10)
+                  print('[feishu] sent')
+              except Exception as e:
+                  print('[feishu] fail:', e)
           EOF
