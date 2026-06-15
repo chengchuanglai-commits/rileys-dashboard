@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.1,
       "stop_loss": 10.29,
       "max_hold_date": "2026-06-18",
-      "day1_open": 9.71,
+      "day1_open": 9.82,
       "daily_prices": {
         "2026-06-12": {
           "open": 9.71,
@@ -25,13 +25,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.81
         },
         "2026-06-15": {
-          "open": 9.82,
-          "high": 9.92,
-          "low": 9.76,
-          "close": 9.81,
-          "pnl_pct": 0.81
+          "close": 9.82,
+          "pnl_pct": 0.71
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -0.71
     },
     {
       "ticker": "ARCB",
@@ -49,13 +48,12 @@ window.PORTFOLIO_C = {
       "day1_open": 172.51,
       "daily_prices": {
         "2026-06-15": {
-          "open": 172.51,
-          "high": 172.79,
-          "low": 163.57,
-          "close": 165.36,
-          "pnl_pct": 4.75
+          "close": 164.54,
+          "pnl_pct": 5.22
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -0.63
     },
     {
       "ticker": "MFIN",
@@ -70,8 +68,15 @@ window.PORTFOLIO_C = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 9.82,
+      "daily_prices": {
+        "2026-06-15": {
+          "close": 9.82,
+          "pnl_pct": -0.1
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.1
     },
     {
       "ticker": "MFIN",
@@ -86,24 +91,15 @@ window.PORTFOLIO_C = {
       "take_profit": 9.04,
       "stop_loss": 10.22,
       "max_hold_date": "2026-06-23",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 165.36,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 496.08,
-      "entry_commission": 1.0,
-      "take_profit": 152.13,
-      "stop_loss": 171.97,
-      "max_hold_date": "2026-06-23",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 9.82,
+      "daily_prices": {
+        "2026-06-15": {
+          "close": 9.82,
+          "pnl_pct": 0.1
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -0.1
     }
   ],
   "closed_positions": [
@@ -570,11 +566,9 @@ window.PORTFOLIO_C = {
     "win_trades": 9,
     "win_rate": 75.0,
     "total_realized_pnl_usd": 213.77,
-    "open_unrealized_pnl_usd": 15.5,
-    "portfolio_value": 2229.27,
-    "total_commission_usd": 24.0,
-    "skipped_gap": 4,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-15"
+    "open_unrealized_pnl_usd": 29.65,
+    "portfolio_value": 2243.42,
+    "skipped_gap": 5,
+    "updated_at": "2026-06-16"
   }
 };

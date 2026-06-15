@@ -1,4 +1,4 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
@@ -17,13 +17,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
-          "open": 172.51,
-          "high": 172.79,
-          "low": 163.57,
-          "close": 165.32,
-          "pnl_pct": 4.77
+          "close": 164.54,
+          "pnl_pct": 5.22
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_open": 172.51,
+      "day1_gap_pct": -0.63
     },
     {
       "ticker": "MFIN",
@@ -38,7 +38,15 @@ window.PORTFOLIO_D = {
       "take_profit": 8.34,
       "stop_loss": 10.1,
       "max_hold_date": "2026-06-17",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "close": 9.82,
+          "pnl_pct": -0.1
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 9.82,
+      "day1_gap_pct": 0.1
     },
     {
       "ticker": "MFIN",
@@ -53,22 +61,15 @@ window.PORTFOLIO_D = {
       "take_profit": 8.36,
       "stop_loss": 10.12,
       "max_hold_date": "2026-06-18",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 165.36,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 496.08,
-      "entry_commission": 1.0,
-      "take_profit": 140.56,
-      "stop_loss": 170.32,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "close": 9.82,
+          "pnl_pct": 0.1
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 9.82,
+      "day1_gap_pct": -0.1
     }
   ],
   "closed_positions": [
@@ -474,9 +475,9 @@ window.PORTFOLIO_D = {
         },
         "2026-06-15": {
           "open": 16.08,
-          "high": 16.08,
-          "low": 16.08,
-          "close": 16.08,
+          "high": 16.11,
+          "low": 15.6,
+          "close": 15.6,
           "pnl_pct": -3.03
         }
       },
@@ -513,17 +514,17 @@ window.PORTFOLIO_D = {
           "open": 9.82,
           "high": 9.92,
           "low": 9.76,
-          "close": 9.81,
-          "pnl_pct": 0.81
+          "close": 9.82,
+          "pnl_pct": 0.71
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 9.81,
-      "final_pnl_pct": 0.81,
+      "close_price": 9.82,
+      "final_pnl_pct": 0.71,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.01
+      "realized_pnl_usd": 1.51
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -531,12 +532,10 @@ window.PORTFOLIO_D = {
     "total_trades": 13,
     "win_trades": 7,
     "win_rate": 53.8,
-    "total_realized_pnl_usd": 152.52,
-    "open_unrealized_pnl_usd": 15.56,
-    "portfolio_value": 2168.08,
-    "total_commission_usd": 26.0,
-    "skipped_gap": 4,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-15"
+    "total_realized_pnl_usd": 152.02,
+    "open_unrealized_pnl_usd": 26.1,
+    "portfolio_value": 2178.12,
+    "skipped_gap": 5,
+    "updated_at": "2026-06-16"
   }
 };

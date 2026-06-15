@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -24,11 +24,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.81
         },
         "2026-06-15": {
-          "open": 9.82,
-          "high": 9.92,
-          "low": 9.76,
-          "close": 9.81,
-          "pnl_pct": 0.81
+          "close": 9.82,
+          "pnl_pct": 0.71
         }
       }
     },
@@ -47,11 +44,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-19",
       "daily_prices": {
         "2026-06-15": {
-          "open": 172.51,
-          "high": 172.79,
-          "low": 163.57,
-          "close": 165.36,
-          "pnl_pct": 4.75
+          "close": 164.54,
+          "pnl_pct": 5.22
         }
       }
     },
@@ -68,7 +62,12 @@ window.PORTFOLIO_B = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "close": 9.82,
+          "pnl_pct": -0.1
+        }
+      }
     },
     {
       "ticker": "MFIN",
@@ -83,7 +82,12 @@ window.PORTFOLIO_B = {
       "take_profit": 9.04,
       "stop_loss": 10.22,
       "max_hold_date": "2026-06-23",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "close": 9.82,
+          "pnl_pct": 0.1
+        }
+      }
     },
     {
       "ticker": "ARCB",
@@ -98,7 +102,12 @@ window.PORTFOLIO_B = {
       "take_profit": 152.13,
       "stop_loss": 171.97,
       "max_hold_date": "2026-06-23",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "close": 164.54,
+          "pnl_pct": 0.5
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -673,10 +682,8 @@ window.PORTFOLIO_B = {
     "win_trades": 9,
     "win_rate": 56.2,
     "total_realized_pnl_usd": 135.87,
-    "open_unrealized_pnl_usd": 18.5,
-    "portfolio_value": 2154.37,
-    "total_commission_usd": 32.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-15"
+    "open_unrealized_pnl_usd": 32.15,
+    "portfolio_value": 2168.02,
+    "updated_at": "2026-06-16"
   }
 };
