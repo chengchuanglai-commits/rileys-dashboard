@@ -71,6 +71,7 @@ jobs:
         continue-on-error: true
         env:
           SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: |
           python3 - <<'EOF'
           import urllib.request, json, os
@@ -104,6 +105,17 @@ jobs:
           req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json', 'User-Agent': UA}, method='POST')
           urllib.request.urlopen(req, timeout=10)
           print(f'[Notify] Start notification queued: {message}')
+
+          # 同时直发飞书(国内稳定渠道,不经任何本地Mac)
+          wh = os.environ.get('NOTIFY_WEBHOOK', '').strip()
+          if wh:
+              try:
+                  fm = message if '信号' in message else '【交易信号】\n' + message
+                  fb = json.dumps({'msg_type': 'text', 'content': {'text': fm}}, ensure_ascii=False).encode('utf-8')
+                  urllib.request.urlopen(urllib.request.Request(wh, data=fb, headers={'Content-Type': 'application/json'}), timeout=10)
+                  print('[feishu] sent')
+              except Exception as e:
+                  print('[feishu] fail:', e)
           EOF
 
       - name: Run stock screener
@@ -196,6 +208,7 @@ jobs:
         continue-on-error: true
         env:
           SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: |
           python3 - <<'EOF'
           import urllib.request, json, os
@@ -275,6 +288,17 @@ jobs:
           urllib.request.urlopen(req, timeout=10)
           print(f'[Notify] Success notification queued')
           print(f'Message preview:\n{message}')
+
+          # 同时直发飞书(国内稳定渠道,不经任何本地Mac)
+          wh = os.environ.get('NOTIFY_WEBHOOK', '').strip()
+          if wh:
+              try:
+                  fm = message if '信号' in message else '【交易信号】\n' + message
+                  fb = json.dumps({'msg_type': 'text', 'content': {'text': fm}}, ensure_ascii=False).encode('utf-8')
+                  urllib.request.urlopen(urllib.request.Request(wh, data=fb, headers={'Content-Type': 'application/json'}), timeout=10)
+                  print('[feishu] sent')
+              except Exception as e:
+                  print('[feishu] fail:', e)
           EOF
 
       - name: Notify failure via WhatsApp
@@ -284,6 +308,7 @@ jobs:
           SYNC_URL: 'https://questrade-proxy.chengchuang-lai.workers.dev/sync'
           WORKFLOW_NAME: ${{ github.workflow }}
           GITHUB_RUN_ID: ${{ github.run_id }}
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: |
           python3 - <<'EOF'
           import urllib.request, json, os
@@ -314,6 +339,17 @@ jobs:
           req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json', 'User-Agent': UA}, method='POST')
           urllib.request.urlopen(req, timeout=10)
           print(f'[Notify] Failure notification queued for: {workflow}')
+
+          # 同时直发飞书(国内稳定渠道,不经任何本地Mac)
+          wh = os.environ.get('NOTIFY_WEBHOOK', '').strip()
+          if wh:
+              try:
+                  fm = f'🚨 交易信号任务失败\n工作流：{workflow}\n运行ID：{run_id}\n请到 GitHub Actions 查看日志'
+                  fb = json.dumps({'msg_type': 'text', 'content': {'text': fm}}, ensure_ascii=False).encode('utf-8')
+                  urllib.request.urlopen(urllib.request.Request(wh, data=fb, headers={'Content-Type': 'application/json'}), timeout=10)
+                  print('[feishu] sent')
+              except Exception as e:
+                  print('[feishu] fail:', e)
           EOF
 
       # ── DeepSeek 影子 A/B（主信号已提交+通知后才跑，慢/崩都不影响 Haiku）──
