@@ -22,6 +22,13 @@ window.PORTFOLIO_B = {
           "low": 9.71,
           "close": 9.81,
           "pnl_pct": 0.81
+        },
+        "2026-06-15": {
+          "open": 9.82,
+          "high": 9.92,
+          "low": 9.76,
+          "close": 9.81,
+          "pnl_pct": 0.81
         }
       }
     },
@@ -38,7 +45,15 @@ window.PORTFOLIO_B = {
       "take_profit": 159.71,
       "stop_loss": 180.54,
       "max_hold_date": "2026-06-19",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 163.57,
+          "close": 165.36,
+          "pnl_pct": 4.75
+        }
+      }
     },
     {
       "ticker": "MFIN",
@@ -53,6 +68,36 @@ window.PORTFOLIO_B = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-16",
+      "entry_price": 9.83,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 491.5,
+      "entry_commission": 1.0,
+      "take_profit": 9.04,
+      "stop_loss": 10.22,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-16",
+      "entry_price": 165.36,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 496.08,
+      "entry_commission": 1.0,
+      "take_profit": 152.13,
+      "stop_loss": 171.97,
+      "max_hold_date": "2026-06-23",
       "daily_prices": {}
     }
   ],
@@ -628,8 +673,8 @@ window.PORTFOLIO_B = {
     "win_trades": 9,
     "win_rate": 56.2,
     "total_realized_pnl_usd": 135.87,
-    "open_unrealized_pnl_usd": 3.01,
-    "portfolio_value": 2138.88,
+    "open_unrealized_pnl_usd": 18.5,
+    "portfolio_value": 2154.37,
     "total_commission_usd": 32.0,
     "skipped_zero_shares": 1,
     "updated_at": "2026-06-15"

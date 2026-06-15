@@ -158,8 +158,8 @@ window.PORTFOLIO_MN = {
           "open": 31.72,
           "high": 32.07,
           "low": 30.9,
-          "close": 31.15,
-          "pnl_pct": 2.27
+          "close": 31.08,
+          "pnl_pct": 2.04
         }
       }
     },
@@ -179,10 +179,10 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-15": {
           "open": 229.9,
-          "high": 235.82,
+          "high": 239.49,
           "low": 229.23,
-          "close": 234.85,
-          "pnl_pct": 4.43
+          "close": 236.51,
+          "pnl_pct": 5.17
         }
       }
     },
@@ -203,9 +203,9 @@ window.PORTFOLIO_MN = {
         "2026-06-15": {
           "open": 115.0,
           "high": 116.06,
-          "low": 114.37,
-          "close": 114.84,
-          "pnl_pct": 0.89
+          "low": 114.07,
+          "close": 114.17,
+          "pnl_pct": 0.3
         }
       }
     },
@@ -225,10 +225,10 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-15": {
           "open": 73.73,
-          "high": 76.02,
+          "high": 76.68,
           "low": 73.73,
-          "close": 75.38,
-          "pnl_pct": 3.39
+          "close": 75.55,
+          "pnl_pct": 3.62
         }
       }
     },
@@ -248,10 +248,10 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-15": {
           "open": 146.5,
-          "high": 148.56,
+          "high": 148.88,
           "low": 143.98,
-          "close": 148.23,
-          "pnl_pct": 1.32
+          "close": 148.38,
+          "pnl_pct": 1.42
         }
       }
     },
@@ -273,8 +273,8 @@ window.PORTFOLIO_MN = {
           "open": 219.77,
           "high": 226.46,
           "low": 216.28,
-          "close": 221.4,
-          "pnl_pct": 4.57
+          "close": 222.36,
+          "pnl_pct": 5.03
         }
       }
     },
@@ -283,20 +283,20 @@ window.PORTFOLIO_MN = {
       "name": "Lattice Semiconductor Corporation",
       "action": "BUY",
       "signal_date": "2026-06-13",
-      "entry_price": 148.3,
+      "entry_price": 149.5,
       "allocated_usd": 500,
       "shares": 3,
-      "actual_position_usd": 444.9,
+      "actual_position_usd": 448.5,
       "entry_commission": 1.0,
-      "take_profit": 170.54,
-      "stop_loss": 145.33,
+      "take_profit": 171.92,
+      "stop_loss": 146.51,
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
           "open": 151.7,
           "high": 152.46,
-          "low": 147.9,
-          "close": 148.3,
+          "low": 147.39,
+          "close": 149.5,
           "pnl_pct": 0.0
         }
       }
@@ -306,20 +306,20 @@ window.PORTFOLIO_MN = {
       "name": "Deckers Outdoor Corporation",
       "action": "BUY",
       "signal_date": "2026-06-13",
-      "entry_price": 114.84,
+      "entry_price": 114.17,
       "allocated_usd": 500,
       "shares": 4,
-      "actual_position_usd": 459.36,
+      "actual_position_usd": 456.68,
       "entry_commission": 1.0,
-      "take_profit": 132.07,
-      "stop_loss": 112.54,
+      "take_profit": 131.3,
+      "stop_loss": 111.89,
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
           "open": 115.0,
           "high": 116.06,
-          "low": 114.37,
-          "close": 114.84,
+          "low": 114.07,
+          "close": 114.17,
           "pnl_pct": 0.0
         }
       }
@@ -329,20 +329,20 @@ window.PORTFOLIO_MN = {
       "name": "Raymond James Financial Inc.",
       "action": "BUY",
       "signal_date": "2026-06-13",
-      "entry_price": 156.08,
+      "entry_price": 156.01,
       "allocated_usd": 500,
       "shares": 3,
-      "actual_position_usd": 468.24,
+      "actual_position_usd": 468.03,
       "entry_commission": 1.0,
-      "take_profit": 179.49,
-      "stop_loss": 152.96,
+      "take_profit": 179.41,
+      "stop_loss": 152.89,
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
           "open": 155.92,
           "high": 156.89,
           "low": 155.37,
-          "close": 156.08,
+          "close": 156.01,
           "pnl_pct": 0.0
         }
       }
@@ -2061,17 +2061,17 @@ window.PORTFOLIO_MN = {
           "open": 38.21,
           "high": 38.78,
           "low": 37.88,
-          "close": 38.42,
-          "pnl_pct": 5.2
+          "close": 38.06,
+          "pnl_pct": 4.22
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 38.42,
-      "final_pnl_pct": 5.2,
+      "close_price": 38.06,
+      "final_pnl_pct": 4.22,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 22.69
+      "realized_pnl_usd": 18.03
     },
     {
       "ticker": "FORM",
@@ -2097,8 +2097,8 @@ window.PORTFOLIO_MN = {
         "2026-06-15": {
           "open": 148.32,
           "high": 151.95,
-          "low": 146.68,
-          "close": 147.43,
+          "low": 146.45,
+          "close": 151.7,
           "pnl_pct": 15.0
         }
       },
@@ -2195,17 +2195,17 @@ window.PORTFOLIO_MN = {
           "open": 185.31,
           "high": 193.65,
           "low": 185.31,
-          "close": 189.05,
-          "pnl_pct": 8.92
+          "close": 188.99,
+          "pnl_pct": 8.88
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 189.05,
-      "final_pnl_pct": 8.92,
+      "close_price": 188.99,
+      "final_pnl_pct": 8.88,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 28.96
+      "realized_pnl_usd": 28.83
     },
     {
       "ticker": "ODFL",
@@ -2224,8 +2224,8 @@ window.PORTFOLIO_MN = {
         "2026-06-15": {
           "open": 243.38,
           "high": 244.39,
-          "low": 235.14,
-          "close": 235.65,
+          "low": 235.06,
+          "close": 237.52,
           "pnl_pct": -2.0
         }
       },
@@ -2242,30 +2242,30 @@ window.PORTFOLIO_MN = {
       "name": "Datadog Inc.",
       "action": "BUY",
       "signal_date": "2026-06-13",
-      "entry_price": 232.96,
+      "entry_price": 237.78,
       "allocated_usd": 500,
       "shares": 2,
-      "actual_position_usd": 465.92,
+      "actual_position_usd": 475.56,
       "entry_commission": 1.0,
-      "take_profit": 267.9,
-      "stop_loss": 228.3,
+      "take_profit": 273.45,
+      "stop_loss": 233.02,
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
           "open": 235.94,
-          "high": 238.12,
+          "high": 238.67,
           "low": 228.25,
-          "close": 232.96,
+          "close": 237.78,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 228.3,
+      "close_price": 233.02,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.32
+      "realized_pnl_usd": -11.51
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
@@ -2273,9 +2273,9 @@ window.PORTFOLIO_MN = {
     "total_trades": 56,
     "win_trades": 18,
     "win_rate": 32.1,
-    "total_realized_pnl_usd": 41.66,
-    "open_unrealized_pnl_usd": 109.03,
-    "portfolio_value": 2150.69,
+    "total_realized_pnl_usd": 36.68,
+    "open_unrealized_pnl_usd": 111.94,
+    "portfolio_value": 2148.62,
     "total_commission_usd": 112.0,
     "skipped_gap": 25,
     "skipped_zero_shares": 6,

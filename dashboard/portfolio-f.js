@@ -2,37 +2,6 @@ window.PORTFOLIO_F = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 15.2,
-      "allocated_usd": 500,
-      "shares": 32,
-      "t1_shares": 16,
-      "t2_shares": 16,
-      "actual_position_usd": 486.4,
-      "entry_commission": 1.0,
-      "take_profit_1": 14.06,
-      "take_profit_2": 12.92,
-      "stop_loss": 15.66,
-      "max_hold_date": "2026-06-16",
-      "day1_open": 14.88,
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 14.88,
-          "high": 15.45,
-          "low": 13.72,
-          "close": 15.45,
-          "pnl_pct": -1.64
-        }
-      },
-      "t1_exit_date": "2026-06-12",
-      "t1_exit_price": 14.06,
-      "t1_exit_reason": "take_profit_1",
-      "t1_locked_pnl": 16.24
-    },
-    {
       "ticker": "MFIN",
       "name": "MFIN",
       "action": "SELL",
@@ -56,6 +25,13 @@ window.PORTFOLIO_F = {
           "low": 9.71,
           "close": 9.81,
           "pnl_pct": 0.81
+        },
+        "2026-06-15": {
+          "open": 9.82,
+          "high": 9.92,
+          "low": 9.76,
+          "close": 9.81,
+          "pnl_pct": 0.81
         }
       }
     },
@@ -75,6 +51,33 @@ window.PORTFOLIO_F = {
       "take_profit_2": 147.56,
       "stop_loss": 178.81,
       "max_hold_date": "2026-06-17",
+      "day1_open": 172.51,
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 163.57,
+          "close": 165.32,
+          "pnl_pct": 4.77
+        }
+      }
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "t1_shares": 25,
+      "t2_shares": 25,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "take_profit_1": 9.07,
+      "take_profit_2": 8.34,
+      "stop_loss": 10.1,
+      "max_hold_date": "2026-06-18",
       "day1_open": null,
       "daily_prices": {}
     }
@@ -559,17 +562,65 @@ window.PORTFOLIO_F = {
       "commission_total": 3.0,
       "realized_pnl_usd": 52.6,
       "sl_unified": false
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 15.2,
+      "allocated_usd": 500,
+      "shares": 32,
+      "t1_shares": 16,
+      "t2_shares": 16,
+      "actual_position_usd": 486.4,
+      "entry_commission": 1.0,
+      "take_profit_1": 14.06,
+      "take_profit_2": 12.92,
+      "stop_loss": 15.66,
+      "max_hold_date": "2026-06-16",
+      "day1_open": 14.88,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 14.88,
+          "high": 15.45,
+          "low": 13.72,
+          "close": 15.45,
+          "pnl_pct": -1.64
+        },
+        "2026-06-15": {
+          "open": 16.08,
+          "high": 16.08,
+          "low": 16.08,
+          "close": 16.08,
+          "pnl_pct": -5.79
+        }
+      },
+      "t1_exit_date": "2026-06-12",
+      "t1_exit_price": 14.06,
+      "t1_exit_reason": "take_profit_1",
+      "t2_exit_date": "2026-06-15",
+      "t2_exit_price": 15.66,
+      "t2_exit_reason": "stop_loss",
+      "t1_gross_pnl": 18.24,
+      "t2_gross_pnl": -7.36,
+      "close_date": "2026-06-15",
+      "close_reason": "take_profit_1+stop_loss",
+      "final_pnl_pct": 2.24,
+      "commission_total": 3.0,
+      "realized_pnl_usd": 7.88,
+      "sl_unified": false
     }
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 10,
-    "win_trades": 6,
-    "win_rate": 60.0,
-    "total_realized_pnl_usd": 123.92,
-    "open_unrealized_pnl_usd": 15.26,
-    "portfolio_value": 2139.18,
-    "total_commission_usd": 26.0,
+    "total_trades": 11,
+    "win_trades": 7,
+    "win_rate": 63.6,
+    "total_realized_pnl_usd": 131.8,
+    "open_unrealized_pnl_usd": 18.57,
+    "portfolio_value": 2150.37,
+    "total_commission_usd": 29.0,
     "skipped_gap": 4,
     "skipped_zero_shares": 2,
     "updated_at": "2026-06-15"
