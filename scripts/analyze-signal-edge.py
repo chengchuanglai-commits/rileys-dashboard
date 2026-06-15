@@ -97,7 +97,7 @@ def analyze_model_ab(N=3):
     重点是【分歧裁决】——两模型意见不同的票，谁的判断更赚。"""
     import glob
     from datetime import timedelta
-    ds_files = sorted(glob.glob(os.path.join(HISTORY_DIR, "*-deepseek.json")))
+    ds_files = sorted(glob.glob(os.path.join(HISTORY_DIR, "deepseek", "*-deepseek.json")))
     if not ds_files:
         print("\n=== 🤖 Haiku vs DeepSeek A/B：暂无 DeepSeek 影子数据（周一首跑后才有）===")
         return

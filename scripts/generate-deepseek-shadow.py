@@ -22,6 +22,7 @@ os.environ["OPENAI_API_KEY"] = os.environ["DEEPSEEK_API_KEY"]
 
 today = os.environ.get("BACKFILL_DATE") or date.today().isoformat()   # 支持回填指定日期(测试用)
 HISTORY_DIR = "dashboard/trading-signals-history"
+DEEPSEEK_DIR = "dashboard/trading-signals-history/deepseek"   # 影子输出独立子目录,避免被主链路日期解析脚本扫到
 
 
 def get_price(ticker):
@@ -107,8 +108,8 @@ def main():
         "signals": actionable,         # 进 H-DS 模拟盘的
         "all_verdicts": verdicts,      # 全部判断(含HOLD)，供分歧裁决用
     }
-    os.makedirs(HISTORY_DIR, exist_ok=True)
-    with open(os.path.join(HISTORY_DIR, f"{today}-deepseek.json"), "w", encoding="utf-8") as f:
+    os.makedirs(DEEPSEEK_DIR, exist_ok=True)
+    with open(os.path.join(DEEPSEEK_DIR, f"{today}-deepseek.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
     print(f"[deepseek] ✅ 影子分析完成: {len(actionable)} 条可操作 / {len(verdicts)} 总判断 → {today}-deepseek.json")
 

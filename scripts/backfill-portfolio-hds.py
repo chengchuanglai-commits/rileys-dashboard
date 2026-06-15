@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 import yfinance as yf
 
 SIGNALS_DIR = "dashboard/trading-signals-history"
+DEEPSEEK_DIR = "dashboard/trading-signals-history/deepseek"   # 影子文件独立子目录,避免污染主链路日期解析
 PORTFOLIO_PATH = "data/portfolio_hds.json"
 os.makedirs("data", exist_ok=True)
 
@@ -113,11 +114,11 @@ portfolio = {
 
 # H-DS 用 DeepSeek 影子信号（{date}-deepseek.json），出场规则同 Plan H
 all_signals = []
-for fname in sorted(os.listdir(SIGNALS_DIR)):
+for fname in sorted(os.listdir(DEEPSEEK_DIR) if os.path.isdir(DEEPSEEK_DIR) else []):
     if not fname.endswith("-deepseek.json"):
         continue
     date_str = fname.replace("-deepseek.json", "")
-    with open(os.path.join(SIGNALS_DIR, fname)) as f:
+    with open(os.path.join(DEEPSEEK_DIR, fname)) as f:
         d = json.load(f)
     for s in d.get("signals", []):
         all_signals.append((date_str, s))
