@@ -49,7 +49,7 @@ jobs:
           python scripts/backfill-portfolio-d.py
           python scripts/backfill-portfolio-e.py
           python scripts/backfill-portfolio-f.py
-          python scripts/backfill-portfolio-g.py
+          python scripts/backfill-portfolio-mn.py
           python scripts/backfill-portfolio-h.py
           python scripts/backfill-portfolio-hds.py
 
@@ -71,7 +71,7 @@ jobs:
           git add dashboard/portfolio-d.js data/portfolio_d.json 2>/dev/null || true
           git add dashboard/portfolio-e.js data/portfolio_e.json 2>/dev/null || true
           git add dashboard/portfolio-f.js data/portfolio_f.json 2>/dev/null || true
-          git add dashboard/portfolio-g.js data/portfolio_g.json 2>/dev/null || true
+          git add dashboard/portfolio-mn.js data/portfolio_mn.json 2>/dev/null || true
           git add dashboard/portfolio-h.js data/portfolio_h.json 2>/dev/null || true
           git add dashboard/portfolio-hds.js data/portfolio_hds.json 2>/dev/null || true
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true

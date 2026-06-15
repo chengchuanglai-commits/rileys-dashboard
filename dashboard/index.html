@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260615132633";
+      var BUILD="20260615143200";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -710,7 +710,7 @@
       document.write('<scr'+'ipt src="portfolio-d.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-e.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-f.js?v='+v+'"><\/scr'+'ipt>');
-      document.write('<scr'+'ipt src="portfolio-g.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-mn.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-h.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-hds.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
@@ -2662,7 +2662,7 @@ function loadHistoricalBacktest() {
 window._livePrices = {};
 
 async function fetchLivePrices() {
-    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D, window.PORTFOLIO_E, window.PORTFOLIO_F, window.PORTFOLIO_G];
+    const portfolios = [window.PORTFOLIO_B, window.PORTFOLIO_C, window.PORTFOLIO_D, window.PORTFOLIO_E, window.PORTFOLIO_F, window.PORTFOLIO_MN];
     const tickers = [...new Set(
         portfolios.flatMap(p => (p && p.open_positions || []).map(pos => pos.ticker))
     )].filter(Boolean);
@@ -2710,7 +2710,7 @@ function renderSimPbOpen(livePrices) {
         {plan:'D', data: window.PORTFOLIO_D},
         {plan:'E', data: window.PORTFOLIO_E},
         {plan:'F', data: window.PORTFOLIO_F},
-        {plan:'G', data: window.PORTFOLIO_G},
+        {plan:'广池', data: window.PORTFOLIO_MN},
         {plan:'H', data: window.PORTFOLIO_H},
         {plan:'HDS', data: window.PORTFOLIO_HDS},
     ];
@@ -2794,7 +2794,7 @@ function patchLivePortfolioCards(livePrices) {
         d: calcLive(window.PORTFOLIO_D),
         e: calcLive(window.PORTFOLIO_E),
         f: calcLive(window.PORTFOLIO_F),
-        g: calcLive(window.PORTFOLIO_G),
+        g: calcLive(window.PORTFOLIO_MN),
     };
 
     // Find best plan for trophy
@@ -2884,7 +2884,7 @@ function renderAbCompare() {
     const pf = window.PORTFOLIO_F;
     const fSt = getStats(pf);
     const fCap = fSt.portfolio_value || 2000, fPnl = fCap - 2000, fPnlPct = fPnl / 2000 * 100;
-    const pg = window.PORTFOLIO_G;
+    const pg = window.PORTFOLIO_MN;
     const gSt = getStats(pg);
     const gCap = gSt.portfolio_value || 2000, gPnl = gCap - 2000, gPnlPct = gPnl / 2000 * 100;
     const pnlMap = {E: ePnl, B: bPnl, C: cPnl, D: dPnl, F: fPnl, G: gPnl};
@@ -2945,7 +2945,7 @@ function renderAbCompare() {
                 </div>
             </div>
             <div class="ab-panel plan-g">
-                <div class="ab-label g">G 方案${trophy('G')} — D参数+并发≤4限制</div>
+                <div class="ab-label g">H-广池${trophy('G')} — 晨报中大盘精选·H规则 🌐</div>
                 <div class="ab-capital">$${gCap.toFixed(2)}</div>
                 <div class="ab-pnl" style="color:${col(gPnl)}">${fmt(gPnl)} (${gPnlPct>=0?'+':''}${gPnlPct.toFixed(1)}%)</div>
                 <div class="ab-row">
@@ -3484,7 +3484,7 @@ function loadSimCurve() {
     const fAvg = calcAvg(pfClosed);
 
     // ── Plan G data (并发限制) ──
-    const pgPort    = window.PORTFOLIO_G;
+    const pgPort    = window.PORTFOLIO_MN;
     const pgClosed  = (pgPort && pgPort.closed_positions) ? pgPort.closed_positions : [];
     const pgStats   = (pgPort && pgPort.stats) ? pgPort.stats : {};
     const gFinal    = pgStats.portfolio_value || 2000;
@@ -3584,7 +3584,7 @@ function loadSimCurve() {
                 '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best, dComm) +
             panelHtml('f', 'F — 分档出场×2 TP15% ✦', fFinal, fPnl, fPnlPct,
                 '已平仓', fTrades, '盈亏比', fPF, '平均每笔', fAvg, fPnl === best, fComm) +
-            panelHtml('g', 'G — D参数+并发≤4 ✦', gFinal, gPnl, gPnlPct,
+            panelHtml('g', 'H-广池 — 晨报中大盘精选·H规则 🌐', gFinal, gPnl, gPnlPct,
                 '已平仓', gTrades, '盈亏比', gPF, '平均每笔', gAvg, gPnl === best, gComm) +
             panelHtml('h', 'H — 历史最优 TP15/SL2/2日 ✨', hFinal, hPnl, hPnlPct,
                 '已平仓', hTrades, '盈亏比', hPF, '平均每笔', hAvg, hPnl === best, hComm) +
