@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -18,12 +18,13 @@ window.PORTFOLIO_C = {
       "day1_open": 9.71,
       "daily_prices": {
         "2026-06-12": {
+          "open": 9.71,
+          "high": 9.95,
+          "low": 9.71,
           "close": 9.81,
           "pnl_pct": 0.81
         }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": -1.82
+      }
     },
     {
       "ticker": "ARCB",
@@ -38,15 +39,24 @@ window.PORTFOLIO_C = {
       "take_profit": 159.71,
       "stop_loss": 180.54,
       "max_hold_date": "2026-06-19",
-      "day1_open": 174.6,
-      "daily_prices": {
-        "2026-06-12": {
-          "close": 173.04,
-          "pnl_pct": 0.32
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": 0.58
+      "day1_open": null,
+      "daily_prices": {}
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "take_profit": 9.03,
+      "stop_loss": 10.2,
+      "max_hold_date": "2026-06-22",
+      "day1_open": null,
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -513,9 +523,11 @@ window.PORTFOLIO_C = {
     "win_trades": 9,
     "win_rate": 75.0,
     "total_realized_pnl_usd": 213.77,
-    "open_unrealized_pnl_usd": 5.65,
-    "portfolio_value": 2219.42,
+    "open_unrealized_pnl_usd": 1.01,
+    "portfolio_value": 2214.78,
+    "total_commission_usd": 24.0,
     "skipped_gap": 4,
-    "updated_at": "2026-06-13"
+    "skipped_zero_shares": 1,
+    "updated_at": "2026-06-15"
   }
 };

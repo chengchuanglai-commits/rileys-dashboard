@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -17,6 +17,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-12": {
+          "open": 9.71,
+          "high": 9.95,
+          "low": 9.71,
           "close": 9.81,
           "pnl_pct": 0.81
         }
@@ -35,12 +38,22 @@ window.PORTFOLIO_B = {
       "take_profit": 159.71,
       "stop_loss": 180.54,
       "max_hold_date": "2026-06-19",
-      "daily_prices": {
-        "2026-06-12": {
-          "close": 173.04,
-          "pnl_pct": 0.32
-        }
-      }
+      "daily_prices": {}
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "take_profit": 9.03,
+      "stop_loss": 10.2,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -563,7 +576,7 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-12": {
-          "open": 174.6,
+          "open": 174.61,
           "high": 176.69,
           "low": 171.75,
           "close": 173.04,
@@ -595,7 +608,7 @@ window.PORTFOLIO_B = {
         "2026-06-12": {
           "open": 46.72,
           "high": 47.76,
-          "low": 44.64,
+          "low": 44.58,
           "close": 46.69,
           "pnl_pct": -4.0
         }
@@ -615,8 +628,10 @@ window.PORTFOLIO_B = {
     "win_trades": 9,
     "win_rate": 56.2,
     "total_realized_pnl_usd": 135.87,
-    "open_unrealized_pnl_usd": 5.65,
-    "portfolio_value": 2141.52,
-    "updated_at": "2026-06-13"
+    "open_unrealized_pnl_usd": 3.01,
+    "portfolio_value": 2138.88,
+    "total_commission_usd": 32.0,
+    "skipped_zero_shares": 1,
+    "updated_at": "2026-06-15"
   }
 };

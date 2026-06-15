@@ -75,6 +75,25 @@ window.PORTFOLIO_E = {
       "vix": 17.68,
       "daily_prices": {},
       "gap_checked": true
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "take_profit": 8.83,
+      "stop_loss": 10.1,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-18",
+      "regime": "neutral",
+      "vix": 16.41,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -437,6 +456,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 4,
     "skipped_gap": 3,
-    "updated_at": "2026-06-12"
+    "updated_at": "2026-06-15"
   }
 };

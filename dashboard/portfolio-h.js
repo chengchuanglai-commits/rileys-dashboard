@@ -62,6 +62,21 @@ window.PORTFOLIO_H = {
       "stop_loss": 177.07,
       "max_hold_date": "2026-06-16",
       "daily_prices": {}
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "take_profit": 8.34,
+      "stop_loss": 10.01,
+      "max_hold_date": "2026-06-17",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -442,6 +457,6 @@ window.PORTFOLIO_H = {
     "total_commission_usd": 22.0,
     "skipped_gap": 4,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-12"
+    "updated_at": "2026-06-15"
   }
 };
