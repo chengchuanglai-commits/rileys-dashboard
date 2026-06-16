@@ -1,0 +1,96 @@
+{
+  "date": "2026-06-16",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": NaN,
+      "target_price": NaN,
+      "stop_loss": NaN
+    },
+    {
+      "ticker": "WSBC",
+      "action": "BUY",
+      "current_price": 36.08,
+      "target_price": 39.69,
+      "stop_loss": 34.28
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "HOFT",
+      "action": "HOLD",
+      "current_price": NaN,
+      "error": "429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=UMCSENT&observation_start=2026-04-17&observation_end=2026-06-16&sort_order=asc&api_key=52b416"
+    },
+    {
+      "ticker": "TWST",
+      "action": "HOLD",
+      "current_price": 80.79,
+      "error": "429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series?series_id=GDPC1&api_key=52b416baeeb7a2eb83d75d3603999879&file_type=json"
+    },
+    {
+      "ticker": "ARCB",
+      "action": "HOLD",
+      "current_price": NaN,
+      "error": "429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series?series_id=FEDFUNDS&api_key=52b416baeeb7a2eb83d75d3603999879&file_type=json"
+    },
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": NaN,
+      "target_price": NaN,
+      "stop_loss": NaN
+    },
+    {
+      "ticker": "UNTY",
+      "action": "HOLD",
+      "current_price": 55.38,
+      "target_price": 60.92,
+      "stop_loss": 52.61
+    },
+    {
+      "ticker": "SBFG",
+      "action": "HOLD",
+      "current_price": NaN,
+      "target_price": NaN,
+      "stop_loss": NaN
+    },
+    {
+      "ticker": "WSBC",
+      "action": "BUY",
+      "current_price": 36.08,
+      "target_price": 39.69,
+      "stop_loss": 34.28
+    },
+    {
+      "ticker": "AMRX",
+      "action": "HOLD",
+      "current_price": 16.24,
+      "target_price": 17.86,
+      "stop_loss": 15.43
+    },
+    {
+      "ticker": "CTRE",
+      "action": "HOLD",
+      "current_price": 37.04,
+      "target_price": 40.74,
+      "stop_loss": 35.19
+    },
+    {
+      "ticker": "MFIN",
+      "action": "HOLD",
+      "current_price": NaN,
+      "target_price": NaN,
+      "stop_loss": NaN
+    },
+    {
+      "ticker": "NUVL",
+      "action": "HOLD",
+      "current_price": 123.35,
+      "target_price": 135.69,
+      "stop_loss": 117.18
+    }
+  ]
+}
