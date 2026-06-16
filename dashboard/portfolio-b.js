@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -22,10 +22,6 @@ window.PORTFOLIO_B = {
           "low": 9.71,
           "close": 9.81,
           "pnl_pct": 0.81
-        },
-        "2026-06-15": {
-          "close": 9.85,
-          "pnl_pct": 0.4
         }
       }
     },
@@ -42,12 +38,7 @@ window.PORTFOLIO_B = {
       "take_profit": 159.71,
       "stop_loss": 180.54,
       "max_hold_date": "2026-06-19",
-      "daily_prices": {
-        "2026-06-15": {
-          "close": 164.1,
-          "pnl_pct": 5.47
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "MFIN",
@@ -62,52 +53,52 @@ window.PORTFOLIO_B = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "daily_prices": {
-        "2026-06-15": {
-          "close": 9.85,
-          "pnl_pct": -0.41
-        }
-      }
+      "daily_prices": {}
     },
     {
-      "ticker": "MFIN",
-      "name": "MFIN",
+      "ticker": "AMRX",
+      "name": "AMRX",
       "action": "SELL",
       "signal_date": "2026-06-16",
-      "entry_price": 9.83,
+      "entry_price": 16.24,
       "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 491.5,
+      "shares": 30,
+      "actual_position_usd": 487.2,
       "entry_commission": 1.0,
-      "take_profit": 9.04,
-      "stop_loss": 10.22,
+      "take_profit": 14.94,
+      "stop_loss": 16.89,
       "max_hold_date": "2026-06-23",
-      "daily_prices": {
-        "2026-06-15": {
-          "close": 9.85,
-          "pnl_pct": -0.2
-        }
-      }
+      "daily_prices": {}
     },
     {
-      "ticker": "ARCB",
-      "name": "ARCB",
+      "ticker": "CTRE",
+      "name": "CTRE",
       "action": "SELL",
       "signal_date": "2026-06-16",
-      "entry_price": 165.36,
+      "entry_price": 37.04,
       "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 496.08,
+      "shares": 13,
+      "actual_position_usd": 481.52,
       "entry_commission": 1.0,
-      "take_profit": 152.13,
-      "stop_loss": 171.97,
+      "take_profit": 34.08,
+      "stop_loss": 38.52,
       "max_hold_date": "2026-06-23",
-      "daily_prices": {
-        "2026-06-15": {
-          "close": 164.1,
-          "pnl_pct": 0.76
-        }
-      }
+      "daily_prices": {}
+    },
+    {
+      "ticker": "TWST",
+      "name": "TWST",
+      "action": "SELL",
+      "signal_date": "2026-06-16",
+      "entry_price": 80.79,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 484.74,
+      "entry_commission": 1.0,
+      "take_profit": 74.33,
+      "stop_loss": 84.02,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -682,8 +673,10 @@ window.PORTFOLIO_B = {
     "win_trades": 9,
     "win_rate": 56.2,
     "total_realized_pnl_usd": 135.87,
-    "open_unrealized_pnl_usd": 30.1,
-    "portfolio_value": 2165.97,
+    "open_unrealized_pnl_usd": 3.01,
+    "portfolio_value": 2138.88,
+    "total_commission_usd": 32.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-16"
   }
 };

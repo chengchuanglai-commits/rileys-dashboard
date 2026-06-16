@@ -118,6 +118,52 @@ window.PORTFOLIO_MN = {
       }
     },
     {
+      "ticker": "AVNT",
+      "name": "Avnet Inc",
+      "action": "BUY",
+      "signal_date": "2026-06-11",
+      "entry_price": 36.52,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.76,
+      "entry_commission": 1.0,
+      "take_profit": 42.0,
+      "stop_loss": 35.79,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 37.09,
+          "high": 38.03,
+          "low": 37.09,
+          "close": 37.76,
+          "pnl_pct": 3.4
+        }
+      }
+    },
+    {
+      "ticker": "FORM",
+      "name": "FormFactor Inc",
+      "action": "BUY",
+      "signal_date": "2026-06-11",
+      "entry_price": 130.24,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 390.72,
+      "entry_commission": 1.0,
+      "take_profit": 149.78,
+      "stop_loss": 127.64,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 132.4,
+          "high": 140.75,
+          "low": 131.13,
+          "close": 139.21,
+          "pnl_pct": 6.89
+        }
+      }
+    },
+    {
       "ticker": "PSTG",
       "name": "Pure Storage Inc",
       "action": "BUY",
@@ -141,6 +187,29 @@ window.PORTFOLIO_MN = {
       }
     },
     {
+      "ticker": "ACLS",
+      "name": "Axcelis Technologies",
+      "action": "BUY",
+      "signal_date": "2026-06-11",
+      "entry_price": 173.57,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 347.14,
+      "entry_commission": 1.0,
+      "take_profit": 199.61,
+      "stop_loss": 170.1,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 174.2,
+          "high": 183.62,
+          "low": 172.5,
+          "close": 180.12,
+          "pnl_pct": 3.77
+        }
+      }
+    },
+    {
       "ticker": "SMCI",
       "name": "Super Micro Computer Inc.",
       "action": "BUY",
@@ -153,15 +222,7 @@ window.PORTFOLIO_MN = {
       "take_profit": 35.03,
       "stop_loss": 29.85,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 31.73,
-          "high": 32.07,
-          "low": 30.72,
-          "close": 30.85,
-          "pnl_pct": 1.28
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "EXPE",
@@ -176,15 +237,7 @@ window.PORTFOLIO_MN = {
       "take_profit": 258.62,
       "stop_loss": 220.39,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 229.9,
-          "high": 239.49,
-          "low": 229.23,
-          "close": 236.98,
-          "pnl_pct": 5.38
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "DECK",
@@ -199,15 +252,7 @@ window.PORTFOLIO_MN = {
       "take_profit": 130.9,
       "stop_loss": 111.55,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 115.0,
-          "high": 116.06,
-          "low": 112.25,
-          "close": 112.5,
-          "pnl_pct": -1.17
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "TMDX",
@@ -245,15 +290,22 @@ window.PORTFOLIO_MN = {
       "take_profit": 168.25,
       "stop_loss": 143.37,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 146.32,
-          "high": 149.5,
-          "low": 143.98,
-          "close": 149.49,
-          "pnl_pct": 2.18
-        }
-      }
+      "daily_prices": {}
+    },
+    {
+      "ticker": "ODFL",
+      "name": "Old Dominion Freight Line Inc.",
+      "action": "BUY",
+      "signal_date": "2026-06-12",
+      "entry_price": 245.75,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 491.5,
+      "entry_commission": 1.0,
+      "take_profit": 282.61,
+      "stop_loss": 240.84,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {}
     },
     {
       "ticker": "QCOM",
@@ -268,15 +320,7 @@ window.PORTFOLIO_MN = {
       "take_profit": 243.48,
       "stop_loss": 207.49,
       "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 219.77,
-          "high": 226.46,
-          "low": 216.28,
-          "close": 220.81,
-          "pnl_pct": 4.29
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "LSCC",
@@ -779,37 +823,37 @@ window.PORTFOLIO_MN = {
       "name": "Garmin Ltd.",
       "action": "BUY",
       "signal_date": "2026-05-28",
-      "entry_price": 236.35,
+      "entry_price": 235.31,
       "allocated_usd": 500,
       "shares": 2,
-      "actual_position_usd": 472.7,
+      "actual_position_usd": 470.62,
       "entry_commission": 1.0,
-      "take_profit": 271.8,
-      "stop_loss": 231.62,
+      "take_profit": 270.61,
+      "stop_loss": 230.6,
       "max_hold_date": "2026-06-01",
       "daily_prices": {
         "2026-05-29": {
-          "open": 235.93,
-          "high": 240.39,
-          "low": 233.57,
-          "close": 233.92,
+          "open": 234.89,
+          "high": 239.33,
+          "low": 232.54,
+          "close": 232.89,
           "pnl_pct": -1.03
         },
         "2026-06-01": {
-          "open": 232.97,
-          "high": 238.19,
-          "low": 229.88,
-          "close": 236.8,
+          "open": 231.94,
+          "high": 237.14,
+          "low": 228.87,
+          "close": 235.76,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-01",
-      "close_price": 231.62,
+      "close_price": 230.6,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.45
+      "realized_pnl_usd": -11.41
     },
     {
       "ticker": "CAMT",
@@ -1930,37 +1974,37 @@ window.PORTFOLIO_MN = {
       "name": "Xcel Energy Inc",
       "action": "BUY",
       "signal_date": "2026-06-10",
-      "entry_price": 78.1,
+      "entry_price": 77.52,
       "allocated_usd": 500,
       "shares": 6,
-      "actual_position_usd": 468.6,
+      "actual_position_usd": 465.12,
       "entry_commission": 1.0,
-      "take_profit": 89.81,
-      "stop_loss": 76.54,
+      "take_profit": 89.15,
+      "stop_loss": 75.97,
       "max_hold_date": "2026-06-12",
       "daily_prices": {
         "2026-06-11": {
-          "open": 78.56,
-          "high": 79.32,
-          "low": 78.09,
-          "close": 78.27,
-          "pnl_pct": 0.22
+          "open": 77.97,
+          "high": 78.73,
+          "low": 77.51,
+          "close": 77.68,
+          "pnl_pct": 0.21
         },
         "2026-06-12": {
-          "open": 78.42,
-          "high": 79.29,
-          "low": 78.32,
-          "close": 79.22,
+          "open": 77.83,
+          "high": 78.7,
+          "low": 77.73,
+          "close": 78.63,
           "pnl_pct": 1.43
         }
       },
       "close_date": "2026-06-12",
-      "close_price": 79.22,
+      "close_price": 78.63,
       "final_pnl_pct": 1.43,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.7
+      "realized_pnl_usd": 4.65
     },
     {
       "ticker": "CEG",
@@ -2037,80 +2081,6 @@ window.PORTFOLIO_MN = {
       "realized_pnl_usd": 32.16
     },
     {
-      "ticker": "AVNT",
-      "name": "Avnet Inc",
-      "action": "BUY",
-      "signal_date": "2026-06-11",
-      "entry_price": 36.52,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 474.76,
-      "entry_commission": 1.0,
-      "take_profit": 42.0,
-      "stop_loss": 35.79,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 37.09,
-          "high": 38.03,
-          "low": 37.09,
-          "close": 37.76,
-          "pnl_pct": 3.4
-        },
-        "2026-06-15": {
-          "open": 38.21,
-          "high": 38.78,
-          "low": 37.34,
-          "close": 37.54,
-          "pnl_pct": 2.79
-        }
-      },
-      "close_date": "2026-06-15",
-      "close_price": 37.54,
-      "final_pnl_pct": 2.79,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 11.25
-    },
-    {
-      "ticker": "FORM",
-      "name": "FormFactor Inc",
-      "action": "BUY",
-      "signal_date": "2026-06-11",
-      "entry_price": 130.24,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 390.72,
-      "entry_commission": 1.0,
-      "take_profit": 149.78,
-      "stop_loss": 127.64,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 132.4,
-          "high": 140.75,
-          "low": 131.13,
-          "close": 139.21,
-          "pnl_pct": 6.89
-        },
-        "2026-06-15": {
-          "open": 148.32,
-          "high": 152.9,
-          "low": 146.45,
-          "close": 152.6,
-          "pnl_pct": 15.0
-        }
-      },
-      "close_date": "2026-06-15",
-      "close_price": 149.78,
-      "final_pnl_pct": 15.0,
-      "close_reason": "take_profit",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 56.61
-    },
-    {
       "ticker": "FTNT",
       "name": "Fortinet Inc",
       "action": "BUY",
@@ -2171,73 +2141,6 @@ window.PORTFOLIO_MN = {
       "realized_pnl_usd": -11.19
     },
     {
-      "ticker": "ACLS",
-      "name": "Axcelis Technologies",
-      "action": "BUY",
-      "signal_date": "2026-06-11",
-      "entry_price": 173.57,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 347.14,
-      "entry_commission": 1.0,
-      "take_profit": 199.61,
-      "stop_loss": 170.1,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 174.2,
-          "high": 183.62,
-          "low": 172.5,
-          "close": 180.12,
-          "pnl_pct": 3.77
-        },
-        "2026-06-15": {
-          "open": 185.31,
-          "high": 193.65,
-          "low": 185.31,
-          "close": 191.6,
-          "pnl_pct": 10.39
-        }
-      },
-      "close_date": "2026-06-15",
-      "close_price": 191.6,
-      "final_pnl_pct": 10.39,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 34.07
-    },
-    {
-      "ticker": "ODFL",
-      "name": "Old Dominion Freight Line Inc.",
-      "action": "BUY",
-      "signal_date": "2026-06-12",
-      "entry_price": 245.75,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 491.5,
-      "entry_commission": 1.0,
-      "take_profit": 282.61,
-      "stop_loss": 240.84,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 243.38,
-          "high": 244.39,
-          "low": 235.02,
-          "close": 237.42,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-06-15",
-      "close_price": 240.84,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -11.83
-    },
-    {
       "ticker": "DDOG",
       "name": "Datadog Inc.",
       "action": "BUY",
@@ -2270,15 +2173,15 @@ window.PORTFOLIO_MN = {
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 56,
-    "win_trades": 18,
-    "win_rate": 32.1,
-    "total_realized_pnl_usd": 35.33,
-    "open_unrealized_pnl_usd": 102.25,
-    "portfolio_value": 2137.58,
-    "total_commission_usd": 112.0,
+    "total_trades": 52,
+    "win_trades": 15,
+    "win_rate": 28.8,
+    "total_realized_pnl_usd": -54.78,
+    "open_unrealized_pnl_usd": 107.56,
+    "portfolio_value": 2052.78,
+    "total_commission_usd": 104.0,
     "skipped_gap": 25,
     "skipped_zero_shares": 6,
-    "updated_at": "2026-06-15"
+    "updated_at": "2026-06-16"
   }
 };

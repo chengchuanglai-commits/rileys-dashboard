@@ -1,15 +1,15 @@
 {
   "date": "2026-06-16",
-  "generated_at": "2026-06-16T04:57:00",
+  "generated_at": "2026-06-16T19:46:00",
   "pipeline": {
-    "morning_note_found": false,
+    "morning_note_found": true,
     "signal_file_found": true,
-    "signals_generated": 2
+    "signals_generated": 3
   },
   "data_quality": [
     {
       "check": "晨报文件",
-      "pass": false,
+      "pass": true,
       "detail": "2026-06-16"
     },
     {
@@ -19,44 +19,243 @@
     },
     {
       "check": "昨日准确率填充",
-      "pass": false,
-      "detail": "0 条已验证"
+      "pass": true,
+      "detail": "1 条已验证"
     },
     {
       "check": "无警告",
-      "pass": false,
-      "detail": "2 条警告"
+      "pass": true,
+      "detail": "0 条警告"
     }
   ],
   "signals_today": [
     {
-      "ticker": "MFIN",
+      "ticker": "AMRX",
       "action": "SELL",
-      "current_price": 9.83,
-      "target_price": 10.81,
-      "stop_loss": 9.34
+      "current_price": 16.24,
+      "target_price": 17.86,
+      "stop_loss": 15.43
     },
     {
-      "ticker": "ARCB",
+      "ticker": "CTRE",
       "action": "SELL",
-      "current_price": 165.36,
-      "target_price": 181.9,
-      "stop_loss": 157.09
+      "current_price": 37.04,
+      "target_price": 40.74,
+      "stop_loss": 35.19
+    },
+    {
+      "ticker": "TWST",
+      "action": "SELL",
+      "current_price": 80.79,
+      "target_price": 88.87,
+      "stop_loss": 76.75
     }
   ],
   "accuracy_update": {
     "date": "2026-06-15",
     "total": 1,
-    "verified": 0,
-    "pending": 1,
-    "results": []
+    "verified": 1,
+    "pending": 0,
+    "results": [
+      {
+        "ticker": "MFIN",
+        "action": "SELL",
+        "entry": 9.81,
+        "open": NaN,
+        "actual": NaN,
+        "pct": NaN,
+        "pct_from_signal": NaN,
+        "correct": false,
+        "correct_direction": false
+      }
+    ]
   },
   "running_totals": {
-    "total_signals_verified": 12,
-    "total_signals_active": 8,
+    "total_signals_verified": 24,
+    "total_signals_active": 20,
     "total_signals_hold": 4,
-    "hold_rate_pct": 33.3,
+    "hold_rate_pct": 16.7,
     "signals_history": [
+      {
+        "date": "2026-06-15",
+        "ticker": "MFIN",
+        "name": "MFIN",
+        "action": "SELL",
+        "signal_price": 9.81,
+        "open_price": NaN,
+        "close_price": NaN,
+        "pct_change": NaN,
+        "pct_from_signal": NaN,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": false,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-12",
+        "ticker": "ARCB",
+        "name": "ARCB",
+        "action": "SELL",
+        "signal_price": 173.6,
+        "open_price": 174.61,
+        "close_price": 173.04,
+        "pct_change": -0.9,
+        "pct_from_signal": -0.32,
+        "correct": true,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-11",
+        "ticker": "CBRL",
+        "name": "CBRL",
+        "action": "SELL",
+        "signal_price": 43.76,
+        "open_price": 45.25,
+        "close_price": 45.5,
+        "pct_change": 0.55,
+        "pct_from_signal": 3.98,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-11",
+        "ticker": "ARCB",
+        "name": "ARCB",
+        "action": "SELL",
+        "signal_price": 169.06,
+        "open_price": 168.33,
+        "close_price": 172.67,
+        "pct_change": 2.58,
+        "pct_from_signal": 2.14,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-11",
+        "ticker": "MFIN",
+        "name": "MFIN",
+        "action": "SELL",
+        "signal_price": 9.89,
+        "open_price": 9.95,
+        "close_price": 9.81,
+        "pct_change": -1.41,
+        "pct_from_signal": -0.81,
+        "correct": true,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-11",
+        "ticker": "PBHC",
+        "name": "PBHC",
+        "action": "SELL",
+        "signal_price": 15.2,
+        "open_price": 15.25,
+        "close_price": 14.85,
+        "pct_change": -2.62,
+        "pct_from_signal": -2.3,
+        "correct": true,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-09",
+        "ticker": "STRS",
+        "name": "STRS",
+        "action": "SELL",
+        "signal_price": 27.55,
+        "open_price": 28.19,
+        "close_price": 28.59,
+        "pct_change": 1.42,
+        "pct_from_signal": 3.77,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-09",
+        "ticker": "TCNNF",
+        "name": "TCNNF",
+        "action": "SELL",
+        "signal_price": 12.36,
+        "open_price": 13.13,
+        "close_price": 11.55,
+        "pct_change": -12.03,
+        "pct_from_signal": -6.55,
+        "correct": true,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-08",
+        "ticker": "VLGEA",
+        "name": "VLGEA",
+        "action": "SELL",
+        "signal_price": 39.33,
+        "open_price": 40.01,
+        "close_price": 39.31,
+        "pct_change": -1.75,
+        "pct_from_signal": -0.05,
+        "correct": true,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-08",
+        "ticker": "TISI",
+        "name": "TISI",
+        "action": "SELL",
+        "signal_price": 17.93,
+        "open_price": 17.55,
+        "close_price": 17.57,
+        "pct_change": 0.11,
+        "pct_from_signal": -2.01,
+        "correct": false,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": true
+      },
+      {
+        "date": "2026-06-05",
+        "ticker": "FLR",
+        "name": "Fluor Corporation",
+        "action": "SELL",
+        "signal_price": 48.35,
+        "open_price": 49.85,
+        "close_price": 47.56,
+        "pct_change": -4.59,
+        "pct_from_signal": -1.63,
+        "correct": true,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-05",
+        "ticker": "LRCX",
+        "name": "Lam Research Corporation",
+        "action": "BUY",
+        "signal_price": 318.5,
+        "open_price": 320.37,
+        "close_price": 303.28,
+        "pct_change": -5.33,
+        "pct_from_signal": -4.78,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
       {
         "date": "2026-06-04",
         "ticker": "KLIC",
@@ -244,7 +443,13 @@
       "2026-06-01",
       "2026-06-02",
       "2026-06-03",
-      "2026-06-04"
+      "2026-06-04",
+      "2026-06-05",
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-11",
+      "2026-06-12",
+      "2026-06-15"
     ],
     "cum_capital_a": [
       2000.0,
@@ -253,7 +458,13 @@
       2034.98,
       2062.86,
       2075.65,
-      2144.76
+      2144.76,
+      2136.83,
+      2154.35,
+      2268.64,
+      2273.74,
+      2294.21,
+      NaN
     ],
     "cum_capital_b": [
       2000.0,
@@ -262,7 +473,13 @@
       2093.22,
       2148.9,
       2148.04,
-      2130.64
+      2130.64,
+      2097.08,
+      2118.68,
+      2148.13,
+      2131.97,
+      2138.79,
+      NaN
     ],
     "cum_capital_c": [
       2000.0,
@@ -271,7 +488,13 @@
       2080.11,
       2080.11,
       2093.01,
-      2162.71
+      2162.71,
+      2154.71,
+      2173.56,
+      2288.87,
+      2294.02,
+      2314.66,
+      NaN
     ],
     "cum_capital_d": [
       2000.0,
@@ -280,71 +503,98 @@
       2093.42,
       2149.11,
       2148.25,
-      2130.85
+      2130.85,
+      2097.29,
+      2118.89,
+      2148.34,
+      2132.18,
+      2139.0,
+      2139.0
     ],
-    "correct": 9,
-    "accuracy_rate": 0.75,
-    "accuracy_pct": "75.0%",
-    "simulated_capital": 2144.76,
-    "simulated_pnl_usd": 144.76,
-    "simulated_pnl_pct": "+7.24%",
+    "correct": 15,
+    "accuracy_rate": 0.625,
+    "accuracy_pct": "62.5%",
+    "simulated_capital": NaN,
+    "simulated_pnl_usd": NaN,
+    "simulated_pnl_pct": "+nan%",
     "daily_returns": [
       2.59,
       1.38,
       -2.17,
       1.37,
       0.62,
-      3.33
+      3.33,
+      -0.37,
+      0.82,
+      5.305,
+      0.225,
+      0.9,
+      NaN
     ],
-    "correct_direction": 7,
+    "correct_direction": 14,
     "accuracy_direction_rate": 0.583,
     "accuracy_direction_pct": "58.3%",
-    "simulated_capital_direction": 2130.64,
-    "simulated_pnl_direction_usd": 130.64,
-    "simulated_pnl_direction_pct": "+6.53%",
+    "simulated_capital_direction": NaN,
+    "simulated_pnl_direction_usd": NaN,
+    "simulated_pnl_direction_pct": "+nan%",
     "daily_returns_direction": [
       2.59,
       1.38,
       0.63,
       2.66,
       -0.04,
-      -0.81
+      -0.81,
+      -1.575,
+      1.03,
+      1.39,
+      -0.752,
+      0.32,
+      NaN
     ],
-    "total_gap_filtered": 6,
-    "correct_gap": 5,
-    "accuracy_gap_rate": 0.833,
-    "accuracy_gap_pct": "83.3%",
-    "simulated_capital_gap": 2162.71,
-    "simulated_pnl_gap_usd": 162.71,
-    "simulated_pnl_gap_pct": "+8.14%",
+    "total_gap_filtered": 17,
+    "correct_gap": 11,
+    "accuracy_gap_rate": 0.647,
+    "accuracy_gap_pct": "64.7%",
+    "simulated_capital_gap": NaN,
+    "simulated_pnl_gap_usd": NaN,
+    "simulated_pnl_gap_pct": "+nan%",
     "daily_returns_gap": [
       2.59,
       1.38,
       0.0,
       0.0,
       0.62,
-      3.33
+      3.33,
+      -0.37,
+      0.875,
+      5.305,
+      0.225,
+      0.9,
+      NaN
     ],
-    "gap_cost_usd": -14.12,
-    "total_limit": 7,
-    "correct_limit": 4,
-    "accuracy_limit_rate": 0.571,
-    "accuracy_limit_pct": "57.1%",
-    "simulated_capital_limit": 2130.85,
-    "simulated_pnl_limit_usd": 130.85,
-    "simulated_pnl_limit_pct": "+6.54%",
+    "gap_cost_usd": NaN,
+    "total_limit": 18,
+    "correct_limit": 11,
+    "accuracy_limit_rate": 0.611,
+    "accuracy_limit_pct": "61.1%",
+    "simulated_capital_limit": 2139.0,
+    "simulated_pnl_limit_usd": 139.0,
+    "simulated_pnl_limit_pct": "+6.95%",
     "daily_returns_limit": [
       2.6,
       1.38,
       0.63,
       2.66,
       -0.04,
-      -0.81
+      -0.81,
+      -1.575,
+      1.03,
+      1.39,
+      -0.753,
+      0.32,
+      0.0
     ]
   },
-  "warnings": [
-    "晨报文件不存在: dashboard/morning-note-history/2026-06-16.json（周末/节假日正常）",
-    "昨日信号未完成验证: ['MFIN']（可能是节假日，次交易日自动补填）"
-  ],
-  "api_cost_usd": 3.2206
+  "warnings": [],
+  "api_cost_usd": 3.279
 }
