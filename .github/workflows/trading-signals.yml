@@ -20,23 +20,36 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # 周末闸门：不管谁触发(Cloudflare cron 若漏了 1-5、误触发、手动空跑)，
-  # 周末不开盘就整个跳过，避免空跑烧 Haiku token。手动带 backfill_date 回填仍放行。
+  # 闸门：①周末不开盘跳过；②当日信号已生成则跳过(幂等)——防 Cloudflare cron 与
+  # GitHub schedule(常迟到)双触发导致一天跑两遍完整 AI 分析、双倍烧 token。
+  # 手动带 backfill_date 回填始终放行。
   gate:
     runs-on: ubuntu-latest
     outputs:
       run: ${{ steps.check.outputs.run }}
     steps:
-      - name: 周末闸门
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: 闸门(周末 / 当日已跑过 则跳过)
         id: check
         run: |
-          DOW=$(date -u +%u)   # 1=周一 .. 7=周日
-          if [ "$DOW" -ge 6 ] && [ -z "${{ inputs.backfill_date }}" ]; then
-            echo "周末($(date -u +%A) UTC)且无 backfill_date → 跳过全流程,避免空跑烧 Haiku token"
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=true" >> "$GITHUB_OUTPUT"
+          DOW=$(date -u +%u)      # 1=周一 .. 7=周日
+          TODAY=$(date -u +%F)
+          if [ -n "${{ inputs.backfill_date }}" ]; then
+            echo "手动回填(backfill_date=${{ inputs.backfill_date }}) → 放行"
+            echo "run=true" >> "$GITHUB_OUTPUT"; exit 0
           fi
+          if [ "$DOW" -ge 6 ]; then
+            echo "周末($(date -u +%A) UTC) → 跳过,避免空跑烧 token"
+            echo "run=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ -f "dashboard/trading-signals-history/$TODAY.json" ]; then
+            echo "今日($TODAY)信号已生成 → 跳过重复触发(防 Cloudflare+GitHub 双跑双烧钱)"
+            echo "run=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "今日($TODAY)尚无信号 → 放行"
+          echo "run=true" >> "$GITHUB_OUTPUT"
 
   analyze:
     needs: gate

@@ -1,7 +1,7 @@
 {
   "balance_usd": 31.43,
   "as_of": "2026-06-11",
-  "est_daily_usd": 1.8,
+  "est_daily_usd": 2.5,
   "alert_threshold_usd": 3.5,
   "_note": "Anthropic 无余额查询 API，靠这里手填的余额倒推。每次充值后更新 balance_usd 和 as_of(=充值当天 YYYY-MM-DD)。est_daily_usd=保守日均估算(覆盖信号+晨报+偶发重跑)；alert_threshold_usd=估算剩余低于此值(约够再跑1-2次)就每日 WhatsApp 提醒充值，直到你更新余额。"
 }
