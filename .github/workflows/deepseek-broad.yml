@@ -1,0 +1,85 @@
+name: DeepSeek 广池 edge 验证
+
+# 用便宜的 DeepSeek 对选股器「全部」候选(~20只)广撒分析，快速+广撒攒 edge 样本。
+# 完全独立于 Haiku/Anthropic 管线(Anthropic 没余额也照跑)。自带选股器,不依赖主流程提交。
+# 目标:2 周 ~80 笔已平仓样本 → 统计判定 AI 信号有没有 edge → 决定上不上 $2000 实盘。
+
+on:
+  schedule:
+    - cron: '0 12 * * 1-5'   # 12:00 UTC,主信号(11:30)之后,错开提交
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-pipeline    # 与主管线共用,防同时提交撞车
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.c.outputs.run }}
+    steps:
+      - id: c
+        run: |
+          if [ "$(date -u +%u)" -ge 6 ]; then
+            echo "周末跳过"; echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deepseek:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install yfinance lxml "git+https://github.com/TauricResearch/TradingAgents.git"
+
+      - name: 自带选股器(无 Anthropic 成本)
+        env:
+          ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        run: python scripts/screen-stocks.py
+
+      - name: DeepSeek 广池分析(全部候选)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/generate-deepseek-shadow.py
+
+      - name: 更新 H-DS 模拟盘
+        run: python scripts/backfill-portfolio-hds.py
+
+      - name: 更新 edge 分析
+        continue-on-error: true
+        run: python scripts/analyze-signal-edge.py
+
+      - name: 查 DeepSeek 余额(不足推飞书)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: python scripts/check-deepseek-balance.py
+
+      - name: 提交
+        run: |
+          git config user.name "deepseek-broad-bot"
+          git config user.email "deepseek-broad-bot@users.noreply.github.com"
+          git add dashboard/trading-signals-history/deepseek/ 2>/dev/null || true
+          git add data/portfolio_hds.json dashboard/portfolio-hds.js 2>/dev/null || true
+          git add dashboard/signal-edge.js data/screened-stocks.json data/screened-stocks-history/ 2>/dev/null || true
+          V=$(date -u +%Y%m%d%H%M%S)
+          echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
+          sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
+          git add dashboard/version.js dashboard/index.html
+          git diff --staged --quiet || git commit -m "DeepSeek 广池 edge 验证 $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done
+          exit 1

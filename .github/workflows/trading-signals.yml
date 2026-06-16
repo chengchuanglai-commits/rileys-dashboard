@@ -365,31 +365,4 @@ jobs:
                   print('[feishu] fail:', e)
           EOF
 
-      # ── DeepSeek 影子 A/B（主信号已提交+通知后才跑，慢/崩都不影响 Haiku）──
-      - name: DeepSeek 影子分析 (A/B)
-        if: success()
-        continue-on-error: true
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: python scripts/generate-deepseek-shadow.py
-
-      - name: H-DS 模拟盘 (DeepSeek信号+H规则)
-        if: success()
-        continue-on-error: true
-        run: python scripts/backfill-portfolio-hds.py
-
-      - name: 提交 DeepSeek 影子 + H-DS
-        if: success()
-        continue-on-error: true
-        run: |
-          git config --global user.email "trading-signals-bot@users.noreply.github.com"
-          git config --global user.name "Trading Signals Bot"
-          git add dashboard/trading-signals-history/ 2>/dev/null || true
-          git add dashboard/portfolio-hds.js data/portfolio_hds.json 2>/dev/null || true
-          V=$(date -u +%Y%m%d%H%M%S)
-          echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
-          sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
-          git add dashboard/version.js dashboard/index.html
-          git diff --staged --quiet || git commit -m "chore: DeepSeek 影子 + H-DS $(date -u +%Y-%m-%d)"
-          for i in 1 2 3 4 5; do git pull --rebase && git push && break; echo "retry $i"; sleep 10; done
+      # 注：DeepSeek 影子 + H-DS 已移到独立工作流 deepseek-broad.yml(广池+解耦,Anthropic没钱也照跑)

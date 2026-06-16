@@ -60,28 +60,31 @@ def run_deepseek(ticker):
 
 
 def main():
-    # 读主信号当天分析的标的（确切同一批 6 只）
-    reports = glob.glob(os.path.join(HISTORY_DIR, f"{today}-*-report.json"))
-    tickers = []
-    for p in reports:
-        base = os.path.basename(p)
-        # {today}-{ticker}-report.json  且排除 -deepseek-report
-        if base.endswith("-report.json") and "-deepseek" not in base:
-            tk = base[len(today) + 1:-len("-report.json")]
-            if tk and tk not in tickers:
-                tickers.append(tk)
-    if not tickers:
-        print(f"[deepseek] 没找到 {today} 的主信号 report 文件，跳过（Haiku 可能没跑/无候选）")
+    # 广撒：读选股器当天「全部」候选(~18-20只)，不再依赖 Haiku 报告(解耦+扩样本)。
+    screened = f"data/screened-stocks-history/{today}.json"
+    if not os.path.exists(screened):
+        screened = "data/screened-stocks.json"   # 实时跑用当天最新
+    try:
+        with open(screened, encoding="utf-8") as f:
+            sd = json.load(f)
+    except Exception as e:
+        print(f"[deepseek] 读不到选股器候选({screened}): {e}，跳过")
         return
-    print(f"[deepseek] 对同一批 {len(tickers)} 只候选做影子分析: {tickers}")
+    cands = sd.get("candidates", [])
+    price_map = {c["ticker"]: c.get("price") for c in cands if c.get("ticker")}
+    tickers = list(price_map.keys())
+    if not tickers:
+        print(f"[deepseek] {today} 选股器无候选，跳过")
+        return
+    print(f"[deepseek] 广池影子分析 {len(tickers)} 只候选: {tickers}")
 
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
     def analyze(tk):
+        price = price_map.get(tk) or get_price(tk)
         try:
             decision = run_deepseek(tk)
             action = parse_action(decision)
-            price = get_price(tk)
             print(f"[deepseek] {tk}: {action} @ ${price}")
             return {
                 "ticker": tk, "action": action, "current_price": price,
@@ -90,17 +93,17 @@ def main():
             }
         except Exception as e:
             print(f"[deepseek] {tk} 分析失败: {e}")
-            return {"ticker": tk, "action": "HOLD", "current_price": get_price(tk), "error": str(e)[:200]}
+            return {"ticker": tk, "action": "HOLD", "current_price": price, "error": str(e)[:200]}
 
     verdicts = []
-    with ThreadPoolExecutor(max_workers=len(tickers)) as ex:
+    with ThreadPoolExecutor(max_workers=min(len(tickers), 6)) as ex:   # 限并发≤6 防 DeepSeek 限流
         futs = {ex.submit(analyze, tk): tk for tk in tickers}
         for f in as_completed(futs):
             r = f.result()
             if r:
                 verdicts.append(r)
 
-    # 可操作信号(BUY/SELL)，口径同主信号——不发 HOLD
+    # signals=进 H-DS 现实盘的(仍限4条,$2000账户realistic)；all_verdicts=全部(含HOLD)供 edge 统计
     actionable = [v for v in verdicts if v.get("action") in ("BUY", "SELL")][:4]
     out = {
         "date": today,
