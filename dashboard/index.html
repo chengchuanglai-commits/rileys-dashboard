@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617003605";
+      var BUILD="20260617005023";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -686,15 +686,23 @@
         /* ── Group section visibility (all screen sizes) ── */
         .grp-section.grp-hidden { display: none; }
 
-        /* ── Section sub-tab bar ── */
+        /* ── Section sub-tab bar (sticky) ── */
         .sec-tab-bar {
           display: flex;
           gap: 4px;
           margin-bottom: 20px;
           padding: 4px;
-          background: #eeeeee;
+          background: #f5f5f5;
           border-radius: 12px;
           overflow-x: auto;
+          position: sticky;
+          top: 0;
+          z-index: 50;
+          transition: box-shadow .2s;
+        }
+        .sec-tab-bar.scrolled {
+          box-shadow: 0 2px 12px rgba(0,0,0,.09);
+          border-radius: 0 0 12px 12px;
         }
         .sec-tab-bar::-webkit-scrollbar { display: none; }
         .sec-tab {
@@ -4360,6 +4368,9 @@ let _sbScrollTimer = setTimeout(() => { _sbScrolling = false; }, 800);
 function sbNav(el) {
   const grp = el.dataset.grp;
   const targetId = el.dataset.target;
+  const currentGrp = document.querySelector('.grp-section:not(.grp-hidden)')?.dataset.grp;
+  const switchingGroup = grp !== currentGrp;
+
   // Update sidebar active state
   document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
   el.classList.add('active');
@@ -4371,15 +4382,19 @@ function sbNav(el) {
   document.querySelectorAll('.sec-tab').forEach(t => {
     t.classList.toggle('active', t.dataset.target === targetId);
   });
-  // Scroll to top then to section
-  window.scrollTo({ top: 0 });
+
   _sbScrolling = true;
   clearTimeout(_sbScrollTimer);
   _sbScrollTimer = setTimeout(() => { _sbScrolling = false; }, 1200);
-  setTimeout(() => {
+
+  if (switchingGroup) {
+    // Group switch: scroll to top so sticky tab bar is always visible
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    // Same group: scroll to the specific section (tab bar stays sticky)
     const target = document.getElementById(targetId);
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 60);
+  }
 }
 
 function sbNavGroup(grp) {
@@ -4435,11 +4450,16 @@ function switchMainTab(el) {
 })();
 
 (function initGroupTabs() {
-  // Show only life group by default on all screen sizes
   document.querySelectorAll('.grp-section').forEach(s => {
     if (s.dataset.grp !== 'life') s.classList.add('grp-hidden');
   });
 })();
+
+// Sticky tab bar shadow on scroll
+window.addEventListener('scroll', () => {
+  const bars = document.querySelectorAll('.sec-tab-bar');
+  bars.forEach(bar => bar.classList.toggle('scrolled', window.scrollY > 10));
+}, { passive: true });
 
 (function loadWeather() {
   const wxIcon = {
