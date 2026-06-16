@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260616020658";
+      var BUILD="20260616035311";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -3547,9 +3547,15 @@ function loadSimCurve() {
     // ── Stats panels ──
     const statsEl = document.getElementById('sim-ab-stats');
     if (statsEl) {
-        const panelHtml = (cls, label, capital, pnl, pnlPct, k1l, k1v, k2l, k2v, k3l, k3v, isBest, commission) => {
+        const panelHtml = (cls, label, capital, pnl, pnlPct, k1l, k1v, k2l, k2v, k3l, k3v, isBest, commission, realizedPnl) => {
             const pc = pnl >= 0 ? '#16a34a' : '#dc2626';
             const sign = pnl >= 0 ? '+' : '';
+            // 已实现(锁定) vs 浮盈(未平仓,会随行情变) —— 拆开显示,避免被浮盈高点误导
+            const realCap = (realizedPnl != null) ? 2000 + realizedPnl : null;
+            const unreal  = (realCap != null) ? capital - realCap : 0;
+            const splitLine = (realCap != null)
+                ? `<div class="ab-split" style="font-size:10px;color:#6b7280;margin:1px 0 3px;line-height:1.4">已实现 <b style="color:#374151">$${realCap.toFixed(0)}</b> 锁定 · 浮盈 <span style="color:${unreal>=0?'#16a34a':'#dc2626'}">${unreal>=0?'+':''}$${unreal.toFixed(0)}</span> 未平</div>`
+                : '';
             const bestBadge = isBest ? '<span style="font-size:10px;background:#fef9c3;color:#854d0e;padding:1px 6px;border-radius:4px;margin-left:6px;font-weight:700">🏆</span>' : '';
             const border = isBest ? 'border:2px solid #eab308;' : '';
             const commLine = commission != null
@@ -3559,6 +3565,7 @@ function loadSimCurve() {
                 <div class="ab-label ${cls}">${label}${bestBadge}</div>
                 <div class="ab-capital" id="lv-cap-${cls}" style="transition:color .3s">$${capital.toFixed(2)}</div>
                 <div class="ab-pnl" id="lv-pnl-${cls}" style="color:${pc};transition:color .3s">${sign}$${Math.abs(pnl).toFixed(2)} (${sign}${pnlPct}%)</div>
+                ${splitLine}
                 <div class="ab-row">
                     <div class="ab-kv"><div class="ab-kv-lbl">${k1l}</div><div class="ab-kv-val">${k1v}</div></div>
                     <div class="ab-kv"><div class="ab-kv-lbl">${k2l}</div><div class="ab-kv-val">${k2v}</div></div>
@@ -3575,21 +3582,21 @@ function loadSimCurve() {
 
         statsEl.innerHTML =
             panelHtml('e', 'E — 智能市场适应 ✦', eFinal, ePnl, ePnlPct,
-                '已平仓', eTrades, '胜率', `${eWinRate}%`, '过滤BUY', `${eFiltered}`, ePnl === best, eComm) +
+                '已平仓', eTrades, '胜率', `${eWinRate}%`, '过滤BUY', `${eFiltered}`, ePnl === best, eComm, peStats.total_realized_pnl_usd) +
             panelHtml('b', 'B — TP+8%/SL-4%/5日', bFinal, bPnl, bPnlPct,
-                '已平仓', bTrades, '盈亏比', bPF, '平均每笔', bAvg, bPnl === best, bComm) +
+                '已平仓', bTrades, '盈亏比', bPF, '平均每笔', bAvg, bPnl === best, bComm, pbStats.total_realized_pnl_usd) +
             panelHtml('c', 'C — B+1.5%跳空', cFinal, cPnl, cPnlPct,
-                '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best, cComm) +
+                '已平仓', cTrades, '盈亏比', cPF, '平均每笔', cAvg, cPnl === best, cComm, pcStats.total_realized_pnl_usd) +
             panelHtml('d', 'D — TP+15%/SL-3%/2日 ✨', dFinal, dPnl, dPnlPct,
-                '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best, dComm) +
+                '已平仓', dTrades, '盈亏比', dPF, '平均每笔', dAvg, dPnl === best, dComm, pdStats.total_realized_pnl_usd) +
             panelHtml('f', 'F — 分档出场×2 TP15% ✦', fFinal, fPnl, fPnlPct,
-                '已平仓', fTrades, '盈亏比', fPF, '平均每笔', fAvg, fPnl === best, fComm) +
+                '已平仓', fTrades, '盈亏比', fPF, '平均每笔', fAvg, fPnl === best, fComm, pfStats.total_realized_pnl_usd) +
             panelHtml('g', 'H-广池 — 晨报中大盘精选·H规则 🌐', gFinal, gPnl, gPnlPct,
-                '已平仓', gTrades, '盈亏比', gPF, '平均每笔', gAvg, gPnl === best, gComm) +
+                '已平仓', gTrades, '盈亏比', gPF, '平均每笔', gAvg, gPnl === best, gComm, pgStats.total_realized_pnl_usd) +
             panelHtml('h', 'H — 历史最优 TP15/SL2/2日 ✨', hFinal, hPnl, hPnlPct,
-                '已平仓', hTrades, '盈亏比', hPF, '平均每笔', hAvg, hPnl === best, hComm) +
+                '已平仓', hTrades, '盈亏比', hPF, '平均每笔', hAvg, hPnl === best, hComm, phStats.total_realized_pnl_usd) +
             panelHtml('hds', 'H-DS — DeepSeek信号·H规则 🤖', hdsFinal, hdsPnl, hdsPnlPct,
-                '已平仓', hdsTrades, '盈亏比', hdsPF, '平均每笔', hdsAvg, false, hdsComm);
+                '已平仓', hdsTrades, '盈亏比', hdsPF, '平均每笔', hdsAvg, false, hdsComm, phdsStats.total_realized_pnl_usd);
     }
 
     // ── Triple curve chart ──
