@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260616115637";
+      var BUILD="20260617003605";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -683,12 +683,57 @@
         .bt-lbl  { font-size: 9px; color: #999; font-weight: 500; }
         .bt-item.active .bt-lbl { color: #007aff; font-weight: 600; }
 
+        /* ── Group section visibility (all screen sizes) ── */
+        .grp-section.grp-hidden { display: none; }
+
+        /* ── Section sub-tab bar ── */
+        .sec-tab-bar {
+          display: flex;
+          gap: 4px;
+          margin-bottom: 20px;
+          padding: 4px;
+          background: #eeeeee;
+          border-radius: 12px;
+          overflow-x: auto;
+        }
+        .sec-tab-bar::-webkit-scrollbar { display: none; }
+        .sec-tab {
+          flex: 1;
+          min-width: 64px;
+          background: transparent;
+          border: none;
+          border-radius: 9px;
+          padding: 7px 12px;
+          font-size: 12px;
+          font-weight: 500;
+          color: #888;
+          cursor: pointer;
+          font-family: inherit;
+          transition: all 0.15s;
+          white-space: nowrap;
+          text-align: center;
+        }
+        .sec-tab.active {
+          background: #fff;
+          color: #111;
+          font-weight: 600;
+          box-shadow: 0 1px 4px rgba(0,0,0,.1);
+        }
+        .sec-tab:hover:not(.active) {
+          color: #555;
+          background: rgba(255,255,255,0.6);
+        }
+
+        /* ── Sidebar group labels clickable ── */
+        .sb-group-lbl { cursor: pointer; transition: color .15s; }
+        .sb-group-lbl:hover { color: #555; }
+
         /* ── Mobile overrides ── */
         @media (max-width: 480px) {
           #sidebar      { display: none; }
           #bottom-tabs  { display: flex; }
           #main-content { padding-bottom: 56px; }
-          .grp-section.grp-hidden { display: none; }
+          .sec-tab { font-size: 11px; padding: 6px 8px; }
         }
     </style>
     <script>
@@ -764,22 +809,22 @@
     </div>
   </div>
   <nav class="sb-nav">
-    <div class="sb-group-lbl">生活</div>
+    <div class="sb-group-lbl" onclick="sbNavGroup('life')">生活</div>
     <a class="sb-item active" data-grp="life" data-target="sec-health" onclick="sbNav(this)">❤️ 健康</a>
     <a class="sb-item" data-grp="life" data-target="sec-calendar" onclick="sbNav(this)">📅 日程</a>
-    <a class="sb-item" data-grp="life" data-target="sec-workout" onclick="sbNav(this)">💪 运动</a>
+    <a class="sb-item" data-grp="life" data-target="sec-archive" onclick="sbNav(this)">🗂 归档</a>
 
-    <div class="sb-group-lbl" style="margin-top:12px">投资</div>
+    <div class="sb-group-lbl" style="margin-top:12px" onclick="sbNavGroup('invest')">投资</div>
     <a class="sb-item" data-grp="invest" data-target="sec-morning" onclick="sbNav(this)">📊 晨报</a>
     <a class="sb-item" data-grp="invest" data-target="sec-signals" onclick="sbNav(this)">🤖 AI 信号</a>
     <a class="sb-item" data-grp="invest" data-target="sec-sim" onclick="sbNav(this)">📉 模拟盘</a>
     <a class="sb-item" data-grp="invest" data-target="sec-accounts" onclick="sbNav(this)">💰 账户 & 资产</a>
 
-    <div class="sb-group-lbl" style="margin-top:12px">项目</div>
+    <div class="sb-group-lbl" style="margin-top:12px" onclick="sbNavGroup('project')">项目</div>
     <a class="sb-item" data-grp="project" data-target="sec-projects" onclick="sbNav(this)">🚀 项目追踪</a>
     <a class="sb-item" data-grp="project" data-target="sec-ga" onclick="sbNav(this)">🌐 网站数据</a>
 
-    <div class="sb-group-lbl" style="margin-top:12px">资讯</div>
+    <div class="sb-group-lbl" style="margin-top:12px" onclick="sbNavGroup('news')">资讯</div>
     <a class="sb-item" data-grp="news" data-target="sec-news" onclick="sbNav(this)">📰 财经/AI/潮流</a>
   </nav>
 </div>
@@ -800,6 +845,12 @@
     </div>
 
     <section class="grp-section" data-grp="life" id="grp-life">
+
+    <div class="sec-tab-bar">
+      <button class="sec-tab active" data-target="sec-health" onclick="secTab(this)">❤ 健康 & 运动</button>
+      <button class="sec-tab" data-target="sec-calendar" onclick="secTab(this)">📅 日程</button>
+      <button class="sec-tab" data-target="sec-archive" onclick="secTab(this)">🗂 归档</button>
+    </div>
 
     <!-- ── 健康中心 & 运动 (life) ── -->
     <div class="row col-1" id="sec-health">
@@ -858,6 +909,13 @@
     </section><!-- /#grp-life -->
 
     <section class="grp-section" data-grp="invest" id="grp-invest">
+
+    <div class="sec-tab-bar">
+      <button class="sec-tab active" data-target="sec-morning" onclick="secTab(this)">📊 晨报</button>
+      <button class="sec-tab" data-target="sec-signals" onclick="secTab(this)">🤖 AI 信号</button>
+      <button class="sec-tab" data-target="sec-sim" onclick="secTab(this)">📉 模拟盘</button>
+      <button class="sec-tab" data-target="sec-accounts" onclick="secTab(this)">💰 账户</button>
+    </div>
 
     <!-- ── Row 2.6: 金融晨报 ── -->
     <div class="row col-1" id="sec-morning">
@@ -1173,6 +1231,11 @@
     </section><!-- /#grp-invest -->
 
     <section class="grp-section" data-grp="project" id="grp-project">
+
+    <div class="sec-tab-bar">
+      <button class="sec-tab active" data-target="sec-projects" onclick="secTab(this)">🚀 项目追踪</button>
+      <button class="sec-tab" data-target="sec-ga" onclick="secTab(this)">🌐 网站数据</button>
+    </div>
 
     <!-- ── Row 2: Project ── -->
     <div class="row col-1" id="sec-projects">
@@ -4291,15 +4354,50 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTsModal
 
 // ── Dashboard Navigation ──
 
-let _sbScrolling = false;
-let _sbScrollTimer = null;
+let _sbScrolling = true; // true on init so scroll spy doesn't override initial active state
+let _sbScrollTimer = setTimeout(() => { _sbScrolling = false; }, 800);
 
 function sbNav(el) {
+  const grp = el.dataset.grp;
+  const targetId = el.dataset.target;
+  // Update sidebar active state
   document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
   el.classList.add('active');
+  // Switch group (hide others, show this one)
+  document.querySelectorAll('.grp-section').forEach(s => {
+    s.classList.toggle('grp-hidden', s.dataset.grp !== grp);
+  });
+  // Sync section tab bar
+  document.querySelectorAll('.sec-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.target === targetId);
+  });
+  // Scroll to top then to section
+  window.scrollTo({ top: 0 });
   _sbScrolling = true;
   clearTimeout(_sbScrollTimer);
-  _sbScrollTimer = setTimeout(() => { _sbScrolling = false; }, 1000);
+  _sbScrollTimer = setTimeout(() => { _sbScrolling = false; }, 1200);
+  setTimeout(() => {
+    const target = document.getElementById(targetId);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 60);
+}
+
+function sbNavGroup(grp) {
+  const firstItem = document.querySelector(`.sb-item[data-grp="${grp}"]`);
+  if (firstItem) sbNav(firstItem);
+}
+
+function secTab(el) {
+  const grp = el.closest('.grp-section').dataset.grp;
+  document.querySelectorAll(`.grp-section[data-grp="${grp}"] .sec-tab`).forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  // Sync sidebar
+  document.querySelectorAll('.sb-item').forEach(i => {
+    i.classList.toggle('active', i.dataset.grp === grp && i.dataset.target === el.dataset.target);
+  });
+  _sbScrolling = true;
+  clearTimeout(_sbScrollTimer);
+  _sbScrollTimer = setTimeout(() => { _sbScrolling = false; }, 1200);
   const target = document.getElementById(el.dataset.target);
   if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -4311,6 +4409,10 @@ function switchMainTab(el) {
   document.querySelectorAll('.grp-section').forEach(s => {
     s.classList.toggle('grp-hidden', s.dataset.grp !== grp);
   });
+  // Sync sidebar
+  document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
+  const firstItem = document.querySelector(`.sb-item[data-grp="${grp}"]`);
+  if (firstItem) firstItem.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -4332,8 +4434,8 @@ function switchMainTab(el) {
   });
 })();
 
-(function initMobileTabs() {
-  if (window.innerWidth > 480) return;
+(function initGroupTabs() {
+  // Show only life group by default on all screen sizes
   document.querySelectorAll('.grp-section').forEach(s => {
     if (s.dataset.grp !== 'life') s.classList.add('grp-hidden');
   });
