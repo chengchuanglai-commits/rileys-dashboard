@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617005023";
+      var BUILD="20260617011454";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -736,6 +736,33 @@
         .sb-group-lbl { cursor: pointer; transition: color .15s; }
         .sb-group-lbl:hover { color: #555; }
 
+        /* ── Collapsible sim sections ── */
+        .sim-collapse { margin-top:14px; padding-top:12px; border-top:1px solid #f0f0f0; }
+        .sim-collapse-hd {
+          display:flex; align-items:center; gap:8px;
+          cursor:pointer; list-style:none;
+          font-size:9px; font-weight:700; color:#bbb;
+          text-transform:uppercase; letter-spacing:.1em;
+          user-select:none; padding-bottom:0;
+        }
+        .sim-collapse-hd::-webkit-details-marker { display:none; }
+        .sim-collapse-hd::after {
+          content:'›'; margin-left:auto;
+          font-size:16px; font-weight:300; color:#ccc;
+          transition:transform .2s;
+          letter-spacing:0; text-transform:none;
+        }
+        .sim-collapse[open] .sim-collapse-hd::after { transform:rotate(90deg); }
+        .sim-collapse-hd:hover { color:#888; }
+        .sim-collapse-body { margin-top:10px; }
+
+        /* ── Chart legend row ── */
+        .sim-legend-row { display:flex; flex-wrap:wrap; gap:4px 14px; padding:8px 0 2px; border-top:1px solid #f5f5f5; margin-top:4px; }
+        .sim-legend-item { display:flex; align-items:center; gap:5px; font-size:10px; cursor:pointer; transition:opacity .15s; }
+        .sim-legend-item:hover { opacity:.75; }
+        .sim-legend-dot { width:14px; height:3px; border-radius:2px; flex-shrink:0; }
+        .sim-legend-val { font-size:9px; color:#999; font-weight:400; }
+
         /* ── Mobile overrides ── */
         @media (max-width: 480px) {
           #sidebar      { display: none; }
@@ -1084,33 +1111,39 @@
                 <div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">交易历史</div>
                 <div id="sig-history-table" style="overflow-x:auto"></div>
             </div>
-            <!-- 策略优化排名 -->
-            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-                    <span style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em">🔬 策略优化排名</span>
-                    <span id="bt-meta" style="font-size:9px;color:#bbb"></span>
+            <!-- 策略优化排名 (折叠) -->
+            <details class="sim-collapse">
+                <summary class="sim-collapse-hd">
+                    🔬 策略优化排名
+                    <span id="bt-meta" style="font-weight:400;text-transform:none;letter-spacing:0;color:#bbb"></span>
+                </summary>
+                <div class="sim-collapse-body">
+                    <div id="bt-table" style="overflow-x:auto"></div>
+                    <div id="bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
                 </div>
-                <div id="bt-table" style="overflow-x:auto"></div>
-                <div id="bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
-            </div>
-            <!-- 大规模历史回测验证 -->
-            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-                    <span style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em">📊 大规模历史验证</span>
-                    <span id="hist-bt-meta" style="font-size:9px;color:#bbb"></span>
+            </details>
+            <!-- 大规模历史回测验证 (折叠) -->
+            <details class="sim-collapse">
+                <summary class="sim-collapse-hd">
+                    📊 大规模历史验证
+                    <span id="hist-bt-meta" style="font-weight:400;text-transform:none;letter-spacing:0;color:#bbb"></span>
+                </summary>
+                <div class="sim-collapse-body">
+                    <div id="hist-bt-table" style="overflow-x:auto"></div>
+                    <div id="hist-bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
                 </div>
-                <div id="hist-bt-table" style="overflow-x:auto"></div>
-                <div id="hist-bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
-            </div>
-            <!-- 持仓实时报价 -->
-            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
-                    <span style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em">当前持仓</span>
-                    <button id="live-refresh-btn" onclick="manualLiveRefresh()" style="font-size:9px;padding:1px 7px;border:1px solid #d1d5db;border-radius:4px;background:#fff;cursor:pointer;color:#6b7280">⟳ 刷新报价</button>
-                    <span id="live-status" style="font-size:9px;color:#9ca3af"></span>
+            </details>
+            <!-- 持仓实时报价 (折叠) -->
+            <details class="sim-collapse">
+                <summary class="sim-collapse-hd">
+                    📦 当前持仓
+                    <button id="live-refresh-btn" onclick="event.preventDefault();manualLiveRefresh()" style="font-size:9px;padding:1px 7px;border:1px solid #d1d5db;border-radius:4px;background:#fff;cursor:pointer;color:#6b7280;font-weight:400;text-transform:none;letter-spacing:0;margin-left:6px">⟳ 刷新</button>
+                    <span id="live-status" style="font-size:9px;color:#9ca3af;font-weight:400;text-transform:none;letter-spacing:0"></span>
+                </summary>
+                <div class="sim-collapse-body">
+                    <div id="sim-pb-open"></div>
                 </div>
-                <div id="sim-pb-open"></div>
-            </div>
+            </details>
         </div>
     </div>
 
@@ -3674,8 +3707,8 @@ function loadSimCurve() {
     const wrap = document.getElementById('sim-curve-chart');
     if (wrap && dates.length > 0) {
         const W = Math.max(wrap.offsetWidth || wrap.clientWidth || 400, 200);
-        const H = 200;
-        const PAD = { top: 20, right: 60, bottom: 30, left: 56 };
+        const H = 240;
+        const PAD = { top: 20, right: 12, bottom: 30, left: 56 };
         const cW = W - PAD.left - PAD.right;
         const cH = H - PAD.top - PAD.bottom;
 
@@ -3718,21 +3751,16 @@ function loadSimCurve() {
         const areaG = `${xPx(0)},${PAD.top+cH} ` + cumG.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumG.length-1)},${PAD.top+cH}`;
         const areaH = `${xPx(0)},${PAD.top+cH} ` + cumH.map((v,i)=>`${xPx(i).toFixed(1)},${yPx(v).toFixed(1)}`).join(' ') + ` ${xPx(cumH.length-1)},${PAD.top+cH}`;
 
-        const eLast = cumE[cumE.length-1] || eFinal;
-        const bLast = cumB[cumB.length-1] || bFinal;
-        const cLast = cumC[cumC.length-1] || cFinal;
-        const dLast = cumD[cumD.length-1] || dFinal;
-        const fLast = cumF[cumF.length-1] || fFinal;
-        const gLast = cumG[cumG.length-1] || gFinal;
-        const hLast = cumH[cumH.length-1] || hFinal;
-        const lx = W - PAD.right + 4;
-        const labelE = `<text class="series s-e" x="${lx}" y="${(yPx(eLast)+8).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#0891b2">$${eFinal.toFixed(0)}</text>`;
-        const labelB = `<text class="series s-b" x="${lx}" y="${(yPx(bLast)-4).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#16a34a">$${bFinal.toFixed(0)}</text>`;
-        const labelC = `<text class="series s-c" x="${lx}" y="${(yPx(cLast)-16).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#7c3aed">$${cFinal.toFixed(0)}</text>`;
-        const labelD = `<text class="series s-d" x="${lx}" y="${(yPx(dLast)+20).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#ea580c">$${dFinal.toFixed(0)}</text>`;
-        const labelF = `<text class="series s-f" x="${lx}" y="${(yPx(fLast)+32).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#a21caf">$${fFinal.toFixed(0)}</text>`;
-        const labelG = `<text class="series s-g" x="${lx}" y="${(yPx(gLast)+44).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#15803d">$${gFinal.toFixed(0)}</text>`;
-        const labelH = `<text class="series s-h" x="${lx}" y="${(yPx(hLast)+56).toFixed(1)}" dominant-baseline="middle" font-size="10" font-weight="700" fill="#c2410c">$${hFinal.toFixed(0)}</text>`;
+        // Legend items for HTML row below chart (replaces stacked right-side labels)
+        const legendDefs = [
+            { cls:'e', color:'#0891b2', key:'E',     val:eFinal, pnl:ePnl },
+            { cls:'b', color:'#16a34a', key:'B',     val:bFinal, pnl:bPnl },
+            { cls:'c', color:'#7c3aed', key:'C',     val:cFinal, pnl:cPnl },
+            { cls:'d', color:'#ea580c', key:'D ✨',  val:dFinal, pnl:dPnl },
+            { cls:'f', color:'#a21caf', key:'F ✦',  val:fFinal, pnl:fPnl },
+            { cls:'g', color:'#15803d', key:'G',     val:gFinal, pnl:gPnl },
+            { cls:'h', color:'#c2410c', key:'H ✨',  val:hFinal, pnl:hPnl },
+        ];
 
         wrap.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" style="overflow:hidden;display:block">
             <defs>
@@ -3760,7 +3788,6 @@ function loadSimCurve() {
             <polyline class="series s-f" points="${ptF}" fill="none" stroke="#a21caf" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4,3"/>
             <polyline class="series s-g" points="${ptG}" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3,2"/>
             <polyline class="series s-h" points="${ptH}" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6,2"/>
-            ${labelE}${labelB}${labelC}${labelD}${labelF}${labelG}${labelH}
             <g transform="translate(${PAD.left+4},${PAD.top+10})">
                 <line x1="0" y1="0" x2="14" y2="0" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4,2"/>
                 <text x="18" y="4" font-size="10" fill="#0891b2" font-weight="600">E</text>
@@ -3790,6 +3817,20 @@ function loadSimCurve() {
                 <text x="18" y="4" font-size="10" fill="#c2410c" font-weight="700">H ✨</text>
             </g>
         </svg>`;
+
+        // Append HTML legend row below SVG (clickable to focus series)
+        const legendDiv = document.createElement('div');
+        legendDiv.className = 'sim-legend-row';
+        legendDiv.innerHTML = legendDefs.map(item => {
+            const sign = item.pnl >= 0 ? '+' : '';
+            const pnlStr = `${sign}$${item.pnl.toFixed(0)}`;
+            return `<div class="sim-legend-item series s-${item.cls}" style="color:${item.color}" onclick="window._chartFocus=window._chartFocus==='${item.cls}'?null:'${item.cls}';applyChartFocus()">
+                <span class="sim-legend-dot" style="background:${item.color}"></span>
+                <span style="font-weight:700">${item.key}</span>
+                <span class="sim-legend-val">$${item.val.toFixed(0)} <span style="color:${item.pnl>=0?'#16a34a':'#dc2626'}">${pnlStr}</span></span>
+            </div>`;
+        }).join('');
+        wrap.appendChild(legendDiv);
         applyChartFocus();
     }
 }
