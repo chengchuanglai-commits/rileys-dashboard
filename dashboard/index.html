@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617124639";
+      var BUILD="20260617051546";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -3800,15 +3800,19 @@ function loadSimCurve() {
     // ── Build ranking for overview tab ──
     try {
       const INIT = 2000;
+      // 排行按「已实现净值」(锁定的真战绩)排，不用含浮盈——避免被未平仓纸面浮盈带偏(与卡片"已实现/浮盈"逻辑一致)
+      const reVal = st => INIT + ((st && st.total_realized_pnl_usd) || 0);
       const schemeRanking = [
-        {key:'e', label:'E',    val:eFinal, pnl:eFinal-INIT, pnlPct:(eFinal-INIT)/INIT*100},
-        {key:'b', label:'B',    val:bFinal, pnl:bFinal-INIT, pnlPct:(bFinal-INIT)/INIT*100},
-        {key:'c', label:'C',    val:cFinal, pnl:cFinal-INIT, pnlPct:(cFinal-INIT)/INIT*100},
-        {key:'d', label:'D',    val:dFinal, pnl:dFinal-INIT, pnlPct:(dFinal-INIT)/INIT*100},
-        {key:'f', label:'F',    val:fFinal, pnl:fFinal-INIT, pnlPct:(fFinal-INIT)/INIT*100},
-        {key:'g', label:'G',    val:gFinal, pnl:gFinal-INIT, pnlPct:(gFinal-INIT)/INIT*100},
-        {key:'h', label:'H',    val:hFinal, pnl:hFinal-INIT, pnlPct:(hFinal-INIT)/INIT*100},
-      ].filter(s => !isNaN(s.val) && s.val > 0).sort((a,b) => b.val - a.val);
+        {key:'e', label:'E',    st:peStats},
+        {key:'b', label:'B',    st:pbStats},
+        {key:'c', label:'C',    st:pcStats},
+        {key:'d', label:'D',    st:pdStats},
+        {key:'f', label:'F',    st:pfStats},
+        {key:'g', label:'广池', st:pgStats},
+        {key:'h', label:'H',    st:phStats},
+      ].map(s => { const v = reVal(s.st); return {key:s.key, label:s.label, val:v, pnl:v-INIT, pnlPct:(v-INIT)/INIT*100}; })
+       .filter(s => !isNaN(s.val) && s.val > 0)
+       .sort((a,b) => b.val - a.val);
       renderSimRanking(schemeRanking);
     } catch(e) { console.warn('renderSimRanking:', e); }
 }
