@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617161500";
+      var BUILD="20260617163000";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -3896,40 +3896,46 @@ function renderSimRanking(schemes) {
     topPctEl.textContent = sign + (bestPnl / INIT * 100).toFixed(1) + '%';
   }
   const maxPnl = Math.max(bestPnl, 1);
-  el.innerHTML = schemes.map((s, i) => {
+  // A方案：2列卡片网格
+  const cards = schemes.map((s, i) => {
     const pnl = s.val - INIT;
     const barPct = Math.max(0, Math.round((pnl / maxPnl) * 100));
     const color = SIM_SCHEME_COLORS[s.key] || '#888';
     const sign = pnl >= 0 ? '+' : '';
     const pnlColor = pnl >= 0 ? '#16a34a' : '#dc2626';
-    const bg = i === 0 ? '#f0fdf4' : '#fff';
-    const border = i === 0 ? 'border:1px solid #bbf7d0;' : 'border:1px solid #f0f0f0;';
-    const rankColor = i === 0 ? '#15803d' : '#9ca3af';
+    const isWinner = i === 0;
+    const bg = isWinner ? '#f0fdf4' : '#f8f9fa';
+    const border = isWinner ? '1.5px solid #bbf7d0' : '1px solid #f0f0f0';
+    const rankBadge = isWinner
+      ? '<span style="position:absolute;top:8px;right:9px;font-size:9px">🥇</span>'
+      : '<span style="position:absolute;top:8px;right:9px;font-size:9px;font-weight:700;color:#d1d5db">' + (i+1) + '</span>';
     const realPnl = s.realized != null ? s.realized : pnl;
     const realSign = realPnl >= 0 ? '+' : '';
     const floatPnl = (s.portfolio || (INIT + pnl)) - (INIT + realPnl);
-    const floatStr = floatPnl !== 0 ? ('浮' + (floatPnl >= 0 ? '+' : '') + '$' + Math.abs(floatPnl).toFixed(0)) : '';
-    const tradesStr = (s.trades && s.trades > 0) ? (s.trades + '笔已平') : '';
-    // Row 2 parts: description · realized · float · trades
-    const descParts = [
-      s.fullLabel || s.label,
+    const floatStr = floatPnl !== 0 ? ('浮' + (floatPnl >= 0 ? '+' : '-') + '$' + Math.abs(floatPnl).toFixed(0)) : '';
+    const tradesStr = (s.trades && s.trades > 0) ? (s.trades + '笔') : '';
+    const subParts = [
       '已实现<b style="color:' + (realPnl>=0?'#16a34a':'#dc2626') + '">' + realSign + '$' + realPnl.toFixed(0) + '</b>',
-      floatStr ? '<span style="color:#bbb">' + floatStr + '</span>' : '',
-      tradesStr,
+      floatStr, tradesStr
     ].filter(Boolean).join(' · ');
-    return '<div style="' + border + 'background:' + bg + ';border-radius:8px;padding:6px 10px 5px;margin-bottom:4px">' +
-      // Row 1: rank + short-label chip + bar + value + pct (no wrapping)
-      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">' +
-        '<span style="font-size:9px;font-weight:700;color:' + rankColor + ';width:14px;text-align:center;flex-shrink:0">' + (i+1) + '</span>' +
-        '<span style="font-size:11px;font-weight:800;color:' + color + ';min-width:20px;flex-shrink:0;letter-spacing:-.3px">' + s.label + '</span>' +
-        '<div style="flex:1;background:#ebebeb;border-radius:3px;height:5px;overflow:hidden"><div style="background:' + color + ';width:' + barPct + '%;height:5px;border-radius:3px;transition:width .5s ease-out"></div></div>' +
-        '<span style="font-size:11px;font-weight:700;color:#111;width:46px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
-        '<span style="font-size:10px;font-weight:700;color:' + pnlColor + ';width:46px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums">' + sign + (pnl / INIT * 100).toFixed(1) + '%</span>' +
+    // 奇数最后一张独占一列时 grid-column:1/-1
+    const spanFull = (schemes.length % 2 === 1 && i === schemes.length - 1)
+      ? 'grid-column:1/-1;' : '';
+    return '<div style="' + spanFull + 'position:relative;background:' + bg + ';border:' + border + ';border-radius:10px;padding:10px 12px">' +
+      rankBadge +
+      '<div style="font-size:13px;font-weight:800;color:' + color + ';margin-bottom:1px">' + s.label + '</div>' +
+      '<div style="font-size:8px;color:#aaa;margin-bottom:8px">' + (s.fullLabel ? s.fullLabel.replace(/^[^—]+— ?/, '') : '') + '</div>' +
+      '<div style="margin-bottom:5px">' +
+        '<span style="font-size:18px;font-weight:800;color:#111;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
+        '<span style="font-size:11px;font-weight:700;color:' + pnlColor + ';margin-left:5px;font-variant-numeric:tabular-nums">' + sign + (pnl/INIT*100).toFixed(1) + '%</span>' +
       '</div>' +
-      // Row 2: description + financials, all on one line, no wrapping risk
-      '<div style="padding-left:22px;font-size:8.5px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + descParts + '</div>' +
-      '</div>';
-  }).join('');
+      '<div style="background:#e5e7eb;border-radius:3px;height:4px;overflow:hidden;margin-bottom:6px">' +
+        '<div style="background:' + color + ';width:' + barPct + '%;height:4px;border-radius:3px;transition:width .5s ease-out"></div>' +
+      '</div>' +
+      '<div style="font-size:8px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
+    '</div>';
+  });
+  el.innerHTML = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + cards.join('') + '</div>';
 }
 
 // ── VPN 搭建计划 ──────────────────────────────────────
