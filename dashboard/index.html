@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617122114";
+      var BUILD="20260617122411";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -981,7 +981,7 @@
     <div class="header">
         <div>
             <div class="site-name">Riley's Dashboard</div>
-            <div class="greeting-sub" id="greeting">早上好 ☀️</div>
+            <div class="greeting-sub" id="greeting">早上好</div>
         </div>
         <div>
             <div class="clock" id="clock">00:00:00</div>
@@ -992,9 +992,9 @@
     <section class="grp-section" data-grp="life" id="grp-life">
 
     <div class="sec-tab-bar">
-      <button class="sec-tab active" data-target="sec-health" onclick="secTab(this)">❤ 健康 & 运动</button>
-      <button class="sec-tab" data-target="sec-calendar" onclick="secTab(this)">📅 日程</button>
-      <button class="sec-tab" data-target="sec-archive" onclick="secTab(this)">🗂 归档</button>
+      <button class="sec-tab active" data-target="sec-health" onclick="secTab(this)">健康 & 运动</button>
+      <button class="sec-tab" data-target="sec-calendar" onclick="secTab(this)">日程</button>
+      <button class="sec-tab" data-target="sec-archive" onclick="secTab(this)">归档</button>
     </div>
 
     <!-- ── 健康中心 & 运动 (life) ── -->
@@ -1056,10 +1056,38 @@
     <section class="grp-section" data-grp="invest" id="grp-invest">
 
     <div class="sec-tab-bar">
-      <button class="sec-tab active" data-target="sec-morning" onclick="secTab(this)">📊 晨报</button>
-      <button class="sec-tab" data-target="sec-signals" onclick="secTab(this)">🤖 AI 信号</button>
-      <button class="sec-tab" data-target="sec-sim" onclick="secTab(this)">📉 模拟盘</button>
-      <button class="sec-tab" data-target="sec-accounts" onclick="secTab(this)">💰 账户</button>
+      <button class="sec-tab active" data-target="sec-morning" onclick="secTab(this)">晨报</button>
+      <button class="sec-tab" data-target="sec-signals" onclick="secTab(this)">AI 信号</button>
+      <button class="sec-tab" data-target="sec-sim" onclick="secTab(this)">模拟盘</button>
+      <button class="sec-tab" data-target="sec-accounts" onclick="secTab(this)">账户</button>
+    </div>
+
+    <!-- ── Row 3: Ticker tape ── -->
+    <div style="margin-bottom:20px;border-radius:16px;overflow:hidden;border:1px solid #1e2840;background:#161b27">
+        <div style="padding:14px 24px 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#4b5e7a">📈 实时市场行情</div>
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {"symbols":[
+                {"proName":"TVC:SPX","title":"S&P 500"},
+                {"proName":"TVC:DJI","title":"道琼斯"},
+                {"proName":"TVC:NDX","title":"Nasdaq 100"},
+                {"proName":"AMEX:SPY","title":"SPY ETF"},
+                {"proName":"NASDAQ:QQQ","title":"QQQ ETF"},
+                {"proName":"NASDAQ:NVDA","title":"NVIDIA"},
+                {"proName":"NASDAQ:AAPL","title":"Apple"},
+                {"proName":"NASDAQ:TSLA","title":"Tesla"},
+                {"proName":"NASDAQ:AMZN","title":"Amazon"},
+                {"proName":"NASDAQ:MSFT","title":"Microsoft"},
+                {"proName":"OANDA:XAUUSD","title":"黄金"},
+                {"proName":"BINANCE:BTCUSDT","title":"比特币"},
+                {"proName":"FX:USDCNY","title":"USD/CNY"},
+                {"proName":"FX:USDCAD","title":"USD/CAD"},
+                {"proName":"FX:USDHKD","title":"USD/HKD"},
+                {"proName":"TSX:XIU","title":"TSX 60 ETF"}
+            ],"showSymbolLogo":true,"colorTheme":"dark","isTransparent":true,"displayMode":"adaptive","locale":"zh_CN"}
+            </script>
+        </div>
     </div>
 
     <!-- ── Row 2.6: 金融晨报 ── -->
@@ -1082,7 +1110,7 @@
             <div id="mn-budget-ok" class="mn-budget-ok">
                 <span>✓</span><span id="mn-budget-ok-text">余额充足</span>
             </div>
-            <div class="mn-layout" style="display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start">
+            <div class="mn-layout" style="display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:start">
                 <!-- Left: Key Numbers -->
                 <div style="border-right:1px solid #f0f0f0;padding-right:20px">
                     <div class="card-title" style="margin-bottom:10px">关键数据</div>
@@ -1142,6 +1170,14 @@
                     </div>
                 </div>
             </div>
+            <!-- 移动端关键数据摘要条 -->
+            <div class="mn-mobile-strip" style="display:none;gap:0;background:var(--c-metric);border-top:1px solid var(--c-border);padding:7px 14px;margin:12px -18px -16px;border-radius:0 0 12px 12px;flex-wrap:wrap;align-items:center">
+              <span id="mn-strip-spx" style="font-size:9px;color:var(--c-text-2);margin-right:10px"></span>
+              <span style="color:#e5e7eb;margin-right:10px">|</span>
+              <span id="mn-strip-bond" style="font-size:9px;color:var(--c-text-2);margin-right:10px"></span>
+              <span style="color:#e5e7eb;margin-right:10px">|</span>
+              <span id="mn-strip-api" style="font-size:9px;color:var(--c-text-2)"></span>
+            </div>
         </div>
     </div>
 
@@ -1172,34 +1208,6 @@
             <div id="se-content">
                 <div class="mn-empty">edge 分析将随每日信号更新…</div>
             </div>
-        </div>
-    </div>
-
-    <!-- ── Row 3: Ticker tape ── -->
-    <div style="margin-bottom:20px;border-radius:16px;overflow:hidden;border:1px solid #1e2840;background:#161b27">
-        <div style="padding:14px 24px 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#4b5e7a">📈 实时市场行情</div>
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-            {"symbols":[
-                {"proName":"TVC:SPX","title":"S&P 500"},
-                {"proName":"TVC:DJI","title":"道琼斯"},
-                {"proName":"TVC:NDX","title":"Nasdaq 100"},
-                {"proName":"AMEX:SPY","title":"SPY ETF"},
-                {"proName":"NASDAQ:QQQ","title":"QQQ ETF"},
-                {"proName":"NASDAQ:NVDA","title":"NVIDIA"},
-                {"proName":"NASDAQ:AAPL","title":"Apple"},
-                {"proName":"NASDAQ:TSLA","title":"Tesla"},
-                {"proName":"NASDAQ:AMZN","title":"Amazon"},
-                {"proName":"NASDAQ:MSFT","title":"Microsoft"},
-                {"proName":"OANDA:XAUUSD","title":"黄金"},
-                {"proName":"BINANCE:BTCUSDT","title":"比特币"},
-                {"proName":"FX:USDCNY","title":"USD/CNY"},
-                {"proName":"FX:USDCAD","title":"USD/CAD"},
-                {"proName":"FX:USDHKD","title":"USD/HKD"},
-                {"proName":"TSX:XIU","title":"TSX 60 ETF"}
-            ],"showSymbolLogo":true,"colorTheme":"dark","isTransparent":true,"displayMode":"adaptive","locale":"zh_CN"}
-            </script>
         </div>
     </div>
 
@@ -1384,8 +1392,8 @@
     <section class="grp-section" data-grp="project" id="grp-project">
 
     <div class="sec-tab-bar">
-      <button class="sec-tab active" data-target="sec-projects" onclick="secTab(this)">🚀 项目追踪</button>
-      <button class="sec-tab" data-target="sec-ga" onclick="secTab(this)">🌐 网站数据</button>
+      <button class="sec-tab active" data-target="sec-projects" onclick="secTab(this)">项目追踪</button>
+      <button class="sec-tab" data-target="sec-ga" onclick="secTab(this)">网站数据</button>
     </div>
 
     <!-- ── Row 2: Project ── -->
@@ -1698,7 +1706,7 @@ function tick() {
         `${n.getFullYear()}年 ${mths[n.getMonth()]} ${n.getDate()}日  ${days[n.getDay()]}`;
     const h = n.getHours();
     document.getElementById('greeting').textContent =
-        h<6?'深夜了 🌙':h<12?'早上好 ☀️':h<14?'中午好 🌤️':h<18?'下午好 🌤️':'晚上好 🌙';
+        h<6?'深夜了':h<12?'早上好':h<14?'中午好':h<18?'下午好':'晚上好';
 
     // 纽约时间（自动处理夏令时）
     const nyStr = n.toLocaleTimeString('en-US', { timeZone:'America/New_York', hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false });
@@ -4212,6 +4220,25 @@ function renderMorningNote(d) {
 
     // Stock picks
     renderStockPicks(d.stock_picks);
+
+    // 移动端摘要条
+    try {
+      const spxStrip = document.getElementById('mn-strip-spx');
+      const bondStrip = document.getElementById('mn-strip-bond');
+      const apiStrip = document.getElementById('mn-strip-api');
+      if (spxStrip && d.market) {
+        const sp = d.market.sp500_futures_pct;
+        const spChange = (sp >= 0 ? '+' : '') + sp.toFixed(1) + '%';
+        spxStrip.innerHTML = 'SPX 期货 <b style="color:#111;font-weight:700">' + spChange + '</b>';
+        spxStrip.querySelector('b').style.color = sp >= 0 ? '#16a34a' : '#dc2626';
+      }
+      if (bondStrip && d.market) {
+        bondStrip.innerHTML = '10Y <b style="color:#111;font-weight:700">' + d.market.treasury_10y.toFixed(2) + '%</b>';
+      }
+      if (apiStrip && d.api_cost_usd != null) {
+        apiStrip.innerHTML = 'API <b style="color:#111;font-weight:700">$' + d.api_cost_usd.toFixed(4) + '</b>';
+      }
+    } catch(e) {}
 }
 
 function renderStockPicks(picks) {
