@@ -534,8 +534,8 @@ window.PORTFOLIO_HDS = {
         "2026-06-17": {
           "open": 35.95,
           "high": 37.06,
-          "low": 35.3,
-          "close": 35.33,
+          "low": 35.11,
+          "close": 35.39,
           "pnl_pct": -2.0
         }
       },

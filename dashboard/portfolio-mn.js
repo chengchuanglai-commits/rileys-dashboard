@@ -157,9 +157,9 @@ window.PORTFOLIO_MN = {
         "2026-06-17": {
           "open": 120.39,
           "high": 122.5,
-          "low": 117.09,
-          "close": 118.26,
-          "pnl_pct": 0.84
+          "low": 116.16,
+          "close": 116.51,
+          "pnl_pct": -0.65
         }
       }
     },
@@ -181,31 +181,8 @@ window.PORTFOLIO_MN = {
           "open": 57.02,
           "high": 61.68,
           "low": 56.83,
-          "close": 60.19,
-          "pnl_pct": 4.77
-        }
-      }
-    },
-    {
-      "ticker": "FLNC",
-      "name": "Fluence Energy",
-      "action": "BUY",
-      "signal_date": "2026-06-16",
-      "entry_price": 23.92,
-      "allocated_usd": 500,
-      "shares": 20,
-      "actual_position_usd": 478.4,
-      "entry_commission": 1.0,
-      "take_profit": 27.51,
-      "stop_loss": 23.44,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-17": {
-          "open": 24.05,
-          "high": 25.67,
-          "low": 23.51,
-          "close": 24.3,
-          "pnl_pct": 1.59
+          "close": 58.82,
+          "pnl_pct": 2.38
         }
       }
     },
@@ -227,8 +204,8 @@ window.PORTFOLIO_MN = {
           "open": 251.13,
           "high": 254.84,
           "low": 248.64,
-          "close": 250.87,
-          "pnl_pct": -0.41
+          "close": 252.16,
+          "pnl_pct": 0.1
         }
       }
     },
@@ -250,8 +227,8 @@ window.PORTFOLIO_MN = {
           "open": 85.44,
           "high": 87.98,
           "low": 85.0,
-          "close": 86.6,
-          "pnl_pct": 1.91
+          "close": 86.74,
+          "pnl_pct": 2.07
         }
       }
     },
@@ -272,9 +249,9 @@ window.PORTFOLIO_MN = {
         "2026-06-17": {
           "open": 18.4,
           "high": 19.27,
-          "low": 18.33,
-          "close": 18.55,
-          "pnl_pct": 0.0
+          "low": 18.24,
+          "close": 18.24,
+          "pnl_pct": -1.67
         }
       }
     },
@@ -295,9 +272,9 @@ window.PORTFOLIO_MN = {
         "2026-06-17": {
           "open": 231.13,
           "high": 236.07,
-          "low": 229.29,
-          "close": 230.88,
-          "pnl_pct": -0.04
+          "low": 226.9,
+          "close": 226.87,
+          "pnl_pct": -1.78
         }
       }
     },
@@ -306,13 +283,13 @@ window.PORTFOLIO_MN = {
       "name": "Qualcomm Inc.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 216.36,
+      "entry_price": 212.97,
       "allocated_usd": 500,
       "shares": 2,
-      "actual_position_usd": 432.72,
+      "actual_position_usd": 425.94,
       "entry_commission": 1.0,
-      "take_profit": 248.81,
-      "stop_loss": 212.03,
+      "take_profit": 244.92,
+      "stop_loss": 208.71,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -321,13 +298,13 @@ window.PORTFOLIO_MN = {
       "name": "Marvell Technology Inc.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 301.14,
+      "entry_price": 289.54,
       "allocated_usd": 500,
       "shares": 1,
-      "actual_position_usd": 301.14,
+      "actual_position_usd": 289.54,
       "entry_commission": 1.0,
-      "take_profit": 346.31,
-      "stop_loss": 295.12,
+      "take_profit": 332.97,
+      "stop_loss": 283.75,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -336,13 +313,13 @@ window.PORTFOLIO_MN = {
       "name": "Candela Corporation",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 23.78,
+      "entry_price": 23.48,
       "allocated_usd": 500,
       "shares": 21,
-      "actual_position_usd": 499.38,
+      "actual_position_usd": 493.08,
       "entry_commission": 1.0,
-      "take_profit": 27.35,
-      "stop_loss": 23.3,
+      "take_profit": 27.0,
+      "stop_loss": 23.01,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -351,13 +328,13 @@ window.PORTFOLIO_MN = {
       "name": "FormFactor Inc.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 142.6,
+      "entry_price": 139.95,
       "allocated_usd": 500,
       "shares": 3,
-      "actual_position_usd": 427.8,
+      "actual_position_usd": 419.85,
       "entry_commission": 1.0,
-      "take_profit": 163.99,
-      "stop_loss": 139.75,
+      "take_profit": 160.94,
+      "stop_loss": 137.15,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -381,13 +358,13 @@ window.PORTFOLIO_MN = {
       "name": "Enerflex Ltd.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 20.03,
+      "entry_price": 20.05,
       "allocated_usd": 500,
       "shares": 24,
-      "actual_position_usd": 480.72,
+      "actual_position_usd": 481.2,
       "entry_commission": 1.0,
-      "take_profit": 23.03,
-      "stop_loss": 19.63,
+      "take_profit": 23.06,
+      "stop_loss": 19.65,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     }
@@ -2661,8 +2638,8 @@ window.PORTFOLIO_MN = {
         "2026-06-17": {
           "open": 230.08,
           "high": 236.0,
-          "low": 226.4,
-          "close": 227.56,
+          "low": 225.83,
+          "close": 226.63,
           "pnl_pct": -2.0
         }
       },
@@ -2673,17 +2650,47 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -11.24
+    },
+    {
+      "ticker": "FLNC",
+      "name": "Fluence Energy",
+      "action": "BUY",
+      "signal_date": "2026-06-16",
+      "entry_price": 23.92,
+      "allocated_usd": 500,
+      "shares": 20,
+      "actual_position_usd": 478.4,
+      "entry_commission": 1.0,
+      "take_profit": 27.51,
+      "stop_loss": 23.44,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 24.05,
+          "high": 25.67,
+          "low": 23.25,
+          "close": 23.42,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-06-17",
+      "close_price": 23.44,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -11.62
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 66,
+    "total_trades": 67,
     "win_trades": 23,
-    "win_rate": 34.8,
-    "total_realized_pnl_usd": 41.72,
-    "open_unrealized_pnl_usd": 76.4,
-    "portfolio_value": 2118.12,
-    "total_commission_usd": 132.0,
+    "win_rate": 34.3,
+    "total_realized_pnl_usd": 30.1,
+    "open_unrealized_pnl_usd": 37.69,
+    "portfolio_value": 2067.79,
+    "total_commission_usd": 134.0,
     "skipped_gap": 25,
     "skipped_zero_shares": 6,
     "updated_at": "2026-06-17"
