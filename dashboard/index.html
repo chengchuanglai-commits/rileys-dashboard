@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617051546";
+      var BUILD="20260617132529";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -1930,11 +1930,13 @@ const DEF_MS = [
 ].map(t=>({text:t,done:false}));
 
 function loadMilestones() {
+    const msEl = document.getElementById('milestones');
+    if (!msEl) return;
     const newSaved = localStorage.getItem('seedclay_milestones');
     if (newSaved) {
         const ms = JSON.parse(newSaved);
         const phaseNames = {1:'Phase 1 · 品牌视觉',2:'Phase 2 · 蓝图研发',3:'Phase 3 · 营销投放',4:'Phase 4 · 运营系统'};
-        document.getElementById('milestones').innerHTML = [1,2,3,4].map(p => {
+        msEl.innerHTML = [1,2,3,4].map(p => {
             const items = ms.filter(m => m.phase === p);
             return `<div style="margin-bottom:12px">
                 <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:6px">${phaseNames[p]}</div>
@@ -1948,7 +1950,7 @@ function loadMilestones() {
     } else {
         const saved = localStorage.getItem('milestones');
         const ms = saved ? JSON.parse(saved) : DEF_MS.map(m=>({...m}));
-        document.getElementById('milestones').innerHTML = ms.map((m,i)=>`
+        msEl.innerHTML = ms.map((m,i)=>`
             <div class="milestone" onclick="toggleMsLegacy(${i})">
                 <div class="ms-circ ${m.done?'done':''}">${m.done?'✓':''}</div>
                 <span class="ms-text ${m.done?'done':''}">${m.text}</span>
@@ -1982,13 +1984,14 @@ function loadSeedclayMetrics() {
     const d = JSON.parse(localStorage.getItem('seedclay_metrics') || 'null');
     if (!d) return;
     const fmt = n => n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'')+'K' : String(n);
-    document.getElementById('sc-ig-followers').textContent = fmt(d.ig_followers || 0);
-    document.getElementById('sc-ig-posts').textContent     = d.ig_posts || 0;
-    document.getElementById('sc-orders').textContent       = d.orders || 0;
-    document.getElementById('sc-revenue').textContent      = d.revenue_usd ? `$${d.revenue_usd}` : '$0';
-    document.getElementById('sc-ad-spend').textContent     = d.ad_spend_usd ? `$${d.ad_spend_usd}` : '$0';
-    document.getElementById('sc-cac').textContent          = d.cac ? `$${d.cac}` : '—';
-    if (d.updated) document.getElementById('sc-metrics-upd').textContent = `上次更新：${d.updated}`;
+    const _s = (id, val) => { const e=document.getElementById(id); if(e) e.textContent=val; };
+    _s('sc-ig-followers', fmt(d.ig_followers || 0));
+    _s('sc-ig-posts',     d.ig_posts || 0);
+    _s('sc-orders',       d.orders || 0);
+    _s('sc-revenue',      d.revenue_usd ? `$${d.revenue_usd}` : '$0');
+    _s('sc-ad-spend',     d.ad_spend_usd ? `$${d.ad_spend_usd}` : '$0');
+    _s('sc-cac',          d.cac ? `$${d.cac}` : '—');
+    if (d.updated) _s('sc-metrics-upd', `上次更新：${d.updated}`);
 }
 loadSeedclayMetrics();
 
@@ -2003,11 +2006,13 @@ function fmtCount(n) {
 function loadIg() {
     const d = JSON.parse(localStorage.getItem('ig_seedclay') || 'null');
     if (!d) return;
-    document.getElementById('ig-followers').textContent = fmtCount(d.followers);
-    document.getElementById('ig-posts').textContent     = d.posts;
-    const upd = new Date(d.ts);
-    document.getElementById('ig-upd').textContent =
-        `上次更新：${upd.getFullYear()}-${String(upd.getMonth()+1).padStart(2,'0')}-${String(upd.getDate()).padStart(2,'0')}`;
+    const _s = (id, val) => { const e=document.getElementById(id); if(e) e.textContent=val; };
+    _s('ig-followers', fmtCount(d.followers));
+    _s('ig-posts',     d.posts);
+    if (d.ts) {
+        const upd = new Date(d.ts);
+        _s('ig-upd', `上次更新：${upd.getFullYear()}-${String(upd.getMonth()+1).padStart(2,'0')}-${String(upd.getDate()).padStart(2,'0')}`);
+    }
 }
 function editIg() {
     const d = JSON.parse(localStorage.getItem('ig_seedclay') || '{"followers":0,"posts":0}');
@@ -2064,6 +2069,7 @@ function renderPortfolio(prices = {}) {
         portoList.innerHTML = '<div class="porto-empty">尚无持仓 — 点击「添加持仓」开始记录，或先用下方平台开户</div>';
         ['ps-value','ps-cost','ps-pl','ps-plpct'].forEach(id => {
             const el = document.getElementById(id);
+            if (!el) return;
             if (id==='ps-plpct') el.textContent = '0%';
             else el.textContent = '$0';
             el.className = 'p-stat-val';
@@ -2121,12 +2127,12 @@ function renderPortfolio(prices = {}) {
     const totalPlPct = totalCost ? (totalPl/totalCost*100) : 0;
     const plCls      = totalPl >= 0 ? 'pos' : 'neg';
 
-    document.getElementById('ps-value').textContent  = '$'+totalValue.toFixed(0);
-    document.getElementById('ps-cost').textContent   = '$'+totalCost.toFixed(0);
-    document.getElementById('ps-pl').textContent     = `${totalPl>=0?'+':'-'}$${Math.abs(totalPl).toFixed(0)}`;
-    document.getElementById('ps-plpct').textContent  = `${totalPlPct>=0?'+':''}${totalPlPct.toFixed(2)}%`;
-    document.getElementById('ps-pl').className       = 'p-stat-val '+plCls;
-    document.getElementById('ps-plpct').className    = 'p-stat-val '+plCls;
+    const _ps = (id, val) => { const e=document.getElementById(id); if(e) e.textContent=val; };
+    _ps('ps-value',  '$'+totalValue.toFixed(0));
+    _ps('ps-cost',   '$'+totalCost.toFixed(0));
+    _ps('ps-pl',     `${totalPl>=0?'+':'-'}$${Math.abs(totalPl).toFixed(0)}`);
+    _ps('ps-plpct',  `${totalPlPct>=0?'+':''}${totalPlPct.toFixed(2)}%`);
+    ['ps-pl','ps-plpct'].forEach(id => { const e=document.getElementById(id); if(e) e.className='p-stat-val '+plCls; });
 }
 
 async function refreshPortfolioPrices() {
@@ -2249,11 +2255,12 @@ function out(d) {
   return ContentService.createTextOutput(JSON.stringify(d)).setMimeType(ContentService.MimeType.JSON);
 }`;
 
-document.getElementById('ga-script-code').textContent = GA_SCRIPT_CODE;
+{ const _el = document.getElementById('ga-script-code'); if (_el) _el.textContent = GA_SCRIPT_CODE; }
 
 function gaSet(id, val) { const e=document.getElementById(id); if(e) e.textContent=val; }
 
 function renderGaData(today, week, updatedStr, isStale, isManual) {
+    // legacy hidden IDs (kept for compat)
     gaSet('ga-users',    today.activeUsers ?? today.users    ?? '—');
     gaSet('ga-sessions', today.sessions    ?? '—');
     gaSet('ga-carts',    today.addToCarts  ?? today.carts   ?? '—');
@@ -2261,12 +2268,29 @@ function renderGaData(today, week, updatedStr, isStale, isManual) {
     const rev = today.revenue ?? today.rev;
     gaSet('ga-revenue',  rev !== undefined ? '$' + parseFloat(rev).toFixed(0) : '—');
 
+    // new 2×2 display IDs
+    gaSet('ga-visitors', today.activeUsers ?? today.users ?? '—');
+    gaSet('ga-visitors-delta', today.sessions ? today.sessions + ' 会话' : '');
+    gaSet('ga-duration', today.avgDuration ?? today.avgSessionDuration
+        ? (function(s){ const m=Math.floor(s/60),sec=Math.round(s%60); return m+':'+(sec<10?'0':'')+sec; })(parseFloat(today.avgDuration ?? today.avgSessionDuration))
+        : '—');
+    gaSet('ga-orders',   today.purchases   ?? today.orders  ?? '—');
+    gaSet('ga-orders-delta', rev !== undefined ? '$' + parseFloat(rev).toFixed(0) + ' 营收' : '');
+    const bounce = today.bounceRate ?? today.bounce;
+    gaSet('ga-bounce', bounce !== undefined ? (parseFloat(bounce)*100).toFixed(0)+'%' : '—');
+    const updFormatted = updatedStr ? (function(){
+        const upd=new Date(updatedStr);
+        return `${(upd.getMonth()+1)}/${upd.getDate()} ${String(upd.getHours()).padStart(2,'0')}:${String(upd.getMinutes()).padStart(2,'0')}`;
+    })() : '';
+    gaSet('ga-updated', updFormatted ? (isManual?'手动 ':'') + updFormatted : '');
+
     setSyncDot('ga-dot', (!isManual && !isStale) ? 'synced' : '');
 
-    if (week && week.length) {
+    const gaChart = document.getElementById('ga-chart');
+    if (gaChart && week && week.length) {
         const max = Math.max(...week.map(d=>d.users), 1);
         const WD = ['日','一','二','三','四','五','六'];
-        document.getElementById('ga-chart').innerHTML = week.map((d,i) => {
+        gaChart.innerHTML = week.map((d,i) => {
             const pct = Math.round((d.users/max)*100);
             const isToday = i===week.length-1;
             const dt = new Date(d.date.slice(0,4)+'-'+d.date.slice(4,6)+'-'+d.date.slice(6,8));
@@ -2277,13 +2301,12 @@ function renderGaData(today, week, updatedStr, isStale, isManual) {
         }).join('');
     }
 
-    const upd = new Date(updatedStr);
-    const ts  = `${(upd.getMonth()+1)}/${upd.getDate()} ${String(upd.getHours()).padStart(2,'0')}:${String(upd.getMinutes()).padStart(2,'0')}`;
     const updEl = document.getElementById('ga-upd');
-    if (updEl) updEl.textContent =
-        isManual ? `手动更新：${ts}`
-                 : isStale ? `缓存数据：${ts}`
-                 : `自动同步：${ts}`;
+    if (updEl && updatedStr) {
+        const upd = new Date(updatedStr);
+        const ts  = `${(upd.getMonth()+1)}/${upd.getDate()} ${String(upd.getHours()).padStart(2,'0')}:${String(upd.getMinutes()).padStart(2,'0')}`;
+        updEl.textContent = isManual ? `手动更新：${ts}` : isStale ? `缓存数据：${ts}` : `自动同步：${ts}`;
+    }
 }
 
 async function loadAnalytics() {
