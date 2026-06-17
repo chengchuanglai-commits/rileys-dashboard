@@ -1,0 +1,175 @@
+{
+  "date": "2026-06-17",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 93.14,
+      "target_price": 102.45,
+      "stop_loss": 88.48
+    },
+    {
+      "ticker": "SBFG",
+      "action": "BUY",
+      "current_price": 22.33,
+      "target_price": 24.56,
+      "stop_loss": 21.21
+    },
+    {
+      "ticker": "HOFT",
+      "action": "BUY",
+      "current_price": 15.21,
+      "target_price": 16.73,
+      "stop_loss": 14.45
+    },
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 15.65,
+      "target_price": 17.22,
+      "stop_loss": 14.87
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 93.14,
+      "target_price": 102.45,
+      "stop_loss": 88.48
+    },
+    {
+      "ticker": "SBFG",
+      "action": "BUY",
+      "current_price": 22.33,
+      "target_price": 24.56,
+      "stop_loss": 21.21
+    },
+    {
+      "ticker": "HOFT",
+      "action": "BUY",
+      "current_price": 15.21,
+      "target_price": 16.73,
+      "stop_loss": 14.45
+    },
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 15.65,
+      "target_price": 17.22,
+      "stop_loss": 14.87
+    },
+    {
+      "ticker": "SNEX",
+      "action": "SELL",
+      "current_price": 131.9,
+      "target_price": 145.09,
+      "stop_loss": 125.3
+    },
+    {
+      "ticker": "MFIN",
+      "action": "SELL",
+      "current_price": 9.87,
+      "target_price": 10.86,
+      "stop_loss": 9.38
+    },
+    {
+      "ticker": "FISI",
+      "action": "BUY",
+      "current_price": 37.15,
+      "target_price": 40.87,
+      "stop_loss": 35.29
+    },
+    {
+      "ticker": "CMPR",
+      "action": "SELL",
+      "current_price": 83.93,
+      "target_price": 92.32,
+      "stop_loss": 79.73
+    },
+    {
+      "ticker": "CNOB",
+      "action": "SELL",
+      "current_price": 32.54,
+      "target_price": 35.79,
+      "stop_loss": 30.91
+    },
+    {
+      "ticker": "CBRL",
+      "action": "HOLD",
+      "current_price": 43.75,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "SPXC",
+      "action": "HOLD",
+      "current_price": 234.8,
+      "target_price": 258.28,
+      "stop_loss": 223.06
+    },
+    {
+      "ticker": "FCFS",
+      "action": "BUY",
+      "current_price": 219.81,
+      "target_price": 241.79,
+      "stop_loss": 208.82
+    },
+    {
+      "ticker": "WEYS",
+      "action": "HOLD",
+      "current_price": 36.22,
+      "target_price": 39.84,
+      "stop_loss": 34.41
+    },
+    {
+      "ticker": "WSBC",
+      "action": "HOLD",
+      "current_price": 36.15,
+      "target_price": 39.77,
+      "stop_loss": 34.34
+    },
+    {
+      "ticker": "TRST",
+      "action": "HOLD",
+      "current_price": 52.79,
+      "target_price": 58.07,
+      "stop_loss": 50.15
+    },
+    {
+      "ticker": "ARCB",
+      "action": "SELL",
+      "current_price": 159.8,
+      "target_price": 175.78,
+      "stop_loss": 151.81
+    },
+    {
+      "ticker": "MCRI",
+      "action": "BUY",
+      "current_price": 127.82,
+      "target_price": 140.6,
+      "stop_loss": 121.43
+    },
+    {
+      "ticker": "FMBH",
+      "action": "HOLD",
+      "current_price": 46.0,
+      "target_price": 50.6,
+      "stop_loss": 43.7
+    },
+    {
+      "ticker": "USLM",
+      "action": "SELL",
+      "current_price": 109.48,
+      "target_price": 120.43,
+      "stop_loss": 104.01
+    },
+    {
+      "ticker": "EZPW",
+      "action": "SELL",
+      "current_price": 30.89,
+      "target_price": 33.98,
+      "stop_loss": 29.35
+    }
+  ]
+}
