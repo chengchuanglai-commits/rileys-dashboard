@@ -58,6 +58,9 @@
   - 宽度缩减至约 80px
   - 分组名：`font-size: 10px; font-weight: 600`，活跃分组右边框 `2px solid #111`，文字 `#111`；非活跃 `#9ca3af`
   - 顶部 logo 区保留（文字 "Riley" 或首字母）
+  - logo 下方显示版本号：`v` + BUILD 变量前8位（日期部分），例如 `v20260617`
+    - `font-size: 8px; color: #d1d5db`，不可点击，纯展示
+  - 移动端顶部导航左侧同样显示版本号（`font-size: 8px; color: #d1d5db`）
   - 无 emoji，无子导航项
 - **子导航完全交给 Tab bar**：每个分组内顶部 sticky `.sec-tab-bar`，样式不变
 - 默认落地：生活分组
