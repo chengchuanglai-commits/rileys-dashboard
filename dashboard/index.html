@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617120755";
+      var BUILD="20260617121434";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -648,7 +648,7 @@
 
         /* ── Sidebar ── */
         #sidebar {
-          width: 160px;
+          width: 80px;
           background: #fff;
           border-right: 1px solid #e8e8e8;
           position: sticky;
@@ -658,29 +658,20 @@
           flex-shrink: 0;
           z-index: 100;
         }
-        .sb-header { padding: 16px; border-bottom: 1px solid #e8e8e8; }
-        .sb-title  { font-size: 13px; font-weight: 700; color: #111; }
-        .sb-sub    { font-size: 10px; color: #999; margin-top: 2px; }
-        .sb-nav    { padding: 12px 0; }
-        .sb-group-lbl {
-          padding: 0 16px 4px;
-          font-size: 9px; font-weight: 700; color: #bbb;
-          text-transform: uppercase; letter-spacing: .1em;
-        }
+        .sb-header { padding: 16px 0 12px 14px; border-bottom: 1px solid #f0f0f0; }
+        .sb-title  { font-size: 13px; font-weight: 800; color: #111; }
+        .sb-version { font-size: 8px; color: #d1d5db; margin-top: 4px; }
+        .sb-nav    { padding: 8px 0; }
         .sb-item {
-          display: flex; align-items: center; gap: 7px;
-          margin: 0 8px 2px; border-radius: 8px;
-          padding: 7px 10px; font-size: 12px; color: #555;
+          display: block;
+          margin: 0; padding: 10px 0 10px 14px;
+          font-size: 10px; font-weight: 600; color: #9ca3af;
           cursor: pointer; text-decoration: none;
-          transition: background .15s, color .15s;
+          border-right: 2px solid transparent;
+          transition: color .15s, border-color .15s;
         }
-        .sb-item:hover  { background: #f5f5f7; color: #111; }
-        .sb-item.active { background: #111; color: #fff; }
-        /* ── Weather widget ── */
-        .sb-weather { padding: 10px 16px; border-bottom: 1px solid #e8e8e8; }
-        .sb-weather-row { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #555; margin-bottom: 4px; }
-        .sb-weather-city { font-size: 9px; color: #bbb; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; min-width: 28px; }
-        .sb-weather-val { font-size: 11px; color: #333; font-weight: 500; }
+        .sb-item:hover  { color: #374151; }
+        .sb-item.active { color: #111; border-right-color: #111; }
 
         /* ── Main content ── */
         #main-content { flex: 1; min-width: 0; }
@@ -755,8 +746,6 @@
         }
 
         /* ── Sidebar group labels clickable ── */
-        .sb-group-lbl { cursor: pointer; transition: color .15s; }
-        .sb-group-lbl:hover { color: #555; }
 
         /* ── Collapsible sim sections ── */
         .sim-collapse { margin-top:14px; padding-top:12px; border-top:1px solid #f0f0f0; }
@@ -917,41 +906,14 @@
 
 <div id="sidebar">
   <div class="sb-header">
-    <div class="sb-title">Riley's Dashboard</div>
-    <div class="sb-sub">个人中心</div>
-  </div>
-  <div class="sb-weather" id="sb-weather">
-    <div class="sb-weather-row">
-      <span class="sb-weather-city">深圳</span>
-      <span class="sb-weather-val" id="wx-shenzhen">…</span>
-    </div>
-    <div class="sb-weather-row">
-      <span class="sb-weather-city">多伦多</span>
-      <span class="sb-weather-val" id="wx-toronto">…</span>
-    </div>
-    <div class="sb-weather-row" style="margin-top:6px;padding-top:6px;border-top:1px solid #f0f0f0">
-      <span class="sb-weather-city">纽约</span>
-      <span id="ny-time" style="font-size:11px;color:#333;font-variant-numeric:tabular-nums;white-space:nowrap"></span>
-    </div>
+    <div class="sb-title">R</div>
+    <div id="sb-version" class="sb-version"></div>
   </div>
   <nav class="sb-nav">
-    <div class="sb-group-lbl" onclick="sbNavGroup('life')">生活</div>
-    <a class="sb-item active" data-grp="life" data-target="sec-health" onclick="sbNav(this)">❤️ 健康</a>
-    <a class="sb-item" data-grp="life" data-target="sec-calendar" onclick="sbNav(this)">📅 日程</a>
-    <a class="sb-item" data-grp="life" data-target="sec-archive" onclick="sbNav(this)">🗂 归档</a>
-
-    <div class="sb-group-lbl" style="margin-top:12px" onclick="sbNavGroup('invest')">投资</div>
-    <a class="sb-item" data-grp="invest" data-target="sec-morning" onclick="sbNav(this)">📊 晨报</a>
-    <a class="sb-item" data-grp="invest" data-target="sec-signals" onclick="sbNav(this)">🤖 AI 信号</a>
-    <a class="sb-item" data-grp="invest" data-target="sec-sim" onclick="sbNav(this)">📉 模拟盘</a>
-    <a class="sb-item" data-grp="invest" data-target="sec-accounts" onclick="sbNav(this)">💰 账户 & 资产</a>
-
-    <div class="sb-group-lbl" style="margin-top:12px" onclick="sbNavGroup('project')">项目</div>
-    <a class="sb-item" data-grp="project" data-target="sec-projects" onclick="sbNav(this)">🚀 项目追踪</a>
-    <a class="sb-item" data-grp="project" data-target="sec-ga" onclick="sbNav(this)">🌐 网站数据</a>
-
-    <div class="sb-group-lbl" style="margin-top:12px" onclick="sbNavGroup('news')">资讯</div>
-    <a class="sb-item" data-grp="news" data-target="sec-news" onclick="sbNav(this)">📰 财经/AI/潮流</a>
+    <a class="sb-item active" data-grp="life" onclick="sbNavGroup('life')">生活</a>
+    <a class="sb-item" data-grp="invest" onclick="sbNavGroup('invest')">投资</a>
+    <a class="sb-item" data-grp="project" onclick="sbNavGroup('project')">项目</a>
+    <a class="sb-item" data-grp="news" onclick="sbNavGroup('news')">资讯</a>
   </nav>
 </div>
 
@@ -4530,17 +4492,27 @@ function sbNav(el) {
 }
 
 function sbNavGroup(grp) {
-  const firstItem = document.querySelector(`.sb-item[data-grp="${grp}"]`);
-  if (firstItem) sbNav(firstItem);
+  // 更新 sidebar active
+  document.querySelectorAll('#sidebar .sb-item').forEach(i => {
+    i.classList.toggle('active', i.dataset.grp === grp);
+  });
+  // 切换 grp-section 可见性
+  document.querySelectorAll('.grp-section').forEach(s => {
+    s.classList.toggle('grp-hidden', s.dataset.grp !== grp);
+  });
+  // 更新横向 tab bar 内第一个 tab 为 active
+  const firstTab = document.querySelector(`.grp-section[data-grp="${grp}"] .sec-tab`);
+  if (firstTab) secTab(firstTab);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function secTab(el) {
   const grp = el.closest('.grp-section').dataset.grp;
   document.querySelectorAll(`.grp-section[data-grp="${grp}"] .sec-tab`).forEach(t => t.classList.remove('active'));
   el.classList.add('active');
-  // Sync sidebar
-  document.querySelectorAll('.sb-item').forEach(i => {
-    i.classList.toggle('active', i.dataset.grp === grp && i.dataset.target === el.dataset.target);
+  // Sync sidebar (new sidebar has grp-level items only)
+  document.querySelectorAll('#sidebar .sb-item').forEach(i => {
+    i.classList.toggle('active', i.dataset.grp === grp);
   });
   _sbScrolling = true;
   clearTimeout(_sbScrollTimer);
@@ -4556,10 +4528,10 @@ function switchMainTab(el) {
   document.querySelectorAll('.grp-section').forEach(s => {
     s.classList.toggle('grp-hidden', s.dataset.grp !== grp);
   });
-  // Sync sidebar
-  document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
-  const firstItem = document.querySelector(`.sb-item[data-grp="${grp}"]`);
-  if (firstItem) firstItem.classList.add('active');
+  // Sync sidebar (new sidebar has grp-level items only)
+  document.querySelectorAll('#sidebar .sb-item').forEach(i => {
+    i.classList.toggle('active', i.dataset.grp === grp);
+  });
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -4585,6 +4557,15 @@ function switchMainTab(el) {
   document.querySelectorAll('.grp-section').forEach(s => {
     if (s.dataset.grp !== 'life') s.classList.add('grp-hidden');
   });
+})();
+
+(function initVersion() {
+  var m = (typeof BUILD !== 'undefined' ? BUILD : '').match(/^(\d{8})/);
+  var ver = m ? 'v' + m[1] : '';
+  var sb = document.getElementById('sb-version');
+  var mob = document.getElementById('mob-version');
+  if (sb) sb.textContent = ver;
+  if (mob) mob.textContent = ver;
 })();
 
 // Sticky tab bar shadow on scroll
