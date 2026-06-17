@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617115055";
+      var BUILD="20260617152827";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -4024,6 +4024,23 @@ function renderSchemeDetail(key, tab) {
           '<span style="font-size:11px;font-weight:700;color:' + pColor + ';flex-shrink:0;font-variant-numeric:tabular-nums">' + sign + '$' + Math.abs(pnl).toFixed(0) + '</span>' +
         '</div>';
       }).join('');
+      // 平仓汇总：补上之前缺的「佣金」+「平仓盈利情况」(胜负/总盈利/总亏损/净已实现/盈亏比)
+      const _w = closed.filter(p => (p.realized_pnl_usd||0) > 0);
+      const _gp = _w.reduce((s,p)=>s+(p.realized_pnl_usd||0),0);
+      const _gl = closed.filter(p=>(p.realized_pnl_usd||0)<0).reduce((s,p)=>s+Math.abs(p.realized_pnl_usd||0),0);
+      const _cm = closed.reduce((s,p)=>s+(p.commission_total||0),0);
+      const _net = closed.reduce((s,p)=>s+(p.realized_pnl_usd||0),0);
+      const _pf = _gl>0 ? (_gp/_gl).toFixed(2) : '∞';
+      const _r = (l,v,c)=>'<div style="display:flex;justify-content:space-between;font-size:9.5px;padding:1.5px 0"><span style="color:#888">'+l+'</span><span style="font-weight:700;color:'+(c||'#111')+';font-variant-numeric:tabular-nums">'+v+'</span></div>';
+      const summary = '<div style="background:#fafafa;border-radius:8px;padding:8px 11px;margin-bottom:8px">' +
+        _r('胜 / 负', _w.length+' / '+(closed.length-_w.length)) +
+        _r('盈亏比', _pf, (_pf!=='∞'&&parseFloat(_pf)<1)?'#dc2626':'#16a34a') +
+        _r('总盈利', '+$'+_gp.toFixed(0), '#16a34a') +
+        _r('总亏损', '-$'+_gl.toFixed(0), '#dc2626') +
+        _r('总佣金', '-$'+_cm.toFixed(2), '#dc2626') +
+        _r('净已实现', (_net>=0?'+':'')+'$'+_net.toFixed(0), _net>=0?'#16a34a':'#dc2626') +
+        '</div>';
+      rows = summary + rows;
     }
   }
 
