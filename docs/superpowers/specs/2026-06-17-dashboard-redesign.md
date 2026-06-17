@@ -51,12 +51,25 @@
 
 ---
 
-## 2. 导航结构（保持不变）
+## 2. 导航结构
 
-- 左侧 Sidebar：4个分组（生活 / 投资 / 项目 / 资讯）
-- 每组内：顶部 sticky 水平 Tab 切换子板块
+### 2.1 桌面端（≥ 768px）
+- **左侧 Sidebar 极简化**：只显示4个分组名词（生活 / 投资 / 项目 / 资讯），无子项
+  - 宽度缩减至约 80px
+  - 分组名：`font-size: 10px; font-weight: 600`，活跃分组右边框 `2px solid #111`，文字 `#111`；非活跃 `#9ca3af`
+  - 顶部 logo 区保留（文字 "Riley" 或首字母）
+  - 无 emoji，无子导航项
+- **子导航完全交给 Tab bar**：每个分组内顶部 sticky `.sec-tab-bar`，样式不变
 - 默认落地：生活分组
-- 底部 bottom nav bar 保持不变
+- 底部 bottom nav bar 移除（桌面不需要）
+
+### 2.2 移动端（< 768px）
+- **Sidebar 隐藏**，替换为顶部双行导航：
+  - 第一行：4个分组名横排，底部下划线标记活跃分组（`border-bottom: 2px solid #111`）
+  - 第二行：当前分组的子 Tab（复用 `.sec-tab-bar` 样式，pill 形态）
+  - 两行整体固定在顶部（`position: sticky; top: 0; z-index: 50`）
+- **无底部 Tab Bar**（避免与系统手势冲突）
+- 分组切换：点击第一行分组名，子 Tab 行自动更新为对应分组的子项
 
 ---
 
@@ -235,7 +248,49 @@ Tab 4 — 排名：
 
 ---
 
-## 8. 不变的部分
+## 8. 移动端适配规则（< 768px）
+
+### 8.1 晨报（sec-morning）
+布局切换为**文章优先**：
+- 文章（AI 分析）全宽显示在上方，`font-size: 10px; line-height: 1.8`，**完整展示不截断，不加"更多"按钮**
+- 数字（关键数据）压缩为卡片底部一行固定摘要条：
+  - 格式：`SPX 5,421 +0.8%  |  10Y 4.21%  |  API $3.2`
+  - `font-size: 9px; color: #9ca3af`，数值 `color: #111; font-weight: 600`
+  - 背景 `#f8f9fa`，`border-top: 1px solid #f0f0f0`，`padding: 7px 14px`
+
+### 8.2 通用卡片规则
+- 所有卡片单列堆叠，`width: 100%`
+- 卡片圆角、内边距、阴影不变
+
+### 8.3 各板块具体适配
+
+| 板块 | 移动端适配 |
+|------|-----------|
+| 健康 2×2 指标卡 | 保持 2×2，数字字号 18px→15px |
+| 模拟盘排行榜 | 进度条宽度自适应，净值和收益率同行 |
+| 模拟盘曲线图 | 高度 240px→160px，图例 2列保持 |
+| 账户 2×2 网格 | 保持 2×2，原始金额字号 14px→12px |
+| AI 信号内部 Tab | 横向可滑动，不换行，`overflow-x: auto` |
+| 模拟盘内部 Tab | 同上 |
+| TradingView widgets | `width: 100%`，Ticker Tape 高度不变，指数走势 300px→220px |
+| 项目进度卡 | 单列，展开体验不变 |
+| 新闻列表 | 单列，展开摘要不变 |
+
+### 8.4 断点
+```css
+@media (max-width: 767px) {
+  /* 隐藏 sidebar */
+  .sidebar { display: none; }
+  /* 显示顶部双行导航 */
+  .mobile-top-nav { display: block; }
+  /* 主内容区全宽 */
+  .main-content { margin-left: 0; width: 100%; }
+}
+```
+
+---
+
+## 9. 不变的部分
 
 - 所有数据加载逻辑（loadMorningNote、loadTradingSignals、loadSimCurve 等）完全不变
 - Cloudflare Worker 接口不变
