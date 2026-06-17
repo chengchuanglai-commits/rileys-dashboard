@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617121903";
+      var BUILD="20260617122114";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -4539,12 +4539,25 @@ function mobGrpSwitch(el) {
   document.querySelectorAll('.grp-section').forEach(s => {
     s.classList.toggle('grp-hidden', s.dataset.grp !== grp);
   });
+  // Populate mobile tab strip — delegate clicks to original hidden tabs
   const srcBar = document.querySelector(`.grp-section[data-grp="${grp}"] .sec-tab-bar`);
   const wrap = document.getElementById('mob-tab-wrap');
   if (wrap) {
     wrap.innerHTML = '';
     if (srcBar) {
       const clone = srcBar.cloneNode(true);
+      // Wire each cloned button to delegate to its corresponding original button
+      const origBtns = srcBar.querySelectorAll('.sec-tab');
+      const cloneBtns = clone.querySelectorAll('.sec-tab');
+      cloneBtns.forEach((btn, i) => {
+        btn.removeAttribute('onclick');
+        btn.addEventListener('click', () => {
+          if (origBtns[i]) origBtns[i].click();
+          // Update clone active state to match
+          cloneBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
       wrap.appendChild(clone);
     }
   }
