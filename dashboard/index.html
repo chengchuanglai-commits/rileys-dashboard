@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617124018";
+      var BUILD="20260617124343";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -908,6 +908,21 @@
 .proj-progress-wrap { background:#f0f0f0; border-radius:3px; height:4px; margin-bottom:4px; }
 .proj-progress-fill { height:4px; border-radius:3px; background:#9ca3af; transition:width 400ms ease; }
 .proj-summary-body { font-size:10px; color:var(--c-text-2); line-height:1.7; padding-top:10px; border-top:1px solid var(--c-border); margin-top:8px; }
+
+/* ── News items ── */
+.news-expandable-list .news-item {
+  padding: 8px 0; border-bottom: 1px solid #f5f5f5; cursor: pointer;
+}
+.news-expandable-list .news-item:last-child { border-bottom: none; }
+.news-item-hd { display:flex; gap:8px; align-items:flex-start; }
+.news-tag { font-size:8px; font-weight:600; padding:2px 7px; border-radius:4px; white-space:nowrap; margin-top:2px; flex-shrink:0; }
+.news-tag-fin  { background:#f3f4f6; color:#374151; }
+.news-tag-ai   { background:#f5f3ff; color:#5b21b6; }
+.news-tag-hype { background:#fff7ed; color:#9a3412; }
+.news-item-title { font-size:10px; font-weight:600; color:#111; line-height:1.4; }
+.news-item-meta  { font-size:8px; color:#9ca3af; margin-top:2px; }
+.news-item-summary { font-size:10px; color:#6b7280; line-height:1.7; padding:8px 10px; background:#fafafa; border-radius:0 0 8px 8px; margin-top:4px; }
+
     </style>
     <script>
     (function(){
@@ -1432,75 +1447,39 @@
 
     </section><!-- /#grp-project -->
 
-    <section class="grp-section" data-grp="news" id="grp-news">
+    <section class="grp-section grp-hidden" data-grp="news" id="grp-news">
 
-    <!-- ── 财经资讯 (news) ── -->
+    <div class="sec-tab-bar">
+      <button class="sec-tab active" data-target="sec-news" onclick="secTab(this)">资讯</button>
+    </div>
+
     <div class="row col-1" id="sec-news">
         <div class="card news-card">
-            <div class="news-card-inner">
-                <div class="card-hd" style="margin-bottom:10px">
-                    <span class="card-title">📰 财经资讯</span>
-                    <button class="news-refresh" title="刷新" onclick="refreshNews('fin')">↻</button>
-                </div>
-                <div class="ql-row">
-                    <a href="https://www.bloomberg.com/markets" target="_blank" class="ql">Bloomberg</a>
-                    <a href="https://www.wsj.com/finance" target="_blank" class="ql">WSJ</a>
-                    <a href="https://finance.yahoo.com/" target="_blank" class="ql">Yahoo Finance</a>
-                    <a href="https://www.cnbc.com/finance/" target="_blank" class="ql">CNBC</a>
-                    <a href="https://cn.investing.com/" target="_blank" class="ql">Investing</a>
-                </div>
-                <div class="news-ctrl">
-                    <div class="news-src-tabs" id="fin-tabs"></div>
-                </div>
-                <div class="news-scroll" id="fin-list"><div class="news-loading">加载中…</div></div>
+            <div class="card-hd" style="margin-bottom:10px">
+                <span class="card-title">资讯</span>
+                <button style="background:none;border:none;color:#ccc;cursor:pointer;font-size:14px;padding:2px;margin-left:auto" title="刷新" onclick="refreshAllNews()" onmouseover="this.style.color='#666'" onmouseout="this.style.color='#ccc'">↻</button>
+            </div>
+            <div class="card-tab-bar">
+                <button class="card-tab active" onclick="cardTab(this,'news-panel-fin')">财经</button>
+                <button class="card-tab" onclick="cardTab(this,'news-panel-ai')">AI</button>
+                <button class="card-tab" onclick="cardTab(this,'news-panel-hype')">潮流</button>
+            </div>
+            <div class="card-tab-panel active" id="news-panel-fin">
+                <div id="fin-tabs" style="margin-bottom:8px"></div>
+                <div id="fin-list" class="news-expandable-list"><div style="font-size:10px;color:#9ca3af;padding:20px 0;text-align:center">加载中…</div></div>
                 <div class="last-upd" id="fin-upd"></div>
             </div>
-        </div>
-    </div><!-- /#sec-news -->
-
-    <!-- ── Row 5: AI News + Fashion News ── -->
-    <div class="row col-2">
-
-        <div class="card news-card">
-            <div class="news-card-inner">
-                <div class="card-hd" style="margin-bottom:10px">
-                    <span class="card-title">🤖 AI & 科技资讯</span>
-                    <button class="news-refresh" title="刷新" onclick="refreshNews('ai')">↻</button>
-                </div>
-                <div class="ql-row">
-                    <a href="https://openai.com/news/" target="_blank" class="ql">OpenAI</a>
-                    <a href="https://www.anthropic.com/news" target="_blank" class="ql">Anthropic</a>
-                    <a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" class="ql">TechCrunch</a>
-                    <a href="https://www.producthunt.com/" target="_blank" class="ql">Product Hunt</a>
-                </div>
-                <div class="news-ctrl">
-                    <div class="news-src-tabs" id="ai-tabs"></div>
-                </div>
-                <div class="news-scroll" id="ai-list"><div class="news-loading">加载中…</div></div>
+            <div class="card-tab-panel" id="news-panel-ai">
+                <div id="ai-tabs" style="margin-bottom:8px"></div>
+                <div id="ai-list" class="news-expandable-list"><div style="font-size:10px;color:#9ca3af;padding:20px 0;text-align:center">加载中…</div></div>
                 <div class="last-upd" id="ai-upd"></div>
             </div>
-        </div>
-
-        <div class="card news-card">
-            <div class="news-card-inner">
-                <div class="card-hd" style="margin-bottom:10px">
-                    <span class="card-title">👟 潮流资讯</span>
-                    <button class="news-refresh" title="刷新" onclick="refreshNews('hype')">↻</button>
-                </div>
-                <div class="ql-row">
-                    <a href="https://hypebeast.com/" target="_blank" class="ql">Hypebeast</a>
-                    <a href="https://www.highsnobiety.com/" target="_blank" class="ql">Highsnobiety</a>
-                    <a href="https://hypebae.com/" target="_blank" class="ql">Hypebae</a>
-                    <a href="https://www.complex.com/" target="_blank" class="ql">Complex</a>
-                </div>
-                <div class="news-ctrl">
-                    <div class="news-src-tabs" id="hype-tabs"></div>
-                </div>
-                <div class="news-scroll" id="hype-list"><div class="news-loading">加载中…</div></div>
+            <div class="card-tab-panel" id="news-panel-hype">
+                <div id="hype-tabs" style="margin-bottom:8px"></div>
+                <div id="hype-list" class="news-expandable-list"><div style="font-size:10px;color:#9ca3af;padding:20px 0;text-align:center">加载中…</div></div>
                 <div class="last-upd" id="hype-upd"></div>
             </div>
         </div>
-
     </div>
 
     </section><!-- /#grp-news -->
@@ -2446,13 +2425,17 @@ function renderFeed(section, src, result) {
     listEl.innerHTML = items.map(item => {
         const title = item.title.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&#39;/g,"'").trim();
         const t = timeAgo(item.pubDate);
-        return `<a href="${item.link}" target="_blank" rel="noopener" class="news-art">
-            <div class="news-art-title">${title}</div>
-            <div class="news-art-meta">
-                <span class="news-art-src ${src.cls}">${src.label}</span>
-                <span class="news-art-time">${t}</span>
+        const summary = (item.description||'').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&nbsp;/g,' ').trim().slice(0,200);
+        const tagCls = 'news-tag-' + src.cls;
+        return `<div class="news-item" onclick="toggleExpand(this)">
+            <div class="news-item-hd">
+                <div>
+                    <div class="news-item-title"><a href="${item.link}" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">${title}</a></div>
+                    <div class="news-item-meta">${src.label} · ${t}</div>
+                </div>
             </div>
-        </a>`;
+            ${summary ? `<div class="expandable-body"><div class="news-item-summary">${summary}…</div></div>` : ''}
+        </div>`;
     }).join('');
 }
 
@@ -2483,6 +2466,14 @@ async function refreshNews(section) {
     if (btn) { btn.style.transform='rotate(360deg)'; btn.style.transition='transform .5s'; }
     await loadSection(section, true);
     setTimeout(()=>{ if(btn){btn.style.transform='';btn.style.transition='';} }, 600);
+}
+
+async function refreshAllNews() {
+    await Promise.all([
+        loadSection('fin', true),
+        loadSection('ai', true),
+        loadSection('hype', true),
+    ]);
 }
 
 // Init news on load
