@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617171500";
+      var BUILD="20260617180000";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -3928,9 +3928,6 @@ function renderSimRanking(schemes) {
       '<div style="margin-bottom:5px">' +
         '<span style="font-size:18px;font-weight:800;color:#111;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
         '<span style="font-size:11px;font-weight:700;color:' + pnlColor + ';margin-left:5px;font-variant-numeric:tabular-nums">' + sign + (pnl/INIT*100).toFixed(1) + '%</span>' +
-      '</div>' +
-      '<div style="background:#e5e7eb;border-radius:3px;height:4px;overflow:hidden;margin-bottom:6px">' +
-        '<div style="background:' + color + ';width:' + barPct + '%;height:4px;border-radius:3px;transition:width .5s ease-out"></div>' +
       '</div>' +
       '<div style="font-size:8px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
       '<div style="font-size:8px;color:' + color + ';margin-top:auto;padding-top:6px;opacity:.6">点击查看持仓 ›</div>' +
