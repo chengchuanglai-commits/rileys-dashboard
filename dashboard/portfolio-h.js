@@ -15,7 +15,15 @@ window.PORTFOLIO_H = {
       "take_profit": 13.8,
       "stop_loss": 16.56,
       "max_hold_date": "2026-06-18",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 16.25,
+          "high": 16.54,
+          "low": 16.2,
+          "close": 16.49,
+          "pnl_pct": -1.54
+        }
+      }
     },
     {
       "ticker": "CTRE",
@@ -30,22 +38,15 @@ window.PORTFOLIO_H = {
       "take_profit": 31.48,
       "stop_loss": 37.78,
       "max_hold_date": "2026-06-18",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "TWST",
-      "name": "TWST",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 80.79,
-      "allocated_usd": 500,
-      "shares": 6,
-      "actual_position_usd": 484.74,
-      "entry_commission": 1.0,
-      "take_profit": 68.67,
-      "stop_loss": 82.41,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 37.03,
+          "high": 37.04,
+          "low": 36.52,
+          "close": 36.62,
+          "pnl_pct": 1.13
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -562,10 +563,10 @@ window.PORTFOLIO_H = {
     "win_trades": 6,
     "win_rate": 40.0,
     "total_realized_pnl_usd": 172.8,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2172.8,
+    "open_unrealized_pnl_usd": -4.06,
+    "portfolio_value": 2168.74,
     "total_commission_usd": 30.0,
-    "skipped_gap": 4,
+    "skipped_gap": 5,
     "skipped_zero_shares": 1,
     "updated_at": "2026-06-17"
   }

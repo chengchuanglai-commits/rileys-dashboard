@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.1,
       "stop_loss": 10.29,
       "max_hold_date": "2026-06-18",
-      "day1_open": 9.71,
+      "day1_open": 9.89,
       "daily_prices": {
         "2026-06-12": {
           "open": 9.71,
@@ -37,8 +37,14 @@ window.PORTFOLIO_C = {
           "low": 9.82,
           "close": 9.87,
           "pnl_pct": 0.2
+        },
+        "2026-06-17": {
+          "close": 9.7,
+          "pnl_pct": 1.92
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.0
     },
     {
       "ticker": "MFIN",
@@ -53,7 +59,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "day1_open": 9.9,
+      "day1_open": 9.89,
       "daily_prices": {
         "2026-06-16": {
           "open": 9.9,
@@ -61,8 +67,14 @@ window.PORTFOLIO_C = {
           "low": 9.82,
           "close": 9.87,
           "pnl_pct": -0.61
+        },
+        "2026-06-17": {
+          "close": 9.7,
+          "pnl_pct": 1.12
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.82
     },
     {
       "ticker": "AMRX",
@@ -77,8 +89,15 @@ window.PORTFOLIO_C = {
       "take_profit": 14.94,
       "stop_loss": 16.89,
       "max_hold_date": "2026-06-23",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 16.25,
+      "daily_prices": {
+        "2026-06-17": {
+          "close": 16.49,
+          "pnl_pct": -1.54
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.06
     },
     {
       "ticker": "CTRE",
@@ -93,24 +112,15 @@ window.PORTFOLIO_C = {
       "take_profit": 34.08,
       "stop_loss": 38.52,
       "max_hold_date": "2026-06-23",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "TWST",
-      "name": "TWST",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 80.79,
-      "allocated_usd": 500,
-      "shares": 6,
-      "actual_position_usd": 484.74,
-      "entry_commission": 1.0,
-      "take_profit": 74.33,
-      "stop_loss": 84.02,
-      "max_hold_date": "2026-06-23",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 37.03,
+      "daily_prices": {
+        "2026-06-17": {
+          "close": 36.62,
+          "pnl_pct": 1.13
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -0.03
     }
   ],
   "closed_positions": [
@@ -615,11 +625,9 @@ window.PORTFOLIO_C = {
     "win_trades": 10,
     "win_rate": 76.9,
     "total_realized_pnl_usd": 239.55,
-    "open_unrealized_pnl_usd": -7.0,
-    "portfolio_value": 2232.55,
-    "total_commission_usd": 26.0,
-    "skipped_gap": 4,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-17"
+    "open_unrealized_pnl_usd": 13.15,
+    "portfolio_value": 2252.7,
+    "skipped_gap": 5,
+    "updated_at": "2026-06-18"
   }
 };

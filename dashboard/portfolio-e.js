@@ -2,41 +2,6 @@ window.PORTFOLIO_E = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-12",
-      "entry_price": 173.6,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 347.2,
-      "entry_commission": 1.0,
-      "take_profit": 156.24,
-      "stop_loss": 178.81,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-17",
-      "regime": "neutral",
-      "vix": 17.68,
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 172.51,
-          "high": 172.79,
-          "low": 162.32,
-          "close": 164.1,
-          "pnl_pct": 5.47
-        },
-        "2026-06-16": {
-          "open": 165.18,
-          "high": 166.94,
-          "low": 159.22,
-          "close": 159.8,
-          "pnl_pct": 7.95
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 172.51
-    },
-    {
       "ticker": "MFIN",
       "name": "MFIN",
       "action": "SELL",
@@ -59,6 +24,13 @@ window.PORTFOLIO_E = {
           "low": 9.82,
           "close": 9.87,
           "pnl_pct": -0.61
+        },
+        "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.56,
+          "close": 9.7,
+          "pnl_pct": 1.12
         }
       },
       "gap_checked": true,
@@ -80,8 +52,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-19",
       "regime": "neutral",
       "vix": 16.41,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 16.25,
+          "high": 16.54,
+          "low": 16.2,
+          "close": 16.49,
+          "pnl_pct": -1.54
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 16.25
     },
     {
       "ticker": "CTRE",
@@ -99,27 +80,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-19",
       "regime": "neutral",
       "vix": 16.41,
-      "daily_prices": {},
-      "gap_checked": true
-    },
-    {
-      "ticker": "TWST",
-      "name": "TWST",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 80.79,
-      "allocated_usd": 500,
-      "shares": 6,
-      "actual_position_usd": 484.74,
-      "entry_commission": 1.0,
-      "take_profit": 72.71,
-      "stop_loss": 83.21,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-19",
-      "regime": "neutral",
-      "vix": 16.41,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 37.03,
+          "high": 37.04,
+          "low": 36.52,
+          "close": 36.62,
+          "pnl_pct": 1.13
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 37.03
     }
   ],
   "closed_positions": [
@@ -555,20 +526,67 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -1.01
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 347.2,
+      "entry_commission": 1.0,
+      "take_profit": 156.24,
+      "stop_loss": 178.81,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-17",
+      "regime": "neutral",
+      "vix": 17.68,
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.47
+        },
+        "2026-06-16": {
+          "open": 165.18,
+          "high": 166.94,
+          "low": 159.22,
+          "close": 159.8,
+          "pnl_pct": 7.95
+        },
+        "2026-06-17": {
+          "open": 159.65,
+          "high": 160.18,
+          "low": 152.49,
+          "close": 154.01,
+          "pnl_pct": 10.0
+        }
+      },
+      "close_date": "2026-06-17",
+      "close_price": 156.24,
+      "final_pnl_pct": 10.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 32.72
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 11,
-    "win_trades": 6,
-    "win_rate": 54.5,
-    "total_realized_pnl_usd": 128.07,
-    "open_unrealized_pnl_usd": 22.61,
-    "portfolio_value": 2150.68,
-    "total_commission_usd": 22.0,
+    "total_trades": 12,
+    "win_trades": 7,
+    "win_rate": 58.3,
+    "total_realized_pnl_usd": 160.79,
+    "open_unrealized_pnl_usd": 0.43,
+    "portfolio_value": 2161.22,
+    "total_commission_usd": 24.0,
     "skipped_fear": 0,
     "skipped_direction": 4,
-    "skipped_gap": 3,
+    "skipped_gap": 4,
     "updated_at": "2026-06-17"
   }
 };

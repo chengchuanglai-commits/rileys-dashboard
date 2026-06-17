@@ -2,44 +2,6 @@ window.PORTFOLIO_F = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-12",
-      "entry_price": 173.6,
-      "allocated_usd": 500,
-      "shares": 2,
-      "t1_shares": 1,
-      "t2_shares": 1,
-      "actual_position_usd": 347.2,
-      "entry_commission": 1.0,
-      "take_profit_1": 160.58,
-      "take_profit_2": 147.56,
-      "stop_loss": 178.81,
-      "max_hold_date": "2026-06-17",
-      "day1_open": 172.51,
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 172.51,
-          "high": 172.79,
-          "low": 162.32,
-          "close": 164.1,
-          "pnl_pct": 5.47
-        },
-        "2026-06-16": {
-          "open": 165.18,
-          "high": 166.94,
-          "low": 159.22,
-          "close": 159.8,
-          "pnl_pct": 7.95
-        }
-      },
-      "t1_exit_date": "2026-06-16",
-      "t1_exit_price": 160.58,
-      "t1_exit_reason": "take_profit_1",
-      "t1_locked_pnl": 11.02
-    },
-    {
       "ticker": "MFIN",
       "name": "MFIN",
       "action": "SELL",
@@ -63,6 +25,13 @@ window.PORTFOLIO_F = {
           "low": 9.82,
           "close": 9.87,
           "pnl_pct": -0.61
+        },
+        "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.56,
+          "close": 9.7,
+          "pnl_pct": 1.12
         }
       }
     },
@@ -82,8 +51,16 @@ window.PORTFOLIO_F = {
       "take_profit_2": 13.8,
       "stop_loss": 16.73,
       "max_hold_date": "2026-06-19",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 16.25,
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 16.25,
+          "high": 16.54,
+          "low": 16.2,
+          "close": 16.49,
+          "pnl_pct": -1.54
+        }
+      }
     },
     {
       "ticker": "CTRE",
@@ -101,27 +78,16 @@ window.PORTFOLIO_F = {
       "take_profit_2": 31.48,
       "stop_loss": 38.15,
       "max_hold_date": "2026-06-19",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "TWST",
-      "name": "TWST",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 80.79,
-      "allocated_usd": 500,
-      "shares": 6,
-      "t1_shares": 3,
-      "t2_shares": 3,
-      "actual_position_usd": 484.74,
-      "entry_commission": 1.0,
-      "take_profit_1": 74.73,
-      "take_profit_2": 68.67,
-      "stop_loss": 83.21,
-      "max_hold_date": "2026-06-19",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 37.03,
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 37.03,
+          "high": 37.04,
+          "low": 36.52,
+          "close": 36.62,
+          "pnl_pct": 1.13
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -707,18 +673,73 @@ window.PORTFOLIO_F = {
       "commission_total": 3.0,
       "realized_pnl_usd": -2.0,
       "sl_unified": false
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
+      "allocated_usd": 500,
+      "shares": 2,
+      "t1_shares": 1,
+      "t2_shares": 1,
+      "actual_position_usd": 347.2,
+      "entry_commission": 1.0,
+      "take_profit_1": 160.58,
+      "take_profit_2": 147.56,
+      "stop_loss": 178.81,
+      "max_hold_date": "2026-06-17",
+      "day1_open": 172.51,
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.47
+        },
+        "2026-06-16": {
+          "open": 165.18,
+          "high": 166.94,
+          "low": 159.22,
+          "close": 159.8,
+          "pnl_pct": 7.95
+        },
+        "2026-06-17": {
+          "open": 159.65,
+          "high": 160.18,
+          "low": 152.49,
+          "close": 154.01,
+          "pnl_pct": 11.28
+        }
+      },
+      "t1_exit_date": "2026-06-16",
+      "t1_exit_price": 160.58,
+      "t1_exit_reason": "take_profit_1",
+      "t2_exit_date": "2026-06-17",
+      "t2_exit_price": 154.01,
+      "t2_exit_reason": "max_hold",
+      "t1_gross_pnl": 13.02,
+      "t2_gross_pnl": 19.59,
+      "close_date": "2026-06-17",
+      "close_reason": "take_profit_1+max_hold",
+      "final_pnl_pct": 9.39,
+      "commission_total": 3.0,
+      "realized_pnl_usd": 29.61,
+      "sl_unified": false
     }
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 12,
-    "win_trades": 7,
-    "win_rate": 58.3,
-    "total_realized_pnl_usd": 129.8,
-    "open_unrealized_pnl_usd": 20.83,
-    "portfolio_value": 2150.63,
-    "total_commission_usd": 32.0,
-    "skipped_gap": 4,
+    "total_trades": 13,
+    "win_trades": 8,
+    "win_rate": 61.5,
+    "total_realized_pnl_usd": 159.41,
+    "open_unrealized_pnl_usd": 0.43,
+    "portfolio_value": 2159.84,
+    "total_commission_usd": 35.0,
+    "skipped_gap": 5,
     "skipped_zero_shares": 2,
     "updated_at": "2026-06-17"
   }
