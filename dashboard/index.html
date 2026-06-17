@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617132529";
+      var BUILD="20260617134202";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -1260,9 +1260,9 @@
                 <div style="display:flex;gap:16px;margin-bottom:12px;font-size:9px;color:var(--c-text-3)">
                     <span>总投入 <b style="color:var(--c-text)">$2,000</b></span>
                     <span>最高净值 <b id="sim-top-val" style="color:var(--c-text)">—</b></span>
+                    <span>最高收益 <b id="sim-top-pct" style="color:var(--c-text)">—</b></span>
                 </div>
-                <div id="sim-ranking-list" style="display:flex;flex-direction:column;gap:4px;margin-bottom:14px"></div>
-                <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px;overflow:hidden"></div>
+                <div id="sim-ranking-list" style="display:flex;flex-direction:column;gap:4px"></div>
                 <!-- A vs B vs C vs D 统计面板 (hidden, kept for JS compat) -->
                 <div id="sim-ab-stats" style="display:none"></div>
             </div>
@@ -1274,6 +1274,7 @@
                 </div>
             </div>
             <div class="card-tab-panel" id="sim-panel-history">
+                <div id="sim-curve-chart" style="width:100%;padding:4px 0 12px;overflow:hidden"></div>
                 <div id="sig-history-table" style="overflow-x:auto"></div>
             </div>
             <div class="card-tab-panel" id="sim-panel-ranking">
@@ -3868,20 +3869,33 @@ const SIM_SCHEME_COLORS = {
 function renderSimRanking(schemes) {
   const el = document.getElementById('sim-ranking-list');
   const topEl = document.getElementById('sim-top-val');
+  const topPctEl = document.getElementById('sim-top-pct');
   if (!el || !schemes || !schemes.length) return;
-  const maxVal = schemes[0].val;
-  if (topEl) topEl.textContent = '$' + maxVal.toFixed(0);
+  const INIT = 2000;
+  const best = schemes[0];
+  if (topEl) topEl.textContent = '$' + best.val.toFixed(0);
+  const bestPnl = best.val - INIT;
+  if (topPctEl) {
+    const sign = bestPnl >= 0 ? '+' : '';
+    topPctEl.style.color = bestPnl >= 0 ? '#16a34a' : '#dc2626';
+    topPctEl.textContent = sign + (bestPnl / INIT * 100).toFixed(1) + '%';
+  }
+  // 进度条用「已实现盈利」的相对比例，让各方案差异清晰可见
+  const maxPnl = Math.max(bestPnl, 1);
   el.innerHTML = schemes.map((s, i) => {
-    const pct = Math.round((s.val / maxVal) * 100);
+    const pnl = s.val - INIT;
+    const barPct = Math.max(0, Math.round((pnl / maxPnl) * 100));
     const color = SIM_SCHEME_COLORS[s.key] || '#888';
-    const sign = s.pnl >= 0 ? '+' : '';
-    const pnlColor = s.pnl >= 0 ? '#16a34a' : '#dc2626';
-    return '<div style="display:flex;align-items:center;gap:8px;padding:5px 8px;background:' + (i===0?'#fafafa':'transparent') + ';border-radius:7px">' +
-      '<span style="font-size:9px;font-weight:' + (i===0?'700':'400') + ';color:#9ca3af;width:14px">' + (i+1) + '</span>' +
-      '<span style="font-size:10px;font-weight:700;color:' + color + ';width:32px">' + s.label + '</span>' +
-      '<div style="flex:1;background:#f0f0f0;border-radius:3px;height:4px"><div style="background:' + color + ';width:' + pct + '%;height:4px;border-radius:3px"></div></div>' +
+    const sign = pnl >= 0 ? '+' : '';
+    const pnlColor = pnl >= 0 ? '#16a34a' : '#dc2626';
+    const bg = i === 0 ? '#f0fdf4' : (i % 2 === 0 ? '#fafafa' : '#fff');
+    const rankColor = i === 0 ? '#15803d' : '#9ca3af';
+    return '<div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:' + bg + ';border-radius:7px">' +
+      '<span style="font-size:9px;font-weight:700;color:' + rankColor + ';width:14px;text-align:center">' + (i+1) + '</span>' +
+      '<span style="font-size:10px;font-weight:700;color:' + color + ';width:36px">' + s.label + '</span>' +
+      '<div style="flex:1;background:#f0f0f0;border-radius:3px;height:4px"><div style="background:' + color + ';width:' + barPct + '%;height:4px;border-radius:3px;transition:width .4s"></div></div>' +
       '<span style="font-size:10px;font-weight:700;color:#111;width:46px;text-align:right">$' + s.val.toFixed(0) + '</span>' +
-      '<span style="font-size:9px;color:' + pnlColor + ';width:40px;text-align:right">' + sign + s.pnlPct.toFixed(0) + '%</span>' +
+      '<span style="font-size:9px;font-weight:600;color:' + pnlColor + ';width:44px;text-align:right">' + sign + (pnl / INIT * 100).toFixed(1) + '%</span>' +
       '</div>';
   }).join('');
 }
