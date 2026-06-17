@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617164008";
+      var BUILD="20260617165229";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -2879,58 +2879,41 @@ function renderSimPbOpen(livePrices) {
 }
 
 function patchLivePortfolioCards(livePrices) {
-    const CAPITAL = 2000;
-    const calcLive = (portfolio) => {
-        if (!portfolio) return null;
-        const realized = portfolio.stats?.total_realized_pnl_usd || 0;
-        let unrealized = 0;
+    // 方案B：大数字(已实现)保持稳定;只让每张卡的「浮盈」子行随实时价秒级跳。
+    const liveFloat = (portfolio) => {
+        let u = 0;
         for (const pos of (portfolio.open_positions || [])) {
+            const usd = pos.actual_position_usd || (pos.shares ? pos.shares * pos.entry_price : 500);
             const lp = livePrices[pos.ticker];
             if (lp && pos.entry_price) {
-                const actualUsd = pos.actual_position_usd || (pos.shares ? pos.shares * pos.entry_price : pos.allocated_usd || 500);
                 const pct = pos.action === 'SELL'
                     ? (pos.entry_price - lp) / pos.entry_price
                     : (lp - pos.entry_price) / pos.entry_price;
-                unrealized += actualUsd * pct;
+                u += usd * pct;
+            } else {
+                // 无实时价的仓位退回落库快照,避免浮盈被错误拉低
+                const dp = pos.daily_prices || {};
+                const last = Object.keys(dp).sort().pop();
+                u += last ? usd * (dp[last].pnl_pct || 0) / 100 : 0;
             }
         }
-        return CAPITAL + realized + unrealized;
+        return u;
     };
 
-    const liveValues = {
-        b: calcLive(window.PORTFOLIO_B),
-        c: calcLive(window.PORTFOLIO_C),
-        d: calcLive(window.PORTFOLIO_D),
-        e: calcLive(window.PORTFOLIO_E),
-        f: calcLive(window.PORTFOLIO_F),
-        g: calcLive(window.PORTFOLIO_MN),
-    };
-
-    // Find best plan for trophy
-    const bestVal = Math.max(...Object.values(liveValues).filter(v => v !== null));
-
-    ['b', 'c', 'd', 'e', 'f', 'g'].forEach(cls => {
-        const val = liveValues[cls];
-        if (val === null) return;
-        const pnl = val - CAPITAL;
-        const pnlPct = (pnl / 20).toFixed(2);
-        const sign = pnl >= 0 ? '+' : '';
-        const color = pnl >= 0 ? '#16a34a' : '#dc2626';
-
-        const capEl = document.getElementById(`lv-cap-${cls}`);
-        const pnlEl = document.getElementById(`lv-pnl-${cls}`);
-        if (capEl) {
-            const prev = parseFloat(capEl.dataset.prev || val);
-            capEl.dataset.prev = val;
-            capEl.style.color = val > prev ? '#16a34a' : val < prev ? '#dc2626' : '';
-            capEl.textContent = `$${val.toFixed(2)}`;
-            setTimeout(() => { if (capEl) capEl.style.color = ''; }, 800);
-        }
-        if (pnlEl) {
-            pnlEl.style.color = color;
-            pnlEl.textContent = `${sign}$${Math.abs(pnl).toFixed(2)} (${sign}${pnlPct}%)`;
-        }
-    });
+    for (const key in _SCHEME_PORT) {
+        const port = window[_SCHEME_PORT[key]];
+        const sub = document.getElementById('lv-sub-' + key);
+        if (!port || !sub) continue;
+        const realized = (port.stats && port.stats.total_realized_pnl_usd) || 0;
+        const trades = (port.stats && port.stats.total_trades) || 0;
+        const fl = liveFloat(port);
+        const rSign = realized >= 0 ? '+' : '';
+        const flStr = Math.abs(fl) >= 0.5
+            ? ' · <span style="color:' + (fl >= 0 ? '#16a34a' : '#dc2626') + '">浮' + (fl >= 0 ? '+' : '-') + '$' + Math.abs(fl).toFixed(0) + '</span>'
+            : '';
+        const trStr = trades > 0 ? ' · ' + trades + '笔' : '';
+        sub.innerHTML = '已实现<b style="color:' + (realized >= 0 ? '#16a34a' : '#dc2626') + '">' + rSign + '$' + realized.toFixed(0) + '</b>' + flStr + trStr;
+    }
 
     // Live timestamp
     const infoEl = document.getElementById('sim-refresh-info');
@@ -3931,7 +3914,7 @@ function renderSimRanking(schemes) {
         '<span style="font-size:20px;font-weight:800;color:#111;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
         '<span style="font-size:12px;font-weight:700;color:' + pnlColor + ';margin-left:5px;font-variant-numeric:tabular-nums">' + sign + (pnl/INIT*100).toFixed(1) + '%</span>' +
       '</div>' +
-      '<div style="font-size:10px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
+      '<div id="lv-sub-' + s.key + '" style="font-size:10px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
       '<div style="font-size:10px;color:' + color + ';margin-top:auto;padding-top:6px;opacity:.6">点击查看持仓 ›</div>' +
     '</div>';
   });
