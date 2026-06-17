@@ -2,62 +2,6 @@ window.PORTFOLIO_E = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 15.2,
-      "allocated_usd": 500,
-      "shares": 32,
-      "actual_position_usd": 486.4,
-      "entry_commission": 1.0,
-      "take_profit": 13.68,
-      "stop_loss": 15.66,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-16",
-      "regime": "neutral",
-      "vix": 19.44,
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 14.88,
-          "high": 15.45,
-          "low": 13.72,
-          "close": 15.45,
-          "pnl_pct": -1.64
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 14.88
-    },
-    {
-      "ticker": "MFIN",
-      "name": "MFIN",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 9.89,
-      "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 494.5,
-      "entry_commission": 1.0,
-      "take_profit": 8.9,
-      "stop_loss": 10.19,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-16",
-      "regime": "neutral",
-      "vix": 19.44,
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 9.71,
-          "high": 9.95,
-          "low": 9.71,
-          "close": 9.81,
-          "pnl_pct": 0.81
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 9.71
-    },
-    {
       "ticker": "ARCB",
       "name": "ARCB",
       "action": "SELL",
@@ -73,8 +17,24 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-17",
       "regime": "neutral",
       "vix": 17.68,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.47
+        },
+        "2026-06-16": {
+          "open": 165.18,
+          "high": 166.94,
+          "low": 159.22,
+          "close": 159.8,
+          "pnl_pct": 7.95
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 172.51
     },
     {
       "ticker": "MFIN",
@@ -91,9 +51,18 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-18",
       "regime": "neutral",
-      "vix": 17.68,
-      "daily_prices": {},
-      "gap_checked": true
+      "vix": 16.2,
+      "daily_prices": {
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": -0.61
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 9.9
     },
     {
       "ticker": "AMRX",
@@ -110,7 +79,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-19",
       "regime": "neutral",
-      "vix": 16.15,
+      "vix": 16.41,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -129,7 +98,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-19",
       "regime": "neutral",
-      "vix": 16.15,
+      "vix": 16.41,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -148,7 +117,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-19",
       "regime": "neutral",
-      "vix": 16.15,
+      "vix": 16.41,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -499,20 +468,107 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 47.59
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 15.2,
+      "allocated_usd": 500,
+      "shares": 32,
+      "actual_position_usd": 486.4,
+      "entry_commission": 1.0,
+      "take_profit": 13.68,
+      "stop_loss": 15.66,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-16",
+      "regime": "neutral",
+      "vix": 19.44,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 14.88,
+          "high": 15.45,
+          "low": 13.72,
+          "close": 15.45,
+          "pnl_pct": -1.64
+        },
+        "2026-06-15": {
+          "open": 16.08,
+          "high": 16.88,
+          "low": 15.22,
+          "close": 15.22,
+          "pnl_pct": -3.03
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 15.66,
+      "final_pnl_pct": -3.03,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.74
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 9.89,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 494.5,
+      "entry_commission": 1.0,
+      "take_profit": 8.9,
+      "stop_loss": 10.19,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-16",
+      "regime": "neutral",
+      "vix": 19.44,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 9.71,
+          "high": 9.95,
+          "low": 9.71,
+          "close": 9.81,
+          "pnl_pct": 0.81
+        },
+        "2026-06-15": {
+          "open": 9.82,
+          "high": 9.92,
+          "low": 9.76,
+          "close": 9.85,
+          "pnl_pct": 0.4
+        },
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": 0.2
+        }
+      },
+      "close_date": "2026-06-16",
+      "close_price": 9.87,
+      "final_pnl_pct": 0.2,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -1.01
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 9,
+    "total_trades": 11,
     "win_trades": 6,
-    "win_rate": 66.7,
-    "total_realized_pnl_usd": 145.82,
-    "open_unrealized_pnl_usd": -5.97,
-    "portfolio_value": 2139.85,
-    "total_commission_usd": 18.0,
+    "win_rate": 54.5,
+    "total_realized_pnl_usd": 128.07,
+    "open_unrealized_pnl_usd": 22.61,
+    "portfolio_value": 2150.68,
+    "total_commission_usd": 22.0,
     "skipped_fear": 0,
     "skipped_direction": 4,
     "skipped_gap": 3,
-    "updated_at": "2026-06-16"
+    "updated_at": "2026-06-17"
   }
 };

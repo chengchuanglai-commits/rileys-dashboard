@@ -23,24 +23,22 @@ window.PORTFOLIO_C = {
           "low": 9.71,
           "close": 9.81,
           "pnl_pct": 0.81
+        },
+        "2026-06-15": {
+          "open": 9.82,
+          "high": 9.92,
+          "low": 9.76,
+          "close": 9.85,
+          "pnl_pct": 0.4
+        },
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": 0.2
         }
       }
-    },
-    {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-12",
-      "entry_price": 173.6,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 347.2,
-      "entry_commission": 1.0,
-      "take_profit": 159.71,
-      "stop_loss": 180.54,
-      "max_hold_date": "2026-06-19",
-      "day1_open": null,
-      "daily_prices": {}
     },
     {
       "ticker": "MFIN",
@@ -55,8 +53,16 @@ window.PORTFOLIO_C = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 9.9,
+      "daily_prices": {
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": -0.61
+        }
+      }
     },
     {
       "ticker": "AMRX",
@@ -563,19 +569,57 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 37.06
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 347.2,
+      "entry_commission": 1.0,
+      "take_profit": 159.71,
+      "stop_loss": 180.54,
+      "max_hold_date": "2026-06-19",
+      "day1_open": 172.51,
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.47
+        },
+        "2026-06-16": {
+          "open": 165.18,
+          "high": 166.94,
+          "low": 159.22,
+          "close": 159.8,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-16",
+      "close_price": 159.71,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 25.78
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 12,
-    "win_trades": 9,
-    "win_rate": 75.0,
-    "total_realized_pnl_usd": 213.77,
-    "open_unrealized_pnl_usd": -1.99,
-    "portfolio_value": 2211.78,
-    "total_commission_usd": 24.0,
+    "total_trades": 13,
+    "win_trades": 10,
+    "win_rate": 76.9,
+    "total_realized_pnl_usd": 239.55,
+    "open_unrealized_pnl_usd": -7.0,
+    "portfolio_value": 2232.55,
+    "total_commission_usd": 26.0,
     "skipped_gap": 4,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-16"
+    "updated_at": "2026-06-17"
   }
 };

@@ -3,67 +3,6 @@ window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 15.2,
-      "allocated_usd": 500,
-      "shares": 32,
-      "actual_position_usd": 486.4,
-      "entry_commission": 1.0,
-      "take_profit": 12.92,
-      "stop_loss": 15.66,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 14.88,
-          "high": 15.45,
-          "low": 13.72,
-          "close": 15.45,
-          "pnl_pct": -1.64
-        }
-      }
-    },
-    {
-      "ticker": "MFIN",
-      "name": "MFIN",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 9.89,
-      "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 494.5,
-      "entry_commission": 1.0,
-      "take_profit": 8.41,
-      "stop_loss": 10.19,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 9.71,
-          "high": 9.95,
-          "low": 9.71,
-          "close": 9.81,
-          "pnl_pct": 0.81
-        }
-      }
-    },
-    {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-12",
-      "entry_price": 173.6,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 347.2,
-      "entry_commission": 1.0,
-      "take_profit": 147.56,
-      "stop_loss": 178.81,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {}
-    },
-    {
       "ticker": "MFIN",
       "name": "MFIN",
       "action": "SELL",
@@ -76,7 +15,15 @@ window.PORTFOLIO_D = {
       "take_profit": 8.34,
       "stop_loss": 10.1,
       "max_hold_date": "2026-06-17",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": -0.61
+        }
+      }
     },
     {
       "ticker": "AMRX",
@@ -503,19 +450,130 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 72.01
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 15.2,
+      "allocated_usd": 500,
+      "shares": 32,
+      "actual_position_usd": 486.4,
+      "entry_commission": 1.0,
+      "take_profit": 12.92,
+      "stop_loss": 15.66,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 14.88,
+          "high": 15.45,
+          "low": 13.72,
+          "close": 15.45,
+          "pnl_pct": -1.64
+        },
+        "2026-06-15": {
+          "open": 16.08,
+          "high": 16.88,
+          "low": 15.22,
+          "close": 15.22,
+          "pnl_pct": -3.03
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 15.66,
+      "final_pnl_pct": -3.03,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.74
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 9.89,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 494.5,
+      "entry_commission": 1.0,
+      "take_profit": 8.41,
+      "stop_loss": 10.19,
+      "max_hold_date": "2026-06-15",
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 9.71,
+          "high": 9.95,
+          "low": 9.71,
+          "close": 9.81,
+          "pnl_pct": 0.81
+        },
+        "2026-06-15": {
+          "open": 9.82,
+          "high": 9.92,
+          "low": 9.76,
+          "close": 9.85,
+          "pnl_pct": 0.4
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 9.85,
+      "final_pnl_pct": 0.4,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.02
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 347.2,
+      "entry_commission": 1.0,
+      "take_profit": 147.56,
+      "stop_loss": 178.81,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.47
+        },
+        "2026-06-16": {
+          "open": 165.18,
+          "high": 166.94,
+          "low": 159.22,
+          "close": 159.8,
+          "pnl_pct": 7.95
+        }
+      },
+      "close_date": "2026-06-16",
+      "close_price": 159.8,
+      "final_pnl_pct": 7.95,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 25.6
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 11,
-    "win_trades": 6,
-    "win_rate": 54.5,
-    "total_realized_pnl_usd": 167.25,
-    "open_unrealized_pnl_usd": -5.97,
-    "portfolio_value": 2161.28,
-    "total_commission_usd": 22.0,
+    "total_trades": 14,
+    "win_trades": 7,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 176.09,
+    "open_unrealized_pnl_usd": -3.99,
+    "portfolio_value": 2172.1,
+    "total_commission_usd": 28.0,
     "skipped_gap": 4,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-16"
+    "updated_at": "2026-06-17"
   }
 };
