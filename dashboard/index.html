@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617160000";
+      var BUILD="20260617161500";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -815,8 +815,9 @@
   background: transparent; border: none; border-radius: 6px;
   padding: 5px 10px; font-size: 10px; font-weight: 500;
   color: #9ca3af; cursor: pointer; white-space: nowrap;
-  font-family: inherit;
+  font-family: inherit; transition: color .15s, background .15s;
 }
+.card-tab:hover:not(.active) { color: #555; background: rgba(255,255,255,.5); }
 .card-tab.active {
   background: #fff; color: #111; font-weight: 600;
   box-shadow: 0 1px 3px rgba(0,0,0,.08);
@@ -1257,10 +1258,19 @@
                 <button class="card-tab" onclick="cardTab(this,'sim-panel-ranking')">排名</button>
             </div>
             <div class="card-tab-panel active" id="sim-panel-overview">
-                <div style="display:flex;gap:16px;margin-bottom:12px;font-size:9px;color:var(--c-text-3)">
-                    <span>总投入 <b style="color:var(--c-text)">$2,000</b></span>
-                    <span>最高净值 <b id="sim-top-val" style="color:var(--c-text)">—</b></span>
-                    <span>最高收益 <b id="sim-top-pct" style="color:var(--c-text)">—</b></span>
+                <div style="display:flex;gap:8px;margin-bottom:12px">
+                    <div style="flex:1;background:#f8f9fa;border-radius:8px;padding:7px 10px">
+                        <div style="font-size:8px;color:#aaa;margin-bottom:1px">总投入</div>
+                        <div style="font-size:13px;font-weight:700;color:#111">$2,000</div>
+                    </div>
+                    <div style="flex:1;background:#f8f9fa;border-radius:8px;padding:7px 10px">
+                        <div style="font-size:8px;color:#aaa;margin-bottom:1px">最高净值</div>
+                        <div id="sim-top-val" style="font-size:13px;font-weight:700;color:#111">—</div>
+                    </div>
+                    <div style="flex:1;background:#f8f9fa;border-radius:8px;padding:7px 10px">
+                        <div style="font-size:8px;color:#aaa;margin-bottom:1px">最高收益</div>
+                        <div id="sim-top-pct" style="font-size:13px;font-weight:700;color:#111">—</div>
+                    </div>
                 </div>
                 <div id="sim-ranking-list"></div>
                 <!-- A vs B vs C vs D 统计面板 (hidden, kept for JS compat) -->
@@ -3895,26 +3905,29 @@ function renderSimRanking(schemes) {
     const bg = i === 0 ? '#f0fdf4' : '#fff';
     const border = i === 0 ? 'border:1px solid #bbf7d0;' : 'border:1px solid #f0f0f0;';
     const rankColor = i === 0 ? '#15803d' : '#9ca3af';
-    // 已实现盈利 vs 含浮盈的总净值
     const realPnl = s.realized != null ? s.realized : pnl;
     const realSign = realPnl >= 0 ? '+' : '';
     const floatPnl = (s.portfolio || (INIT + pnl)) - (INIT + realPnl);
-    const floatStr = floatPnl !== 0 ? (' 浮' + (floatPnl >= 0 ? '+' : '') + '$' + floatPnl.toFixed(0)) : '';
-    const tradesStr = (s.trades && s.trades > 0) ? (s.trades + '笔') : '';
-    return '<div style="' + border + 'background:' + bg + ';border-radius:8px;padding:7px 10px;margin-bottom:4px">' +
-      // Row 1: rank + label + bar + value + pct
-      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">' +
+    const floatStr = floatPnl !== 0 ? ('浮' + (floatPnl >= 0 ? '+' : '') + '$' + Math.abs(floatPnl).toFixed(0)) : '';
+    const tradesStr = (s.trades && s.trades > 0) ? (s.trades + '笔已平') : '';
+    // Row 2 parts: description · realized · float · trades
+    const descParts = [
+      s.fullLabel || s.label,
+      '已实现<b style="color:' + (realPnl>=0?'#16a34a':'#dc2626') + '">' + realSign + '$' + realPnl.toFixed(0) + '</b>',
+      floatStr ? '<span style="color:#bbb">' + floatStr + '</span>' : '',
+      tradesStr,
+    ].filter(Boolean).join(' · ');
+    return '<div style="' + border + 'background:' + bg + ';border-radius:8px;padding:6px 10px 5px;margin-bottom:4px">' +
+      // Row 1: rank + short-label chip + bar + value + pct (no wrapping)
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">' +
         '<span style="font-size:9px;font-weight:700;color:' + rankColor + ';width:14px;text-align:center;flex-shrink:0">' + (i+1) + '</span>' +
-        '<span style="font-size:10px;font-weight:700;color:' + color + ';width:70px;flex-shrink:0">' + (s.fullLabel || s.label) + '</span>' +
-        '<div style="flex:1;background:#f0f0f0;border-radius:3px;height:4px"><div style="background:' + color + ';width:' + barPct + '%;height:4px;border-radius:3px;transition:width .4s"></div></div>' +
-        '<span style="font-size:11px;font-weight:700;color:#111;width:48px;text-align:right;flex-shrink:0">$' + s.val.toFixed(0) + '</span>' +
-        '<span style="font-size:10px;font-weight:700;color:' + pnlColor + ';width:48px;text-align:right;flex-shrink:0">' + sign + (pnl / INIT * 100).toFixed(1) + '%</span>' +
+        '<span style="font-size:11px;font-weight:800;color:' + color + ';min-width:20px;flex-shrink:0;letter-spacing:-.3px">' + s.label + '</span>' +
+        '<div style="flex:1;background:#ebebeb;border-radius:3px;height:5px;overflow:hidden"><div style="background:' + color + ';width:' + barPct + '%;height:5px;border-radius:3px;transition:width .5s ease-out"></div></div>' +
+        '<span style="font-size:11px;font-weight:700;color:#111;width:46px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
+        '<span style="font-size:10px;font-weight:700;color:' + pnlColor + ';width:46px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums">' + sign + (pnl / INIT * 100).toFixed(1) + '%</span>' +
       '</div>' +
-      // Row 2: realized pnl + float + trades
-      '<div style="display:flex;align-items:center;gap:10px;padding-left:22px;font-size:9px;color:#9ca3af">' +
-        '<span>已实现 <b style="color:' + (realPnl>=0?'#16a34a':'#dc2626') + '">' + realSign + '$' + realPnl.toFixed(0) + '</b>' + (floatStr ? ' <span style="color:#9ca3af">' + floatStr + '</span>' : '') + '</span>' +
-        (tradesStr ? '<span>' + tradesStr + ' 已平</span>' : '') +
-      '</div>' +
+      // Row 2: description + financials, all on one line, no wrapping risk
+      '<div style="padding-left:22px;font-size:8.5px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + descParts + '</div>' +
       '</div>';
   }).join('');
 }
