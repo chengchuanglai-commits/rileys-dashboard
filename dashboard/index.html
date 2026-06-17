@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617144551";
+      var BUILD="20260617160000";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -2500,6 +2500,12 @@ async function refreshAllNews() {
     ]);
 }
 
+// ── 模拟盘排行榜颜色（必须在 IIFE 之前，否则 TDZ 错误）──────
+const SIM_SCHEME_COLORS = {
+  e:'#4b7fa3', b:'#3a8a5a', c:'#6b5aab', d:'#b06030',
+  f:'#7a3a8a', g:'#2e7a4a', h:'#9a3a20', a:'#888888'
+};
+
 // Init news on load
 (async () => {
     syncOnInit();   // pull KV data + upload any local-only keys for cross-device sync
@@ -3865,11 +3871,6 @@ function focusSeries(plan) {
 }
 
 // ── 模拟盘排行榜 ──────────────────────────────────────
-const SIM_SCHEME_COLORS = {
-  e:'#4b7fa3', b:'#3a8a5a', c:'#6b5aab', d:'#b06030',
-  f:'#7a3a8a', g:'#2e7a4a', h:'#9a3a20', a:'#888888'
-};
-
 function renderSimRanking(schemes) {
   const el = document.getElementById('sim-ranking-list');
   const topEl = document.getElementById('sim-top-val');
