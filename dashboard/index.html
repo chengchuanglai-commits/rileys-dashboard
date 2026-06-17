@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617122411";
+      var BUILD="20260617122702";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -1181,32 +1181,34 @@
         </div>
     </div>
 
-    <!-- ── Row 2.7: TradingAgents 信号 ── -->
+    <!-- ── Row 2.7: AI 信号 + Edge 合并卡 ── -->
     <div class="row col-1" id="sec-signals" style="margin-bottom:16px">
         <div class="card">
-            <div class="card-hd">
-                <span class="card-title">🤖 AI 深度信号</span>
+            <div class="card-hd" style="margin-bottom:10px">
+                <span class="card-title">AI 信号</span>
                 <div style="display:flex;align-items:center;gap:8px">
                     <span id="ts-accuracy-badge" style="font-size:9px;background:#f0f0f0;padding:2px 10px;border-radius:10px;color:#888"></span>
                     <span class="sync-dot" id="ts-dot" title="信号同步状态"></span>
                     <button onclick="loadTradingSignals()" style="background:none;border:none;color:#ccc;cursor:pointer;font-size:14px;padding:2px" title="刷新" onmouseover="this.style.color='#666'" onmouseout="this.style.color='#ccc'">↻</button>
                 </div>
             </div>
-            <div id="ts-content">
-                <div class="mn-empty">今日 AI 深度信号将于 19:30 生成…</div>
+            <div class="card-tab-bar">
+                <button class="card-tab active" onclick="cardTab(this,'signals-panel-sig')">今日信号</button>
+                <button class="card-tab" onclick="cardTab(this,'signals-panel-edge')">Edge 分析</button>
             </div>
-        </div>
-    </div>
-
-    <!-- ── Row 2.8: 信号 Edge（vs SPY 基准） ── -->
-    <div class="row col-1" id="sec-edge" style="margin-bottom:16px">
-        <div class="card">
-            <div class="card-hd">
-                <span class="card-title">📐 信号 Edge（vs SPY 基准）</span>
-                <span id="se-meta" style="font-size:9px;color:#888"></span>
+            <div class="card-tab-panel active" id="signals-panel-sig">
+                <div id="ts-content">
+                    <div class="mn-empty">今日 AI 深度信号将于 19:30 生成…</div>
+                </div>
             </div>
-            <div id="se-content">
-                <div class="mn-empty">edge 分析将随每日信号更新…</div>
+            <div class="card-tab-panel" id="signals-panel-edge">
+                <div class="card-hd" style="margin-bottom:8px">
+                    <span style="font-size:9px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em">Edge vs SPY</span>
+                    <span id="se-meta" style="font-size:9px;color:#888"></span>
+                </div>
+                <div id="se-content">
+                    <div class="mn-empty">Edge 分析将随每日信号更新…</div>
+                </div>
             </div>
         </div>
     </div>
@@ -4556,6 +4558,16 @@ function sbNavGroup(grp) {
   const firstTab = document.querySelector(`.grp-section[data-grp="${grp}"] .sec-tab`);
   if (firstTab) secTab(firstTab);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function cardTab(btn, panelId) {
+  const card = btn.closest('.card');
+  if (!card) return;
+  card.querySelectorAll('.card-tab').forEach(t => t.classList.remove('active'));
+  card.querySelectorAll('.card-tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const panel = document.getElementById(panelId);
+  if (panel) panel.classList.add('active');
 }
 
 function mobGrpSwitch(el) {
