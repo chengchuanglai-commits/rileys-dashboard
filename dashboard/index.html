@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617123335";
+      var BUILD="20260617123620";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -2000,56 +2000,24 @@ function renderHealthMetrics(d) {
         return;
     }
     if (dateEl) dateEl.textContent = d.date ? d.date.slice(5).replace('-','月')+'日' : '—';
-    const fmt = (v, fallback) => (v != null && v !== '') ? v : fallback;
-    const steps   = d.steps    ? Number(d.steps).toLocaleString()     : '—';
-    const cal     = d.calories ? Math.round(Number(d.calories))       : '—';
-    const exMin   = fmt(d.exercise_min, '—');
-    const spo2    = d.blood_oxygen ? `${Math.round(d.blood_oxygen)}` : '—';
-    const hr      = fmt(d.heart_rate_resting, '—');
-    const sleep   = d.sleep_hours ? Number(d.sleep_hours).toFixed(1)  : '—';
-    const dist    = d.distance_km ? Number(d.distance_km).toFixed(1)  : '—';
-    el.innerHTML = `
-    <div class="health-grid">
-        <div class="health-cell">
-            <div class="health-val">${steps}</div>
-            <div class="health-lbl">步数</div>
-        </div>
-        <div class="health-cell">
-            <div class="health-val">${cal}<span class="health-unit"> kcal</span></div>
-            <div class="health-lbl">活动热量</div>
-        </div>
-        <div class="health-cell">
-            <div class="health-val">${exMin}<span class="health-unit"> 分</span></div>
-            <div class="health-lbl">锻炼时间</div>
-        </div>
-        <div class="health-cell">
-            <div class="health-val">${spo2}<span class="health-unit"> %</span></div>
-            <div class="health-lbl">血氧</div>
-        </div>
-    </div>
-    <div class="health-pills">
-        <div class="health-pill">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            <div>
-                <div class="health-pill-val">${hr} <span style="font-size:10px;font-weight:400;color:#999">bpm</span></div>
-                <div class="health-pill-lbl">静息心率</div>
-            </div>
-        </div>
-        <div class="health-pill">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <div>
-                <div class="health-pill-val">${sleep} <span style="font-size:10px;font-weight:400;color:#999">小时</span></div>
-                <div class="health-pill-lbl">睡眠</div>
-            </div>
-        </div>
-        <div class="health-pill">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <div>
-                <div class="health-pill-val">${dist} <span style="font-size:10px;font-weight:400;color:#999">km</span></div>
-                <div class="health-pill-lbl">步行距离</div>
-            </div>
-        </div>
-    </div>`;
+
+    // Numeric values for 2×2 metric grid
+    const stepsNum  = d.steps           ? Number(d.steps)                  : 0;
+    const calNum    = d.calories        ? Math.round(Number(d.calories))   : 0;
+    const standNum  = d.stand_hours     ? Number(d.stand_hours)            : (d.hours_stood ? Number(d.hours_stood) : 0);
+    const hrNum     = d.heart_rate_resting ? Number(d.heart_rate_resting)  : (d.heart_rate ? Number(d.heart_rate) : 0);
+
+    function bar(val, max) {
+        const pct = Math.min(100, Math.round(val / max * 100));
+        return '<div class="metric-bar-wrap"><div class="metric-bar" style="width:' + pct + '%"></div></div>';
+    }
+
+    el.innerHTML = '<div class="metric-grid">' +
+        '<div class="metric-card"><div class="metric-label">步数</div><div class="metric-val">' + (stepsNum ? stepsNum.toLocaleString() : '—') + '</div><div class="metric-sub">目标 10,000</div>' + bar(stepsNum, 10000) + '</div>' +
+        '<div class="metric-card"><div class="metric-label">卡路里</div><div class="metric-val">' + (calNum || '—') + '</div><div class="metric-sub">kcal 活动</div>' + bar(calNum, 600) + '</div>' +
+        '<div class="metric-card"><div class="metric-label">站立</div><div class="metric-val">' + (standNum || '—') + '</div><div class="metric-sub">小时 / 12目标</div>' + bar(standNum, 12) + '</div>' +
+        '<div class="metric-card"><div class="metric-label">静息心率</div><div class="metric-val">' + (hrNum || '—') + '</div><div class="metric-sub">bpm</div>' + bar(Math.max(0, 100 - (hrNum - 50)), 100) + '</div>' +
+        '</div>';
 }
 loadHealthData();
 
@@ -4348,13 +4316,17 @@ function renderCalendar(events) {
                 const st = ev.status || 'pending';
                 const statusIcon = st === 'done' ? SVG_CHECK : st === 'deferred' ? SVG_DEFER : `<span style="color:#d4d4d8;font-size:14px;line-height:1">○</span>`;
                 const noteBtnCls = (ev.note && ev.note.trim()) ? 'cal-icon-btn note-active' : 'cal-icon-btn';
+                const barColor = st === 'done' ? '#22c55e' : st === 'deferred' ? '#f59e0b' : '#d1d5db';
                 html += `<div class="cal-ev ${st}">
-  <div style="display:flex;align-items:center;gap:10px">
-    <button class="cal-status-btn ${st}" onclick="cycleCalendarStatus('${ev.id}')" title="切换状态">${statusIcon}</button>
-    <span class="cal-ev-time">${ev.time}</span>
-    <span class="cal-ev-title ${st}">${escHtml(ev.title)}</span>
-    <button class="${noteBtnCls}" onclick="toggleCalendarNote('${ev.id}')" title="备注">${SVG_NOTE}</button>
-    <button class="cal-icon-btn del" onclick="deleteCalendarEvent('${ev.id}')" title="删除">${SVG_DEL}</button>
+  <div style="display:flex;gap:8px;align-items:flex-start;padding:4px 0">
+    <div style="width:3px;min-height:24px;border-radius:2px;background:${barColor};flex-shrink:0;margin-top:2px"></div>
+    <div style="flex:1;display:flex;align-items:center;gap:10px">
+      <button class="cal-status-btn ${st}" onclick="cycleCalendarStatus('${ev.id}')" title="切换状态">${statusIcon}</button>
+      <span class="cal-ev-time">${ev.time}</span>
+      <span class="cal-ev-title ${st}">${escHtml(ev.title)}</span>
+      <button class="${noteBtnCls}" onclick="toggleCalendarNote('${ev.id}')" title="备注">${SVG_NOTE}</button>
+      <button class="cal-icon-btn del" onclick="deleteCalendarEvent('${ev.id}')" title="删除">${SVG_DEL}</button>
+    </div>
   </div>
   <div class="cal-note-area" id="cal-note-${ev.id}">
     <div class="cal-note-inner">
@@ -4444,7 +4416,9 @@ function renderArchive(events) {
     el.innerHTML = past.map(ev => {
         const st = ev.status || 'pending';
         const dateLabel = ev.date.slice(5).replace('-', '月') + '日';
-        return `<div class="arch-item">
+        const barColor = st === 'done' ? '#22c55e' : st === 'deferred' ? '#f59e0b' : '#d1d5db';
+        return `<div class="arch-item" style="display:flex;gap:8px;align-items:center;padding:5px 0">
+            <div style="width:3px;height:20px;border-radius:2px;background:${barColor};flex-shrink:0"></div>
             <span class="arch-date">${dateLabel} ${ev.time}</span>
             <span class="arch-status ${st}"></span>
             <span class="arch-title">${escHtml(ev.title)}</span>
