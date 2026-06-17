@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617134202";
+      var BUILD="20260617140127";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -1262,7 +1262,8 @@
                     <span>最高净值 <b id="sim-top-val" style="color:var(--c-text)">—</b></span>
                     <span>最高收益 <b id="sim-top-pct" style="color:var(--c-text)">—</b></span>
                 </div>
-                <div id="sim-ranking-list" style="display:flex;flex-direction:column;gap:4px"></div>
+                <div id="sim-ranking-list"></div>
+                <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px;overflow:hidden"></div>
                 <!-- A vs B vs C vs D 统计面板 (hidden, kept for JS compat) -->
                 <div id="sim-ab-stats" style="display:none"></div>
             </div>
@@ -1274,7 +1275,6 @@
                 </div>
             </div>
             <div class="card-tab-panel" id="sim-panel-history">
-                <div id="sim-curve-chart" style="width:100%;padding:4px 0 12px;overflow:hidden"></div>
                 <div id="sig-history-table" style="overflow-x:auto"></div>
             </div>
             <div class="card-tab-panel" id="sim-panel-ranking">
@@ -3824,17 +3824,21 @@ function loadSimCurve() {
     // ── Build ranking for overview tab ──
     try {
       const INIT = 2000;
-      // 排行按「已实现净值」(锁定的真战绩)排，不用含浮盈——避免被未平仓纸面浮盈带偏(与卡片"已实现/浮盈"逻辑一致)
       const reVal = st => INIT + ((st && st.total_realized_pnl_usd) || 0);
       const schemeRanking = [
-        {key:'e', label:'E',    st:peStats},
-        {key:'b', label:'B',    st:pbStats},
-        {key:'c', label:'C',    st:pcStats},
-        {key:'d', label:'D',    st:pdStats},
-        {key:'f', label:'F',    st:pfStats},
-        {key:'g', label:'广池', st:pgStats},
-        {key:'h', label:'H',    st:phStats},
-      ].map(s => { const v = reVal(s.st); return {key:s.key, label:s.label, val:v, pnl:v-INIT, pnlPct:(v-INIT)/INIT*100}; })
+        {key:'e', label:'E',    fullLabel:'E — 智能适应', st:peStats, trades:eTrades, winRate:eWinRate},
+        {key:'b', label:'B',    fullLabel:'B — TP8%/SL4%', st:pbStats, trades:bTrades, winRate:bWinRate},
+        {key:'c', label:'C',    fullLabel:'C — 跳空过滤', st:pcStats, trades:cTrades, winRate:cWinRate},
+        {key:'d', label:'D',    fullLabel:'D — TP15%/SL3%', st:pdStats, trades:dTrades, winRate:dWinRate},
+        {key:'f', label:'F',    fullLabel:'F — 分档出场', st:pfStats, trades:fTrades, winRate:fComm!=null?fTrades:fTrades},
+        {key:'g', label:'广池', fullLabel:'广池 — 大盘精选', st:pgStats, trades:gTrades, winRate:0},
+        {key:'h', label:'H',    fullLabel:'H — 历史最优', st:phStats, trades:hTrades, winRate:0},
+      ].map(s => {
+        const v = reVal(s.st);
+        const realized = (s.st && s.st.total_realized_pnl_usd) || 0;
+        const portfolio = (s.st && s.st.portfolio_value) || INIT;
+        return {key:s.key, label:s.label, fullLabel:s.fullLabel, val:v, pnl:v-INIT, pnlPct:(v-INIT)/INIT*100, realized, portfolio, trades:s.trades, winRate:s.winRate};
+      })
        .filter(s => !isNaN(s.val) && s.val > 0)
        .sort((a,b) => b.val - a.val);
       renderSimRanking(schemeRanking);
@@ -3880,7 +3884,6 @@ function renderSimRanking(schemes) {
     topPctEl.style.color = bestPnl >= 0 ? '#16a34a' : '#dc2626';
     topPctEl.textContent = sign + (bestPnl / INIT * 100).toFixed(1) + '%';
   }
-  // 进度条用「已实现盈利」的相对比例，让各方案差异清晰可见
   const maxPnl = Math.max(bestPnl, 1);
   el.innerHTML = schemes.map((s, i) => {
     const pnl = s.val - INIT;
@@ -3888,14 +3891,29 @@ function renderSimRanking(schemes) {
     const color = SIM_SCHEME_COLORS[s.key] || '#888';
     const sign = pnl >= 0 ? '+' : '';
     const pnlColor = pnl >= 0 ? '#16a34a' : '#dc2626';
-    const bg = i === 0 ? '#f0fdf4' : (i % 2 === 0 ? '#fafafa' : '#fff');
+    const bg = i === 0 ? '#f0fdf4' : '#fff';
+    const border = i === 0 ? 'border:1px solid #bbf7d0;' : 'border:1px solid #f0f0f0;';
     const rankColor = i === 0 ? '#15803d' : '#9ca3af';
-    return '<div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:' + bg + ';border-radius:7px">' +
-      '<span style="font-size:9px;font-weight:700;color:' + rankColor + ';width:14px;text-align:center">' + (i+1) + '</span>' +
-      '<span style="font-size:10px;font-weight:700;color:' + color + ';width:36px">' + s.label + '</span>' +
-      '<div style="flex:1;background:#f0f0f0;border-radius:3px;height:4px"><div style="background:' + color + ';width:' + barPct + '%;height:4px;border-radius:3px;transition:width .4s"></div></div>' +
-      '<span style="font-size:10px;font-weight:700;color:#111;width:46px;text-align:right">$' + s.val.toFixed(0) + '</span>' +
-      '<span style="font-size:9px;font-weight:600;color:' + pnlColor + ';width:44px;text-align:right">' + sign + (pnl / INIT * 100).toFixed(1) + '%</span>' +
+    // 已实现盈利 vs 含浮盈的总净值
+    const realPnl = s.realized != null ? s.realized : pnl;
+    const realSign = realPnl >= 0 ? '+' : '';
+    const floatPnl = (s.portfolio || (INIT + pnl)) - (INIT + realPnl);
+    const floatStr = floatPnl !== 0 ? (' 浮' + (floatPnl >= 0 ? '+' : '') + '$' + floatPnl.toFixed(0)) : '';
+    const tradesStr = (s.trades && s.trades > 0) ? (s.trades + '笔') : '';
+    return '<div style="' + border + 'background:' + bg + ';border-radius:8px;padding:7px 10px;margin-bottom:4px">' +
+      // Row 1: rank + label + bar + value + pct
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">' +
+        '<span style="font-size:9px;font-weight:700;color:' + rankColor + ';width:14px;text-align:center;flex-shrink:0">' + (i+1) + '</span>' +
+        '<span style="font-size:10px;font-weight:700;color:' + color + ';width:70px;flex-shrink:0">' + (s.fullLabel || s.label) + '</span>' +
+        '<div style="flex:1;background:#f0f0f0;border-radius:3px;height:4px"><div style="background:' + color + ';width:' + barPct + '%;height:4px;border-radius:3px;transition:width .4s"></div></div>' +
+        '<span style="font-size:11px;font-weight:700;color:#111;width:48px;text-align:right;flex-shrink:0">$' + s.val.toFixed(0) + '</span>' +
+        '<span style="font-size:10px;font-weight:700;color:' + pnlColor + ';width:48px;text-align:right;flex-shrink:0">' + sign + (pnl / INIT * 100).toFixed(1) + '%</span>' +
+      '</div>' +
+      // Row 2: realized pnl + float + trades
+      '<div style="display:flex;align-items:center;gap:10px;padding-left:22px;font-size:9px;color:#9ca3af">' +
+        '<span>已实现 <b style="color:' + (realPnl>=0?'#16a34a':'#dc2626') + '">' + realSign + '$' + realPnl.toFixed(0) + '</b>' + (floatStr ? ' <span style="color:#9ca3af">' + floatStr + '</span>' : '') + '</span>' +
+        (tradesStr ? '<span>' + tradesStr + ' 已平</span>' : '') +
+      '</div>' +
       '</div>';
   }).join('');
 }
