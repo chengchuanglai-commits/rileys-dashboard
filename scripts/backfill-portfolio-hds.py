@@ -131,8 +131,9 @@ for signal_date, s in all_signals:
     ticker = s.get("ticker")
     action = s.get("action")
     entry_price = s.get("current_price")
-    if action not in ("BUY", "SELL") or not entry_price:
-        print(f"  Skip {signal_date} {ticker} {action}")
+    # NaN 在 Python 里是真值,not entry_price 拦不住;显式查 NaN/None(广撒池小盘股易出 NaN 价)
+    if action not in ("BUY", "SELL") or not entry_price or entry_price != entry_price:
+        print(f"  Skip {signal_date} {ticker} {action} (无效价 {entry_price})")
         continue
 
     shares = int(PER_POSITION_USD / entry_price)

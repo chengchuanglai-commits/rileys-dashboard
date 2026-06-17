@@ -57,6 +57,7 @@ jobs:
         run: python scripts/generate-deepseek-shadow.py
 
       - name: 更新 H-DS 模拟盘
+        continue-on-error: true   # sim 更新失败也别丢掉已分析出的 deepseek 信号(后面照样提交)
         run: python scripts/backfill-portfolio-hds.py
 
       - name: 更新 edge 分析
@@ -64,12 +65,14 @@ jobs:
         run: python scripts/analyze-signal-edge.py
 
       - name: 查 DeepSeek 余额(不足推飞书)
+        if: always()
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: python scripts/check-deepseek-balance.py
 
       - name: 提交
+        if: always()
         run: |
           git config user.name "deepseek-broad-bot"
           git config user.email "deepseek-broad-bot@users.noreply.github.com"

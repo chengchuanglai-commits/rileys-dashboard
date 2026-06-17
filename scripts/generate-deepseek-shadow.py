@@ -81,7 +81,10 @@ def main():
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
     def analyze(tk):
-        price = price_map.get(tk) or get_price(tk)
+        p = price_map.get(tk)
+        price = p if (p and p == p) else get_price(tk)   # NaN是真值,显式查;退回yfinance
+        if price is not None and price != price:          # get_price 也可能 NaN
+            price = None
         try:
             decision = run_deepseek(tk)
             action = parse_action(decision)
