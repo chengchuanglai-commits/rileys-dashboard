@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617122702";
+      var BUILD="20260617123045";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -1217,53 +1217,48 @@
     <!-- ── Row 2.8: A vs B 模拟系统（统一面板）── -->
     <div class="row col-1" id="sec-sim" style="margin-bottom:16px">
         <div class="card" id="sim-card">
-            <div class="card-hd" style="margin-bottom:14px">
-                <span class="card-title">📊 模拟盘 — A / B / C 方案对比</span>
-                <span style="font-size:9px;color:#bbb">A=限价入场 · B=TP+8%/SL-4%/5日 · C=B+跳空过滤 · D=TP+15%/SL-3%/2日</span>
+            <div class="card-hd" style="margin-bottom:10px">
+                <span class="card-title">模拟盘</span>
                 <span id="sim-refresh-info" style="font-size:9px;color:#bbb;margin-left:auto"></span>
             </div>
-            <!-- A vs B vs C vs D 统计面板 -->
-            <div id="sim-ab-stats" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-bottom:16px"></div>
-            <!-- 双曲线图 -->
-            <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px;overflow:hidden"></div>
-            <!-- 交易历史表格 -->
-            <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0">
-                <div style="font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">交易历史</div>
+            <div class="card-tab-bar">
+                <button class="card-tab active" onclick="cardTab(this,'sim-panel-overview')">概览</button>
+                <button class="card-tab" onclick="cardTab(this,'sim-panel-positions')">持仓</button>
+                <button class="card-tab" onclick="cardTab(this,'sim-panel-history')">历史</button>
+                <button class="card-tab" onclick="cardTab(this,'sim-panel-ranking')">排名</button>
+            </div>
+            <div class="card-tab-panel active" id="sim-panel-overview">
+                <div style="display:flex;gap:16px;margin-bottom:12px;font-size:9px;color:var(--c-text-3)">
+                    <span>总投入 <b style="color:var(--c-text)">$2,000</b></span>
+                    <span>最高净值 <b id="sim-top-val" style="color:var(--c-text)">—</b></span>
+                </div>
+                <div id="sim-ranking-list" style="display:flex;flex-direction:column;gap:4px;margin-bottom:14px"></div>
+                <div id="sim-curve-chart" style="width:100%;padding:4px 0 8px;overflow:hidden"></div>
+                <!-- A vs B vs C vs D 统计面板 (hidden, kept for JS compat) -->
+                <div id="sim-ab-stats" style="display:none"></div>
+            </div>
+            <div class="card-tab-panel" id="sim-panel-positions">
+                <div id="sim-pb-open"></div>
+                <div style="margin-top:8px;display:flex;align-items:center;gap:8px">
+                    <button id="live-refresh-btn" onclick="manualLiveRefresh()" style="font-size:9px;padding:4px 12px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer;color:#6b7280">刷新持仓</button>
+                    <span id="live-status" style="font-size:9px;color:#9ca3af"></span>
+                </div>
+            </div>
+            <div class="card-tab-panel" id="sim-panel-history">
                 <div id="sig-history-table" style="overflow-x:auto"></div>
             </div>
-            <!-- 策略优化排名 (折叠) -->
-            <details class="sim-collapse">
-                <summary class="sim-collapse-hd">
-                    🔬 策略优化排名
-                    <span id="bt-meta" style="font-weight:400;text-transform:none;letter-spacing:0;color:#bbb"></span>
-                </summary>
-                <div class="sim-collapse-body">
-                    <div id="bt-table" style="overflow-x:auto"></div>
+            <div class="card-tab-panel" id="sim-panel-ranking">
+                <div style="margin-bottom:12px">
+                    <span id="bt-meta" style="font-size:9px;color:#9ca3af"></span>
+                    <div id="bt-table" style="overflow-x:auto;margin-top:8px"></div>
                     <div id="bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
                 </div>
-            </details>
-            <!-- 大规模历史回测验证 (折叠) -->
-            <details class="sim-collapse">
-                <summary class="sim-collapse-hd">
-                    📊 大规模历史验证
-                    <span id="hist-bt-meta" style="font-weight:400;text-transform:none;letter-spacing:0;color:#bbb"></span>
-                </summary>
-                <div class="sim-collapse-body">
-                    <div id="hist-bt-table" style="overflow-x:auto"></div>
+                <div style="border-top:1px solid #f0f0f0;padding-top:12px">
+                    <span id="hist-bt-meta" style="font-size:9px;color:#9ca3af"></span>
+                    <div id="hist-bt-table" style="overflow-x:auto;margin-top:8px"></div>
                     <div id="hist-bt-insight" style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.6"></div>
                 </div>
-            </details>
-            <!-- 持仓实时报价 (折叠) -->
-            <details class="sim-collapse">
-                <summary class="sim-collapse-hd">
-                    📦 当前持仓
-                    <button id="live-refresh-btn" onclick="event.preventDefault();manualLiveRefresh()" style="font-size:9px;padding:1px 7px;border:1px solid #d1d5db;border-radius:4px;background:#fff;cursor:pointer;color:#6b7280;font-weight:400;text-transform:none;letter-spacing:0;margin-left:6px">⟳ 刷新</button>
-                    <span id="live-status" style="font-size:9px;color:#9ca3af;font-weight:400;text-transform:none;letter-spacing:0"></span>
-                </summary>
-                <div class="sim-collapse-body">
-                    <div id="sim-pb-open"></div>
-                </div>
-            </details>
+            </div>
         </div>
     </div>
 
@@ -3953,6 +3948,21 @@ function loadSimCurve() {
         wrap.appendChild(legendDiv);
         applyChartFocus();
     }
+
+    // ── Build ranking for overview tab ──
+    try {
+      const INIT = 2000;
+      const schemeRanking = [
+        {key:'e', label:'E',    val:eFinal, pnl:eFinal-INIT, pnlPct:(eFinal-INIT)/INIT*100},
+        {key:'b', label:'B',    val:bFinal, pnl:bFinal-INIT, pnlPct:(bFinal-INIT)/INIT*100},
+        {key:'c', label:'C',    val:cFinal, pnl:cFinal-INIT, pnlPct:(cFinal-INIT)/INIT*100},
+        {key:'d', label:'D',    val:dFinal, pnl:dFinal-INIT, pnlPct:(dFinal-INIT)/INIT*100},
+        {key:'f', label:'F',    val:fFinal, pnl:fFinal-INIT, pnlPct:(fFinal-INIT)/INIT*100},
+        {key:'g', label:'G',    val:gFinal, pnl:gFinal-INIT, pnlPct:(gFinal-INIT)/INIT*100},
+        {key:'h', label:'H',    val:hFinal, pnl:hFinal-INIT, pnlPct:(hFinal-INIT)/INIT*100},
+      ].filter(s => !isNaN(s.val) && s.val > 0).sort((a,b) => b.val - a.val);
+      renderSimRanking(schemeRanking);
+    } catch(e) { console.warn('renderSimRanking:', e); }
 }
 
 // ── 折线图聚焦：点方案卡片高亮对应曲线，再点取消 ──
@@ -3972,6 +3982,33 @@ function applyChartFocus() {
 function focusSeries(plan) {
     window._chartFocus = (window._chartFocus === plan) ? null : plan;
     applyChartFocus();
+}
+
+// ── 模拟盘排行榜 ──────────────────────────────────────
+const SIM_SCHEME_COLORS = {
+  e:'#4b7fa3', b:'#3a8a5a', c:'#6b5aab', d:'#b06030',
+  f:'#7a3a8a', g:'#2e7a4a', h:'#9a3a20', a:'#888888'
+};
+
+function renderSimRanking(schemes) {
+  const el = document.getElementById('sim-ranking-list');
+  const topEl = document.getElementById('sim-top-val');
+  if (!el || !schemes || !schemes.length) return;
+  const maxVal = schemes[0].val;
+  if (topEl) topEl.textContent = '$' + maxVal.toFixed(0);
+  el.innerHTML = schemes.map((s, i) => {
+    const pct = Math.round((s.val / maxVal) * 100);
+    const color = SIM_SCHEME_COLORS[s.key] || '#888';
+    const sign = s.pnl >= 0 ? '+' : '';
+    const pnlColor = s.pnl >= 0 ? '#16a34a' : '#dc2626';
+    return '<div style="display:flex;align-items:center;gap:8px;padding:5px 8px;background:' + (i===0?'#fafafa':'transparent') + ';border-radius:7px">' +
+      '<span style="font-size:9px;font-weight:' + (i===0?'700':'400') + ';color:#9ca3af;width:14px">' + (i+1) + '</span>' +
+      '<span style="font-size:10px;font-weight:700;color:' + color + ';width:32px">' + s.label + '</span>' +
+      '<div style="flex:1;background:#f0f0f0;border-radius:3px;height:4px"><div style="background:' + color + ';width:' + pct + '%;height:4px;border-radius:3px"></div></div>' +
+      '<span style="font-size:10px;font-weight:700;color:#111;width:46px;text-align:right">$' + s.val.toFixed(0) + '</span>' +
+      '<span style="font-size:9px;color:' + pnlColor + ';width:40px;text-align:right">' + sign + s.pnlPct.toFixed(0) + '%</span>' +
+      '</div>';
+  }).join('');
 }
 
 // ── VPN 搭建计划 ──────────────────────────────────────
