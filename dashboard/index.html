@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617180000";
+      var BUILD="20260617181500";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -3923,14 +3923,14 @@ function renderSimRanking(schemes) {
       'style="position:relative;background:' + bg + ';border:' + border + ';border-radius:10px;padding:10px 12px;cursor:pointer;transition:box-shadow .15s,border-color .15s;min-height:130px;display:flex;flex-direction:column"' +
       ' onmouseover="this.style.boxShadow=\'0 2px 10px rgba(0,0,0,.1)\'" onmouseout="this.style.boxShadow=this.dataset.selected?\'0 0 0 2px ' + color + '\':\'\'">' +
       rankBadge +
-      '<div style="font-size:13px;font-weight:800;color:' + color + ';margin-bottom:1px">' + s.label + '</div>' +
-      '<div style="font-size:8px;color:#aaa;margin-bottom:8px">' + (s.fullLabel ? s.fullLabel.replace(/^[^——]+[—\-] ?/, '') : '') + '</div>' +
+      '<div style="font-size:15px;font-weight:800;color:' + color + ';margin-bottom:2px">' + s.label + '</div>' +
+      '<div style="font-size:10px;color:#aaa;margin-bottom:8px">' + (s.fullLabel ? s.fullLabel.replace(/^[^——]+[—\-] ?/, '') : '') + '</div>' +
       '<div style="margin-bottom:5px">' +
-        '<span style="font-size:18px;font-weight:800;color:#111;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
-        '<span style="font-size:11px;font-weight:700;color:' + pnlColor + ';margin-left:5px;font-variant-numeric:tabular-nums">' + sign + (pnl/INIT*100).toFixed(1) + '%</span>' +
+        '<span style="font-size:20px;font-weight:800;color:#111;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
+        '<span style="font-size:12px;font-weight:700;color:' + pnlColor + ';margin-left:5px;font-variant-numeric:tabular-nums">' + sign + (pnl/INIT*100).toFixed(1) + '%</span>' +
       '</div>' +
-      '<div style="font-size:8px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
-      '<div style="font-size:8px;color:' + color + ';margin-top:auto;padding-top:6px;opacity:.6">点击查看持仓 ›</div>' +
+      '<div style="font-size:10px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
+      '<div style="font-size:10px;color:' + color + ';margin-top:auto;padding-top:6px;opacity:.6">点击查看持仓 ›</div>' +
     '</div>';
   });
   el.innerHTML = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + cards.join('') + '</div>';
