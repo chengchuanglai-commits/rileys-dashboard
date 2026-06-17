@@ -17,10 +17,10 @@
       "daily_prices": {
         "2026-06-17": {
           "open": 16.25,
-          "high": 16.54,
+          "high": 16.55,
           "low": 16.2,
-          "close": 16.49,
-          "pnl_pct": -1.54
+          "close": 16.29,
+          "pnl_pct": -0.31
         }
       }
     },
@@ -41,9 +41,9 @@
         "2026-06-17": {
           "open": 37.03,
           "high": 37.04,
-          "low": 36.52,
-          "close": 36.62,
-          "pnl_pct": 1.13
+          "low": 36.28,
+          "close": 36.36,
+          "pnl_pct": 1.84
         }
       }
     }
@@ -562,8 +562,8 @@
     "win_trades": 6,
     "win_rate": 40.0,
     "total_realized_pnl_usd": 172.8,
-    "open_unrealized_pnl_usd": -4.06,
-    "portfolio_value": 2168.74,
+    "open_unrealized_pnl_usd": 5.35,
+    "portfolio_value": 2178.15,
     "total_commission_usd": 30.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 1,

@@ -157,9 +157,9 @@ window.PORTFOLIO_MN = {
         "2026-06-17": {
           "open": 120.39,
           "high": 122.5,
-          "low": 118.93,
-          "close": 120.03,
-          "pnl_pct": 2.35
+          "low": 117.09,
+          "close": 118.26,
+          "pnl_pct": 0.84
         }
       }
     },
@@ -179,10 +179,10 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-17": {
           "open": 57.02,
-          "high": 61.14,
+          "high": 61.68,
           "low": 56.83,
-          "close": 60.54,
-          "pnl_pct": 5.38
+          "close": 60.19,
+          "pnl_pct": 4.77
         }
       }
     },
@@ -202,10 +202,10 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-17": {
           "open": 24.05,
-          "high": 25.04,
+          "high": 25.67,
           "low": 23.51,
-          "close": 24.91,
-          "pnl_pct": 4.14
+          "close": 24.3,
+          "pnl_pct": 1.59
         }
       }
     },
@@ -227,8 +227,8 @@ window.PORTFOLIO_MN = {
           "open": 251.13,
           "high": 254.84,
           "low": 248.64,
-          "close": 252.07,
-          "pnl_pct": 0.06
+          "close": 250.87,
+          "pnl_pct": -0.41
         }
       }
     },
@@ -248,10 +248,10 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-17": {
           "open": 85.44,
-          "high": 86.49,
+          "high": 87.98,
           "low": 85.0,
-          "close": 86.28,
-          "pnl_pct": 1.53
+          "close": 86.6,
+          "pnl_pct": 1.91
         }
       }
     },
@@ -273,8 +273,8 @@ window.PORTFOLIO_MN = {
           "open": 18.4,
           "high": 19.27,
           "low": 18.33,
-          "close": 18.96,
-          "pnl_pct": 2.21
+          "close": 18.55,
+          "pnl_pct": 0.0
         }
       }
     },
@@ -296,8 +296,8 @@ window.PORTFOLIO_MN = {
           "open": 231.13,
           "high": 236.07,
           "low": 229.29,
-          "close": 234.39,
-          "pnl_pct": 1.48
+          "close": 230.88,
+          "pnl_pct": -0.04
         }
       }
     },
@@ -306,13 +306,13 @@ window.PORTFOLIO_MN = {
       "name": "Qualcomm Inc.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 219.21,
+      "entry_price": 216.36,
       "allocated_usd": 500,
       "shares": 2,
-      "actual_position_usd": 438.42,
+      "actual_position_usd": 432.72,
       "entry_commission": 1.0,
-      "take_profit": 252.09,
-      "stop_loss": 214.83,
+      "take_profit": 248.81,
+      "stop_loss": 212.03,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -321,13 +321,13 @@ window.PORTFOLIO_MN = {
       "name": "Marvell Technology Inc.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 295.73,
+      "entry_price": 301.14,
       "allocated_usd": 500,
       "shares": 1,
-      "actual_position_usd": 295.73,
+      "actual_position_usd": 301.14,
       "entry_commission": 1.0,
-      "take_profit": 340.09,
-      "stop_loss": 289.82,
+      "take_profit": 346.31,
+      "stop_loss": 295.12,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -336,13 +336,13 @@ window.PORTFOLIO_MN = {
       "name": "Candela Corporation",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 23.68,
+      "entry_price": 23.78,
       "allocated_usd": 500,
       "shares": 21,
-      "actual_position_usd": 497.28,
+      "actual_position_usd": 499.38,
       "entry_commission": 1.0,
-      "take_profit": 27.23,
-      "stop_loss": 23.21,
+      "take_profit": 27.35,
+      "stop_loss": 23.3,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -351,13 +351,13 @@ window.PORTFOLIO_MN = {
       "name": "FormFactor Inc.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 144.08,
+      "entry_price": 142.6,
       "allocated_usd": 500,
       "shares": 3,
-      "actual_position_usd": 432.24,
+      "actual_position_usd": 427.8,
       "entry_commission": 1.0,
-      "take_profit": 165.69,
-      "stop_loss": 141.2,
+      "take_profit": 163.99,
+      "stop_loss": 139.75,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     },
@@ -381,13 +381,13 @@ window.PORTFOLIO_MN = {
       "name": "Enerflex Ltd.",
       "action": "BUY",
       "signal_date": "2026-06-17",
-      "entry_price": 20.33,
+      "entry_price": 20.03,
       "allocated_usd": 500,
       "shares": 24,
-      "actual_position_usd": 487.92,
+      "actual_position_usd": 480.72,
       "entry_commission": 1.0,
-      "take_profit": 23.38,
-      "stop_loss": 19.92,
+      "take_profit": 23.03,
+      "stop_loss": 19.63,
       "max_hold_date": "2026-06-19",
       "daily_prices": {}
     }
@@ -2662,7 +2662,7 @@ window.PORTFOLIO_MN = {
           "open": 230.08,
           "high": 236.0,
           "low": 226.4,
-          "close": 232.52,
+          "close": 227.56,
           "pnl_pct": -2.0
         }
       },
@@ -2681,8 +2681,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 23,
     "win_rate": 34.8,
     "total_realized_pnl_usd": 41.72,
-    "open_unrealized_pnl_usd": 115.73,
-    "portfolio_value": 2157.45,
+    "open_unrealized_pnl_usd": 76.4,
+    "portfolio_value": 2118.12,
     "total_commission_usd": 132.0,
     "skipped_gap": 25,
     "skipped_zero_shares": 6,
