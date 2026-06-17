@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260617163000";
+      var BUILD="20260617165000";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -1273,6 +1273,7 @@
                     </div>
                 </div>
                 <div id="sim-ranking-list"></div>
+                <div id="sim-scheme-detail" style="display:none"></div>
                 <!-- A vs B vs C vs D 统计面板 (hidden, kept for JS compat) -->
                 <div id="sim-ab-stats" style="display:none"></div>
             </div>
@@ -3918,13 +3919,13 @@ function renderSimRanking(schemes) {
       '已实现<b style="color:' + (realPnl>=0?'#16a34a':'#dc2626') + '">' + realSign + '$' + realPnl.toFixed(0) + '</b>',
       floatStr, tradesStr
     ].filter(Boolean).join(' · ');
-    // 奇数最后一张独占一列时 grid-column:1/-1
-    const spanFull = (schemes.length % 2 === 1 && i === schemes.length - 1)
-      ? 'grid-column:1/-1;' : '';
-    return '<div style="' + spanFull + 'position:relative;background:' + bg + ';border:' + border + ';border-radius:10px;padding:10px 12px">' +
+    const spanFull = (schemes.length % 2 === 1 && i === schemes.length - 1) ? 'grid-column:1/-1;' : '';
+    return '<div data-scheme-key="' + s.key + '" onclick="toggleSchemeDetail(\'' + s.key + '\')" ' +
+      'style="' + spanFull + 'position:relative;background:' + bg + ';border:' + border + ';border-radius:10px;padding:10px 12px;cursor:pointer;transition:box-shadow .15s,border-color .15s"' +
+      ' onmouseover="this.style.boxShadow=\'0 2px 10px rgba(0,0,0,.1)\'" onmouseout="this.style.boxShadow=this.dataset.selected?\'0 0 0 2px ' + color + '\':\'\'">' +
       rankBadge +
       '<div style="font-size:13px;font-weight:800;color:' + color + ';margin-bottom:1px">' + s.label + '</div>' +
-      '<div style="font-size:8px;color:#aaa;margin-bottom:8px">' + (s.fullLabel ? s.fullLabel.replace(/^[^—]+— ?/, '') : '') + '</div>' +
+      '<div style="font-size:8px;color:#aaa;margin-bottom:8px">' + (s.fullLabel ? s.fullLabel.replace(/^[^——]+[—\-] ?/, '') : '') + '</div>' +
       '<div style="margin-bottom:5px">' +
         '<span style="font-size:18px;font-weight:800;color:#111;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
         '<span style="font-size:11px;font-weight:700;color:' + pnlColor + ';margin-left:5px;font-variant-numeric:tabular-nums">' + sign + (pnl/INIT*100).toFixed(1) + '%</span>' +
@@ -3933,9 +3934,113 @@ function renderSimRanking(schemes) {
         '<div style="background:' + color + ';width:' + barPct + '%;height:4px;border-radius:3px;transition:width .5s ease-out"></div>' +
       '</div>' +
       '<div style="font-size:8px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
+      '<div style="font-size:8px;color:' + color + ';margin-top:4px;opacity:.6">点击查看持仓 ›</div>' +
     '</div>';
   });
   el.innerHTML = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + cards.join('') + '</div>';
+}
+
+// ── 方案持仓展开面板 ─────────────────────────────────
+const _SCHEME_PORT = {b:'PORTFOLIO_B',c:'PORTFOLIO_C',d:'PORTFOLIO_D',e:'PORTFOLIO_E',f:'PORTFOLIO_F',g:'PORTFOLIO_MN',h:'PORTFOLIO_H'};
+const _SCHEME_NAMES = {b:'B — TP8%/SL4%',c:'C — 跳空过滤',d:'D — TP15%/SL3%',e:'E — 智能适应',f:'F — 分档出场',g:'广池 — 大盘精选',h:'H — 历史最优'};
+let _activeSchemeKey = null;
+
+function toggleSchemeDetail(key) {
+  const panel = document.getElementById('sim-scheme-detail');
+  // deselect all cards
+  document.querySelectorAll('[data-scheme-key]').forEach(c => {
+    delete c.dataset.selected;
+    c.style.boxShadow = '';
+    c.style.borderColor = '';
+  });
+  if (_activeSchemeKey === key) {
+    _activeSchemeKey = null;
+    if (panel) { panel.style.display = 'none'; panel.innerHTML = ''; }
+    return;
+  }
+  _activeSchemeKey = key;
+  const card = document.querySelector('[data-scheme-key="' + key + '"]');
+  if (card) {
+    card.dataset.selected = '1';
+    card.style.boxShadow = '0 0 0 2px ' + (SIM_SCHEME_COLORS[key] || '#888');
+  }
+  renderSchemeDetail(key, 'open');
+  if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function renderSchemeDetail(key, tab) {
+  const panel = document.getElementById('sim-scheme-detail');
+  if (!panel) return;
+  const port = window[_SCHEME_PORT[key] || ''];
+  const color = SIM_SCHEME_COLORS[key] || '#888';
+  const name = _SCHEME_NAMES[key] || key.toUpperCase();
+  const opens = (port && port.open_positions) || [];
+  const closed = (port && port.closed_positions) || [];
+
+  const tabBtn = (t, label, count) =>
+    '<button onclick="renderSchemeDetail(\'' + key + '\',\'' + t + '\')" style="padding:7px 14px;font-size:10px;font-weight:' + (tab===t?'600':'400') + ';color:' + (tab===t?'#111':'#888') + ';background:none;border:none;border-bottom:2px solid ' + (tab===t?color:'transparent') + ';cursor:pointer;font-family:inherit;transition:color .15s">' +
+    label + (count ? ' <span style="background:#f0f0f0;border-radius:8px;padding:1px 5px;font-size:8px;font-weight:600">' + count + '</span>' : '') + '</button>';
+
+  let rows = '';
+  if (tab === 'open') {
+    if (!opens.length) {
+      rows = '<div style="padding:20px;text-align:center;font-size:11px;color:#aaa">当前无持仓</div>';
+    } else {
+      rows = opens.map(p => {
+        const prices = p.daily_prices || {};
+        const lastDate = Object.keys(prices).sort().pop();
+        const latestPnl = lastDate ? prices[lastDate].pnl_pct : null;
+        const pColor = latestPnl == null ? '#aaa' : (latestPnl >= 0 ? '#16a34a' : '#dc2626');
+        const aBg = p.action === 'BUY' ? '#2563eb' : '#dc2626';
+        const daysHeld = lastDate ? Math.round((new Date(lastDate) - new Date(p.signal_date)) / 86400000) : '—';
+        return '<div style="display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid #f5f5f5">' +
+          '<span style="font-size:8.5px;font-weight:700;color:#fff;background:' + aBg + ';padding:2px 6px;border-radius:4px;flex-shrink:0">' + p.action + '</span>' +
+          '<div style="flex:1;min-width:0">' +
+            '<div style="font-size:11px;font-weight:700;color:#111">' + p.ticker + '</div>' +
+            '<div style="font-size:8px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">入 $' + p.entry_price + '&nbsp;· TP $' + p.take_profit + '&nbsp;/ SL $' + p.stop_loss + '&nbsp;· 持有' + daysHeld + '天</div>' +
+          '</div>' +
+          (latestPnl != null ? '<span style="font-size:11px;font-weight:700;color:' + pColor + ';flex-shrink:0">' + (latestPnl>=0?'+':'') + latestPnl.toFixed(1) + '%</span>' : '') +
+        '</div>';
+      }).join('');
+    }
+  } else {
+    if (!closed.length) {
+      rows = '<div style="padding:20px;text-align:center;font-size:11px;color:#aaa">暂无历史记录</div>';
+    } else {
+      const sorted = [...closed].sort((a,b) => (b.close_date||'').localeCompare(a.close_date||''));
+      rows = sorted.map(p => {
+        const pnl = p.realized_pnl_usd || 0;
+        const pColor = pnl >= 0 ? '#16a34a' : '#dc2626';
+        const sign = pnl >= 0 ? '+' : '';
+        const icon = p.close_reason === 'take_profit' ? '<span style="color:#16a34a">✓ TP</span>'
+                   : p.close_reason === 'stop_loss'   ? '<span style="color:#dc2626">✗ SL</span>'
+                   : '<span style="color:#f59e0b">⏱ 到期</span>';
+        const aBg = p.action === 'BUY' ? '#2563eb' : '#dc2626';
+        return '<div style="display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid #f5f5f5">' +
+          '<span style="font-size:8.5px;font-weight:700;color:#fff;background:' + aBg + ';padding:2px 6px;border-radius:4px;flex-shrink:0">' + p.action + '</span>' +
+          '<div style="flex:1;min-width:0">' +
+            '<div style="font-size:11px;font-weight:700;color:#111">' + p.ticker + '</div>' +
+            '<div style="font-size:8px;color:#aaa">$' + p.entry_price + ' → $' + p.close_price + '&nbsp;· ' + (p.close_date||'') + '</div>' +
+          '</div>' +
+          '<span style="font-size:8.5px;flex-shrink:0">' + icon + '</span>' +
+          '<span style="font-size:11px;font-weight:700;color:' + pColor + ';flex-shrink:0;font-variant-numeric:tabular-nums">' + sign + '$' + Math.abs(pnl).toFixed(0) + '</span>' +
+        '</div>';
+      }).join('');
+    }
+  }
+
+  panel.style.display = 'block';
+  panel.innerHTML =
+    '<div style="margin-top:10px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden">' +
+      '<div style="padding:10px 14px 0;border-bottom:1px solid #f0f0f0">' +
+        '<div style="display:flex;align-items:center;margin-bottom:4px">' +
+          '<span style="font-size:11px;font-weight:800;color:' + color + '">' + name + '</span>' +
+          '<button onclick="toggleSchemeDetail(\'' + key + '\')" style="margin-left:auto;background:none;border:none;cursor:pointer;font-size:18px;color:#ccc;padding:0 2px;line-height:1;transition:color .15s" onmouseover="this.style.color=\'#888\'" onmouseout="this.style.color=\'#ccc\'">×</button>' +
+        '</div>' +
+        '<div style="display:flex;gap:0">' + tabBtn('open','目前持仓',opens.length) + tabBtn('closed','历史持仓',closed.length) + '</div>' +
+      '</div>' +
+      '<div style="padding:2px 14px 10px;max-height:260px;overflow-y:auto">' + rows + '</div>' +
+    '</div>';
 }
 
 // ── VPN 搭建计划 ──────────────────────────────────────
