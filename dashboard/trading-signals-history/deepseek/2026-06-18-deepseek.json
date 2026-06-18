@@ -1,0 +1,176 @@
+{
+  "date": "2026-06-18",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "HOFT",
+      "action": "BUY",
+      "current_price": 15.61,
+      "target_price": 17.17,
+      "stop_loss": 14.83
+    },
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 16.15,
+      "target_price": 17.77,
+      "stop_loss": 15.34
+    },
+    {
+      "ticker": "NUVL",
+      "action": "SELL",
+      "current_price": 123.43,
+      "target_price": 135.77,
+      "stop_loss": 117.26
+    },
+    {
+      "ticker": "WSBC",
+      "action": "BUY",
+      "current_price": 35.92,
+      "target_price": 39.51,
+      "stop_loss": 34.12
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "SBFG",
+      "action": "HOLD",
+      "current_price": 22.09,
+      "target_price": 24.3,
+      "stop_loss": 20.99
+    },
+    {
+      "ticker": "SNEX",
+      "action": "HOLD",
+      "current_price": 139.55,
+      "target_price": 153.51,
+      "stop_loss": 132.57
+    },
+    {
+      "ticker": "HOFT",
+      "action": "BUY",
+      "current_price": 15.61,
+      "target_price": 17.17,
+      "stop_loss": 14.83
+    },
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 16.15,
+      "target_price": 17.77,
+      "stop_loss": 15.34
+    },
+    {
+      "ticker": "NUVL",
+      "action": "SELL",
+      "current_price": 123.43,
+      "target_price": 135.77,
+      "stop_loss": 117.26
+    },
+    {
+      "ticker": "PBHC",
+      "action": "HOLD",
+      "current_price": 16.01,
+      "target_price": 17.61,
+      "stop_loss": 15.21
+    },
+    {
+      "ticker": "HBNC",
+      "action": "HOLD",
+      "current_price": 19.48,
+      "target_price": 21.43,
+      "stop_loss": 18.51
+    },
+    {
+      "ticker": "WSBC",
+      "action": "BUY",
+      "current_price": 35.92,
+      "target_price": 39.51,
+      "stop_loss": 34.12
+    },
+    {
+      "ticker": "MFIN",
+      "action": "SELL",
+      "current_price": 9.53,
+      "target_price": 10.48,
+      "stop_loss": 9.05
+    },
+    {
+      "ticker": "CHEF",
+      "action": "BUY",
+      "current_price": 95.25,
+      "target_price": 104.78,
+      "stop_loss": 90.49
+    },
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 16.83,
+      "target_price": 18.51,
+      "stop_loss": 15.99
+    },
+    {
+      "ticker": "FISI",
+      "action": "BUY",
+      "current_price": 37.24,
+      "target_price": 40.96,
+      "stop_loss": 35.38
+    },
+    {
+      "ticker": "CNOB",
+      "action": "BUY",
+      "current_price": 32.47,
+      "target_price": 35.72,
+      "stop_loss": 30.85
+    },
+    {
+      "ticker": "FMBH",
+      "action": "BUY",
+      "current_price": 45.88,
+      "target_price": 50.47,
+      "stop_loss": 43.59
+    },
+    {
+      "ticker": "CMPR",
+      "action": "BUY",
+      "current_price": 85.96,
+      "target_price": 94.56,
+      "stop_loss": 81.66
+    },
+    {
+      "ticker": "TRST",
+      "action": "BUY",
+      "current_price": 51.97,
+      "target_price": 57.17,
+      "stop_loss": 49.37
+    },
+    {
+      "ticker": "TWST",
+      "action": "BUY",
+      "current_price": 86.2,
+      "target_price": 94.82,
+      "stop_loss": 81.89
+    },
+    {
+      "ticker": "CTRE",
+      "action": "SELL",
+      "current_price": 36.45,
+      "target_price": 40.1,
+      "stop_loss": 34.63
+    },
+    {
+      "ticker": "SAMG",
+      "action": "SELL",
+      "current_price": 10.62,
+      "target_price": 11.68,
+      "stop_loss": 10.09
+    },
+    {
+      "ticker": "USLM",
+      "action": "HOLD",
+      "current_price": 111.95,
+      "target_price": 123.15,
+      "stop_loss": 106.35
+    }
+  ]
+}

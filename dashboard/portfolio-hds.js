@@ -3,21 +3,6 @@ window.PORTFOLIO_HDS = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "CHEF",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-17",
-      "entry_price": 93.14,
-      "allocated_usd": 500,
-      "shares": 5,
-      "actual_position_usd": 465.7,
-      "entry_commission": 1.0,
-      "take_profit": 79.17,
-      "stop_loss": 95.0,
-      "max_hold_date": "2026-06-19",
-      "daily_prices": {}
-    },
-    {
       "ticker": "SBFG",
       "name": "",
       "action": "BUY",
@@ -30,7 +15,15 @@ window.PORTFOLIO_HDS = {
       "take_profit": 25.68,
       "stop_loss": 21.88,
       "max_hold_date": "2026-06-19",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-18": {
+          "open": 22.72,
+          "high": 22.72,
+          "low": 22.08,
+          "close": 22.46,
+          "pnl_pct": 0.58
+        }
+      }
     },
     {
       "ticker": "HOFT",
@@ -45,21 +38,74 @@ window.PORTFOLIO_HDS = {
       "take_profit": 17.49,
       "stop_loss": 14.91,
       "max_hold_date": "2026-06-19",
+      "daily_prices": {
+        "2026-06-18": {
+          "open": 15.23,
+          "high": 15.81,
+          "low": 15.12,
+          "close": 15.8,
+          "pnl_pct": 3.88
+        }
+      }
+    },
+    {
+      "ticker": "HOFT",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.61,
+      "allocated_usd": 500,
+      "shares": 32,
+      "actual_position_usd": 499.52,
+      "entry_commission": 1.0,
+      "take_profit": 17.95,
+      "stop_loss": 15.3,
+      "max_hold_date": "2026-06-22",
       "daily_prices": {}
     },
     {
-      "ticker": "PBHC",
+      "ticker": "SWBI",
       "name": "",
       "action": "SELL",
-      "signal_date": "2026-06-17",
-      "entry_price": 15.65,
+      "signal_date": "2026-06-18",
+      "entry_price": 16.15,
       "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 485.15,
+      "shares": 30,
+      "actual_position_usd": 484.5,
       "entry_commission": 1.0,
-      "take_profit": 13.3,
-      "stop_loss": 15.96,
-      "max_hold_date": "2026-06-19",
+      "take_profit": 13.73,
+      "stop_loss": 16.47,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "NUVL",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 123.43,
+      "allocated_usd": 500,
+      "shares": 4,
+      "actual_position_usd": 493.72,
+      "entry_commission": 1.0,
+      "take_profit": 104.92,
+      "stop_loss": 125.9,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "WSBC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 35.92,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 466.96,
+      "entry_commission": 1.0,
+      "take_profit": 41.31,
+      "stop_loss": 35.2,
+      "max_hold_date": "2026-06-22",
       "daily_prices": {}
     }
   ],
@@ -546,19 +592,49 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -11.38
+    },
+    {
+      "ticker": "CHEF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-17",
+      "entry_price": 93.14,
+      "allocated_usd": 500,
+      "shares": 5,
+      "actual_position_usd": 465.7,
+      "entry_commission": 1.0,
+      "take_profit": 79.17,
+      "stop_loss": 95.0,
+      "max_hold_date": "2026-06-19",
+      "daily_prices": {
+        "2026-06-18": {
+          "open": 93.69,
+          "high": 95.45,
+          "low": 91.68,
+          "close": 94.61,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-18",
+      "close_price": 95.0,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -11.31
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 14,
+    "total_trades": 15,
     "win_trades": 5,
-    "win_rate": 35.7,
-    "total_realized_pnl_usd": 67.45,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2067.45,
-    "total_commission_usd": 28.0,
-    "skipped_gap": 9,
+    "win_rate": 33.3,
+    "total_realized_pnl_usd": 56.14,
+    "open_unrealized_pnl_usd": 19.73,
+    "portfolio_value": 2075.87,
+    "total_commission_usd": 30.0,
+    "skipped_gap": 10,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-17"
+    "updated_at": "2026-06-18"
   }
 };
