@@ -56,9 +56,9 @@ jobs:
         env:
           NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: |
-          NOTIFY_MESSAGE="🤖 DeepSeek 广撒开始（约30分钟）
-$(date -u +%Y-%m-%d) · 广撒选股器全部候选 → 分析信号 → 更新 H-DS + edge
-（交易信号系统）" python3 scripts/notify-webhook.py
+          NOTIFY_MESSAGE="$(printf '🤖 DeepSeek 广撒开始（约30分钟）\n%s · 广撒全部候选 → 分析信号 → 更新 H-DS/edge\n（交易信号系统）' "$(date -u +%F)")"
+          export NOTIFY_MESSAGE
+          python3 scripts/notify-webhook.py
 
       - name: 自带选股器(无 Anthropic 成本)
         env:
@@ -133,6 +133,6 @@ $(date -u +%Y-%m-%d) · 广撒选股器全部候选 → 分析信号 → 更新 
         env:
           NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: |
-          NOTIFY_MESSAGE="🚨 DeepSeek 广撒任务失败 $(date -u +%Y-%m-%d)
-请到 GitHub Actions 查看 deepseek-broad 日志
-（交易信号系统）" python3 scripts/notify-webhook.py
+          NOTIFY_MESSAGE="$(printf '🚨 DeepSeek 广撒任务失败 %s\n请到 GitHub Actions 查看 deepseek-broad 日志\n（交易信号系统）' "$(date -u +%F)")"
+          export NOTIFY_MESSAGE
+          python3 scripts/notify-webhook.py
