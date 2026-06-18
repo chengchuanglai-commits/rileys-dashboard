@@ -2,41 +2,6 @@ window.PORTFOLIO_E = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "MFIN",
-      "name": "MFIN",
-      "action": "SELL",
-      "signal_date": "2026-06-15",
-      "entry_price": 9.81,
-      "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 490.5,
-      "entry_commission": 1.0,
-      "take_profit": 8.83,
-      "stop_loss": 10.1,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-18",
-      "regime": "neutral",
-      "vix": 16.2,
-      "daily_prices": {
-        "2026-06-16": {
-          "open": 9.9,
-          "high": 10.09,
-          "low": 9.82,
-          "close": 9.87,
-          "pnl_pct": -0.61
-        },
-        "2026-06-17": {
-          "open": 9.89,
-          "high": 9.93,
-          "low": 9.47,
-          "close": 9.52,
-          "pnl_pct": 2.96
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 9.9
-    },
-    {
       "ticker": "AMRX",
       "name": "AMRX",
       "action": "SELL",
@@ -59,6 +24,13 @@ window.PORTFOLIO_E = {
           "low": 16.18,
           "close": 16.28,
           "pnl_pct": -0.25
+        },
+        "2026-06-18": {
+          "open": 16.47,
+          "high": 16.61,
+          "low": 15.73,
+          "close": 16.1,
+          "pnl_pct": 0.86
         }
       },
       "gap_checked": true,
@@ -87,6 +59,13 @@ window.PORTFOLIO_E = {
           "low": 36.26,
           "close": 36.38,
           "pnl_pct": 1.78
+        },
+        "2026-06-18": {
+          "open": 36.57,
+          "high": 37.05,
+          "low": 36.05,
+          "close": 36.91,
+          "pnl_pct": 0.35
         }
       },
       "gap_checked": true,
@@ -107,7 +86,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-23",
       "regime": "neutral",
-      "vix": 17.38,
+      "vix": 16.87,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -126,7 +105,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-23",
       "regime": "neutral",
-      "vix": 17.38,
+      "vix": 16.87,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -611,17 +590,64 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 32.72
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "take_profit": 8.83,
+      "stop_loss": 10.1,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-18",
+      "regime": "neutral",
+      "vix": 16.2,
+      "daily_prices": {
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": -0.61
+        },
+        "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
+          "close": 9.52,
+          "pnl_pct": 2.96
+        },
+        "2026-06-18": {
+          "open": 9.59,
+          "high": 9.67,
+          "low": 9.38,
+          "close": 9.45,
+          "pnl_pct": 3.67
+        }
+      },
+      "close_date": "2026-06-18",
+      "close_price": 9.45,
+      "final_pnl_pct": 3.67,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.0
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 12,
-    "win_trades": 7,
-    "win_rate": 58.3,
-    "total_realized_pnl_usd": 160.79,
-    "open_unrealized_pnl_usd": 18.87,
-    "portfolio_value": 2179.66,
-    "total_commission_usd": 24.0,
+    "total_trades": 13,
+    "win_trades": 8,
+    "win_rate": 61.5,
+    "total_realized_pnl_usd": 176.79,
+    "open_unrealized_pnl_usd": 3.88,
+    "portfolio_value": 2180.67,
+    "total_commission_usd": 26.0,
     "skipped_fear": 0,
     "skipped_direction": 4,
     "skipped_gap": 4,

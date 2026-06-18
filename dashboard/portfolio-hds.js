@@ -41,10 +41,10 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-06-18": {
           "open": 15.23,
-          "high": 15.81,
+          "high": 15.82,
           "low": 15.12,
-          "close": 15.8,
-          "pnl_pct": 3.88
+          "close": 15.65,
+          "pnl_pct": 2.89
         }
       }
     },
@@ -609,9 +609,9 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-06-18": {
           "open": 93.69,
-          "high": 95.45,
+          "high": 96.38,
           "low": 91.68,
-          "close": 94.61,
+          "close": 95.06,
           "pnl_pct": -2.0
         }
       },
@@ -630,8 +630,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 5,
     "win_rate": 33.3,
     "total_realized_pnl_usd": 56.14,
-    "open_unrealized_pnl_usd": 19.73,
-    "portfolio_value": 2075.87,
+    "open_unrealized_pnl_usd": 14.92,
+    "portfolio_value": 2071.06,
     "total_commission_usd": 30.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 1,

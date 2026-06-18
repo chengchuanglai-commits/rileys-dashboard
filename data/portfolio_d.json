@@ -2,67 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "AMRX",
-      "name": "AMRX",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 16.24,
-      "allocated_usd": 500,
-      "shares": 30,
-      "actual_position_usd": 487.2,
-      "entry_commission": 1.0,
-      "take_profit": 13.8,
-      "stop_loss": 16.73,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-17": {
-          "open": 16.25,
-          "high": 16.55,
-          "low": 16.18,
-          "close": 16.28,
-          "pnl_pct": -0.25
-        }
-      }
-    },
-    {
-      "ticker": "CTRE",
-      "name": "CTRE",
-      "action": "SELL",
-      "signal_date": "2026-06-16",
-      "entry_price": 37.04,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 481.52,
-      "entry_commission": 1.0,
-      "take_profit": 31.48,
-      "stop_loss": 38.15,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-17": {
-          "open": 37.03,
-          "high": 37.04,
-          "low": 36.26,
-          "close": 36.38,
-          "pnl_pct": 1.78
-        }
-      }
-    },
-    {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
-      "entry_commission": 1.0,
-      "take_profit": 13.46,
-      "stop_loss": 16.32,
-      "max_hold_date": "2026-06-22",
-      "daily_prices": {}
-    },
-    {
       "ticker": "SBFG",
       "name": "SBFG",
       "action": "SELL",
@@ -75,7 +14,15 @@
       "take_profit": 19.13,
       "stop_loss": 23.19,
       "max_hold_date": "2026-06-22",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 22.46,
+          "pnl_pct": 0.22
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 22.72,
+      "day1_gap_pct": 0.93
     }
   ],
   "closed_positions": [
@@ -605,19 +552,91 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 12.52
+    },
+    {
+      "ticker": "AMRX",
+      "name": "AMRX",
+      "action": "SELL",
+      "signal_date": "2026-06-16",
+      "entry_price": 16.24,
+      "allocated_usd": 500,
+      "shares": 30,
+      "actual_position_usd": 487.2,
+      "entry_commission": 1.0,
+      "take_profit": 13.8,
+      "stop_loss": 16.73,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 16.25,
+          "high": 16.55,
+          "low": 16.18,
+          "close": 16.28,
+          "pnl_pct": -0.25
+        },
+        "2026-06-18": {
+          "open": 16.47,
+          "high": 16.61,
+          "low": 15.73,
+          "close": 16.1,
+          "pnl_pct": 0.86
+        }
+      },
+      "close_date": "2026-06-18",
+      "close_price": 16.1,
+      "final_pnl_pct": 0.86,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.19
+    },
+    {
+      "ticker": "CTRE",
+      "name": "CTRE",
+      "action": "SELL",
+      "signal_date": "2026-06-16",
+      "entry_price": 37.04,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 481.52,
+      "entry_commission": 1.0,
+      "take_profit": 31.48,
+      "stop_loss": 38.15,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 37.03,
+          "high": 37.04,
+          "low": 36.26,
+          "close": 36.38,
+          "pnl_pct": 1.78
+        },
+        "2026-06-18": {
+          "open": 36.57,
+          "high": 37.05,
+          "low": 36.05,
+          "close": 36.91,
+          "pnl_pct": 0.35
+        }
+      },
+      "close_date": "2026-06-18",
+      "close_price": 36.91,
+      "final_pnl_pct": 0.35,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.31
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 15,
-    "win_trades": 8,
-    "win_rate": 53.3,
-    "total_realized_pnl_usd": 188.61,
-    "open_unrealized_pnl_usd": 5.35,
-    "portfolio_value": 2193.96,
-    "total_commission_usd": 30.0,
-    "skipped_gap": 5,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-18"
+    "total_trades": 17,
+    "win_trades": 11,
+    "win_rate": 64.7,
+    "total_realized_pnl_usd": 190.49,
+    "open_unrealized_pnl_usd": 1.1,
+    "portfolio_value": 2191.59,
+    "skipped_gap": 6,
+    "updated_at": "2026-06-19"
   }
 }

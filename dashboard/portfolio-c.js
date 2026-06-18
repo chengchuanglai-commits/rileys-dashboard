@@ -1,52 +1,7 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "MFIN",
-      "name": "MFIN",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 9.89,
-      "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 494.5,
-      "entry_commission": 1.0,
-      "take_profit": 9.1,
-      "stop_loss": 10.29,
-      "max_hold_date": "2026-06-18",
-      "day1_open": 9.71,
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 9.71,
-          "high": 9.95,
-          "low": 9.71,
-          "close": 9.81,
-          "pnl_pct": 0.81
-        },
-        "2026-06-15": {
-          "open": 9.82,
-          "high": 9.92,
-          "low": 9.76,
-          "close": 9.85,
-          "pnl_pct": 0.4
-        },
-        "2026-06-16": {
-          "open": 9.9,
-          "high": 10.09,
-          "low": 9.82,
-          "close": 9.87,
-          "pnl_pct": 0.2
-        },
-        "2026-06-17": {
-          "open": 9.89,
-          "high": 9.93,
-          "low": 9.47,
-          "close": 9.52,
-          "pnl_pct": 3.74
-        }
-      }
-    },
     {
       "ticker": "MFIN",
       "name": "MFIN",
@@ -60,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "day1_open": 9.9,
+      "day1_open": 9.59,
       "daily_prices": {
         "2026-06-16": {
           "open": 9.9,
@@ -75,8 +30,14 @@ window.PORTFOLIO_C = {
           "low": 9.47,
           "close": 9.52,
           "pnl_pct": 2.96
+        },
+        "2026-06-18": {
+          "close": 9.45,
+          "pnl_pct": 3.67
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -2.24
     },
     {
       "ticker": "AMRX",
@@ -91,7 +52,7 @@ window.PORTFOLIO_C = {
       "take_profit": 14.94,
       "stop_loss": 16.89,
       "max_hold_date": "2026-06-23",
-      "day1_open": 16.25,
+      "day1_open": 16.47,
       "daily_prices": {
         "2026-06-17": {
           "open": 16.25,
@@ -99,8 +60,14 @@ window.PORTFOLIO_C = {
           "low": 16.18,
           "close": 16.28,
           "pnl_pct": -0.25
+        },
+        "2026-06-18": {
+          "close": 16.12,
+          "pnl_pct": 0.74
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 1.42
     },
     {
       "ticker": "CTRE",
@@ -115,7 +82,7 @@ window.PORTFOLIO_C = {
       "take_profit": 34.08,
       "stop_loss": 38.52,
       "max_hold_date": "2026-06-23",
-      "day1_open": 37.03,
+      "day1_open": 36.57,
       "daily_prices": {
         "2026-06-17": {
           "open": 37.03,
@@ -123,8 +90,14 @@ window.PORTFOLIO_C = {
           "low": 36.26,
           "close": 36.38,
           "pnl_pct": 1.78
+        },
+        "2026-06-18": {
+          "close": 36.9,
+          "pnl_pct": 0.38
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -1.27
     },
     {
       "ticker": "PBHC",
@@ -139,8 +112,15 @@ window.PORTFOLIO_C = {
       "take_profit": 14.57,
       "stop_loss": 16.47,
       "max_hold_date": "2026-06-25",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 16.01,
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 15.82,
+          "pnl_pct": 0.13
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 1.07
     },
     {
       "ticker": "SBFG",
@@ -155,8 +135,15 @@ window.PORTFOLIO_C = {
       "take_profit": 20.71,
       "stop_loss": 23.41,
       "max_hold_date": "2026-06-25",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 22.72,
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 22.46,
+          "pnl_pct": 0.22
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.93
     }
   ],
   "closed_positions": [
@@ -617,6 +604,65 @@ window.PORTFOLIO_C = {
       "realized_pnl_usd": 37.06
     },
     {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 9.89,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 494.5,
+      "entry_commission": 1.0,
+      "take_profit": 9.1,
+      "stop_loss": 10.29,
+      "max_hold_date": "2026-06-18",
+      "day1_open": 9.71,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 9.71,
+          "high": 9.95,
+          "low": 9.71,
+          "close": 9.81,
+          "pnl_pct": 0.81
+        },
+        "2026-06-15": {
+          "open": 9.82,
+          "high": 9.92,
+          "low": 9.76,
+          "close": 9.85,
+          "pnl_pct": 0.4
+        },
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": 0.2
+        },
+        "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
+          "close": 9.52,
+          "pnl_pct": 3.74
+        },
+        "2026-06-18": {
+          "open": 9.59,
+          "high": 9.67,
+          "low": 9.38,
+          "close": 9.45,
+          "pnl_pct": 4.45
+        }
+      },
+      "close_date": "2026-06-18",
+      "close_price": 9.45,
+      "final_pnl_pct": 4.45,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 20.01
+    },
+    {
       "ticker": "ARCB",
       "name": "ARCB",
       "action": "SELL",
@@ -657,15 +703,13 @@ window.PORTFOLIO_C = {
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 13,
-    "win_trades": 10,
-    "win_rate": 76.9,
-    "total_realized_pnl_usd": 239.55,
-    "open_unrealized_pnl_usd": 34.37,
-    "portfolio_value": 2273.92,
-    "total_commission_usd": 26.0,
+    "total_trades": 14,
+    "win_trades": 11,
+    "win_rate": 78.6,
+    "total_realized_pnl_usd": 259.56,
+    "open_unrealized_pnl_usd": 25.7,
+    "portfolio_value": 2285.26,
     "skipped_gap": 5,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-18"
+    "updated_at": "2026-06-19"
   }
 };
