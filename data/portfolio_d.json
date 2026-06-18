@@ -16,13 +16,13 @@
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-17": {
+          "open": 16.25,
+          "high": 16.55,
+          "low": 16.18,
           "close": 16.28,
           "pnl_pct": -0.25
         }
-      },
-      "gap_checked": true,
-      "day1_open": 16.25,
-      "day1_gap_pct": 0.06
+      }
     },
     {
       "ticker": "CTRE",
@@ -39,13 +39,43 @@
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-17": {
+          "open": 37.03,
+          "high": 37.04,
+          "low": 36.26,
           "close": 36.38,
           "pnl_pct": 1.78
         }
-      },
-      "gap_checked": true,
-      "day1_open": 37.03,
-      "day1_gap_pct": -0.03
+      }
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 13.46,
+      "stop_loss": 16.32,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 22.51,
+      "allocated_usd": 500,
+      "shares": 22,
+      "actual_position_usd": 495.22,
+      "entry_commission": 1.0,
+      "take_profit": 19.13,
+      "stop_loss": 23.19,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -272,17 +302,17 @@
       "max_hold_date": "2026-06-09",
       "daily_prices": {
         "2026-06-08": {
-          "open": 318.55,
-          "high": 330.68,
-          "low": 315.0,
-          "close": 324.45,
-          "pnl_pct": 1.87
+          "open": 318.33,
+          "high": 330.45,
+          "low": 314.78,
+          "close": 324.22,
+          "pnl_pct": 1.8
         },
         "2026-06-09": {
-          "open": 335.5,
-          "high": 349.09,
-          "low": 306.01,
-          "close": 327.16,
+          "open": 335.26,
+          "high": 348.84,
+          "low": 305.79,
+          "close": 326.93,
           "pnl_pct": -3.0
         }
       },
@@ -580,12 +610,14 @@
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 15,
-    "win_trades": 9,
-    "win_rate": 60.0,
+    "win_trades": 8,
+    "win_rate": 53.3,
     "total_realized_pnl_usd": 188.61,
-    "open_unrealized_pnl_usd": 7.65,
-    "portfolio_value": 2196.26,
+    "open_unrealized_pnl_usd": 5.35,
+    "portfolio_value": 2193.96,
+    "total_commission_usd": 30.0,
     "skipped_gap": 5,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-18"
   }
 }

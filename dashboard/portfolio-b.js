@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -38,6 +38,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.2
         },
         "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
           "close": 9.52,
           "pnl_pct": 3.74
         }
@@ -65,6 +68,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.61
         },
         "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
           "close": 9.52,
           "pnl_pct": 2.96
         }
@@ -85,6 +91,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-17": {
+          "open": 16.25,
+          "high": 16.55,
+          "low": 16.18,
           "close": 16.28,
           "pnl_pct": -0.25
         }
@@ -105,10 +114,43 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-17": {
+          "open": 37.03,
+          "high": 37.04,
+          "low": 36.26,
           "close": 36.38,
           "pnl_pct": 1.78
         }
       }
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.57,
+      "stop_loss": 16.47,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 22.51,
+      "allocated_usd": 500,
+      "shares": 22,
+      "actual_position_usd": 495.22,
+      "entry_commission": 1.0,
+      "take_profit": 20.71,
+      "stop_loss": 23.41,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -400,17 +442,17 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-12",
       "daily_prices": {
         "2026-06-08": {
-          "open": 318.55,
-          "high": 330.68,
-          "low": 315.0,
-          "close": 324.45,
-          "pnl_pct": 1.87
+          "open": 318.33,
+          "high": 330.45,
+          "low": 314.78,
+          "close": 324.22,
+          "pnl_pct": 1.8
         },
         "2026-06-09": {
-          "open": 335.5,
-          "high": 349.09,
-          "low": 306.01,
-          "close": 327.16,
+          "open": 335.26,
+          "high": 348.84,
+          "low": 305.79,
+          "close": 326.93,
           "pnl_pct": 8.0
         }
       },
@@ -728,7 +770,7 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-17": {
-          "open": 85.42,
+          "open": 84.95,
           "high": 88.46,
           "low": 81.62,
           "close": 82.87,
@@ -750,8 +792,10 @@ window.PORTFOLIO_B = {
     "win_trades": 10,
     "win_rate": 55.6,
     "total_realized_pnl_usd": 140.26,
-    "open_unrealized_pnl_usd": 41.15,
-    "portfolio_value": 2181.41,
+    "open_unrealized_pnl_usd": 36.37,
+    "portfolio_value": 2176.63,
+    "total_commission_usd": 36.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-18"
   }
 };

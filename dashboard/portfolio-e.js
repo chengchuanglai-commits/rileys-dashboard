@@ -91,6 +91,44 @@ window.PORTFOLIO_E = {
       },
       "gap_checked": true,
       "day1_open": 37.03
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.26,
+      "stop_loss": 16.32,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-23",
+      "regime": "neutral",
+      "vix": 17.38,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 22.51,
+      "allocated_usd": 500,
+      "shares": 22,
+      "actual_position_usd": 495.22,
+      "entry_commission": 1.0,
+      "take_profit": 20.26,
+      "stop_loss": 23.19,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-23",
+      "regime": "neutral",
+      "vix": 17.38,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -559,7 +597,7 @@ window.PORTFOLIO_E = {
           "pnl_pct": 7.95
         },
         "2026-06-17": {
-          "open": 159.65,
+          "open": 159.92,
           "high": 160.18,
           "low": 144.63,
           "close": 145.85,
@@ -587,6 +625,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 4,
     "skipped_gap": 4,
-    "updated_at": "2026-06-17"
+    "updated_at": "2026-06-18"
   }
 };

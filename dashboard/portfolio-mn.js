@@ -156,7 +156,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-17": {
           "open": 120.39,
-          "high": 122.5,
+          "high": 122.51,
           "low": 116.16,
           "close": 116.51,
           "pnl_pct": -0.65
@@ -179,7 +179,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-17": {
           "open": 57.02,
-          "high": 61.68,
+          "high": 61.69,
           "low": 56.83,
           "close": 58.82,
           "pnl_pct": 2.38
@@ -225,7 +225,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-06-17": {
           "open": 85.44,
-          "high": 87.98,
+          "high": 88.12,
           "low": 85.0,
           "close": 86.74,
           "pnl_pct": 2.07
@@ -247,8 +247,8 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-17": {
-          "open": 18.4,
-          "high": 19.27,
+          "open": 18.46,
+          "high": 19.28,
           "low": 18.24,
           "close": 18.24,
           "pnl_pct": -1.67
@@ -272,7 +272,7 @@ window.PORTFOLIO_MN = {
         "2026-06-17": {
           "open": 231.13,
           "high": 236.07,
-          "low": 226.9,
+          "low": 226.85,
           "close": 226.87,
           "pnl_pct": -1.78
         }
@@ -1313,37 +1313,37 @@ window.PORTFOLIO_MN = {
       "name": "Lam Research Corporation",
       "action": "BUY",
       "signal_date": "2026-06-05",
-      "entry_price": 303.28,
+      "entry_price": 303.07,
       "allocated_usd": 500,
       "shares": 1,
-      "actual_position_usd": 303.28,
+      "actual_position_usd": 303.07,
       "entry_commission": 1.0,
-      "take_profit": 348.77,
-      "stop_loss": 297.21,
+      "take_profit": 348.53,
+      "stop_loss": 297.01,
       "max_hold_date": "2026-06-09",
       "daily_prices": {
         "2026-06-08": {
-          "open": 318.55,
-          "high": 330.68,
-          "low": 315.0,
-          "close": 324.45,
+          "open": 318.33,
+          "high": 330.45,
+          "low": 314.78,
+          "close": 324.22,
           "pnl_pct": 6.98
         },
         "2026-06-09": {
-          "open": 335.5,
-          "high": 349.09,
-          "low": 306.01,
-          "close": 327.16,
+          "open": 335.26,
+          "high": 348.84,
+          "low": 305.79,
+          "close": 326.93,
           "pnl_pct": 15.0
         }
       },
       "close_date": "2026-06-09",
-      "close_price": 348.77,
+      "close_price": 348.53,
       "final_pnl_pct": 15.0,
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 43.49
+      "realized_pnl_usd": 43.46
     },
     {
       "ticker": "FLR",
@@ -2636,7 +2636,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-17": {
-          "open": 230.08,
+          "open": 231.0,
           "high": 236.0,
           "low": 225.83,
           "close": 226.63,
@@ -2666,7 +2666,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-17": {
-          "open": 24.05,
+          "open": 23.92,
           "high": 25.67,
           "low": 23.25,
           "close": 23.42,
@@ -2687,12 +2687,12 @@ window.PORTFOLIO_MN = {
     "total_trades": 67,
     "win_trades": 23,
     "win_rate": 34.3,
-    "total_realized_pnl_usd": 30.1,
+    "total_realized_pnl_usd": 30.07,
     "open_unrealized_pnl_usd": 37.69,
-    "portfolio_value": 2067.79,
+    "portfolio_value": 2067.76,
     "total_commission_usd": 134.0,
     "skipped_gap": 25,
     "skipped_zero_shares": 6,
-    "updated_at": "2026-06-17"
+    "updated_at": "2026-06-18"
   }
 };

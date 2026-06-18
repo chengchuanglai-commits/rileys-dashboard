@@ -46,6 +46,36 @@
           "pnl_pct": 1.78
         }
       }
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 13.46,
+      "stop_loss": 16.16,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 22.51,
+      "allocated_usd": 500,
+      "shares": 22,
+      "actual_position_usd": 495.22,
+      "entry_commission": 1.0,
+      "take_profit": 19.13,
+      "stop_loss": 22.96,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -265,17 +295,17 @@
       "max_hold_date": "2026-06-09",
       "daily_prices": {
         "2026-06-08": {
-          "open": 318.55,
-          "high": 330.68,
-          "low": 315.0,
-          "close": 324.45,
-          "pnl_pct": 1.87
+          "open": 318.33,
+          "high": 330.45,
+          "low": 314.78,
+          "close": 324.22,
+          "pnl_pct": 1.8
         },
         "2026-06-09": {
-          "open": 335.5,
-          "high": 349.09,
-          "low": 306.01,
-          "close": 327.16,
+          "open": 335.26,
+          "high": 348.84,
+          "low": 305.79,
+          "close": 326.93,
           "pnl_pct": -2.0
         }
       },
@@ -567,6 +597,6 @@
     "total_commission_usd": 30.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-17"
+    "updated_at": "2026-06-18"
   }
 }

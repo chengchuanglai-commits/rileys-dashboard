@@ -1,20 +1,20 @@
 {
   "date": "2026-06-18",
-  "generated_at": "2026-06-18T05:30:00",
+  "generated_at": "2026-06-18T19:46:00",
   "pipeline": {
-    "morning_note_found": false,
-    "signal_file_found": false,
-    "signals_generated": 0
+    "morning_note_found": true,
+    "signal_file_found": true,
+    "signals_generated": 2
   },
   "data_quality": [
     {
       "check": "晨报文件",
-      "pass": false,
+      "pass": true,
       "detail": "2026-06-18"
     },
     {
       "check": "信号文件",
-      "pass": false,
+      "pass": true,
       "detail": "2026-06-18"
     },
     {
@@ -24,11 +24,26 @@
     },
     {
       "check": "无警告",
-      "pass": false,
-      "detail": "2 条警告"
+      "pass": true,
+      "detail": "0 条警告"
     }
   ],
-  "signals_today": [],
+  "signals_today": [
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 15.84,
+      "target_price": 17.42,
+      "stop_loss": 15.05
+    },
+    {
+      "ticker": "SBFG",
+      "action": "SELL",
+      "current_price": 22.51,
+      "target_price": 24.76,
+      "stop_loss": 21.38
+    }
+  ],
   "accuracy_update": {
     "date": "2026-06-17",
     "total": 0,
@@ -615,9 +630,6 @@
       0.0
     ]
   },
-  "warnings": [
-    "晨报文件不存在: dashboard/morning-note-history/2026-06-18.json（周末/节假日正常）",
-    "信号文件不存在: dashboard/trading-signals-history/2026-06-18.json"
-  ],
-  "api_cost_usd": 0.0
+  "warnings": [],
+  "api_cost_usd": 2.2654
 }

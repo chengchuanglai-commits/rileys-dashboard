@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.1,
       "stop_loss": 10.29,
       "max_hold_date": "2026-06-18",
-      "day1_open": 9.89,
+      "day1_open": 9.71,
       "daily_prices": {
         "2026-06-12": {
           "open": 9.71,
@@ -39,12 +39,13 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.2
         },
         "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
           "close": 9.52,
           "pnl_pct": 3.74
         }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": 0.0
+      }
     },
     {
       "ticker": "MFIN",
@@ -59,7 +60,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "day1_open": 9.89,
+      "day1_open": 9.9,
       "daily_prices": {
         "2026-06-16": {
           "open": 9.9,
@@ -69,12 +70,13 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.61
         },
         "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
           "close": 9.52,
           "pnl_pct": 2.96
         }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": 0.82
+      }
     },
     {
       "ticker": "AMRX",
@@ -92,12 +94,13 @@ window.PORTFOLIO_C = {
       "day1_open": 16.25,
       "daily_prices": {
         "2026-06-17": {
+          "open": 16.25,
+          "high": 16.55,
+          "low": 16.18,
           "close": 16.28,
           "pnl_pct": -0.25
         }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": 0.06
+      }
     },
     {
       "ticker": "CTRE",
@@ -115,12 +118,45 @@ window.PORTFOLIO_C = {
       "day1_open": 37.03,
       "daily_prices": {
         "2026-06-17": {
+          "open": 37.03,
+          "high": 37.04,
+          "low": 36.26,
           "close": 36.38,
           "pnl_pct": 1.78
         }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": -0.03
+      }
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.57,
+      "stop_loss": 16.47,
+      "max_hold_date": "2026-06-25",
+      "day1_open": null,
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 22.51,
+      "allocated_usd": 500,
+      "shares": 22,
+      "actual_position_usd": 495.22,
+      "entry_commission": 1.0,
+      "take_profit": 20.71,
+      "stop_loss": 23.41,
+      "max_hold_date": "2026-06-25",
+      "day1_open": null,
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -386,20 +422,20 @@ window.PORTFOLIO_C = {
       "take_profit": 343.98,
       "stop_loss": 305.76,
       "max_hold_date": "2026-06-12",
-      "day1_open": 318.55,
+      "day1_open": 318.33,
       "daily_prices": {
         "2026-06-08": {
-          "open": 318.55,
-          "high": 330.68,
-          "low": 315.0,
-          "close": 324.45,
-          "pnl_pct": 1.87
+          "open": 318.33,
+          "high": 330.45,
+          "low": 314.78,
+          "close": 324.22,
+          "pnl_pct": 1.8
         },
         "2026-06-09": {
-          "open": 335.5,
-          "high": 349.09,
-          "low": 306.01,
-          "close": 327.16,
+          "open": 335.26,
+          "high": 348.84,
+          "low": 305.79,
+          "close": 326.93,
           "pnl_pct": 8.0
         }
       },
@@ -625,9 +661,11 @@ window.PORTFOLIO_C = {
     "win_trades": 10,
     "win_rate": 76.9,
     "total_realized_pnl_usd": 239.55,
-    "open_unrealized_pnl_usd": 41.15,
-    "portfolio_value": 2280.7,
+    "open_unrealized_pnl_usd": 34.37,
+    "portfolio_value": 2273.92,
+    "total_commission_usd": 26.0,
     "skipped_gap": 5,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-18"
   }
 };
