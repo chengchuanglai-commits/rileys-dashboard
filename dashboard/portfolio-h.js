@@ -565,7 +565,7 @@ window.PORTFOLIO_H = {
           "open": 16.47,
           "high": 16.61,
           "low": 15.73,
-          "close": 16.12,
+          "close": 16.14,
           "pnl_pct": -1.97
         }
       },
@@ -600,19 +600,19 @@ window.PORTFOLIO_H = {
         },
         "2026-06-18": {
           "open": 36.57,
-          "high": 37.05,
+          "high": 37.11,
           "low": 36.05,
-          "close": 36.9,
-          "pnl_pct": 0.38
+          "close": 36.93,
+          "pnl_pct": 0.3
         }
       },
       "close_date": "2026-06-18",
-      "close_price": 36.9,
-      "final_pnl_pct": 0.38,
+      "close_price": 36.93,
+      "final_pnl_pct": 0.3,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.17
+      "realized_pnl_usd": -0.56
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
@@ -620,9 +620,9 @@ window.PORTFOLIO_H = {
     "total_trades": 17,
     "win_trades": 6,
     "win_rate": 35.3,
-    "total_realized_pnl_usd": 161.03,
+    "total_realized_pnl_usd": 160.64,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2161.03,
+    "portfolio_value": 2160.64,
     "total_commission_usd": 34.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 1,

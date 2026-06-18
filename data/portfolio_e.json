@@ -29,8 +29,8 @@
           "open": 16.47,
           "high": 16.61,
           "low": 15.73,
-          "close": 16.1,
-          "pnl_pct": 0.86
+          "close": 16.13,
+          "pnl_pct": 0.68
         }
       },
       "gap_checked": true,
@@ -62,10 +62,10 @@
         },
         "2026-06-18": {
           "open": 36.57,
-          "high": 37.05,
+          "high": 37.11,
           "low": 36.05,
-          "close": 36.91,
-          "pnl_pct": 0.35
+          "close": 36.97,
+          "pnl_pct": 0.19
         }
       },
       "gap_checked": true,
@@ -86,7 +86,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-23",
       "regime": "neutral",
-      "vix": 16.87,
+      "vix": 16.89,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -105,7 +105,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-23",
       "regime": "neutral",
-      "vix": 16.87,
+      "vix": 16.89,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -626,17 +626,17 @@
           "open": 9.59,
           "high": 9.67,
           "low": 9.38,
-          "close": 9.45,
-          "pnl_pct": 3.67
+          "close": 9.52,
+          "pnl_pct": 2.96
         }
       },
       "close_date": "2026-06-18",
-      "close_price": 9.45,
-      "final_pnl_pct": 3.67,
+      "close_price": 9.52,
+      "final_pnl_pct": 2.96,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 16.0
+      "realized_pnl_usd": 12.52
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
@@ -644,9 +644,9 @@
     "total_trades": 13,
     "win_trades": 8,
     "win_rate": 61.5,
-    "total_realized_pnl_usd": 176.79,
-    "open_unrealized_pnl_usd": 3.88,
-    "portfolio_value": 2180.67,
+    "total_realized_pnl_usd": 173.31,
+    "open_unrealized_pnl_usd": 2.23,
+    "portfolio_value": 2175.54,
     "total_commission_usd": 26.0,
     "skipped_fear": 0,
     "skipped_direction": 4,

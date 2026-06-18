@@ -16,8 +16,8 @@
       "max_hold_date": "2026-06-22",
       "daily_prices": {
         "2026-06-18": {
-          "close": 22.46,
-          "pnl_pct": 0.22
+          "close": 22.73,
+          "pnl_pct": -0.98
         }
       },
       "gap_checked": true,
@@ -578,17 +578,17 @@
           "open": 16.47,
           "high": 16.61,
           "low": 15.73,
-          "close": 16.1,
-          "pnl_pct": 0.86
+          "close": 16.13,
+          "pnl_pct": 0.68
         }
       },
       "close_date": "2026-06-18",
-      "close_price": 16.1,
-      "final_pnl_pct": 0.86,
+      "close_price": 16.13,
+      "final_pnl_pct": 0.68,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.19
+      "realized_pnl_usd": 1.31
     },
     {
       "ticker": "CTRE",
@@ -613,19 +613,19 @@
         },
         "2026-06-18": {
           "open": 36.57,
-          "high": 37.05,
+          "high": 37.11,
           "low": 36.05,
-          "close": 36.91,
-          "pnl_pct": 0.35
+          "close": 36.97,
+          "pnl_pct": 0.19
         }
       },
       "close_date": "2026-06-18",
-      "close_price": 36.91,
-      "final_pnl_pct": 0.35,
+      "close_price": 36.97,
+      "final_pnl_pct": 0.19,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.31
+      "realized_pnl_usd": -1.09
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -633,9 +633,9 @@
     "total_trades": 17,
     "win_trades": 11,
     "win_rate": 64.7,
-    "total_realized_pnl_usd": 190.49,
-    "open_unrealized_pnl_usd": 1.1,
-    "portfolio_value": 2191.59,
+    "total_realized_pnl_usd": 188.83,
+    "open_unrealized_pnl_usd": -4.9,
+    "portfolio_value": 2183.93,
     "skipped_gap": 6,
     "updated_at": "2026-06-19"
   }
