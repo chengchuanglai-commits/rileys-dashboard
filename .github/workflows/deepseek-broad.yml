@@ -51,6 +51,15 @@ jobs:
       - name: Install deps
         run: pip install yfinance lxml "git+https://github.com/TauricResearch/TradingAgents.git"
 
+      - name: 飞书通知:广撒开始
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: |
+          NOTIFY_MESSAGE="🤖 DeepSeek 广撒开始（约30分钟）
+$(date -u +%Y-%m-%d) · 广撒选股器全部候选 → 分析信号 → 更新 H-DS + edge
+（交易信号系统）" python3 scripts/notify-webhook.py
+
       - name: 自带选股器(无 Anthropic 成本)
         env:
           ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
@@ -61,6 +70,31 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/generate-deepseek-shadow.py
+
+      - name: 飞书通知:广撒结果(带信号)
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, glob
+          files = sorted(glob.glob("dashboard/trading-signals-history/deepseek/*-deepseek.json"))
+          if not files:
+              print("无 deepseek 文件,跳过"); raise SystemExit(0)
+          d = json.load(open(files[-1], encoding="utf-8"))
+          sg = d.get("signals", []); av = d.get("all_verdicts", [])
+          lines = [f"🤖 DeepSeek 广撒完成 {d.get('date','')}",
+                   f"分析 {len(av)} 只 · 可操作 {len(sg)} 条（进 H-DS）\n"]
+          for s in sg:
+              icon = "🟢" if s.get("action") == "BUY" else "🔴"
+              lines.append(f"{icon} {s.get('action')} {s.get('ticker')} @ ${s.get('current_price')}")
+          if not sg:
+              lines.append("（今日无可操作信号）")
+          lines.append("\n（交易信号系统）")
+          os.environ["NOTIFY_MESSAGE"] = "\n".join(lines)
+          import runpy
+          runpy.run_path("scripts/notify-webhook.py", run_name="__main__")
+          EOF
 
       - name: 更新 H-DS 模拟盘
         continue-on-error: true   # sim 更新失败也别丢掉已分析出的 deepseek 信号(后面照样提交)
@@ -92,3 +126,13 @@ jobs:
           git diff --staged --quiet || git commit -m "DeepSeek 广池 edge 验证 $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4 5; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done
           exit 1
+
+      - name: 飞书通知:广撒失败
+        if: failure()
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: |
+          NOTIFY_MESSAGE="🚨 DeepSeek 广撒任务失败 $(date -u +%Y-%m-%d)
+请到 GitHub Actions 查看 deepseek-broad 日志
+（交易信号系统）" python3 scripts/notify-webhook.py

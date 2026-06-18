@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "compatibility_date": "2026-01-01",
   "triggers": {
-    // 工作日 11:30 UTC = 美东 7:30 AM（盘前）= 北京 19:30，与信号工作流目标一致
-    "crons": ["30 11 * * 1-5"]
+    // 11:30 UTC → trading-signals.yml(主信号,盘前) ; 12:00 UTC → deepseek-broad.yml(DeepSeek广撒)
+    "crons": ["30 11 * * 1-5", "0 12 * * 1-5"]
   }
 }

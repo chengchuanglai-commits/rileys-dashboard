@@ -13,11 +13,17 @@
 //   可选：npx wrangler secret put TRIGGER_TOKEN 设一个口令，再 curl "https://<worker>.workers.dev/?token=口令"
 
 const REPO = "chengchuanglai-commits/rileys-dashboard";
-const WORKFLOW = "trading-signals.yml";
+const WORKFLOW = "trading-signals.yml";          // 默认(手动触发用)
+const DEEPSEEK_WF = "deepseek-broad.yml";
+// 哪个 cron 派发哪个工作流
+const CRON_WF = {
+  "30 11 * * 1-5": WORKFLOW,       // 11:30 主信号
+  "0 12 * * 1-5":  DEEPSEEK_WF,    // 12:00 DeepSeek 广撒
+};
 
-async function dispatch(env) {
+async function dispatch(env, workflow = WORKFLOW) {
   const res = await fetch(
-    `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`,
+    `https://api.github.com/repos/${REPO}/actions/workflows/${workflow}/dispatches`,
     {
       method: "POST",
       headers: {
@@ -31,14 +37,15 @@ async function dispatch(env) {
   );
   const ok = res.ok;
   const detail = ok ? "" : `${res.status} ${await res.text()}`;
-  console.log(ok ? `dispatched ${WORKFLOW} @ ${new Date().toISOString()}` : `dispatch FAILED: ${detail}`);
+  console.log(ok ? `dispatched ${workflow} @ ${new Date().toISOString()}` : `dispatch FAILED ${workflow}: ${detail}`);
   return { ok, detail };
 }
 
 export default {
-  // 定时触发：Cloudflare 在 cron 时刻调用
+  // 定时触发：按 event.cron 派发对应工作流(11:30→主信号, 12:00→DeepSeek广撒)
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(dispatch(env));
+    const workflow = CRON_WF[event.cron] || WORKFLOW;
+    ctx.waitUntil(dispatch(env, workflow));
   },
 
   // HTTP：健康检查 / 只读PAT诊断 / 带口令的手动测试触发
@@ -63,10 +70,11 @@ export default {
         { status: res.ok ? 200 : 502 });
     }
     if (env.TRIGGER_TOKEN && token === env.TRIGGER_TOKEN) {
-      const r = await dispatch(env);
-      return new Response(r.ok ? "✅ dispatched trading-signals" : `❌ failed: ${r.detail}`,
+      const workflow = url.searchParams.get("wf") === "deepseek" ? DEEPSEEK_WF : WORKFLOW;
+      const r = await dispatch(env, workflow);
+      return new Response(r.ok ? `✅ dispatched ${workflow}` : `❌ failed: ${r.detail}`,
         { status: r.ok ? 200 : 502 });
     }
-    return new Response("rileys-signal-cron alive · cron 30 11 * * 1-5 UTC · ?check=<TOKEN> 只读诊断 · ?token=<TOKEN> 手动触发", { status: 200 });
+    return new Response("rileys-signal-cron alive · crons 30 11(主信号) + 0 12(DeepSeek广撒) * * 1-5 UTC · ?check=<T> 诊断 · ?token=<T>[&wf=deepseek] 手动触发", { status: 200 });
   },
 };
