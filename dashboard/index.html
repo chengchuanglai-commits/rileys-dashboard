@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260618020109";
+      var BUILD="20260618025446";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -3882,6 +3882,14 @@ function renderSimRanking(schemes) {
     topPctEl.textContent = sign + (bestPnl / INIT * 100).toFixed(1) + '%';
   }
   const maxPnl = Math.max(bestPnl, 1);
+  // 全局最近交易日 = 所有盘里最晚的平仓日,用于「今日变化」
+  let _latestClose = '';
+  for (const k in _SCHEME_PORT) {
+    const p = window[_SCHEME_PORT[k]];
+    for (const c of ((p && p.closed_positions) || [])) {
+      if (c.close_date && c.close_date > _latestClose) _latestClose = c.close_date;
+    }
+  }
   // A方案：2列卡片网格
   const cards = schemes.map((s, i) => {
     const pnl = s.val - INIT;
@@ -3900,6 +3908,13 @@ function renderSimRanking(schemes) {
     const floatPnl = (s.portfolio || (INIT + pnl)) - (INIT + realPnl);
     const floatStr = floatPnl !== 0 ? ('浮' + (floatPnl >= 0 ? '+' : '-') + '$' + Math.abs(floatPnl).toFixed(0)) : '';
     const tradesStr = (s.trades && s.trades > 0) ? (s.trades + '笔') : '';
+    // 今日变化 = 最近交易日平仓的净盈亏 + 笔数
+    const _port = window[_SCHEME_PORT[s.key]];
+    const _td = ((_port && _port.closed_positions) || []).filter(c => c.close_date === _latestClose);
+    const _tdPnl = _td.reduce((a, c) => a + (c.realized_pnl_usd || 0), 0);
+    const todayStr = _td.length
+      ? '今日 <b style="color:' + (_tdPnl >= 0 ? '#16a34a' : '#dc2626') + '">' + (_tdPnl >= 0 ? '+' : '') + '$' + _tdPnl.toFixed(0) + '</b> · 平' + _td.length + '笔'
+      : '<span style="color:#ccc">今日持平</span>';
     const subParts = [
       '已实现<b style="color:' + (realPnl>=0?'#16a34a':'#dc2626') + '">' + realSign + '$' + realPnl.toFixed(0) + '</b>',
       floatStr, tradesStr
@@ -3914,6 +3929,7 @@ function renderSimRanking(schemes) {
         '<span style="font-size:20px;font-weight:800;color:#111;font-variant-numeric:tabular-nums">$' + s.val.toFixed(0) + '</span>' +
         '<span style="font-size:12px;font-weight:700;color:' + pnlColor + ';margin-left:5px;font-variant-numeric:tabular-nums">' + sign + (pnl/INIT*100).toFixed(1) + '%</span>' +
       '</div>' +
+      '<div style="font-size:9.5px;color:#999;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + todayStr + '</div>' +
       '<div id="lv-sub-' + s.key + '" style="font-size:10px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + subParts + '</div>' +
       '<div style="font-size:10px;color:' + color + ';margin-top:auto;padding-top:6px;opacity:.6">点击查看持仓 ›</div>' +
     '</div>';
