@@ -117,6 +117,98 @@
       }
     },
     {
+      "ticker": "KLIC",
+      "name": "Kulicke & Soffa",
+      "action": "BUY",
+      "signal_date": "2026-06-16",
+      "entry_price": 117.06,
+      "allocated_usd": 500,
+      "shares": 4.2713,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 134.62,
+      "stop_loss": 114.72,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 120.18,
+          "high": 122.29,
+          "low": 115.96,
+          "close": 116.31,
+          "pnl_pct": -0.64
+        }
+      }
+    },
+    {
+      "ticker": "AXSM",
+      "name": "Axsome Therapeutics",
+      "action": "BUY",
+      "signal_date": "2026-06-16",
+      "entry_price": 251.91,
+      "allocated_usd": 500,
+      "shares": 1.9848,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 289.7,
+      "stop_loss": 246.87,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 251.13,
+          "high": 254.84,
+          "low": 248.64,
+          "close": 252.16,
+          "pnl_pct": 0.1
+        }
+      }
+    },
+    {
+      "ticker": "GRC",
+      "name": "Gorman-Rupp",
+      "action": "BUY",
+      "signal_date": "2026-06-16",
+      "entry_price": 84.98,
+      "allocated_usd": 500,
+      "shares": 5.8837,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 97.73,
+      "stop_loss": 83.28,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 85.44,
+          "high": 88.12,
+          "low": 85.0,
+          "close": 86.74,
+          "pnl_pct": 2.07
+        }
+      }
+    },
+    {
+      "ticker": "MGNI",
+      "name": "Magnite",
+      "action": "BUY",
+      "signal_date": "2026-06-16",
+      "entry_price": 18.55,
+      "allocated_usd": 500,
+      "shares": 26.9542,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 21.33,
+      "stop_loss": 18.18,
+      "max_hold_date": "2026-06-18",
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 18.46,
+          "high": 19.28,
+          "low": 18.24,
+          "close": 18.24,
+          "pnl_pct": -1.67
+        }
+      }
+    },
+    {
       "ticker": "QCOM",
       "name": "Qualcomm Inc.",
       "action": "BUY",
@@ -175,15 +267,7 @@
       "take_profit": 27.0,
       "stop_loss": 23.01,
       "max_hold_date": "2026-06-19",
-      "daily_prices": {
-        "2026-06-18": {
-          "open": 23.93,
-          "high": 26.26,
-          "low": 23.93,
-          "close": 26.18,
-          "pnl_pct": 11.5
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "FORM",
@@ -221,15 +305,7 @@
       "take_profit": 23.06,
       "stop_loss": 19.65,
       "max_hold_date": "2026-06-19",
-      "daily_prices": {
-        "2026-06-18": {
-          "open": 20.19,
-          "high": 20.43,
-          "low": 20.12,
-          "close": 20.33,
-          "pnl_pct": 1.4
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "FORM",
@@ -2798,43 +2874,6 @@
       "realized_pnl_usd": -12.0
     },
     {
-      "ticker": "KLIC",
-      "name": "Kulicke & Soffa",
-      "action": "BUY",
-      "signal_date": "2026-06-16",
-      "entry_price": 117.06,
-      "allocated_usd": 500,
-      "shares": 4.2713,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 134.62,
-      "stop_loss": 114.72,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-17": {
-          "open": 120.18,
-          "high": 122.29,
-          "low": 115.96,
-          "close": 116.31,
-          "pnl_pct": -0.64
-        },
-        "2026-06-18": {
-          "open": 121.5,
-          "high": 125.14,
-          "low": 121.15,
-          "close": 121.87,
-          "pnl_pct": 4.11
-        }
-      },
-      "close_date": "2026-06-18",
-      "close_price": 121.87,
-      "final_pnl_pct": 4.11,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 18.55
-    },
-    {
       "ticker": "OKLO",
       "name": "Oklo Inc.",
       "action": "BUY",
@@ -2900,117 +2939,6 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -12.05
-    },
-    {
-      "ticker": "AXSM",
-      "name": "Axsome Therapeutics",
-      "action": "BUY",
-      "signal_date": "2026-06-16",
-      "entry_price": 251.91,
-      "allocated_usd": 500,
-      "shares": 1.9848,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 289.7,
-      "stop_loss": 246.87,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-17": {
-          "open": 251.13,
-          "high": 254.84,
-          "low": 248.64,
-          "close": 252.16,
-          "pnl_pct": 0.1
-        },
-        "2026-06-18": {
-          "open": 255.62,
-          "high": 260.19,
-          "low": 247.34,
-          "close": 250.5,
-          "pnl_pct": -0.56
-        }
-      },
-      "close_date": "2026-06-18",
-      "close_price": 250.5,
-      "final_pnl_pct": -0.56,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.8
-    },
-    {
-      "ticker": "GRC",
-      "name": "Gorman-Rupp",
-      "action": "BUY",
-      "signal_date": "2026-06-16",
-      "entry_price": 84.98,
-      "allocated_usd": 500,
-      "shares": 5.8837,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 97.73,
-      "stop_loss": 83.28,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-17": {
-          "open": 85.44,
-          "high": 88.12,
-          "low": 85.0,
-          "close": 86.74,
-          "pnl_pct": 2.07
-        },
-        "2026-06-18": {
-          "open": 88.06,
-          "high": 88.77,
-          "low": 86.73,
-          "close": 87.77,
-          "pnl_pct": 3.28
-        }
-      },
-      "close_date": "2026-06-18",
-      "close_price": 87.77,
-      "final_pnl_pct": 3.28,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 14.4
-    },
-    {
-      "ticker": "MGNI",
-      "name": "Magnite",
-      "action": "BUY",
-      "signal_date": "2026-06-16",
-      "entry_price": 18.55,
-      "allocated_usd": 500,
-      "shares": 26.9542,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 21.33,
-      "stop_loss": 18.18,
-      "max_hold_date": "2026-06-18",
-      "daily_prices": {
-        "2026-06-17": {
-          "open": 18.46,
-          "high": 19.28,
-          "low": 18.24,
-          "close": 18.24,
-          "pnl_pct": -1.67
-        },
-        "2026-06-18": {
-          "open": 18.15,
-          "high": 18.22,
-          "low": 17.57,
-          "close": 17.89,
-          "pnl_pct": -1.99
-        }
-      },
-      "close_date": "2026-06-18",
-      "close_price": 18.18,
-      "final_pnl_pct": -1.99,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -11.95
     },
     {
       "ticker": "NET",
@@ -3082,13 +3010,13 @@
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 79,
-    "win_trades": 30,
-    "win_rate": 38.0,
-    "total_realized_pnl_usd": 282.25,
-    "open_unrealized_pnl_usd": 185.7,
-    "portfolio_value": 2467.95,
-    "total_commission_usd": 158.0,
+    "total_trades": 75,
+    "win_trades": 28,
+    "win_rate": 37.3,
+    "total_realized_pnl_usd": 266.05,
+    "open_unrealized_pnl_usd": 118.5,
+    "portfolio_value": 2384.55,
+    "total_commission_usd": 150.0,
     "skipped_gap": 25,
     "skipped_zero_shares": 0,
     "updated_at": "2026-06-19"

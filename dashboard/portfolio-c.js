@@ -52,7 +52,7 @@ window.PORTFOLIO_C = {
       "take_profit": 14.94,
       "stop_loss": 16.89,
       "max_hold_date": "2026-06-23",
-      "day1_open": 16.47,
+      "day1_open": NaN,
       "daily_prices": {
         "2026-06-17": {
           "open": 16.25,
@@ -62,12 +62,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.25
         },
         "2026-06-18": {
-          "close": 16.21,
-          "pnl_pct": 0.18
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
       "gap_checked": true,
-      "day1_gap_pct": 1.42
+      "day1_gap_pct": NaN
     },
     {
       "ticker": "CTRE",
@@ -82,7 +82,7 @@ window.PORTFOLIO_C = {
       "take_profit": 34.08,
       "stop_loss": 38.52,
       "max_hold_date": "2026-06-23",
-      "day1_open": 36.57,
+      "day1_open": NaN,
       "daily_prices": {
         "2026-06-17": {
           "open": 37.03,
@@ -92,12 +92,35 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.78
         },
         "2026-06-18": {
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
       "gap_checked": true,
-      "day1_gap_pct": -1.27
+      "day1_gap_pct": NaN
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.57,
+      "stop_loss": 16.47,
+      "max_hold_date": "2026-06-25",
+      "day1_open": NaN,
+      "daily_prices": {
+        "2026-06-18": {
+          "close": NaN,
+          "pnl_pct": NaN
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": NaN
     },
     {
       "ticker": "SBFG",
@@ -112,15 +135,15 @@ window.PORTFOLIO_C = {
       "take_profit": 20.71,
       "stop_loss": 23.41,
       "max_hold_date": "2026-06-25",
-      "day1_open": 22.72,
+      "day1_open": NaN,
       "daily_prices": {
         "2026-06-18": {
-          "close": 23.01,
-          "pnl_pct": -2.22
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
       "gap_checked": true,
-      "day1_gap_pct": 0.93
+      "day1_gap_pct": NaN
     },
     {
       "ticker": "WSBC",
@@ -135,15 +158,15 @@ window.PORTFOLIO_C = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-26",
-      "day1_open": 35.81,
+      "day1_open": NaN,
       "daily_prices": {
         "2026-06-18": {
-          "close": 36.29,
-          "pnl_pct": -0.0
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
       "gap_checked": true,
-      "day1_gap_pct": -1.32
+      "day1_gap_pct": NaN
     }
   ],
   "closed_positions": [
@@ -699,44 +722,16 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 25.78
-    },
-    {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
-      "entry_commission": 1.0,
-      "take_profit": 14.57,
-      "stop_loss": 16.47,
-      "max_hold_date": "2026-06-25",
-      "day1_open": 16.01,
-      "daily_prices": {
-        "2026-06-18": {
-          "close": 16.87,
-          "pnl_pct": -6.5
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": 1.07,
-      "close_date": "2026-06-18",
-      "close_price": 16.87,
-      "final_pnl_pct": -6.5,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -32.51
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 15,
+    "total_trades": 14,
     "win_trades": 11,
-    "win_rate": 73.3,
-    "total_realized_pnl_usd": 223.04,
-    "open_unrealized_pnl_usd": 3.8,
-    "portfolio_value": 2226.84,
+    "win_rate": 78.6,
+    "total_realized_pnl_usd": 255.55,
+    "open_unrealized_pnl_usd": NaN,
+    "portfolio_value": NaN,
     "skipped_gap": 6,
     "updated_at": "2026-06-20"
   }

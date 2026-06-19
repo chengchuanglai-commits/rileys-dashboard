@@ -3,6 +3,29 @@ window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
     {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 13.46,
+      "stop_loss": 16.32,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {
+        "2026-06-18": {
+          "close": NaN,
+          "pnl_pct": NaN
+        }
+      },
+      "gap_checked": true,
+      "day1_open": NaN,
+      "day1_gap_pct": NaN
+    },
+    {
       "ticker": "SBFG",
       "name": "SBFG",
       "action": "SELL",
@@ -17,13 +40,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-22",
       "daily_prices": {
         "2026-06-18": {
-          "close": 23.01,
-          "pnl_pct": -2.22
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
       "gap_checked": true,
-      "day1_open": 22.72,
-      "day1_gap_pct": 0.93
+      "day1_open": NaN,
+      "day1_gap_pct": NaN
     },
     {
       "ticker": "WSBC",
@@ -40,13 +63,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-18": {
-          "close": 36.29,
-          "pnl_pct": -0.0
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
       "gap_checked": true,
-      "day1_open": 35.81,
-      "day1_gap_pct": -1.32
+      "day1_open": NaN,
+      "day1_gap_pct": NaN
     }
   ],
   "closed_positions": [
@@ -599,20 +622,18 @@ window.PORTFOLIO_D = {
           "pnl_pct": -0.25
         },
         "2026-06-18": {
-          "open": 16.47,
-          "high": 16.61,
-          "low": 15.73,
-          "close": 16.21,
-          "pnl_pct": 0.18
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
+      "gap_checked": true,
+      "day1_open": NaN,
+      "day1_gap_pct": NaN,
       "close_date": "2026-06-18",
-      "close_price": 16.21,
-      "final_pnl_pct": 0.18,
+      "close_price": NaN,
+      "final_pnl_pct": NaN,
       "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -1.12
+      "realized_pnl_usd": NaN
     },
     {
       "ticker": "CTRE",
@@ -636,31 +657,29 @@ window.PORTFOLIO_D = {
           "pnl_pct": 1.78
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "close": NaN,
+          "pnl_pct": NaN
         }
       },
+      "gap_checked": true,
+      "day1_open": NaN,
+      "day1_gap_pct": NaN,
       "close_date": "2026-06-18",
-      "close_price": 37.06,
-      "final_pnl_pct": -0.05,
+      "close_price": NaN,
+      "final_pnl_pct": NaN,
       "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -2.24
+      "realized_pnl_usd": NaN
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 17,
-    "win_trades": 10,
-    "win_rate": 58.8,
-    "total_realized_pnl_usd": 185.94,
-    "open_unrealized_pnl_usd": -11.1,
-    "portfolio_value": 2174.84,
-    "skipped_gap": 7,
+    "win_trades": 9,
+    "win_rate": 52.9,
+    "total_realized_pnl_usd": NaN,
+    "open_unrealized_pnl_usd": NaN,
+    "portfolio_value": NaN,
+    "skipped_gap": 6,
     "updated_at": "2026-06-20"
   }
 };

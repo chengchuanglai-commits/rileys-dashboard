@@ -58,8 +58,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.25
         },
         "2026-06-18": {
-          "close": 16.21,
-          "pnl_pct": 0.18
+          "close": NaN,
+          "pnl_pct": NaN
         }
       }
     },
@@ -85,8 +85,28 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.78
         },
         "2026-06-18": {
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "close": NaN,
+          "pnl_pct": NaN
+        }
+      }
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.57,
+      "stop_loss": 16.47,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-18": {
+          "close": NaN,
+          "pnl_pct": NaN
         }
       }
     },
@@ -105,8 +125,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-18": {
-          "close": 23.01,
-          "pnl_pct": -2.22
+          "close": NaN,
+          "pnl_pct": NaN
         }
       }
     },
@@ -145,8 +165,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-18": {
-          "close": 36.29,
-          "pnl_pct": -0.0
+          "close": NaN,
+          "pnl_pct": NaN
         }
       }
     }
@@ -840,41 +860,16 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.39
-    },
-    {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
-      "entry_commission": 1.0,
-      "take_profit": 14.57,
-      "stop_loss": 16.47,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {
-        "2026-06-18": {
-          "close": 16.87,
-          "pnl_pct": -6.5
-        }
-      },
-      "close_date": "2026-06-18",
-      "close_price": 16.87,
-      "final_pnl_pct": -6.5,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -32.51
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 20,
+    "total_trades": 19,
     "win_trades": 11,
-    "win_rate": 55.0,
-    "total_realized_pnl_usd": 123.75,
-    "open_unrealized_pnl_usd": 3.8,
-    "portfolio_value": 2127.55,
+    "win_rate": 57.9,
+    "total_realized_pnl_usd": 156.26,
+    "open_unrealized_pnl_usd": NaN,
+    "portfolio_value": NaN,
     "updated_at": "2026-06-20"
   }
 };
