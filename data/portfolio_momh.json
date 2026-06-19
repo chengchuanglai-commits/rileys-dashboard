@@ -1,0 +1,97 @@
+{
+  "capital_usd": 2000,
+  "open_positions": [
+    {
+      "ticker": "NVDA",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 210.69,
+      "shares": 2.3732,
+      "take_profit": 242.29,
+      "stop_loss": 206.48,
+      "score": 56.8
+    },
+    {
+      "ticker": "DECK",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 109.11,
+      "shares": 4.5825,
+      "take_profit": 125.48,
+      "stop_loss": 106.93,
+      "score": 40.8
+    },
+    {
+      "ticker": "AAPL",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 298.01,
+      "shares": 1.6778,
+      "take_profit": 342.71,
+      "stop_loss": 292.05,
+      "score": 53.1
+    },
+    {
+      "ticker": "GOOGL",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 368.03,
+      "shares": 1.3586,
+      "take_profit": 423.23,
+      "stop_loss": 360.67,
+      "score": 62.9
+    },
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 537.37,
+      "shares": 0.9305,
+      "take_profit": 617.98,
+      "stop_loss": 526.62,
+      "score": 73.2
+    },
+    {
+      "ticker": "MU",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 1133.99,
+      "shares": 0.4409,
+      "take_profit": 1304.09,
+      "stop_loss": 1111.31,
+      "score": 68.0
+    },
+    {
+      "ticker": "LSCC",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 153.72,
+      "shares": 3.2527,
+      "take_profit": 176.78,
+      "stop_loss": 150.65,
+      "score": 65.8
+    },
+    {
+      "ticker": "VRT",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 333.05,
+      "shares": 1.5013,
+      "take_profit": 383.01,
+      "stop_loss": 326.39,
+      "score": 59.6
+    }
+  ],
+  "closed_positions": [],
+  "_note": "MOM-H：动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,无AI) + Plan H出场(TP15/SL2/2日)。$500/仓(小数股,高价票不漏),周再平衡,前向无前视。",
+  "stats": {
+    "total_trades": 0,
+    "win_trades": 0,
+    "win_rate": 0,
+    "total_realized_pnl_usd": 0,
+    "open_unrealized_pnl_usd": 0.0,
+    "portfolio_value": 2000.0,
+    "total_commission_usd": 8.0,
+    "updated_at": "2026-06-20"
+  }
+}

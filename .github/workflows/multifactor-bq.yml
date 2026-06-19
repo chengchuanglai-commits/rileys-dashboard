@@ -41,7 +41,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Install deps
-        run: pip install yfinance lxml pandas "git+https://github.com/TauricResearch/TradingAgents.git"
+        run: pip install yfinance lxml pandas numpy "git+https://github.com/TauricResearch/TradingAgents.git"
 
       - name: 多因子选股(归档)
         env:
@@ -62,6 +62,17 @@ jobs:
         continue-on-error: true
         run: python scripts/backfill-portfolio-bai.py
 
+      - name: 动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,归档)
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: python scripts/screen-momentum.py
+
+      - name: MOM-H 回填(动量信号 + Plan H出场)
+        run: python scripts/backfill-portfolio-momh.py
+
+      - name: MOM-MA 回填(动量信号 + J Law 10/20MA移动止盈)
+        run: python scripts/backfill-portfolio-momma.py
+
       - name: 提交
         run: |
           git config user.name "bquant-bot"
@@ -69,6 +80,8 @@ jobs:
           git add data/multifactor-history/ data/screened-multifactor.json data/fundamentals-cache.json 2>/dev/null || true
           git add data/multifactor-ai-history/ data/portfolio_bq.json dashboard/portfolio-bq.js 2>/dev/null || true
           git add data/portfolio_bai.json dashboard/portfolio-bai.js 2>/dev/null || true
+          git add data/momentum-history/ data/screened-momentum.json 2>/dev/null || true
+          git add data/portfolio_momh.json data/portfolio_momma.json dashboard/portfolio-momh.js dashboard/portfolio-momma.js 2>/dev/null || true
           V=$(date -u +%Y%m%d%H%M%S)
           echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
           sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
@@ -91,9 +104,11 @@ jobs:
                   return f"{name}: 净值${s['portfolio_value']} 已实现${s['total_realized_pnl_usd']:+.0f} 浮盈${s['open_unrealized_pnl_usd']:+.0f} (平{s['total_trades']}笔 胜率{s['win_rate']}% 持仓{len(d['open_positions'])})"
               except Exception:
                   return f"{name}: 无数据"
-          msg = ["📊 多因子双盘 " + __import__("datetime").date.today().isoformat(),
+          msg = ["📊 独立量化腿 " + __import__("datetime").date.today().isoformat(),
                  line("data/portfolio_bq.json", "B-quant(纯量化)"),
                  line("data/portfolio_bai.json", "B-AI(DeepSeek决定)"),
+                 line("data/portfolio_momh.json", "MOM-H(动量+H出场)"),
+                 line("data/portfolio_momma.json", "MOM-MA(动量+20MA移动止盈)"),
                  "（交易信号系统）"]
           os.environ["NOTIFY_MESSAGE"] = "\n".join(msg)
           runpy.run_path("scripts/notify-webhook.py", run_name="__main__")

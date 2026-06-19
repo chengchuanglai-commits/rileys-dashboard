@@ -133,12 +133,7 @@ for signal_date, s in all_signals:
         print(f"  Skip {signal_date} {ticker} {action}")
         continue
 
-    shares = int(PER_POSITION_USD / entry_price)
-    if shares == 0:
-        print(f"  Skip {signal_date} {ticker} @ ${entry_price} (too expensive, 0 shares with ${PER_POSITION_USD})")
-        skipped_zero_shares += 1
-        continue
-
+    shares = round(PER_POSITION_USD / entry_price, 4)   # 小数股:不再因股价高丢票(与MOM腿/H系列统一,对比纯净)
     actual_position_usd = round(shares * entry_price, 2)
     entry_comm = ibkr_commission(shares)
     exit_comm = ibkr_commission(shares)

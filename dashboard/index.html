@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260619160312";
+      var BUILD="20260619164855";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -950,6 +950,8 @@
       document.write('<scr'+'ipt src="portfolio-spy.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-bq.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="portfolio-bai.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-momh.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="portfolio-momma.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="signal-edge.js?v='+v+'"><\/scr'+'ipt>');
@@ -2517,11 +2519,12 @@ async function refreshAllNews() {
 // ── 模拟盘排行榜颜色（必须在 IIFE 之前，否则 TDZ 错误）──────
 const SIM_SCHEME_COLORS = {
   e:'#4b7fa3', b:'#3a8a5a', c:'#6b5aab', d:'#b06030',
-  f:'#7a3a8a', g:'#2e7a4a', h:'#9a3a20', hds:'#6366f1', bq:'#0d9488', bai:'#db2777', a:'#888888'
+  f:'#7a3a8a', g:'#2e7a4a', h:'#9a3a20', hds:'#6366f1', bq:'#0d9488', bai:'#db2777', a:'#888888',
+  momh:'#ca8a04', momma:'#0891b2'
 };
 // 提前定义(renderSimRanking/patchLivePortfolioCards 在初始化时会用,避免 TDZ)
-const _SCHEME_PORT = {b:'PORTFOLIO_B',c:'PORTFOLIO_C',d:'PORTFOLIO_D',e:'PORTFOLIO_E',f:'PORTFOLIO_F',g:'PORTFOLIO_MN',h:'PORTFOLIO_H',hds:'PORTFOLIO_HDS',bq:'PORTFOLIO_BQ',bai:'PORTFOLIO_BAI'};
-const _SCHEME_NAMES = {b:'B — TP8%/SL4%',c:'C — 跳空过滤',d:'D — TP15%/SL3%',e:'E — 智能适应',f:'F — 分档出场',g:'广池 — 大盘精选',h:'H — 历史最优',hds:'H-DS — DeepSeek信号',bq:'B-quant — 多因子量化',bai:'B-AI — 多因子+DeepSeek'};
+const _SCHEME_PORT = {b:'PORTFOLIO_B',c:'PORTFOLIO_C',d:'PORTFOLIO_D',e:'PORTFOLIO_E',f:'PORTFOLIO_F',g:'PORTFOLIO_MN',h:'PORTFOLIO_H',hds:'PORTFOLIO_HDS',bq:'PORTFOLIO_BQ',bai:'PORTFOLIO_BAI',momh:'PORTFOLIO_MOMH',momma:'PORTFOLIO_MOMMA'};
+const _SCHEME_NAMES = {b:'B — TP8%/SL4%',c:'C — 跳空过滤',d:'D — TP15%/SL3%',e:'E — 智能适应',f:'F — 分档出场',g:'广池 — 大盘精选',h:'H — 历史最优',hds:'H-DS — DeepSeek信号',bq:'B-quant — 多因子量化',bai:'B-AI — 多因子+DeepSeek',momh:'MOM-H — 动量+H出场',momma:'MOM-MA — 动量+20MA移动止盈'};
 
 // Init news on load
 (async () => {
@@ -3844,6 +3847,8 @@ function loadSimCurve() {
         {key:'hds', label:'H-DS', fullLabel:'H-DS — DeepSeek信号', st:phdsStats, trades:(phdsStats.total_trades||0), winRate:0},
         {key:'bq', label:'B-quant', fullLabel:'B-quant — 多因子量化', st:pbqStats, trades:(pbqStats.total_trades||0), winRate:0},
         {key:'bai', label:'B-AI', fullLabel:'B-AI — 多因子+DeepSeek', st:pbaiStats, trades:(pbaiStats.total_trades||0), winRate:0},
+        {key:'momh', label:'MOM-H', fullLabel:'MOM-H — 动量+H出场', st:((window.PORTFOLIO_MOMH&&window.PORTFOLIO_MOMH.stats)||{}), trades:((window.PORTFOLIO_MOMH&&window.PORTFOLIO_MOMH.stats&&window.PORTFOLIO_MOMH.stats.total_trades)||0), winRate:0},
+        {key:'momma', label:'MOM-MA', fullLabel:'MOM-MA — 动量+20MA移动止盈', st:((window.PORTFOLIO_MOMMA&&window.PORTFOLIO_MOMMA.stats)||{}), trades:((window.PORTFOLIO_MOMMA&&window.PORTFOLIO_MOMMA.stats&&window.PORTFOLIO_MOMMA.stats.total_trades)||0), winRate:0},
       ].map(s => {
         const v = reVal(s.st);
         const realized = (s.st && s.st.total_realized_pnl_usd) || 0;

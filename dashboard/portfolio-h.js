@@ -9,8 +9,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-18",
       "entry_price": 15.84,
       "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
+      "shares": 31.5657,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 13.46,
       "stop_loss": 16.16,
@@ -24,42 +24,12 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-18",
       "entry_price": 22.51,
       "allocated_usd": 500,
-      "shares": 22,
-      "actual_position_usd": 495.22,
+      "shares": 22.2124,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 19.13,
       "stop_loss": 22.96,
       "max_hold_date": "2026-06-22",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "BUY",
-      "signal_date": "2026-06-19",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 159.86,
-      "stop_loss": 136.23,
-      "max_hold_date": "2026-06-23",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-19",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit": 30.85,
-      "stop_loss": 37.02,
-      "max_hold_date": "2026-06-23",
       "daily_prices": {}
     }
   ],
@@ -71,8 +41,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-05-27",
       "entry_price": 87.46,
       "allocated_usd": 500,
-      "shares": 5,
-      "actual_position_usd": 437.3,
+      "shares": 5.7169,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 100.58,
       "stop_loss": 85.71,
@@ -92,7 +62,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -10.75
+      "realized_pnl_usd": -12.0
     },
     {
       "ticker": "WTTR",
@@ -101,8 +71,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-05-27",
       "entry_price": 19.35,
       "allocated_usd": 500,
-      "shares": 25,
-      "actual_position_usd": 483.75,
+      "shares": 25.8398,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 16.45,
       "stop_loss": 19.74,
@@ -129,7 +99,7 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 33.51
+      "realized_pnl_usd": 34.7
     },
     {
       "ticker": "MXL",
@@ -138,8 +108,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-05-28",
       "entry_price": 101.1,
       "allocated_usd": 500,
-      "shares": 4,
-      "actual_position_usd": 404.4,
+      "shares": 4.9456,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 85.93,
       "stop_loss": 103.12,
@@ -159,7 +129,7 @@ window.PORTFOLIO_H = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 58.66
+      "realized_pnl_usd": 73.0
     },
     {
       "ticker": "ALGT",
@@ -168,8 +138,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-05-28",
       "entry_price": 91.0,
       "allocated_usd": 500,
-      "shares": 5,
-      "actual_position_usd": 455.0,
+      "shares": 5.4945,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 77.35,
       "stop_loss": 92.82,
@@ -189,7 +159,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.1
+      "realized_pnl_usd": -12.0
     },
     {
       "ticker": "IMOS",
@@ -198,8 +168,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-01",
       "entry_price": 67.75,
       "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 474.25,
+      "shares": 7.3801,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 57.59,
       "stop_loss": 69.11,
@@ -226,7 +196,44 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 33.0
+      "realized_pnl_usd": 34.9
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "action": "BUY",
+      "signal_date": "2026-06-02",
+      "entry_price": 1036.48,
+      "allocated_usd": 500,
+      "shares": 0.4824,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 1191.95,
+      "stop_loss": 1015.75,
+      "max_hold_date": "2026-06-04",
+      "daily_prices": {
+        "2026-06-03": {
+          "open": 1079.01,
+          "high": 1089.29,
+          "low": 1038.5,
+          "close": 1079.57,
+          "pnl_pct": 4.16
+        },
+        "2026-06-04": {
+          "open": 1007.1,
+          "high": 1036.37,
+          "low": 971.68,
+          "close": 996.0,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-04",
+      "close_price": 1015.75,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -12.0
     },
     {
       "ticker": "KLIC",
@@ -235,8 +242,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-03",
       "entry_price": 108.36,
       "allocated_usd": 500,
-      "shares": 4,
-      "actual_position_usd": 433.44,
+      "shares": 4.6142,
+      "actual_position_usd": 499.99,
       "entry_commission": 1.0,
       "take_profit": 92.11,
       "stop_loss": 110.53,
@@ -263,7 +270,7 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 39.48
+      "realized_pnl_usd": 45.85
     },
     {
       "ticker": "LRCX",
@@ -272,8 +279,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-05",
       "entry_price": 318.5,
       "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 318.5,
+      "shares": 1.5699,
+      "actual_position_usd": 500.01,
       "entry_commission": 1.0,
       "take_profit": 366.27,
       "stop_loss": 312.13,
@@ -300,7 +307,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -8.37
+      "realized_pnl_usd": -12.0
     },
     {
       "ticker": "FLR",
@@ -309,8 +316,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-05",
       "entry_price": 48.35,
       "allocated_usd": 500,
-      "shares": 10,
-      "actual_position_usd": 483.5,
+      "shares": 10.3413,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 41.1,
       "stop_loss": 49.32,
@@ -330,7 +337,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.72
+      "realized_pnl_usd": -12.05
     },
     {
       "ticker": "TISI",
@@ -339,8 +346,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-08",
       "entry_price": 17.93,
       "allocated_usd": 500,
-      "shares": 27,
-      "actual_position_usd": 484.11,
+      "shares": 27.8862,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 15.24,
       "stop_loss": 18.29,
@@ -360,7 +367,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.73
+      "realized_pnl_usd": -12.05
     },
     {
       "ticker": "VLGEA",
@@ -369,8 +376,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-08",
       "entry_price": 39.33,
       "allocated_usd": 500,
-      "shares": 12,
-      "actual_position_usd": 471.96,
+      "shares": 12.7129,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 33.43,
       "stop_loss": 40.12,
@@ -390,7 +397,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.49
+      "realized_pnl_usd": -12.05
     },
     {
       "ticker": "TCNNF",
@@ -399,8 +406,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-09",
       "entry_price": 12.36,
       "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
+      "shares": 40.4531,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 10.51,
       "stop_loss": 12.61,
@@ -427,7 +434,7 @@ window.PORTFOLIO_H = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 72.01
+      "realized_pnl_usd": 72.85
     },
     {
       "ticker": "PBHC",
@@ -436,8 +443,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-11",
       "entry_price": 15.2,
       "allocated_usd": 500,
-      "shares": 32,
-      "actual_position_usd": 486.4,
+      "shares": 32.8947,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 12.92,
       "stop_loss": 15.5,
@@ -464,7 +471,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.58
+      "realized_pnl_usd": -11.85
     },
     {
       "ticker": "MFIN",
@@ -473,8 +480,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-11",
       "entry_price": 9.89,
       "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 494.5,
+      "shares": 50.5561,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 8.41,
       "stop_loss": 10.09,
@@ -501,7 +508,7 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.02
+      "realized_pnl_usd": 0.0
     },
     {
       "ticker": "ARCB",
@@ -510,8 +517,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-12",
       "entry_price": 173.6,
       "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 347.2,
+      "shares": 2.8802,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 147.56,
       "stop_loss": 177.07,
@@ -538,7 +545,7 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 25.6
+      "realized_pnl_usd": 37.75
     },
     {
       "ticker": "MFIN",
@@ -547,8 +554,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-15",
       "entry_price": 9.81,
       "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 490.5,
+      "shares": 50.9684,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 8.34,
       "stop_loss": 10.01,
@@ -568,7 +575,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -12.01
+      "realized_pnl_usd": -12.2
     },
     {
       "ticker": "AMRX",
@@ -577,8 +584,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-16",
       "entry_price": 16.24,
       "allocated_usd": 500,
-      "shares": 30,
-      "actual_position_usd": 487.2,
+      "shares": 30.7882,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 13.8,
       "stop_loss": 16.56,
@@ -605,7 +612,7 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.6
+      "realized_pnl_usd": -11.85
     },
     {
       "ticker": "CTRE",
@@ -614,8 +621,8 @@ window.PORTFOLIO_H = {
       "signal_date": "2026-06-16",
       "entry_price": 37.04,
       "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 481.52,
+      "shares": 13.4989,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
       "take_profit": 31.48,
       "stop_loss": 37.78,
@@ -642,20 +649,20 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.24
+      "realized_pnl_usd": -2.25
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 17,
+    "total_trades": 18,
     "win_trades": 6,
-    "win_rate": 35.3,
-    "total_realized_pnl_usd": 159.65,
+    "win_rate": 33.3,
+    "total_realized_pnl_usd": 176.75,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2159.65,
-    "total_commission_usd": 34.0,
+    "portfolio_value": 2176.75,
+    "total_commission_usd": 36.0,
     "skipped_gap": 5,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-19"
+    "skipped_zero_shares": 0,
+    "updated_at": "2026-06-20"
   }
 };

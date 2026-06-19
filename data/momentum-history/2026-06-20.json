@@ -1,0 +1,93 @@
+{
+  "date": "2026-06-20",
+  "universe_size": 34,
+  "passed_trend": 8,
+  "factors": [
+    "rs_rank",
+    "edge_pullback",
+    "edge_volcontract",
+    "edge_nearhigh"
+  ],
+  "buy": [
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "score": 73.2,
+      "price": 537.37,
+      "rs": 1.5911,
+      "ret_6m": 1.7125,
+      "dist_to_ma_pct": 7.1,
+      "vol_ratio": 0.86
+    },
+    {
+      "ticker": "MU",
+      "action": "BUY",
+      "score": 68.0,
+      "price": 1133.99,
+      "rs": 3.9111,
+      "ret_6m": 4.0325,
+      "dist_to_ma_pct": 14.5,
+      "vol_ratio": 0.97
+    },
+    {
+      "ticker": "LSCC",
+      "action": "BUY",
+      "score": 65.8,
+      "price": 153.72,
+      "rs": 1.0177,
+      "ret_6m": 1.1392,
+      "dist_to_ma_pct": 6.0,
+      "vol_ratio": 0.82
+    },
+    {
+      "ticker": "GOOGL",
+      "action": "BUY",
+      "score": 62.9,
+      "price": 368.03,
+      "rs": 0.1205,
+      "ret_6m": 0.2419,
+      "dist_to_ma_pct": -0.9,
+      "vol_ratio": 1.0
+    },
+    {
+      "ticker": "VRT",
+      "action": "BUY",
+      "score": 59.6,
+      "price": 333.05,
+      "rs": 1.1024,
+      "ret_6m": 1.2238,
+      "dist_to_ma_pct": 6.2,
+      "vol_ratio": 0.96
+    },
+    {
+      "ticker": "NVDA",
+      "action": "BUY",
+      "score": 56.8,
+      "price": 210.69,
+      "rs": 0.1126,
+      "ret_6m": 0.234,
+      "dist_to_ma_pct": -0.5,
+      "vol_ratio": 0.93
+    },
+    {
+      "ticker": "AAPL",
+      "action": "BUY",
+      "score": 53.1,
+      "price": 298.01,
+      "rs": -0.0231,
+      "ret_6m": 0.0983,
+      "dist_to_ma_pct": -1.8,
+      "vol_ratio": 1.04
+    },
+    {
+      "ticker": "DECK",
+      "action": "BUY",
+      "score": 40.8,
+      "price": 109.11,
+      "rs": -0.0558,
+      "ret_6m": 0.0656,
+      "dist_to_ma_pct": -1.5,
+      "vol_ratio": 1.11
+    }
+  ]
+}

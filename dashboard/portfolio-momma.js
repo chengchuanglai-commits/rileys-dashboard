@@ -1,0 +1,90 @@
+// Plan MOM-MA — 动量/趋势选股(无AI) + J Law 10/20MA移动止盈
+window.PORTFOLIO_MOMMA = {
+  "capital_usd": 2000,
+  "open_positions": [
+    {
+      "ticker": "LSCC",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 153.72,
+      "shares": 3.2527,
+      "stop_loss": 141.42,
+      "score": 65.8
+    },
+    {
+      "ticker": "AAPL",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 298.01,
+      "shares": 1.6778,
+      "stop_loss": 274.17,
+      "score": 53.1
+    },
+    {
+      "ticker": "DECK",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 109.11,
+      "shares": 4.5825,
+      "stop_loss": 100.38,
+      "score": 40.8
+    },
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 537.37,
+      "shares": 0.9305,
+      "stop_loss": 494.38,
+      "score": 73.2
+    },
+    {
+      "ticker": "MU",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 1133.99,
+      "shares": 0.4409,
+      "stop_loss": 1043.27,
+      "score": 68.0
+    },
+    {
+      "ticker": "NVDA",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 210.69,
+      "shares": 2.3732,
+      "stop_loss": 193.83,
+      "score": 56.8
+    },
+    {
+      "ticker": "VRT",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 333.05,
+      "shares": 1.5013,
+      "stop_loss": 306.41,
+      "score": 59.6
+    },
+    {
+      "ticker": "GOOGL",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 368.03,
+      "shares": 1.3586,
+      "stop_loss": 338.59,
+      "score": 62.9
+    }
+  ],
+  "closed_positions": [],
+  "_note": "MOM-MA：动量/趋势选股(同MOM-H) + J Law 10/20MA移动止盈(收盘破20MA才走,让赢家跑)+初始-8%硬止损。$500/仓(小数股,高价票不漏),周再平衡,前向无前视。",
+  "stats": {
+    "total_trades": 0,
+    "win_trades": 0,
+    "win_rate": 0,
+    "total_realized_pnl_usd": 0,
+    "open_unrealized_pnl_usd": 0.0,
+    "portfolio_value": 2000.0,
+    "total_commission_usd": 8.0,
+    "updated_at": "2026-06-20"
+  }
+};
