@@ -1,0 +1,84 @@
+name: B-quant 多因子
+
+# 纯量化多因子选股(FMP基本面+动量) → ATR定价+风险定额+每周再平衡 → B-quant 模拟盘。全程无 AI。
+# 选股器每日归档(当时基本面=无前视),回填读归档模拟。基本面缓存周更,日常调用极少。
+
+on:
+  schedule:
+    - cron: '30 12 * * 1-5'   # 12:30 UTC,主信号/广撒之后
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-pipeline
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.c.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - id: c
+        run: |
+          if [ "$(date -u +%u)" -ge 6 ]; then echo "周末跳过"; echo "run=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "data/multifactor-history/$(date -u +%F).json" ]; then
+            echo "今日已归档,跳过重复触发"; echo "run=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+  bquant:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install deps
+        run: pip install yfinance lxml pandas
+
+      - name: 多因子选股(归档)
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: python scripts/screen-multifactor.py
+
+      - name: B-quant 回填(读归档,ATR定价+风险定额+周再平衡)
+        run: python scripts/backfill-portfolio-bq.py
+
+      - name: 提交
+        run: |
+          git config user.name "bquant-bot"
+          git config user.email "bquant-bot@users.noreply.github.com"
+          git add data/multifactor-history/ data/screened-multifactor.json data/fundamentals-cache.json 2>/dev/null || true
+          git add data/portfolio_bq.json dashboard/portfolio-bq.js 2>/dev/null || true
+          V=$(date -u +%Y%m%d%H%M%S)
+          echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
+          sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
+          git add dashboard/version.js dashboard/index.html
+          git diff --staged --quiet || git commit -m "B-quant 多因子 $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done
+          exit 1
+
+      - name: 飞书通知:B-quant
+        if: success()
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, runpy
+          d = json.load(open("data/portfolio_bq.json")); s = d["stats"]
+          os.environ["NOTIFY_MESSAGE"] = (
+              f"📊 B-quant 多因子(无AI) {s['updated_at']}\n"
+              f"净值 ${s['portfolio_value']} · 已实现 ${s['total_realized_pnl_usd']:+.0f} · 浮盈 ${s['open_unrealized_pnl_usd']:+.0f}\n"
+              f"已平 {s['total_trades']}笔 · 胜率 {s['win_rate']}% · 持仓 {len(d['open_positions'])}\n"
+              f"（交易信号系统）"
+          )
+          runpy.run_path("scripts/notify-webhook.py", run_name="__main__")
+          EOF
