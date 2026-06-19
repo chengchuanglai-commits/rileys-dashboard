@@ -31,6 +31,36 @@ window.PORTFOLIO_H = {
       "stop_loss": 22.96,
       "max_hold_date": "2026-06-22",
       "daily_prices": {}
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3.5969,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 159.86,
+      "stop_loss": 136.23,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13.7779,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 30.85,
+      "stop_loss": 37.02,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -663,6 +693,6 @@ window.PORTFOLIO_H = {
     "total_commission_usd": 36.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 0,
-    "updated_at": "2026-06-20"
+    "updated_at": "2026-06-19"
   }
 };
