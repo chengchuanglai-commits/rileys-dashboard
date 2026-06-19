@@ -2,21 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
-      "entry_commission": 1.0,
-      "take_profit": 13.46,
-      "stop_loss": 16.32,
-      "max_hold_date": "2026-06-22",
-      "daily_prices": {}
-    },
-    {
       "ticker": "SBFG",
       "name": "SBFG",
       "action": "SELL",
@@ -29,22 +14,15 @@
       "take_profit": 19.13,
       "stop_loss": 23.19,
       "max_hold_date": "2026-06-22",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "BUY",
-      "signal_date": "2026-06-19",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 159.86,
-      "stop_loss": 134.84,
-      "max_hold_date": "2026-06-23",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 23.01,
+          "pnl_pct": -2.22
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 22.72,
+      "day1_gap_pct": 0.93
     },
     {
       "ticker": "WSBC",
@@ -59,7 +37,15 @@
       "take_profit": 30.85,
       "stop_loss": 37.38,
       "max_hold_date": "2026-06-23",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 36.29,
+          "pnl_pct": -0.0
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 35.81,
+      "day1_gap_pct": -1.32
     }
   ],
   "closed_positions": [
@@ -668,14 +654,12 @@
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 17,
-    "win_trades": 8,
-    "win_rate": 47.1,
+    "win_trades": 10,
+    "win_rate": 58.8,
     "total_realized_pnl_usd": 185.94,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2185.94,
-    "total_commission_usd": 34.0,
-    "skipped_gap": 5,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-19"
+    "open_unrealized_pnl_usd": -11.1,
+    "portfolio_value": 2174.84,
+    "skipped_gap": 7,
+    "updated_at": "2026-06-20"
   }
 }

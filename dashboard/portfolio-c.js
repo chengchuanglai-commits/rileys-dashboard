@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "day1_open": 9.9,
+      "day1_open": 9.59,
       "daily_prices": {
         "2026-06-16": {
           "open": 9.9,
@@ -32,13 +32,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 2.96
         },
         "2026-06-18": {
-          "open": 9.59,
-          "high": 9.69,
-          "low": 9.38,
           "close": 9.53,
           "pnl_pct": 2.85
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -2.24
     },
     {
       "ticker": "AMRX",
@@ -53,7 +52,7 @@ window.PORTFOLIO_C = {
       "take_profit": 14.94,
       "stop_loss": 16.89,
       "max_hold_date": "2026-06-23",
-      "day1_open": 16.25,
+      "day1_open": 16.47,
       "daily_prices": {
         "2026-06-17": {
           "open": 16.25,
@@ -63,13 +62,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.25
         },
         "2026-06-18": {
-          "open": 16.47,
-          "high": 16.61,
-          "low": 15.73,
           "close": 16.21,
           "pnl_pct": 0.18
         }
-      }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 1.42
     },
     {
       "ticker": "CTRE",
@@ -84,7 +82,7 @@ window.PORTFOLIO_C = {
       "take_profit": 34.08,
       "stop_loss": 38.52,
       "max_hold_date": "2026-06-23",
-      "day1_open": 37.03,
+      "day1_open": 36.57,
       "daily_prices": {
         "2026-06-17": {
           "open": 37.03,
@@ -94,29 +92,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.78
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
           "close": 37.06,
           "pnl_pct": -0.05
         }
-      }
-    },
-    {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
-      "entry_commission": 1.0,
-      "take_profit": 14.57,
-      "stop_loss": 16.47,
-      "max_hold_date": "2026-06-25",
-      "day1_open": null,
-      "daily_prices": {}
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -1.27
     },
     {
       "ticker": "SBFG",
@@ -131,24 +112,15 @@ window.PORTFOLIO_C = {
       "take_profit": 20.71,
       "stop_loss": 23.41,
       "max_hold_date": "2026-06-25",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "BUY",
-      "signal_date": "2026-06-19",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 150.13,
-      "stop_loss": 133.45,
-      "max_hold_date": "2026-06-26",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 22.72,
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 23.01,
+          "pnl_pct": -2.22
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 0.93
     },
     {
       "ticker": "WSBC",
@@ -163,8 +135,15 @@ window.PORTFOLIO_C = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-26",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 35.81,
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 36.29,
+          "pnl_pct": -0.0
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": -1.32
     }
   ],
   "closed_positions": [
@@ -720,19 +699,45 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 25.78
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.57,
+      "stop_loss": 16.47,
+      "max_hold_date": "2026-06-25",
+      "day1_open": 16.01,
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 16.87,
+          "pnl_pct": -6.5
+        }
+      },
+      "gap_checked": true,
+      "day1_gap_pct": 1.07,
+      "close_date": "2026-06-18",
+      "close_price": 16.87,
+      "final_pnl_pct": -6.5,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -32.51
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 14,
+    "total_trades": 15,
     "win_trades": 11,
-    "win_rate": 78.6,
-    "total_realized_pnl_usd": 255.55,
-    "open_unrealized_pnl_usd": 7.62,
-    "portfolio_value": 2263.17,
-    "total_commission_usd": 28.0,
-    "skipped_gap": 5,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-19"
+    "win_rate": 73.3,
+    "total_realized_pnl_usd": 223.04,
+    "open_unrealized_pnl_usd": 3.8,
+    "portfolio_value": 2226.84,
+    "skipped_gap": 6,
+    "updated_at": "2026-06-20"
   }
 };

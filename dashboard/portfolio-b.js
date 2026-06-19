@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -31,9 +31,6 @@ window.PORTFOLIO_B = {
           "pnl_pct": 2.96
         },
         "2026-06-18": {
-          "open": 9.59,
-          "high": 9.69,
-          "low": 9.38,
           "close": 9.53,
           "pnl_pct": 2.85
         }
@@ -61,9 +58,6 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.25
         },
         "2026-06-18": {
-          "open": 16.47,
-          "high": 16.61,
-          "low": 15.73,
           "close": 16.21,
           "pnl_pct": 0.18
         }
@@ -91,28 +85,10 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.78
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
           "close": 37.06,
           "pnl_pct": -0.05
         }
       }
-    },
-    {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
-      "entry_commission": 1.0,
-      "take_profit": 14.57,
-      "stop_loss": 16.47,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {}
     },
     {
       "ticker": "SBFG",
@@ -127,7 +103,12 @@ window.PORTFOLIO_B = {
       "take_profit": 20.71,
       "stop_loss": 23.41,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 23.01,
+          "pnl_pct": -2.22
+        }
+      }
     },
     {
       "ticker": "SNEX",
@@ -142,7 +123,12 @@ window.PORTFOLIO_B = {
       "take_profit": 150.13,
       "stop_loss": 133.45,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 139.01,
+          "pnl_pct": 0.0
+        }
+      }
     },
     {
       "ticker": "WSBC",
@@ -157,7 +143,12 @@ window.PORTFOLIO_B = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 36.29,
+          "pnl_pct": -0.0
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -849,18 +840,41 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.39
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.57,
+      "stop_loss": 16.47,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-18": {
+          "close": 16.87,
+          "pnl_pct": -6.5
+        }
+      },
+      "close_date": "2026-06-18",
+      "close_price": 16.87,
+      "final_pnl_pct": -6.5,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -32.51
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 19,
+    "total_trades": 20,
     "win_trades": 11,
-    "win_rate": 57.9,
-    "total_realized_pnl_usd": 156.26,
-    "open_unrealized_pnl_usd": 11.62,
-    "portfolio_value": 2167.88,
-    "total_commission_usd": 38.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-19"
+    "win_rate": 55.0,
+    "total_realized_pnl_usd": 123.75,
+    "open_unrealized_pnl_usd": 3.8,
+    "portfolio_value": 2127.55,
+    "updated_at": "2026-06-20"
   }
 };
