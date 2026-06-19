@@ -1,7 +1,22 @@
-// Plan D 模拟盘持仓 — 每日自动更新
+// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 13.46,
+      "stop_loss": 16.32,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {}
+    },
     {
       "ticker": "SBFG",
       "name": "SBFG",
@@ -15,15 +30,37 @@ window.PORTFOLIO_D = {
       "take_profit": 19.13,
       "stop_loss": 23.19,
       "max_hold_date": "2026-06-22",
-      "daily_prices": {
-        "2026-06-18": {
-          "close": 23.01,
-          "pnl_pct": -2.22
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 22.72,
-      "day1_gap_pct": 0.93
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 159.86,
+      "stop_loss": 134.84,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 30.85,
+      "stop_loss": 37.38,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -213,27 +250,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-05",
       "daily_prices": {
         "2026-06-04": {
-          "open": 104.03,
-          "high": 109.39,
-          "low": 103.06,
-          "close": 107.52,
-          "pnl_pct": 0.78
+          "open": 103.85,
+          "high": 109.2,
+          "low": 102.88,
+          "close": 107.33,
+          "pnl_pct": 0.95
         },
         "2026-06-05": {
-          "open": 103.9,
-          "high": 104.75,
-          "low": 97.33,
-          "close": 98.16,
-          "pnl_pct": 9.41
+          "open": 103.72,
+          "high": 104.57,
+          "low": 97.16,
+          "close": 97.99,
+          "pnl_pct": 9.57
         }
       },
       "close_date": "2026-06-05",
-      "close_price": 98.16,
-      "final_pnl_pct": 9.41,
+      "close_price": 97.99,
+      "final_pnl_pct": 9.57,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 38.79
+      "realized_pnl_usd": 39.48
     },
     {
       "ticker": "LRCX",
@@ -632,12 +669,14 @@ window.PORTFOLIO_D = {
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 17,
-    "win_trades": 10,
-    "win_rate": 58.8,
-    "total_realized_pnl_usd": 185.25,
-    "open_unrealized_pnl_usd": -11.1,
-    "portfolio_value": 2174.15,
-    "skipped_gap": 6,
+    "win_trades": 8,
+    "win_rate": 47.1,
+    "total_realized_pnl_usd": 185.94,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2185.94,
+    "total_commission_usd": 34.0,
+    "skipped_gap": 5,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-19"
   }
 };

@@ -108,6 +108,25 @@
       "vix": 16.4,
       "daily_prices": {},
       "gap_checked": true
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 32.66,
+      "stop_loss": 37.38,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-24",
+      "regime": "neutral",
+      "vix": 16.84,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -303,17 +322,17 @@
       "vix": 16.06,
       "daily_prices": {
         "2026-06-04": {
-          "open": 104.03,
-          "high": 109.39,
-          "low": 103.06,
-          "close": 107.52,
-          "pnl_pct": 0.78
+          "open": 103.85,
+          "high": 109.2,
+          "low": 102.88,
+          "close": 107.33,
+          "pnl_pct": 0.95
         },
         "2026-06-05": {
-          "open": 103.9,
-          "high": 104.75,
-          "low": 97.33,
-          "close": 98.16,
+          "open": 103.72,
+          "high": 104.57,
+          "low": 97.16,
+          "close": 97.99,
           "pnl_pct": 10.0
         }
       },
@@ -624,7 +643,7 @@
         },
         "2026-06-18": {
           "open": 9.59,
-          "high": 9.67,
+          "high": 9.69,
           "low": 9.38,
           "close": 9.53,
           "pnl_pct": 2.85
@@ -649,8 +668,8 @@
     "portfolio_value": 2171.41,
     "total_commission_usd": 26.0,
     "skipped_fear": 0,
-    "skipped_direction": 4,
+    "skipped_direction": 5,
     "skipped_gap": 4,
-    "updated_at": "2026-06-18"
+    "updated_at": "2026-06-19"
   }
 }

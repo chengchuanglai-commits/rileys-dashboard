@@ -30,6 +30,36 @@
       "stop_loss": 22.96,
       "max_hold_date": "2026-06-22",
       "daily_prices": {}
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 159.86,
+      "stop_loss": 136.23,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 30.85,
+      "stop_loss": 37.02,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -212,27 +242,27 @@
       "max_hold_date": "2026-06-05",
       "daily_prices": {
         "2026-06-04": {
-          "open": 104.03,
-          "high": 109.39,
-          "low": 103.06,
-          "close": 107.52,
-          "pnl_pct": 0.78
+          "open": 103.85,
+          "high": 109.2,
+          "low": 102.88,
+          "close": 107.33,
+          "pnl_pct": 0.95
         },
         "2026-06-05": {
-          "open": 103.9,
-          "high": 104.75,
-          "low": 97.33,
-          "close": 98.16,
-          "pnl_pct": 9.41
+          "open": 103.72,
+          "high": 104.57,
+          "low": 97.16,
+          "close": 97.99,
+          "pnl_pct": 9.57
         }
       },
       "close_date": "2026-06-05",
-      "close_price": 98.16,
-      "final_pnl_pct": 9.41,
+      "close_price": 97.99,
+      "final_pnl_pct": 9.57,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 38.79
+      "realized_pnl_usd": 39.48
     },
     {
       "ticker": "LRCX",
@@ -619,12 +649,12 @@
     "total_trades": 17,
     "win_trades": 6,
     "win_rate": 35.3,
-    "total_realized_pnl_usd": 158.96,
+    "total_realized_pnl_usd": 159.65,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2158.96,
+    "portfolio_value": 2159.65,
     "total_commission_usd": 34.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-18"
+    "updated_at": "2026-06-19"
   }
 }

@@ -118,29 +118,6 @@ window.PORTFOLIO_MN = {
       }
     },
     {
-      "ticker": "PSTG",
-      "name": "Pure Storage Inc",
-      "action": "BUY",
-      "signal_date": "2026-06-11",
-      "entry_price": 69.34,
-      "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 485.38,
-      "entry_commission": 1.0,
-      "take_profit": 79.74,
-      "stop_loss": 67.95,
-      "max_hold_date": "2026-06-15",
-      "daily_prices": {
-        "2026-06-12": {
-          "open": 70.0,
-          "high": 72.97,
-          "low": 69.21,
-          "close": 72.31,
-          "pnl_pct": 4.28
-        }
-      }
-    },
-    {
       "ticker": "QCOM",
       "name": "Qualcomm Inc.",
       "action": "BUY",
@@ -155,7 +132,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-06-19",
       "daily_prices": {
         "2026-06-18": {
-          "open": 220.72,
+          "open": 220.71,
           "high": 229.42,
           "low": 214.73,
           "close": 226.11,
@@ -178,7 +155,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-06-19",
       "daily_prices": {
         "2026-06-18": {
-          "open": 305.5,
+          "open": 305.47,
           "high": 329.88,
           "low": 302.36,
           "close": 310.58,
@@ -249,7 +226,7 @@ window.PORTFOLIO_MN = {
         "2026-06-18": {
           "open": 20.19,
           "high": 20.43,
-          "low": 20.11,
+          "low": 20.12,
           "close": 20.33,
           "pnl_pct": 1.4
         }
@@ -890,36 +867,6 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -11.36
-    },
-    {
-      "ticker": "PSTG",
-      "name": "Pure Storage",
-      "action": "BUY",
-      "signal_date": "2026-06-01",
-      "entry_price": 84.45,
-      "allocated_usd": 500,
-      "shares": 5,
-      "actual_position_usd": 422.25,
-      "entry_commission": 1.0,
-      "take_profit": 97.12,
-      "stop_loss": 82.76,
-      "max_hold_date": "2026-06-03",
-      "daily_prices": {
-        "2026-06-02": {
-          "open": 84.84,
-          "high": 85.99,
-          "low": 81.9,
-          "close": 82.98,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-06-02",
-      "close_price": 82.76,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -10.45
     },
     {
       "ticker": "NVDA",
@@ -2054,37 +2001,37 @@ window.PORTFOLIO_MN = {
       "name": "Avnet Inc",
       "action": "BUY",
       "signal_date": "2026-06-11",
-      "entry_price": 36.52,
+      "entry_price": 36.25,
       "allocated_usd": 500,
       "shares": 13,
-      "actual_position_usd": 474.76,
+      "actual_position_usd": 471.25,
       "entry_commission": 1.0,
-      "take_profit": 42.0,
-      "stop_loss": 35.79,
+      "take_profit": 41.69,
+      "stop_loss": 35.52,
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-12": {
-          "open": 37.09,
-          "high": 38.03,
-          "low": 37.09,
-          "close": 37.76,
-          "pnl_pct": 3.4
+          "open": 36.81,
+          "high": 37.75,
+          "low": 36.81,
+          "close": 37.48,
+          "pnl_pct": 3.39
         },
         "2026-06-15": {
-          "open": 38.21,
-          "high": 38.8,
-          "low": 37.34,
-          "close": 37.54,
+          "open": 37.92,
+          "high": 38.51,
+          "low": 37.06,
+          "close": 37.26,
           "pnl_pct": 2.79
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 37.54,
+      "close_price": 37.26,
       "final_pnl_pct": 2.79,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 11.25
+      "realized_pnl_usd": 11.15
     },
     {
       "ticker": "FORM",
@@ -2648,37 +2595,37 @@ window.PORTFOLIO_MN = {
       "name": "Kulicke & Soffa",
       "action": "BUY",
       "signal_date": "2026-06-16",
-      "entry_price": 117.27,
+      "entry_price": 117.06,
       "allocated_usd": 500,
       "shares": 4,
-      "actual_position_usd": 469.08,
+      "actual_position_usd": 468.24,
       "entry_commission": 1.0,
-      "take_profit": 134.86,
-      "stop_loss": 114.92,
+      "take_profit": 134.62,
+      "stop_loss": 114.72,
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-17": {
-          "open": 120.39,
-          "high": 122.51,
-          "low": 116.16,
-          "close": 116.51,
-          "pnl_pct": -0.65
+          "open": 120.18,
+          "high": 122.29,
+          "low": 115.96,
+          "close": 116.31,
+          "pnl_pct": -0.64
         },
         "2026-06-18": {
           "open": 121.5,
           "high": 125.14,
           "low": 121.15,
           "close": 121.87,
-          "pnl_pct": 3.92
+          "pnl_pct": 4.11
         }
       },
       "close_date": "2026-06-18",
       "close_price": 121.87,
-      "final_pnl_pct": 3.92,
+      "final_pnl_pct": 4.11,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 16.39
+      "realized_pnl_usd": 17.24
     },
     {
       "ticker": "OKLO",
@@ -2703,8 +2650,8 @@ window.PORTFOLIO_MN = {
         },
         "2026-06-18": {
           "open": 59.83,
-          "high": 62.48,
-          "low": 58.58,
+          "high": 63.0,
+          "low": 58.56,
           "close": 61.17,
           "pnl_pct": 6.48
         }
@@ -2769,7 +2716,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 0.1
         },
         "2026-06-18": {
-          "open": 260.19,
+          "open": 255.62,
           "high": 260.19,
           "low": 247.34,
           "close": 250.5,
@@ -2807,7 +2754,7 @@ window.PORTFOLIO_MN = {
         },
         "2026-06-18": {
           "open": 88.06,
-          "high": 88.66,
+          "high": 88.77,
           "low": 86.73,
           "close": 87.77,
           "pnl_pct": 3.28
@@ -2844,7 +2791,7 @@ window.PORTFOLIO_MN = {
         },
         "2026-06-18": {
           "open": 18.15,
-          "high": 18.17,
+          "high": 18.22,
           "low": 17.57,
           "close": 17.89,
           "pnl_pct": -1.99
@@ -2910,7 +2857,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-06-19",
       "daily_prices": {
         "2026-06-18": {
-          "open": 3.03,
+          "open": 3.02,
           "high": 3.08,
           "low": 2.82,
           "close": 2.95,
@@ -2928,15 +2875,15 @@ window.PORTFOLIO_MN = {
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 74,
+    "total_trades": 73,
     "win_trades": 26,
-    "win_rate": 35.1,
-    "total_realized_pnl_usd": 47.89,
-    "open_unrealized_pnl_usd": 177.6,
-    "portfolio_value": 2225.49,
-    "total_commission_usd": 148.0,
+    "win_rate": 35.6,
+    "total_realized_pnl_usd": 59.09,
+    "open_unrealized_pnl_usd": 157.83,
+    "portfolio_value": 2216.92,
+    "total_commission_usd": 146.0,
     "skipped_gap": 25,
     "skipped_zero_shares": 6,
-    "updated_at": "2026-06-18"
+    "updated_at": "2026-06-19"
   }
 };
