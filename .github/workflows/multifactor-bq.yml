@@ -41,7 +41,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Install deps
-        run: pip install yfinance lxml pandas
+        run: pip install yfinance lxml pandas "git+https://github.com/TauricResearch/TradingAgents.git"
 
       - name: 多因子选股(归档)
         env:
@@ -51,12 +51,24 @@ jobs:
       - name: B-quant 回填(读归档,ATR定价+风险定额+周再平衡)
         run: python scripts/backfill-portfolio-bq.py
 
+      - name: B-AI — DeepSeek 分析多因子候选
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/generate-deepseek-multifactor.py
+
+      - name: B-AI 回填(DeepSeek决定+同定价)
+        continue-on-error: true
+        run: python scripts/backfill-portfolio-bai.py
+
       - name: 提交
         run: |
           git config user.name "bquant-bot"
           git config user.email "bquant-bot@users.noreply.github.com"
           git add data/multifactor-history/ data/screened-multifactor.json data/fundamentals-cache.json 2>/dev/null || true
-          git add data/portfolio_bq.json dashboard/portfolio-bq.js 2>/dev/null || true
+          git add data/multifactor-ai-history/ data/portfolio_bq.json dashboard/portfolio-bq.js 2>/dev/null || true
+          git add data/portfolio_bai.json dashboard/portfolio-bai.js 2>/dev/null || true
           V=$(date -u +%Y%m%d%H%M%S)
           echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
           sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
@@ -73,12 +85,16 @@ jobs:
         run: |
           python3 - <<'EOF'
           import json, os, runpy
-          d = json.load(open("data/portfolio_bq.json")); s = d["stats"]
-          os.environ["NOTIFY_MESSAGE"] = (
-              f"📊 B-quant 多因子(无AI) {s['updated_at']}\n"
-              f"净值 ${s['portfolio_value']} · 已实现 ${s['total_realized_pnl_usd']:+.0f} · 浮盈 ${s['open_unrealized_pnl_usd']:+.0f}\n"
-              f"已平 {s['total_trades']}笔 · 胜率 {s['win_rate']}% · 持仓 {len(d['open_positions'])}\n"
-              f"（交易信号系统）"
-          )
+          def line(path, name):
+              try:
+                  d = json.load(open(path)); s = d["stats"]
+                  return f"{name}: 净值${s['portfolio_value']} 已实现${s['total_realized_pnl_usd']:+.0f} 浮盈${s['open_unrealized_pnl_usd']:+.0f} (平{s['total_trades']}笔 胜率{s['win_rate']}% 持仓{len(d['open_positions'])})"
+              except Exception:
+                  return f"{name}: 无数据"
+          msg = ["📊 多因子双盘 " + __import__("datetime").date.today().isoformat(),
+                 line("data/portfolio_bq.json", "B-quant(纯量化)"),
+                 line("data/portfolio_bai.json", "B-AI(DeepSeek决定)"),
+                 "（交易信号系统）"]
+          os.environ["NOTIFY_MESSAGE"] = "\n".join(msg)
           runpy.run_path("scripts/notify-webhook.py", run_name="__main__")
           EOF
