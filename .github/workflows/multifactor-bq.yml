@@ -73,6 +73,18 @@ jobs:
       - name: MOM-MA 回填(动量信号 + J Law 10/20MA移动止盈)
         run: python scripts/backfill-portfolio-momma.py
 
+      - name: 复利曲线 + 动态配置引擎(汇总全部腿,此时数据最全)
+        continue-on-error: true
+        run: |
+          python scripts/compare-compounded.py || true
+          python scripts/compute-allocation.py || true
+
+      - name: 每日决策推送(飞书)
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: python scripts/daily-digest.py || true
+
       - name: 提交
         run: |
           git config user.name "bquant-bot"
@@ -82,6 +94,7 @@ jobs:
           git add data/portfolio_bai.json dashboard/portfolio-bai.js 2>/dev/null || true
           git add data/momentum-history/ data/screened-momentum.json 2>/dev/null || true
           git add data/portfolio_momh.json data/portfolio_momma.json dashboard/portfolio-momh.js dashboard/portfolio-momma.js 2>/dev/null || true
+          git add data/allocation.json dashboard/allocation.js dashboard/compounded-curves.js data/digest-state.json 2>/dev/null || true
           V=$(date -u +%Y%m%d%H%M%S)
           echo "window.DASHBOARD_VERSION = \"$V\";" > dashboard/version.js
           sed -i "s/var BUILD=\"[0-9]*\"/var BUILD=\"$V\"/" dashboard/index.html
