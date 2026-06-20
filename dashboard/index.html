@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260620064223";
+      var BUILD="20260620113713";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -955,6 +955,8 @@
       document.write('<scr'+'ipt src="backtest-results.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="signal-edge.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="allocation.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="compounded-curves.js?v='+v+'"><\/scr'+'ipt>');
     })();
     </script>
     <script>
@@ -1251,6 +1253,14 @@
     <!-- ── Row 3.5: Stock Portfolio ── -->
     <!-- ── Row 2.8: A vs B 模拟系统（统一面板）── -->
     <div class="row col-1" id="sec-sim" style="margin-bottom:16px">
+        <section id="alloc-engine" style="margin:24px 0;padding:16px;border:1px solid #e5e7eb;border-radius:12px">
+          <h3 style="margin:0 0 12px">⚙️ 动态配置引擎 <span id="alloc-phase" style="font-size:12px;color:#6b7280"></span></h3>
+          <div style="display:flex;flex-wrap:wrap;gap:24px">
+            <div id="alloc-donut"></div>
+            <div id="alloc-gauges" style="flex:1;min-width:260px"></div>
+          </div>
+          <div id="alloc-curves" style="margin-top:16px"></div>
+        </section>
         <div class="card" id="sim-card">
             <div class="card-hd" style="margin-bottom:10px">
                 <span class="card-title">模拟盘</span>
@@ -4779,6 +4789,47 @@ window.addEventListener('scroll', () => {
       })
       .catch(() => { const _el = document.getElementById(c.id); if (_el) _el.textContent = '—'; });
   });
+})();
+</script>
+<script>
+(function(){
+  var A = window.ALLOCATION, C = window.COMPOUNDED_CURVES;
+  if(!A) return;
+  // ① 配置环图(主动 vs 指数 + 主动内部)
+  var act=A.active_pct, idx=A.index_pct;
+  var donut='<svg width="180" height="180" viewBox="0 0 36 36">';
+  var seg=[['指数',idx,'#94a3b8'],['主动',act,'#6366f1']], off=0;
+  seg.forEach(function(s){var d=s[1]*100;donut+='<circle cx="18" cy="18" r="15.9" fill="none" stroke="'+s[2]+'" stroke-width="3.5" stroke-dasharray="'+d+' '+(100-d)+'" stroke-dashoffset="'+(25-off)+'"/>';off+=d;});
+  donut+='<text x="18" y="17" text-anchor="middle" font-size="4">主动'+Math.round(act*100)+'%</text><text x="18" y="22" text-anchor="middle" font-size="3" fill="#6b7280">指数'+Math.round(idx*100)+'%</text></svg>';
+  document.getElementById('alloc-donut').innerHTML='<div style="text-align:center">'+donut+'<div style="font-size:12px;color:#6b7280">SPY前向 '+A.spy_fwd_ret_pct+'%</div></div>';
+  // ② 信念 gauge(各腿)
+  var g='<table style="width:100%;border-collapse:collapse;font-size:13px"><tr style="color:#6b7280"><td>腿</td><td>信念</td><td>n</td><td>alpha</td><td>稳健</td><td>占资金</td></tr>';
+  Object.keys(A.legs).forEach(function(k){var m=A.legs[k];var fa=A.final_allocation[k];
+    var bar='<div style="background:#eef;border-radius:4px;width:80px;height:8px;display:inline-block"><div style="background:#6366f1;height:8px;border-radius:4px;width:'+Math.round(m.conviction*80)+'px"></div></div>';
+    g+='<tr style="'+(m.tradeable?'':'opacity:.5')+'"><td>'+m.name+'</td><td>'+bar+' '+m.conviction+'</td><td>'+m.n+'</td><td>'+m.alpha_pct+'%</td><td>'+(m.robust?'✓':'✗')+'</td><td>'+(fa!=null?Math.round(fa*100)+'%':'纸面')+'</td></tr>';});
+  g+='</table>';
+  document.getElementById('alloc-gauges').innerHTML=g;
+  // ③ 复利净值曲线 vs SPY
+  if(C&&C.curves){
+    var W=560,H=160,pad=24,all=[];Object.values(C.curves).forEach(function(c){c.points.forEach(function(p){all.push(p[1]);});});
+    if(C.spy_final)all.push(C.spy_final); all.push(C.init);
+    var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all),rng=(mx-mn)||1;
+    var dates=[];Object.values(C.curves).forEach(function(c){c.points.forEach(function(p){dates.push(p[0]);});});
+    dates=dates.sort();var d0=dates[0],d1=dates[dates.length-1];
+    function xx(d){return pad+(W-2*pad)*((new Date(d)-new Date(d0))/((new Date(d1)-new Date(d0))||1));}
+    function yy(v){return H-pad-(H-2*pad)*((v-mn)/rng);}
+    var svg='<svg width="'+W+'" height="'+H+'" style="max-width:100%">';
+    var cols=['#6366f1','#0d9488','#db2777','#ca8a04','#0891b2','#64748b','#16a34a','#f97316'],ci=0;
+    Object.keys(C.curves).forEach(function(k){var pts=C.curves[k].points;if(!pts.length)return;
+      var dd='M '+xx(C.init&&pts[0]?d0:pts[0][0])+' '+yy(C.init);pts.forEach(function(p){dd+=' L '+xx(p[0])+' '+yy(p[1]);});
+      svg+='<path d="'+dd+'" fill="none" stroke="'+cols[ci%cols.length]+'" stroke-width="1.5"/>';ci++;});
+    if(C.spy_final){svg+='<line x1="'+pad+'" y1="'+yy(C.spy_final)+'" x2="'+(W-pad)+'" y2="'+yy(C.spy_final)+'" stroke="#000" stroke-dasharray="3 3" stroke-width="1"/><text x="'+(W-pad)+'" y="'+(yy(C.spy_final)-2)+'" font-size="10" text-anchor="end">SPY</text>';}
+    svg+='</svg><div style="font-size:11px;color:#6b7280">frac20 复利净值 vs SPV(虚线)</div>';
+    document.getElementById('alloc-curves').innerHTML='<div style="font-weight:600;font-size:13px;margin-bottom:4px">复利净值曲线 vs SPY</div>'+svg;
+  }
+  // ④ Phase 追踪
+  var p2=A.phase2;
+  document.getElementById('alloc-phase').textContent='· Phase 1'+(p2.complete?' → 可升级!':' (证据'+(p2.evidence_ok?'✓':'✗')+' / 市场振幅'+p2.market_amp_pct+'%'+(p2.market_ok?'✓':' 需≥10%')+')');
 })();
 </script>
 </body>
