@@ -169,6 +169,13 @@ jobs:
       - name: Update Plan H portfolio (历史最优参数)
         run: python scripts/backfill-portfolio-h.py
 
+      - name: 复利曲线
+        continue-on-error: true
+        run: python scripts/compare-compounded.py
+      - name: 动态配置引擎
+        continue-on-error: true
+        run: python scripts/compute-allocation.py
+
       - name: Analyze signal edge (vs SPY)
         run: python scripts/analyze-signal-edge.py
         continue-on-error: true
@@ -203,6 +210,7 @@ jobs:
           git add dashboard/backtest-results.js data/backtest_results.json 2>/dev/null || true
           git add data/screened-stocks.json data/screened-stocks-history/ 2>/dev/null || true
           git add dashboard/signal-edge.js 2>/dev/null || true
+          git add data/allocation.json dashboard/allocation.js dashboard/compounded-curves.js 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 更新交易信号 $(date -u +%Y-%m-%d)"
           pushed=0
