@@ -6,7 +6,7 @@ from portfolio_compound import compound_frac20
 
 N_FULL = 40
 ALPHA_TARGET = 0.10
-ACTIVE_FLOOR = 0.30
+ACTIVE_FLOOR = 0.40
 ACTIVE_CEILING = 0.70
 MOMMA_PRIOR = 0.10
 

@@ -33,10 +33,10 @@ conviction_i = sample_i × edge_i × robustness_i
 active_pct = ACTIVE_FLOOR + (ACTIVE_CEILING − ACTIVE_FLOOR) × max_i(conviction_i)
 index_pct  = 1 − active_pct
 ```
-- `ACTIVE_FLOOR = 0.30`（永远 ≥30% 主动 = 在场盈利、不瘫痪）。
+- `ACTIVE_FLOOR = 0.40`（永远 ≥30% 主动 = 在场盈利、不瘫痪）。
 - `ACTIVE_CEILING = 0.70`（指数永远 ≥30% 兜底防暴雷）。
 - 用 **max(可交易腿 tradeable 的最强信念)** 驱动整体激进度（2026-06-20 修正：原为 max(全部腿)，会被 h/c 等不交易的 AI 腿的平盘 alpha 拉高=把噪音当 edge；改为只看真交易的腿，真金只在"我们真交易且真证明了的腿"上加仓）。非 tradeable 腿信念仍上 dashboard 供观察。
-- 这俩常量 = **风险旋钮**，Riley 已定 30/70。
+- 这俩常量 = **风险旋钮**，Riley 定 40/70(2026-06-20 由30/70上调:主动地板40%/指数地板60%,天花板仍70%)。
 
 ### 组件 3 — 主动内部按信念权重
 
@@ -77,7 +77,7 @@ weight_i = (conviction_i + prior_i) / Σ_j (conviction_j + prior_j)
 
 ## 可调参数 (tunable constants)
 
-`N_FULL=40`、`ALPHA_TARGET=0.10`、`ACTIVE_FLOOR=0.30`、`ACTIVE_CEILING=0.70`、`MOM-MA prior=0.10`、再平衡阈值 `10%`、单次上限 `±15%`、Phase2 市场阈值 `±10%`。集中放脚本顶部便于调。
+`N_FULL=40`、`ALPHA_TARGET=0.10`、`ACTIVE_FLOOR=0.40`、`ACTIVE_CEILING=0.70`、`MOM-MA prior=0.10`、再平衡阈值 `10%`、单次上限 `±15%`、Phase2 市场阈值 `±10%`。集中放脚本顶部便于调。
 
 ## 不做 (YAGNI)
 
@@ -88,5 +88,5 @@ weight_i = (conviction_i + prior_i) / Σ_j (conviction_j + prior_j)
 ## 成功标准
 
 - Dashboard 能直观看到：当前配置、各腿凭什么拿这些钱、谁真在赢(vs SPY)、离 Phase 2 多远。
-- 配置随前向证据自动滑动（现在≈地板30%主动 → 证据firm后爬向70%），下行对称。
+- 配置随前向证据自动滑动（现在≈地板40%主动 → 证据firm后爬向70%），下行对称。
 - 全程零额外 API 成本（只读已有产物 + 本地计算）。

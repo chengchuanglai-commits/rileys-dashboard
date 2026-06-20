@@ -1,9 +1,9 @@
 {
-  "generated": "2026-06-20 19:45",
+  "generated": "2026-06-20 20:11",
   "spy_fwd_ret_pct": -0.26,
   "max_conviction": 0.0,
-  "active_pct": 0.3,
-  "index_pct": 0.7,
+  "active_pct": 0.4,
+  "index_pct": 0.6,
   "legs": {
     "momma": {
       "name": "MOM-MA·动量+20MA",
@@ -89,7 +89,7 @@
     "c": 0.4098
   },
   "final_allocation": {
-    "momma": 0.3,
+    "momma": 0.4,
     "bq": 0.0
   },
   "tradeable": [
@@ -104,7 +104,7 @@
     "complete": false
   },
   "params": {
-    "floor": 0.3,
+    "floor": 0.4,
     "ceiling": 0.7,
     "n_full": 40,
     "alpha_target": 0.1
