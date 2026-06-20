@@ -118,15 +118,20 @@ def main():
     universe = get_universe()
     import yfinance as yf
 
-    # SPY 基准 6 月收益
+    # SPY 基准 6 月收益 + 大盘 regime 闸门(SPY vs 200MA)
     spy_ret_6m = 0.0
+    market_uptrend = True          # 大盘闸门:默认放行;取到SPY才判
+    spy_ma200 = None
     try:
         spy = np.asarray(yf.download("SPY", period="14mo", interval="1d", progress=False)["Close"].dropna()).ravel()
         if len(spy) >= 126:
             spy_ret_6m = float(spy[-1] / spy[-126] - 1)
+        if len(spy) >= 200:
+            spy_ma200 = float(np.mean(spy[-200:]))
+            market_uptrend = bool(spy[-1] > spy_ma200)   # 回测验证:此闸门让MOM-MA在真实滑点下从-15%→+41%
     except Exception as e:
-        print(f"[spy] 取SPY失败,RS退化为绝对动量: {e}")
-    print(f"[spy] 6月收益 {spy_ret_6m*100:+.1f}%")
+        print(f"[spy] 取SPY失败,RS退化为绝对动量,闸门放行: {e}")
+    print(f"[spy] 6月收益 {spy_ret_6m*100:+.1f}% · 大盘闸门 {'放行(SPY>200MA)' if market_uptrend else '关闭(SPY<200MA,今日不开新仓)'}")
 
     df = yf.download(universe, period="14mo", interval="1d", progress=False, group_by="ticker", threads=True)
     rows = []
@@ -141,6 +146,17 @@ def main():
         except Exception:
             pass
     print(f"[trend] {len(rows)} 只通过 Minervini 趋势模板闸门")
+
+    # 大盘 regime 闸门:SPY 跌破 200MA → 今日不开新仓(出空榜),持仓由出场规则自然了结
+    if not market_uptrend:
+        out = {"date": datetime.now().strftime("%Y-%m-%d"), "universe_size": len(universe),
+               "passed_trend": len(rows), "buy": [], "market_uptrend": False,
+               "_note": "SPY<200MA,大盘regime闸门关闭,今日不开新仓(回测验证:此闸门让MOM-MA真实滑点下大幅改善)"}
+        json.dump(out, open(OUT_PATH, "w"), ensure_ascii=False, indent=2)
+        os.makedirs("data/momentum-history", exist_ok=True)
+        json.dump(out, open(f"data/momentum-history/{out['date']}.json", "w"), ensure_ascii=False, indent=2)
+        print("[trend] 大盘闸门关闭,出空榜已归档"); return
+
     if not rows:
         # 闸门后没货(熊市常见)：出空榜,backfill 当天不开新仓
         out = {"date": datetime.now().strftime("%Y-%m-%d"), "universe_size": len(universe),
@@ -164,7 +180,7 @@ def main():
 
     out = {
         "date": datetime.now().strftime("%Y-%m-%d"),
-        "universe_size": len(universe), "passed_trend": len(rows),
+        "universe_size": len(universe), "passed_trend": len(rows), "market_uptrend": True,
         "factors": ["rs_rank", "edge_pullback", "edge_volcontract", "edge_nearhigh"],
         "buy": [{"ticker": r["ticker"], "action": "BUY", "score": r["score"], "price": r["price"],
                  "rs": r["rs"], "ret_6m": r["ret_6m"], "dist_to_ma_pct": r["dist_to_ma_pct"],

@@ -1,0 +1,64 @@
+{
+  "generated": "2026-06-20 13:30",
+  "period": "3y",
+  "window": [
+    "2024-06-20",
+    "2026-06-18"
+  ],
+  "universe_size": 483,
+  "rebalance_points": 101,
+  "boards_with_picks": 101,
+  "empty_boards": 0,
+  "spy_return_pct": 40.2,
+  "slippage_sweep_return_pct": {
+    "H": {
+      "0.0%": 79.8,
+      "0.3%": -72.3,
+      "0.4%": -122.9,
+      "0.5%": -173.6
+    },
+    "MA": {
+      "0.0%": 195.0,
+      "0.3%": 88.7,
+      "0.4%": 53.3,
+      "0.5%": 17.9
+    }
+  },
+  "detail_at_0.4pct_slip": {
+    "H": {
+      "name": "MOM-H (TP15/SL2/2日)",
+      "trades": 1000,
+      "open_now": 10,
+      "win_rate": 33.8,
+      "realized_usd": -2418.96,
+      "unrealized_usd": -40.0,
+      "total_pnl_usd": -2458.96,
+      "return_pct": -122.9,
+      "profit_factor": 0.71,
+      "commission_usd": 2010.0,
+      "avg_win_usd": 17.46,
+      "avg_loss_usd": -12.57,
+      "realized_drop_top1": -2487.77,
+      "realized_drop_top2": -2556.49,
+      "vs_spy_pp": -163.1
+    },
+    "MA": {
+      "name": "MOM-MA (20MA移动止盈)",
+      "trades": 687,
+      "open_now": 16,
+      "win_rate": 25.8,
+      "realized_usd": -329.22,
+      "unrealized_usd": 1395.4,
+      "total_pnl_usd": 1066.18,
+      "return_pct": 53.3,
+      "profit_factor": 0.97,
+      "commission_usd": 1390.0,
+      "avg_win_usd": 56.2,
+      "avg_loss_usd": -20.15,
+      "realized_drop_top1": -963.36,
+      "realized_drop_top2": -1562.79,
+      "vs_spy_pp": 13.1
+    }
+  },
+  "caveat": "universe=今日流动票,有幸存者偏差(偏乐观);出场相对比较稳健,绝对edge打折看"
+}
