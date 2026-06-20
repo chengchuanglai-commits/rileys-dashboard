@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20 20:26",
+  "generated": "2026-06-20 20:38",
   "spy_fwd_ret_pct": -0.26,
   "max_conviction": 0.0,
   "active_pct": 0.4,
@@ -62,10 +62,10 @@
     "mn": {
       "name": "H-广池·晨报",
       "n": 17,
-      "alpha_pct": 1.11,
+      "alpha_pct": 0.96,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": 0.85,
+      "fwd_ret_pct": 0.71,
       "tradeable": false
     },
     "c": {

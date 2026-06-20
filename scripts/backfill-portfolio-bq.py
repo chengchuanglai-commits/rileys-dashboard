@@ -130,7 +130,7 @@ def main():
         opens.append({k: pos[k] for k in pos if k != "pos"})
 
     wins = [c for c in closed if c["realized_pnl_usd"] > 0]
-    total_realized = round(sum(c["realized_pnl_usd"] for c in closed) - commission_total, 2)
+    total_realized = round(sum(c["realized_pnl_usd"] for c in closed), 2)   # 佣金单列,不预扣进已实现(0平仓=0)
     portfolio = {
         "capital_usd": INIT, "open_positions": opens, "closed_positions": closed,
         "_note": "B-quant：多因子量化+ATR定价(TP4/SL2.5×ATR)+风险定额(2%)+每周再平衡。读点对点归档,前向无前视。全程无AI。",

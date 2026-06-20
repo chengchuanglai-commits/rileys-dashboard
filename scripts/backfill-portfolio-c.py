@@ -12,6 +12,7 @@ Plan B 规则 + 跳空过滤：次日开盘若对持仓方向不利跳空 > GAP_
 import json, os
 from datetime import datetime, timedelta
 import yfinance as yf
+from portfolio_compound import compound_portfolio   # frac20 复利回填(与决策视图排名同口径)
 
 SIGNALS_DIR = "dashboard/trading-signals-history"
 PORTFOLIO_PATH = "data/portfolio_c.json"
@@ -210,21 +211,20 @@ for signal_date, s in all_signals:
 
 # ── 统计 ──────────────────────────────────────────────────────────
 
-all_closed = portfolio["closed_positions"]
-wins = [p for p in all_closed if p.get("realized_pnl_usd", 0) > 0]
-total_realized = sum(p.get("realized_pnl_usd", 0) for p in all_closed)
-total_commission = sum(p.get("commission_total", 0) for p in all_closed)
 import math
-
 def safe_pnl(p):
-    if not p["daily_prices"]: return 0
+    if not p.get("daily_prices"): return 0
     v = list(p["daily_prices"].values())[-1].get("pnl_pct")
     return 0 if (v is None or (isinstance(v, float) and math.isnan(v))) else v
 
-open_unrealized = sum(
-    p["actual_position_usd"] * safe_pnl(p) / 100 - p["entry_commission"]
-    for p in portfolio["open_positions"]
-)
+# frac20 复利回填:每仓=当前净值20%,复利,最多5并发(取代固定$500,与决策视图排名同口径)
+fc, fo, _pv, total_realized, open_unrealized, skipped_no_cash = compound_portfolio(
+    portfolio["closed_positions"], portfolio["open_positions"], safe_pnl, STARTING_CAPITAL)
+portfolio["closed_positions"] = fc
+portfolio["open_positions"] = fo
+all_closed = fc
+wins = [p for p in all_closed if p.get("realized_pnl_usd", 0) > 0]
+total_commission = sum(p.get("commission_total", 0) for p in all_closed)
 
 portfolio["stats"] = {
     "total_trades": len(all_closed),

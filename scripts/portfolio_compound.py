@@ -1,5 +1,9 @@
 # scripts/portfolio_compound.py
 """共享 frac20 复利:把交易流按'每仓20%当前净值、最多MAX_CONC并发、现金约束'复利。"""
+import math
+
+def _nan(x):
+    return x is None or (isinstance(x, float) and math.isnan(x))
 
 def _run(trades, init, frac, max_conc):
     """返回 (final_equity, curve[(date,equity)])。trades=[(signal_date, close_date, pnl_pct)]。"""
@@ -46,13 +50,14 @@ def compound_portfolio(closed, opens, open_pct, init=2000, frac=0.20, max_conc=5
     items = []
     for p in closed:
         pct = p.get("final_pnl_pct")
-        if pct is None:
+        if _nan(pct):                      # 跳过 NaN/缺失(c 盘有 NaN bug)
             continue
         items.append({"sig": p.get("signal_date", ""), "close": p.get("close_date") or p.get("signal_date", ""),
                       "pct": float(pct), "ref": p, "open": False})
     for p in opens:
+        op = open_pct(p)
         items.append({"sig": p.get("signal_date", ""), "close": None,
-                      "pct": float(open_pct(p) or 0.0), "ref": p, "open": True})
+                      "pct": (0.0 if _nan(op) else float(op)), "ref": p, "open": True})
     items.sort(key=lambda x: (x["sig"], x["close"] or "9999"))
     cash = float(init); held = []
     fc, fo = [], []; realized = 0.0; skipped = 0

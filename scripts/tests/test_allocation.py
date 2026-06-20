@@ -32,12 +32,12 @@ def test_active_weights_prior_carries_floor():
     assert abs(w["momma"] - 1.0) < 1e-9 and abs(w["bq"] - 0.0) < 1e-9
 
 def test_leg_metrics_alpha_and_robust():
-    # 3 笔: +30,+30,-5(pct);frac20复利前向 > spy → alpha>0;去掉最赚2笔(两个+30)剩-5 → 不robust
+    # 已实现读卡片 stats(单一真相源):realized +$200 → alpha>0;去掉最赚2笔(两个+30)剩-5 → 不robust
     port = {"closed_positions": [
         {"signal_date": "2026-06-01", "close_date": "2026-06-02", "final_pnl_pct": 30.0},
         {"signal_date": "2026-06-03", "close_date": "2026-06-04", "final_pnl_pct": 30.0},
         {"signal_date": "2026-06-05", "close_date": "2026-06-06", "final_pnl_pct": -5.0},
-    ]}
+    ], "stats": {"total_realized_pnl_usd": 200.0}}
     n, alpha, robust, final = mod.leg_metrics(port, spy_ret_pct=0.0)
     assert n == 3
     assert alpha > 0          # 复利前向为正,SPY=0

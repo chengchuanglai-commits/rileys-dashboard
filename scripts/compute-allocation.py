@@ -44,18 +44,20 @@ def _closed_trades(port):
     return out
 
 def leg_metrics(port, spy_ret_pct):
-    """返回 (n, alpha, robust_ok, final_eq)。alpha = 该腿frac20复利前向收益% − SPY同期%(小数)。"""
+    """返回 (n, alpha, robust_ok, final_eq)。
+    **单一真相源**:已实现直接读卡片 stats.total_realized_pnl_usd(= backfill 的 compound_portfolio),
+    保证 决策视图排名 与 实验室卡片 分毫不差。用已实现(closed track record),不含浮盈。"""
     trades = _closed_trades(port)
     n = len(trades)
     if n == 0:
         return 0, 0.0, False, INIT
-    final = compound_frac20(trades, init=INIT)
-    ret_pct = (final / INIT - 1) * 100
+    realized = (port.get("stats", {}) or {}).get("total_realized_pnl_usd", 0) or 0
+    ret_pct = realized / INIT * 100
     alpha = (ret_pct - spy_ret_pct) / 100.0
     # robustness:去掉最赚2笔(按pct),剩余复利仍 > 起始
     rest = sorted(trades, key=lambda t: t[2])[:-2] if n > 2 else []
     robust_ok = compound_frac20(rest, init=INIT) > INIT if rest else False
-    return n, alpha, robust_ok, final
+    return n, alpha, robust_ok, INIT + realized
 
 LEGS = {"momma":"MOM-MA·动量+20MA","momh":"MOM-H·动量+H","bq":"B-quant·多因子","bai":"B-AI·多因子+DS",
         "h":"H·小盘Haiku","hds":"H-DS·小盘DS","mn":"H-广池·晨报","c":"C·B+跳空"}

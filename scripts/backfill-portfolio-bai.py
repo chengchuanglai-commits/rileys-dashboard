@@ -133,7 +133,7 @@ def main():
 
 def _stats(opens, closed, commission_total, unreal, today):
     wins = [c for c in closed if c["realized_pnl_usd"] > 0]
-    tr = round(sum(c["realized_pnl_usd"] for c in closed) - commission_total, 2)
+    tr = round(sum(c["realized_pnl_usd"] for c in closed), 2)   # 佣金单列,不预扣进已实现(0平仓=0)
     return {"total_trades": len(closed), "win_trades": len(wins),
             "win_rate": round(len(wins)/len(closed)*100, 1) if closed else 0,
             "total_realized_pnl_usd": tr, "open_unrealized_pnl_usd": round(unreal, 2),

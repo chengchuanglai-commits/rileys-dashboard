@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 9.03,
       "stop_loss": 10.2,
       "max_hold_date": "2026-06-22",
-      "day1_open": 9.59,
+      "day1_open": 9.9,
       "daily_prices": {
         "2026-06-16": {
           "open": 9.9,
@@ -32,12 +32,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": 2.96
         },
         "2026-06-18": {
+          "open": 9.59,
+          "high": 9.69,
+          "low": 9.38,
           "close": 9.53,
           "pnl_pct": 2.85
         }
       },
-      "gap_checked": true,
-      "day1_gap_pct": -2.24
+      "position_usd": 444.88,
+      "unrealized_pnl_usd": 12.68
     },
     {
       "ticker": "AMRX",
@@ -52,7 +55,7 @@ window.PORTFOLIO_C = {
       "take_profit": 14.94,
       "stop_loss": 16.89,
       "max_hold_date": "2026-06-23",
-      "day1_open": NaN,
+      "day1_open": 16.25,
       "daily_prices": {
         "2026-06-17": {
           "open": 16.25,
@@ -62,12 +65,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.25
         },
         "2026-06-18": {
-          "close": NaN,
-          "pnl_pct": NaN
+          "open": 16.47,
+          "high": 16.61,
+          "low": 15.73,
+          "close": 16.21,
+          "pnl_pct": 0.18
         }
       },
-      "gap_checked": true,
-      "day1_gap_pct": NaN
+      "position_usd": 452.0,
+      "unrealized_pnl_usd": 0.81
     },
     {
       "ticker": "CTRE",
@@ -82,7 +88,7 @@ window.PORTFOLIO_C = {
       "take_profit": 34.08,
       "stop_loss": 38.52,
       "max_hold_date": "2026-06-23",
-      "day1_open": NaN,
+      "day1_open": 37.03,
       "daily_prices": {
         "2026-06-17": {
           "open": 37.03,
@@ -92,12 +98,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.78
         },
         "2026-06-18": {
-          "close": NaN,
-          "pnl_pct": NaN
+          "open": 36.57,
+          "high": 37.11,
+          "low": 36.05,
+          "close": 37.06,
+          "pnl_pct": -0.05
         }
       },
-      "gap_checked": true,
-      "day1_gap_pct": NaN
+      "position_usd": 452.0,
+      "unrealized_pnl_usd": -0.23
     },
     {
       "ticker": "PBHC",
@@ -112,15 +121,10 @@ window.PORTFOLIO_C = {
       "take_profit": 14.57,
       "stop_loss": 16.47,
       "max_hold_date": "2026-06-25",
-      "day1_open": NaN,
-      "daily_prices": {
-        "2026-06-18": {
-          "close": NaN,
-          "pnl_pct": NaN
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": NaN
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 455.18,
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "SBFG",
@@ -135,38 +139,10 @@ window.PORTFOLIO_C = {
       "take_profit": 20.71,
       "stop_loss": 23.41,
       "max_hold_date": "2026-06-25",
-      "day1_open": NaN,
-      "daily_prices": {
-        "2026-06-18": {
-          "close": NaN,
-          "pnl_pct": NaN
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": NaN
-    },
-    {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-19",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit": 33.39,
-      "stop_loss": 37.74,
-      "max_hold_date": "2026-06-26",
-      "day1_open": NaN,
-      "daily_prices": {
-        "2026-06-18": {
-          "close": NaN,
-          "pnl_pct": NaN
-        }
-      },
-      "gap_checked": true,
-      "day1_gap_pct": NaN
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 455.18,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -206,7 +182,8 @@ window.PORTFOLIO_C = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -19.49
+      "realized_pnl_usd": -16.0,
+      "position_usd": 400.0
     },
     {
       "ticker": "WTTR",
@@ -265,7 +242,8 @@ window.PORTFOLIO_C = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.24
+      "realized_pnl_usd": 7.64,
+      "position_usd": 400.0
     },
     {
       "ticker": "MXL",
@@ -296,7 +274,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 30.35
+      "realized_pnl_usd": 32.0,
+      "position_usd": 400.0
     },
     {
       "ticker": "ALGT",
@@ -348,7 +327,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 34.4
+      "realized_pnl_usd": 32.0,
+      "position_usd": 400.0
     },
     {
       "ticker": "IMOS",
@@ -379,7 +359,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 35.94
+      "realized_pnl_usd": 32.26,
+      "position_usd": 403.2
     },
     {
       "ticker": "KLIC",
@@ -417,7 +398,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 32.68
+      "realized_pnl_usd": 33.41,
+      "position_usd": 417.58
     },
     {
       "ticker": "LRCX",
@@ -455,7 +437,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 23.48
+      "realized_pnl_usd": 33.94,
+      "position_usd": 424.26
     },
     {
       "ticker": "FLR",
@@ -493,7 +476,40 @@ window.PORTFOLIO_C = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -21.29
+      "realized_pnl_usd": -16.93,
+      "position_usd": 424.26
+    },
+    {
+      "ticker": "VLGEA",
+      "name": "VLGEA",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 39.33,
+      "allocated_usd": 500,
+      "shares": 12,
+      "actual_position_usd": 471.96,
+      "entry_commission": 1.0,
+      "take_profit": 36.18,
+      "stop_loss": 40.9,
+      "max_hold_date": "2026-06-15",
+      "day1_open": 39.43,
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 39.43,
+          "high": 40.93,
+          "low": 39.37,
+          "close": 39.7,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 40.9,
+      "final_pnl_pct": -3.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.93,
+      "position_usd": 424.26
     },
     {
       "ticker": "TISI",
@@ -531,38 +547,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 36.63
-    },
-    {
-      "ticker": "VLGEA",
-      "name": "VLGEA",
-      "action": "SELL",
-      "signal_date": "2026-06-08",
-      "entry_price": 39.33,
-      "allocated_usd": 500,
-      "shares": 12,
-      "actual_position_usd": 471.96,
-      "entry_commission": 1.0,
-      "take_profit": 36.18,
-      "stop_loss": 40.9,
-      "max_hold_date": "2026-06-15",
-      "day1_open": 39.43,
-      "daily_prices": {
-        "2026-06-09": {
-          "open": 39.43,
-          "high": 40.93,
-          "low": 39.37,
-          "close": 39.7,
-          "pnl_pct": -3.99
-        }
-      },
-      "close_date": "2026-06-09",
-      "close_price": 40.9,
-      "final_pnl_pct": -3.99,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -20.83
+      "realized_pnl_usd": 33.86,
+      "position_usd": 424.26
     },
     {
       "ticker": "TCNNF",
@@ -593,7 +579,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 37.6
+      "realized_pnl_usd": 33.98,
+      "position_usd": 424.28
     },
     {
       "ticker": "PBHC",
@@ -624,7 +611,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 37.06
+      "realized_pnl_usd": 35.16,
+      "position_usd": 437.85
     },
     {
       "ticker": "MFIN",
@@ -683,7 +671,8 @@ window.PORTFOLIO_C = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 16.0
+      "realized_pnl_usd": 15.94,
+      "position_usd": 437.85
     },
     {
       "ticker": "ARCB",
@@ -721,7 +710,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 25.78
+      "realized_pnl_usd": 35.59,
+      "position_usd": 444.88
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -729,10 +719,12 @@ window.PORTFOLIO_C = {
     "total_trades": 14,
     "win_trades": 11,
     "win_rate": 78.6,
-    "total_realized_pnl_usd": 255.55,
-    "open_unrealized_pnl_usd": NaN,
-    "portfolio_value": NaN,
-    "skipped_gap": 6,
+    "total_realized_pnl_usd": 275.91,
+    "open_unrealized_pnl_usd": 13.27,
+    "portfolio_value": 2289.18,
+    "total_commission_usd": 28.0,
+    "skipped_gap": 5,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-20"
   }
 };
