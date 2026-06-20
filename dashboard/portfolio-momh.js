@@ -3,44 +3,26 @@ window.PORTFOLIO_MOMH = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "NVDA",
+      "ticker": "GFS",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 210.69,
-      "shares": 2.3732,
-      "take_profit": 242.29,
-      "stop_loss": 206.48,
-      "score": 56.8
+      "entry_price": 85.83,
+      "shares": 5.8255,
+      "take_profit": 98.7,
+      "stop_loss": 84.11,
+      "score": 79.2,
+      "actual_position_usd": 500.0
     },
     {
-      "ticker": "DECK",
+      "ticker": "RVMD",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 109.11,
-      "shares": 4.5825,
-      "take_profit": 125.48,
-      "stop_loss": 106.93,
-      "score": 40.8
-    },
-    {
-      "ticker": "AAPL",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 298.01,
-      "shares": 1.6778,
-      "take_profit": 342.71,
-      "stop_loss": 292.05,
-      "score": 53.1
-    },
-    {
-      "ticker": "GOOGL",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 368.03,
-      "shares": 1.3586,
-      "take_profit": 423.23,
-      "stop_loss": 360.67,
-      "score": 62.9
+      "entry_price": 162.99,
+      "shares": 3.0677,
+      "take_profit": 187.44,
+      "stop_loss": 159.73,
+      "score": 75.4,
+      "actual_position_usd": 500.0
     },
     {
       "ticker": "AMD",
@@ -50,41 +32,23 @@ window.PORTFOLIO_MOMH = {
       "shares": 0.9305,
       "take_profit": 617.98,
       "stop_loss": 526.62,
-      "score": 73.2
+      "score": 74.3,
+      "actual_position_usd": 500.02
     },
     {
-      "ticker": "MU",
+      "ticker": "STRL",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 1133.99,
-      "shares": 0.4409,
-      "take_profit": 1304.09,
-      "stop_loss": 1111.31,
-      "score": 68.0
-    },
-    {
-      "ticker": "LSCC",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 153.72,
-      "shares": 3.2527,
-      "take_profit": 176.78,
-      "stop_loss": 150.65,
-      "score": 65.8
-    },
-    {
-      "ticker": "VRT",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 333.05,
-      "shares": 1.5013,
-      "take_profit": 383.01,
-      "stop_loss": 326.39,
-      "score": 59.6
+      "entry_price": 861.88,
+      "shares": 0.5801,
+      "take_profit": 991.16,
+      "stop_loss": 844.64,
+      "score": 74.6,
+      "actual_position_usd": 499.98
     }
   ],
   "closed_positions": [],
-  "_note": "MOM-H：动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,无AI) + Plan H出场(TP15/SL2/2日)。$500/仓(小数股,高价票不漏),周再平衡,前向无前视。",
+  "_note": "MOM-H：动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,无AI) + Plan H出场(TP15/SL2/2日)。$500/仓(小数股),现金约束(最多4仓,$2000无杠杆),周再平衡,前向无前视。",
   "stats": {
     "total_trades": 0,
     "win_trades": 0,
@@ -92,7 +56,8 @@ window.PORTFOLIO_MOMH = {
     "total_realized_pnl_usd": 0,
     "open_unrealized_pnl_usd": 0.0,
     "portfolio_value": 2000.0,
-    "total_commission_usd": 8.0,
+    "total_commission_usd": 4.0,
+    "skipped_no_cash": 6,
     "updated_at": "2026-06-20"
   }
 };

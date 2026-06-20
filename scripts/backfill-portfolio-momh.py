@@ -9,6 +9,7 @@ long-only(动量做多领导股)。$500/仓,与现实盘 H 系列同口径可比
 import os, json, glob
 from datetime import datetime
 import yfinance as yf
+from cash_constraint import apply_cash_constraint   # 修隐性杠杆:最多同时持 INIT/PER 个仓
 
 HIST_DIR = "data/momentum-history"
 PORTFOLIO_PATH = "data/portfolio_momh.json"
@@ -113,23 +114,28 @@ def main():
 
 
 def _finalize(held, closed, commission_total, posmap, ohlc, cal, today):
-    opens, unreal = [], 0.0
+    opens = []
     for tk, pos in held.items():
         p = posmap.get(tk, {}).get(cal[-1])
         cur = float(ohlc[tk]["C"][p]) if p is not None else pos["entry_price"]
-        move = cur - pos["entry_price"]
-        unreal += pos["shares"] * move
-        opens.append({k: pos[k] for k in pos if k != "pos"})
+        d = {k: pos[k] for k in pos if k != "pos"}
+        d["_unreal"] = round(pos["shares"] * (cur - pos["entry_price"]), 2)
+        d["actual_position_usd"] = round(pos["shares"] * pos["entry_price"], 2)
+        opens.append(d)
+    # 现金约束:修掉隐性杠杆(最多同时持 INIT/PER 个仓,超出的信号跳过)
+    closed, opens, skipped = apply_cash_constraint(closed, opens, INIT, PER_POSITION_USD)
+    unreal = round(sum(o.pop("_unreal", 0) for o in opens), 2)
     wins = [c for c in closed if c["realized_pnl_usd"] > 0]
     total_realized = round(sum(c["realized_pnl_usd"] for c in closed), 2)
+    comm = round((len(closed)*2 + len(opens)) * COMMISSION, 2)
     portfolio = {
         "capital_usd": INIT, "open_positions": opens, "closed_positions": closed,
-        "_note": "MOM-H：动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,无AI) + Plan H出场(TP15/SL2/2日)。$500/仓(小数股,高价票不漏),周再平衡,前向无前视。",
+        "_note": "MOM-H：动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,无AI) + Plan H出场(TP15/SL2/2日)。$500/仓(小数股),现金约束(最多4仓,$2000无杠杆),周再平衡,前向无前视。",
         "stats": {"total_trades": len(closed), "win_trades": len(wins),
                   "win_rate": round(len(wins)/len(closed)*100, 1) if closed else 0,
                   "total_realized_pnl_usd": total_realized, "open_unrealized_pnl_usd": round(unreal, 2),
                   "portfolio_value": round(INIT + total_realized + unreal, 2),
-                  "total_commission_usd": round(commission_total, 2), "updated_at": today}}
+                  "total_commission_usd": comm, "skipped_no_cash": skipped, "updated_at": today}}
     json.dump(portfolio, open(PORTFOLIO_PATH, "w"), ensure_ascii=False, indent=2)
     with open(JS_PATH, "w", encoding="utf-8") as f:
         f.write("// Plan MOM-H — 动量/趋势选股(无AI) + Plan H出场(TP15/SL2/2日)\n")

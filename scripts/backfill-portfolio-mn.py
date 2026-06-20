@@ -13,6 +13,7 @@ Plan H-广池(MN) 模拟盘 — 信号源=每日晨报精选(中大盘,流动好
 import json, os, re, glob
 from datetime import datetime, timedelta
 import yfinance as yf
+from cash_constraint import apply_cash_constraint   # 修隐性杠杆:最多同时持 INIT/PER 个仓
 
 MN_DIR = "dashboard/morning-note-history"
 PORTFOLIO_PATH = "data/portfolio_mn.json"
@@ -204,6 +205,12 @@ for signal_date, s in all_signals:
         portfolio["closed_positions"].append(closed)
         print(f"    → Closed {close_reason} @ ${close_price} {final_pnl_pct:+.2f}% net=${realized_pnl:+.2f}")
 
+# 现金约束:修掉隐性杠杆(最多同时持 STARTING_CAPITAL/PER 个仓,超出的信号跳过)
+fc, fo, skipped_no_cash = apply_cash_constraint(
+    portfolio["closed_positions"], portfolio["open_positions"], STARTING_CAPITAL, PER_POSITION_USD)
+portfolio["closed_positions"] = fc
+portfolio["open_positions"] = fo
+
 all_closed = portfolio["closed_positions"]
 wins = [p for p in all_closed if p.get("realized_pnl_usd", 0) > 0]
 total_realized = sum(p.get("realized_pnl_usd", 0) for p in all_closed)
@@ -223,6 +230,7 @@ portfolio["stats"] = {
     "total_commission_usd": round(total_commission, 2),
     "skipped_gap": skipped_gap,
     "skipped_zero_shares": skipped_zero_shares,
+    "skipped_no_cash": skipped_no_cash,
     "updated_at": datetime.now().strftime("%Y-%m-%d"),
 }
 
