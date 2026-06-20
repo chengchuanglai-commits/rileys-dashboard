@@ -9,7 +9,7 @@ long-only(动量做多领导股)。$500/仓,与现实盘 H 系列同口径可比
 import os, json, glob
 from datetime import datetime
 import yfinance as yf
-from portfolio_compound import compound_portfolio   # frac20 复利回填(与决策视图排名同口径)
+from portfolio_compound import compound_portfolio   # frac10 复利回填(与决策视图排名同口径)
 
 HIST_DIR = "data/momentum-history"
 PORTFOLIO_PATH = "data/portfolio_momh.json"
@@ -122,7 +122,7 @@ def _finalize(held, closed, commission_total, posmap, ohlc, cal, today):
         d["_unreal"] = round(pos["shares"] * (cur - pos["entry_price"]), 2)
         d["actual_position_usd"] = round(pos["shares"] * pos["entry_price"], 2)
         opens.append(d)
-    # frac20 复利回填(取代固定$500,与决策视图排名同口径)
+    # frac10 复利回填(取代固定$500,与决策视图排名同口径)
     def _open_pct(o):
         base = o.get("actual_position_usd") or 0
         return (o.get("_unreal", 0) / base * 100) if base else 0.0
@@ -133,7 +133,7 @@ def _finalize(held, closed, commission_total, posmap, ohlc, cal, today):
     comm = round((len(closed)*2 + len(opens)) * COMMISSION, 2)
     portfolio = {
         "capital_usd": INIT, "open_positions": opens, "closed_positions": closed,
-        "_note": "MOM-H：动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,无AI) + Plan H出场(TP15/SL2/2日)。$500/仓(小数股),现金约束(最多4仓,$2000无杠杆),周再平衡,前向无前视。",
+        "_note": "MOM-H：动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,无AI) + Plan H出场(TP15/SL2/2日)。$500/仓(小数股),现金约束(最多10仓,$2000无杠杆),周再平衡,前向无前视。",
         "stats": {"total_trades": len(closed), "win_trades": len(wins),
                   "win_rate": round(len(wins)/len(closed)*100, 1) if closed else 0,
                   "total_realized_pnl_usd": total_realized, "open_unrealized_pnl_usd": round(unreal, 2),

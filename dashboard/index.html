@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260620132154";
+      var BUILD="20260620165011";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -4957,7 +4957,7 @@ var CAPITAL = 2000;
       var dd='M '+xx(C.init&&pts[0]?d0:pts[0][0])+' '+yy(C.init);pts.forEach(function(p){dd+=' L '+xx(p[0])+' '+yy(p[1]);});
       svg+='<path d="'+dd+'" fill="none" stroke="'+cols[ci%cols.length]+'" stroke-width="1.5"/>';ci++;});
     if(C.spy_final){svg+='<line x1="'+pad+'" y1="'+yy(C.spy_final)+'" x2="'+(W-pad)+'" y2="'+yy(C.spy_final)+'" stroke="#000" stroke-dasharray="3 3" stroke-width="1"/><text x="'+(W-pad)+'" y="'+(yy(C.spy_final)-2)+'" font-size="10" text-anchor="end">SPY</text>';}
-    svg+='</svg><div style="font-size:11px;color:#6b7280">frac20 复利净值 vs SPV(虚线)</div>';
+    svg+='</svg><div style="font-size:11px;color:#6b7280">frac10 复利净值 vs SPV(虚线)</div>';
     document.getElementById('alloc-curves').innerHTML='<div style="font-weight:600;font-size:13px;margin-bottom:4px">复利净值曲线 vs SPY</div>'+svg;
   }
   // ④ Phase 追踪

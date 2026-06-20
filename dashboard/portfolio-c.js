@@ -3,6 +3,24 @@ window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
     {
+      "ticker": "UCTT",
+      "name": "Ultra Clean Holdings Inc.",
+      "action": "BUY",
+      "signal_date": "2026-05-27",
+      "entry_price": 87.46,
+      "allocated_usd": 500,
+      "shares": 5,
+      "actual_position_usd": 437.3,
+      "entry_commission": 1.0,
+      "take_profit": 94.46,
+      "stop_loss": 83.96,
+      "max_hold_date": "2026-06-03",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 200.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
       "ticker": "MFIN",
       "name": "MFIN",
       "action": "SELL",
@@ -39,8 +57,8 @@ window.PORTFOLIO_C = {
           "pnl_pct": 2.85
         }
       },
-      "position_usd": 444.88,
-      "unrealized_pnl_usd": 12.68
+      "position_usd": 211.84,
+      "unrealized_pnl_usd": 6.04
     },
     {
       "ticker": "AMRX",
@@ -72,8 +90,8 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.18
         }
       },
-      "position_usd": 452.0,
-      "unrealized_pnl_usd": 0.81
+      "position_usd": 213.53,
+      "unrealized_pnl_usd": 0.38
     },
     {
       "ticker": "CTRE",
@@ -105,8 +123,8 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.05
         }
       },
-      "position_usd": 452.0,
-      "unrealized_pnl_usd": -0.23
+      "position_usd": 213.53,
+      "unrealized_pnl_usd": -0.11
     },
     {
       "ticker": "PBHC",
@@ -123,7 +141,7 @@ window.PORTFOLIO_C = {
       "max_hold_date": "2026-06-25",
       "day1_open": null,
       "daily_prices": {},
-      "position_usd": 455.18,
+      "position_usd": 214.29,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -141,50 +159,47 @@ window.PORTFOLIO_C = {
       "max_hold_date": "2026-06-25",
       "day1_open": null,
       "daily_prices": {},
-      "position_usd": 455.18,
+      "position_usd": 214.29,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 150.13,
+      "stop_loss": 133.45,
+      "max_hold_date": "2026-06-26",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 214.29,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 33.39,
+      "stop_loss": 37.74,
+      "max_hold_date": "2026-06-26",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 214.29,
       "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
-    {
-      "ticker": "UCTT",
-      "name": "Ultra Clean Holdings Inc.",
-      "action": "BUY",
-      "signal_date": "2026-05-27",
-      "entry_price": 87.46,
-      "allocated_usd": 500,
-      "shares": 5,
-      "actual_position_usd": 437.3,
-      "entry_commission": 1.0,
-      "take_profit": 94.46,
-      "stop_loss": 83.96,
-      "max_hold_date": "2026-06-03",
-      "day1_open": 90.38,
-      "daily_prices": {
-        "2026-05-28": {
-          "open": 90.38,
-          "high": 90.8,
-          "low": 84.35,
-          "close": 87.29,
-          "pnl_pct": -0.19
-        },
-        "2026-05-29": {
-          "open": 88.11,
-          "high": 89.34,
-          "low": 83.23,
-          "close": 85.57,
-          "pnl_pct": -4.0
-        }
-      },
-      "close_date": "2026-05-29",
-      "close_price": 83.96,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -16.0,
-      "position_usd": 400.0
-    },
     {
       "ticker": "WTTR",
       "name": "Select Water Solutions Inc.",
@@ -242,8 +257,8 @@ window.PORTFOLIO_C = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.64,
-      "position_usd": 400.0
+      "realized_pnl_usd": 3.82,
+      "position_usd": 200.0
     },
     {
       "ticker": "MXL",
@@ -274,8 +289,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 32.0,
-      "position_usd": 400.0
+      "realized_pnl_usd": 16.0,
+      "position_usd": 200.0
     },
     {
       "ticker": "ALGT",
@@ -327,8 +342,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 32.0,
-      "position_usd": 400.0
+      "realized_pnl_usd": 16.0,
+      "position_usd": 200.0
     },
     {
       "ticker": "IMOS",
@@ -359,8 +374,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 32.26,
-      "position_usd": 403.2
+      "realized_pnl_usd": 16.13,
+      "position_usd": 201.6
     },
     {
       "ticker": "KLIC",
@@ -398,8 +413,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 33.41,
-      "position_usd": 417.58
+      "realized_pnl_usd": 16.42,
+      "position_usd": 205.19
     },
     {
       "ticker": "LRCX",
@@ -437,8 +452,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 33.94,
-      "position_usd": 424.26
+      "realized_pnl_usd": 16.55,
+      "position_usd": 206.84
     },
     {
       "ticker": "FLR",
@@ -476,8 +491,8 @@ window.PORTFOLIO_C = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -16.93,
-      "position_usd": 424.26
+      "realized_pnl_usd": -8.25,
+      "position_usd": 206.84
     },
     {
       "ticker": "VLGEA",
@@ -508,8 +523,8 @@ window.PORTFOLIO_C = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -16.93,
-      "position_usd": 424.26
+      "realized_pnl_usd": -8.25,
+      "position_usd": 206.84
     },
     {
       "ticker": "TISI",
@@ -547,8 +562,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 33.86,
-      "position_usd": 424.26
+      "realized_pnl_usd": 16.51,
+      "position_usd": 206.84
     },
     {
       "ticker": "TCNNF",
@@ -579,8 +594,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 33.98,
-      "position_usd": 424.28
+      "realized_pnl_usd": 16.57,
+      "position_usd": 206.84
     },
     {
       "ticker": "PBHC",
@@ -611,8 +626,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 35.16,
-      "position_usd": 437.85
+      "realized_pnl_usd": 16.87,
+      "position_usd": 210.15
     },
     {
       "ticker": "MFIN",
@@ -671,8 +686,8 @@ window.PORTFOLIO_C = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 15.94,
-      "position_usd": 437.85
+      "realized_pnl_usd": 7.65,
+      "position_usd": 210.15
     },
     {
       "ticker": "ARCB",
@@ -710,21 +725,21 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 35.59,
-      "position_usd": 444.88
+      "realized_pnl_usd": 16.95,
+      "position_usd": 211.84
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 14,
+    "total_trades": 13,
     "win_trades": 11,
-    "win_rate": 78.6,
-    "total_realized_pnl_usd": 275.91,
-    "open_unrealized_pnl_usd": 13.27,
-    "portfolio_value": 2289.18,
-    "total_commission_usd": 28.0,
+    "win_rate": 84.6,
+    "total_realized_pnl_usd": 142.95,
+    "open_unrealized_pnl_usd": 6.31,
+    "portfolio_value": 2149.26,
+    "total_commission_usd": 26.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-20"
+    "updated_at": "2026-06-21"
   }
 };

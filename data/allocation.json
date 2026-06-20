@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20 20:38",
+  "generated": "2026-06-21 00:33",
   "spy_fwd_ret_pct": -0.26,
   "max_conviction": 0.0,
   "active_pct": 0.4,
@@ -44,49 +44,49 @@
     "h": {
       "name": "H·小盘Haiku",
       "n": 18,
-      "alpha_pct": 8.98,
+      "alpha_pct": 4.56,
       "robust": true,
-      "conviction": 0.404,
-      "fwd_ret_pct": 8.72,
+      "conviction": 0.2054,
+      "fwd_ret_pct": 4.31,
       "tradeable": false
     },
     "hds": {
       "name": "H-DS·小盘DS",
-      "n": 15,
-      "alpha_pct": 2.96,
+      "n": 16,
+      "alpha_pct": 2.4,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": 2.71,
+      "fwd_ret_pct": 2.14,
       "tradeable": false
     },
     "mn": {
       "name": "H-广池·晨报",
-      "n": 17,
-      "alpha_pct": 0.96,
-      "robust": false,
-      "conviction": 0.0,
-      "fwd_ret_pct": 0.71,
+      "n": 48,
+      "alpha_pct": 4.03,
+      "robust": true,
+      "conviction": 0.4027,
+      "fwd_ret_pct": 3.77,
       "tradeable": false
     },
     "c": {
       "name": "C·B+跳空",
-      "n": 14,
-      "alpha_pct": 14.05,
+      "n": 13,
+      "alpha_pct": 7.4,
       "robust": true,
-      "conviction": 0.35,
-      "fwd_ret_pct": 13.8,
+      "conviction": 0.2406,
+      "fwd_ret_pct": 7.15,
       "tradeable": false
     }
   },
   "weights": {
-    "momma": 0.1171,
+    "momma": 0.1054,
     "momh": 0.0,
     "bq": 0.0,
     "bai": 0.0,
-    "h": 0.4731,
+    "h": 0.2165,
     "hds": 0.0,
-    "mn": 0.0,
-    "c": 0.4098
+    "mn": 0.4245,
+    "c": 0.2536
   },
   "final_allocation": {
     "momma": 0.4,
@@ -97,11 +97,13 @@
     "momma"
   ],
   "phase2": {
-    "evidence_ok": false,
-    "passed_legs": [],
+    "evidence_ok": true,
+    "passed_legs": [
+      "mn"
+    ],
     "market_amp_pct": 16.8,
     "market_ok": true,
-    "complete": false
+    "complete": true
   },
   "params": {
     "floor": 0.4,

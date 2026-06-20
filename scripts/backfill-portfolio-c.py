@@ -12,7 +12,7 @@ Plan B 规则 + 跳空过滤：次日开盘若对持仓方向不利跳空 > GAP_
 import json, os
 from datetime import datetime, timedelta
 import yfinance as yf
-from portfolio_compound import compound_portfolio   # frac20 复利回填(与决策视图排名同口径)
+from portfolio_compound import compound_portfolio   # frac10 复利回填(与决策视图排名同口径)
 
 SIGNALS_DIR = "dashboard/trading-signals-history"
 PORTFOLIO_PATH = "data/portfolio_c.json"
@@ -217,7 +217,7 @@ def safe_pnl(p):
     v = list(p["daily_prices"].values())[-1].get("pnl_pct")
     return 0 if (v is None or (isinstance(v, float) and math.isnan(v))) else v
 
-# frac20 复利回填:每仓=当前净值20%,复利,最多5并发(取代固定$500,与决策视图排名同口径)
+# frac10 复利回填:每仓=当前净值20%,复利,最多5并发(取代固定$500,与决策视图排名同口径)
 fc, fo, _pv, total_realized, open_unrealized, skipped_no_cash = compound_portfolio(
     portfolio["closed_positions"], portfolio["open_positions"], safe_pnl, STARTING_CAPITAL)
 portfolio["closed_positions"] = fc

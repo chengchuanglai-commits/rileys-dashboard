@@ -16,8 +16,8 @@ sys.path.insert(0, os.path.dirname(__file__))
 from portfolio_compound import compound_frac20, compound_frac20_curve
 
 INIT = 2000.0
-FRAC = 0.20            # 每仓 = 当前净值 20%(frac20,回测里最优)
-MAX_CONC = 5
+FRAC = 0.10            # 每仓 = 当前净值 10%(frac20,回测里最优)
+MAX_CONC = 10
 LEGS = {
     "h":"H·小盘Haiku","hds":"H-DS·小盘DeepSeek","mn":"H-广池·晨报中大盘",
     "b":"B·TP8/SL4/5d","c":"C·B+跳空","d":"D·TP15/SL3/2d","e":"E·VIX动态","f":"F·分档","g":"G·广池(退役)",
@@ -69,8 +69,8 @@ def main():
         rows.append((key, name, final, (final/INIT-1)*100, n, wr))
     rows.sort(key=lambda r: -r[2])
 
-    print(f"\n{'='*72}\n  所有腿·frac20复利 前向对比 (forward, 统一口径)\n{'='*72}")
-    print(f"  起始${INIT:.0f} · 每仓20%净值复利 · 最多{MAX_CONC}并发")
+    print(f"\n{'='*72}\n  所有腿·frac10复利 前向对比 (forward, 统一口径)\n{'='*72}")
+    print(f"  起始${INIT:.0f} · 每仓10%净值复利 · 最多{MAX_CONC}并发")
     if spy_ret is not None:
         print(f"  📏 SPY 同期前向基准: {spy_ret:+.2f}%  (买入持有,几周窗口基本平盘)")
     print(f"\n  {'腿':<22}{'复利终值':>10}{'收益%':>9}{'笔数':>6}{'胜率':>7}  vs SPY")

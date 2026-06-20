@@ -1,0 +1,22 @@
+name: IBKR 周一提醒
+
+# 周一早上推飞书提醒 Riley 设置 IBKR paper。自终止:data/ibkr-setup-done 存在则脚本跳过。
+on:
+  schedule:
+    - cron: '0 1 * * 1'   # 周一 01:00 UTC = 09:00 北京
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - name: 发提醒
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: python scripts/ibkr-reminder.py

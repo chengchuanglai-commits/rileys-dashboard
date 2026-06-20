@@ -1,5 +1,5 @@
 # scripts/portfolio_compound.py
-"""共享 frac20 复利:把交易流按'每仓20%当前净值、最多MAX_CONC并发、现金约束'复利。"""
+"""共享 frac20 复利:把交易流按'每仓10%当前净值、最多10并发、现金约束'复利。"""
 import math
 
 def _nan(x):
@@ -35,14 +35,14 @@ def _run(trades, init, frac, max_conc):
         curve.append((ocd, round(cash, 2)))
     return round(cash, 2), curve
 
-def compound_frac20(trades, init=2000, frac=0.20, max_conc=5):
+def compound_frac20(trades, init=2000, frac=0.10, max_conc=10):
     return _run(trades, init, frac, max_conc)[0]
 
-def compound_frac20_curve(trades, init=2000, frac=0.20, max_conc=5):
+def compound_frac20_curve(trades, init=2000, frac=0.10, max_conc=10):
     return _run(trades, init, frac, max_conc)[1]
 
 
-def compound_portfolio(closed, opens, open_pct, init=2000, frac=0.20, max_conc=5):
+def compound_portfolio(closed, opens, open_pct, init=2000, frac=0.10, max_conc=10):
     """把模拟盘按 frac20 复利重灌(与决策视图排名同口径,取代固定$500+现金约束)。
     closed: 已平仓 dict(含 signal_date/close_date/final_pnl_pct); opens: 持仓中 dict(含 signal_date)。
     open_pct(open_dict)->最新未实现%。就地给每个被填充仓位写 position_usd + realized_pnl_usd/unrealized_pnl_usd。

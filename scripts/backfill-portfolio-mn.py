@@ -13,7 +13,7 @@ Plan H-广池(MN) 模拟盘 — 信号源=每日晨报精选(中大盘,流动好
 import json, os, re, glob
 from datetime import datetime, timedelta
 import yfinance as yf
-from portfolio_compound import compound_portfolio   # frac20 复利回填(与决策视图排名同口径)
+from portfolio_compound import compound_portfolio   # frac10 复利回填(与决策视图排名同口径)
 
 MN_DIR = "dashboard/morning-note-history"
 PORTFOLIO_PATH = "data/portfolio_mn.json"
@@ -205,7 +205,7 @@ for signal_date, s in all_signals:
         portfolio["closed_positions"].append(closed)
         print(f"    → Closed {close_reason} @ ${close_price} {final_pnl_pct:+.2f}% net=${realized_pnl:+.2f}")
 
-# frac20 复利回填:每仓=当前净值20%,复利,最多5并发(取代固定$500,与决策视图排名同口径)
+# frac10 复利回填:每仓=当前净值20%,复利,最多5并发(取代固定$500,与决策视图排名同口径)
 def _open_pct(p):
     dp = p.get("daily_prices") or {}
     return list(dp.values())[-1]["pnl_pct"] if dp else 0.0
