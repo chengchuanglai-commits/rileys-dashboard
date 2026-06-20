@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260620114633";
+      var BUILD="20260620120129";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -1253,6 +1253,13 @@
     <!-- ── Row 3.5: Stock Portfolio ── -->
     <!-- ── Row 2.8: A vs B 模拟系统（统一面板）── -->
     <div class="row col-1" id="sec-sim" style="margin-bottom:16px">
+
+        <!-- ══════════ 决策视图 (Decision View) ══════════ -->
+        <section id="decision-view" style="margin:0 0 20px"></section>
+
+        <details id="lab-details" style="margin-top:8px;border:1px solid var(--c-border);border-radius:var(--r-card);background:var(--c-card);box-shadow:var(--shadow);overflow:hidden">
+          <summary style="cursor:pointer;list-style:none;padding:16px 18px;font-size:13px;font-weight:700;color:var(--c-text-2);user-select:none">🔬 实验室（全部研究方案，平时收起）</summary>
+          <div style="padding:0 16px 16px">
         <section id="alloc-engine" style="margin:24px 0;padding:16px;border:1px solid #e5e7eb;border-radius:12px">
           <h3 style="margin:0 0 12px">⚙️ 动态配置引擎 <span id="alloc-phase" style="font-size:12px;color:#6b7280"></span></h3>
           <div style="display:flex;flex-wrap:wrap;gap:24px">
@@ -1316,6 +1323,8 @@
                 </div>
             </div>
         </div>
+          </div>
+        </details>
     </div>
 
     <!-- ── VPN 搭建计划 ── -->
@@ -4789,6 +4798,127 @@ window.addEventListener('scroll', () => {
       })
       .catch(() => { const _el = document.getElementById(c.id); if (_el) _el.textContent = '—'; });
   });
+})();
+</script>
+<script>
+/* ══════════ 决策视图 (Decision View) ══════════
+   起始资金可在此调整 */
+var CAPITAL = 2000;
+(function(){
+  var A = window.ALLOCATION;
+  var root = document.getElementById('decision-view');
+  if(!A || !root) return;
+
+  var POS_KEYS = {momma:'PORTFOLIO_MOMMA', momh:'PORTFOLIO_MOMH', bq:'PORTFOLIO_BQ', bai:'PORTFOLIO_BAI', h:'PORTFOLIO_H', hds:'PORTFOLIO_HDS', mn:'PORTFOLIO_MN', c:'PORTFOLIO_C', b:'PORTFOLIO_B'};
+  function tickersFor(k){
+    var p = window[POS_KEYS[k]];
+    if(!p || !p.open_positions) return [];
+    return p.open_positions.map(function(x){return x.ticker;}).filter(Boolean);
+  }
+  function fmt$(v){ return '$' + Math.round(v).toLocaleString('en-US'); }
+
+  var idxPct = A.index_pct, actPct = A.active_pct;
+  var idxUsd = idxPct * CAPITAL;
+
+  /* shared card shell — matches native .card look */
+  function block(num, title, bodyHtml){
+    return '<section style="background:var(--c-card);border:1px solid var(--c-border);border-radius:var(--r-card);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px">' +
+      '<div style="display:flex;align-items:baseline;gap:8px;margin-bottom:14px">' +
+        '<span style="font-size:18px;font-weight:800;color:var(--c-text-3);font-family:Poppins,sans-serif">'+num+'</span>' +
+        '<span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#888;font-family:Poppins,sans-serif">'+title+'</span>' +
+      '</div>' + bodyHtml + '</section>';
+  }
+
+  /* ───── ① 钱怎么分 (Allocation) ───── */
+  function donutSvg(){
+    var seg=[['指数',idxPct,'#94a3b8'],['主动',actPct,'#6366f1']], off=0, s='<svg width="150" height="150" viewBox="0 0 36 36" style="flex:0 0 auto">';
+    seg.forEach(function(x){var d=x[1]*100; s+='<circle cx="18" cy="18" r="15.9" fill="none" stroke="'+x[2]+'" stroke-width="3.5" stroke-dasharray="'+d+' '+(100-d)+'" stroke-dashoffset="'+(25-off)+'"/>'; off+=d;});
+    s+='<text x="18" y="17" text-anchor="middle" font-size="4.5" font-weight="700" fill="#111">主动'+Math.round(actPct*100)+'%</text>';
+    s+='<text x="18" y="22.5" text-anchor="middle" font-size="3.2" fill="#6b7280">指数'+Math.round(idxPct*100)+'%</text></svg>';
+    return s;
+  }
+  var b1 = '<div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">' +
+      donutSvg() +
+      '<div style="flex:1;min-width:200px">' +
+        '<div style="font-size:30px;font-weight:800;color:var(--c-text);font-family:Poppins,sans-serif;letter-spacing:-.5px;line-height:1.2">指数 '+Math.round(idxPct*100)+'% <span style="color:var(--c-text-3)">·</span> 主动 '+Math.round(actPct*100)+'%</div>' +
+        '<div style="margin-top:10px;font-size:13px;color:var(--c-text-2);line-height:1.6">'+Math.round(actPct*100)+'% 主动是地板——可交易腿还没攒出前向 edge，所以老实待在地板；它们一证明，主动自动往 70% 爬。</div>' +
+      '</div></div>';
+
+  /* ───── ② 我该买什么 (Execution) ───── */
+  var rows = '';
+  rows += '<div style="display:flex;align-items:baseline;gap:10px;padding:12px 14px;background:var(--c-bg);border-radius:var(--r-inner);margin-bottom:8px">' +
+      '<span style="font-size:22px;font-weight:800;color:var(--c-text);font-family:Poppins,sans-serif;white-space:nowrap">'+fmt$(idxUsd)+'</span>' +
+      '<span style="font-size:13px;color:var(--c-text-2);line-height:1.5">指数 → 买 <b style="color:var(--c-text)">SPY（或 VOO）</b>约 '+fmt$(idxUsd)+'</span></div>';
+
+  Object.keys(A.final_allocation).forEach(function(k){
+    var frac = A.final_allocation[k];
+    if(!(frac > 0)) return;
+    var leg = A.legs[k] || {};
+    var usd = frac * CAPITAL;
+    var tk = tickersFor(k);
+    var per = tk.length ? (usd / tk.length) : 0;
+    var tkHtml = tk.length ? tk.join(' / ') : '（暂无持仓）';
+    var perHtml = tk.length ? '，等权各约 '+fmt$(per) : '';
+    rows += '<div style="display:flex;align-items:baseline;gap:10px;padding:12px 14px;background:var(--c-bg);border-radius:var(--r-inner);margin-bottom:8px">' +
+        '<span style="font-size:22px;font-weight:800;color:#6366f1;font-family:Poppins,sans-serif;white-space:nowrap">'+fmt$(usd)+'</span>' +
+        '<span style="font-size:13px;color:var(--c-text-2);line-height:1.5">主动 → <b style="color:var(--c-text)">'+(leg.name||k)+'</b> 持仓 '+tkHtml+perHtml+'</span></div>';
+  });
+  rows += '<div style="margin-top:6px;font-size:11px;color:var(--c-text-3)">用 IBKR Lite（$0 佣金）+ 小数股 + 限价单</div>';
+
+  /* ───── ③ 谁真在赚 (Honest Ranking) ───── */
+  var warn = '';
+  if(Math.abs(A.spy_fwd_ret_pct) < 2){
+    warn = '<div style="display:flex;gap:8px;background:#fffbeb;border:1px solid #fde68a;border-radius:var(--r-inner);padding:11px 14px;margin-bottom:12px;font-size:12px;color:#92400e;line-height:1.6">' +
+      '<span>⚠️</span><span>SPY 本期基本平盘（'+A.spy_fwd_ret_pct+'%）→ 谁领先暂时是噪音，不是 edge。等市场真涨跌一波才有信息量。</span></div>';
+  }
+  var legKeys = Object.keys(A.legs).sort(function(a,b){ return A.legs[b].fwd_ret_pct - A.legs[a].fwd_ret_pct; });
+  var th = 'text-align:left;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--c-text-3);padding:6px 8px;border-bottom:1px solid var(--c-border)';
+  var tbl = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px">' +
+    '<thead><tr>' +
+      '<th style="'+th+'">名称</th>' +
+      '<th style="'+th+';text-align:right">复利收益</th>' +
+      '<th style="'+th+';text-align:right">n 笔</th>' +
+      '<th style="'+th+';text-align:right">信念分</th>' +
+      '<th style="'+th+';text-align:center">可交易</th>' +
+    '</tr></thead><tbody>';
+  legKeys.forEach(function(k){
+    var m = A.legs[k];
+    var dim = m.tradeable ? '' : 'opacity:.45;';
+    var ret = m.fwd_ret_pct;
+    var retCol = ret > 0 ? 'var(--c-pos)' : (ret < 0 ? 'var(--c-neg)' : 'var(--c-text-2)');
+    var td = 'padding:8px;border-bottom:1px solid var(--c-border);'+dim;
+    tbl += '<tr>' +
+      '<td style="'+td+'font-weight:600;color:var(--c-text)">'+m.name+'</td>' +
+      '<td style="'+td+'text-align:right;font-weight:700;color:'+retCol+';font-family:Poppins,sans-serif">'+ret+'%</td>' +
+      '<td style="'+td+'text-align:right;color:var(--c-text-2)">'+m.n+'</td>' +
+      '<td style="'+td+'text-align:right;color:var(--c-text-2)">'+m.conviction+'</td>' +
+      '<td style="'+td+'text-align:center">'+(m.tradeable?'<span style="color:var(--c-pos)">✓</span>':'<span style="color:var(--c-text-3)">—</span>')+'</td>' +
+    '</tr>';
+  });
+  tbl += '</tbody></table></div>';
+  var b3 = warn + tbl;
+
+  /* ───── ④ 离上实盘还差多远 (Phase Tracker) ───── */
+  var p2 = A.phase2 || {};
+  var passedN = (p2.passed_legs || []).length;
+  var evOk = !!p2.evidence_ok && passedN > 0;
+  var mkOk = !!p2.market_ok;
+  function checkRow(ok, label, detail){
+    var icon = ok ? '<span style="color:var(--c-pos);font-size:16px">✓</span>' : '<span style="color:var(--c-neg);font-size:16px">✗</span>';
+    return '<div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--c-border)">' +
+      icon +
+      '<div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--c-text)">'+label+'</div>' +
+      '<div style="font-size:11px;color:var(--c-text-3);margin-top:1px">'+detail+'</div></div></div>';
+  }
+  var b4 = checkRow(evOk, '证据：≥1 腿过毕业 5 关', evOk ? (passedN+' 腿过关') : '0 腿过关') +
+    checkRow(mkOk, '市场：SPY 振幅 ≥10%', (p2.market_amp_pct!=null?p2.market_amp_pct+'%':'—')) +
+    '<div style="margin-top:12px;font-size:12px;color:var(--c-text-2);line-height:1.6">Phase 1 进行中（2 项满足 '+((evOk?1:0)+(mkOk?1:0))+' 项）。两项都亮 → 升级更激进机制。</div>';
+
+  root.innerHTML =
+    block('①', '钱怎么分 · Allocation', b1) +
+    block('②', '我该买什么 · Execution', rows) +
+    block('③', '谁真在赚 · Honest Ranking', b3) +
+    block('④', '离上实盘还差多远 · Phase Tracker', b4);
 })();
 </script>
 <script>
