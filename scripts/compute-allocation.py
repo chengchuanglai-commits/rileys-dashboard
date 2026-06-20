@@ -93,7 +93,10 @@ def main():
         metrics[key] = {"name": name, "n": n, "alpha_pct": round(alpha*100,2),
                         "robust": robust, "conviction": conv, "fwd_ret_pct": round((final/INIT-1)*100,2),
                         "tradeable": key in TRADEABLE}
-    max_conv = max(convictions.values()) if convictions else 0.0
+    # active% 只由"可交易腿(tradeable)"的最强信念驱动 —— 真金只在我们真交易、真证明了的腿上加仓,
+    # 不被 h/c 等不交易的 AI 腿的(平盘)alpha 拉高(避免把 flat-market 噪音当 edge)。非tradeable腿信念仍上 dashboard 供观察。
+    tradeable_convs = [convictions[k] for k in convictions if k in TRADEABLE]
+    max_conv = max(tradeable_convs) if tradeable_convs else 0.0
     active = active_fraction(max_conv)
     weights = active_weights(convictions, priors)
     # 各腿最终占总资金% = active × 主动内部权重(只对 tradeable 归一上钱;其余腿权重展示但置灰)
