@@ -56,3 +56,67 @@ def leg_metrics(port, spy_ret_pct):
     rest = sorted(trades, key=lambda t: t[2])[:-2] if n > 2 else []
     robust_ok = compound_frac20(rest, init=INIT) > INIT if rest else False
     return n, alpha, robust_ok, final
+
+LEGS = {"momma":"MOM-MA·动量+20MA","momh":"MOM-H·动量+H","bq":"B-quant·多因子","bai":"B-AI·多因子+DS",
+        "h":"H·小盘Haiku","hds":"H-DS·小盘DS","mn":"H-广池·晨报","c":"C·B+跳空"}
+TRADEABLE = {"momma", "bq"}   # real-money 起步只投可手动低换手腿
+PHASE2_MKT = 0.10
+
+def _spy_forward_ret():
+    try:
+        s = json.load(open("data/portfolio_spy.json"))["stats"]
+        return (s.get("portfolio_value", INIT) / INIT - 1) * 100
+    except Exception:
+        return 0.0
+
+def _spy_peak_trough():
+    """SPY 前向峰谷振幅(yfinance,近6mo),判 Phase2 市场条件。失败返回0。"""
+    try:
+        import numpy as np, yfinance as yf
+        c = np.asarray(yf.download("SPY", period="6mo", interval="1d", progress=False)["Close"].dropna()).ravel()
+        if len(c) < 5: return 0.0
+        return float((c.max() - c.min()) / c.max())
+    except Exception:
+        return 0.0
+
+def main():
+    spy_ret = _spy_forward_ret()
+    convictions, priors, metrics = {}, {}, {}
+    for key, name in LEGS.items():
+        path = f"data/portfolio_{key}.json"
+        if not os.path.exists(path): continue
+        port = json.load(open(path))
+        n, alpha, robust, final = leg_metrics(port, spy_ret)
+        conv = conviction_score(n, alpha, robust)
+        convictions[key] = conv
+        priors[key] = MOMMA_PRIOR if key == "momma" else 0.0
+        metrics[key] = {"name": name, "n": n, "alpha_pct": round(alpha*100,2),
+                        "robust": robust, "conviction": conv, "fwd_ret_pct": round((final/INIT-1)*100,2),
+                        "tradeable": key in TRADEABLE}
+    max_conv = max(convictions.values()) if convictions else 0.0
+    active = active_fraction(max_conv)
+    weights = active_weights(convictions, priors)
+    # 各腿最终占总资金% = active × 主动内部权重(只对 tradeable 归一上钱;其余腿权重展示但置灰)
+    tw = {k: weights[k] for k in weights if k in TRADEABLE}
+    tsum = sum(tw.values()) or 1.0
+    final_alloc = {k: round(active * (tw[k]/tsum), 4) for k in tw}
+    # Phase2 进度
+    passed_legs = [k for k,m in metrics.items() if m["n"]>=40 and m["alpha_pct"]>0 and m["robust"]]
+    mkt = _spy_peak_trough()
+    phase2 = {"evidence_ok": len(passed_legs)>0, "passed_legs": passed_legs,
+              "market_amp_pct": round(mkt*100,1), "market_ok": mkt>=PHASE2_MKT,
+              "complete": len(passed_legs)>0 and mkt>=PHASE2_MKT}
+    out = {"generated": __import__("datetime").datetime.now().strftime("%Y-%m-%d %H:%M"),
+           "spy_fwd_ret_pct": round(spy_ret,2), "max_conviction": round(max_conv,4),
+           "active_pct": active, "index_pct": round(1-active,4),
+           "legs": metrics, "weights": weights, "final_allocation": final_alloc,
+           "tradeable": sorted(TRADEABLE), "phase2": phase2,
+           "params": {"floor":ACTIVE_FLOOR,"ceiling":ACTIVE_CEILING,"n_full":N_FULL,"alpha_target":ALPHA_TARGET}}
+    json.dump(out, open("data/allocation.json","w"), ensure_ascii=False, indent=2)
+    with open("dashboard/allocation.js","w",encoding="utf-8") as f:
+        f.write(f"window.ALLOCATION = {json.dumps(out, ensure_ascii=False)};\n")
+    print(f"主动{active*100:.0f}% / 指数{(1-active)*100:.0f}% · 最强信念{max_conv:.2f} · Phase2 {'✅' if phase2['complete'] else '进行中'}")
+    print("  tradeable 配置:", {k: f"{v*100:.0f}%" for k,v in final_alloc.items()})
+
+if __name__ == "__main__":
+    main()
