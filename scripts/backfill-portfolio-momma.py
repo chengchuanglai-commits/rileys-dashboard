@@ -12,7 +12,7 @@ import os, json, glob
 from datetime import datetime
 import numpy as np
 import yfinance as yf
-from cash_constraint import apply_cash_constraint   # 修隐性杠杆:最多同时持 INIT/PER 个仓
+from portfolio_compound import compound_portfolio   # frac20 复利回填(与决策视图排名同口径)
 
 HIST_DIR = "data/momentum-history"
 PORTFOLIO_PATH = "data/portfolio_momma.json"
@@ -132,9 +132,12 @@ def _finalize(held, closed, commission_total, posmap, ohlc, cal, today):
         d["_unreal"] = round(pos["shares"] * (cur - pos["entry_price"]), 2)
         d["actual_position_usd"] = round(pos["shares"] * pos["entry_price"], 2)
         opens.append(d)
-    # 现金约束:修掉隐性杠杆(最多同时持 INIT/PER 个仓,超出的信号跳过)
-    closed, opens, skipped = apply_cash_constraint(closed, opens, INIT, PER_POSITION_USD)
-    unreal = round(sum(o.pop("_unreal", 0) for o in opens), 2)
+    # frac20 复利回填(取代固定$500,与决策视图排名同口径)
+    def _open_pct(o):
+        base = o.get("actual_position_usd") or 0
+        return (o.get("_unreal", 0) / base * 100) if base else 0.0
+    closed, opens, _pv, _real, unreal, skipped = compound_portfolio(closed, opens, _open_pct, INIT)
+    for o in opens: o.pop("_unreal", None)
     wins = [c for c in closed if c["realized_pnl_usd"] > 0]
     total_realized = round(sum(c["realized_pnl_usd"] for c in closed), 2)
     comm = round((len(closed)*2 + len(opens)) * COMMISSION, 2)

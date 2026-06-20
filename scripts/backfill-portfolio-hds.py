@@ -7,7 +7,7 @@ Plan H-DS 历史回溯模拟 — 历史回测最优参数（TP15/SL2/2日/gap1.0
 import json, os
 from datetime import datetime, timedelta
 import yfinance as yf
-from cash_constraint import apply_cash_constraint   # 修隐性杠杆:最多同时持 INIT/PER 个仓
+from portfolio_compound import compound_portfolio   # frac20 复利回填(与决策视图排名同口径)
 
 SIGNALS_DIR = "dashboard/trading-signals-history"
 DEEPSEEK_DIR = "dashboard/trading-signals-history/deepseek"   # 影子文件独立子目录,避免污染主链路日期解析
@@ -191,20 +191,18 @@ for signal_date, s in all_signals:
         portfolio["closed_positions"].append(closed)
         print(f"    → Closed {close_reason} @ ${close_price} {final_pnl_pct:+.2f}% gross=${gross_pnl:+.2f} comm=-${entry_comm+exit_comm:.2f} net=${realized_pnl:+.2f}")
 
-# 现金约束:修掉隐性杠杆(最多同时持 STARTING_CAPITAL/PER 个仓,超出的信号跳过)
-fc, fo, skipped_no_cash = apply_cash_constraint(
-    portfolio["closed_positions"], portfolio["open_positions"], STARTING_CAPITAL, PER_POSITION_USD)
+# frac20 复利回填:每仓=当前净值20%,复利,最多5并发(取代固定$500,与决策视图排名同口径)
+def _open_pct(p):
+    dp = p.get("daily_prices") or {}
+    return list(dp.values())[-1]["pnl_pct"] if dp else 0.0
+fc, fo, _pv, total_realized, open_unrealized, skipped_no_cash = compound_portfolio(
+    portfolio["closed_positions"], portfolio["open_positions"], _open_pct, STARTING_CAPITAL)
 portfolio["closed_positions"] = fc
 portfolio["open_positions"] = fo
 
 all_closed = portfolio["closed_positions"]
 wins = [p for p in all_closed if p.get("realized_pnl_usd", 0) > 0]
-total_realized = sum(p.get("realized_pnl_usd", 0) for p in all_closed)
 total_commission = sum(p.get("commission_total", 0) for p in all_closed)
-open_unrealized = sum(
-    p["actual_position_usd"] * list(p["daily_prices"].values())[-1]["pnl_pct"] / 100 - p["entry_commission"]
-    for p in portfolio["open_positions"] if p["daily_prices"]
-)
 
 portfolio["stats"] = {
     "total_trades": len(all_closed),

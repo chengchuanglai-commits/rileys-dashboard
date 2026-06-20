@@ -3,6 +3,30 @@ window.PORTFOLIO_MOMMA = {
   "capital_usd": 2000,
   "open_positions": [
     {
+      "ticker": "STRL",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 861.88,
+      "shares": 0.5801,
+      "stop_loss": 792.93,
+      "score": 74.6,
+      "actual_position_usd": 499.98,
+      "position_usd": 400.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 537.37,
+      "shares": 0.9305,
+      "stop_loss": 494.38,
+      "score": 74.3,
+      "actual_position_usd": 500.02,
+      "position_usd": 400.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
       "ticker": "STM",
       "action": "BUY",
       "signal_date": "2026-06-18",
@@ -10,17 +34,21 @@ window.PORTFOLIO_MOMMA = {
       "shares": 6.3784,
       "stop_loss": 72.12,
       "score": 78.7,
-      "actual_position_usd": 500.0
+      "actual_position_usd": 500.0,
+      "position_usd": 400.0,
+      "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "HUT",
+      "ticker": "VICR",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 124.44,
-      "shares": 4.018,
-      "stop_loss": 114.48,
-      "score": 79.1,
-      "actual_position_usd": 500.0
+      "entry_price": 331.37,
+      "shares": 1.5089,
+      "stop_loss": 304.86,
+      "score": 77.0,
+      "actual_position_usd": 500.0,
+      "position_usd": 400.0,
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "COHR",
@@ -30,17 +58,9 @@ window.PORTFOLIO_MOMMA = {
       "shares": 1.2835,
       "stop_loss": 358.4,
       "score": 75.9,
-      "actual_position_usd": 500.01
-    },
-    {
-      "ticker": "STRL",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 861.88,
-      "shares": 0.5801,
-      "stop_loss": 792.93,
-      "score": 74.6,
-      "actual_position_usd": 499.98
+      "actual_position_usd": 500.01,
+      "position_usd": 400.0,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [],
@@ -52,8 +72,8 @@ window.PORTFOLIO_MOMMA = {
     "total_realized_pnl_usd": 0,
     "open_unrealized_pnl_usd": 0.0,
     "portfolio_value": 2000.0,
-    "total_commission_usd": 4.0,
-    "skipped_no_cash": 6,
+    "total_commission_usd": 5.0,
+    "skipped_no_cash": 5,
     "updated_at": "2026-06-20"
   }
 };
