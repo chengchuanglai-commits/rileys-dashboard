@@ -15,8 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 1 }
-      - name: 发提醒
+      - name: paper设置提醒(完成则自跳过)
         continue-on-error: true
         env:
           NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: python scripts/ibkr-reminder.py
+      - name: 小数股权限提醒(完成则自跳过)
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: python scripts/fractional-permission-reminder.py
