@@ -1,0 +1,27 @@
+name: 心跳看门狗
+
+# 云端查 Mac 心跳新鲜度,太旧=电脑关机/掉线→飞书报警(云端一直在线,Mac关了也发得出)。
+# 重点在交易窗口前查:不在线就提前喊你开机。
+on:
+  schedule:
+    - cron: '40 12 * * 1-5'   # 北京20:40 = 开盘前(21:00自检/21:30下单)之前
+    - cron: '40 19 * * 1-5'   # 北京次日03:40 = 收盘batch(04:00)之前
+    - cron: '0 6 * * *'        # 北京14:00 白天定期查一次
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - name: 查心跳
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+          STALE_MIN: '40'
+          BEFORE_BATCH: ${{ github.event.schedule == '40 12 * * 1-5' && '今晚的开盘交易(21:30)' || (github.event.schedule == '40 19 * * 1-5' && '今晚的收盘出场(04:00)' || '') }}
+        run: python scripts/heartbeat-watchdog.py
