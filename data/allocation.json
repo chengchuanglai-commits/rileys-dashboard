@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21 00:33",
+  "generated": "2026-06-22 11:45",
   "spy_fwd_ret_pct": -0.26,
   "max_conviction": 0.0,
   "active_pct": 0.4,
@@ -70,23 +70,23 @@
     },
     "c": {
       "name": "C·B+跳空",
-      "n": 13,
-      "alpha_pct": 7.4,
+      "n": 14,
+      "alpha_pct": 6.98,
       "robust": true,
-      "conviction": 0.2406,
-      "fwd_ret_pct": 7.15,
+      "conviction": 0.2444,
+      "fwd_ret_pct": 6.73,
       "tradeable": false
     }
   },
   "weights": {
-    "momma": 0.1054,
+    "momma": 0.105,
     "momh": 0.0,
     "bq": 0.0,
     "bai": 0.0,
-    "h": 0.2165,
+    "h": 0.2156,
     "hds": 0.0,
-    "mn": 0.4245,
-    "c": 0.2536
+    "mn": 0.4228,
+    "c": 0.2566
   },
   "final_allocation": {
     "momma": 0.4,

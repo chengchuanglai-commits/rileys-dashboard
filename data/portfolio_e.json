@@ -24,6 +24,13 @@
           "low": 16.18,
           "close": 16.28,
           "pnl_pct": -0.25
+        },
+        "2026-06-18": {
+          "open": 16.47,
+          "high": 16.61,
+          "low": 15.73,
+          "close": 16.21,
+          "pnl_pct": 0.18
         }
       },
       "gap_checked": true,
@@ -52,6 +59,13 @@
           "low": 36.26,
           "close": 36.38,
           "pnl_pct": 1.78
+        },
+        "2026-06-18": {
+          "open": 36.57,
+          "high": 37.11,
+          "low": 36.05,
+          "close": 37.06,
+          "pnl_pct": -0.05
         }
       },
       "gap_checked": true,
@@ -72,7 +86,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-23",
       "regime": "neutral",
-      "vix": 18.44,
+      "vix": 16.4,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -91,7 +105,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-23",
       "regime": "neutral",
-      "vix": 18.44,
+      "vix": 16.4,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -110,7 +124,64 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-24",
       "regime": "neutral",
-      "vix": 16.78,
+      "vix": 16.4,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 16.08,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 498.48,
+      "entry_commission": 1.0,
+      "take_profit": 14.47,
+      "stop_loss": 16.56,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-25",
+      "regime": "neutral",
+      "vix": 17.37,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 125.11,
+      "stop_loss": 143.18,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-25",
+      "regime": "neutral",
+      "vix": 17.37,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 32.66,
+      "stop_loss": 37.38,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-25",
+      "regime": "neutral",
+      "vix": 17.37,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -650,12 +721,12 @@
     "win_trades": 8,
     "win_rate": 61.5,
     "total_realized_pnl_usd": 172.77,
-    "open_unrealized_pnl_usd": 5.35,
-    "portfolio_value": 2178.12,
+    "open_unrealized_pnl_usd": -1.36,
+    "portfolio_value": 2171.41,
     "total_commission_usd": 26.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 4,
-    "updated_at": "2026-06-19"
+    "updated_at": "2026-06-22"
   }
 }
