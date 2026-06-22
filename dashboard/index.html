@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260622142105";
+      var BUILD="20260622142507";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -4986,30 +4986,30 @@ var CAPITAL = 2000;
       '<thead><tr>' +
         '<th style="'+th+'">代码 Sym</th>' +
         '<th style="'+th+';text-align:right">股数 Shares</th>' +
-        '<th style="'+th+';text-align:right">真实成交价 Avg Fill</th>' +
-        '<th style="'+th+';text-align:right">模拟价 Sim</th>' +
-        '<th style="'+th+';text-align:right">滑点 Slippage</th>' +
+        '<th style="'+th+';text-align:right">成交价 Fill</th>' +
+        '<th style="'+th+';text-align:right">当日现价 Today</th>' +
+        '<th style="'+th+';text-align:right">纯滑点 Slippage</th>' +
+        '<th style="'+th+';text-align:right">vs模拟(延迟) Delay</th>' +
       '</tr></thead><tbody>';
     P.positions.forEach(function(x){
       var td = 'padding:8px;border-bottom:1px solid var(--c-border)';
-      var sl = x.slippage_pct;
+      var sl = (x.slippage_pct!=null) ? x.slippage_pct : null;   // 纯执行滑点
+      var dl = (x.delay_gap_pct!=null) ? x.delay_gap_pct : null; // vs模拟入场价(含延迟涨幅)
       var slHtml, slCol;
-      if(sl==null){
-        slHtml = '—'; slCol = 'var(--c-text-3)';
-      } else {
-        slCol = (sl <= 0) ? 'var(--c-pos)' : (sl > 0.3 ? 'var(--c-neg)' : '#b45309');
-        slHtml = (sl>0?'+':'') + sl + '%';
-      }
+      if(sl==null){ slHtml='—'; slCol='var(--c-text-3)'; }
+      else { slCol = (sl <= 0.3 && sl >= -0.3) ? 'var(--c-pos)' : (Math.abs(sl) > 1 ? 'var(--c-neg)' : '#b45309'); slHtml = (sl>0?'+':'')+sl+'%'; }
+      var dlHtml = (dl==null)?'—':((dl>0?'+':'')+dl+'%');
       tbl += '<tr>' +
         '<td style="'+td+';font-weight:600;color:var(--c-text)">'+esc(x.sym)+'</td>' +
         '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+esc(x.shares)+'</td>' +
         '<td style="'+td+';text-align:right;color:var(--c-text);font-family:Poppins,sans-serif">'+(x.avg_fill!=null?'$'+x.avg_fill:'—')+'</td>' +
-        '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+(x.sim_price!=null?'$'+x.sim_price:'—')+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+(x.today_price!=null?'$'+(Math.round(x.today_price*100)/100):'—')+'</td>' +
         '<td style="'+td+';text-align:right;font-weight:700;color:'+slCol+';font-family:Poppins,sans-serif">'+slHtml+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text-3);font-family:Poppins,sans-serif">'+dlHtml+'</td>' +
       '</tr>';
     });
     tbl += '</tbody></table></div>';
-    var cap = '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3);line-height:1.6">滑点 (slippage) = 真实成交价 vs 模拟假设价；贴近 0 = 模拟可信，差很多 = edge 判断要打折。</div>';
+    var cap = '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3);line-height:1.6">纯滑点 (slippage) = 真实成交价 vs 下单当日现价 = 真·执行成本(应≈0.x%)。vs模拟(延迟) = 真实成交价 vs 模拟入场价,含"信号出到真进场"几天的涨幅(不是滑点),太大说明进场拖太久、买在高位。</div>';
     body = acctLine() + tbl + cap +
       (P.note ? '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3)">'+esc(P.note)+'</div>' : '');
   }
