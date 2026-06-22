@@ -9,6 +9,13 @@ H=$(date +%H); M=$(date +%M); HM=$((10#$H*60 + 10#$M))
 if ! { [ $HM -ge 1290 ] || [ $HM -le 245 ]; }; then exit 0; fi
 # 采集(只读,LIVE无关——paper_status不下单)
 /usr/bin/python3 -m scripts.ibkr.paper_status >> data/exec-log/paper-refresh.log 2>&1
+# 连不上Gateway(connected=false)→不push,避免空数据覆盖好数据
+if ! grep -q '"connected": true' data/paper-status.json 2>/dev/null; then
+  echo "[$(date '+%F %T')] 网关未连,跳过push(不覆盖好数据)" >> data/exec-log/paper-refresh.log
+  # 把刚采集的坏文件还原(git checkout 丢弃未提交改动)
+  git checkout -- dashboard/paper-status.js data/paper-status.json 2>/dev/null
+  exit 0
+fi
 # 有变化才 push(避免空提交)
 if ! git diff --quiet dashboard/paper-status.js data/paper-status.json 2>/dev/null; then
   git add dashboard/paper-status.js data/paper-status.json 2>/dev/null
