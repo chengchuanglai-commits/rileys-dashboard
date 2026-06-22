@@ -1,44 +1,7 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "MFIN",
-      "name": "MFIN",
-      "action": "SELL",
-      "signal_date": "2026-06-15",
-      "entry_price": 9.81,
-      "allocated_usd": 500,
-      "shares": 50,
-      "actual_position_usd": 490.5,
-      "entry_commission": 1.0,
-      "take_profit": 9.03,
-      "stop_loss": 10.2,
-      "max_hold_date": "2026-06-22",
-      "daily_prices": {
-        "2026-06-16": {
-          "open": 9.9,
-          "high": 10.09,
-          "low": 9.82,
-          "close": 9.87,
-          "pnl_pct": -0.61
-        },
-        "2026-06-17": {
-          "open": 9.89,
-          "high": 9.93,
-          "low": 9.47,
-          "close": 9.52,
-          "pnl_pct": 2.96
-        },
-        "2026-06-18": {
-          "open": 9.59,
-          "high": 9.69,
-          "low": 9.38,
-          "close": 9.53,
-          "pnl_pct": 2.85
-        }
-      }
-    },
     {
       "ticker": "AMRX",
       "name": "AMRX",
@@ -66,6 +29,10 @@ window.PORTFOLIO_B = {
           "low": 15.73,
           "close": 16.21,
           "pnl_pct": 0.18
+        },
+        "2026-06-22": {
+          "close": 16.25,
+          "pnl_pct": -0.06
         }
       }
     },
@@ -96,6 +63,10 @@ window.PORTFOLIO_B = {
           "low": 36.05,
           "close": 37.06,
           "pnl_pct": -0.05
+        },
+        "2026-06-22": {
+          "close": 37.53,
+          "pnl_pct": -1.32
         }
       }
     },
@@ -112,7 +83,12 @@ window.PORTFOLIO_B = {
       "take_profit": 14.57,
       "stop_loss": 16.47,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-22": {
+          "close": 15.91,
+          "pnl_pct": -0.44
+        }
+      }
     },
     {
       "ticker": "SBFG",
@@ -127,7 +103,12 @@ window.PORTFOLIO_B = {
       "take_profit": 20.71,
       "stop_loss": 23.41,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-22": {
+          "close": 22.95,
+          "pnl_pct": -1.95
+        }
+      }
     },
     {
       "ticker": "SNEX",
@@ -142,7 +123,12 @@ window.PORTFOLIO_B = {
       "take_profit": 150.13,
       "stop_loss": 133.45,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-22": {
+          "close": 139.77,
+          "pnl_pct": 0.55
+        }
+      }
     },
     {
       "ticker": "WSBC",
@@ -157,7 +143,12 @@ window.PORTFOLIO_B = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-22": {
+          "close": 36.67,
+          "pnl_pct": -1.05
+        }
+      }
     },
     {
       "ticker": "SWBI",
@@ -172,7 +163,12 @@ window.PORTFOLIO_B = {
       "take_profit": 14.79,
       "stop_loss": 16.72,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-22": {
+          "close": 16.39,
+          "pnl_pct": -1.93
+        }
+      }
     },
     {
       "ticker": "SNEX",
@@ -187,7 +183,12 @@ window.PORTFOLIO_B = {
       "take_profit": 127.89,
       "stop_loss": 144.57,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-22": {
+          "close": 139.77,
+          "pnl_pct": -0.55
+        }
+      }
     },
     {
       "ticker": "WSBC",
@@ -202,7 +203,12 @@ window.PORTFOLIO_B = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-22": {
+          "close": 36.67,
+          "pnl_pct": -1.05
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -866,6 +872,57 @@ window.PORTFOLIO_B = {
       "realized_pnl_usd": 25.78
     },
     {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "take_profit": 9.03,
+      "stop_loss": 10.2,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": -0.61
+        },
+        "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
+          "close": 9.52,
+          "pnl_pct": 2.96
+        },
+        "2026-06-18": {
+          "open": 9.59,
+          "high": 9.69,
+          "low": 9.38,
+          "close": 9.53,
+          "pnl_pct": 2.85
+        },
+        "2026-06-22": {
+          "open": 9.53,
+          "high": 9.62,
+          "low": 9.4,
+          "close": 9.45,
+          "pnl_pct": 3.67
+        }
+      },
+      "close_date": "2026-06-22",
+      "close_price": 9.45,
+      "final_pnl_pct": 3.67,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.0
+    },
+    {
       "ticker": "TWST",
       "name": "TWST",
       "action": "SELL",
@@ -898,14 +955,12 @@ window.PORTFOLIO_B = {
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 19,
-    "win_trades": 11,
-    "win_rate": 57.9,
-    "total_realized_pnl_usd": 156.26,
-    "open_unrealized_pnl_usd": 11.62,
-    "portfolio_value": 2167.88,
-    "total_commission_usd": 38.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-22"
+    "total_trades": 20,
+    "win_trades": 12,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 172.26,
+    "open_unrealized_pnl_usd": -39.0,
+    "portfolio_value": 2133.26,
+    "updated_at": "2026-06-23"
   }
 };

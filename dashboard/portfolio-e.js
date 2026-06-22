@@ -72,25 +72,6 @@ window.PORTFOLIO_E = {
       "day1_open": 37.03
     },
     {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 491.04,
-      "entry_commission": 1.0,
-      "take_profit": 14.26,
-      "stop_loss": 16.32,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-23",
-      "regime": "neutral",
-      "vix": 16.4,
-      "daily_prices": {},
-      "gap_checked": true
-    },
-    {
       "ticker": "SBFG",
       "name": "SBFG",
       "action": "SELL",
@@ -106,8 +87,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-23",
       "regime": "neutral",
       "vix": 16.4,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 23.01,
+          "high": 23.01,
+          "low": 22.54,
+          "close": 22.95,
+          "pnl_pct": -1.95
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 23.01
     },
     {
       "ticker": "WSBC",
@@ -125,8 +115,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-24",
       "regime": "neutral",
       "vix": 16.4,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 36.1,
+          "high": 36.85,
+          "low": 36.1,
+          "close": 36.67,
+          "pnl_pct": -1.05
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 36.1
     },
     {
       "ticker": "SWBI",
@@ -143,7 +142,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-25",
       "regime": "neutral",
-      "vix": 17.37,
+      "vix": 17.29,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -162,7 +161,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-25",
       "regime": "neutral",
-      "vix": 17.37,
+      "vix": 17.29,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -181,7 +180,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-25",
       "regime": "neutral",
-      "vix": 17.37,
+      "vix": 17.29,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -713,17 +712,50 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 11.98
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 491.04,
+      "entry_commission": 1.0,
+      "take_profit": 14.26,
+      "stop_loss": 16.32,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-23",
+      "regime": "neutral",
+      "vix": 16.4,
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 16.39,
+          "high": 16.4,
+          "low": 15.91,
+          "close": 15.91,
+          "pnl_pct": -3.03
+        }
+      },
+      "close_date": "2026-06-22",
+      "close_price": 16.32,
+      "final_pnl_pct": -3.03,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.88
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 13,
+    "total_trades": 14,
     "win_trades": 8,
-    "win_rate": 61.5,
-    "total_realized_pnl_usd": 172.77,
-    "open_unrealized_pnl_usd": -1.36,
-    "portfolio_value": 2171.41,
-    "total_commission_usd": 26.0,
+    "win_rate": 57.1,
+    "total_realized_pnl_usd": 155.89,
+    "open_unrealized_pnl_usd": -17.97,
+    "portfolio_value": 2137.92,
+    "total_commission_usd": 28.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 4,

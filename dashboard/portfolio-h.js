@@ -3,40 +3,6 @@ window.PORTFOLIO_H = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "PBHC",
-      "name": "PBHC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.84,
-      "allocated_usd": 500,
-      "shares": 31.5657,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 13.46,
-      "stop_loss": 16.16,
-      "max_hold_date": "2026-06-22",
-      "daily_prices": {},
-      "position_usd": 208.62,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "SBFG",
-      "name": "SBFG",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 22.51,
-      "allocated_usd": 500,
-      "shares": 22.2124,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 19.13,
-      "stop_loss": 22.96,
-      "max_hold_date": "2026-06-22",
-      "daily_prices": {},
-      "position_usd": 208.62,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "SNEX",
       "name": "SNEX",
       "action": "BUY",
@@ -49,9 +15,17 @@ window.PORTFOLIO_H = {
       "take_profit": 159.86,
       "stop_loss": 136.23,
       "max_hold_date": "2026-06-23",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 140.62,
+          "high": 141.96,
+          "low": 137.61,
+          "close": 139.77,
+          "pnl_pct": 0.55
+        }
+      },
       "position_usd": 208.62,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 1.15
     },
     {
       "ticker": "WSBC",
@@ -66,9 +40,17 @@ window.PORTFOLIO_H = {
       "take_profit": 30.85,
       "stop_loss": 37.02,
       "max_hold_date": "2026-06-23",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 36.1,
+          "high": 36.85,
+          "low": 36.1,
+          "close": 36.67,
+          "pnl_pct": -1.05
+        }
+      },
       "position_usd": 208.62,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -2.19
     },
     {
       "ticker": "SWBI",
@@ -84,7 +66,7 @@ window.PORTFOLIO_H = {
       "stop_loss": 16.4,
       "max_hold_date": "2026-06-24",
       "daily_prices": {},
-      "position_usd": 208.62,
+      "position_usd": 207.78,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -101,7 +83,7 @@ window.PORTFOLIO_H = {
       "stop_loss": 141.79,
       "max_hold_date": "2026-06-24",
       "daily_prices": {},
-      "position_usd": 208.62,
+      "position_usd": 207.78,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -118,7 +100,7 @@ window.PORTFOLIO_H = {
       "stop_loss": 37.02,
       "max_hold_date": "2026-06-24",
       "daily_prices": {},
-      "position_usd": 208.62,
+      "position_usd": 207.78,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -757,17 +739,79 @@ window.PORTFOLIO_H = {
       "commission_total": 2.0,
       "realized_pnl_usd": -0.1,
       "position_usd": 209.04
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.84,
+      "allocated_usd": 500,
+      "shares": 31.5657,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 13.46,
+      "stop_loss": 16.16,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 16.39,
+          "high": 16.4,
+          "low": 15.91,
+          "close": 15.91,
+          "pnl_pct": -2.02
+        }
+      },
+      "close_date": "2026-06-22",
+      "close_price": 16.16,
+      "final_pnl_pct": -2.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.21,
+      "position_usd": 208.62
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 22.51,
+      "allocated_usd": 500,
+      "shares": 22.2124,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 19.13,
+      "stop_loss": 22.96,
+      "max_hold_date": "2026-06-22",
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 23.01,
+          "high": 23.01,
+          "low": 22.54,
+          "close": 22.95,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-22",
+      "close_price": 22.96,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.17,
+      "position_usd": 208.62
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 18,
+    "total_trades": 20,
     "win_trades": 7,
-    "win_rate": 38.9,
-    "total_realized_pnl_usd": 86.15,
-    "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2086.15,
-    "total_commission_usd": 36.0,
+    "win_rate": 35.0,
+    "total_realized_pnl_usd": 77.77,
+    "open_unrealized_pnl_usd": -1.04,
+    "portfolio_value": 2076.73,
+    "total_commission_usd": 40.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
