@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260622114558";
+      var BUILD="20260622120722";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -956,6 +956,7 @@
       document.write('<scr'+'ipt src="historical-backtest.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="signal-edge.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="allocation.js?v='+v+'"><\/scr'+'ipt>');
+      document.write('<scr'+'ipt src="paper-status.js?v='+v+'"><\/scr'+'ipt>');
       document.write('<scr'+'ipt src="compounded-curves.js?v='+v+'"><\/scr'+'ipt>');
     })();
     </script>
@@ -4922,6 +4923,98 @@ var CAPITAL = 2000;
     block('②', '我该买什么 · Execution', rows) +
     block('③', '谁真在赚 · Honest Ranking', b3) +
     block('④', '离上实盘还差多远 · Phase Tracker', b4);
+})();
+</script>
+<script>
+/* ══════════ 💼 Paper 执行实况 (Paper Execution) ══════════
+   把决策引擎(brain)和真实下单(hand)对上账：模拟假设 vs paper 真实成交 */
+(function(){
+  var root = document.getElementById('decision-view');
+  if(!root) return;
+  var P = window.PAPER_STATUS;
+
+  /* 卡片外壳——与原生 .card / block() 一致 */
+  function card(bodyHtml){
+    return '<section id="paper-exec-card" style="background:var(--c-card);border:1px solid var(--c-border);border-radius:var(--r-card);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px">' +
+      '<div style="display:flex;align-items:baseline;gap:8px;margin-bottom:14px;flex-wrap:wrap">' +
+        '<span style="font-size:18px;font-weight:800;color:var(--c-text-3);font-family:Poppins,sans-serif">💼</span>' +
+        '<span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#888;font-family:Poppins,sans-serif">Paper 执行实况 · Paper Execution</span>' +
+      '</div>' + bodyHtml + '</section>';
+  }
+  function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function fmt$(v){ return (v==null) ? '—' : '$' + Math.round(v).toLocaleString('en-US'); }
+  function muted(txt){
+    return '<div style="display:flex;gap:8px;background:var(--c-bg);border:1px solid var(--c-border);border-radius:var(--r-inner);padding:11px 14px;font-size:12px;color:var(--c-text-2);line-height:1.6">'+txt+'</div>';
+  }
+  /* 实盘/干跑徽章 */
+  function badge(){
+    if(P && P.live){
+      return '<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;border-radius:999px;padding:3px 10px">🔴 实盘下单 LIVE</span>';
+    }
+    return '<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#92400e;background:#fffbeb;border:1px solid #fde68a;border-radius:999px;padding:3px 10px">🟡 干跑 DRY-RUN</span>';
+  }
+  /* 账户摘要行：账户 / 净值 NAV / 现金 Cash / 挂单数 */
+  function acctLine(){
+    function cell(label, val){
+      return '<div style="flex:1;min-width:90px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--c-text-3)">'+label+'</div>' +
+        '<div style="font-size:18px;font-weight:800;color:var(--c-text);font-family:Poppins,sans-serif;letter-spacing:-.3px">'+val+'</div></div>';
+    }
+    return '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">'+badge()+
+        (P.date?'<span style="font-size:11px;color:var(--c-text-3)">'+esc(P.date)+'</span>':'')+'</div>' +
+      '<div style="display:flex;gap:16px;flex-wrap:wrap;padding:12px 14px;background:var(--c-bg);border-radius:var(--r-inner);margin-bottom:10px">' +
+        cell('账户 Account', esc(P.account!=null?P.account:'paper')) +
+        cell('净值 NAV', fmt$(P.nav)) +
+        cell('现金 Cash', fmt$(P.cash)) +
+        cell('挂单 Open Orders', (P.open_orders!=null?P.open_orders:0)) +
+      '</div>';
+  }
+
+  var body;
+
+  if(!P || !P.connected){
+    /* 状态一：网关没连上(常见) */
+    body = muted('<span>⚪</span><span>未连接 IBKR Gateway · IBKR 网关未连接。' +
+      (P && P.note ? '<br><span style="color:var(--c-text-3)">'+esc(P.note)+'</span>' : '') + '</span>');
+  } else if(!P.positions || !P.positions.length){
+    /* 状态二：连上了但还没真实持仓(LIVE=False 干跑 / 还没下单) */
+    body = acctLine() +
+      muted('<span>🟡</span><span>'+esc(P.note || 'LIVE=False 干跑中，等首次真实下单后显示持仓与滑点(slippage)。')+'</span>');
+  } else {
+    /* 状态三：有真实持仓——展示成交价 vs 模拟价 + 滑点 */
+    var th = 'text-align:left;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--c-text-3);padding:6px 8px;border-bottom:1px solid var(--c-border)';
+    var tbl = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px">' +
+      '<thead><tr>' +
+        '<th style="'+th+'">代码 Sym</th>' +
+        '<th style="'+th+';text-align:right">股数 Shares</th>' +
+        '<th style="'+th+';text-align:right">真实成交价 Avg Fill</th>' +
+        '<th style="'+th+';text-align:right">模拟价 Sim</th>' +
+        '<th style="'+th+';text-align:right">滑点 Slippage</th>' +
+      '</tr></thead><tbody>';
+    P.positions.forEach(function(x){
+      var td = 'padding:8px;border-bottom:1px solid var(--c-border)';
+      var sl = x.slippage_pct;
+      var slHtml, slCol;
+      if(sl==null){
+        slHtml = '—'; slCol = 'var(--c-text-3)';
+      } else {
+        slCol = (sl <= 0) ? 'var(--c-pos)' : (sl > 0.3 ? 'var(--c-neg)' : '#b45309');
+        slHtml = (sl>0?'+':'') + sl + '%';
+      }
+      tbl += '<tr>' +
+        '<td style="'+td+';font-weight:600;color:var(--c-text)">'+esc(x.sym)+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+esc(x.shares)+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text);font-family:Poppins,sans-serif">'+(x.avg_fill!=null?'$'+x.avg_fill:'—')+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+(x.sim_price!=null?'$'+x.sim_price:'—')+'</td>' +
+        '<td style="'+td+';text-align:right;font-weight:700;color:'+slCol+';font-family:Poppins,sans-serif">'+slHtml+'</td>' +
+      '</tr>';
+    });
+    tbl += '</tbody></table></div>';
+    var cap = '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3);line-height:1.6">滑点 (slippage) = 真实成交价 vs 模拟假设价；贴近 0 = 模拟可信，差很多 = edge 判断要打折。</div>';
+    body = acctLine() + tbl + cap +
+      (P.note ? '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3)">'+esc(P.note)+'</div>' : '');
+  }
+
+  root.insertAdjacentHTML('beforeend', card(body));
 })();
 </script>
 <script>
