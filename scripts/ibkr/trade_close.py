@@ -1,10 +1,24 @@
-"""收盘batch:MOM-MA持仓收盘<20MA→挂次日卖单。LIVE=False只算不下。落exec-log。"""
+"""收盘batch:**仅动量腿(MOM-MA)持仓**收盘<20MA→挂次日卖单。指数核心(SPY)豁免(长期持有,不走20MA)。
+LIVE=False只算不下。落exec-log。"""
 import os, json, time
 import numpy as np
 from scripts.ibkr.client import connect, health
 from scripts.ibkr.orders import place_limit
 from scripts.ibkr.config import LIVE
 from scripts.ibkr.notify import send
+
+INDEX_CORE = {"SPY", "VOO", "VTI"}   # 指数核心:长期持有,豁免20MA出场
+
+def _momentum_syms():
+    """哪些持仓属于动量腿(MOM-MA)——只有这些走20MA出场。读 momma 持仓。"""
+    syms = set()
+    try:
+        d = json.load(open("data/portfolio_momma.json"))
+        for p in d.get("open_positions", []):
+            if p.get("ticker"): syms.add(p["ticker"])
+    except Exception:
+        pass
+    return syms
 
 def _ma20_break(sym):
     """返回 (破位?, 收盘, ma20)。yfinance 近2月日线。"""
@@ -22,10 +36,14 @@ def run():
     if not ib:
         send("⚠️ 收盘batch:网关连不上,中止\n（交易信号系统）"); return
     h = health(ib)
+    mom_syms = _momentum_syms()
     exits = []
     for p in ib.positions(h["account"]):
         if p.position <= 0: continue
         sym = p.contract.symbol
+        # 指数核心豁免;只有动量腿的票才走20MA出场(指数长持/B-quant另有再平衡逻辑)
+        if sym in INDEX_CORE or sym not in mom_syms:
+            continue
         brk, close, ma20 = _ma20_break(sym)
         if brk:
             exits.append({"sym": sym, "qty": p.position, "close": close, "ma20": ma20})
