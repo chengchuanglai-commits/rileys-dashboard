@@ -5,7 +5,14 @@
   <key>ProgramArguments</key><array>
     <string>/bin/zsh</string><string>/Users/apple/claude-whatsapp/launchd/heartbeat.sh</string>
   </array>
-  <key>StartInterval</key><integer>900</integer>
+  <!-- 用明确时刻(每15分:0/15/30/45)代替 StartInterval —— 熄屏/低功耗下 StartInterval 会被冻,
+       StartCalendarInterval 到点会唤醒执行,心跳不断 -->
+  <key>StartCalendarInterval</key><array>
+    <dict><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Minute</key><integer>15</integer></dict>
+    <dict><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Minute</key><integer>45</integer></dict>
+  </array>
   <key>RunAtLoad</key><true/>
   <key>StandardErrorPath</key><string>/Users/apple/claude-whatsapp/data/exec-log/heartbeat.err</string>
 </dict></plist>
