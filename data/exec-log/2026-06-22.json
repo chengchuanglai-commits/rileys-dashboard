@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-22",
+  "live": false,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "SPY",
+      "qty": 1,
+      "px": 749.780029296875,
+      "usd": 749.780029296875
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [],
+  "note": "DRY-RUN(LIVE=False),未下单"
+}
