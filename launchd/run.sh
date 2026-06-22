@@ -9,7 +9,7 @@ export NOTIFY_WEBHOOK="https://open.feishu.cn/open-apis/bot/v2/hook/c540b4d3-476
 # 自动交易开关(2026-06-22 切LIVE:让自动batch全权管paper的10仓——20MA出场/再平衡/止损全自动)。
 # 仍是 paper 账户(orders.py DU安全闸:非DU账户拒绝下单),真钱要换账户+另行决定。
 # NOTIONAL=20000 与首次建仓规模一致,否则再平衡按$2000算会乱。关闭自动交易=把下面两行改0/2000或注释。
-export IBKR_LIVE=0   # 暂关:trade_close的SPY豁免bug刚修,先观察再开自动
+export IBKR_LIVE=1   # 自动交易开(2026-06-22,两bug验完):自动batch全权管paper 10仓
 export IBKR_NOTIONAL=20000
 mkdir -p data/exec-log
 echo "[$(date '+%F %T')] === run $1 ===" >> data/exec-log/launchd.log
