@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-22": {
-          "close": 139.77,
-          "pnl_pct": 0.55
+          "close": 138.79,
+          "pnl_pct": -0.16
         }
       },
       "gap_checked": true,
@@ -40,8 +40,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-22": {
-          "close": 36.67,
-          "pnl_pct": -1.05
+          "close": 36.7,
+          "pnl_pct": -1.13
         }
       },
       "gap_checked": true,
@@ -63,8 +63,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-22": {
-          "close": 16.39,
-          "pnl_pct": -1.93
+          "close": 16.45,
+          "pnl_pct": -2.3
         }
       },
       "gap_checked": true,
@@ -86,8 +86,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-22": {
-          "close": 36.67,
-          "pnl_pct": -1.05
+          "close": 36.7,
+          "pnl_pct": -1.13
         }
       },
       "gap_checked": true,
@@ -715,7 +715,7 @@ window.PORTFOLIO_D = {
           "open": 16.39,
           "high": 16.4,
           "low": 15.91,
-          "close": 15.91,
+          "close": 16.2,
           "pnl_pct": -3.03
         }
       },
@@ -743,19 +743,19 @@ window.PORTFOLIO_D = {
       "daily_prices": {
         "2026-06-22": {
           "open": 23.01,
-          "high": 23.01,
+          "high": 23.08,
           "low": 22.54,
-          "close": 22.95,
-          "pnl_pct": -1.95
+          "close": 23.03,
+          "pnl_pct": -2.31
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 22.95,
-      "final_pnl_pct": -1.95,
+      "close_price": 23.03,
+      "final_pnl_pct": -2.31,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.66
+      "realized_pnl_usd": -13.44
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -763,9 +763,9 @@ window.PORTFOLIO_D = {
     "total_trades": 19,
     "win_trades": 10,
     "win_rate": 52.6,
-    "total_realized_pnl_usd": 157.4,
-    "open_unrealized_pnl_usd": -17.4,
-    "portfolio_value": 2140.0,
+    "total_realized_pnl_usd": 155.62,
+    "open_unrealized_pnl_usd": -23.6,
+    "portfolio_value": 2132.02,
     "skipped_gap": 6,
     "updated_at": "2026-06-23"
   }

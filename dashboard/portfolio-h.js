@@ -20,12 +20,12 @@ window.PORTFOLIO_H = {
           "open": 140.62,
           "high": 141.96,
           "low": 137.61,
-          "close": 139.77,
-          "pnl_pct": 0.55
+          "close": 138.79,
+          "pnl_pct": -0.16
         }
       },
       "position_usd": 208.62,
-      "unrealized_pnl_usd": 1.15
+      "unrealized_pnl_usd": -0.33
     },
     {
       "ticker": "WSBC",
@@ -45,12 +45,12 @@ window.PORTFOLIO_H = {
           "open": 36.1,
           "high": 36.85,
           "low": 36.1,
-          "close": 36.67,
-          "pnl_pct": -1.05
+          "close": 36.7,
+          "pnl_pct": -1.13
         }
       },
       "position_usd": 208.62,
-      "unrealized_pnl_usd": -2.19
+      "unrealized_pnl_usd": -2.36
     },
     {
       "ticker": "SWBI",
@@ -758,7 +758,7 @@ window.PORTFOLIO_H = {
           "open": 16.39,
           "high": 16.4,
           "low": 15.91,
-          "close": 15.91,
+          "close": 16.2,
           "pnl_pct": -2.02
         }
       },
@@ -787,9 +787,9 @@ window.PORTFOLIO_H = {
       "daily_prices": {
         "2026-06-22": {
           "open": 23.01,
-          "high": 23.01,
+          "high": 23.08,
           "low": 22.54,
-          "close": 22.95,
+          "close": 23.03,
           "pnl_pct": -2.0
         }
       },
@@ -809,8 +809,8 @@ window.PORTFOLIO_H = {
     "win_trades": 7,
     "win_rate": 35.0,
     "total_realized_pnl_usd": 77.77,
-    "open_unrealized_pnl_usd": -1.04,
-    "portfolio_value": 2076.73,
+    "open_unrealized_pnl_usd": -2.69,
+    "portfolio_value": 2075.08,
     "total_commission_usd": 40.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 0,

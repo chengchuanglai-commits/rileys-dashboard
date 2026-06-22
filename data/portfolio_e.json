@@ -90,10 +90,10 @@
       "daily_prices": {
         "2026-06-22": {
           "open": 23.01,
-          "high": 23.01,
+          "high": 23.08,
           "low": 22.54,
-          "close": 22.95,
-          "pnl_pct": -1.95
+          "close": 23.03,
+          "pnl_pct": -2.31
         }
       },
       "gap_checked": true,
@@ -120,8 +120,8 @@
           "open": 36.1,
           "high": 36.85,
           "low": 36.1,
-          "close": 36.67,
-          "pnl_pct": -1.05
+          "close": 36.7,
+          "pnl_pct": -1.13
         }
       },
       "gap_checked": true,
@@ -142,7 +142,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-25",
       "regime": "neutral",
-      "vix": 17.29,
+      "vix": 17.28,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -161,7 +161,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-25",
       "regime": "neutral",
-      "vix": 17.29,
+      "vix": 17.28,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -180,7 +180,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-06-25",
       "regime": "neutral",
-      "vix": 17.29,
+      "vix": 17.28,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -734,7 +734,7 @@
           "open": 16.39,
           "high": 16.4,
           "low": 15.91,
-          "close": 15.91,
+          "close": 16.2,
           "pnl_pct": -3.03
         }
       },
@@ -753,8 +753,8 @@
     "win_trades": 8,
     "win_rate": 57.1,
     "total_realized_pnl_usd": 155.89,
-    "open_unrealized_pnl_usd": -17.97,
-    "portfolio_value": 2137.92,
+    "open_unrealized_pnl_usd": -20.13,
+    "portfolio_value": 2135.76,
     "total_commission_usd": 28.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

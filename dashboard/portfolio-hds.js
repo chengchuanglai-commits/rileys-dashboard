@@ -704,19 +704,19 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-06-22": {
           "open": 16.52,
-          "high": 17.6,
+          "high": 17.65,
           "low": 16.25,
-          "close": 16.93,
-          "pnl_pct": 8.46
+          "close": 17.0,
+          "pnl_pct": 8.9
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 16.93,
-      "final_pnl_pct": 8.46,
+      "close_price": 17.0,
+      "final_pnl_pct": 8.9,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 17.28,
+      "realized_pnl_usd": 18.18,
       "position_usd": 204.28
     },
     {
@@ -735,19 +735,19 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-06-22": {
           "open": 16.08,
-          "high": 16.45,
+          "high": 16.58,
           "low": 14.52,
-          "close": 16.39,
-          "pnl_pct": -1.49
+          "close": 16.45,
+          "pnl_pct": -1.98
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 16.39,
-      "final_pnl_pct": -1.49,
-      "close_reason": "max_hold",
+      "close_price": 16.47,
+      "final_pnl_pct": -1.98,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.04,
+      "realized_pnl_usd": -4.04,
       "position_usd": 204.28
     },
     {
@@ -799,17 +799,17 @@ window.PORTFOLIO_HDS = {
           "open": 36.1,
           "high": 36.85,
           "low": 36.1,
-          "close": 36.67,
-          "pnl_pct": 2.09
+          "close": 36.7,
+          "pnl_pct": 2.17
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 36.67,
-      "final_pnl_pct": 2.09,
+      "close_price": 36.7,
+      "final_pnl_pct": 2.17,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.27,
+      "realized_pnl_usd": 4.43,
       "position_usd": 204.28
     }
   ],
@@ -818,9 +818,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 20,
     "win_trades": 10,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 61.37,
+    "total_realized_pnl_usd": 61.43,
     "open_unrealized_pnl_usd": 14.19,
-    "portfolio_value": 2075.56,
+    "portfolio_value": 2075.62,
     "total_commission_usd": 40.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 0,

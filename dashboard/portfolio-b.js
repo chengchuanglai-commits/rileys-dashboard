@@ -31,8 +31,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.18
         },
         "2026-06-22": {
-          "close": 16.25,
-          "pnl_pct": -0.06
+          "close": 16.11,
+          "pnl_pct": 0.8
         }
       }
     },
@@ -65,8 +65,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.05
         },
         "2026-06-22": {
-          "close": 37.53,
-          "pnl_pct": -1.32
+          "close": 37.49,
+          "pnl_pct": -1.21
         }
       }
     },
@@ -85,8 +85,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-22": {
-          "close": 15.91,
-          "pnl_pct": -0.44
+          "close": 16.2,
+          "pnl_pct": -2.27
         }
       }
     },
@@ -105,8 +105,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-22": {
-          "close": 22.95,
-          "pnl_pct": -1.95
+          "close": 23.03,
+          "pnl_pct": -2.31
         }
       }
     },
@@ -125,8 +125,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-22": {
-          "close": 139.77,
-          "pnl_pct": 0.55
+          "close": 138.79,
+          "pnl_pct": -0.16
         }
       }
     },
@@ -145,8 +145,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-22": {
-          "close": 36.67,
-          "pnl_pct": -1.05
+          "close": 36.7,
+          "pnl_pct": -1.13
         }
       }
     },
@@ -165,8 +165,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-22": {
-          "close": 16.39,
-          "pnl_pct": -1.93
+          "close": 16.45,
+          "pnl_pct": -2.3
         }
       }
     },
@@ -185,8 +185,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-22": {
-          "close": 139.77,
-          "pnl_pct": -0.55
+          "close": 138.79,
+          "pnl_pct": 0.16
         }
       }
     },
@@ -205,8 +205,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-22": {
-          "close": 36.67,
-          "pnl_pct": -1.05
+          "close": 36.7,
+          "pnl_pct": -1.13
         }
       }
     }
@@ -909,18 +909,18 @@ window.PORTFOLIO_B = {
         "2026-06-22": {
           "open": 9.53,
           "high": 9.62,
-          "low": 9.4,
-          "close": 9.45,
-          "pnl_pct": 3.67
+          "low": 9.38,
+          "close": 9.38,
+          "pnl_pct": 4.38
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 9.45,
-      "final_pnl_pct": 3.67,
+      "close_price": 9.38,
+      "final_pnl_pct": 4.38,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 16.0
+      "realized_pnl_usd": 19.48
     },
     {
       "ticker": "TWST",
@@ -958,9 +958,9 @@ window.PORTFOLIO_B = {
     "total_trades": 20,
     "win_trades": 12,
     "win_rate": 60.0,
-    "total_realized_pnl_usd": 172.26,
-    "open_unrealized_pnl_usd": -39.0,
-    "portfolio_value": 2133.26,
+    "total_realized_pnl_usd": 175.74,
+    "open_unrealized_pnl_usd": -47.75,
+    "portfolio_value": 2127.99,
     "updated_at": "2026-06-23"
   }
 };
