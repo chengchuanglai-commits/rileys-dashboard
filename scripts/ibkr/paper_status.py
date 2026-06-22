@@ -34,19 +34,27 @@ def collect():
     today_px = _today_prices(syms)
     sim_px = _sim_prices()   # 仍带模拟入场价供参考(看"延迟进场差多少")
 
+    total_pnl = 0.0
     for p in ib.positions(h["account"]):
         sym = p.contract.symbol
-        avg = round(float(p.avgCost), 2)          # paper 真实成交均价
-        tp = today_px.get(sym)                     # 当日现价(滑点基准)
+        avg = round(float(p.avgCost), 2)          # paper 真实成交均价(成本)
+        tp = today_px.get(sym)                     # 当前价(最新)
         sp = sim_px.get(sym)                       # 模拟入场价(参考)
         slip = round((avg - tp) / tp * 100, 2) if (tp and tp > 0) else None   # 纯执行滑点
         delay = round((avg - sp) / sp * 100, 2) if (sp and sp > 0) else None  # 含延迟进场总差
+        # 当前盈亏(现价 vs 成本)
+        chg = round((tp - avg) / avg * 100, 2) if (tp and avg > 0) else None
+        pnl = round((tp - avg) * p.position, 2) if (tp and avg > 0) else None
+        if pnl is not None: total_pnl += pnl
         out["positions"].append({
             "sym": sym, "shares": p.position, "avg_fill": avg,
-            "today_price": tp, "slippage_pct": slip,       # 纯滑点(真实vs当日现价)
-            "sim_price": sp, "delay_gap_pct": delay,       # 参考:vs模拟入场价(含延迟涨幅)
+            "cur_price": tp, "change_pct": chg, "pnl_usd": pnl,   # 当前价/涨跌/盈亏
+            "today_price": tp, "slippage_pct": slip,
+            "sim_price": sp, "delay_gap_pct": delay,
             "target_usd": round(target_usd.get(sym, 0), 0),
         })
+    out["total_unrealized_pnl"] = round(total_pnl, 2)   # 10仓合计浮盈亏
+    out["updated_at"] = time.strftime("%Y-%m-%d %H:%M")
     ib.disconnect()
     if not out["positions"]:
         out["note"] = "LIVE=False 干跑中,paper 暂无持仓(等切真下单后填充)" if not LIVE else "无持仓"

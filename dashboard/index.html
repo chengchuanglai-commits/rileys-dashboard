@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260622142507";
+      var BUILD="20260622151819";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -4980,37 +4980,46 @@ var CAPITAL = 2000;
     body = acctLine() +
       muted('<span>🟡</span><span>'+esc(P.note || 'LIVE=False 干跑中，等首次真实下单后显示持仓与滑点(slippage)。')+'</span>');
   } else {
-    /* 状态三：有真实持仓——展示成交价 vs 模拟价 + 滑点 */
+    /* 状态三：有真实持仓——实时盈亏(主) + 成交/滑点(次) */
+    /* 合计浮盈亏大数 */
+    var tp = (P.total_unrealized_pnl != null) ? P.total_unrealized_pnl : null;
+    var tpCol = (tp==null)?'var(--c-text-2)':(tp>=0?'var(--c-pos)':'var(--c-neg)');
+    var pnlHead = '<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:4px 0 12px">' +
+      '<span style="font-size:13px;color:var(--c-text-2)">10仓合计浮盈亏 Unrealized P&L</span>' +
+      '<span style="font-size:26px;font-weight:800;font-family:Poppins,sans-serif;color:'+tpCol+'">'+(tp==null?'—':((tp>=0?'+$':'-$')+Math.abs(tp).toFixed(0)))+'</span>' +
+      (P.updated_at?'<span style="font-size:11px;color:var(--c-text-3)">更新 '+esc(P.updated_at)+'(盘中每5分刷新)</span>':'') +
+      '</div>';
     var th = 'text-align:left;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--c-text-3);padding:6px 8px;border-bottom:1px solid var(--c-border)';
     var tbl = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px">' +
       '<thead><tr>' +
         '<th style="'+th+'">代码 Sym</th>' +
-        '<th style="'+th+';text-align:right">股数 Shares</th>' +
-        '<th style="'+th+';text-align:right">成交价 Fill</th>' +
-        '<th style="'+th+';text-align:right">当日现价 Today</th>' +
-        '<th style="'+th+';text-align:right">纯滑点 Slippage</th>' +
-        '<th style="'+th+';text-align:right">vs模拟(延迟) Delay</th>' +
+        '<th style="'+th+';text-align:right">股数 Sh</th>' +
+        '<th style="'+th+';text-align:right">成本 Cost</th>' +
+        '<th style="'+th+';text-align:right">现价 Now</th>' +
+        '<th style="'+th+';text-align:right">涨跌 Chg</th>' +
+        '<th style="'+th+';text-align:right">盈亏 P&L</th>' +
+        '<th style="'+th+';text-align:right">滑点 Slip</th>' +
       '</tr></thead><tbody>';
     P.positions.forEach(function(x){
       var td = 'padding:8px;border-bottom:1px solid var(--c-border)';
-      var sl = (x.slippage_pct!=null) ? x.slippage_pct : null;   // 纯执行滑点
-      var dl = (x.delay_gap_pct!=null) ? x.delay_gap_pct : null; // vs模拟入场价(含延迟涨幅)
-      var slHtml, slCol;
-      if(sl==null){ slHtml='—'; slCol='var(--c-text-3)'; }
-      else { slCol = (sl <= 0.3 && sl >= -0.3) ? 'var(--c-pos)' : (Math.abs(sl) > 1 ? 'var(--c-neg)' : '#b45309'); slHtml = (sl>0?'+':'')+sl+'%'; }
-      var dlHtml = (dl==null)?'—':((dl>0?'+':'')+dl+'%');
+      var ch = (x.change_pct!=null)?x.change_pct:null;
+      var pl = (x.pnl_usd!=null)?x.pnl_usd:null;
+      var chCol = (ch==null)?'var(--c-text-3)':(ch>=0?'var(--c-pos)':'var(--c-neg)');
+      var sl = (x.slippage_pct!=null) ? x.slippage_pct : null;
+      var slHtml = (sl==null)?'—':((sl>0?'+':'')+sl+'%');
       tbl += '<tr>' +
         '<td style="'+td+';font-weight:600;color:var(--c-text)">'+esc(x.sym)+'</td>' +
         '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+esc(x.shares)+'</td>' +
-        '<td style="'+td+';text-align:right;color:var(--c-text);font-family:Poppins,sans-serif">'+(x.avg_fill!=null?'$'+x.avg_fill:'—')+'</td>' +
-        '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+(x.today_price!=null?'$'+(Math.round(x.today_price*100)/100):'—')+'</td>' +
-        '<td style="'+td+';text-align:right;font-weight:700;color:'+slCol+';font-family:Poppins,sans-serif">'+slHtml+'</td>' +
-        '<td style="'+td+';text-align:right;color:var(--c-text-3);font-family:Poppins,sans-serif">'+dlHtml+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text-2);font-family:Poppins,sans-serif">'+(x.avg_fill!=null?'$'+x.avg_fill:'—')+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text);font-family:Poppins,sans-serif">'+(x.cur_price!=null?'$'+(Math.round(x.cur_price*100)/100):'—')+'</td>' +
+        '<td style="'+td+';text-align:right;font-weight:600;color:'+chCol+';font-family:Poppins,sans-serif">'+(ch==null?'—':((ch>0?'+':'')+ch+'%'))+'</td>' +
+        '<td style="'+td+';text-align:right;font-weight:700;color:'+chCol+';font-family:Poppins,sans-serif">'+(pl==null?'—':((pl>=0?'+$':'-$')+Math.abs(pl).toFixed(0)))+'</td>' +
+        '<td style="'+td+';text-align:right;color:var(--c-text-3);font-family:Poppins,sans-serif">'+slHtml+'</td>' +
       '</tr>';
     });
     tbl += '</tbody></table></div>';
-    var cap = '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3);line-height:1.6">纯滑点 (slippage) = 真实成交价 vs 下单当日现价 = 真·执行成本(应≈0.x%)。vs模拟(延迟) = 真实成交价 vs 模拟入场价,含"信号出到真进场"几天的涨幅(不是滑点),太大说明进场拖太久、买在高位。</div>';
-    body = acctLine() + tbl + cap +
+    var cap = '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3);line-height:1.6">盈亏 P&L = 现价 vs 成交成本(实时浮盈亏)。滑点 Slip = 成交价 vs 当日现价(执行成本,≈0.x%正常)。盘中每5分钟自动刷新;短期波动无意义,看几周。</div>';
+    body = acctLine() + pnlHead + tbl + cap +
       (P.note ? '<div style="margin-top:8px;font-size:11px;color:var(--c-text-3)">'+esc(P.note)+'</div>' : '');
   }
 

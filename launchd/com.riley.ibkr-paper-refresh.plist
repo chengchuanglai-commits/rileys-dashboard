@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.riley.ibkr-paper-refresh</string>
+  <key>ProgramArguments</key><array>
+    <string>/bin/zsh</string><string>/Users/apple/claude-whatsapp/launchd/paper-refresh.sh</string>
+  </array>
+  <!-- 每5分钟,但仅美股时段(北京21:30-次日04:05,即美东9:30-16:05开市)。StartInterval熄屏会冻,
+       但盘中时段你电脑通常活跃;且脚本本身轻量,冻了下次唤醒补即可。300秒=5分钟。 -->
+  <key>StartInterval</key><integer>300</integer>
+  <key>StandardErrorPath</key><string>/Users/apple/claude-whatsapp/data/exec-log/paper-refresh.err</string>
+</dict></plist>
