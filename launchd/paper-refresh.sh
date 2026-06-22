@@ -16,10 +16,18 @@ if ! grep -q '"connected": true' data/paper-status.json 2>/dev/null; then
   git checkout -- dashboard/paper-status.js data/paper-status.json 2>/dev/null
   exit 0
 fi
-# 有变化才 push(避免空提交)
+# 有变化才 push(避免空提交)。只 commit 这两个文件,避免被其他未暂存改动卡住 pull --rebase。
 if ! git diff --quiet dashboard/paper-status.js data/paper-status.json 2>/dev/null; then
   git add dashboard/paper-status.js data/paper-status.json 2>/dev/null
   git -c user.name=paper-bot -c user.email=pb@local commit -q -m "chore: paper实时盈亏刷新 $(date '+%H:%M')" 2>/dev/null
-  for i in 1 2 3; do git pull --rebase -q origin main 2>/dev/null && git push -q origin main 2>/dev/null && break; sleep 3; done
-  echo "[$(date '+%F %T')] paper刷新已push" >> data/exec-log/paper-refresh.log
+  ok=0
+  for i in 1 2 3; do
+    # -c rebase.autoStash=true: pull前自动stash未暂存改动,完后还原→不再被"unstaged changes"卡死
+    if git -c rebase.autoStash=true pull --rebase -q origin main 2>/dev/null && git push -q origin main 2>/dev/null; then
+      ok=1; break
+    fi
+    sleep 3
+  done
+  if [ $ok -eq 1 ]; then echo "[$(date '+%F %T')] paper刷新已push ✅" >> data/exec-log/paper-refresh.log
+  else echo "[$(date '+%F %T')] ⚠️ push失败(已commit本地,下次重试)" >> data/exec-log/paper-refresh.log; fi
 fi
