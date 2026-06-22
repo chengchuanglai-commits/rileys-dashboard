@@ -1,18 +1,122 @@
 {
   "date": "2026-06-22",
-  "live": false,
+  "live": true,
   "drawdown": 0.0,
   "breaker": "normal",
   "plan": [
     {
-      "sym": "SPY",
+      "sym": "AMD",
       "qty": 1,
-      "px": 749.780029296875,
-      "usd": 749.780029296875
+      "px": 553.4299926757812,
+      "usd": 553.4299926757812
+    },
+    {
+      "sym": "COHR",
+      "qty": 1,
+      "px": 410.9150085449219,
+      "usd": 410.9150085449219
+    },
+    {
+      "sym": "GFS",
+      "qty": 8,
+      "px": 89.91000366210938,
+      "usd": 719.280029296875
+    },
+    {
+      "sym": "HUT",
+      "qty": 6,
+      "px": 126.3917007446289,
+      "usd": 758.3502044677734
+    },
+    {
+      "sym": "IESC",
+      "qty": 1,
+      "px": 733.1400146484375,
+      "usd": 733.1400146484375
+    },
+    {
+      "sym": "ON",
+      "qty": 6,
+      "px": 131.3300018310547,
+      "usd": 787.9800109863281
+    },
+    {
+      "sym": "RVMD",
+      "qty": 4,
+      "px": 166.125,
+      "usd": 664.5
+    },
+    {
+      "sym": "SPY",
+      "qty": 16,
+      "px": 749.8599853515625,
+      "usd": 11997.759765625
+    },
+    {
+      "sym": "STM",
+      "qty": 9,
+      "px": 80.57499694824219,
+      "usd": 725.1749725341797
+    },
+    {
+      "sym": "VICR",
+      "qty": 2,
+      "px": 358.0,
+      "usd": 716.0
     }
   ],
   "gate_ok": true,
   "gate_reason": "",
-  "placed": [],
-  "note": "DRY-RUN(LIVE=False),未下单"
+  "placed": [
+    {
+      "sym": "AMD",
+      "qty": 1,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "COHR",
+      "qty": 1,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "GFS",
+      "qty": 8,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "HUT",
+      "qty": 6,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "IESC",
+      "qty": 1,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "ON",
+      "qty": 6,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 4,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "SPY",
+      "qty": 16,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "STM",
+      "qty": 9,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "VICR",
+      "qty": 2,
+      "status": "PendingSubmit"
+    }
+  ]
 }

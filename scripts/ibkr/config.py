@@ -1,12 +1,14 @@
-"""执行系统常量集中。改一处即全局生效。真钱开关默认关。"""
-LIVE = False              # True=真钱;默认 paper
+"""执行系统常量集中。改一处即全局生效。真钱开关默认关。
+   支持环境变量临时覆盖(IBKR_LIVE/IBKR_NOTIONAL),用于一次性 paper 验证而不改动安全默认。"""
+import os as _os
+LIVE = _os.environ.get("IBKR_LIVE", "0") == "1"     # 默认 False(安全);IBKR_LIVE=1 临时开
 FRACTIONAL = False        # True=小数股(cashQty);默认整数股(权限未开,见spec实测)
-NOTIONAL = 2000.0         # 名义本金(模拟真实$2000规模)
+NOTIONAL = float(_os.environ.get("IBKR_NOTIONAL", "2000"))   # 默认$2000;env可临时放大(paper验证规模)
 PORTS = [4002, 7497, 4001, 7496]   # 连接尝试顺序:Gateway paper 优先
 
-# 安全闸
-MAX_ORDER_USD = 1500.0    # 单笔上限(SPY 60%≈$1200 在内)
-MAX_TOTAL_USD = 2200.0    # 总下单额上限
+# 安全闸(随名义本金缩放:上限=名义本金×系数,防写死被放大规模击穿)
+MAX_ORDER_USD = NOTIONAL * 0.75    # 单笔上限(SPY 60%在内,留余量)
+MAX_TOTAL_USD = NOTIONAL * 1.15    # 总下单额上限
 
 # 回撤断路器档位(占位值,# TODO 待 backtest-momentum-sized.py 回测校准)
 DRAWDOWN_TIERS = {"warn": 0.20, "reduce_only": 0.25, "defensive": 0.28}
