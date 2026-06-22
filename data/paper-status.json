@@ -108,5 +108,12 @@
   ],
   "open_orders": 10,
   "note": "",
-  "account": "DUQ627583"
+  "account": "DUQ627583",
+  "_manual_context": {
+    "type": "manual_backfill_entry",
+    "date": "2026-06-22",
+    "note": "首次paper真实建仓:手动触发(IBKR_LIVE=1+NOTIONAL=20000),非自动batch。",
+    "caveat": "建仓延迟4天——票是6/18 MOM-MA信号,6/22才真进场。纯执行滑点+0.44%(健康),但vs模拟入场价+4.5%是延迟涨幅(买在高位),非滑点。",
+    "for_future_analysis": "统计paper真实收益时,这10仓的成本基是6/22高位价,不是6/18信号价。对比模拟盘时要么用6/22为起点、要么标注此延迟,别直接和6/18进场的模拟盘比收益。"
+  }
 }
