@@ -1,10 +1,40 @@
 {
-  "date": "2026-06-22",
+  "date": "2026-06-23",
   "live": false,
-  "connected": false,
-  "nav": null,
-  "cash": null,
-  "positions": [],
-  "open_orders": 0,
-  "note": "网关未连上(Gateway没登录/掉线)"
+  "connected": true,
+  "nav": 1000466.89,
+  "cash": 974441.75,
+  "positions": [
+    {
+      "sym": "HUT",
+      "shares": 6.0,
+      "avg_fill": 127.55,
+      "cur_price": 121.83999633789062,
+      "change_pct": -4.48,
+      "pnl_usd": -34.26,
+      "today_price": 121.83999633789062,
+      "slippage_pct": 4.69,
+      "sim_price": 124.44,
+      "delay_gap_pct": 2.5,
+      "target_usd": 80.0
+    },
+    {
+      "sym": "GFS",
+      "shares": 8.0,
+      "avg_fill": 89.29,
+      "cur_price": 89.95999908447266,
+      "change_pct": 0.75,
+      "pnl_usd": 5.36,
+      "today_price": 89.95999908447266,
+      "slippage_pct": -0.74,
+      "sim_price": 85.83,
+      "delay_gap_pct": 4.03,
+      "target_usd": 80.0
+    }
+  ],
+  "open_orders": 11,
+  "note": "",
+  "account": "DUQ627583",
+  "total_unrealized_pnl": -28.9,
+  "updated_at": "2026-06-23 00:00"
 }
