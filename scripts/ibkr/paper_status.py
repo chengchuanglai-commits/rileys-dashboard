@@ -28,16 +28,23 @@ def collect():
 
     # 引擎目标(该买什么) + 模拟盘假设价(算滑点的基准)
     target_usd = build_targets(notional=NOTIONAL)
-    sim_px = _sim_prices()
+    syms = [p.contract.symbol for p in ib.positions(h["account"])]
+    # 滑点基准 = **下单当日现价(today)**,不是几天前模拟入场价。
+    # 纯滑点=真实成交价 vs 当日现价(执行成本,≈0.x%才对);用模拟入场价会把"延迟进场涨幅"误算成滑点。
+    today_px = _today_prices(syms)
+    sim_px = _sim_prices()   # 仍带模拟入场价供参考(看"延迟进场差多少")
 
     for p in ib.positions(h["account"]):
         sym = p.contract.symbol
         avg = round(float(p.avgCost), 2)          # paper 真实成交均价
-        sp = sim_px.get(sym)
-        slip = round((avg - sp) / sp * 100, 2) if (sp and sp > 0) else None
+        tp = today_px.get(sym)                     # 当日现价(滑点基准)
+        sp = sim_px.get(sym)                       # 模拟入场价(参考)
+        slip = round((avg - tp) / tp * 100, 2) if (tp and tp > 0) else None   # 纯执行滑点
+        delay = round((avg - sp) / sp * 100, 2) if (sp and sp > 0) else None  # 含延迟进场总差
         out["positions"].append({
             "sym": sym, "shares": p.position, "avg_fill": avg,
-            "sim_price": sp, "slippage_pct": slip,
+            "today_price": tp, "slippage_pct": slip,       # 纯滑点(真实vs当日现价)
+            "sim_price": sp, "delay_gap_pct": delay,       # 参考:vs模拟入场价(含延迟涨幅)
             "target_usd": round(target_usd.get(sym, 0), 0),
         })
     ib.disconnect()
@@ -47,8 +54,26 @@ def collect():
     return out
 
 
+def _today_prices(syms):
+    """各票当日现价(滑点基准)。yfinance 最新收盘。"""
+    px = {}
+    if not syms:
+        return px
+    try:
+        import yfinance as yf
+        data = yf.download(syms, period="2d", progress=False)["Close"]
+        for s in syms:
+            try:
+                px[s] = float(data[s].dropna().iloc[-1]) if len(syms) > 1 else float(data.dropna().iloc[-1])
+            except Exception:
+                px[s] = None
+    except Exception:
+        pass
+    return px
+
+
 def _sim_prices():
-    """模拟盘各持仓的入场价(算滑点基准)。读 momma/bq 持仓的 entry_price。"""
+    """模拟盘各持仓的入场价(参考)。读 momma/bq 持仓的 entry_price。"""
     px = {}
     for f in ("data/portfolio_momma.json", "data/portfolio_bq.json"):
         try:
