@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23 11:47",
+  "generated": "2026-06-23 16:07",
   "spy_fwd_ret_pct": -0.57,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -7,20 +7,20 @@
   "legs": {
     "momma": {
       "name": "MOM-MA·动量+20MA",
-      "n": 0,
-      "alpha_pct": 0.0,
+      "n": 3,
+      "alpha_pct": -1.25,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": 0.0,
+      "fwd_ret_pct": -1.82,
       "tradeable": true
     },
     "momh": {
       "name": "MOM-H·动量+H",
-      "n": 0,
-      "alpha_pct": 0.0,
+      "n": 10,
+      "alpha_pct": -0.31,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": 0.0,
+      "fwd_ret_pct": -0.88,
       "tradeable": false
     },
     "bq": {
@@ -52,11 +52,11 @@
     },
     "hds": {
       "name": "H-DS·小盘DS",
-      "n": 20,
-      "alpha_pct": 3.64,
-      "robust": true,
-      "conviction": 0.1821,
-      "fwd_ret_pct": 3.07,
+      "n": 19,
+      "alpha_pct": 2.12,
+      "robust": false,
+      "conviction": 0.0,
+      "fwd_ret_pct": 1.54,
       "tradeable": false
     },
     "mn": {
@@ -79,14 +79,14 @@
     }
   },
   "weights": {
-    "momma": 0.0891,
+    "momma": 0.1063,
     "momh": 0.0,
     "bq": 0.0,
     "bai": 0.0,
     "h": 0.0,
-    "hds": 0.1622,
-    "mn": 0.5331,
-    "c": 0.2156
+    "hds": 0.0,
+    "mn": 0.6364,
+    "c": 0.2573
   },
   "final_allocation": {
     "momma": 0.5,
