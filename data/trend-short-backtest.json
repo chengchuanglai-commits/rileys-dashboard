@@ -1,0 +1,12 @@
+{
+  "window": [
+    "2022-05-31",
+    "2026-06-18"
+  ],
+  "short_total_ret_pct": -26.0,
+  "spy_total_ret_pct": 91.6,
+  "bear_rebalances": 45,
+  "crisis_days": 65,
+  "short_ret_during_crisis_pct": -28.9,
+  "corr_with_spy": -0.59
+}
