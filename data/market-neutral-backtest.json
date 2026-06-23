@@ -3,12 +3,12 @@
     "2022-05-31",
     "2026-06-18"
   ],
-  "total_ret_pct": 134.2,
-  "cagr_pct": 23.5,
+  "total_ret_pct": 100.5,
+  "cagr_pct": 18.8,
   "spy_total_ret_pct": 91.6,
-  "corr_with_spy": 0.18,
-  "annual_vol_pct": 27.0,
-  "max_drawdown_pct": -25.7,
+  "corr_with_spy": 0.19,
+  "annual_vol_pct": 26.9,
+  "max_drawdown_pct": -26.1,
   "crisis_days": 65,
-  "ret_during_crisis_pct": 6.8
+  "ret_during_crisis_pct": -1.5
 }

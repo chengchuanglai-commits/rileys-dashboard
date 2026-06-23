@@ -14,6 +14,16 @@ import numpy as np
 
 CACHE="data/fmp-cache"; PX_DIR=f"{CACHE}/px"; MC_DIR=f"{CACHE}/mc"
 INIT=2000.0; MKT_MIN=3_000_000_000; N_SIDE=5; REBAL=5; SLIP=0.002
+# 借券成本(borrow fee,年化)——做空要付。没历史数据,保守分档估:
+#   普通大盘股易借~3%/年;濒死/暴雷股(将退市)极难借~80%/年甚至借不到。
+import os as _os
+BORROW_NORMAL=0.03      # 普通可借股年化借券费
+BORROW_DISTRESSED=0.80  # 濒死股(临近退市)年化借券费(现实可能更高/借不到)
+# 这些是回测窗口内真退市的票:做空它们现实中借券极贵/可能借不到→打上濒死标记
+DISTRESSED={"SIVB","FRC","SBNY","BBBY","WE","SAVE","TWNK","FTX","ATVI","VMW","SGEN","ABMD",
+    "PXD","SPLK","TWTR","CTLT","ZEN","MNDT","CTXS","CERN","NUAN","XLNX","MXIM","WORK","AVLR",
+    "COUP","CONE","QTS","CXO","KSU","INFO","TIF","ALXN","VG","STOR","FLIR","ACIA"}
+EXCLUDE_UNBORROWABLE=_os.environ.get("MN_EXCLUDE_DISTRESSED","")=="1"  # =1则干脆不空濒死股(更保守)
 CURATED=["ATVI","VMW","SGEN","ABMD","PXD","SPLK","TWTR","CTLT","ZEN","MNDT","CTXS","CERN",
     "NUAN","XLNX","MXIM","WORK","AVLR","COUP","CONE","QTS","CXO","KSU","INFO","TIF",
     "ALXN","VG","STOR","FLIR","ACIA","SIVB","FRC","SBNY","BBBY","WE","SAVE","TWNK"]
@@ -118,11 +128,14 @@ def main():
                 sh=per/(entry*(1+SLIP)); cash-=per; Lh[tk]={"sh":sh,"val":per}
             for tk in shorts[date]:
                 if tk in Sh: continue
+                if EXCLUDE_UNBORROWABLE and tk in DISTRESSED: continue  # 借不到券→不空(最保守)
                 p=posmap.get(tk,{}).get(date)
                 if p is None: continue
                 entry=float(ohlc[tk]["C"][p])
                 if entry<=0 or per>cash: continue
-                sh=per/entry; cash-=per; Sh[tk]={"sh":sh,"entry_fill":entry*(1-SLIP),"stop":entry*1.08,"margin":per,"val":per}
+                fee=BORROW_DISTRESSED if tk in DISTRESSED else BORROW_NORMAL
+                sh=per/entry; cash-=per
+                Sh[tk]={"sh":sh,"entry_fill":entry*(1-SLIP),"stop":entry*1.08,"margin":per,"val":per,"borrow_daily":fee/252,"open_date":date}
             last_rebal=i
         # 净值
         eq=cash
@@ -131,6 +144,8 @@ def main():
             h["val"]=h["sh"]*cur if p is not None else h["val"]; eq+=h["val"]
         for tk,h in Sh.items():
             p=posmap.get(tk,{}).get(date); cur=float(ohlc[tk]["C"][p]) if p is not None else None
+            # 每日扣借券费(按当前空头市值计)
+            cash-=h["sh"]*(cur if cur is not None else h["entry_fill"])*h.get("borrow_daily",0)
             h["val"]=h["margin"]+h["sh"]*(h["entry_fill"]-cur) if cur is not None else h["val"]; eq+=h["val"]
         curve.append((date,round(eq,2),round(float(sC[q]/sC[start]*INIT),2) if q else None))
 
