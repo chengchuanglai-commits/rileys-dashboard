@@ -16,13 +16,36 @@
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-23": {
-          "close": 137.8,
-          "pnl_pct": 0.87
+          "close": 137.94,
+          "pnl_pct": 0.77
         }
       },
       "gap_checked": true,
       "day1_open": 135.42,
       "day1_gap_pct": -2.58
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 30.85,
+      "stop_loss": 37.38,
+      "max_hold_date": "2026-06-24",
+      "daily_prices": {
+        "2026-06-23": {
+          "close": 37.28,
+          "pnl_pct": -2.73
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 36.59,
+      "day1_gap_pct": 0.83
     },
     {
       "ticker": "HOFT",
@@ -39,8 +62,8 @@
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-23": {
-          "close": 17.31,
-          "pnl_pct": -1.82
+          "close": 17.25,
+          "pnl_pct": -1.47
         }
       },
       "gap_checked": true,
@@ -698,7 +721,7 @@
           "open": 135.42,
           "high": 141.25,
           "low": 134.75,
-          "close": 137.8,
+          "close": 137.94,
           "pnl_pct": -3.0
         }
       },
@@ -732,20 +755,20 @@
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "open": 36.68,
-          "high": 37.22,
+          "open": 36.59,
+          "high": 37.35,
           "low": 36.59,
-          "close": 37.1,
-          "pnl_pct": -2.23
+          "close": 37.28,
+          "pnl_pct": -2.73
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 37.1,
-      "final_pnl_pct": -2.23,
+      "close_price": 37.28,
+      "final_pnl_pct": -2.73,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -12.52
+      "realized_pnl_usd": -14.88
     },
     {
       "ticker": "SWBI",
@@ -765,7 +788,7 @@
           "open": 16.17,
           "high": 16.83,
           "low": 16.01,
-          "close": 16.75,
+          "close": 16.67,
           "pnl_pct": -2.99
         }
       },
@@ -783,10 +806,10 @@
     "total_trades": 21,
     "win_trades": 9,
     "win_rate": 42.9,
-    "total_realized_pnl_usd": 39.68,
-    "open_unrealized_pnl_usd": -4.75,
-    "portfolio_value": 2034.93,
-    "skipped_gap": 7,
+    "total_realized_pnl_usd": 37.32,
+    "open_unrealized_pnl_usd": -17.15,
+    "portfolio_value": 2020.17,
+    "skipped_gap": 6,
     "updated_at": "2026-06-24"
   }
 }

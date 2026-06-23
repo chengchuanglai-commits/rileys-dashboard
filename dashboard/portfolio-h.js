@@ -37,12 +37,12 @@ window.PORTFOLIO_H = {
           "open": 135.42,
           "high": 141.25,
           "low": 134.75,
-          "close": 137.8,
-          "pnl_pct": 0.87
+          "close": 137.94,
+          "pnl_pct": 0.77
         }
       },
       "position_usd": 204.71,
-      "unrealized_pnl_usd": 1.78
+      "unrealized_pnl_usd": 1.58
     },
     {
       "ticker": "HOFT",
@@ -58,7 +58,7 @@ window.PORTFOLIO_H = {
       "stop_loss": 17.34,
       "max_hold_date": "2026-06-25",
       "daily_prices": {},
-      "position_usd": 203.48,
+      "position_usd": 203.07,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -747,7 +747,7 @@ window.PORTFOLIO_H = {
           "open": 135.42,
           "high": 141.25,
           "low": 134.75,
-          "close": 137.8,
+          "close": 137.94,
           "pnl_pct": -2.0
         }
       },
@@ -782,10 +782,10 @@ window.PORTFOLIO_H = {
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "open": 36.68,
-          "high": 37.22,
+          "open": 36.59,
+          "high": 37.35,
           "low": 36.59,
-          "close": 37.09,
+          "close": 37.28,
           "pnl_pct": -2.01
         }
       },
@@ -816,7 +816,7 @@ window.PORTFOLIO_H = {
           "open": 16.17,
           "high": 16.83,
           "low": 16.01,
-          "close": 16.75,
+          "close": 16.67,
           "pnl_pct": -1.99
         }
       },
@@ -828,18 +828,49 @@ window.PORTFOLIO_H = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.07,
       "position_usd": 204.71
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13.7779,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 30.85,
+      "stop_loss": 37.02,
+      "max_hold_date": "2026-06-24",
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.35,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 37.02,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 204.71
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 22,
+    "total_trades": 23,
     "win_trades": 6,
-    "win_rate": 27.3,
-    "total_realized_pnl_usd": 34.8,
-    "open_unrealized_pnl_usd": 1.78,
-    "portfolio_value": 2036.58,
-    "total_commission_usd": 44.0,
-    "skipped_gap": 6,
+    "win_rate": 26.1,
+    "total_realized_pnl_usd": 30.69,
+    "open_unrealized_pnl_usd": 1.58,
+    "portfolio_value": 2032.27,
+    "total_commission_usd": 46.0,
+    "skipped_gap": 5,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
     "updated_at": "2026-06-23"

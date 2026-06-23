@@ -115,11 +115,11 @@ window.PORTFOLIO_E = {
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "open": 36.68,
-          "high": 37.22,
+          "open": 36.59,
+          "high": 37.35,
           "low": 36.59,
-          "close": 37.1,
-          "pnl_pct": -2.23
+          "close": 37.28,
+          "pnl_pct": -2.73
         }
       },
       "gap_checked": true,
@@ -146,8 +146,8 @@ window.PORTFOLIO_E = {
           "open": 135.42,
           "high": 141.25,
           "low": 134.75,
-          "close": 137.8,
-          "pnl_pct": 0.87
+          "close": 137.94,
+          "pnl_pct": 0.77
         }
       },
       "gap_checked": true,
@@ -171,15 +171,15 @@ window.PORTFOLIO_E = {
       "vix": 17.28,
       "daily_prices": {
         "2026-06-23": {
-          "open": 36.68,
-          "high": 37.22,
+          "open": 36.59,
+          "high": 37.35,
           "low": 36.59,
-          "close": 37.1,
-          "pnl_pct": -2.23
+          "close": 37.28,
+          "pnl_pct": -2.73
         }
       },
       "gap_checked": true,
-      "day1_open": 36.68
+      "day1_open": 36.59
     },
     {
       "ticker": "HOFT",
@@ -196,7 +196,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-26",
       "regime": "neutral",
-      "vix": 18.72,
+      "vix": 19.61,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -757,7 +757,7 @@ window.PORTFOLIO_E = {
           "open": 23.22,
           "high": 23.29,
           "low": 22.8,
-          "close": 23.14,
+          "close": 23.15,
           "pnl_pct": -3.02
         }
       },
@@ -790,7 +790,7 @@ window.PORTFOLIO_E = {
           "open": 16.17,
           "high": 16.83,
           "low": 16.01,
-          "close": 16.75,
+          "close": 16.67,
           "pnl_pct": -2.99
         }
       },
@@ -809,8 +809,8 @@ window.PORTFOLIO_E = {
     "win_trades": 7,
     "win_rate": 46.7,
     "total_realized_pnl_usd": 74.44,
-    "open_unrealized_pnl_usd": -21.78,
-    "portfolio_value": 2052.66,
+    "open_unrealized_pnl_usd": -26.91,
+    "portfolio_value": 2047.53,
     "total_commission_usd": 30.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

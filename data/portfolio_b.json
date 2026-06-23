@@ -23,8 +23,8 @@
           "pnl_pct": -2.31
         },
         "2026-06-23": {
-          "close": 23.14,
-          "pnl_pct": -2.8
+          "close": 23.15,
+          "pnl_pct": -2.84
         }
       }
     },
@@ -50,8 +50,8 @@
           "pnl_pct": -0.16
         },
         "2026-06-23": {
-          "close": 137.8,
-          "pnl_pct": -0.87
+          "close": 137.94,
+          "pnl_pct": -0.77
         }
       }
     },
@@ -77,8 +77,8 @@
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "close": 37.08,
-          "pnl_pct": -2.18
+          "close": 37.28,
+          "pnl_pct": -2.73
         }
       }
     },
@@ -97,8 +97,8 @@
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-23": {
-          "close": 137.8,
-          "pnl_pct": 0.87
+          "close": 137.94,
+          "pnl_pct": 0.77
         }
       }
     },
@@ -117,8 +117,8 @@
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-23": {
-          "close": 37.08,
-          "pnl_pct": -2.18
+          "close": 37.28,
+          "pnl_pct": -2.73
         }
       }
     },
@@ -137,8 +137,8 @@
       "max_hold_date": "2026-06-30",
       "daily_prices": {
         "2026-06-23": {
-          "close": 17.31,
-          "pnl_pct": -1.82
+          "close": 17.25,
+          "pnl_pct": -1.47
         }
       }
     }
@@ -863,17 +863,17 @@
           "open": 16.0,
           "high": 16.73,
           "low": 15.93,
-          "close": 16.56,
-          "pnl_pct": -1.97
+          "close": 16.66,
+          "pnl_pct": -2.59
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 16.56,
-      "final_pnl_pct": -1.97,
+      "close_price": 16.66,
+      "final_pnl_pct": -2.59,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.6
+      "realized_pnl_usd": -14.62
     },
     {
       "ticker": "CTRE",
@@ -912,9 +912,9 @@
         },
         "2026-06-23": {
           "open": 37.86,
-          "high": 38.59,
+          "high": 38.81,
           "low": 37.69,
-          "close": 38.54,
+          "close": 38.8,
           "pnl_pct": -4.0
         }
       },
@@ -981,7 +981,7 @@
           "open": 15.78,
           "high": 17.07,
           "low": 15.78,
-          "close": 16.11,
+          "close": 16.1,
           "pnl_pct": -3.98
         }
       },
@@ -1011,7 +1011,7 @@
           "open": 16.17,
           "high": 16.83,
           "low": 16.01,
-          "close": 16.75,
+          "close": 16.67,
           "pnl_pct": -3.98
         }
       },
@@ -1054,9 +1054,9 @@
     "total_trades": 24,
     "win_trades": 12,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 192.97,
-    "open_unrealized_pnl_usd": -44.9,
-    "portfolio_value": 2148.07,
+    "total_realized_pnl_usd": 189.95,
+    "open_unrealized_pnl_usd": -48.85,
+    "portfolio_value": 2141.1,
     "updated_at": "2026-06-24"
   }
 }
