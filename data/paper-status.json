@@ -2,8 +2,8 @@
   "date": "2026-06-23",
   "live": false,
   "connected": true,
-  "nav": 1000439.29,
-  "cash": 974457.02,
+  "nav": 999909.63,
+  "cash": 974414.7,
   "positions": [
     {
       "sym": "ON",
@@ -16,33 +16,33 @@
       "slippage_pct": -1.01,
       "sim_price": 121.62,
       "delay_gap_pct": 7.07,
-      "target_usd": 80.0
+      "target_usd": 100.0
     },
     {
       "sym": "SPY",
       "shares": 16.0,
       "avg_fill": 745.82,
-      "cur_price": 744.2838745117188,
-      "change_pct": -0.21,
-      "pnl_usd": -24.58,
-      "today_price": 744.2838745117188,
-      "slippage_pct": 0.21,
+      "cur_price": 733.5399780273438,
+      "change_pct": -1.65,
+      "pnl_usd": -196.48,
+      "today_price": 733.5399780273438,
+      "slippage_pct": 1.67,
       "sim_price": null,
       "delay_gap_pct": null,
-      "target_usd": 1200.0
+      "target_usd": 0
     },
     {
       "sym": "STM",
       "shares": 9.0,
       "avg_fill": 80.25,
-      "cur_price": 79.80000305175781,
-      "change_pct": -0.56,
-      "pnl_usd": -4.05,
-      "today_price": 79.80000305175781,
-      "slippage_pct": 0.56,
+      "cur_price": 71.97000122070312,
+      "change_pct": -10.32,
+      "pnl_usd": -74.52,
+      "today_price": 71.97000122070312,
+      "slippage_pct": 11.5,
       "sim_price": 78.39,
       "delay_gap_pct": 2.37,
-      "target_usd": 80.0
+      "target_usd": 100.0
     },
     {
       "sym": "IESC",
@@ -55,33 +55,33 @@
       "slippage_pct": -2.29,
       "sim_price": 712.39,
       "delay_gap_pct": 3.52,
-      "target_usd": 80.0
+      "target_usd": 100.0
     },
     {
       "sym": "GFS",
       "shares": 8.0,
-      "avg_fill": 89.29,
+      "avg_fill": 89.28,
       "cur_price": 89.66999816894531,
-      "change_pct": 0.43,
-      "pnl_usd": 3.04,
+      "change_pct": 0.44,
+      "pnl_usd": 3.12,
       "today_price": 89.66999816894531,
-      "slippage_pct": -0.42,
+      "slippage_pct": -0.43,
       "sim_price": 85.83,
-      "delay_gap_pct": 4.03,
-      "target_usd": 80.0
+      "delay_gap_pct": 4.02,
+      "target_usd": 100.0
     },
     {
       "sym": "COHR",
       "shares": 1.0,
       "avg_fill": 413.5,
-      "cur_price": 425.42498779296875,
-      "change_pct": 2.88,
-      "pnl_usd": 11.92,
-      "today_price": 425.42498779296875,
-      "slippage_pct": -2.8,
+      "cur_price": 389.5,
+      "change_pct": -5.8,
+      "pnl_usd": -24.0,
+      "today_price": 389.5,
+      "slippage_pct": 6.16,
       "sim_price": 389.57,
       "delay_gap_pct": 6.14,
-      "target_usd": 80.0
+      "target_usd": 100.0
     },
     {
       "sym": "VICR",
@@ -94,7 +94,7 @@
       "slippage_pct": -1.38,
       "sim_price": 331.37,
       "delay_gap_pct": 8.79,
-      "target_usd": 80.0
+      "target_usd": 100.0
     },
     {
       "sym": "RVMD",
@@ -107,7 +107,7 @@
       "slippage_pct": -0.2,
       "sim_price": 162.99,
       "delay_gap_pct": 1.53,
-      "target_usd": 80.0
+      "target_usd": 100.0
     },
     {
       "sym": "AMD",
@@ -120,7 +120,7 @@
       "slippage_pct": 1.37,
       "sim_price": 537.37,
       "delay_gap_pct": 4.05,
-      "target_usd": 80.0
+      "target_usd": 100.0
     },
     {
       "sym": "HUT",
@@ -133,12 +133,12 @@
       "slippage_pct": 5.38,
       "sim_price": 124.44,
       "delay_gap_pct": 2.5,
-      "target_usd": 80.0
+      "target_usd": 100.0
     }
   ],
   "open_orders": 11,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -23.65,
-  "updated_at": "2026-06-23 04:05"
+  "total_unrealized_pnl": -301.86,
+  "updated_at": "2026-06-23 21:30"
 }
