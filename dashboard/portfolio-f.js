@@ -70,60 +70,6 @@ window.PORTFOLIO_F = {
       }
     },
     {
-      "ticker": "SBFG",
-      "name": "SBFG",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 22.51,
-      "allocated_usd": 500,
-      "shares": 22,
-      "t1_shares": 11,
-      "t2_shares": 11,
-      "actual_position_usd": 495.22,
-      "entry_commission": 1.0,
-      "take_profit_1": 20.82,
-      "take_profit_2": 19.13,
-      "stop_loss": 23.19,
-      "max_hold_date": "2026-06-23",
-      "day1_open": null,
-      "daily_prices": {
-        "2026-06-22": {
-          "open": 23.01,
-          "high": 23.08,
-          "low": 22.54,
-          "close": 23.03,
-          "pnl_pct": -2.31
-        }
-      }
-    },
-    {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "BUY",
-      "signal_date": "2026-06-19",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "t1_shares": 1,
-      "t2_shares": 2,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit_1": 149.44,
-      "take_profit_2": 159.86,
-      "stop_loss": 134.84,
-      "max_hold_date": "2026-06-24",
-      "day1_open": 140.64,
-      "daily_prices": {
-        "2026-06-22": {
-          "open": 140.64,
-          "high": 141.99,
-          "low": 137.61,
-          "close": 138.79,
-          "pnl_pct": -0.16
-        }
-      }
-    },
-    {
       "ticker": "WSBC",
       "name": "WSBC",
       "action": "SELL",
@@ -147,27 +93,15 @@ window.PORTFOLIO_F = {
           "low": 36.1,
           "close": 36.7,
           "pnl_pct": -1.13
+        },
+        "2026-06-23": {
+          "open": 36.68,
+          "high": 37.22,
+          "low": 36.59,
+          "close": 37.1,
+          "pnl_pct": -2.23
         }
       }
-    },
-    {
-      "ticker": "SWBI",
-      "name": "SWBI",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 16.08,
-      "allocated_usd": 500,
-      "shares": 31,
-      "t1_shares": 15,
-      "t2_shares": 16,
-      "actual_position_usd": 498.48,
-      "entry_commission": 1.0,
-      "take_profit_1": 14.88,
-      "take_profit_2": 13.67,
-      "stop_loss": 16.56,
-      "max_hold_date": "2026-06-25",
-      "day1_open": null,
-      "daily_prices": {}
     },
     {
       "ticker": "SNEX",
@@ -185,27 +119,16 @@ window.PORTFOLIO_F = {
       "take_profit_2": 118.16,
       "stop_loss": 143.18,
       "max_hold_date": "2026-06-25",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "t1_shares": 6,
-      "t2_shares": 7,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit_1": 33.57,
-      "take_profit_2": 30.85,
-      "stop_loss": 37.38,
-      "max_hold_date": "2026-06-25",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 135.42,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.25,
+          "low": 134.75,
+          "close": 137.8,
+          "pnl_pct": 0.87
+        }
+      }
     },
     {
       "ticker": "HOFT",
@@ -913,18 +836,155 @@ window.PORTFOLIO_F = {
       "commission_total": 2.0,
       "realized_pnl_usd": -16.88,
       "sl_unified": true
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 22.51,
+      "allocated_usd": 500,
+      "shares": 22,
+      "t1_shares": 11,
+      "t2_shares": 11,
+      "actual_position_usd": 495.22,
+      "entry_commission": 1.0,
+      "take_profit_1": 20.82,
+      "take_profit_2": 19.13,
+      "stop_loss": 23.19,
+      "max_hold_date": "2026-06-23",
+      "day1_open": null,
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 23.01,
+          "high": 23.08,
+          "low": 22.54,
+          "close": 23.03,
+          "pnl_pct": -2.31
+        },
+        "2026-06-23": {
+          "open": 23.22,
+          "high": 23.29,
+          "low": 22.8,
+          "close": 23.14,
+          "pnl_pct": -2.8
+        }
+      },
+      "t1_exit_date": "2026-06-23",
+      "t1_exit_price": 23.19,
+      "t1_exit_reason": "stop_loss",
+      "t2_exit_date": "2026-06-23",
+      "t2_exit_price": 23.19,
+      "t2_exit_reason": "stop_loss",
+      "t1_gross_pnl": -7.48,
+      "t2_gross_pnl": -7.48,
+      "close_date": "2026-06-23",
+      "close_reason": "stop_loss+stop_loss",
+      "final_pnl_pct": -3.02,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.96,
+      "sl_unified": true
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "t1_shares": 1,
+      "t2_shares": 2,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit_1": 149.44,
+      "take_profit_2": 159.86,
+      "stop_loss": 134.84,
+      "max_hold_date": "2026-06-24",
+      "day1_open": 140.64,
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 140.64,
+          "high": 141.99,
+          "low": 137.61,
+          "close": 138.79,
+          "pnl_pct": -0.16
+        },
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.25,
+          "low": 134.75,
+          "close": 137.8,
+          "pnl_pct": -0.87
+        }
+      },
+      "t1_exit_date": "2026-06-23",
+      "t1_exit_price": 134.84,
+      "t1_exit_reason": "stop_loss",
+      "t2_exit_date": "2026-06-23",
+      "t2_exit_price": 134.84,
+      "t2_exit_reason": "stop_loss",
+      "t1_gross_pnl": -4.17,
+      "t2_gross_pnl": -8.34,
+      "close_date": "2026-06-23",
+      "close_reason": "stop_loss+stop_loss",
+      "final_pnl_pct": -3.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -14.51,
+      "sl_unified": true
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 16.08,
+      "allocated_usd": 500,
+      "shares": 31,
+      "t1_shares": 15,
+      "t2_shares": 16,
+      "actual_position_usd": 498.48,
+      "entry_commission": 1.0,
+      "take_profit_1": 14.88,
+      "take_profit_2": 13.67,
+      "stop_loss": 16.56,
+      "max_hold_date": "2026-06-25",
+      "day1_open": 16.17,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 16.17,
+          "high": 16.83,
+          "low": 16.01,
+          "close": 16.75,
+          "pnl_pct": -4.17
+        }
+      },
+      "t1_exit_date": "2026-06-23",
+      "t1_exit_price": 16.56,
+      "t1_exit_reason": "stop_loss",
+      "t2_exit_date": "2026-06-23",
+      "t2_exit_price": 16.56,
+      "t2_exit_reason": "stop_loss",
+      "t1_gross_pnl": -7.2,
+      "t2_gross_pnl": -7.68,
+      "close_date": "2026-06-23",
+      "close_reason": "stop_loss+stop_loss",
+      "final_pnl_pct": -2.99,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.88,
+      "sl_unified": true
     }
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 14,
+    "total_trades": 17,
     "win_trades": 8,
-    "win_rate": 57.1,
-    "total_realized_pnl_usd": 107.74,
-    "open_unrealized_pnl_usd": -21.8,
-    "portfolio_value": 2085.94,
-    "total_commission_usd": 37.0,
-    "skipped_gap": 5,
+    "win_rate": 47.1,
+    "total_realized_pnl_usd": 59.39,
+    "open_unrealized_pnl_usd": -10.26,
+    "portfolio_value": 2049.13,
+    "total_commission_usd": 43.0,
+    "skipped_gap": 6,
     "skipped_zero_shares": 2,
     "updated_at": "2026-06-23"
   }

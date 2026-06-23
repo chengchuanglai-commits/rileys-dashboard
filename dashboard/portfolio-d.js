@@ -1,83 +1,7 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "BUY",
-      "signal_date": "2026-06-19",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 159.86,
-      "stop_loss": 134.84,
-      "max_hold_date": "2026-06-23",
-      "daily_prices": {
-        "2026-06-22": {
-          "open": 140.64,
-          "high": 141.99,
-          "low": 137.61,
-          "close": 138.79,
-          "pnl_pct": -0.16
-        }
-      }
-    },
-    {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-19",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit": 30.85,
-      "stop_loss": 37.38,
-      "max_hold_date": "2026-06-23",
-      "daily_prices": {
-        "2026-06-22": {
-          "open": 36.1,
-          "high": 36.85,
-          "low": 36.1,
-          "close": 36.7,
-          "pnl_pct": -1.13
-        }
-      }
-    },
-    {
-      "ticker": "SWBI",
-      "name": "SWBI",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 16.08,
-      "allocated_usd": 500,
-      "shares": 31,
-      "actual_position_usd": 498.48,
-      "entry_commission": 1.0,
-      "take_profit": 13.67,
-      "stop_loss": 16.56,
-      "max_hold_date": "2026-06-24",
-      "daily_prices": {}
-    },
     {
       "ticker": "SNEX",
       "name": "SNEX",
@@ -91,22 +15,15 @@ window.PORTFOLIO_D = {
       "take_profit": 118.16,
       "stop_loss": 143.18,
       "max_hold_date": "2026-06-24",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit": 30.85,
-      "stop_loss": 37.38,
-      "max_hold_date": "2026-06-24",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-23": {
+          "close": 137.8,
+          "pnl_pct": 0.87
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 135.42,
+      "day1_gap_pct": -2.58
     },
     {
       "ticker": "HOFT",
@@ -121,7 +38,15 @@ window.PORTFOLIO_D = {
       "take_profit": 14.45,
       "stop_loss": 17.51,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-23": {
+          "close": 17.31,
+          "pnl_pct": -1.82
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 16.99,
+      "day1_gap_pct": -0.06
     }
   ],
   "closed_positions": [
@@ -748,19 +673,121 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -13.44
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 159.86,
+      "stop_loss": 134.84,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 140.64,
+          "high": 141.99,
+          "low": 137.61,
+          "close": 138.79,
+          "pnl_pct": -0.16
+        },
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.25,
+          "low": 134.75,
+          "close": 137.8,
+          "pnl_pct": -3.0
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 134.84,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -14.51
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 30.85,
+      "stop_loss": 37.38,
+      "max_hold_date": "2026-06-23",
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 36.1,
+          "high": 36.85,
+          "low": 36.1,
+          "close": 36.7,
+          "pnl_pct": -1.13
+        },
+        "2026-06-23": {
+          "open": 36.68,
+          "high": 37.22,
+          "low": 36.59,
+          "close": 37.1,
+          "pnl_pct": -2.23
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 37.1,
+      "final_pnl_pct": -2.23,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -12.52
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 16.08,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 498.48,
+      "entry_commission": 1.0,
+      "take_profit": 13.67,
+      "stop_loss": 16.56,
+      "max_hold_date": "2026-06-24",
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 16.17,
+          "high": 16.83,
+          "low": 16.01,
+          "close": 16.75,
+          "pnl_pct": -2.99
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 16.56,
+      "final_pnl_pct": -2.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.9
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 18,
-    "win_trades": 7,
-    "win_rate": 38.9,
-    "total_realized_pnl_usd": 83.61,
-    "open_unrealized_pnl_usd": -8.0,
-    "portfolio_value": 2075.61,
-    "total_commission_usd": 36.0,
-    "skipped_gap": 5,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-23"
+    "total_trades": 21,
+    "win_trades": 9,
+    "win_rate": 42.9,
+    "total_realized_pnl_usd": 39.68,
+    "open_unrealized_pnl_usd": -4.75,
+    "portfolio_value": 2034.93,
+    "skipped_gap": 7,
+    "updated_at": "2026-06-24"
   }
 };

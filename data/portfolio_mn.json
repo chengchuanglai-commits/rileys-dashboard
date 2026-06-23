@@ -150,6 +150,74 @@
       },
       "position_usd": 205.88,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "DXCM",
+      "name": "DexCom Inc",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 69.2,
+      "allocated_usd": 500,
+      "shares": 7.2254,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 79.58,
+      "stop_loss": 67.82,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {},
+      "position_usd": 210.83,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 686.42,
+      "allocated_usd": 500,
+      "shares": 0.7284,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 789.38,
+      "stop_loss": 672.69,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {},
+      "position_usd": 210.83,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "ZS",
+      "name": "ZoomInfo Technologies",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 127.82,
+      "allocated_usd": 500,
+      "shares": 3.9118,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 146.99,
+      "stop_loss": 125.26,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {},
+      "position_usd": 210.83,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 1404.4,
+      "allocated_usd": 500,
+      "shares": 0.356,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "take_profit": 1615.06,
+      "stop_loss": 1376.31,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {},
+      "position_usd": 210.83,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1952,7 +2020,7 @@
     "total_commission_usd": 104.0,
     "skipped_gap": 27,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 52,
+    "skipped_no_cash": 55,
     "updated_at": "2026-06-23"
   }
 }
