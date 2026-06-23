@@ -6,7 +6,7 @@ from portfolio_compound import compound_frac20
 
 N_FULL = 40
 ALPHA_TARGET = 0.10
-ACTIVE_FLOOR = 0.40
+ACTIVE_FLOOR = 0.50   # 2026-06-23 Riley 由40→50:主动地板50%/指数50%(多10%进抗跌的动量腿)
 ACTIVE_CEILING = 0.70
 MOMMA_PRIOR = 0.10
 

@@ -23,7 +23,7 @@ def test_conviction_scales_with_sample():
     assert abs(mod.conviction_score(n=20, alpha=0.10, robust_ok=True) - 0.5) < 1e-9
 
 def test_active_fraction_floor_and_ceiling():
-    assert abs(mod.active_fraction(0.0) - 0.40) < 1e-9      # 零信念=地板(2026-06-20 Riley 调 30→40)
+    assert abs(mod.active_fraction(0.0) - 0.50) < 1e-9      # 零信念=地板(2026-06-20 Riley 调 30→40)
     assert abs(mod.active_fraction(1.0) - 0.70) < 1e-9      # 满信念=天花板
 
 def test_active_weights_prior_carries_floor():
