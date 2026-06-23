@@ -1,0 +1,14 @@
+{
+  "window": [
+    "2022-05-31",
+    "2026-06-18"
+  ],
+  "total_ret_pct": 134.2,
+  "cagr_pct": 23.5,
+  "spy_total_ret_pct": 91.6,
+  "corr_with_spy": 0.18,
+  "annual_vol_pct": 27.0,
+  "max_drawdown_pct": -25.7,
+  "crisis_days": 65,
+  "ret_during_crisis_pct": 6.8
+}
