@@ -3,13 +3,14 @@ from ib_insync import Stock, LimitOrder, StopOrder
 from scripts.ibkr.config import LIMIT_BUFFER, FRACTIONAL
 
 def check_gates(plan, max_order, max_total):
-    """plan: [{"sym","usd",...}]。返回 (ok, reason)。"""
+    """plan: [{"sym","usd","qty"...}]。返回 (ok, reason)。
+    总额只算**买入**(净新增敞口);卖出是回收资金不该计入——否则换仓(卖A买B)被绝对值之和误拦。"""
     for o in plan:
         if o["usd"] > max_order:
             return False, f"单笔 {o['sym']} ${o['usd']:.0f} > 上限 ${max_order:.0f}"
-    total = sum(o["usd"] for o in plan)
-    if total > max_total:
-        return False, f"总额 ${total:.0f} > 上限 ${max_total:.0f}"
+    buy_total = sum(o["usd"] for o in plan if o.get("qty", 0) > 0)   # 只算买入
+    if buy_total > max_total:
+        return False, f"买入总额 ${buy_total:.0f} > 上限 ${max_total:.0f}"
     return True, ""
 
 def place_limit(ib, sym, qty, price, fractional=FRACTIONAL):
