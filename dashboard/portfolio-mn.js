@@ -159,30 +159,30 @@ window.PORTFOLIO_MN = {
       "name": "能源精选ETF",
       "action": "BUY",
       "signal_date": "2026-05-19",
-      "entry_price": 61.29,
+      "entry_price": 60.85,
       "allocated_usd": 500,
-      "shares": 8.1579,
+      "shares": 8.2169,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 70.48,
-      "stop_loss": 60.06,
+      "take_profit": 69.98,
+      "stop_loss": 59.63,
       "max_hold_date": "2026-05-21",
       "daily_prices": {
         "2026-05-20": {
-          "open": 60.81,
-          "high": 61.7,
-          "low": 59.68,
-          "close": 59.8,
-          "pnl_pct": -2.01
+          "open": 60.37,
+          "high": 61.26,
+          "low": 59.25,
+          "close": 59.37,
+          "pnl_pct": -2.0
         }
       },
       "close_date": "2026-05-20",
-      "close_price": 60.06,
-      "final_pnl_pct": -2.01,
+      "close_price": 59.63,
+      "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.02,
+      "realized_pnl_usd": -4.0,
       "position_usd": 200.0
     },
     {
@@ -797,32 +797,32 @@ window.PORTFOLIO_MN = {
       "name": "Broadcom Inc.",
       "action": "BUY",
       "signal_date": "2026-06-02",
-      "entry_price": 481.57,
+      "entry_price": 480.81,
       "allocated_usd": 500,
-      "shares": 1.0383,
-      "actual_position_usd": 500.01,
+      "shares": 1.0399,
+      "actual_position_usd": 499.99,
       "entry_commission": 1.0,
-      "take_profit": 553.81,
-      "stop_loss": 471.94,
+      "take_profit": 552.93,
+      "stop_loss": 471.19,
       "max_hold_date": "2026-06-04",
       "daily_prices": {
         "2026-06-03": {
-          "open": 494.78,
-          "high": 495.0,
-          "low": 472.64,
-          "close": 479.23,
+          "open": 494.0,
+          "high": 494.22,
+          "low": 471.89,
+          "close": 478.47,
           "pnl_pct": -0.49
         },
         "2026-06-04": {
-          "open": 408.99,
-          "high": 426.48,
-          "low": 403.01,
-          "close": 418.91,
+          "open": 408.34,
+          "high": 425.81,
+          "low": 402.37,
+          "close": 418.25,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-04",
-      "close_price": 471.94,
+      "close_price": 471.19,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -1894,7 +1894,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-06-22",
       "daily_prices": {
         "2026-06-22": {
-          "open": 6.99,
+          "open": 7.03,
           "high": 7.43,
           "low": 6.93,
           "close": 7.28,
@@ -1947,13 +1947,13 @@ window.PORTFOLIO_MN = {
     "total_trades": 52,
     "win_trades": 18,
     "win_rate": 34.6,
-    "total_realized_pnl_usd": 108.26,
+    "total_realized_pnl_usd": 108.29,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2132.9,
+    "portfolio_value": 2132.93,
     "total_commission_usd": 104.0,
     "skipped_gap": 27,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 52,
-    "updated_at": "2026-06-22"
+    "updated_at": "2026-06-23"
   }
 };

@@ -1,7 +1,22 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {}
+    },
     {
       "ticker": "AMRX",
       "name": "AMRX",
@@ -31,6 +46,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.18
         },
         "2026-06-22": {
+          "open": 16.21,
+          "high": 16.4,
+          "low": 16.01,
           "close": 16.11,
           "pnl_pct": 0.8
         }
@@ -65,6 +83,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.05
         },
         "2026-06-22": {
+          "open": 36.99,
+          "high": 37.6,
+          "low": 36.79,
           "close": 37.49,
           "pnl_pct": -1.21
         }
@@ -85,6 +106,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-22": {
+          "open": 16.39,
+          "high": 16.4,
+          "low": 15.91,
           "close": 16.2,
           "pnl_pct": -2.27
         }
@@ -105,6 +129,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-22": {
+          "open": 23.01,
+          "high": 23.08,
+          "low": 22.54,
           "close": 23.03,
           "pnl_pct": -2.31
         }
@@ -125,6 +152,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-22": {
+          "open": 140.64,
+          "high": 141.99,
+          "low": 137.61,
           "close": 138.79,
           "pnl_pct": -0.16
         }
@@ -145,6 +175,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-22": {
+          "open": 36.1,
+          "high": 36.85,
+          "low": 36.1,
           "close": 36.7,
           "pnl_pct": -1.13
         }
@@ -163,12 +196,7 @@ window.PORTFOLIO_B = {
       "take_profit": 14.79,
       "stop_loss": 16.72,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {
-        "2026-06-22": {
-          "close": 16.45,
-          "pnl_pct": -2.3
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "SNEX",
@@ -183,12 +211,7 @@ window.PORTFOLIO_B = {
       "take_profit": 127.89,
       "stop_loss": 144.57,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {
-        "2026-06-22": {
-          "close": 138.79,
-          "pnl_pct": 0.16
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "WSBC",
@@ -203,12 +226,22 @@ window.PORTFOLIO_B = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {
-        "2026-06-22": {
-          "close": 36.7,
-          "pnl_pct": -1.13
-        }
-      }
+      "daily_prices": {}
+    },
+    {
+      "ticker": "HOFT",
+      "name": "HOFT",
+      "action": "SELL",
+      "signal_date": "2026-06-23",
+      "entry_price": 17.0,
+      "allocated_usd": 500,
+      "shares": 29,
+      "actual_position_usd": 493.0,
+      "entry_commission": 1.0,
+      "take_profit": 15.64,
+      "stop_loss": 17.68,
+      "max_hold_date": "2026-06-30",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -627,36 +660,6 @@ window.PORTFOLIO_B = {
       "realized_pnl_usd": -20.83
     },
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-10": {
-          "open": 11.78,
-          "high": 12.3,
-          "low": 10.85,
-          "close": 11.5,
-          "pnl_pct": 8.01
-        }
-      },
-      "close_date": "2026-06-10",
-      "close_price": 11.37,
-      "final_pnl_pct": 8.01,
-      "close_reason": "take_profit",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 37.6
-    },
-    {
       "ticker": "STRS",
       "name": "STRS",
       "action": "SELL",
@@ -909,7 +912,7 @@ window.PORTFOLIO_B = {
         "2026-06-22": {
           "open": 9.53,
           "high": 9.62,
-          "low": 9.38,
+          "low": 9.36,
           "close": 9.38,
           "pnl_pct": 4.38
         }
@@ -955,12 +958,14 @@ window.PORTFOLIO_B = {
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 20,
-    "win_trades": 12,
-    "win_rate": 60.0,
-    "total_realized_pnl_usd": 175.74,
-    "open_unrealized_pnl_usd": -47.75,
-    "portfolio_value": 2127.99,
+    "total_trades": 19,
+    "win_trades": 11,
+    "win_rate": 57.9,
+    "total_realized_pnl_usd": 138.14,
+    "open_unrealized_pnl_usd": -36.51,
+    "portfolio_value": 2101.63,
+    "total_commission_usd": 38.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-23"
   }
 };

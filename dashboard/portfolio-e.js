@@ -2,6 +2,25 @@ window.PORTFOLIO_E = {
   "capital_usd": 2000,
   "open_positions": [
     {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.12,
+      "stop_loss": 12.73,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-12",
+      "regime": "neutral",
+      "vix": 19.87,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
       "ticker": "AMRX",
       "name": "AMRX",
       "action": "SELL",
@@ -181,6 +200,25 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-25",
       "regime": "neutral",
       "vix": 17.28,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "HOFT",
+      "name": "HOFT",
+      "action": "SELL",
+      "signal_date": "2026-06-23",
+      "entry_price": 17.0,
+      "allocated_usd": 500,
+      "shares": 29,
+      "actual_position_usd": 493.0,
+      "entry_commission": 1.0,
+      "take_profit": 15.3,
+      "stop_loss": 17.51,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-26",
+      "regime": "neutral",
+      "vix": 19.76,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -500,39 +538,6 @@ window.PORTFOLIO_E = {
       "realized_pnl_usd": -16.16
     },
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.12,
-      "stop_loss": 12.73,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-12",
-      "regime": "neutral",
-      "vix": 19.87,
-      "daily_prices": {
-        "2026-06-10": {
-          "open": 11.78,
-          "high": 12.3,
-          "low": 10.85,
-          "close": 11.5,
-          "pnl_pct": 10.03
-        }
-      },
-      "close_date": "2026-06-10",
-      "close_price": 11.12,
-      "final_pnl_pct": 10.03,
-      "close_reason": "take_profit",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 47.59
-    },
-    {
       "ticker": "PBHC",
       "name": "PBHC",
       "action": "SELL",
@@ -749,16 +754,16 @@ window.PORTFOLIO_E = {
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 14,
-    "win_trades": 8,
-    "win_rate": 57.1,
-    "total_realized_pnl_usd": 155.89,
+    "total_trades": 13,
+    "win_trades": 7,
+    "win_rate": 53.8,
+    "total_realized_pnl_usd": 108.3,
     "open_unrealized_pnl_usd": -20.13,
-    "portfolio_value": 2135.76,
-    "total_commission_usd": 28.0,
+    "portfolio_value": 2088.17,
+    "total_commission_usd": 26.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 4,
-    "updated_at": "2026-06-22"
+    "updated_at": "2026-06-23"
   }
 };

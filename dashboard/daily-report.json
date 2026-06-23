@@ -1,47 +1,134 @@
 {
   "date": "2026-06-23",
-  "generated_at": "2026-06-23T04:51:00",
+  "generated_at": "2026-06-23T19:46:00",
   "pipeline": {
-    "morning_note_found": false,
-    "signal_file_found": false,
-    "signals_generated": 0
+    "morning_note_found": true,
+    "signal_file_found": true,
+    "signals_generated": 1
   },
   "data_quality": [
     {
       "check": "晨报文件",
-      "pass": false,
+      "pass": true,
       "detail": "2026-06-23"
     },
     {
       "check": "信号文件",
-      "pass": false,
+      "pass": true,
       "detail": "2026-06-23"
     },
     {
       "check": "昨日准确率填充",
-      "pass": false,
-      "detail": "0 条已验证"
+      "pass": true,
+      "detail": "3 条已验证"
     },
     {
       "check": "无警告",
-      "pass": false,
-      "detail": "3 条警告"
+      "pass": true,
+      "detail": "0 条警告"
     }
   ],
-  "signals_today": [],
+  "signals_today": [
+    {
+      "ticker": "HOFT",
+      "action": "SELL",
+      "current_price": 17.0,
+      "target_price": 18.7,
+      "stop_loss": 16.15
+    }
+  ],
   "accuracy_update": {
     "date": "2026-06-22",
     "total": 3,
-    "verified": 0,
-    "pending": 3,
-    "results": []
+    "verified": 3,
+    "pending": 0,
+    "results": [
+      {
+        "ticker": "SWBI",
+        "action": "SELL",
+        "entry": 16.08,
+        "open": 16.09,
+        "actual": 16.45,
+        "pct": 2.24,
+        "pct_from_signal": 2.3,
+        "correct": false,
+        "correct_direction": false
+      },
+      {
+        "ticker": "SNEX",
+        "action": "SELL",
+        "entry": 139.01,
+        "open": 140.64,
+        "actual": 138.79,
+        "pct": -1.32,
+        "pct_from_signal": -0.16,
+        "correct": true,
+        "correct_direction": true
+      },
+      {
+        "ticker": "WSBC",
+        "action": "SELL",
+        "entry": 36.29,
+        "open": 36.1,
+        "actual": 36.7,
+        "pct": 1.66,
+        "pct_from_signal": 1.13,
+        "correct": false,
+        "correct_direction": false
+      }
+    ]
   },
   "running_totals": {
-    "total_signals_verified": 31,
-    "total_signals_active": 27,
+    "total_signals_verified": 34,
+    "total_signals_active": 30,
     "total_signals_hold": 4,
-    "hold_rate_pct": 12.9,
+    "hold_rate_pct": 11.8,
     "signals_history": [
+      {
+        "date": "2026-06-22",
+        "ticker": "WSBC",
+        "name": "WSBC",
+        "action": "SELL",
+        "signal_price": 36.29,
+        "open_price": 36.1,
+        "close_price": 36.7,
+        "pct_change": 1.66,
+        "pct_from_signal": 1.13,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-22",
+        "ticker": "SNEX",
+        "name": "SNEX",
+        "action": "SELL",
+        "signal_price": 139.01,
+        "open_price": 140.64,
+        "close_price": 138.79,
+        "pct_change": -1.32,
+        "pct_from_signal": -0.16,
+        "correct": true,
+        "correct_direction": true,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
+      {
+        "date": "2026-06-22",
+        "ticker": "SWBI",
+        "name": "SWBI",
+        "action": "SELL",
+        "signal_price": 16.08,
+        "open_price": 16.09,
+        "close_price": 16.45,
+        "pct_change": 2.24,
+        "pct_from_signal": 2.3,
+        "correct": false,
+        "correct_direction": false,
+        "limit_filled": true,
+        "gap_filtered": false
+      },
       {
         "date": "2026-06-19",
         "ticker": "WSBC",
@@ -523,7 +610,8 @@
       "2026-06-15",
       "2026-06-16",
       "2026-06-18",
-      "2026-06-19"
+      "2026-06-19",
+      "2026-06-22"
     ],
     "cum_capital_a": [
       2000.0,
@@ -538,6 +626,7 @@
       2268.64,
       2273.74,
       2294.21,
+      NaN,
       NaN,
       NaN,
       NaN,
@@ -559,6 +648,7 @@
       NaN,
       NaN,
       NaN,
+      NaN,
       NaN
     ],
     "cum_capital_c": [
@@ -574,6 +664,7 @@
       2288.87,
       2294.02,
       2314.66,
+      NaN,
       NaN,
       NaN,
       NaN,
@@ -595,11 +686,12 @@
       2139.0,
       2139.0,
       2045.74,
-      2045.74
+      2045.74,
+      2023.44
     ],
-    "correct": 16,
-    "accuracy_rate": 0.516,
-    "accuracy_pct": "51.6%",
+    "correct": 17,
+    "accuracy_rate": 0.5,
+    "accuracy_pct": "50.0%",
     "simulated_capital": NaN,
     "simulated_pnl_usd": NaN,
     "simulated_pnl_pct": "+nan%",
@@ -618,11 +710,12 @@
       NaN,
       NaN,
       NaN,
+      NaN,
       NaN
     ],
-    "correct_direction": 14,
-    "accuracy_direction_rate": 0.452,
-    "accuracy_direction_pct": "45.2%",
+    "correct_direction": 15,
+    "accuracy_direction_rate": 0.441,
+    "accuracy_direction_pct": "44.1%",
     "simulated_capital_direction": NaN,
     "simulated_pnl_direction_usd": NaN,
     "simulated_pnl_direction_pct": "+nan%",
@@ -641,12 +734,13 @@
       NaN,
       NaN,
       NaN,
+      NaN,
       NaN
     ],
-    "total_gap_filtered": 23,
-    "correct_gap": 12,
-    "accuracy_gap_rate": 0.522,
-    "accuracy_gap_pct": "52.2%",
+    "total_gap_filtered": 26,
+    "correct_gap": 13,
+    "accuracy_gap_rate": 0.5,
+    "accuracy_gap_pct": "50.0%",
     "simulated_capital_gap": NaN,
     "simulated_pnl_gap_usd": NaN,
     "simulated_pnl_gap_pct": "+nan%",
@@ -665,16 +759,17 @@
       NaN,
       NaN,
       NaN,
+      NaN,
       NaN
     ],
     "gap_cost_usd": NaN,
-    "total_limit": 22,
-    "correct_limit": 11,
-    "accuracy_limit_rate": 0.5,
-    "accuracy_limit_pct": "50.0%",
-    "simulated_capital_limit": 2045.74,
-    "simulated_pnl_limit_usd": 45.74,
-    "simulated_pnl_limit_pct": "+2.29%",
+    "total_limit": 25,
+    "correct_limit": 12,
+    "accuracy_limit_rate": 0.48,
+    "accuracy_limit_pct": "48.0%",
+    "simulated_capital_limit": 2023.44,
+    "simulated_pnl_limit_usd": 23.44,
+    "simulated_pnl_limit_pct": "+1.17%",
     "daily_returns_limit": [
       2.6,
       1.38,
@@ -690,13 +785,10 @@
       0.0,
       0.0,
       -4.36,
-      0.0
+      0.0,
+      -1.09
     ]
   },
-  "warnings": [
-    "晨报文件不存在: dashboard/morning-note-history/2026-06-23.json（周末/节假日正常）",
-    "信号文件不存在: dashboard/trading-signals-history/2026-06-23.json",
-    "昨日信号未完成验证: ['SWBI', 'SNEX', 'WSBC']（可能是节假日，次交易日自动补填）"
-  ],
-  "api_cost_usd": 0.0
+  "warnings": [],
+  "api_cost_usd": 3.2494
 }

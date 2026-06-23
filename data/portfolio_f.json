@@ -112,11 +112,11 @@
       "take_profit_2": 159.86,
       "stop_loss": 134.84,
       "max_hold_date": "2026-06-24",
-      "day1_open": 140.62,
+      "day1_open": 140.64,
       "daily_prices": {
         "2026-06-22": {
-          "open": 140.62,
-          "high": 141.96,
+          "open": 140.64,
+          "high": 141.99,
           "low": 137.61,
           "close": 138.79,
           "pnl_pct": -0.16
@@ -204,6 +204,25 @@
       "take_profit_2": 30.85,
       "stop_loss": 37.38,
       "max_hold_date": "2026-06-25",
+      "day1_open": null,
+      "daily_prices": {}
+    },
+    {
+      "ticker": "HOFT",
+      "name": "HOFT",
+      "action": "SELL",
+      "signal_date": "2026-06-23",
+      "entry_price": 17.0,
+      "allocated_usd": 500,
+      "shares": 29,
+      "t1_shares": 14,
+      "t2_shares": 15,
+      "actual_position_usd": 493.0,
+      "entry_commission": 1.0,
+      "take_profit_1": 15.72,
+      "take_profit_2": 14.45,
+      "stop_loss": 17.51,
+      "max_hold_date": "2026-06-26",
       "day1_open": null,
       "daily_prices": {}
     }
@@ -642,54 +661,6 @@
       "sl_unified": true
     },
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "t1_shares": 20,
-      "t2_shares": 20,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit_1": 11.43,
-      "take_profit_2": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-12",
-      "day1_open": 11.78,
-      "daily_prices": {
-        "2026-06-10": {
-          "open": 11.78,
-          "high": 12.3,
-          "low": 10.85,
-          "close": 11.5,
-          "pnl_pct": 6.96
-        },
-        "2026-06-11": {
-          "open": 11.89,
-          "high": 12.0,
-          "low": 10.26,
-          "close": 11.55,
-          "pnl_pct": 6.55
-        }
-      },
-      "t1_exit_date": "2026-06-10",
-      "t1_exit_price": 11.43,
-      "t1_exit_reason": "take_profit_1",
-      "t2_exit_date": "2026-06-11",
-      "t2_exit_price": 10.51,
-      "t2_exit_reason": "take_profit_2",
-      "t1_gross_pnl": 18.6,
-      "t2_gross_pnl": 37.0,
-      "close_date": "2026-06-11",
-      "close_reason": "take_profit_1+take_profit_2",
-      "final_pnl_pct": 11.25,
-      "commission_total": 3.0,
-      "realized_pnl_usd": 52.6,
-      "sl_unified": false
-    },
-    {
       "ticker": "PBHC",
       "name": "PBHC",
       "action": "SELL",
@@ -946,15 +917,15 @@
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 15,
-    "win_trades": 9,
-    "win_rate": 60.0,
-    "total_realized_pnl_usd": 160.34,
+    "total_trades": 14,
+    "win_trades": 8,
+    "win_rate": 57.1,
+    "total_realized_pnl_usd": 107.74,
     "open_unrealized_pnl_usd": -21.8,
-    "portfolio_value": 2138.54,
-    "total_commission_usd": 40.0,
+    "portfolio_value": 2085.94,
+    "total_commission_usd": 37.0,
     "skipped_gap": 5,
     "skipped_zero_shares": 2,
-    "updated_at": "2026-06-22"
+    "updated_at": "2026-06-23"
   }
 }
