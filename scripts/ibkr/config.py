@@ -19,3 +19,8 @@ INIT_STOP_PCT = 0.08      # 单仓 -8% 固定 stop
 LIMIT_BUFFER = 0.01       # 限价缓冲
 
 LEG_PORT = {"momma": "data/portfolio_momma.json", "bq": "data/portfolio_bq.json"}
+
+# 指数核心标的(2026-06-23 Riley 由SPY换QQQ:长期收益更高、夏普更优,风险可接受;
+# 抗跌交给动量腿=进攻QQQ/防守动量腿分工)。改这一处即全局生效。
+INDEX_SYM = "QQQ"
+INDEX_CORE_SYMS = {"QQQ", "SPY", "VOO", "VTI"}   # 这些都算指数核心,豁免20MA出场

@@ -1,6 +1,6 @@
 """引擎配置 allocation.json + 各腿持仓 → {symbol: target_usd}。"""
 import json
-from scripts.ibkr.config import NOTIONAL, LEG_PORT
+from scripts.ibkr.config import NOTIONAL, LEG_PORT, INDEX_SYM
 
 def _load(p, d=None):
     try: return json.load(open(p))
@@ -12,7 +12,7 @@ def build_targets(alloc_path="data/allocation.json", leg_paths=None, notional=NO
     if not a: return {}
     t = {}
     if a.get("index_pct", 0) * notional > 0:
-        t["SPY"] = a["index_pct"] * notional
+        t[INDEX_SYM] = a["index_pct"] * notional   # 指数核心(config.INDEX_SYM=QQQ)
     for leg, w in a.get("final_allocation", {}).items():
         amt = w * notional
         if amt <= 0: continue

@@ -4,10 +4,9 @@ import os, json, time
 import numpy as np
 from scripts.ibkr.client import connect, health
 from scripts.ibkr.orders import place_limit
-from scripts.ibkr.config import LIVE
+from scripts.ibkr.config import LIVE, INDEX_CORE_SYMS as INDEX_CORE
 from scripts.ibkr.notify import send
-
-INDEX_CORE = {"SPY", "VOO", "VTI"}   # 指数核心:长期持有,豁免20MA出场
+# 指数核心(config.INDEX_CORE_SYMS):长期持有,豁免20MA出场
 
 def _momentum_syms():
     """哪些持仓属于动量腿(MOM-MA)——只有这些走20MA出场。读 momma 持仓。"""

@@ -6,7 +6,7 @@
     <script>
     // 强制绕过 CDN 缓存：跳转到带版本号的 URL，CDN 对新 URL 没有缓存
     (function(){
-      var BUILD="20260623035247";
+      var BUILD="20260623044528";
       if(new URLSearchParams(location.search).get('_v')!==BUILD){
         location.replace(location.pathname+'?_v='+BUILD+(location.hash||''));
       }
@@ -4852,7 +4852,7 @@ var CAPITAL = 2000;
   var rows = '';
   rows += '<div style="display:flex;align-items:baseline;gap:10px;padding:12px 14px;background:var(--c-bg);border-radius:var(--r-inner);margin-bottom:8px">' +
       '<span style="font-size:22px;font-weight:800;color:var(--c-text);font-family:Poppins,sans-serif;white-space:nowrap">'+fmt$(idxUsd)+'</span>' +
-      '<span style="font-size:13px;color:var(--c-text-2);line-height:1.5">指数 → 买 <b style="color:var(--c-text)">SPY（或 VOO）</b>约 '+fmt$(idxUsd)+'</span></div>';
+      '<span style="font-size:13px;color:var(--c-text-2);line-height:1.5">指数 → 买 <b style="color:var(--c-text)">QQQ</b>约 '+fmt$(idxUsd)+'</span></div>';
 
   Object.keys(A.final_allocation).forEach(function(k){
     var frac = A.final_allocation[k];
