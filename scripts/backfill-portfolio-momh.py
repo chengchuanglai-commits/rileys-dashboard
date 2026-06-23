@@ -116,7 +116,10 @@ def main():
 def _finalize(held, closed, commission_total, posmap, ohlc, cal, today):
     opens = []
     for tk, pos in held.items():
+        # 用该 ticker 自己最新收盘价(不依赖cal[-1],避免跨ticker日期对不上→浮盈算成0)
         p = posmap.get(tk, {}).get(cal[-1])
+        if p is None and ohlc.get(tk, {}).get("C") is not None and len(ohlc[tk]["C"]):
+            p = len(ohlc[tk]["C"]) - 1
         cur = float(ohlc[tk]["C"][p]) if p is not None else pos["entry_price"]
         d = {k: pos[k] for k in pos if k != "pos"}
         d["_unreal"] = round(pos["shares"] * (cur - pos["entry_price"]), 2)
