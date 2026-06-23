@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-26",
-      "day1_open": 36.59,
+      "day1_open": 36.68,
       "daily_prices": {
         "2026-06-22": {
           "open": 36.1,
@@ -32,7 +32,7 @@ window.PORTFOLIO_C = {
       "position_usd": 211.77,
       "unrealized_pnl_usd": -5.78,
       "gap_checked": true,
-      "day1_gap_pct": 0.83
+      "day1_gap_pct": 1.07
     },
     {
       "ticker": "SNEX",
@@ -72,7 +72,7 @@ window.PORTFOLIO_C = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-29",
-      "day1_open": 36.59,
+      "day1_open": 36.68,
       "daily_prices": {
         "2026-06-23": {
           "close": 37.28,
@@ -82,7 +82,7 @@ window.PORTFOLIO_C = {
       "position_usd": 212.69,
       "unrealized_pnl_usd": -5.81,
       "gap_checked": true,
-      "day1_gap_pct": 0.83
+      "day1_gap_pct": 1.07
     },
     {
       "ticker": "HOFT",

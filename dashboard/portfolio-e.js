@@ -115,7 +115,7 @@ window.PORTFOLIO_E = {
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "open": 36.59,
+          "open": 36.68,
           "high": 37.35,
           "low": 36.59,
           "close": 37.28,
@@ -171,7 +171,7 @@ window.PORTFOLIO_E = {
       "vix": 17.28,
       "daily_prices": {
         "2026-06-23": {
-          "open": 36.59,
+          "open": 36.68,
           "high": 37.35,
           "low": 36.59,
           "close": 37.28,
@@ -179,7 +179,7 @@ window.PORTFOLIO_E = {
         }
       },
       "gap_checked": true,
-      "day1_open": 36.59
+      "day1_open": 36.68
     },
     {
       "ticker": "HOFT",
@@ -196,7 +196,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-06-26",
       "regime": "neutral",
-      "vix": 19.61,
+      "vix": 19.49,
       "daily_prices": {},
       "gap_checked": true
     }
