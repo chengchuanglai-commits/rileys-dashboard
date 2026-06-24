@@ -15,10 +15,12 @@
 const REPO = "chengchuanglai-commits/rileys-dashboard";
 const WORKFLOW = "trading-signals.yml";          // 默认(手动触发用)
 const DEEPSEEK_WF = "deepseek-broad.yml";
+const MULTIFACTOR_WF = "multifactor-bq.yml";     // 多因子量化+动量+更新allocation(决策引擎配置,IBKR自检靠它)
 // 哪个 cron 派发哪个工作流
 const CRON_WF = {
-  "30 11 * * 1-5": WORKFLOW,       // 11:30 主信号
-  "0 12 * * 1-5":  DEEPSEEK_WF,    // 12:00 DeepSeek 广撒
+  "30 11 * * 1-5": WORKFLOW,         // 11:30 主信号
+  "0 12 * * 1-5":  DEEPSEEK_WF,      // 12:00 DeepSeek 广撒
+  "30 12 * * 1-5": MULTIFACTOR_WF,   // 12:30 多因子量化(更新allocation,绝不能漏→IBKR自检会失败)
 };
 
 async function dispatch(env, workflow = WORKFLOW) {
