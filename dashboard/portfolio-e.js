@@ -115,8 +115,8 @@ window.PORTFOLIO_E = {
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "open": 36.68,
-          "high": 37.35,
+          "open": 36.59,
+          "high": 37.36,
           "low": 36.59,
           "close": 37.28,
           "pnl_pct": -2.73
@@ -144,7 +144,7 @@ window.PORTFOLIO_E = {
       "daily_prices": {
         "2026-06-23": {
           "open": 135.42,
-          "high": 141.25,
+          "high": 141.27,
           "low": 134.75,
           "close": 137.94,
           "pnl_pct": 0.77
@@ -171,15 +171,15 @@ window.PORTFOLIO_E = {
       "vix": 17.28,
       "daily_prices": {
         "2026-06-23": {
-          "open": 36.68,
-          "high": 37.35,
+          "open": 36.59,
+          "high": 37.36,
           "low": 36.59,
           "close": 37.28,
           "pnl_pct": -2.73
         }
       },
       "gap_checked": true,
-      "day1_open": 36.68
+      "day1_open": 36.59
     },
     {
       "ticker": "HOFT",
@@ -197,6 +197,63 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-26",
       "regime": "neutral",
       "vix": 19.49,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 279.44,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 279.44,
+      "entry_commission": 1.0,
+      "take_profit": 251.5,
+      "stop_loss": 287.82,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-29",
+      "regime": "neutral",
+      "vix": 19.08,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29,
+      "actual_position_usd": 483.43,
+      "entry_commission": 1.0,
+      "take_profit": 15.0,
+      "stop_loss": 17.17,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-29",
+      "regime": "neutral",
+      "vix": 19.08,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.5,
+      "entry_commission": 1.0,
+      "take_profit": 32.85,
+      "stop_loss": 37.59,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-29",
+      "regime": "neutral",
+      "vix": 19.08,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -754,7 +811,7 @@ window.PORTFOLIO_E = {
           "pnl_pct": -2.31
         },
         "2026-06-23": {
-          "open": 23.22,
+          "open": 22.93,
           "high": 23.29,
           "low": 22.8,
           "close": 23.15,
@@ -788,8 +845,8 @@ window.PORTFOLIO_E = {
       "daily_prices": {
         "2026-06-23": {
           "open": 16.17,
-          "high": 16.83,
-          "low": 16.01,
+          "high": 17.5,
+          "low": 16.02,
           "close": 16.67,
           "pnl_pct": -2.99
         }
@@ -815,6 +872,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 4,
-    "updated_at": "2026-06-23"
+    "updated_at": "2026-06-24"
   }
 };

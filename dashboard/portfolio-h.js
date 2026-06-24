@@ -35,14 +35,14 @@ window.PORTFOLIO_H = {
       "daily_prices": {
         "2026-06-23": {
           "open": 135.42,
-          "high": 141.25,
+          "high": 141.27,
           "low": 134.75,
-          "close": 138.52,
-          "pnl_pct": 0.35
+          "close": 137.94,
+          "pnl_pct": 0.77
         }
       },
       "position_usd": 204.71,
-      "unrealized_pnl_usd": 0.72
+      "unrealized_pnl_usd": 1.58
     },
     {
       "ticker": "HOFT",
@@ -58,7 +58,58 @@ window.PORTFOLIO_H = {
       "stop_loss": 17.34,
       "max_hold_date": "2026-06-25",
       "daily_prices": {},
-      "position_usd": 203.48,
+      "position_usd": 203.07,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 279.44,
+      "allocated_usd": 500,
+      "shares": 1.7893,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 237.52,
+      "stop_loss": 285.03,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {},
+      "position_usd": 203.07,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29.994,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 14.17,
+      "stop_loss": 17.0,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {},
+      "position_usd": 203.07,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13.6986,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 31.02,
+      "stop_loss": 37.23,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {},
+      "position_usd": 203.07,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -745,9 +796,9 @@ window.PORTFOLIO_H = {
         },
         "2026-06-23": {
           "open": 135.42,
-          "high": 141.25,
+          "high": 141.27,
           "low": 134.75,
-          "close": 138.52,
+          "close": 137.94,
           "pnl_pct": -2.0
         }
       },
@@ -782,10 +833,10 @@ window.PORTFOLIO_H = {
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "open": 36.68,
-          "high": 37.22,
+          "open": 36.59,
+          "high": 37.36,
           "low": 36.59,
-          "close": 37.08,
+          "close": 37.28,
           "pnl_pct": -2.01
         }
       },
@@ -814,9 +865,9 @@ window.PORTFOLIO_H = {
       "daily_prices": {
         "2026-06-23": {
           "open": 16.17,
-          "high": 16.73,
-          "low": 16.01,
-          "close": 16.58,
+          "high": 17.5,
+          "low": 16.02,
+          "close": 16.67,
           "pnl_pct": -1.99
         }
       },
@@ -828,18 +879,49 @@ window.PORTFOLIO_H = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.07,
       "position_usd": 204.71
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13.7779,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 30.85,
+      "stop_loss": 37.02,
+      "max_hold_date": "2026-06-24",
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.36,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 37.02,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 204.71
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 22,
+    "total_trades": 23,
     "win_trades": 6,
-    "win_rate": 27.3,
-    "total_realized_pnl_usd": 34.8,
-    "open_unrealized_pnl_usd": 0.72,
-    "portfolio_value": 2035.52,
-    "total_commission_usd": 44.0,
-    "skipped_gap": 6,
+    "win_rate": 26.1,
+    "total_realized_pnl_usd": 30.69,
+    "open_unrealized_pnl_usd": 1.58,
+    "portfolio_value": 2032.27,
+    "total_commission_usd": 46.0,
+    "skipped_gap": 5,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
     "updated_at": "2026-06-24"
