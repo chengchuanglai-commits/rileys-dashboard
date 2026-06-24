@@ -1,7 +1,58 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 206.03,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 150.13,
+      "stop_loss": 133.45,
+      "max_hold_date": "2026-06-26",
+      "day1_open": 140.64,
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 140.64,
+          "high": 141.99,
+          "low": 137.61,
+          "close": 138.79,
+          "pnl_pct": -0.16
+        },
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.25,
+          "low": 134.75,
+          "close": 138.74,
+          "pnl_pct": -0.19
+        }
+      },
+      "position_usd": 211.77,
+      "unrealized_pnl_usd": -0.4
+    },
     {
       "ticker": "WSBC",
       "name": "WSBC",
@@ -15,7 +66,7 @@ window.PORTFOLIO_C = {
       "take_profit": 33.39,
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-26",
-      "day1_open": 36.68,
+      "day1_open": 36.1,
       "daily_prices": {
         "2026-06-22": {
           "open": 36.1,
@@ -25,14 +76,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": -1.13
         },
         "2026-06-23": {
-          "close": 37.28,
-          "pnl_pct": -2.73
+          "open": 36.68,
+          "high": 37.22,
+          "low": 36.59,
+          "close": 37.11,
+          "pnl_pct": -2.26
         }
       },
       "position_usd": 211.77,
-      "unrealized_pnl_usd": -5.78,
-      "gap_checked": true,
-      "day1_gap_pct": 1.07
+      "unrealized_pnl_usd": -4.79
     },
     {
       "ticker": "SNEX",
@@ -50,14 +102,15 @@ window.PORTFOLIO_C = {
       "day1_open": 135.42,
       "daily_prices": {
         "2026-06-23": {
-          "close": 137.94,
-          "pnl_pct": 0.77
+          "open": 135.42,
+          "high": 141.25,
+          "low": 134.75,
+          "close": 138.74,
+          "pnl_pct": 0.19
         }
       },
       "position_usd": 212.69,
-      "unrealized_pnl_usd": 1.64,
-      "gap_checked": true,
-      "day1_gap_pct": -2.58
+      "unrealized_pnl_usd": 0.4
     },
     {
       "ticker": "WSBC",
@@ -75,14 +128,15 @@ window.PORTFOLIO_C = {
       "day1_open": 36.68,
       "daily_prices": {
         "2026-06-23": {
-          "close": 37.28,
-          "pnl_pct": -2.73
+          "open": 36.68,
+          "high": 37.22,
+          "low": 36.59,
+          "close": 37.12,
+          "pnl_pct": -2.29
         }
       },
       "position_usd": 212.69,
-      "unrealized_pnl_usd": -5.81,
-      "gap_checked": true,
-      "day1_gap_pct": 1.07
+      "unrealized_pnl_usd": -4.87
     },
     {
       "ticker": "HOFT",
@@ -97,17 +151,10 @@ window.PORTFOLIO_C = {
       "take_profit": 15.64,
       "stop_loss": 17.68,
       "max_hold_date": "2026-06-30",
-      "day1_open": 16.99,
-      "daily_prices": {
-        "2026-06-23": {
-          "close": 17.25,
-          "pnl_pct": -1.47
-        }
-      },
-      "position_usd": 210.45,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.06
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 210.52,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -737,7 +784,7 @@ window.PORTFOLIO_C = {
         },
         "2026-06-23": {
           "open": 16.0,
-          "high": 16.73,
+          "high": 16.66,
           "low": 15.93,
           "close": 16.66,
           "pnl_pct": -2.59
@@ -790,19 +837,19 @@ window.PORTFOLIO_C = {
         },
         "2026-06-23": {
           "open": 37.86,
-          "high": 38.81,
+          "high": 38.43,
           "low": 37.69,
-          "close": 38.8,
-          "pnl_pct": -4.0
+          "close": 38.4,
+          "pnl_pct": -3.67
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 38.52,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
+      "close_price": 38.4,
+      "final_pnl_pct": -3.67,
+      "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -8.44,
+      "realized_pnl_usd": -7.74,
       "position_usd": 211.01
     },
     {
@@ -822,9 +869,9 @@ window.PORTFOLIO_C = {
       "daily_prices": {
         "2026-06-23": {
           "open": 16.17,
-          "high": 16.83,
+          "high": 16.73,
           "low": 16.01,
-          "close": 16.67,
+          "close": 16.6,
           "pnl_pct": -3.98
         }
       },
@@ -843,10 +890,12 @@ window.PORTFOLIO_C = {
     "total_trades": 17,
     "win_trades": 11,
     "win_rate": 64.7,
-    "total_realized_pnl_usd": 104.5,
-    "open_unrealized_pnl_usd": -30.8,
-    "portfolio_value": 2073.7,
-    "skipped_gap": 9,
+    "total_realized_pnl_usd": 105.19,
+    "open_unrealized_pnl_usd": -9.65,
+    "portfolio_value": 2095.54,
+    "total_commission_usd": 34.0,
+    "skipped_gap": 7,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-24"
   }
 };

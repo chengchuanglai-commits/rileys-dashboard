@@ -37,12 +37,12 @@ window.PORTFOLIO_H = {
           "open": 135.42,
           "high": 141.25,
           "low": 134.75,
-          "close": 137.94,
-          "pnl_pct": 0.77
+          "close": 138.52,
+          "pnl_pct": 0.35
         }
       },
       "position_usd": 204.71,
-      "unrealized_pnl_usd": 1.58
+      "unrealized_pnl_usd": 0.72
     },
     {
       "ticker": "HOFT",
@@ -747,7 +747,7 @@ window.PORTFOLIO_H = {
           "open": 135.42,
           "high": 141.25,
           "low": 134.75,
-          "close": 137.94,
+          "close": 138.52,
           "pnl_pct": -2.0
         }
       },
@@ -783,9 +783,9 @@ window.PORTFOLIO_H = {
         },
         "2026-06-23": {
           "open": 36.68,
-          "high": 37.35,
+          "high": 37.22,
           "low": 36.59,
-          "close": 37.28,
+          "close": 37.08,
           "pnl_pct": -2.01
         }
       },
@@ -814,9 +814,9 @@ window.PORTFOLIO_H = {
       "daily_prices": {
         "2026-06-23": {
           "open": 16.17,
-          "high": 16.83,
+          "high": 16.73,
           "low": 16.01,
-          "close": 16.67,
+          "close": 16.58,
           "pnl_pct": -1.99
         }
       },
@@ -836,12 +836,12 @@ window.PORTFOLIO_H = {
     "win_trades": 6,
     "win_rate": 27.3,
     "total_realized_pnl_usd": 34.8,
-    "open_unrealized_pnl_usd": 1.58,
-    "portfolio_value": 2036.38,
+    "open_unrealized_pnl_usd": 0.72,
+    "portfolio_value": 2035.52,
     "total_commission_usd": 44.0,
     "skipped_gap": 6,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
-    "updated_at": "2026-06-23"
+    "updated_at": "2026-06-24"
   }
 };

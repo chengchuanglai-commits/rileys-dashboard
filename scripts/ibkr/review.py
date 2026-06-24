@@ -56,6 +56,12 @@ def run():
     json.dump(r, open(f"data/review/{date}.json", "w"), ensure_ascii=False, indent=2)
     send(format_msg(r))
     print(format_msg(r))
+    # 附:各腿对照(模拟盘 vs SPY)——独立一条飞书,失败不影响复盘
+    try:
+        import runpy
+        runpy.run_path("scripts/legs-digest.py", run_name="__main__")
+    except Exception as e:
+        print(f"[review] 各腿对照失败: {e}")
 
 if __name__ == "__main__":
     run()
