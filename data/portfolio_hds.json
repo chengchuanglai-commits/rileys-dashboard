@@ -86,81 +86,6 @@
       "unrealized_pnl_usd": 7.82
     },
     {
-      "ticker": "HOFT",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-22",
-      "entry_price": 15.8,
-      "allocated_usd": 500,
-      "shares": 31.6456,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 18.17,
-      "stop_loss": 15.48,
-      "max_hold_date": "2026-06-24",
-      "daily_prices": {
-        "2026-06-23": {
-          "open": 16.99,
-          "high": 17.61,
-          "low": 16.65,
-          "close": 17.25,
-          "pnl_pct": 9.18
-        }
-      },
-      "position_usd": 203.09,
-      "unrealized_pnl_usd": 18.64
-    },
-    {
-      "ticker": "HBNC",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 19.34,
-      "allocated_usd": 500,
-      "shares": 25.8532,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 16.44,
-      "stop_loss": 19.73,
-      "max_hold_date": "2026-06-24",
-      "daily_prices": {
-        "2026-06-23": {
-          "open": 19.41,
-          "high": 19.71,
-          "low": 19.3,
-          "close": 19.68,
-          "pnl_pct": -1.76
-        }
-      },
-      "position_usd": 203.09,
-      "unrealized_pnl_usd": -3.57
-    },
-    {
-      "ticker": "SBFG",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-22",
-      "entry_price": 23.01,
-      "allocated_usd": 500,
-      "shares": 21.7297,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 26.46,
-      "stop_loss": 22.55,
-      "max_hold_date": "2026-06-24",
-      "daily_prices": {
-        "2026-06-23": {
-          "open": 22.93,
-          "high": 23.29,
-          "low": 22.8,
-          "close": 23.15,
-          "pnl_pct": 0.61
-        }
-      },
-      "position_usd": 203.09,
-      "unrealized_pnl_usd": 1.24
-    },
-    {
       "ticker": "SNEX",
       "name": "",
       "action": "SELL",
@@ -173,26 +98,17 @@
       "take_profit": 117.97,
       "stop_loss": 141.57,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.29,
+          "pnl_pct": 1.8
+        }
+      },
       "position_usd": 202.68,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "PBHC",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-23",
-      "entry_price": 16.2,
-      "allocated_usd": 500,
-      "shares": 30.8642,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 18.63,
-      "stop_loss": 15.88,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {},
-      "position_usd": 202.68,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.65
     },
     {
       "ticker": "FISI",
@@ -207,8 +123,92 @@
       "take_profit": 43.57,
       "stop_loss": 37.13,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 38.4,
+          "high": 38.84,
+          "low": 38.36,
+          "close": 38.8,
+          "pnl_pct": 2.4
+        }
+      },
       "position_usd": 202.68,
+      "unrealized_pnl_usd": 4.86
+    },
+    {
+      "ticker": "WSBC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 36.7,
+      "allocated_usd": 500,
+      "shares": 13.624,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 42.2,
+      "stop_loss": 35.97,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.96,
+          "pnl_pct": 3.43
+        }
+      },
+      "position_usd": 202.68,
+      "unrealized_pnl_usd": 6.95
+    },
+    {
+      "ticker": "OBT",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13.6986,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 41.97,
+      "stop_loss": 35.77,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {},
+      "position_usd": 205.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "FISI",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-24",
+      "entry_price": 38.4,
+      "allocated_usd": 500,
+      "shares": 13.0208,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 44.16,
+      "stop_loss": 37.63,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {},
+      "position_usd": 205.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 279.44,
+      "allocated_usd": 500,
+      "shares": 1.7893,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 237.52,
+      "stop_loss": 285.03,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {},
+      "position_usd": 205.0,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -902,20 +902,134 @@
       "commission_total": 2.0,
       "realized_pnl_usd": -4.04,
       "position_usd": 203.09
+    },
+    {
+      "ticker": "HOFT",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-22",
+      "entry_price": 15.8,
+      "allocated_usd": 500,
+      "shares": 31.6456,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 18.17,
+      "stop_loss": 15.48,
+      "max_hold_date": "2026-06-24",
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 16.99,
+          "high": 17.61,
+          "low": 16.65,
+          "close": 17.25,
+          "pnl_pct": 9.18
+        },
+        "2026-06-24": {
+          "open": 17.36,
+          "high": 17.61,
+          "low": 16.82,
+          "close": 17.32,
+          "pnl_pct": 9.62
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 17.32,
+      "final_pnl_pct": 9.62,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 19.54,
+      "position_usd": 203.09
+    },
+    {
+      "ticker": "HBNC",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 19.34,
+      "allocated_usd": 500,
+      "shares": 25.8532,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 16.44,
+      "stop_loss": 19.73,
+      "max_hold_date": "2026-06-24",
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 19.41,
+          "high": 19.71,
+          "low": 19.3,
+          "close": 19.68,
+          "pnl_pct": -1.76
+        },
+        "2026-06-24": {
+          "open": 19.7,
+          "high": 19.77,
+          "low": 19.59,
+          "close": 19.7,
+          "pnl_pct": -2.02
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 19.73,
+      "final_pnl_pct": -2.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.1,
+      "position_usd": 203.09
+    },
+    {
+      "ticker": "SBFG",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-22",
+      "entry_price": 23.01,
+      "allocated_usd": 500,
+      "shares": 21.7297,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 26.46,
+      "stop_loss": 22.55,
+      "max_hold_date": "2026-06-24",
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 22.93,
+          "high": 23.29,
+          "low": 22.8,
+          "close": 23.15,
+          "pnl_pct": 0.61
+        },
+        "2026-06-24": {
+          "open": 23.25,
+          "high": 24.05,
+          "low": 22.84,
+          "close": 23.88,
+          "pnl_pct": 3.78
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 23.88,
+      "final_pnl_pct": 3.78,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 7.68,
+      "position_usd": 203.09
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 20,
-    "win_trades": 9,
-    "win_rate": 45.0,
-    "total_realized_pnl_usd": 26.84,
-    "open_unrealized_pnl_usd": 30.28,
-    "portfolio_value": 2057.12,
-    "total_commission_usd": 40.0,
-    "skipped_gap": 9,
+    "total_trades": 23,
+    "win_trades": 11,
+    "win_rate": 47.8,
+    "total_realized_pnl_usd": 49.96,
+    "open_unrealized_pnl_usd": 29.44,
+    "portfolio_value": 2079.4,
+    "total_commission_usd": 46.0,
+    "skipped_gap": 10,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 5,
+    "skipped_no_cash": 1,
     "updated_at": "2026-06-24"
   }
 }

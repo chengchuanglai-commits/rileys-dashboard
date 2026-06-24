@@ -70,40 +70,6 @@ window.PORTFOLIO_F = {
       }
     },
     {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-19",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "t1_shares": 6,
-      "t2_shares": 7,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit_1": 33.57,
-      "take_profit_2": 30.85,
-      "stop_loss": 37.38,
-      "max_hold_date": "2026-06-24",
-      "day1_open": 36.1,
-      "daily_prices": {
-        "2026-06-22": {
-          "open": 36.1,
-          "high": 36.85,
-          "low": 36.1,
-          "close": 36.7,
-          "pnl_pct": -1.13
-        },
-        "2026-06-23": {
-          "open": 36.59,
-          "high": 37.36,
-          "low": 36.59,
-          "close": 37.28,
-          "pnl_pct": -2.73
-        }
-      }
-    },
-    {
       "ticker": "SNEX",
       "name": "SNEX",
       "action": "SELL",
@@ -127,54 +93,15 @@ window.PORTFOLIO_F = {
           "low": 134.75,
           "close": 137.94,
           "pnl_pct": 0.77
+        },
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.31,
+          "pnl_pct": 1.94
         }
       }
-    },
-    {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "t1_shares": 6,
-      "t2_shares": 7,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit_1": 33.57,
-      "take_profit_2": 30.85,
-      "stop_loss": 37.38,
-      "max_hold_date": "2026-06-25",
-      "day1_open": 36.59,
-      "daily_prices": {
-        "2026-06-23": {
-          "open": 36.59,
-          "high": 37.36,
-          "low": 36.59,
-          "close": 37.28,
-          "pnl_pct": -2.73
-        }
-      }
-    },
-    {
-      "ticker": "HOFT",
-      "name": "HOFT",
-      "action": "SELL",
-      "signal_date": "2026-06-23",
-      "entry_price": 17.0,
-      "allocated_usd": 500,
-      "shares": 29,
-      "t1_shares": 14,
-      "t2_shares": 15,
-      "actual_position_usd": 493.0,
-      "entry_commission": 1.0,
-      "take_profit_1": 15.72,
-      "take_profit_2": 14.45,
-      "stop_loss": 17.51,
-      "max_hold_date": "2026-06-26",
-      "day1_open": null,
-      "daily_prices": {}
     },
     {
       "ticker": "SWBI",
@@ -999,6 +926,61 @@ window.PORTFOLIO_F = {
       "sl_unified": true
     },
     {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "t1_shares": 6,
+      "t2_shares": 7,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit_1": 33.57,
+      "take_profit_2": 30.85,
+      "stop_loss": 37.38,
+      "max_hold_date": "2026-06-24",
+      "day1_open": 36.1,
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 36.1,
+          "high": 36.85,
+          "low": 36.1,
+          "close": 36.7,
+          "pnl_pct": -1.13
+        },
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.36,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.73
+        },
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.95,
+          "pnl_pct": -4.57
+        }
+      },
+      "t1_exit_date": "2026-06-24",
+      "t1_exit_price": 37.38,
+      "t1_exit_reason": "stop_loss",
+      "t2_exit_date": "2026-06-24",
+      "t2_exit_price": 37.38,
+      "t2_exit_reason": "stop_loss",
+      "t1_gross_pnl": -6.54,
+      "t2_gross_pnl": -7.63,
+      "close_date": "2026-06-24",
+      "close_reason": "stop_loss+stop_loss",
+      "final_pnl_pct": -3.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.17,
+      "sl_unified": true
+    },
+    {
       "ticker": "SWBI",
       "name": "SWBI",
       "action": "SELL",
@@ -1038,18 +1020,66 @@ window.PORTFOLIO_F = {
       "commission_total": 2.0,
       "realized_pnl_usd": -16.88,
       "sl_unified": true
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "t1_shares": 6,
+      "t2_shares": 7,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit_1": 33.57,
+      "take_profit_2": 30.85,
+      "stop_loss": 37.38,
+      "max_hold_date": "2026-06-25",
+      "day1_open": 36.59,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.36,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.73
+        },
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.95,
+          "pnl_pct": -4.57
+        }
+      },
+      "t1_exit_date": "2026-06-24",
+      "t1_exit_price": 37.38,
+      "t1_exit_reason": "stop_loss",
+      "t2_exit_date": "2026-06-24",
+      "t2_exit_price": 37.38,
+      "t2_exit_reason": "stop_loss",
+      "t1_gross_pnl": -6.54,
+      "t2_gross_pnl": -7.63,
+      "close_date": "2026-06-24",
+      "close_reason": "stop_loss+stop_loss",
+      "final_pnl_pct": -3.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.17,
+      "sl_unified": true
     }
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 17,
+    "total_trades": 19,
     "win_trades": 8,
-    "win_rate": 47.1,
-    "total_realized_pnl_usd": 59.39,
-    "open_unrealized_pnl_usd": -26.91,
-    "portfolio_value": 2032.48,
-    "total_commission_usd": 43.0,
-    "skipped_gap": 5,
+    "win_rate": 42.1,
+    "total_realized_pnl_usd": 27.05,
+    "open_unrealized_pnl_usd": 5.73,
+    "portfolio_value": 2032.78,
+    "total_commission_usd": 47.0,
+    "skipped_gap": 6,
     "skipped_zero_shares": 3,
     "updated_at": "2026-06-24"
   }

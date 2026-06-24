@@ -165,9 +165,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 79.26,
       "stop_loss": 67.54,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 69.0,
+          "high": 71.08,
+          "low": 68.92,
+          "close": 70.02,
+          "pnl_pct": 1.6
+        }
+      },
       "position_usd": 210.83,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.37
     },
     {
       "ticker": "CRWD",
@@ -182,43 +190,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 783.06,
       "stop_loss": 667.3,
       "max_hold_date": "2026-06-25",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 680.92,
+          "high": 687.15,
+          "low": 669.32,
+          "close": 673.17,
+          "pnl_pct": -1.14
+        }
+      },
       "position_usd": 210.83,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "ZS",
-      "name": "ZoomInfo Technologies",
-      "action": "BUY",
-      "signal_date": "2026-06-23",
-      "entry_price": 126.17,
-      "allocated_usd": 500,
-      "shares": 3.9629,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 145.1,
-      "stop_loss": 123.65,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {},
-      "position_usd": 210.83,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "MPWR",
-      "name": "Monolithic Power Systems",
-      "action": "BUY",
-      "signal_date": "2026-06-23",
-      "entry_price": 1423.76,
-      "allocated_usd": 500,
-      "shares": 0.3512,
-      "actual_position_usd": 500.02,
-      "entry_commission": 1.0,
-      "take_profit": 1637.32,
-      "stop_loss": 1395.28,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {},
-      "position_usd": 210.83,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -2.4
     }
   ],
   "closed_positions": [
@@ -2008,17 +1990,79 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": 31.19,
       "position_usd": 207.54
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 1423.76,
+      "allocated_usd": 500,
+      "shares": 0.3512,
+      "actual_position_usd": 500.02,
+      "entry_commission": 1.0,
+      "take_profit": 1637.32,
+      "stop_loss": 1395.28,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 1423.02,
+          "high": 1446.96,
+          "low": 1393.15,
+          "close": 1418.47,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 1395.28,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.22,
+      "position_usd": 210.83
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 33.32,
+      "allocated_usd": 500,
+      "shares": 15.006,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 38.32,
+      "stop_loss": 32.65,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 33.32,
+          "high": 33.98,
+          "low": 31.73,
+          "close": 32.13,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 32.65,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.24,
+      "position_usd": 210.83
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 52,
+    "total_trades": 54,
     "win_trades": 18,
-    "win_rate": 34.6,
-    "total_realized_pnl_usd": 108.29,
-    "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2132.93,
-    "total_commission_usd": 104.0,
+    "win_rate": 33.3,
+    "total_realized_pnl_usd": 99.83,
+    "open_unrealized_pnl_usd": 25.61,
+    "portfolio_value": 2125.44,
+    "total_commission_usd": 108.0,
     "skipped_gap": 27,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 55,
