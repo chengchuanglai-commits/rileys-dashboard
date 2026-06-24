@@ -101,14 +101,14 @@
       "daily_prices": {
         "2026-06-23": {
           "open": 16.99,
-          "high": 17.47,
+          "high": 17.61,
           "low": 16.65,
-          "close": 17.34,
-          "pnl_pct": 9.75
+          "close": 17.25,
+          "pnl_pct": 9.18
         }
       },
       "position_usd": 203.09,
-      "unrealized_pnl_usd": 19.8
+      "unrealized_pnl_usd": 18.64
     },
     {
       "ticker": "HBNC",
@@ -126,14 +126,14 @@
       "daily_prices": {
         "2026-06-23": {
           "open": 19.41,
-          "high": 19.52,
+          "high": 19.71,
           "low": 19.3,
-          "close": 19.47,
-          "pnl_pct": -0.67
+          "close": 19.68,
+          "pnl_pct": -1.76
         }
       },
       "position_usd": 203.09,
-      "unrealized_pnl_usd": -1.36
+      "unrealized_pnl_usd": -3.57
     },
     {
       "ticker": "SBFG",
@@ -150,15 +150,15 @@
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-23": {
-          "open": 23.22,
-          "high": 23.22,
+          "open": 22.93,
+          "high": 23.29,
           "low": 22.8,
-          "close": 23.08,
-          "pnl_pct": 0.3
+          "close": 23.15,
+          "pnl_pct": 0.61
         }
       },
       "position_usd": 203.09,
-      "unrealized_pnl_usd": 0.61
+      "unrealized_pnl_usd": 1.24
     },
     {
       "ticker": "SNEX",
@@ -888,9 +888,9 @@
       "daily_prices": {
         "2026-06-23": {
           "open": 16.17,
-          "high": 16.73,
-          "low": 16.01,
-          "close": 16.54,
+          "high": 17.5,
+          "low": 16.02,
+          "close": 16.67,
           "pnl_pct": -1.99
         }
       },
@@ -910,12 +910,12 @@
     "win_trades": 9,
     "win_rate": 45.0,
     "total_realized_pnl_usd": 26.84,
-    "open_unrealized_pnl_usd": 33.02,
-    "portfolio_value": 2059.86,
+    "open_unrealized_pnl_usd": 30.28,
+    "portfolio_value": 2057.12,
     "total_commission_usd": 40.0,
     "skipped_gap": 9,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 1,
+    "skipped_no_cash": 5,
     "updated_at": "2026-06-24"
   }
 }
