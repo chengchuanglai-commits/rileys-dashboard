@@ -7,27 +7,28 @@ export GIT_TERMINAL_PROMPT=0
 H=$(date +%H); M=$(date +%M); HM=$((10#$H*60 + 10#$M))
 # 21:30=1290分 .. 24:00=1440 ; 00:00=0 .. 04:05=245
 if ! { [ $HM -ge 1290 ] || [ $HM -le 245 ]; }; then exit 0; fi
-# 采集(只读,LIVE无关——paper_status不下单)
+# 采集到临时文件(不碰工作区的 paper-status.js,避免和主仓库/我的提交抢状态)
+PS=$(mktemp); JS=$(mktemp)
 /usr/bin/python3 -m scripts.ibkr.paper_status >> data/exec-log/paper-refresh.log 2>&1
-# 连不上Gateway(connected=false)→不push,避免空数据覆盖好数据
-if ! grep -q '"connected": true' data/paper-status.json 2>/dev/null; then
-  echo "[$(date '+%F %T')] 网关未连,跳过push(不覆盖好数据)" >> data/exec-log/paper-refresh.log
-  # 把刚采集的坏文件还原(git checkout 丢弃未提交改动)
-  git checkout -- dashboard/paper-status.js data/paper-status.json 2>/dev/null
-  exit 0
+# paper_status 写到了 data/paper-status.json + dashboard/paper-status.js;读出来后立刻还原工作区
+cp data/paper-status.json "$PS" 2>/dev/null; cp dashboard/paper-status.js "$JS" 2>/dev/null
+git checkout -- data/paper-status.json dashboard/paper-status.js 2>/dev/null  # 工作区保持干净,不撞车
+# 连不上Gateway→不更新,避免空数据覆盖好数据
+if ! grep -q '"connected": true' "$PS" 2>/dev/null; then
+  echo "[$(date '+%F %T')] 网关未连,跳过更新" >> data/exec-log/paper-refresh.log
+  rm -f "$PS" "$JS"; exit 0
 fi
-# 有变化才 push(避免空提交)。只 commit 这两个文件,避免被其他未暂存改动卡住 pull --rebase。
-if ! git diff --quiet dashboard/paper-status.js data/paper-status.json 2>/dev/null; then
-  git add dashboard/paper-status.js data/paper-status.json 2>/dev/null
-  git -c user.name=paper-bot -c user.email=pb@local commit -q -m "chore: paper实时盈亏刷新 $(date '+%H:%M')" 2>/dev/null
-  ok=0
-  for i in 1 2 3; do
-    # -c rebase.autoStash=true: pull前自动stash未暂存改动,完后还原→不再被"unstaged changes"卡死
-    if git -c rebase.autoStash=true pull --rebase -q origin main 2>/dev/null && git push -q origin main 2>/dev/null; then
-      ok=1; break
-    fi
-    sleep 3
-  done
-  if [ $ok -eq 1 ]; then echo "[$(date '+%F %T')] paper刷新已push ✅" >> data/exec-log/paper-refresh.log
-  else echo "[$(date '+%F %T')] ⚠️ push失败(已commit本地,下次重试)" >> data/exec-log/paper-refresh.log; fi
-fi
+# 用 GitHub API 原子更新 main 上的两个文件(不commit/不push/不动本地工作区→根治撞车)
+REPO="chengchuanglai-commits/rileys-dashboard"
+GH=/Users/apple/bin/gh   # launchd PATH 不全,写绝对路径
+update_file() {  # $1=本地临时文件 $2=仓库路径
+  local sha=$("$GH" api "repos/$REPO/contents/$2?ref=main" --jq .sha 2>/dev/null)
+  local b64=$(base64 < "$1" | tr -d '\n')
+  "$GH" api -X PUT "repos/$REPO/contents/$2" \
+    -f message="chore: paper实时盈亏 $(date '+%H:%M')" \
+    -f content="$b64" -f sha="$sha" -f branch=main >/dev/null 2>&1
+}
+update_file "$JS" "dashboard/paper-status.js" && update_file "$PS" "data/paper-status.json" \
+  && echo "[$(date '+%F %T')] paper刷新已更新(API) ✅" >> data/exec-log/paper-refresh.log \
+  || echo "[$(date '+%F %T')] ⚠️ API更新失败" >> data/exec-log/paper-refresh.log
+rm -f "$PS" "$JS"
