@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 69.0,
           "high": 71.08,
           "low": 68.92,
-          "close": 70.02,
-          "pnl_pct": 1.6
+          "close": 69.77,
+          "pnl_pct": 1.23
         }
       },
       "position_usd": 210.83,
-      "unrealized_pnl_usd": 3.37
+      "unrealized_pnl_usd": 2.59
     },
     {
       "ticker": "CRWD",
@@ -194,13 +194,13 @@ window.PORTFOLIO_MN = {
         "2026-06-24": {
           "open": 680.92,
           "high": 687.15,
-          "low": 669.32,
-          "close": 673.17,
-          "pnl_pct": -1.14
+          "low": 669.0,
+          "close": 674.44,
+          "pnl_pct": -0.95
         }
       },
       "position_usd": 210.83,
-      "unrealized_pnl_usd": -2.4
+      "unrealized_pnl_usd": -2.0
     }
   ],
   "closed_positions": [
@@ -2009,7 +2009,7 @@ window.PORTFOLIO_MN = {
           "open": 1423.02,
           "high": 1446.96,
           "low": 1393.15,
-          "close": 1418.47,
+          "close": 1423.06,
           "pnl_pct": -2.0
         }
       },
@@ -2039,8 +2039,8 @@ window.PORTFOLIO_MN = {
         "2026-06-24": {
           "open": 33.32,
           "high": 33.98,
-          "low": 31.73,
-          "close": 32.13,
+          "low": 31.39,
+          "close": 32.21,
           "pnl_pct": -2.01
         }
       },
@@ -2060,8 +2060,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 18,
     "win_rate": 33.3,
     "total_realized_pnl_usd": 99.83,
-    "open_unrealized_pnl_usd": 25.61,
-    "portfolio_value": 2125.44,
+    "open_unrealized_pnl_usd": 25.23,
+    "portfolio_value": 2125.06,
     "total_commission_usd": 108.0,
     "skipped_gap": 27,
     "skipped_zero_shares": 0,
