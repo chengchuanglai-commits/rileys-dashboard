@@ -3,18 +3,6 @@ window.PORTFOLIO_MOMMA = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "GFS",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 85.83,
-      "shares": 5.8255,
-      "stop_loss": 78.96,
-      "score": 79.2,
-      "actual_position_usd": 500.0,
-      "position_usd": 200.0,
-      "unrealized_pnl_usd": -5.68
-    },
-    {
       "ticker": "STRL",
       "action": "BUY",
       "signal_date": "2026-06-18",
@@ -24,19 +12,19 @@ window.PORTFOLIO_MOMMA = {
       "score": 74.6,
       "actual_position_usd": 499.98,
       "position_usd": 200.0,
-      "unrealized_pnl_usd": 7.05
+      "unrealized_pnl_usd": 8.94
     },
     {
-      "ticker": "AMD",
+      "ticker": "GFS",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 537.37,
-      "shares": 0.9305,
-      "stop_loss": 494.38,
-      "score": 74.3,
-      "actual_position_usd": 500.02,
+      "entry_price": 85.83,
+      "shares": 5.8255,
+      "stop_loss": 78.96,
+      "score": 79.2,
+      "actual_position_usd": 500.0,
       "position_usd": 200.0,
-      "unrealized_pnl_usd": -6.52
+      "unrealized_pnl_usd": -3.54
     },
     {
       "ticker": "RVMD",
@@ -48,7 +36,19 @@ window.PORTFOLIO_MOMMA = {
       "score": 75.4,
       "actual_position_usd": 500.0,
       "position_usd": 200.0,
-      "unrealized_pnl_usd": 8.0
+      "unrealized_pnl_usd": 6.18
+    },
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 537.37,
+      "shares": 0.9305,
+      "stop_loss": 494.38,
+      "score": 74.3,
+      "actual_position_usd": 500.02,
+      "position_usd": 200.0,
+      "unrealized_pnl_usd": -6.56
     },
     {
       "ticker": "VICR",
@@ -60,7 +60,7 @@ window.PORTFOLIO_MOMMA = {
       "score": 77.0,
       "actual_position_usd": 500.0,
       "position_usd": 200.0,
-      "unrealized_pnl_usd": 2.87
+      "unrealized_pnl_usd": 1.24
     }
   ],
   "closed_positions": [
@@ -151,8 +151,8 @@ window.PORTFOLIO_MOMMA = {
     "win_trades": 0,
     "win_rate": 0.0,
     "total_realized_pnl_usd": -44.28,
-    "open_unrealized_pnl_usd": 5.71,
-    "portfolio_value": 1961.43,
+    "open_unrealized_pnl_usd": 6.26,
+    "portfolio_value": 1961.98,
     "total_commission_usd": 15.0,
     "skipped_no_cash": 0,
     "updated_at": "2026-06-24"
