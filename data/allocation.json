@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-24 11:48",
+  "generated": "2026-06-24 21:12",
   "spy_fwd_ret_pct": -2.01,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -43,11 +43,11 @@
     },
     "h": {
       "name": "H·小盘Haiku",
-      "n": 23,
-      "alpha_pct": 3.55,
+      "n": 22,
+      "alpha_pct": 3.75,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": 1.53,
+      "fwd_ret_pct": 1.74,
       "tradeable": false
     },
     "hds": {
@@ -71,22 +71,22 @@
     "c": {
       "name": "C·B+跳空",
       "n": 17,
-      "alpha_pct": 7.24,
+      "alpha_pct": 7.27,
       "robust": true,
-      "conviction": 0.3077,
-      "fwd_ret_pct": 5.22,
+      "conviction": 0.3091,
+      "fwd_ret_pct": 5.26,
       "tradeable": false
     }
   },
   "weights": {
-    "momma": 0.0869,
+    "momma": 0.0868,
     "momh": 0.0,
     "bq": 0.0,
     "bai": 0.0,
     "h": 0.0,
     "hds": 0.0,
-    "mn": 0.6457,
-    "c": 0.2674
+    "mn": 0.6449,
+    "c": 0.2683
   },
   "final_allocation": {
     "momma": 0.5,
