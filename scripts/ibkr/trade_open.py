@@ -1,7 +1,7 @@
 """开盘batch:自检过→对账→下单→挂止损→落exec-log。LIVE=False只算不下。"""
 import os, json, time
-from scripts.ibkr.client import connect, health
-from scripts.ibkr.targets import build_targets
+from scripts.ibkr.client import connect, health, cancel_orphan_limits
+from scripts.ibkr.targets import build_targets, build_master_targets
 from scripts.ibkr.sizing import target_shares
 from scripts.ibkr.reconcile import diff_orders
 from scripts.ibkr.risk import drawdown, breaker_action
@@ -29,7 +29,11 @@ def run():
     if not h["is_paper"] and not LIVE:
         send(f"⚠️ 开盘batch:账户{h['account']}非paper且LIVE=False,中止\n（交易信号系统）")
         ib.disconnect(); return
-    targets_usd = build_targets(notional=NOTIONAL)
+    # 开盘前清遗留非止损单(根治跨日遗留限价单→对账从干净状态开始)
+    cleared = cancel_orphan_limits(ib)
+    if cleared: print(f"清掉 {cleared} 笔遗留非止损单")
+    # 三线统一目标(指数+长线+波动);master不存在则退回旧的双线目标
+    targets_usd = build_master_targets(notional=NOTIONAL) or build_targets(notional=NOTIONAL)
     actual = {p.contract.symbol: p.position for p in ib.positions(h["account"])}
     syms = sorted(set(list(targets_usd) + list(actual)))
     px = _prices(syms)

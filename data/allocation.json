@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25 11:47",
+  "generated": "2026-06-25 22:32",
   "spy_fwd_ret_pct": -2.06,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -53,10 +53,10 @@
     "hds": {
       "name": "H-DS·小盘DS",
       "n": 23,
-      "alpha_pct": 4.42,
+      "alpha_pct": 4.35,
       "robust": true,
-      "conviction": 0.254,
-      "fwd_ret_pct": 2.36,
+      "conviction": 0.2503,
+      "fwd_ret_pct": 2.29,
       "tradeable": false
     },
     "mn": {
@@ -79,14 +79,14 @@
     }
   },
   "weights": {
-    "momma": 0.0733,
+    "momma": 0.0735,
     "momh": 0.0,
     "bq": 0.0,
     "bai": 0.0,
     "h": 0.0,
-    "hds": 0.1861,
-    "mn": 0.5166,
-    "c": 0.224
+    "hds": 0.1839,
+    "mn": 0.518,
+    "c": 0.2246
   },
   "final_allocation": {
     "momma": 0.5,

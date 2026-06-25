@@ -40,3 +40,32 @@ def cancel_all(ib):
     ib.reqGlobalCancel(); ib.sleep(3)
     ib.reqAllOpenOrders(); ib.sleep(1)
     return len(ib.openTrades())
+
+def cancel_orphan_limits(ib):
+    """清掉非止损的遗留挂单(LMT/MKT等),保留STP止损单。
+    根治"跨日遗留限价单"——batch开始前调用,确保对账从干净状态开始。
+    用全局撤单(跨session可靠)清掉所有限价单;止损单由各batch成交后重挂。"""
+    ib.reqAllOpenOrders(); ib.sleep(1)
+    nonstop = [t for t in ib.openTrades() if t.order.orderType not in ("STP", "STP LMT")]
+    if not nonstop:
+        return 0
+    # 有非止损遗留单→记下止损单,全局撤,重挂止损
+    from ib_insync import Stock, StopOrder
+    stops = {}
+    for t in ib.openTrades():
+        if t.order.orderType == "STP":
+            stops[t.contract.symbol] = float(t.order.auxPrice)
+    ib.reqGlobalCancel(); ib.sleep(4)
+    acct = ib.managedAccounts()[0] if ib.managedAccounts() else None
+    # 重挂止损(给仍持有的多头仓)
+    for pos in ib.positions(acct):
+        sym = pos.contract.symbol
+        if pos.position > 0 and sym in stops:
+            try:
+                ct = Stock(sym, "SMART", "USD"); ib.qualifyContracts(ct)
+                o = StopOrder("SELL", pos.position, round(stops[sym], 2)); o.tif = "GTC"
+                ib.placeOrder(ct, o)
+            except Exception:
+                pass
+    ib.sleep(2)
+    return len(nonstop)

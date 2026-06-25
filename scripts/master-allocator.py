@@ -11,7 +11,7 @@
 """
 import os, json, time
 
-CAPITAL=2000.0          # 当前总资金(真实账户净值,先用名义)
+CAPITAL=20000.0          # 当前总资金(真实账户净值,先用名义)
 W_INDEX=0.30            # 指数核心
 W_LONGTERM=0.20         # 长线持股
 W_VOLATILITY=0.50       # 波动捕捉(动量)
