@@ -1,0 +1,274 @@
+{
+  "window": [
+    "2021-06-01",
+    "2026-06-18"
+  ],
+  "dca_qqq_ret": 89.0,
+  "dca_qqq_dd": -20.4,
+  "configs": [
+    {
+      "mom_w": 1.0,
+      "bear": "cash",
+      "n": 10,
+      "ret": 124.2,
+      "maxdd": -23.7,
+      "bear_ret": 508.2
+    },
+    {
+      "mom_w": 1.0,
+      "bear": "hold",
+      "n": 10,
+      "ret": 110.4,
+      "maxdd": -23.6,
+      "bear_ret": 486.8
+    },
+    {
+      "mom_w": 1.0,
+      "bear": "half",
+      "n": 10,
+      "ret": 110.4,
+      "maxdd": -23.6,
+      "bear_ret": 486.8
+    },
+    {
+      "mom_w": 0.7,
+      "bear": "hold",
+      "n": 10,
+      "ret": 108.4,
+      "maxdd": -19.9,
+      "bear_ret": 478.7
+    },
+    {
+      "mom_w": 0.7,
+      "bear": "cash",
+      "n": 10,
+      "ret": 105.5,
+      "maxdd": -18.9,
+      "bear_ret": 497.0
+    },
+    {
+      "mom_w": 0.5,
+      "bear": "hold",
+      "n": 10,
+      "ret": 102.3,
+      "maxdd": -18.9,
+      "bear_ret": 470.1
+    },
+    {
+      "mom_w": 0.7,
+      "bear": "half",
+      "n": 10,
+      "ret": 102.1,
+      "maxdd": -18.8,
+      "bear_ret": 480.1
+    },
+    {
+      "mom_w": 0.4,
+      "bear": "hold",
+      "n": 10,
+      "ret": 99.8,
+      "maxdd": -18.6,
+      "bear_ret": 461.5
+    },
+    {
+      "mom_w": 0.3,
+      "bear": "hold",
+      "n": 10,
+      "ret": 98.1,
+      "maxdd": -19.0,
+      "bear_ret": 458.4
+    },
+    {
+      "mom_w": 0.5,
+      "bear": "half",
+      "n": 10,
+      "ret": 92.3,
+      "maxdd": -16.6,
+      "bear_ret": 472.5
+    },
+    {
+      "mom_w": 0.5,
+      "bear": "cash",
+      "n": 10,
+      "ret": 89.1,
+      "maxdd": -15.9,
+      "bear_ret": 485.2
+    },
+    {
+      "mom_w": 0.4,
+      "bear": "half",
+      "n": 10,
+      "ret": 88.2,
+      "maxdd": -15.8,
+      "bear_ret": 464.5
+    },
+    {
+      "mom_w": 0.0,
+      "bear": "hold",
+      "n": 18,
+      "ret": 85.6,
+      "maxdd": -20.2,
+      "bear_ret": 430.7
+    },
+    {
+      "mom_w": 0.3,
+      "bear": "half",
+      "n": 10,
+      "ret": 84.8,
+      "maxdd": -15.7,
+      "bear_ret": 462.0
+    },
+    {
+      "mom_w": 0.3,
+      "bear": "hold",
+      "n": 18,
+      "ret": 84.7,
+      "maxdd": -18.3,
+      "bear_ret": 431.7
+    },
+    {
+      "mom_w": 0.4,
+      "bear": "hold",
+      "n": 18,
+      "ret": 83.0,
+      "maxdd": -17.6,
+      "bear_ret": 430.7
+    },
+    {
+      "mom_w": 0.4,
+      "bear": "cash",
+      "n": 10,
+      "ret": 82.0,
+      "maxdd": -14.6,
+      "bear_ret": 475.4
+    },
+    {
+      "mom_w": 0.5,
+      "bear": "hold",
+      "n": 18,
+      "ret": 81.4,
+      "maxdd": -17.0,
+      "bear_ret": 428.9
+    },
+    {
+      "mom_w": 0.7,
+      "bear": "hold",
+      "n": 18,
+      "ret": 80.3,
+      "maxdd": -15.8,
+      "bear_ret": 433.6
+    },
+    {
+      "mom_w": 0.3,
+      "bear": "cash",
+      "n": 10,
+      "ret": 75.7,
+      "maxdd": -13.9,
+      "bear_ret": 471.3
+    },
+    {
+      "mom_w": 0.7,
+      "bear": "half",
+      "n": 18,
+      "ret": 75.0,
+      "maxdd": -14.6,
+      "bear_ret": 435.2
+    },
+    {
+      "mom_w": 1.0,
+      "bear": "cash",
+      "n": 18,
+      "ret": 74.0,
+      "maxdd": -17.2,
+      "bear_ret": 452.5
+    },
+    {
+      "mom_w": 1.0,
+      "bear": "hold",
+      "n": 18,
+      "ret": 73.2,
+      "maxdd": -17.9,
+      "bear_ret": 436.4
+    },
+    {
+      "mom_w": 1.0,
+      "bear": "half",
+      "n": 18,
+      "ret": 73.2,
+      "maxdd": -17.9,
+      "bear_ret": 436.4
+    },
+    {
+      "mom_w": 0.4,
+      "bear": "half",
+      "n": 18,
+      "ret": 72.8,
+      "maxdd": -14.8,
+      "bear_ret": 433.8
+    },
+    {
+      "mom_w": 0.5,
+      "bear": "half",
+      "n": 18,
+      "ret": 72.7,
+      "maxdd": -14.6,
+      "bear_ret": 431.5
+    },
+    {
+      "mom_w": 0.3,
+      "bear": "half",
+      "n": 18,
+      "ret": 72.5,
+      "maxdd": -14.9,
+      "bear_ret": 435.4
+    },
+    {
+      "mom_w": 0.7,
+      "bear": "cash",
+      "n": 18,
+      "ret": 69.7,
+      "maxdd": -14.7,
+      "bear_ret": 448.2
+    },
+    {
+      "mom_w": 0.0,
+      "bear": "half",
+      "n": 18,
+      "ret": 68.7,
+      "maxdd": -15.4,
+      "bear_ret": 436.2
+    },
+    {
+      "mom_w": 0.5,
+      "bear": "cash",
+      "n": 18,
+      "ret": 64.0,
+      "maxdd": -14.0,
+      "bear_ret": 442.4
+    },
+    {
+      "mom_w": 0.4,
+      "bear": "cash",
+      "n": 18,
+      "ret": 62.5,
+      "maxdd": -13.6,
+      "bear_ret": 443.5
+    },
+    {
+      "mom_w": 0.3,
+      "bear": "cash",
+      "n": 18,
+      "ret": 60.8,
+      "maxdd": -13.2,
+      "bear_ret": 444.3
+    },
+    {
+      "mom_w": 0.0,
+      "bear": "cash",
+      "n": 18,
+      "ret": 53.0,
+      "maxdd": -16.6,
+      "bear_ret": 441.6
+    }
+  ]
+}

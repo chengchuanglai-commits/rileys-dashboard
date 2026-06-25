@@ -1,7 +1,25 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 206.03,
+      "unrealized_pnl_usd": 0.0
+    },
     {
       "ticker": "SNEX",
       "name": "SNEX",
@@ -15,7 +33,7 @@ window.PORTFOLIO_C = {
       "take_profit": 150.13,
       "stop_loss": 133.45,
       "max_hold_date": "2026-06-26",
-      "day1_open": 138.0,
+      "day1_open": 140.64,
       "daily_prices": {
         "2026-06-22": {
           "open": 140.64,
@@ -32,14 +50,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.77
         },
         "2026-06-24": {
-          "close": 136.13,
-          "pnl_pct": -2.07
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 137.58,
+          "pnl_pct": -1.03
         }
       },
       "position_usd": 211.77,
-      "unrealized_pnl_usd": -4.38,
-      "gap_checked": true,
-      "day1_gap_pct": -0.73
+      "unrealized_pnl_usd": -2.18
     },
     {
       "ticker": "SNEX",
@@ -54,7 +73,7 @@ window.PORTFOLIO_C = {
       "take_profit": 127.89,
       "stop_loss": 144.57,
       "max_hold_date": "2026-06-29",
-      "day1_open": 138.0,
+      "day1_open": 135.42,
       "daily_prices": {
         "2026-06-23": {
           "open": 135.42,
@@ -64,14 +83,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.77
         },
         "2026-06-24": {
-          "close": 136.13,
-          "pnl_pct": 2.07
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 137.58,
+          "pnl_pct": 1.03
         }
       },
       "position_usd": 212.69,
-      "unrealized_pnl_usd": 4.4,
-      "gap_checked": true,
-      "day1_gap_pct": -0.73
+      "unrealized_pnl_usd": 2.19
     },
     {
       "ticker": "LGND",
@@ -86,17 +106,10 @@ window.PORTFOLIO_C = {
       "take_profit": 257.08,
       "stop_loss": 290.62,
       "max_hold_date": "2026-07-01",
-      "day1_open": 283.35,
-      "daily_prices": {
-        "2026-06-24": {
-          "close": 284.91,
-          "pnl_pct": -1.96
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 208.75,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": 1.4
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "SWBI",
@@ -111,17 +124,10 @@ window.PORTFOLIO_C = {
       "take_profit": 15.34,
       "stop_loss": 17.34,
       "max_hold_date": "2026-07-01",
-      "day1_open": 16.63,
-      "daily_prices": {
-        "2026-06-24": {
-          "close": 16.12,
-          "pnl_pct": 3.3
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 208.75,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.24
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "OBT",
@@ -136,17 +142,10 @@ window.PORTFOLIO_C = {
       "take_profit": 33.58,
       "stop_loss": 37.96,
       "max_hold_date": "2026-07-01",
-      "day1_open": 36.63,
-      "daily_prices": {
-        "2026-06-24": {
-          "close": 36.74,
-          "pnl_pct": -0.66
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 208.75,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": 0.36
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -875,9 +874,9 @@ window.PORTFOLIO_C = {
         },
         "2026-06-24": {
           "open": 37.28,
-          "high": 38.09,
+          "high": 37.88,
           "low": 36.92,
-          "close": 37.86,
+          "close": 37.79,
           "pnl_pct": -4.0
         }
       },
@@ -946,9 +945,9 @@ window.PORTFOLIO_C = {
         },
         "2026-06-24": {
           "open": 37.28,
-          "high": 38.09,
+          "high": 37.88,
           "low": 36.92,
-          "close": 37.86,
+          "close": 37.79,
           "pnl_pct": -4.0
         }
       },
@@ -960,47 +959,19 @@ window.PORTFOLIO_C = {
       "commission_total": 2.0,
       "realized_pnl_usd": -8.51,
       "position_usd": 212.69
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "day1_open": 9.05,
-      "daily_prices": {
-        "2026-06-23": {
-          "close": 8.53,
-          "pnl_pct": 30.99
-        }
-      },
-      "position_usd": 206.03,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -26.78,
-      "close_date": "2026-06-23",
-      "close_price": 8.53,
-      "final_pnl_pct": 30.99,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 154.94
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 20,
-    "win_trades": 12,
-    "win_rate": 60.0,
-    "total_realized_pnl_usd": 242.46,
-    "open_unrealized_pnl_usd": 3.4,
-    "portfolio_value": 2245.86,
+    "total_trades": 19,
+    "win_trades": 11,
+    "win_rate": 57.9,
+    "total_realized_pnl_usd": 87.52,
+    "open_unrealized_pnl_usd": 0.01,
+    "portfolio_value": 2087.53,
+    "total_commission_usd": 38.0,
     "skipped_gap": 8,
-    "updated_at": "2026-06-25"
+    "skipped_zero_shares": 1,
+    "updated_at": "2026-06-24"
   }
 };
