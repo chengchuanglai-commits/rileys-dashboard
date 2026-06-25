@@ -16,10 +16,17 @@ def num(x,d=0):
     try: return float(x)
     except: return d
 
+# 周期性行业(财报靓丽常是周期顶部假象,长线降权)
+CYCLICAL={"Gold","Silver","Other Precious Metals","Oil & Gas E&P","Oil & Gas Integrated",
+    "Oil & Gas Midstream","Copper","Aluminum","Steel","Coal","Other Industrial Metals & Mining",
+    "Building Materials","Marine Shipping","Airlines","Auto Manufacturers"}
+
 def score(sym):
     """对一只票评长线潜力分(0-100)+体检数据。不合格返回None。"""
     inc=get(f"income-statement?symbol={sym}&period=annual&limit=4")
     if not inc or not isinstance(inc,list) or len(inc)<3: return None
+    prof=get(f"profile?symbol={sym}"); prof=prof[0] if isinstance(prof,list) and prof else {}
+    sector=prof.get("sector",""); industry=prof.get("industry","")
     inc=sorted(inc,key=lambda x:x.get("date",""))
     rat=get(f"ratios-ttm?symbol={sym}"); rat=rat[0] if isinstance(rat,list) and rat else {}
     km=get(f"key-metrics-ttm?symbol={sym}"); km=km[0] if isinstance(km,list) and km else {}
@@ -56,9 +63,12 @@ def score(sym):
     s_roe=min(max(roe/25,0),1)                    # 效率:25%ROE=满分
     s_val=1-min(max((pe-20)/40,0),1) if pe>0 else 0.3  # 估值:PE20以下满分,60以上0(收紧)
     total=(0.25*s_grow+0.15*s_ocf+0.18*s_moat+0.12*s_safe+0.15*s_roe+0.15*s_val)*100  # 估值权重10→15
+    # 周期股降权(财报靓丽常是周期顶,长线打8折)
+    is_cyc=industry in CYCLICAL
+    if is_cyc: total*=0.80
     return {"sym":sym,"score":round(total,1),"rev_cagr":round(rev_cagr),"gm":round(gm),
             "ocf_q":round(ocf_q,2),"roe":round(roe),"pe":round(pe),"cover":round(cover,1),
-            "ni_pos":ni>0}
+            "ni_pos":ni>0,"sector":sector,"industry":industry,"cyclical":is_cyc}
 
 def main():
     if not FMP: print("需要 FMP_API_KEY"); return

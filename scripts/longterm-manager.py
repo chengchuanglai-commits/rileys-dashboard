@@ -49,12 +49,20 @@ def main():
 
     # ===== 2. 选新仓补到 HOLD_N 只 =====
     keep=[s for s in holdings if s not in [x[1] for x in signals if x[0]=="SELL"]]
-    need=HOLD_N-len(keep)
-    if need>0:
+    # 行业分散:每个 sector 最多2只(防黄金股等扎堆)
+    SECTOR_MAX=2
+    sec_count={}
+    for s in keep:
+        sec=by_sym.get(s,{}).get("sector","?"); sec_count[sec]=sec_count.get(sec,0)+1
+    if HOLD_N-len(keep)>0:
         for c in cands:
             if c["sym"] in keep: continue
             if len(keep)>=HOLD_N: break
-            keep.append(c["sym"]); signals.append(("BUY",c["sym"],f"入选分{c['score']} 营收{c['rev_cagr']:+}% 毛利{c['gm']}% PE{c['pe']}"))
+            sec=c.get("sector","?")
+            if sec_count.get(sec,0)>=SECTOR_MAX: continue   # 该行业已满2只,跳过
+            keep.append(c["sym"]); sec_count[sec]=sec_count.get(sec,0)+1
+            cyc=" ⚠️周期股" if c.get("cyclical") else ""
+            signals.append(("BUY",c["sym"],f"入选分{c['score']} {sec} 营收{c['rev_cagr']:+}% PE{c['pe']}{cyc}"))
 
     # ===== 3. 更新持仓状态 =====
     new_holdings={}

@@ -8,7 +8,10 @@
     "roe": 27,
     "pe": 11,
     "cover": 9.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Capital Markets",
+    "cyclical": false
   },
   {
     "sym": "PDD",
@@ -19,29 +22,10 @@
     "roe": 24,
     "pe": 7,
     "cover": 53.8,
-    "ni_pos": true
-  },
-  {
-    "sym": "AU",
-    "score": 96.0,
-    "rev_cagr": 30,
-    "gm": 47,
-    "ocf_q": 1.79,
-    "roe": 44,
-    "pe": 11,
-    "cover": 3.1,
-    "ni_pos": true
-  },
-  {
-    "sym": "AEM",
-    "score": 95.6,
-    "rev_cagr": 28,
-    "gm": 58,
-    "ocf_q": 1.53,
-    "roe": 22,
-    "pe": 14,
-    "cover": 30.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Software - Services",
+    "cyclical": false
   },
   {
     "sym": "NU",
@@ -52,18 +36,10 @@
     "roe": 29,
     "pe": 19,
     "cover": 3.6,
-    "ni_pos": true
-  },
-  {
-    "sym": "WPM",
-    "score": 94.6,
-    "rev_cagr": 30,
-    "gm": 72,
-    "ocf_q": 1.29,
-    "roe": 21,
-    "pe": 28,
-    "cover": 391.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "KSPI",
@@ -74,7 +50,10 @@
     "roe": 44,
     "pe": 8,
     "cover": 3.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "NVDA",
@@ -85,7 +64,10 @@
     "roe": 112,
     "pe": 30,
     "cover": 9.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "ONC",
@@ -96,7 +78,10 @@
     "roe": 12,
     "pe": 4,
     "cover": 2.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "NBIX",
@@ -107,18 +92,10 @@
     "roe": 22,
     "pe": 25,
     "cover": 3.6,
-    "ni_pos": true
-  },
-  {
-    "sym": "NEM",
-    "score": 90.9,
-    "rev_cagr": 23,
-    "gm": 50,
-    "ocf_q": 1.46,
-    "roe": 25,
-    "pe": 12,
-    "cover": 3.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "IBKR",
@@ -129,7 +106,10 @@
     "roe": 20,
     "pe": 40,
     "cover": 1093.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Investment - Banking & Investment Services",
+    "cyclical": false
   },
   {
     "sym": "CINF",
@@ -140,7 +120,10 @@
     "roe": 18,
     "pe": 10,
     "cover": 5.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Property & Casualty",
+    "cyclical": false
   },
   {
     "sym": "BNY",
@@ -151,7 +134,10 @@
     "roe": 13,
     "pe": 18,
     "cover": 4.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Investment - Banking & Investment Services",
+    "cyclical": false
   },
   {
     "sym": "META",
@@ -162,7 +148,10 @@
     "roe": 33,
     "pe": 20,
     "cover": 1.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "cyclical": false
   },
   {
     "sym": "ACGL",
@@ -173,7 +162,10 @@
     "roe": 20,
     "pe": 7,
     "cover": 2.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Diversified",
+    "cyclical": false
   },
   {
     "sym": "FSLR",
@@ -184,7 +176,10 @@
     "roe": 18,
     "pe": 16,
     "cover": 9.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Solar",
+    "cyclical": false
   },
   {
     "sym": "TSM",
@@ -195,7 +190,10 @@
     "roe": 37,
     "pe": 32,
     "cover": 4.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "UTHR",
@@ -206,7 +204,10 @@
     "roe": 19,
     "pe": 19,
     "cover": 99,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "INCY",
@@ -217,7 +218,10 @@
     "roe": 29,
     "pe": 15,
     "cover": 65.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "PLTR",
@@ -228,7 +232,10 @@
     "roe": 32,
     "pe": 118,
     "cover": 15.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "ANET",
@@ -239,18 +246,10 @@
     "roe": 31,
     "pe": 55,
     "cover": 99,
-    "ni_pos": true
-  },
-  {
-    "sym": "B",
-    "score": 84.3,
-    "rev_cagr": 15,
-    "gm": 51,
-    "ocf_q": 1.5,
-    "roe": 23,
-    "pe": 10,
-    "cover": 3.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "cyclical": false
   },
   {
     "sym": "NVO",
@@ -259,9 +258,12 @@
     "gm": 81,
     "ocf_q": 1.16,
     "roe": 66,
-    "pe": 11,
+    "pe": 12,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "TCOM",
@@ -272,7 +274,10 @@
     "roe": 21,
     "pe": 5,
     "cover": 1.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services",
+    "cyclical": false
   },
   {
     "sym": "HDB",
@@ -283,7 +288,10 @@
     "roe": 14,
     "pe": 16,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "APP",
@@ -294,7 +302,10 @@
     "roe": 150,
     "pe": 40,
     "cover": 1.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "TW",
@@ -305,7 +316,10 @@
     "roe": 14,
     "pe": 24,
     "cover": 11.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Capital Markets",
+    "cyclical": false
   },
   {
     "sym": "GOOG",
@@ -316,7 +330,10 @@
     "roe": 39,
     "pe": 26,
     "cover": 3.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "cyclical": false
   },
   {
     "sym": "GOOGL",
@@ -327,7 +344,10 @@
     "roe": 39,
     "pe": 26,
     "cover": 3.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "cyclical": false
   },
   {
     "sym": "PAYX",
@@ -338,7 +358,10 @@
     "roe": 45,
     "pe": 20,
     "cover": 69.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Staffing & Employment Services",
+    "cyclical": false
   },
   {
     "sym": "RCL",
@@ -349,7 +372,10 @@
     "roe": 46,
     "pe": 19,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services",
+    "cyclical": false
   },
   {
     "sym": "CRDO",
@@ -360,7 +386,10 @@
     "roe": 32,
     "pe": 103,
     "cover": 79.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "cyclical": false
   },
   {
     "sym": "MFC",
@@ -371,7 +400,10 @@
     "roe": 13,
     "pe": 16,
     "cover": 3.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Life",
+    "cyclical": false
   },
   {
     "sym": "STT",
@@ -382,7 +414,10 @@
     "roe": 11,
     "pe": 17,
     "cover": 4.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "FCNCA",
@@ -393,7 +428,10 @@
     "roe": 10,
     "pe": 12,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "FCNCN",
@@ -404,7 +442,10 @@
     "roe": 10,
     "pe": 0,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "PGR",
@@ -415,7 +456,10 @@
     "roe": 35,
     "pe": 11,
     "cover": 2.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Property & Casualty",
+    "cyclical": false
   },
   {
     "sym": "ADBE",
@@ -426,7 +470,10 @@
     "roe": 62,
     "pe": 11,
     "cover": 2.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "APO",
@@ -437,7 +484,24 @@
     "roe": 10,
     "pe": 36,
     "cover": 2.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
+  },
+  {
+    "sym": "DXCM",
+    "score": 80.6,
+    "rev_cagr": 17,
+    "gm": 60,
+    "ocf_q": 1.72,
+    "roe": 34,
+    "pe": 29,
+    "cover": 1.7,
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Devices",
+    "cyclical": false
   },
   {
     "sym": "ABNB",
@@ -448,7 +512,10 @@
     "roe": 31,
     "pe": 35,
     "cover": 5.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services",
+    "cyclical": false
   },
   {
     "sym": "MELI",
@@ -459,7 +526,10 @@
     "roe": 30,
     "pe": 44,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "ALNY",
@@ -470,7 +540,10 @@
     "roe": 98,
     "pe": 67,
     "cover": 1.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "HSBC",
@@ -481,7 +554,10 @@
     "roe": 12,
     "pe": 16,
     "cover": 1.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "IBN",
@@ -492,7 +568,10 @@
     "roe": 16,
     "pe": 18,
     "cover": 1.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "NXT",
@@ -503,7 +582,10 @@
     "roe": 28,
     "pe": 30,
     "cover": 99,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "cyclical": false
   },
   {
     "sym": "INTU",
@@ -514,7 +596,10 @@
     "roe": 23,
     "pe": 16,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "MSFT",
@@ -525,7 +610,10 @@
     "roe": 33,
     "pe": 22,
     "cover": 1.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "GRMN",
@@ -536,7 +624,10 @@
     "roe": 20,
     "pe": 27,
     "cover": 23.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Hardware, Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "LLY",
@@ -547,7 +638,10 @@
     "roe": 101,
     "pe": 40,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "AXP",
@@ -558,7 +652,10 @@
     "roe": 34,
     "pe": 21,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Credit Services",
+    "cyclical": false
   },
   {
     "sym": "JPM",
@@ -569,18 +666,24 @@
     "roe": 16,
     "pe": 16,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "ARGX",
-    "score": 77.9,
+    "score": 77.8,
     "rev_cagr": 80,
     "gm": 89,
     "ocf_q": 0.66,
     "roe": 17,
     "pe": 48,
     "cover": 52.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "ADSK",
@@ -591,7 +694,10 @@
     "roe": 49,
     "pe": 28,
     "cover": 1.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "EWBC",
@@ -602,7 +708,10 @@
     "roe": 16,
     "pe": 13,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "UBS",
@@ -613,7 +722,10 @@
     "roe": 9,
     "pe": 18,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "NTES",
@@ -624,7 +736,10 @@
     "roe": 22,
     "pe": 15,
     "cover": 15.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Electronic Gaming & Multimedia",
+    "cyclical": false
   },
   {
     "sym": "SMFG",
@@ -635,7 +750,10 @@
     "roe": 10,
     "pe": 15,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "SE",
@@ -646,7 +764,10 @@
     "roe": 14,
     "pe": 35,
     "cover": 3.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "MS",
@@ -657,7 +778,24 @@
     "roe": 16,
     "pe": 20,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Capital Markets",
+    "cyclical": false
+  },
+  {
+    "sym": "AU",
+    "score": 76.8,
+    "rev_cagr": 30,
+    "gm": 47,
+    "ocf_q": 1.79,
+    "roe": 44,
+    "pe": 11,
+    "cover": 3.1,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Gold",
+    "cyclical": true
   },
   {
     "sym": "MA",
@@ -668,7 +806,24 @@
     "roe": 150,
     "pe": 29,
     "cover": 1.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Credit Services",
+    "cyclical": false
+  },
+  {
+    "sym": "AEM",
+    "score": 76.5,
+    "rev_cagr": 28,
+    "gm": 58,
+    "ocf_q": 1.53,
+    "roe": 22,
+    "pe": 14,
+    "cover": 30.1,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Gold",
+    "cyclical": true
   },
   {
     "sym": "RY",
@@ -679,7 +834,10 @@
     "roe": 16,
     "pe": 19,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "GEN",
@@ -690,7 +848,24 @@
     "roe": 40,
     "pe": 15,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
+  },
+  {
+    "sym": "WPM",
+    "score": 75.7,
+    "rev_cagr": 30,
+    "gm": 72,
+    "ocf_q": 1.29,
+    "roe": 21,
+    "pe": 28,
+    "cover": 391.6,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Gold",
+    "cyclical": true
   },
   {
     "sym": "EXPE",
@@ -701,7 +876,10 @@
     "roe": 148,
     "pe": 22,
     "cover": 1.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services",
+    "cyclical": false
   },
   {
     "sym": "MUFG",
@@ -712,7 +890,10 @@
     "roe": 11,
     "pe": 15,
     "cover": 1.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "SMCI",
@@ -723,7 +904,10 @@
     "roe": 18,
     "pe": 16,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "cyclical": false
   },
   {
     "sym": "UBER",
@@ -734,7 +918,10 @@
     "roe": 33,
     "pe": 18,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "V",
@@ -745,7 +932,10 @@
     "roe": 59,
     "pe": 29,
     "cover": 1.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Credit Services",
+    "cyclical": false
   },
   {
     "sym": "TPG",
@@ -756,7 +946,10 @@
     "roe": 13,
     "pe": 48,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "FTNT",
@@ -767,7 +960,10 @@
     "roe": 150,
     "pe": 56,
     "cover": 5.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "FIX",
@@ -778,18 +974,10 @@
     "roe": 52,
     "pe": 56,
     "cover": 2.8,
-    "ni_pos": true
-  },
-  {
-    "sym": "RGLD",
-    "score": 74.2,
-    "rev_cagr": 20,
-    "gm": 69,
-    "ocf_q": 1.51,
-    "roe": 12,
-    "pe": 24,
-    "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Engineering & Construction",
+    "cyclical": false
   },
   {
     "sym": "RYAAY",
@@ -800,18 +988,10 @@
     "roe": 25,
     "pe": 13,
     "cover": 4.3,
-    "ni_pos": true
-  },
-  {
-    "sym": "SPOT",
-    "score": 74.1,
-    "rev_cagr": 14,
-    "gm": 32,
-    "ocf_q": 1.33,
-    "roe": 35,
-    "pe": 30,
-    "cover": 3.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Airlines, Airports & Air Services",
+    "cyclical": false
   },
   {
     "sym": "ZM",
@@ -822,7 +1002,24 @@
     "roe": 22,
     "pe": 12,
     "cover": 55.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
+  },
+  {
+    "sym": "SPOT",
+    "score": 74.0,
+    "rev_cagr": 14,
+    "gm": 32,
+    "ocf_q": 1.33,
+    "roe": 35,
+    "pe": 30,
+    "cover": 3.5,
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "cyclical": false
   },
   {
     "sym": "HOOD",
@@ -833,7 +1030,10 @@
     "roe": 22,
     "pe": 46,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Capital Markets",
+    "cyclical": false
   },
   {
     "sym": "NOW",
@@ -844,7 +1044,10 @@
     "roe": 15,
     "pe": 56,
     "cover": 2.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "COIN",
@@ -855,7 +1058,10 @@
     "roe": 6,
     "pe": 46,
     "cover": 1.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Data & Stock Exchanges",
+    "cyclical": false
   },
   {
     "sym": "VRTX",
@@ -866,7 +1072,10 @@
     "roe": 24,
     "pe": 28,
     "cover": 2.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "CPRT",
@@ -877,7 +1086,10 @@
     "roe": 17,
     "pe": 19,
     "cover": 44.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Specialty Business Services",
+    "cyclical": false
   },
   {
     "sym": "BMO",
@@ -888,7 +1100,10 @@
     "roe": 11,
     "pe": 19,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "RACE",
@@ -899,18 +1114,10 @@
     "roe": 42,
     "pe": 34,
     "cover": 2.0,
-    "ni_pos": true
-  },
-  {
-    "sym": "BX",
-    "score": 72.8,
-    "rev_cagr": 23,
-    "gm": 86,
-    "ocf_q": 0.62,
-    "roe": 36,
-    "pe": 29,
-    "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto - Manufacturers",
+    "cyclical": false
   },
   {
     "sym": "BSX",
@@ -921,7 +1128,24 @@
     "roe": 15,
     "pe": 19,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Devices",
+    "cyclical": false
+  },
+  {
+    "sym": "BX",
+    "score": 72.8,
+    "rev_cagr": 23,
+    "gm": 86,
+    "ocf_q": 0.62,
+    "roe": 36,
+    "pe": 29,
+    "cover": 0.3,
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "SAP",
@@ -932,7 +1156,10 @@
     "roe": 17,
     "pe": 21,
     "cover": 2.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "KLAC",
@@ -943,7 +1170,24 @@
     "roe": 89,
     "pe": 7,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
+  },
+  {
+    "sym": "NEM",
+    "score": 72.7,
+    "rev_cagr": 23,
+    "gm": 50,
+    "ocf_q": 1.46,
+    "roe": 25,
+    "pe": 12,
+    "cover": 3.1,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Gold",
+    "cyclical": true
   },
   {
     "sym": "UAL",
@@ -954,7 +1198,10 @@
     "roe": 25,
     "pe": 12,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Airlines, Airports & Air Services",
+    "cyclical": false
   },
   {
     "sym": "AMGN",
@@ -965,7 +1212,10 @@
     "roe": 89,
     "pe": 24,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "ISRG",
@@ -976,7 +1226,10 @@
     "roe": 17,
     "pe": 48,
     "cover": 21.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Devices",
+    "cyclical": false
   },
   {
     "sym": "NVS",
@@ -987,7 +1240,10 @@
     "roe": 32,
     "pe": 22,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "CME",
@@ -998,7 +1254,10 @@
     "roe": 15,
     "pe": 20,
     "cover": 2.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Data & Stock Exchanges",
+    "cyclical": false
   },
   {
     "sym": "REGN",
@@ -1009,7 +1268,10 @@
     "roe": 14,
     "pe": 15,
     "cover": 3.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "AMZN",
@@ -1020,18 +1282,10 @@
     "roe": 23,
     "pe": 28,
     "cover": 1.5,
-    "ni_pos": true
-  },
-  {
-    "sym": "FFIV",
-    "score": 71.6,
-    "rev_cagr": 5,
-    "gm": 81,
-    "ocf_q": 1.37,
-    "roe": 20,
-    "pe": 31,
-    "cover": 4.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "ASND",
@@ -1042,7 +1296,10 @@
     "roe": -50,
     "pe": 26,
     "cover": 0.8,
-    "ni_pos": false
+    "ni_pos": false,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "cyclical": false
   },
   {
     "sym": "LOGI",
@@ -1053,7 +1310,10 @@
     "roe": 32,
     "pe": 21,
     "cover": 31.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "cyclical": false
   },
   {
     "sym": "MCO",
@@ -1064,7 +1324,10 @@
     "roe": 67,
     "pe": 32,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Data & Stock Exchanges",
+    "cyclical": false
   },
   {
     "sym": "NBIS",
@@ -1075,7 +1338,24 @@
     "roe": 16,
     "pe": 77,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "cyclical": false
+  },
+  {
+    "sym": "SCHW",
+    "score": 71.0,
+    "rev_cagr": 7,
+    "gm": 86,
+    "ocf_q": 1.05,
+    "roe": 19,
+    "pe": 18,
+    "cover": 1.8,
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Capital Markets",
+    "cyclical": false
   },
   {
     "sym": "AVGO",
@@ -1086,7 +1366,10 @@
     "roe": 36,
     "pe": 62,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "MNST",
@@ -1097,7 +1380,10 @@
     "roe": 25,
     "pe": 46,
     "cover": 99,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "NFLX",
@@ -1108,7 +1394,10 @@
     "roe": 49,
     "pe": 23,
     "cover": 1.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
   },
   {
     "sym": "ORCL",
@@ -1119,7 +1408,10 @@
     "roe": 51,
     "pe": 27,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "ASML",
@@ -1128,9 +1420,12 @@
     "gm": 53,
     "ocf_q": 1.27,
     "roe": 52,
-    "pe": 62,
+    "pe": 63,
     "cover": 9.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "KKR",
@@ -1141,18 +1436,10 @@
     "roe": 10,
     "pe": 29,
     "cover": 0.2,
-    "ni_pos": true
-  },
-  {
-    "sym": "SCCO",
-    "score": 70.8,
-    "rev_cagr": 10,
-    "gm": 57,
-    "ocf_q": 1.1,
-    "roe": 46,
-    "pe": 29,
-    "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "TRV",
@@ -1163,7 +1450,10 @@
     "roe": 24,
     "pe": 9,
     "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Property & Casualty",
+    "cyclical": false
   },
   {
     "sym": "ABEV",
@@ -1174,7 +1464,10 @@
     "roe": 17,
     "pe": 17,
     "cover": 8.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "TROW",
@@ -1185,7 +1478,10 @@
     "roe": 19,
     "pe": 11,
     "cover": 6.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "SHOP",
@@ -1196,7 +1492,10 @@
     "roe": 11,
     "pe": 111,
     "cover": 19.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "CRM",
@@ -1207,7 +1506,10 @@
     "roe": 15,
     "pe": 18,
     "cover": 1.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "ADP",
@@ -1218,7 +1520,10 @@
     "roe": 69,
     "pe": 20,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Staffing & Employment Services",
+    "cyclical": false
   },
   {
     "sym": "PYPL",
@@ -1229,7 +1534,10 @@
     "roe": 25,
     "pe": 8,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Credit Services",
+    "cyclical": false
   },
   {
     "sym": "NTAP",
@@ -1240,7 +1548,10 @@
     "roe": 114,
     "pe": 24,
     "cover": 1.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "cyclical": false
   },
   {
     "sym": "APH",
@@ -1251,7 +1562,10 @@
     "roe": 35,
     "pe": 44,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Hardware, Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "USB",
@@ -1262,7 +1576,10 @@
     "roe": 12,
     "pe": 13,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "AZN",
@@ -1273,7 +1590,10 @@
     "roe": 22,
     "pe": 27,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "LYG",
@@ -1284,7 +1604,10 @@
     "roe": 11,
     "pe": 14,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "ACN",
@@ -1295,7 +1618,10 @@
     "roe": 25,
     "pe": 10,
     "cover": 2.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Information Technology Services",
+    "cyclical": false
   },
   {
     "sym": "RMBS",
@@ -1306,7 +1632,10 @@
     "roe": 17,
     "pe": 58,
     "cover": 12.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "BNS",
@@ -1317,7 +1646,10 @@
     "roe": 11,
     "pe": 17,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "GSK",
@@ -1328,7 +1660,10 @@
     "roe": 36,
     "pe": 13,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "MU",
@@ -1339,7 +1674,10 @@
     "roe": 71,
     "pe": 23,
     "cover": 1.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "MPWR",
@@ -1350,7 +1688,10 @@
     "roe": 19,
     "pe": 103,
     "cover": 80.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "GILD",
@@ -1361,7 +1702,10 @@
     "roe": 42,
     "pe": 17,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "GRAB",
@@ -1372,7 +1716,24 @@
     "roe": 6,
     "pe": 38,
     "cover": 1.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
+  },
+  {
+    "sym": "B",
+    "score": 67.5,
+    "rev_cagr": 15,
+    "gm": 51,
+    "ocf_q": 1.5,
+    "roe": 23,
+    "pe": 10,
+    "cover": 3.0,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Gold",
+    "cyclical": true
   },
   {
     "sym": "CVNA",
@@ -1383,7 +1744,10 @@
     "roe": 57,
     "pe": 25,
     "cover": 5.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto - Dealerships",
+    "cyclical": false
   },
   {
     "sym": "RELX",
@@ -1394,7 +1758,10 @@
     "roe": 91,
     "pe": 21,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Specialty Business Services",
+    "cyclical": false
   },
   {
     "sym": "DASH",
@@ -1405,7 +1772,10 @@
     "roe": 10,
     "pe": 83,
     "cover": 2.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "cyclical": false
   },
   {
     "sym": "ITUB",
@@ -1416,7 +1786,10 @@
     "roe": 22,
     "pe": 10,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "RSG",
@@ -1427,7 +1800,10 @@
     "roe": 18,
     "pe": 31,
     "cover": 7.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Waste Management",
+    "cyclical": false
   },
   {
     "sym": "HBAN",
@@ -1438,7 +1814,10 @@
     "roe": 9,
     "pe": 13,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "DEO",
@@ -1449,7 +1828,10 @@
     "roe": 21,
     "pe": 19,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Wineries & Distilleries",
+    "cyclical": false
   },
   {
     "sym": "AON",
@@ -1460,7 +1842,10 @@
     "roe": 45,
     "pe": 18,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Brokers",
+    "cyclical": false
   },
   {
     "sym": "MRSH",
@@ -1471,7 +1856,10 @@
     "roe": 26,
     "pe": 21,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Brokers",
+    "cyclical": false
   },
   {
     "sym": "QCOM",
@@ -1482,18 +1870,10 @@
     "roe": 40,
     "pe": 21,
     "cover": 1.3,
-    "ni_pos": true
-  },
-  {
-    "sym": "IDXX",
-    "score": 66.5,
-    "rev_cagr": 9,
-    "gm": 62,
-    "ocf_q": 1.11,
-    "roe": 71,
-    "pe": 40,
-    "cover": 1.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "IBM",
@@ -1504,7 +1884,24 @@
     "roe": 36,
     "pe": 23,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Information Technology Services",
+    "cyclical": false
+  },
+  {
+    "sym": "IDXX",
+    "score": 66.5,
+    "rev_cagr": 9,
+    "gm": 62,
+    "ocf_q": 1.11,
+    "roe": 71,
+    "pe": 40,
+    "cover": 1.3,
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Diagnostics & Research",
+    "cyclical": false
   },
   {
     "sym": "MFG",
@@ -1515,7 +1912,10 @@
     "roe": 11,
     "pe": 15,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "CP",
@@ -1526,7 +1926,10 @@
     "roe": 9,
     "pe": 25,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Railroads",
+    "cyclical": false
   },
   {
     "sym": "BMY",
@@ -1537,7 +1940,10 @@
     "roe": 39,
     "pe": 15,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "BAM",
@@ -1548,7 +1954,10 @@
     "roe": 30,
     "pe": 29,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "SPGI",
@@ -1559,7 +1968,10 @@
     "roe": 15,
     "pe": 25,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Data & Stock Exchanges",
+    "cyclical": false
   },
   {
     "sym": "SPG",
@@ -1570,7 +1982,10 @@
     "roe": 126,
     "pe": 15,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Retail",
+    "cyclical": false
   },
   {
     "sym": "ALL",
@@ -1581,7 +1996,10 @@
     "roe": 43,
     "pe": 5,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Property & Casualty",
+    "cyclical": false
   },
   {
     "sym": "AFRM",
@@ -1592,7 +2010,10 @@
     "roe": 11,
     "pe": 68,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "CTAS",
@@ -1603,7 +2024,10 @@
     "roe": 41,
     "pe": 36,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Specialty Business Services",
+    "cyclical": false
   },
   {
     "sym": "FITB",
@@ -1614,7 +2038,10 @@
     "roe": 9,
     "pe": 18,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "IESC",
@@ -1625,7 +2052,10 @@
     "roe": 41,
     "pe": 39,
     "cover": 2.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Engineering & Construction",
+    "cyclical": false
   },
   {
     "sym": "ULTA",
@@ -1636,7 +2066,10 @@
     "roe": 45,
     "pe": 18,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "BKNG",
@@ -1647,7 +2080,10 @@
     "roe": -50,
     "pe": 24,
     "cover": 1.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services",
+    "cyclical": false
   },
   {
     "sym": "ROP",
@@ -1658,7 +2094,10 @@
     "roe": 9,
     "pe": 21,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "EBAY",
@@ -1669,7 +2108,10 @@
     "roe": 44,
     "pe": 24,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "WDAY",
@@ -1680,7 +2122,10 @@
     "roe": 10,
     "pe": 37,
     "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "TIGO",
@@ -1691,7 +2136,10 @@
     "roe": 36,
     "pe": 12,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "FAST",
@@ -1702,7 +2150,10 @@
     "roe": 33,
     "pe": 41,
     "cover": 3.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Distribution",
+    "cyclical": false
   },
   {
     "sym": "CDNS",
@@ -1713,7 +2164,10 @@
     "roe": 21,
     "pe": 86,
     "cover": 1.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "ICE",
@@ -1724,7 +2178,10 @@
     "roe": 14,
     "pe": 19,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Data & Stock Exchanges",
+    "cyclical": false
   },
   {
     "sym": "JNJ",
@@ -1735,7 +2192,10 @@
     "roe": 26,
     "pe": 28,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "NEE",
@@ -1746,7 +2206,10 @@
     "roe": 15,
     "pe": 22,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "SNY",
@@ -1757,7 +2220,10 @@
     "roe": 14,
     "pe": 12,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "DLTR",
@@ -1768,7 +2234,10 @@
     "roe": 36,
     "pe": 19,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Discount Stores",
+    "cyclical": false
   },
   {
     "sym": "MSI",
@@ -1779,7 +2248,10 @@
     "roe": 90,
     "pe": 32,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "cyclical": false
   },
   {
     "sym": "PEP",
@@ -1790,7 +2262,10 @@
     "roe": 44,
     "pe": 22,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "GEV",
@@ -1801,7 +2276,10 @@
     "roe": 88,
     "pe": 31,
     "cover": 99,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Renewable Utilities",
+    "cyclical": false
   },
   {
     "sym": "TRI",
@@ -1812,7 +2290,10 @@
     "roe": 13,
     "pe": 24,
     "cover": 1.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Specialty Business Services",
+    "cyclical": false
   },
   {
     "sym": "CEG",
@@ -1823,7 +2304,10 @@
     "roe": 20,
     "pe": 23,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Renewable Utilities",
+    "cyclical": false
   },
   {
     "sym": "URI",
@@ -1834,7 +2318,10 @@
     "roe": 28,
     "pe": 28,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Rental & Leasing Services",
+    "cyclical": false
   },
   {
     "sym": "CL",
@@ -1845,7 +2332,10 @@
     "roe": 150,
     "pe": 35,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Household & Personal Products",
+    "cyclical": false
   },
   {
     "sym": "AMT",
@@ -1856,7 +2346,10 @@
     "roe": 77,
     "pe": 28,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "cyclical": false
   },
   {
     "sym": "CTSH",
@@ -1867,7 +2360,10 @@
     "roe": 15,
     "pe": 9,
     "cover": 3.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Information Technology Services",
+    "cyclical": false
   },
   {
     "sym": "PG",
@@ -1878,7 +2374,10 @@
     "roe": 31,
     "pe": 22,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Household & Personal Products",
+    "cyclical": false
   },
   {
     "sym": "TFC",
@@ -1889,18 +2388,10 @@
     "roe": 9,
     "pe": 12,
     "cover": 0.6,
-    "ni_pos": true
-  },
-  {
-    "sym": "MPLX",
-    "score": 63.0,
-    "rev_cagr": 4,
-    "gm": 45,
-    "ocf_q": 1.2,
-    "roe": 33,
-    "pe": 12,
-    "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "CRH",
@@ -1911,7 +2402,10 @@
     "roe": 24,
     "pe": 19,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Construction Materials",
+    "cyclical": false
   },
   {
     "sym": "VRT",
@@ -1922,7 +2416,10 @@
     "roe": 42,
     "pe": 78,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "SPCX",
@@ -1933,7 +2430,10 @@
     "roe": 0,
     "pe": 0,
     "cover": 1.4,
-    "ni_pos": false
+    "ni_pos": false,
+    "sector": "Technology",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "SYK",
@@ -1944,7 +2444,10 @@
     "roe": 15,
     "pe": 36,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Devices",
+    "cyclical": false
   },
   {
     "sym": "HEI",
@@ -1955,7 +2458,10 @@
     "roe": 18,
     "pe": 59,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "T",
@@ -1966,7 +2472,10 @@
     "roe": 20,
     "pe": 7,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "TBB",
@@ -1977,7 +2486,10 @@
     "roe": 20,
     "pe": 7,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "CCEP",
@@ -1988,7 +2500,10 @@
     "roe": 24,
     "pe": 20,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "CMCSA",
@@ -1999,7 +2514,10 @@
     "roe": 20,
     "pe": 4,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "COKE",
@@ -2010,7 +2528,10 @@
     "roe": 123,
     "pe": 23,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "CB",
@@ -2021,7 +2542,10 @@
     "roe": 16,
     "pe": 12,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Property & Casualty",
+    "cyclical": false
   },
   {
     "sym": "GE",
@@ -2032,7 +2556,10 @@
     "roe": 46,
     "pe": 45,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "NDAQ",
@@ -2043,7 +2570,10 @@
     "roe": 16,
     "pe": 24,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Data & Stock Exchanges",
+    "cyclical": false
   },
   {
     "sym": "CSCO",
@@ -2054,7 +2584,10 @@
     "roe": 25,
     "pe": 40,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "cyclical": false
   },
   {
     "sym": "BAC",
@@ -2065,7 +2598,10 @@
     "roe": 10,
     "pe": 14,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "cyclical": false
   },
   {
     "sym": "FISV",
@@ -2076,7 +2612,10 @@
     "roe": 13,
     "pe": 8,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Information Technology Services",
+    "cyclical": false
   },
   {
     "sym": "CG",
@@ -2087,7 +2626,10 @@
     "roe": 10,
     "pe": 27,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "TT",
@@ -2098,7 +2640,10 @@
     "roe": 35,
     "pe": 37,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "OKTA",
@@ -2109,7 +2654,10 @@
     "roe": 4,
     "pe": 85,
     "cover": 4.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "AJG",
@@ -2120,7 +2668,10 @@
     "roe": 7,
     "pe": 35,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Brokers",
+    "cyclical": false
   },
   {
     "sym": "FWONK",
@@ -2131,7 +2682,10 @@
     "roe": 11,
     "pe": 25,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
   },
   {
     "sym": "FWONA",
@@ -2142,7 +2696,10 @@
     "roe": 11,
     "pe": 25,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
   },
   {
     "sym": "ROST",
@@ -2153,7 +2710,10 @@
     "roe": 38,
     "pe": 32,
     "cover": 1.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Apparel - Retail",
+    "cyclical": false
   },
   {
     "sym": "MET",
@@ -2164,7 +2724,10 @@
     "roe": 13,
     "pe": 16,
     "cover": 2.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Life",
+    "cyclical": false
   },
   {
     "sym": "CHTR",
@@ -2175,7 +2738,10 @@
     "roe": 31,
     "pe": 3,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "DAL",
@@ -2186,7 +2752,24 @@
     "roe": 23,
     "pe": 13,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Airlines, Airports & Air Services",
+    "cyclical": false
+  },
+  {
+    "sym": "FFIV",
+    "score": 59.6,
+    "rev_cagr": 5,
+    "gm": 81,
+    "ocf_q": 1.37,
+    "roe": 0,
+    "pe": 31,
+    "cover": 4.7,
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "PNC",
@@ -2197,18 +2780,10 @@
     "roe": 12,
     "pe": 14,
     "cover": 0.8,
-    "ni_pos": true
-  },
-  {
-    "sym": "SCHW",
-    "score": 59.5,
-    "rev_cagr": 7,
-    "gm": 86,
-    "ocf_q": 1.05,
-    "roe": 0,
-    "pe": 18,
-    "cover": 1.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "EW",
@@ -2219,7 +2794,10 @@
     "roe": 11,
     "pe": 47,
     "cover": 6.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Devices",
+    "cyclical": false
   },
   {
     "sym": "LECO",
@@ -2230,7 +2808,10 @@
     "roe": 37,
     "pe": 27,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Manufacturing - Tools & Accessories",
+    "cyclical": false
   },
   {
     "sym": "WTW",
@@ -2241,7 +2822,10 @@
     "roe": 21,
     "pe": 15,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Insurance - Brokers",
+    "cyclical": false
   },
   {
     "sym": "BKR",
@@ -2252,7 +2836,24 @@
     "roe": 17,
     "pe": 18,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services",
+    "cyclical": false
+  },
+  {
+    "sym": "RGLD",
+    "score": 59.3,
+    "rev_cagr": 20,
+    "gm": 69,
+    "ocf_q": 1.51,
+    "roe": 12,
+    "pe": 24,
+    "cover": 1.0,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Gold",
+    "cyclical": true
   },
   {
     "sym": "SSNC",
@@ -2263,7 +2864,10 @@
     "roe": 12,
     "pe": 20,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "cyclical": false
   },
   {
     "sym": "WMG",
@@ -2274,7 +2878,10 @@
     "roe": 67,
     "pe": 31,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
   },
   {
     "sym": "EXE",
@@ -2285,7 +2892,10 @@
     "roe": 17,
     "pe": 7,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "cyclical": false
   },
   {
     "sym": "MDT",
@@ -2296,7 +2906,10 @@
     "roe": 10,
     "pe": 21,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Devices",
+    "cyclical": false
   },
   {
     "sym": "TJX",
@@ -2307,7 +2920,10 @@
     "roe": 60,
     "pe": 32,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Apparel - Retail",
+    "cyclical": false
   },
   {
     "sym": "TER",
@@ -2318,7 +2934,10 @@
     "roe": 30,
     "pe": 79,
     "cover": 2.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "TMUS",
@@ -2329,7 +2948,10 @@
     "roe": 18,
     "pe": 19,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "BLK",
@@ -2340,7 +2962,10 @@
     "roe": 12,
     "pe": 24,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Asset Management",
+    "cyclical": false
   },
   {
     "sym": "TSCO",
@@ -2351,7 +2976,10 @@
     "roe": 43,
     "pe": 15,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "TEL",
@@ -2362,7 +2990,10 @@
     "roe": 23,
     "pe": 20,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Hardware, Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "GWW",
@@ -2373,7 +3004,10 @@
     "roe": 48,
     "pe": 36,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Distribution",
+    "cyclical": false
   },
   {
     "sym": "PLD",
@@ -2384,18 +3018,10 @@
     "roe": 7,
     "pe": 35,
     "cover": 0.2,
-    "ni_pos": true
-  },
-  {
-    "sym": "OKE",
-    "score": 58.1,
-    "rev_cagr": 14,
-    "gm": 21,
-    "ocf_q": 1.65,
-    "roe": 16,
-    "pe": 16,
-    "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Industrial",
+    "cyclical": false
   },
   {
     "sym": "SHW",
@@ -2406,18 +3032,10 @@
     "roe": 58,
     "pe": 32,
     "cover": 0.3,
-    "ni_pos": true
-  },
-  {
-    "sym": "FOX",
-    "score": 57.9,
-    "rev_cagr": 5,
-    "gm": 33,
-    "ocf_q": 1.47,
-    "roe": 15,
-    "pe": 12,
-    "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Chemicals - Specialty",
+    "cyclical": false
   },
   {
     "sym": "FOXA",
@@ -2428,7 +3046,24 @@
     "roe": 15,
     "pe": 12,
     "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
+  },
+  {
+    "sym": "FOX",
+    "score": 57.9,
+    "rev_cagr": 5,
+    "gm": 33,
+    "ocf_q": 1.47,
+    "roe": 15,
+    "pe": 12,
+    "cover": 1.2,
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
   },
   {
     "sym": "RPRX",
@@ -2439,7 +3074,10 @@
     "roe": 13,
     "pe": 22,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Pharmaceuticals",
+    "cyclical": false
   },
   {
     "sym": "AMX",
@@ -2450,7 +3088,10 @@
     "roe": 21,
     "pe": 16,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "KO",
@@ -2461,7 +3102,10 @@
     "roe": 44,
     "pe": 25,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "CCJ",
@@ -2472,7 +3116,10 @@
     "roe": 9,
     "pe": 101,
     "cover": 2.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Uranium",
+    "cyclical": false
   },
   {
     "sym": "CNI",
@@ -2483,7 +3130,10 @@
     "roe": 22,
     "pe": 22,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Railroads",
+    "cyclical": false
   },
   {
     "sym": "AAPL",
@@ -2494,7 +3144,10 @@
     "roe": 147,
     "pe": 35,
     "cover": 1.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "cyclical": false
   },
   {
     "sym": "EMR",
@@ -2505,7 +3158,10 @@
     "roe": 12,
     "pe": 33,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "WM",
@@ -2516,7 +3172,10 @@
     "roe": 29,
     "pe": 32,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Waste Management",
+    "cyclical": false
   },
   {
     "sym": "ABT",
@@ -2527,7 +3186,10 @@
     "roe": 12,
     "pe": 25,
     "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Devices",
+    "cyclical": false
   },
   {
     "sym": "COR",
@@ -2538,7 +3200,10 @@
     "roe": 116,
     "pe": 22,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Distribution",
+    "cyclical": false
   },
   {
     "sym": "AMAT",
@@ -2549,7 +3214,10 @@
     "roe": 40,
     "pe": 55,
     "cover": 2.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "LAMR",
@@ -2560,7 +3228,10 @@
     "roe": 56,
     "pe": 28,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "cyclical": false
   },
   {
     "sym": "NVMI",
@@ -2571,7 +3242,10 @@
     "roe": 21,
     "pe": 64,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "PH",
@@ -2582,7 +3256,10 @@
     "roe": 25,
     "pe": 35,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "CI",
@@ -2593,7 +3270,24 @@
     "roe": 15,
     "pe": 12,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Healthcare Plans",
+    "cyclical": false
+  },
+  {
+    "sym": "SCCO",
+    "score": 56.6,
+    "rev_cagr": 10,
+    "gm": 57,
+    "ocf_q": 1.1,
+    "roe": 46,
+    "pe": 29,
+    "cover": 1.2,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Copper",
+    "cyclical": true
   },
   {
     "sym": "LRCX",
@@ -2604,7 +3298,10 @@
     "roe": 66,
     "pe": 70,
     "cover": 2.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
   },
   {
     "sym": "STRL",
@@ -2615,7 +3312,10 @@
     "roe": 33,
     "pe": 77,
     "cover": 2.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Engineering & Construction",
+    "cyclical": false
   },
   {
     "sym": "ITW",
@@ -2626,7 +3326,10 @@
     "roe": 97,
     "pe": 24,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "D",
@@ -2637,7 +3340,10 @@
     "roe": 11,
     "pe": 20,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "NDSN",
@@ -2648,7 +3354,10 @@
     "roe": 17,
     "pe": 31,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "GD",
@@ -2659,7 +3368,10 @@
     "roe": 17,
     "pe": 21,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "NOC",
@@ -2670,7 +3382,10 @@
     "roe": 28,
     "pe": 16,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "COST",
@@ -2681,7 +3396,10 @@
     "roe": 28,
     "pe": 48,
     "cover": 3.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Discount Stores",
+    "cyclical": false
   },
   {
     "sym": "COF",
@@ -2692,18 +3410,10 @@
     "roe": 3,
     "pe": 70,
     "cover": 1.7,
-    "ni_pos": true
-  },
-  {
-    "sym": "FER",
-    "score": 55.2,
-    "rev_cagr": 8,
-    "gm": 88,
-    "ocf_q": 2.17,
-    "roe": 15,
-    "pe": 50,
-    "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Financial - Credit Services",
+    "cyclical": false
   },
   {
     "sym": "HD",
@@ -2714,7 +3424,10 @@
     "roe": 113,
     "pe": 24,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Home Improvement",
+    "cyclical": false
   },
   {
     "sym": "O",
@@ -2725,7 +3438,10 @@
     "roe": 3,
     "pe": 51,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Retail",
+    "cyclical": false
   },
   {
     "sym": "VICR",
@@ -2736,7 +3452,10 @@
     "roe": 20,
     "pe": 106,
     "cover": 42.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Hardware, Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "ETN",
@@ -2747,7 +3466,24 @@
     "roe": 21,
     "pe": 39,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts",
+    "cyclical": false
+  },
+  {
+    "sym": "FER",
+    "score": 55.1,
+    "rev_cagr": 8,
+    "gm": 88,
+    "ocf_q": 2.17,
+    "roe": 15,
+    "pe": 50,
+    "cover": 0.6,
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Engineering & Construction",
+    "cyclical": false
   },
   {
     "sym": "VZ",
@@ -2758,7 +3494,10 @@
     "roe": 17,
     "pe": 11,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Telecommunications Services",
+    "cyclical": false
   },
   {
     "sym": "ECL",
@@ -2769,7 +3508,10 @@
     "roe": 22,
     "pe": 37,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Chemicals - Specialty",
+    "cyclical": false
   },
   {
     "sym": "FERG",
@@ -2780,7 +3522,10 @@
     "roe": 35,
     "pe": 22,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Distribution",
+    "cyclical": false
   },
   {
     "sym": "MRK",
@@ -2791,18 +3536,10 @@
     "roe": 18,
     "pe": 34,
     "cover": 0.6,
-    "ni_pos": true
-  },
-  {
-    "sym": "TRP",
-    "score": 54.9,
-    "rev_cagr": 7,
-    "gm": 50,
-    "ocf_q": 2.09,
-    "roe": 13,
-    "pe": 31,
-    "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "EA",
@@ -2813,7 +3550,10 @@
     "roe": 14,
     "pe": 58,
     "cover": 3.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Electronic Gaming & Multimedia",
+    "cyclical": false
   },
   {
     "sym": "HONIV",
@@ -2824,7 +3564,10 @@
     "roe": 24,
     "pe": 32,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Conglomerates",
+    "cyclical": false
   },
   {
     "sym": "ROKU",
@@ -2835,18 +3578,10 @@
     "roe": 8,
     "pe": 100,
     "cover": 2.4,
-    "ni_pos": true
-  },
-  {
-    "sym": "WMB",
-    "score": 54.6,
-    "rev_cagr": 3,
-    "gm": 43,
-    "ocf_q": 2.25,
-    "roe": 22,
-    "pe": 33,
-    "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
   },
   {
     "sym": "HON",
@@ -2857,7 +3592,10 @@
     "roe": 24,
     "pe": 32,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Conglomerates",
+    "cyclical": false
   },
   {
     "sym": "REG",
@@ -2868,7 +3606,10 @@
     "roe": 10,
     "pe": 23,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Retail",
+    "cyclical": false
   },
   {
     "sym": "BUD",
@@ -2879,7 +3620,10 @@
     "roe": 9,
     "pe": 17,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "VRSK",
@@ -2890,7 +3634,10 @@
     "roe": -50,
     "pe": 27,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Services",
+    "cyclical": false
   },
   {
     "sym": "RIO",
@@ -2901,7 +3648,10 @@
     "roe": 17,
     "pe": 15,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Industrial Materials",
+    "cyclical": false
   },
   {
     "sym": "HWM",
@@ -2912,7 +3662,10 @@
     "roe": 33,
     "pe": 63,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "GEHC",
@@ -2923,7 +3676,10 @@
     "roe": 15,
     "pe": 20,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Healthcare Information Services",
+    "cyclical": false
   },
   {
     "sym": "TM",
@@ -2934,7 +3690,10 @@
     "roe": 10,
     "pe": 9,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto - Manufacturers",
+    "cyclical": false
   },
   {
     "sym": "WWD",
@@ -2945,7 +3704,10 @@
     "roe": 20,
     "pe": 50,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "SLB",
@@ -2956,7 +3718,10 @@
     "roe": 13,
     "pe": 20,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services",
+    "cyclical": false
   },
   {
     "sym": "DIS",
@@ -2967,7 +3732,10 @@
     "roe": 10,
     "pe": 16,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "cyclical": false
   },
   {
     "sym": "ROK",
@@ -2978,7 +3746,10 @@
     "roe": 30,
     "pe": 48,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "CMI",
@@ -2989,7 +3760,10 @@
     "roe": 22,
     "pe": 36,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "PM",
@@ -3000,7 +3774,10 @@
     "roe": -50,
     "pe": 25,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Tobacco",
+    "cyclical": false
   },
   {
     "sym": "AME",
@@ -3011,7 +3788,10 @@
     "roe": 14,
     "pe": 35,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "DB",
@@ -3022,7 +3802,10 @@
     "roe": 9,
     "pe": 10,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "cyclical": false
   },
   {
     "sym": "LMT",
@@ -3033,7 +3816,10 @@
     "roe": 75,
     "pe": 24,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "TDG",
@@ -3044,7 +3830,10 @@
     "roe": -24,
     "pe": 41,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "VRSN",
@@ -3055,7 +3844,10 @@
     "roe": -40,
     "pe": 28,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "KDP",
@@ -3066,7 +3858,10 @@
     "roe": 7,
     "pe": 23,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "cyclical": false
   },
   {
     "sym": "EXC",
@@ -3077,7 +3872,10 @@
     "roe": 10,
     "pe": 17,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "LIN",
@@ -3088,18 +3886,10 @@
     "roe": 19,
     "pe": 34,
     "cover": 0.6,
-    "ni_pos": true
-  },
-  {
-    "sym": "ENB",
-    "score": 51.5,
-    "rev_cagr": 7,
-    "gm": 33,
-    "ocf_q": 2.25,
-    "roe": 11,
-    "pe": 23,
-    "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Chemicals - Specialty",
+    "cyclical": false
   },
   {
     "sym": "WMT",
@@ -3110,7 +3900,10 @@
     "roe": 24,
     "pe": 42,
     "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Discount Stores",
+    "cyclical": false
   },
   {
     "sym": "MCD",
@@ -3121,7 +3914,10 @@
     "roe": -50,
     "pe": 23,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Restaurants",
+    "cyclical": false
   },
   {
     "sym": "AZO",
@@ -3132,7 +3928,10 @@
     "roe": -50,
     "pe": 21,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "ABBV",
@@ -3143,7 +3942,10 @@
     "roe": 68,
     "pe": 115,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "cyclical": false
   },
   {
     "sym": "BABA",
@@ -3152,9 +3954,12 @@
     "gm": 40,
     "ocf_q": 0.74,
     "roe": 10,
-    "pe": 15,
+    "pe": 14,
     "cover": 1.0,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "UNH",
@@ -3165,7 +3970,10 @@
     "roe": 12,
     "pe": 31,
     "cover": 0.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Healthcare Plans",
+    "cyclical": false
   },
   {
     "sym": "AEP",
@@ -3176,7 +3984,24 @@
     "roe": 12,
     "pe": 20,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
+  },
+  {
+    "sym": "MPLX",
+    "score": 50.4,
+    "rev_cagr": 4,
+    "gm": 45,
+    "ocf_q": 1.2,
+    "roe": 33,
+    "pe": 12,
+    "cover": 0.3,
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Midstream",
+    "cyclical": true
   },
   {
     "sym": "PSA",
@@ -3187,7 +4012,10 @@
     "roe": 20,
     "pe": 33,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Industrial",
+    "cyclical": false
   },
   {
     "sym": "AKAM",
@@ -3198,7 +4026,10 @@
     "roe": 9,
     "pe": 40,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "HCA",
@@ -3209,7 +4040,10 @@
     "roe": -50,
     "pe": 13,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Care Facilities",
+    "cyclical": false
   },
   {
     "sym": "FDX",
@@ -3220,7 +4054,10 @@
     "roe": 9,
     "pe": 17,
     "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Integrated Freight & Logistics",
+    "cyclical": false
   },
   {
     "sym": "CAT",
@@ -3231,7 +4068,10 @@
     "roe": 48,
     "pe": 49,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Agricultural - Machinery",
+    "cyclical": false
   },
   {
     "sym": "WAB",
@@ -3242,7 +4082,10 @@
     "roe": 11,
     "pe": 38,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Railroads",
+    "cyclical": false
   },
   {
     "sym": "DUK",
@@ -3253,7 +4096,10 @@
     "roe": 10,
     "pe": 19,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "WELL",
@@ -3264,7 +4110,10 @@
     "roe": 4,
     "pe": 108,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Healthcare Facilities",
+    "cyclical": false
   },
   {
     "sym": "LNT",
@@ -3275,7 +4124,10 @@
     "roe": 11,
     "pe": 24,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "JCI",
@@ -3286,7 +4138,10 @@
     "roe": 25,
     "pe": 25,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "ORLY",
@@ -3297,7 +4152,10 @@
     "roe": -50,
     "pe": 29,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "ESLT",
@@ -3308,7 +4166,10 @@
     "roe": 14,
     "pe": 59,
     "cover": 1.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "ELV",
@@ -3319,18 +4180,10 @@
     "roe": 12,
     "pe": 16,
     "cover": 0.4,
-    "ni_pos": true
-  },
-  {
-    "sym": "FCX",
-    "score": 47.9,
-    "rev_cagr": 3,
-    "gm": 27,
-    "ocf_q": 2.55,
-    "roe": 15,
-    "pe": 33,
-    "cover": 0.8,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Healthcare Plans",
+    "cyclical": false
   },
   {
     "sym": "HST",
@@ -3341,7 +4194,10 @@
     "roe": 15,
     "pe": 17,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Hotel & Motel",
+    "cyclical": false
   },
   {
     "sym": "MDLN",
@@ -3352,7 +4208,10 @@
     "roe": 7,
     "pe": 30,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Instruments & Supplies",
+    "cyclical": false
   },
   {
     "sym": "HONAV",
@@ -3363,7 +4222,10 @@
     "roe": -36,
     "pe": 61,
     "cover": 14.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "SNPS",
@@ -3374,7 +4236,10 @@
     "roe": 3,
     "pe": 105,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "cyclical": false
   },
   {
     "sym": "LHX",
@@ -3385,7 +4250,10 @@
     "roe": 9,
     "pe": 31,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "MDLZ",
@@ -3396,7 +4264,10 @@
     "roe": 10,
     "pe": 31,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Defensive",
+    "industry": "Food Confectioners",
+    "cyclical": false
   },
   {
     "sym": "CASY",
@@ -3407,7 +4278,10 @@
     "roe": 19,
     "pe": 42,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "RTX",
@@ -3418,7 +4292,10 @@
     "roe": 11,
     "pe": 34,
     "cover": 0.5,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   },
   {
     "sym": "DHI",
@@ -3429,7 +4306,10 @@
     "roe": 13,
     "pe": 16,
     "cover": 1.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Residential Construction",
+    "cyclical": false
   },
   {
     "sym": "MCK",
@@ -3440,7 +4320,10 @@
     "roe": -50,
     "pe": 20,
     "cover": 1.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Distribution",
+    "cyclical": false
   },
   {
     "sym": "MRVL",
@@ -3451,7 +4334,24 @@
     "roe": 17,
     "pe": 94,
     "cover": 0.9,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "cyclical": false
+  },
+  {
+    "sym": "OKE",
+    "score": 46.5,
+    "rev_cagr": 14,
+    "gm": 21,
+    "ocf_q": 1.65,
+    "roe": 16,
+    "pe": 16,
+    "cover": 0.2,
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Midstream",
+    "cyclical": true
   },
   {
     "sym": "JD",
@@ -3462,7 +4362,10 @@
     "roe": 6,
     "pe": 17,
     "cover": 1.6,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "cyclical": false
   },
   {
     "sym": "SO",
@@ -3473,7 +4376,10 @@
     "roe": 12,
     "pe": 24,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "SOMN",
@@ -3484,7 +4390,10 @@
     "roe": 12,
     "pe": 24,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "TAK",
@@ -3495,7 +4404,10 @@
     "roe": 3,
     "pe": 41,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - Specialty & Generic",
+    "cyclical": false
   },
   {
     "sym": "BDX",
@@ -3506,7 +4418,10 @@
     "roe": 5,
     "pe": 37,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Instruments & Supplies",
+    "cyclical": false
   },
   {
     "sym": "EVRG",
@@ -3517,7 +4432,10 @@
     "roe": 9,
     "pe": 22,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Utilities",
+    "industry": "Regulated Electric",
+    "cyclical": false
   },
   {
     "sym": "SBAC",
@@ -3528,7 +4446,10 @@
     "roe": -21,
     "pe": 19,
     "cover": 0.1,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "cyclical": false
   },
   {
     "sym": "EQIX",
@@ -3539,7 +4460,24 @@
     "roe": 10,
     "pe": 76,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "cyclical": false
+  },
+  {
+    "sym": "TRP",
+    "score": 43.9,
+    "rev_cagr": 7,
+    "gm": 50,
+    "ocf_q": 2.09,
+    "roe": 13,
+    "pe": 31,
+    "cover": 0.1,
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Midstream",
+    "cyclical": true
   },
   {
     "sym": "PWR",
@@ -3550,7 +4488,38 @@
     "roe": 13,
     "pe": 95,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Engineering & Construction",
+    "cyclical": false
+  },
+  {
+    "sym": "WMB",
+    "score": 43.7,
+    "rev_cagr": 3,
+    "gm": 43,
+    "ocf_q": 2.25,
+    "roe": 22,
+    "pe": 33,
+    "cover": 0.2,
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Midstream",
+    "cyclical": true
+  },
+  {
+    "sym": "ENB",
+    "score": 41.2,
+    "rev_cagr": 7,
+    "gm": 33,
+    "ocf_q": 2.25,
+    "roe": 11,
+    "pe": 23,
+    "cover": 0.1,
+    "ni_pos": true,
+    "sector": "Energy",
+    "industry": "Oil & Gas Midstream",
+    "cyclical": true
   },
   {
     "sym": "CARR",
@@ -3561,7 +4530,10 @@
     "roe": 9,
     "pe": 47,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Industrial - Machinery",
+    "cyclical": false
   },
   {
     "sym": "HLT",
@@ -3572,7 +4544,10 @@
     "roe": -30,
     "pe": 52,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Lodging",
+    "cyclical": false
   },
   {
     "sym": "HPE",
@@ -3583,7 +4558,10 @@
     "roe": 6,
     "pe": 45,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "cyclical": false
   },
   {
     "sym": "GLW",
@@ -3594,7 +4572,10 @@
     "roe": 16,
     "pe": 98,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Hardware, Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "MKSI",
@@ -3605,7 +4586,24 @@
     "roe": 12,
     "pe": 78,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Hardware, Equipment & Parts",
+    "cyclical": false
+  },
+  {
+    "sym": "FCX",
+    "score": 38.3,
+    "rev_cagr": 3,
+    "gm": 27,
+    "ocf_q": 2.55,
+    "roe": 15,
+    "pe": 33,
+    "cover": 0.8,
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Copper",
+    "cyclical": true
   },
   {
     "sym": "GM",
@@ -3616,7 +4614,10 @@
     "roe": 4,
     "pe": 31,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto - Manufacturers",
+    "cyclical": false
   },
   {
     "sym": "DELL",
@@ -3627,7 +4628,10 @@
     "roe": -50,
     "pe": 34,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "cyclical": false
   },
   {
     "sym": "MAR",
@@ -3638,7 +4642,10 @@
     "roe": -50,
     "pe": 40,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Lodging",
+    "cyclical": false
   },
   {
     "sym": "TTMI",
@@ -3649,7 +4656,10 @@
     "roe": 11,
     "pe": 111,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Technology",
+    "industry": "Hardware, Equipment & Parts",
+    "cyclical": false
   },
   {
     "sym": "CVS",
@@ -3660,7 +4670,10 @@
     "roe": 4,
     "pe": 44,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Healthcare Plans",
+    "cyclical": false
   },
   {
     "sym": "CAH",
@@ -3671,7 +4684,10 @@
     "roe": -50,
     "pe": 36,
     "cover": 0.7,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Healthcare",
+    "industry": "Medical - Distribution",
+    "cyclical": false
   },
   {
     "sym": "SOLS",
@@ -3682,7 +4698,10 @@
     "roe": 6,
     "pe": 66,
     "cover": 0.4,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Basic Materials",
+    "industry": "Chemicals - Specialty",
+    "cyclical": false
   },
   {
     "sym": "SBUX",
@@ -3693,7 +4712,10 @@
     "roe": -18,
     "pe": 78,
     "cover": 0.3,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Restaurants",
+    "cyclical": false
   },
   {
     "sym": "BA",
@@ -3704,6 +4726,9 @@
     "roe": -50,
     "pe": 91,
     "cover": 0.2,
-    "ni_pos": true
+    "ni_pos": true,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "cyclical": false
   }
 ]
