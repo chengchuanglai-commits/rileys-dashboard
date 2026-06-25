@@ -35,13 +35,13 @@
         "2026-06-25": {
           "open": 16.19,
           "high": 16.39,
-          "low": 15.63,
-          "close": 15.8,
-          "pnl_pct": 5.22
+          "low": 15.61,
+          "close": 15.69,
+          "pnl_pct": 5.88
         }
       },
       "position_usd": 203.49,
-      "unrealized_pnl_usd": 10.62
+      "unrealized_pnl_usd": 11.97
     },
     {
       "ticker": "OBT",
@@ -61,12 +61,12 @@
           "open": 36.85,
           "high": 37.19,
           "low": 36.59,
-          "close": 36.83,
-          "pnl_pct": -0.9
+          "close": 36.89,
+          "pnl_pct": -1.07
         }
       },
       "position_usd": 203.49,
-      "unrealized_pnl_usd": -1.83
+      "unrealized_pnl_usd": -2.18
     }
   ],
   "closed_positions": [
@@ -912,8 +912,8 @@
     "win_trades": 7,
     "win_rate": 29.2,
     "total_realized_pnl_usd": 34.93,
-    "open_unrealized_pnl_usd": 8.79,
-    "portfolio_value": 2043.72,
+    "open_unrealized_pnl_usd": 9.79,
+    "portfolio_value": 2044.72,
     "total_commission_usd": 48.0,
     "skipped_gap": 7,
     "skipped_zero_shares": 0,
