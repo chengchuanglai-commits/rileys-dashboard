@@ -19,23 +19,6 @@
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 279.44,
-      "allocated_usd": 500,
-      "shares": 1.7893,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 237.52,
-      "stop_loss": 285.03,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {},
-      "position_usd": 203.49,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "SWBI",
       "name": "SWBI",
       "action": "SELL",
@@ -48,9 +31,17 @@
       "take_profit": 14.17,
       "stop_loss": 17.0,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.19,
+          "high": 16.39,
+          "low": 15.63,
+          "close": 15.8,
+          "pnl_pct": 5.22
+        }
+      },
       "position_usd": 203.49,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 10.62
     },
     {
       "ticker": "OBT",
@@ -65,9 +56,17 @@
       "take_profit": 31.02,
       "stop_loss": 37.23,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.85,
+          "high": 37.19,
+          "low": 36.59,
+          "close": 36.83,
+          "pnl_pct": -0.9
+        }
+      },
       "position_usd": 203.49,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -1.83
     }
   ],
   "closed_positions": [
@@ -913,10 +912,10 @@
     "win_trades": 7,
     "win_rate": 29.2,
     "total_realized_pnl_usd": 34.93,
-    "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2034.93,
+    "open_unrealized_pnl_usd": 8.79,
+    "portfolio_value": 2043.72,
     "total_commission_usd": 48.0,
-    "skipped_gap": 6,
+    "skipped_gap": 7,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
     "updated_at": "2026-06-25"

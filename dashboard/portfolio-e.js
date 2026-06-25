@@ -91,60 +91,6 @@ window.PORTFOLIO_E = {
       "day1_open": 37.03
     },
     {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 125.11,
-      "stop_loss": 143.18,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-25",
-      "regime": "neutral",
-      "vix": 17.28,
-      "daily_prices": {
-        "2026-06-23": {
-          "open": 135.42,
-          "high": 141.27,
-          "low": 134.75,
-          "close": 137.94,
-          "pnl_pct": 0.77
-        },
-        "2026-06-24": {
-          "open": 138.0,
-          "high": 139.89,
-          "low": 133.74,
-          "close": 136.13,
-          "pnl_pct": 2.07
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 135.42
-    },
-    {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 279.44,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 279.44,
-      "entry_commission": 1.0,
-      "take_profit": 251.5,
-      "stop_loss": 287.82,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-29",
-      "regime": "neutral",
-      "vix": 18.63,
-      "daily_prices": {},
-      "gap_checked": true
-    },
-    {
       "ticker": "SWBI",
       "name": "SWBI",
       "action": "SELL",
@@ -160,8 +106,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-29",
       "regime": "neutral",
       "vix": 18.63,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.19,
+          "high": 16.39,
+          "low": 15.63,
+          "close": 15.8,
+          "pnl_pct": 5.22
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 16.19
     },
     {
       "ticker": "OBT",
@@ -179,8 +134,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-06-29",
       "regime": "neutral",
       "vix": 18.63,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.85,
+          "high": 37.19,
+          "low": 36.59,
+          "close": 36.83,
+          "pnl_pct": -0.9
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 36.85
     }
   ],
   "closed_positions": [
@@ -832,6 +796,53 @@ window.PORTFOLIO_E = {
       "realized_pnl_usd": -16.9
     },
     {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 125.11,
+      "stop_loss": 143.18,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-25",
+      "regime": "neutral",
+      "vix": 17.28,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.27,
+          "low": 134.75,
+          "close": 137.94,
+          "pnl_pct": 0.77
+        },
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.13,
+          "pnl_pct": 2.07
+        },
+        "2026-06-25": {
+          "open": 138.03,
+          "high": 139.14,
+          "low": 135.9,
+          "close": 137.67,
+          "pnl_pct": 0.96
+        }
+      },
+      "close_date": "2026-06-25",
+      "close_price": 137.67,
+      "final_pnl_pct": 0.96,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.0
+    },
+    {
       "ticker": "WSBC",
       "name": "WSBC",
       "action": "SELL",
@@ -874,16 +885,16 @@ window.PORTFOLIO_E = {
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 17,
-    "win_trades": 7,
-    "win_rate": 41.2,
-    "total_realized_pnl_usd": 42.14,
-    "open_unrealized_pnl_usd": 6.27,
-    "portfolio_value": 2048.41,
-    "total_commission_usd": 34.0,
+    "total_trades": 18,
+    "win_trades": 8,
+    "win_rate": 44.4,
+    "total_realized_pnl_usd": 44.14,
+    "open_unrealized_pnl_usd": 17.6,
+    "portfolio_value": 2061.74,
+    "total_commission_usd": 36.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
-    "skipped_gap": 5,
+    "skipped_gap": 6,
     "updated_at": "2026-06-25"
   }
 };

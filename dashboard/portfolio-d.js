@@ -1,37 +1,7 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 279.44,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 279.44,
-      "entry_commission": 1.0,
-      "take_profit": 237.52,
-      "stop_loss": 287.82,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {}
-    },
     {
       "ticker": "SWBI",
       "name": "SWBI",
@@ -45,7 +15,15 @@ window.PORTFOLIO_D = {
       "take_profit": 14.17,
       "stop_loss": 17.17,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-25": {
+          "close": 15.8,
+          "pnl_pct": 5.22
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 16.19,
+      "day1_gap_pct": -2.88
     },
     {
       "ticker": "OBT",
@@ -60,7 +38,15 @@ window.PORTFOLIO_D = {
       "take_profit": 31.02,
       "stop_loss": 37.59,
       "max_hold_date": "2026-06-26",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-25": {
+          "close": 36.83,
+          "pnl_pct": -0.9
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 36.85,
+      "day1_gap_pct": 0.96
     }
   ],
   "closed_positions": [
@@ -865,19 +851,45 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -16.15
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {
+        "2026-06-24": {
+          "close": 8.5,
+          "pnl_pct": 31.23
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 8.5,
+      "day1_gap_pct": -31.23,
+      "close_date": "2026-06-24",
+      "close_price": 8.5,
+      "final_pnl_pct": 31.23,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 156.15
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 23,
-    "win_trades": 8,
-    "win_rate": 34.8,
-    "total_realized_pnl_usd": 27.8,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2027.8,
-    "total_commission_usd": 46.0,
-    "skipped_gap": 6,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-25"
+    "total_trades": 24,
+    "win_trades": 11,
+    "win_rate": 45.8,
+    "total_realized_pnl_usd": 183.95,
+    "open_unrealized_pnl_usd": 21.6,
+    "portfolio_value": 2205.55,
+    "skipped_gap": 7,
+    "updated_at": "2026-06-26"
   }
 };

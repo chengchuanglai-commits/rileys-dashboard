@@ -153,54 +153,72 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "DXCM",
-      "name": "DexCom Inc",
+      "ticker": "MGNI",
+      "name": "Magnite",
       "action": "BUY",
-      "signal_date": "2026-06-23",
-      "entry_price": 68.92,
+      "signal_date": "2026-06-25",
+      "entry_price": 17.65,
       "allocated_usd": 500,
-      "shares": 7.2548,
+      "shares": 28.3286,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 79.26,
-      "stop_loss": 67.54,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {
-        "2026-06-24": {
-          "open": 69.0,
-          "high": 71.09,
-          "low": 68.92,
-          "close": 69.75,
-          "pnl_pct": 1.2
-        }
-      },
-      "position_usd": 210.83,
-      "unrealized_pnl_usd": 2.53
+      "take_profit": 20.3,
+      "stop_loss": 17.3,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {},
+      "position_usd": 209.83,
+      "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "CRWD",
-      "name": "CrowdStrike Holdings",
+      "ticker": "APPF",
+      "name": "AppFolio",
       "action": "BUY",
-      "signal_date": "2026-06-23",
-      "entry_price": 680.92,
+      "signal_date": "2026-06-25",
+      "entry_price": 145.65,
       "allocated_usd": 500,
-      "shares": 0.7343,
+      "shares": 3.4329,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 783.06,
-      "stop_loss": 667.3,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {
-        "2026-06-24": {
-          "open": 680.49,
-          "high": 687.15,
-          "low": 669.0,
-          "close": 673.02,
-          "pnl_pct": -1.16
-        }
-      },
-      "position_usd": 210.83,
-      "unrealized_pnl_usd": -2.45
+      "take_profit": 167.5,
+      "stop_loss": 142.74,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {},
+      "position_usd": 209.83,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CCJ",
+      "name": "Cameco",
+      "action": "BUY",
+      "signal_date": "2026-06-25",
+      "entry_price": 103.47,
+      "allocated_usd": 500,
+      "shares": 4.8323,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 118.99,
+      "stop_loss": 101.4,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {},
+      "position_usd": 209.83,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "AXSM",
+      "name": "Axsome Therapeutics",
+      "action": "BUY",
+      "signal_date": "2026-06-25",
+      "entry_price": 239.51,
+      "allocated_usd": 500,
+      "shares": 2.0876,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 275.44,
+      "stop_loss": 234.72,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {},
+      "position_usd": 209.83,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2052,20 +2070,96 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.24,
       "position_usd": 210.83
+    },
+    {
+      "ticker": "DXCM",
+      "name": "DexCom Inc",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 68.92,
+      "allocated_usd": 500,
+      "shares": 7.2548,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 79.26,
+      "stop_loss": 67.54,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 69.0,
+          "high": 71.09,
+          "low": 68.92,
+          "close": 69.75,
+          "pnl_pct": 1.2
+        },
+        "2026-06-25": {
+          "open": 69.88,
+          "high": 70.78,
+          "low": 68.64,
+          "close": 68.81,
+          "pnl_pct": -0.16
+        }
+      },
+      "close_date": "2026-06-25",
+      "close_price": 68.81,
+      "final_pnl_pct": -0.16,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.34,
+      "position_usd": 210.83
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 680.92,
+      "allocated_usd": 500,
+      "shares": 0.7343,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 783.06,
+      "stop_loss": 667.3,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 680.49,
+          "high": 687.15,
+          "low": 669.0,
+          "close": 673.02,
+          "pnl_pct": -1.16
+        },
+        "2026-06-25": {
+          "open": 682.0,
+          "high": 692.74,
+          "low": 670.25,
+          "close": 677.15,
+          "pnl_pct": -0.55
+        }
+      },
+      "close_date": "2026-06-25",
+      "close_price": 677.15,
+      "final_pnl_pct": -0.55,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -1.16,
+      "position_usd": 210.83
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 54,
+    "total_trades": 56,
     "win_trades": 18,
-    "win_rate": 33.3,
-    "total_realized_pnl_usd": 99.83,
-    "open_unrealized_pnl_usd": 24.72,
-    "portfolio_value": 2124.55,
-    "total_commission_usd": 108.0,
+    "win_rate": 32.1,
+    "total_realized_pnl_usd": 98.33,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2122.97,
+    "total_commission_usd": 112.0,
     "skipped_gap": 27,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 55,
+    "skipped_no_cash": 58,
     "updated_at": "2026-06-25"
   }
 };
