@@ -3,37 +3,15 @@ window.PORTFOLIO_BQ = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "LYG",
+      "ticker": "B",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 5.54,
-      "shares": 120.43,
-      "atr": 0.13,
-      "take_profit": 6.07,
-      "stop_loss": 5.21,
-      "score": 71.8
-    },
-    {
-      "ticker": "ACGL",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 91.18,
-      "shares": 9.345,
-      "atr": 1.71,
-      "take_profit": 98.03,
-      "stop_loss": 86.9,
-      "score": 71.9
-    },
-    {
-      "ticker": "AU",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 90.87,
-      "shares": 3.076,
-      "atr": 5.2,
-      "take_profit": 111.68,
-      "stop_loss": 77.87,
-      "score": 74.7
+      "entry_price": 40.34,
+      "shares": 8.163,
+      "atr": 1.96,
+      "take_profit": 48.18,
+      "stop_loss": 35.44,
+      "score": 75.1
     },
     {
       "ticker": "KSPI",
@@ -47,15 +25,15 @@ window.PORTFOLIO_BQ = {
       "score": 79.1
     },
     {
-      "ticker": "B",
+      "ticker": "CNQ",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 40.34,
-      "shares": 8.163,
-      "atr": 1.96,
-      "take_profit": 48.18,
-      "stop_loss": 35.44,
-      "score": 75.1
+      "entry_price": 40.62,
+      "shares": 11.208,
+      "atr": 1.43,
+      "take_profit": 46.33,
+      "stop_loss": 37.05,
+      "score": 74.2
     },
     {
       "ticker": "AEM",
@@ -69,26 +47,15 @@ window.PORTFOLIO_BQ = {
       "score": 72.3
     },
     {
-      "ticker": "MFC",
+      "ticker": "LYG",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 40.61,
-      "shares": 20.364,
-      "atr": 0.79,
-      "take_profit": 43.75,
-      "stop_loss": 38.65,
-      "score": 71.1
-    },
-    {
-      "ticker": "NEM",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 103.79,
-      "shares": 3.189,
-      "atr": 5.02,
-      "take_profit": 123.86,
-      "stop_loss": 91.25,
-      "score": 73.9
+      "entry_price": 5.54,
+      "shares": 120.43,
+      "atr": 0.13,
+      "take_profit": 6.07,
+      "stop_loss": 5.21,
+      "score": 71.8
     },
     {
       "ticker": "KLAC",
@@ -102,37 +69,48 @@ window.PORTFOLIO_BQ = {
       "score": 78.5
     },
     {
-      "ticker": "CNQ",
+      "ticker": "NEM",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 40.62,
-      "shares": 11.208,
-      "atr": 1.43,
-      "take_profit": 46.33,
-      "stop_loss": 37.05,
-      "score": 74.2
+      "entry_price": 103.79,
+      "shares": 3.189,
+      "atr": 5.02,
+      "take_profit": 123.86,
+      "stop_loss": 91.25,
+      "score": 73.9
     },
     {
-      "ticker": "LI",
+      "ticker": "MFC",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 40.61,
+      "shares": 20.364,
+      "atr": 0.79,
+      "take_profit": 43.75,
+      "stop_loss": 38.65,
+      "score": 71.1
+    },
+    {
+      "ticker": "ACGL",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 91.18,
+      "shares": 9.345,
+      "atr": 1.71,
+      "take_profit": 98.03,
+      "stop_loss": 86.9,
+      "score": 71.9
+    },
+    {
+      "ticker": "INSM",
       "action": "SELL",
       "signal_date": "2026-06-18",
-      "entry_price": 13.21,
-      "shares": 30.116,
-      "atr": 0.53,
-      "take_profit": 11.08,
-      "stop_loss": 14.54,
+      "entry_price": 95.8,
+      "shares": 2.93,
+      "atr": 5.46,
+      "take_profit": 73.95,
+      "stop_loss": 109.45,
       "score": 25.0
-    },
-    {
-      "ticker": "SATS",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 109.17,
-      "shares": 1.619,
-      "atr": 9.88,
-      "take_profit": 69.64,
-      "stop_loss": 133.88,
-      "score": 25.8
     },
     {
       "ticker": "SNOW",
@@ -146,6 +124,17 @@ window.PORTFOLIO_BQ = {
       "score": 24.8
     },
     {
+      "ticker": "SATS",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 109.17,
+      "shares": 1.619,
+      "atr": 9.88,
+      "take_profit": 69.64,
+      "stop_loss": 133.87,
+      "score": 25.8
+    },
+    {
       "ticker": "BNJ",
       "action": "SELL",
       "signal_date": "2026-06-18",
@@ -157,47 +146,14 @@ window.PORTFOLIO_BQ = {
       "score": 23.6
     },
     {
-      "ticker": "TSLA",
+      "ticker": "LI",
       "action": "SELL",
       "signal_date": "2026-06-18",
-      "entry_price": 400.49,
-      "shares": 0.87,
-      "atr": 18.39,
-      "take_profit": 326.95,
-      "stop_loss": 446.45,
-      "score": 23.1
-    },
-    {
-      "ticker": "BNH",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.52,
-      "shares": 68.314,
-      "atr": 0.23,
-      "take_profit": 14.58,
-      "stop_loss": 16.11,
-      "score": 22.8
-    },
-    {
-      "ticker": "SONY",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 20.33,
-      "shares": 31.417,
-      "atr": 0.51,
-      "take_profit": 18.29,
-      "stop_loss": 21.6,
-      "score": 26.0
-    },
-    {
-      "ticker": "INSM",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 95.8,
-      "shares": 2.93,
-      "atr": 5.46,
-      "take_profit": 73.95,
-      "stop_loss": 109.45,
+      "entry_price": 13.21,
+      "shares": 30.116,
+      "atr": 0.53,
+      "take_profit": 11.08,
+      "stop_loss": 14.54,
       "score": 25.0
     },
     {
@@ -212,6 +168,28 @@ window.PORTFOLIO_BQ = {
       "score": 23.8
     },
     {
+      "ticker": "SONY",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 20.33,
+      "shares": 31.417,
+      "atr": 0.51,
+      "take_profit": 18.29,
+      "stop_loss": 21.6,
+      "score": 26.0
+    },
+    {
+      "ticker": "BNH",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.52,
+      "shares": 68.314,
+      "atr": 0.23,
+      "take_profit": 14.58,
+      "stop_loss": 16.11,
+      "score": 22.8
+    },
+    {
       "ticker": "TEAM",
       "action": "SELL",
       "signal_date": "2026-06-18",
@@ -221,18 +199,47 @@ window.PORTFOLIO_BQ = {
       "take_profit": 56.0,
       "stop_loss": 99.42,
       "score": 21.6
+    },
+    {
+      "ticker": "TSLA",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 400.49,
+      "shares": 0.87,
+      "atr": 18.39,
+      "take_profit": 326.95,
+      "stop_loss": 446.45,
+      "score": 23.1
     }
   ],
-  "closed_positions": [],
+  "closed_positions": [
+    {
+      "ticker": "AU",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 90.87,
+      "shares": 3.076,
+      "atr": 5.2,
+      "take_profit": 111.68,
+      "stop_loss": 77.87,
+      "score": 74.7,
+      "close_date": "2026-06-24",
+      "close_price": 77.87,
+      "close_reason": "stop_loss",
+      "final_pnl_pct": -14.31,
+      "realized_pnl_usd": -39.99,
+      "commission_total": 2.0
+    }
+  ],
   "_note": "B-quant：多因子量化+ATR定价(TP4/SL2.5×ATR)+风险定额(2%)+每周再平衡。读点对点归档,前向无前视。全程无AI。",
   "stats": {
-    "total_trades": 0,
+    "total_trades": 1,
     "win_trades": 0,
-    "win_rate": 0,
-    "total_realized_pnl_usd": 0,
-    "open_unrealized_pnl_usd": -38.21,
-    "portfolio_value": 1961.79,
-    "total_commission_usd": 20.0,
-    "updated_at": "2026-06-24"
+    "win_rate": 0.0,
+    "total_realized_pnl_usd": -39.99,
+    "open_unrealized_pnl_usd": 124.79,
+    "portfolio_value": 2084.8,
+    "total_commission_usd": 21.0,
+    "updated_at": "2026-06-25"
   }
 };
