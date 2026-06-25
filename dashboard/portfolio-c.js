@@ -53,12 +53,12 @@ window.PORTFOLIO_C = {
           "open": 138.0,
           "high": 139.89,
           "low": 133.74,
-          "close": 137.58,
-          "pnl_pct": -1.03
+          "close": 136.13,
+          "pnl_pct": -2.07
         }
       },
       "position_usd": 211.77,
-      "unrealized_pnl_usd": -2.18
+      "unrealized_pnl_usd": -4.38
     },
     {
       "ticker": "SNEX",
@@ -86,12 +86,12 @@ window.PORTFOLIO_C = {
           "open": 138.0,
           "high": 139.89,
           "low": 133.74,
-          "close": 137.58,
-          "pnl_pct": 1.03
+          "close": 136.13,
+          "pnl_pct": 2.07
         }
       },
       "position_usd": 212.69,
-      "unrealized_pnl_usd": 2.19
+      "unrealized_pnl_usd": 4.4
     },
     {
       "ticker": "LGND",
@@ -874,9 +874,9 @@ window.PORTFOLIO_C = {
         },
         "2026-06-24": {
           "open": 37.28,
-          "high": 37.88,
+          "high": 38.09,
           "low": 36.92,
-          "close": 37.79,
+          "close": 37.86,
           "pnl_pct": -4.0
         }
       },
@@ -945,9 +945,9 @@ window.PORTFOLIO_C = {
         },
         "2026-06-24": {
           "open": 37.28,
-          "high": 37.88,
+          "high": 38.09,
           "low": 36.92,
-          "close": 37.79,
+          "close": 37.86,
           "pnl_pct": -4.0
         }
       },
@@ -967,11 +967,11 @@ window.PORTFOLIO_C = {
     "win_trades": 11,
     "win_rate": 57.9,
     "total_realized_pnl_usd": 87.52,
-    "open_unrealized_pnl_usd": 0.01,
-    "portfolio_value": 2087.53,
+    "open_unrealized_pnl_usd": 0.02,
+    "portfolio_value": 2087.54,
     "total_commission_usd": 38.0,
     "skipped_gap": 8,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-06-24"
+    "updated_at": "2026-06-25"
   }
 };
