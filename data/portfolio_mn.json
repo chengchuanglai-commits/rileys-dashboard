@@ -167,14 +167,14 @@
       "daily_prices": {
         "2026-06-26": {
           "open": 17.35,
-          "high": 17.95,
+          "high": 18.74,
           "low": 17.35,
-          "close": 17.92,
-          "pnl_pct": 3.46
+          "close": 18.58,
+          "pnl_pct": 7.27
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 7.26
+      "unrealized_pnl_usd": 15.25
     },
     {
       "ticker": "APPF",
@@ -192,14 +192,14 @@
       "daily_prices": {
         "2026-06-26": {
           "open": 144.94,
-          "high": 150.46,
+          "high": 153.91,
           "low": 144.94,
-          "close": 149.75,
-          "pnl_pct": 3.43
+          "close": 152.87,
+          "pnl_pct": 5.59
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 7.2
+      "unrealized_pnl_usd": 11.73
     },
     {
       "ticker": "AXSM",
@@ -217,14 +217,14 @@
       "daily_prices": {
         "2026-06-26": {
           "open": 239.88,
-          "high": 241.51,
+          "high": 247.5,
           "low": 239.14,
-          "close": 240.87,
-          "pnl_pct": 1.49
+          "close": 244.09,
+          "pnl_pct": 2.85
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 3.13
+      "unrealized_pnl_usd": 5.98
     },
     {
       "ticker": "MDLZ",
@@ -242,14 +242,14 @@
       "daily_prices": {
         "2026-06-26": {
           "open": 61.77,
-          "high": 61.92,
-          "low": 61.54,
-          "close": 61.59,
-          "pnl_pct": 0.64
+          "high": 61.97,
+          "low": 61.0,
+          "close": 61.5,
+          "pnl_pct": 0.49
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 1.34
+      "unrealized_pnl_usd": 1.03
     }
   ],
   "closed_positions": [
@@ -2185,8 +2185,8 @@
     "win_trades": 18,
     "win_rate": 32.1,
     "total_realized_pnl_usd": 98.31,
-    "open_unrealized_pnl_usd": 43.56,
-    "portfolio_value": 2141.87,
+    "open_unrealized_pnl_usd": 58.63,
+    "portfolio_value": 2156.94,
     "total_commission_usd": 112.0,
     "skipped_gap": 28,
     "skipped_zero_shares": 0,

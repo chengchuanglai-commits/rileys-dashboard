@@ -2,36 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "SBFG",
-      "name": "SBFG",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 23.12,
-      "allocated_usd": 500,
-      "shares": 21,
-      "actual_position_usd": 485.52,
-      "entry_commission": 1.0,
-      "take_profit": 19.65,
-      "stop_loss": 23.81,
-      "max_hold_date": "2026-06-30",
-      "daily_prices": {}
-    },
-    {
       "ticker": "TRVI",
       "name": "TRVI",
       "action": "SELL",
@@ -44,7 +14,15 @@
       "take_profit": 15.24,
       "stop_loss": 18.47,
       "max_hold_date": "2026-06-30",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-26": {
+          "close": 17.69,
+          "pnl_pct": 1.34
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 17.87,
+      "day1_gap_pct": -0.33
     }
   ],
   "closed_positions": [
@@ -874,18 +852,18 @@
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 15.47,
-          "close": 15.52,
-          "pnl_pct": 6.9
+          "low": 15.03,
+          "close": 15.1,
+          "pnl_pct": 9.42
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 15.52,
-      "final_pnl_pct": 6.9,
+      "close_price": 15.1,
+      "final_pnl_pct": 9.42,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 31.36
+      "realized_pnl_usd": 43.54
     },
     {
       "ticker": "OBT",
@@ -911,8 +889,8 @@
         "2026-06-26": {
           "open": 37.12,
           "high": 37.71,
-          "low": 36.65,
-          "close": 37.0,
+          "low": 36.57,
+          "close": 36.97,
           "pnl_pct": -2.99
         }
       },
@@ -923,19 +901,45 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -16.19
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {
+        "2026-06-25": {
+          "close": 8.52,
+          "pnl_pct": 31.07
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 8.4,
+      "day1_gap_pct": -32.04,
+      "close_date": "2026-06-25",
+      "close_price": 8.52,
+      "final_pnl_pct": 31.07,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 155.34
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 25,
-    "win_trades": 9,
-    "win_rate": 36.0,
-    "total_realized_pnl_usd": 42.97,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2042.97,
-    "total_commission_usd": 50.0,
-    "skipped_gap": 7,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-26"
+    "total_trades": 26,
+    "win_trades": 12,
+    "win_rate": 46.2,
+    "total_realized_pnl_usd": 210.49,
+    "open_unrealized_pnl_usd": 6.7,
+    "portfolio_value": 2217.19,
+    "skipped_gap": 8,
+    "updated_at": "2026-06-27"
   }
 }

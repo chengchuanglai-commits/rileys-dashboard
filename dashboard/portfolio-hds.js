@@ -102,14 +102,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-06-26": {
           "open": 38.61,
-          "high": 39.06,
+          "high": 39.25,
           "low": 38.55,
-          "close": 38.99,
-          "pnl_pct": 2.98
+          "close": 38.79,
+          "pnl_pct": 2.46
         }
       },
       "position_usd": 206.26,
-      "unrealized_pnl_usd": 6.15
+      "unrealized_pnl_usd": 5.07
     },
     {
       "ticker": "OBT",
@@ -129,12 +129,12 @@ window.PORTFOLIO_HDS = {
           "open": 37.12,
           "high": 37.71,
           "low": 36.57,
-          "close": 37.17,
-          "pnl_pct": 1.17
+          "close": 36.97,
+          "pnl_pct": 0.63
         }
       },
       "position_usd": 206.26,
-      "unrealized_pnl_usd": 2.41
+      "unrealized_pnl_usd": 1.3
     },
     {
       "ticker": "TSBK",
@@ -150,7 +150,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 45.78,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.26,
+      "position_usd": 208.08,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -167,7 +167,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 16.41,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.26,
+      "position_usd": 208.08,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 16.95,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.26,
+      "position_usd": 208.08,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 22.74,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.26,
+      "position_usd": 208.08,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1149,17 +1149,17 @@ window.PORTFOLIO_HDS = {
           "open": 37.12,
           "high": 37.71,
           "low": 36.57,
-          "close": 37.17,
-          "pnl_pct": 1.84
+          "close": 36.97,
+          "pnl_pct": 1.29
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 37.17,
-      "final_pnl_pct": 1.84,
+      "close_price": 36.97,
+      "final_pnl_pct": 1.29,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.76,
+      "realized_pnl_usd": 2.64,
       "position_usd": 204.59
     },
     {
@@ -1185,19 +1185,19 @@ window.PORTFOLIO_HDS = {
         },
         "2026-06-26": {
           "open": 38.7,
-          "high": 38.94,
-          "low": 38.7,
-          "close": 38.94,
-          "pnl_pct": 1.41
+          "high": 38.97,
+          "low": 38.44,
+          "close": 38.47,
+          "pnl_pct": 0.18
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 38.94,
-      "final_pnl_pct": 1.41,
+      "close_price": 38.47,
+      "final_pnl_pct": 0.18,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.88,
+      "realized_pnl_usd": 0.37,
       "position_usd": 204.59
     },
     {
@@ -1224,18 +1224,18 @@ window.PORTFOLIO_HDS = {
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 15.25,
-          "close": 15.25,
-          "pnl_pct": 8.52
+          "low": 15.03,
+          "close": 15.1,
+          "pnl_pct": 9.42
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 15.25,
-      "final_pnl_pct": 8.52,
+      "close_price": 15.1,
+      "final_pnl_pct": 9.42,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 17.43,
+      "realized_pnl_usd": 19.27,
       "position_usd": 204.59
     },
     {
@@ -1256,7 +1256,7 @@ window.PORTFOLIO_HDS = {
           "open": 16.98,
           "high": 17.41,
           "low": 16.8,
-          "close": 17.24,
+          "close": 17.37,
           "pnl_pct": -1.99
         }
       },
@@ -1275,9 +1275,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 30,
     "win_trades": 17,
     "win_rate": 56.7,
-    "total_realized_pnl_usd": 82.61,
-    "open_unrealized_pnl_usd": 22.54,
-    "portfolio_value": 2105.15,
+    "total_realized_pnl_usd": 80.81,
+    "open_unrealized_pnl_usd": 20.35,
+    "portfolio_value": 2101.16,
     "total_commission_usd": 60.0,
     "skipped_gap": 12,
     "skipped_zero_shares": 0,

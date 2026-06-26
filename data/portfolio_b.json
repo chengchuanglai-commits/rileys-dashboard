@@ -2,21 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {}
-    },
-    {
       "ticker": "SNEX",
       "name": "SNEX",
       "action": "SELL",
@@ -52,11 +37,8 @@
           "pnl_pct": 1.24
         },
         "2026-06-26": {
-          "open": 137.25,
-          "high": 137.76,
-          "low": 133.0,
-          "close": 133.09,
-          "pnl_pct": 4.26
+          "close": 135.9,
+          "pnl_pct": 2.24
         }
       }
     },
@@ -89,41 +71,8 @@
           "pnl_pct": -0.88
         },
         "2026-06-26": {
-          "open": 16.98,
-          "high": 17.1,
-          "low": 16.8,
-          "close": 17.1,
-          "pnl_pct": -0.59
-        }
-      }
-    },
-    {
-      "ticker": "SWBI",
-      "name": "SWBI",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 16.67,
-      "allocated_usd": 500,
-      "shares": 29,
-      "actual_position_usd": 483.43,
-      "entry_commission": 1.0,
-      "take_profit": 15.34,
-      "stop_loss": 17.34,
-      "max_hold_date": "2026-07-01",
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
-        },
-        "2026-06-26": {
-          "open": 15.55,
-          "high": 15.7,
-          "low": 15.47,
-          "close": 15.52,
-          "pnl_pct": 6.9
+          "close": 17.37,
+          "pnl_pct": -2.18
         }
       }
     },
@@ -149,11 +98,8 @@
           "pnl_pct": -1.07
         },
         "2026-06-26": {
-          "open": 37.12,
-          "high": 37.71,
-          "low": 36.65,
-          "close": 37.0,
-          "pnl_pct": -1.37
+          "close": 36.97,
+          "pnl_pct": -1.29
         }
       }
     },
@@ -170,7 +116,12 @@
       "take_profit": 21.27,
       "stop_loss": 24.04,
       "max_hold_date": "2026-07-03",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-26": {
+          "close": 23.16,
+          "pnl_pct": -0.17
+        }
+      }
     },
     {
       "ticker": "TRVI",
@@ -185,7 +136,12 @@
       "take_profit": 16.5,
       "stop_loss": 18.65,
       "max_hold_date": "2026-07-03",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-06-26": {
+          "close": 17.69,
+          "pnl_pct": 1.34
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -1128,7 +1084,7 @@
           "open": 137.25,
           "high": 137.76,
           "low": 133.0,
-          "close": 133.09,
+          "close": 135.94,
           "pnl_pct": -4.0
         }
       },
@@ -1280,18 +1236,78 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -13.18
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29,
+      "actual_position_usd": 483.43,
+      "entry_commission": 1.0,
+      "take_profit": 15.34,
+      "stop_loss": 17.34,
+      "max_hold_date": "2026-07-01",
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.19,
+          "high": 16.39,
+          "low": 15.61,
+          "close": 15.69,
+          "pnl_pct": 5.88
+        },
+        "2026-06-26": {
+          "open": 15.55,
+          "high": 15.7,
+          "low": 15.03,
+          "close": 15.1,
+          "pnl_pct": 7.98
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 15.34,
+      "final_pnl_pct": 7.98,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 36.58
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-06-25": {
+          "close": 8.52,
+          "pnl_pct": 31.07
+        }
+      },
+      "close_date": "2026-06-25",
+      "close_price": 8.52,
+      "final_pnl_pct": 31.07,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 155.34
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 28,
-    "win_trades": 11,
-    "win_rate": 39.3,
-    "total_realized_pnl_usd": -36.53,
-    "open_unrealized_pnl_usd": 37.71,
-    "portfolio_value": 2001.18,
-    "total_commission_usd": 56.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-26"
+    "total_trades": 30,
+    "win_trades": 13,
+    "win_rate": 43.3,
+    "total_realized_pnl_usd": 155.39,
+    "open_unrealized_pnl_usd": -0.3,
+    "portfolio_value": 2155.09,
+    "updated_at": "2026-06-27"
   }
 }

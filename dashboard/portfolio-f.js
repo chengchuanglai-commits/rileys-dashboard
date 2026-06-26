@@ -97,11 +97,15 @@ window.PORTFOLIO_F = {
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 15.47,
-          "close": 15.53,
-          "pnl_pct": 6.84
+          "low": 15.03,
+          "close": 15.1,
+          "pnl_pct": 9.42
         }
-      }
+      },
+      "t1_exit_date": "2026-06-26",
+      "t1_exit_price": 15.42,
+      "t1_exit_reason": "take_profit_1",
+      "t1_locked_pnl": 15.5
     },
     {
       "ticker": "SBFG",
@@ -1152,9 +1156,9 @@ window.PORTFOLIO_F = {
         "2026-06-26": {
           "open": 37.12,
           "high": 37.71,
-          "low": 36.65,
-          "close": 37.0,
-          "pnl_pct": -1.37
+          "low": 36.57,
+          "close": 36.97,
+          "pnl_pct": -1.29
         }
       },
       "t1_exit_date": "2026-06-26",
@@ -1179,8 +1183,8 @@ window.PORTFOLIO_F = {
     "win_trades": 9,
     "win_rate": 42.9,
     "total_realized_pnl_usd": 13.07,
-    "open_unrealized_pnl_usd": 30.7,
-    "portfolio_value": 2043.77,
+    "open_unrealized_pnl_usd": 37.69,
+    "portfolio_value": 2050.76,
     "total_commission_usd": 52.0,
     "skipped_gap": 6,
     "skipped_zero_shares": 3,
