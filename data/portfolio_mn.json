@@ -169,12 +169,12 @@
           "open": 17.35,
           "high": 18.74,
           "low": 17.35,
-          "close": 18.58,
-          "pnl_pct": 7.27
+          "close": 18.41,
+          "pnl_pct": 6.29
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 15.25
+      "unrealized_pnl_usd": 13.2
     },
     {
       "ticker": "APPF",
@@ -192,14 +192,14 @@
       "daily_prices": {
         "2026-06-26": {
           "open": 144.94,
-          "high": 153.91,
+          "high": 154.27,
           "low": 144.94,
-          "close": 152.87,
-          "pnl_pct": 5.59
+          "close": 153.67,
+          "pnl_pct": 6.14
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 11.73
+      "unrealized_pnl_usd": 12.88
     },
     {
       "ticker": "AXSM",
@@ -219,12 +219,12 @@
           "open": 239.88,
           "high": 247.5,
           "low": 239.14,
-          "close": 244.09,
-          "pnl_pct": 2.85
+          "close": 243.56,
+          "pnl_pct": 2.63
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 5.98
+      "unrealized_pnl_usd": 5.52
     },
     {
       "ticker": "MDLZ",
@@ -243,13 +243,13 @@
         "2026-06-26": {
           "open": 61.77,
           "high": 61.97,
-          "low": 61.0,
-          "close": 61.5,
-          "pnl_pct": 0.49
+          "low": 60.85,
+          "close": 60.88,
+          "pnl_pct": -0.52
         }
       },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 1.03
+      "unrealized_pnl_usd": -1.09
     }
   ],
   "closed_positions": [
@@ -2185,8 +2185,8 @@
     "win_trades": 18,
     "win_rate": 32.1,
     "total_realized_pnl_usd": 98.31,
-    "open_unrealized_pnl_usd": 58.63,
-    "portfolio_value": 2156.94,
+    "open_unrealized_pnl_usd": 55.15,
+    "portfolio_value": 2153.46,
     "total_commission_usd": 112.0,
     "skipped_gap": 28,
     "skipped_zero_shares": 0,

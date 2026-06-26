@@ -91,41 +91,6 @@ window.PORTFOLIO_E = {
       "day1_open": 37.03
     },
     {
-      "ticker": "SWBI",
-      "name": "SWBI",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 16.67,
-      "allocated_usd": 500,
-      "shares": 29,
-      "actual_position_usd": 483.43,
-      "entry_commission": 1.0,
-      "take_profit": 15.0,
-      "stop_loss": 17.17,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-29",
-      "regime": "neutral",
-      "vix": 18.63,
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
-        },
-        "2026-06-26": {
-          "open": 15.55,
-          "high": 15.7,
-          "low": 15.03,
-          "close": 15.1,
-          "pnl_pct": 9.42
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 16.19
-    },
-    {
       "ticker": "SBFG",
       "name": "SBFG",
       "action": "SELL",
@@ -140,7 +105,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-01",
       "regime": "neutral",
-      "vix": 18.8,
+      "vix": 18.96,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -159,7 +124,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-01",
       "regime": "neutral",
-      "vix": 18.8,
+      "vix": 18.96,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -900,6 +865,46 @@ window.PORTFOLIO_E = {
       "realized_pnl_usd": -16.15
     },
     {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29,
+      "actual_position_usd": 483.43,
+      "entry_commission": 1.0,
+      "take_profit": 15.0,
+      "stop_loss": 17.17,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-29",
+      "regime": "neutral",
+      "vix": 18.63,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.19,
+          "high": 16.39,
+          "low": 15.61,
+          "close": 15.69,
+          "pnl_pct": 5.88
+        },
+        "2026-06-26": {
+          "open": 15.55,
+          "high": 15.7,
+          "low": 14.85,
+          "close": 14.94,
+          "pnl_pct": 10.02
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 15.0,
+      "final_pnl_pct": 10.02,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 46.44
+    },
+    {
       "ticker": "OBT",
       "name": "OBT",
       "action": "SELL",
@@ -927,7 +932,7 @@ window.PORTFOLIO_E = {
           "open": 37.12,
           "high": 37.71,
           "low": 36.57,
-          "close": 36.97,
+          "close": 37.13,
           "pnl_pct": -2.99
         }
       },
@@ -942,13 +947,13 @@ window.PORTFOLIO_E = {
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 19,
-    "win_trades": 8,
-    "win_rate": 42.1,
-    "total_realized_pnl_usd": 29.12,
-    "open_unrealized_pnl_usd": 43.18,
-    "portfolio_value": 2072.3,
-    "total_commission_usd": 38.0,
+    "total_trades": 20,
+    "win_trades": 9,
+    "win_rate": 45.0,
+    "total_realized_pnl_usd": 75.56,
+    "open_unrealized_pnl_usd": -1.36,
+    "portfolio_value": 2074.2,
+    "total_commission_usd": 40.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 6,

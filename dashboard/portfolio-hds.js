@@ -104,12 +104,12 @@ window.PORTFOLIO_HDS = {
           "open": 38.61,
           "high": 39.25,
           "low": 38.55,
-          "close": 38.79,
-          "pnl_pct": 2.46
+          "close": 38.66,
+          "pnl_pct": 2.11
         }
       },
       "position_usd": 206.26,
-      "unrealized_pnl_usd": 5.07
+      "unrealized_pnl_usd": 4.35
     },
     {
       "ticker": "OBT",
@@ -129,12 +129,12 @@ window.PORTFOLIO_HDS = {
           "open": 37.12,
           "high": 37.71,
           "low": 36.57,
-          "close": 36.97,
-          "pnl_pct": 0.63
+          "close": 37.05,
+          "pnl_pct": 0.84
         }
       },
       "position_usd": 206.26,
-      "unrealized_pnl_usd": 1.3
+      "unrealized_pnl_usd": 1.73
     },
     {
       "ticker": "TSBK",
@@ -150,7 +150,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 45.78,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.08,
+      "position_usd": 208.23,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -167,7 +167,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 16.41,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.08,
+      "position_usd": 208.23,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 16.95,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.08,
+      "position_usd": 208.23,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 22.74,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.08,
+      "position_usd": 208.23,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1149,17 +1149,17 @@ window.PORTFOLIO_HDS = {
           "open": 37.12,
           "high": 37.71,
           "low": 36.57,
-          "close": 36.97,
-          "pnl_pct": 1.29
+          "close": 37.05,
+          "pnl_pct": 1.51
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 36.97,
-      "final_pnl_pct": 1.29,
+      "close_price": 37.05,
+      "final_pnl_pct": 1.51,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.64,
+      "realized_pnl_usd": 3.09,
       "position_usd": 204.59
     },
     {
@@ -1186,18 +1186,18 @@ window.PORTFOLIO_HDS = {
         "2026-06-26": {
           "open": 38.7,
           "high": 38.97,
-          "low": 38.44,
-          "close": 38.47,
-          "pnl_pct": 0.18
+          "low": 38.23,
+          "close": 38.27,
+          "pnl_pct": -0.34
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 38.47,
-      "final_pnl_pct": 0.18,
+      "close_price": 38.27,
+      "final_pnl_pct": -0.34,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 0.37,
+      "realized_pnl_usd": -0.7,
       "position_usd": 204.59
     },
     {
@@ -1224,18 +1224,18 @@ window.PORTFOLIO_HDS = {
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 15.03,
-          "close": 15.1,
-          "pnl_pct": 9.42
+          "low": 14.85,
+          "close": 14.93,
+          "pnl_pct": 10.44
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 15.1,
-      "final_pnl_pct": 9.42,
+      "close_price": 14.93,
+      "final_pnl_pct": 10.44,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 19.27,
+      "realized_pnl_usd": 21.36,
       "position_usd": 204.59
     },
     {
@@ -1256,7 +1256,7 @@ window.PORTFOLIO_HDS = {
           "open": 16.98,
           "high": 17.41,
           "low": 16.8,
-          "close": 17.37,
+          "close": 17.26,
           "pnl_pct": -1.99
         }
       },
@@ -1273,11 +1273,11 @@ window.PORTFOLIO_HDS = {
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 30,
-    "win_trades": 17,
-    "win_rate": 56.7,
-    "total_realized_pnl_usd": 80.81,
-    "open_unrealized_pnl_usd": 20.35,
-    "portfolio_value": 2101.16,
+    "win_trades": 16,
+    "win_rate": 53.3,
+    "total_realized_pnl_usd": 82.28,
+    "open_unrealized_pnl_usd": 20.06,
+    "portfolio_value": 2102.34,
     "total_commission_usd": 60.0,
     "skipped_gap": 12,
     "skipped_zero_shares": 0,
