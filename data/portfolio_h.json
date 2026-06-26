@@ -19,54 +19,38 @@
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "SWBI",
-      "name": "SWBI",
+      "ticker": "SBFG",
+      "name": "SBFG",
       "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 16.67,
+      "signal_date": "2026-06-26",
+      "entry_price": 23.12,
       "allocated_usd": 500,
-      "shares": 29.994,
+      "shares": 21.6263,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 14.17,
-      "stop_loss": 17.0,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
-        }
-      },
-      "position_usd": 203.49,
-      "unrealized_pnl_usd": 11.97
+      "take_profit": 19.65,
+      "stop_loss": 23.58,
+      "max_hold_date": "2026-06-30",
+      "daily_prices": {},
+      "position_usd": 204.49,
+      "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "OBT",
-      "name": "OBT",
+      "ticker": "TRVI",
+      "name": "TRVI",
       "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 36.5,
+      "signal_date": "2026-06-26",
+      "entry_price": 17.93,
       "allocated_usd": 500,
-      "shares": 13.6986,
+      "shares": 27.8862,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 31.02,
-      "stop_loss": 37.23,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 36.85,
-          "high": 37.19,
-          "low": 36.59,
-          "close": 36.89,
-          "pnl_pct": -1.07
-        }
-      },
-      "position_usd": 203.49,
-      "unrealized_pnl_usd": -2.18
+      "take_profit": 15.24,
+      "stop_loss": 18.29,
+      "max_hold_date": "2026-06-30",
+      "daily_prices": {},
+      "position_usd": 204.49,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -904,20 +888,96 @@
       "commission_total": 2.0,
       "realized_pnl_usd": 4.24,
       "position_usd": 204.71
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29.994,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 14.17,
+      "stop_loss": 17.0,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.19,
+          "high": 16.39,
+          "low": 15.61,
+          "close": 15.69,
+          "pnl_pct": 5.88
+        },
+        "2026-06-26": {
+          "open": 15.55,
+          "high": 15.7,
+          "low": 15.47,
+          "close": 15.52,
+          "pnl_pct": 6.9
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 15.52,
+      "final_pnl_pct": 6.9,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 14.04,
+      "position_usd": 203.49
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13.6986,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 31.02,
+      "stop_loss": 37.23,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "open": 37.12,
+          "high": 37.71,
+          "low": 36.65,
+          "close": 37.0,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 37.23,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.07,
+      "position_usd": 203.49
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 24,
-    "win_trades": 7,
-    "win_rate": 29.2,
-    "total_realized_pnl_usd": 34.93,
-    "open_unrealized_pnl_usd": 9.79,
-    "portfolio_value": 2044.72,
-    "total_commission_usd": 48.0,
+    "total_trades": 26,
+    "win_trades": 8,
+    "win_rate": 30.8,
+    "total_realized_pnl_usd": 44.9,
+    "open_unrealized_pnl_usd": 0.0,
+    "portfolio_value": 2044.9,
+    "total_commission_usd": 52.0,
     "skipped_gap": 7,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
-    "updated_at": "2026-06-25"
+    "updated_at": "2026-06-26"
   }
 }

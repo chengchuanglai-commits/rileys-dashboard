@@ -165,9 +165,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 19.92,
       "stop_loss": 16.97,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-26": {
+          "open": 17.35,
+          "high": 17.95,
+          "low": 17.35,
+          "close": 17.92,
+          "pnl_pct": 3.46
+        }
+      },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 7.26
     },
     {
       "ticker": "APPF",
@@ -182,26 +190,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 166.5,
       "stop_loss": 141.88,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-26": {
+          "open": 144.94,
+          "high": 150.46,
+          "low": 144.94,
+          "close": 149.75,
+          "pnl_pct": 3.43
+        }
+      },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "CCJ",
-      "name": "Cameco",
-      "action": "BUY",
-      "signal_date": "2026-06-25",
-      "entry_price": 103.58,
-      "allocated_usd": 500,
-      "shares": 4.8272,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 119.12,
-      "stop_loss": 101.51,
-      "max_hold_date": "2026-06-29",
-      "daily_prices": {},
-      "position_usd": 209.83,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 7.2
     },
     {
       "ticker": "AXSM",
@@ -216,9 +215,42 @@ window.PORTFOLIO_MN = {
       "take_profit": 272.93,
       "stop_loss": 232.58,
       "max_hold_date": "2026-06-29",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-06-26": {
+          "open": 239.88,
+          "high": 241.51,
+          "low": 239.14,
+          "close": 240.87,
+          "pnl_pct": 1.49
+        }
+      },
       "position_usd": 209.83,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.13
+    },
+    {
+      "ticker": "MDLZ",
+      "name": "Mondelez International",
+      "action": "BUY",
+      "signal_date": "2026-06-25",
+      "entry_price": 61.2,
+      "allocated_usd": 500,
+      "shares": 8.1699,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 70.38,
+      "stop_loss": 59.98,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {
+        "2026-06-26": {
+          "open": 61.77,
+          "high": 61.92,
+          "low": 61.54,
+          "close": 61.59,
+          "pnl_pct": 0.64
+        }
+      },
+      "position_usd": 209.83,
+      "unrealized_pnl_usd": 1.34
     }
   ],
   "closed_positions": [
@@ -2094,7 +2126,7 @@ window.PORTFOLIO_MN = {
         },
         "2026-06-25": {
           "open": 69.88,
-          "high": 70.78,
+          "high": 70.79,
           "low": 68.58,
           "close": 68.65,
           "pnl_pct": -0.39
@@ -2133,7 +2165,7 @@ window.PORTFOLIO_MN = {
         "2026-06-25": {
           "open": 680.38,
           "high": 692.74,
-          "low": 670.25,
+          "low": 670.0,
           "close": 678.65,
           "pnl_pct": -0.33
         }
@@ -2154,12 +2186,12 @@ window.PORTFOLIO_MN = {
     "win_trades": 18,
     "win_rate": 32.1,
     "total_realized_pnl_usd": 98.31,
-    "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2122.95,
+    "open_unrealized_pnl_usd": 43.56,
+    "portfolio_value": 2141.87,
     "total_commission_usd": 112.0,
-    "skipped_gap": 27,
+    "skipped_gap": 28,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 58,
-    "updated_at": "2026-06-25"
+    "skipped_no_cash": 64,
+    "updated_at": "2026-06-26"
   }
 };

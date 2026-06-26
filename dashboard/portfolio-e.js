@@ -113,38 +113,55 @@ window.PORTFOLIO_E = {
           "low": 15.61,
           "close": 15.69,
           "pnl_pct": 5.88
+        },
+        "2026-06-26": {
+          "open": 15.55,
+          "high": 15.7,
+          "low": 15.47,
+          "close": 15.53,
+          "pnl_pct": 6.84
         }
       },
       "gap_checked": true,
       "day1_open": 16.19
     },
     {
-      "ticker": "OBT",
-      "name": "OBT",
+      "ticker": "SBFG",
+      "name": "SBFG",
       "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 36.5,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 474.5,
+      "signal_date": "2026-06-26",
+      "entry_price": 23.12,
+      "allocated_usd": 350,
+      "shares": 15,
+      "actual_position_usd": 346.8,
       "entry_commission": 1.0,
-      "take_profit": 32.85,
-      "stop_loss": 37.59,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-29",
-      "regime": "neutral",
-      "vix": 18.63,
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 36.85,
-          "high": 37.19,
-          "low": 36.59,
-          "close": 36.89,
-          "pnl_pct": -1.07
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 36.85
+      "take_profit": 21.27,
+      "stop_loss": 23.7,
+      "max_hold_days": 2,
+      "max_hold_date": "2026-06-30",
+      "regime": "caution",
+      "vix": 20.21,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "TRVI",
+      "name": "TRVI",
+      "action": "SELL",
+      "signal_date": "2026-06-26",
+      "entry_price": 17.93,
+      "allocated_usd": 350,
+      "shares": 19,
+      "actual_position_usd": 340.67,
+      "entry_commission": 1.0,
+      "take_profit": 16.5,
+      "stop_loss": 18.38,
+      "max_hold_days": 2,
+      "max_hold_date": "2026-06-30",
+      "regime": "caution",
+      "vix": 20.21,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -827,8 +844,8 @@ window.PORTFOLIO_E = {
           "pnl_pct": 2.07
         },
         "2026-06-25": {
-          "open": 138.03,
-          "high": 139.14,
+          "open": 138.06,
+          "high": 139.18,
           "low": 135.62,
           "close": 137.28,
           "pnl_pct": 1.24
@@ -881,20 +898,60 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -16.15
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.5,
+      "entry_commission": 1.0,
+      "take_profit": 32.85,
+      "stop_loss": 37.59,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-29",
+      "regime": "neutral",
+      "vix": 18.63,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "open": 37.12,
+          "high": 37.71,
+          "low": 36.65,
+          "close": 37.0,
+          "pnl_pct": -2.99
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 37.59,
+      "final_pnl_pct": -2.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.19
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 18,
+    "total_trades": 19,
     "win_trades": 8,
-    "win_rate": 44.4,
-    "total_realized_pnl_usd": 45.31,
-    "open_unrealized_pnl_usd": 19.98,
-    "portfolio_value": 2065.29,
-    "total_commission_usd": 36.0,
+    "win_rate": 42.1,
+    "total_realized_pnl_usd": 29.12,
+    "open_unrealized_pnl_usd": 30.7,
+    "portfolio_value": 2059.82,
+    "total_commission_usd": 38.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 6,
-    "updated_at": "2026-06-25"
+    "updated_at": "2026-06-26"
   }
 };
