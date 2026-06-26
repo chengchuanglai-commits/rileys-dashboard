@@ -16,13 +16,13 @@
       "max_hold_date": "2026-06-30",
       "daily_prices": {
         "2026-06-26": {
-          "close": 17.87,
-          "pnl_pct": 0.33
+          "close": 18.15,
+          "pnl_pct": -1.23
         }
       },
       "gap_checked": true,
-      "day1_open": 17.87,
-      "day1_gap_pct": -0.33
+      "day1_open": 17.92,
+      "day1_gap_pct": -0.06
     }
   ],
   "closed_positions": [
@@ -852,18 +852,18 @@
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 14.85,
-          "close": 14.94,
-          "pnl_pct": 10.38
+          "low": 14.84,
+          "close": 15.23,
+          "pnl_pct": 8.64
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 14.94,
-      "final_pnl_pct": 10.38,
+      "close_price": 15.23,
+      "final_pnl_pct": 8.64,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 48.18
+      "realized_pnl_usd": 39.77
     },
     {
       "ticker": "OBT",
@@ -887,10 +887,10 @@
           "pnl_pct": -1.07
         },
         "2026-06-26": {
-          "open": 37.12,
+          "open": 37.02,
           "high": 37.71,
-          "low": 36.57,
-          "close": 37.13,
+          "low": 36.5,
+          "close": 36.95,
           "pnl_pct": -2.99
         }
       },
@@ -936,9 +936,9 @@
     "total_trades": 26,
     "win_trades": 12,
     "win_rate": 46.2,
-    "total_realized_pnl_usd": 215.13,
-    "open_unrealized_pnl_usd": 1.65,
-    "portfolio_value": 2216.78,
+    "total_realized_pnl_usd": 206.72,
+    "open_unrealized_pnl_usd": -6.15,
+    "portfolio_value": 2200.57,
     "skipped_gap": 8,
     "updated_at": "2026-06-27"
   }

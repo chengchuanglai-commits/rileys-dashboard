@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 127.89,
       "stop_loss": 144.57,
       "max_hold_date": "2026-06-29",
-      "day1_open": 137.25,
+      "day1_open": 136.96,
       "daily_prices": {
         "2026-06-23": {
           "open": 135.42,
@@ -39,14 +39,46 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.24
         },
         "2026-06-26": {
-          "close": 133.54,
-          "pnl_pct": 3.93
+          "close": 135.42,
+          "pnl_pct": 2.58
         }
       },
       "position_usd": 212.69,
-      "unrealized_pnl_usd": 8.59,
+      "unrealized_pnl_usd": 5.49,
       "gap_checked": true,
-      "day1_gap_pct": -1.27
+      "day1_gap_pct": -1.47
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.5,
+      "entry_commission": 1.0,
+      "take_profit": 33.58,
+      "stop_loss": 37.96,
+      "max_hold_date": "2026-07-01",
+      "day1_open": 37.02,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "close": 36.95,
+          "pnl_pct": -1.23
+        }
+      },
+      "position_usd": 208.75,
+      "unrealized_pnl_usd": -2.57,
+      "gap_checked": true,
+      "day1_gap_pct": 1.42
     },
     {
       "ticker": "TRVI",
@@ -61,17 +93,17 @@ window.PORTFOLIO_C = {
       "take_profit": 16.5,
       "stop_loss": 18.65,
       "max_hold_date": "2026-07-03",
-      "day1_open": 17.87,
+      "day1_open": 17.92,
       "daily_prices": {
         "2026-06-26": {
-          "close": 17.87,
-          "pnl_pct": 0.33
+          "close": 18.15,
+          "pnl_pct": -1.23
         }
       },
       "position_usd": 209.57,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
-      "day1_gap_pct": -0.33
+      "day1_gap_pct": -0.06
     }
   ],
   "closed_positions": [
@@ -859,10 +891,10 @@ window.PORTFOLIO_C = {
           "pnl_pct": -1.24
         },
         "2026-06-26": {
-          "open": 137.25,
+          "open": 136.96,
           "high": 137.76,
           "low": 131.43,
-          "close": 133.4,
+          "close": 135.42,
           "pnl_pct": -4.0
         }
       },
@@ -971,8 +1003,8 @@ window.PORTFOLIO_C = {
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 14.85,
-          "close": 14.94,
+          "low": 14.84,
+          "close": 15.23,
           "pnl_pct": 7.98
         }
       },
@@ -1022,9 +1054,9 @@ window.PORTFOLIO_C = {
     "win_trades": 13,
     "win_rate": 59.1,
     "total_realized_pnl_usd": 251.05,
-    "open_unrealized_pnl_usd": 21.3,
-    "portfolio_value": 2272.35,
-    "skipped_gap": 11,
+    "open_unrealized_pnl_usd": 0.6,
+    "portfolio_value": 2251.65,
+    "skipped_gap": 10,
     "updated_at": "2026-06-27"
   }
 };

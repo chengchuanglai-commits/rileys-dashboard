@@ -38,8 +38,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.24
         },
         "2026-06-26": {
-          "close": 133.54,
-          "pnl_pct": 3.93
+          "close": 135.42,
+          "pnl_pct": 2.58
         }
       }
     },
@@ -72,8 +72,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.88
         },
         "2026-06-26": {
-          "close": 17.26,
-          "pnl_pct": -1.53
+          "close": 17.1,
+          "pnl_pct": -0.59
         }
       }
     },
@@ -99,28 +99,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -1.07
         },
         "2026-06-26": {
-          "close": 37.05,
-          "pnl_pct": -1.51
-        }
-      }
-    },
-    {
-      "ticker": "SBFG",
-      "name": "SBFG",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 23.12,
-      "allocated_usd": 500,
-      "shares": 21,
-      "actual_position_usd": 485.52,
-      "entry_commission": 1.0,
-      "take_profit": 21.27,
-      "stop_loss": 24.04,
-      "max_hold_date": "2026-07-03",
-      "daily_prices": {
-        "2026-06-26": {
-          "close": 23.34,
-          "pnl_pct": -0.95
+          "close": 36.95,
+          "pnl_pct": -1.23
         }
       }
     },
@@ -139,8 +119,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-03",
       "daily_prices": {
         "2026-06-26": {
-          "close": 17.87,
-          "pnl_pct": 0.33
+          "close": 18.15,
+          "pnl_pct": -1.23
         }
       }
     }
@@ -1082,10 +1062,10 @@ window.PORTFOLIO_B = {
           "pnl_pct": -1.24
         },
         "2026-06-26": {
-          "open": 137.25,
+          "open": 136.96,
           "high": 137.76,
           "low": 131.43,
-          "close": 133.4,
+          "close": 135.42,
           "pnl_pct": -4.0
         }
       },
@@ -1262,8 +1242,8 @@ window.PORTFOLIO_B = {
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 14.85,
-          "close": 14.94,
+          "low": 14.84,
+          "close": 15.23,
           "pnl_pct": 7.98
         }
       },
@@ -1299,16 +1279,41 @@ window.PORTFOLIO_B = {
       "final_pnl_pct": 31.07,
       "close_reason": "take_profit",
       "realized_pnl_usd": 155.34
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SBFG",
+      "action": "SELL",
+      "signal_date": "2026-06-26",
+      "entry_price": 23.12,
+      "allocated_usd": 500,
+      "shares": 21,
+      "actual_position_usd": 485.52,
+      "entry_commission": 1.0,
+      "take_profit": 21.27,
+      "stop_loss": 24.04,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {
+        "2026-06-26": {
+          "close": 24.75,
+          "pnl_pct": -7.05
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 24.75,
+      "final_pnl_pct": -7.05,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -35.25
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 30,
+    "total_trades": 31,
     "win_trades": 13,
-    "win_rate": 43.3,
-    "total_realized_pnl_usd": 155.39,
-    "open_unrealized_pnl_usd": 1.35,
-    "portfolio_value": 2156.74,
+    "win_rate": 41.9,
+    "total_realized_pnl_usd": 120.14,
+    "open_unrealized_pnl_usd": -2.35,
+    "portfolio_value": 2117.79,
     "updated_at": "2026-06-27"
   }
 };

@@ -105,7 +105,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-01",
       "regime": "neutral",
-      "vix": 18.96,
+      "vix": 18.41,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -124,7 +124,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-01",
       "regime": "neutral",
-      "vix": 18.96,
+      "vix": 18.41,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -891,8 +891,8 @@ window.PORTFOLIO_E = {
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 14.85,
-          "close": 14.94,
+          "low": 14.84,
+          "close": 15.23,
           "pnl_pct": 10.02
         }
       },
@@ -929,10 +929,10 @@ window.PORTFOLIO_E = {
           "pnl_pct": -1.07
         },
         "2026-06-26": {
-          "open": 37.12,
+          "open": 37.02,
           "high": 37.71,
-          "low": 36.57,
-          "close": 37.13,
+          "low": 36.5,
+          "close": 36.95,
           "pnl_pct": -2.99
         }
       },

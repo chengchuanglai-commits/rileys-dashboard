@@ -102,13 +102,13 @@
         "2026-06-26": {
           "open": 38.61,
           "high": 39.25,
-          "low": 38.55,
-          "close": 38.66,
-          "pnl_pct": 2.11
+          "low": 38.5,
+          "close": 38.8,
+          "pnl_pct": 2.48
         }
       },
       "position_usd": 206.26,
-      "unrealized_pnl_usd": 4.35
+      "unrealized_pnl_usd": 5.12
     },
     {
       "ticker": "OBT",
@@ -125,15 +125,15 @@
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-26": {
-          "open": 37.12,
+          "open": 37.02,
           "high": 37.71,
-          "low": 36.57,
-          "close": 37.05,
-          "pnl_pct": 0.84
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": 0.57
         }
       },
       "position_usd": 206.26,
-      "unrealized_pnl_usd": 1.73
+      "unrealized_pnl_usd": 1.18
     },
     {
       "ticker": "TSBK",
@@ -149,7 +149,7 @@
       "stop_loss": 45.78,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.23,
+      "position_usd": 208.15,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -166,7 +166,7 @@
       "stop_loss": 16.41,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.23,
+      "position_usd": 208.15,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -183,7 +183,7 @@
       "stop_loss": 16.95,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.23,
+      "position_usd": 208.15,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -200,7 +200,7 @@
       "stop_loss": 22.74,
       "max_hold_date": "2026-06-30",
       "daily_prices": {},
-      "position_usd": 208.23,
+      "position_usd": 208.15,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1145,20 +1145,20 @@
           "pnl_pct": 1.07
         },
         "2026-06-26": {
-          "open": 37.12,
+          "open": 37.02,
           "high": 37.71,
-          "low": 36.57,
-          "close": 37.05,
-          "pnl_pct": 1.51
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": 1.23
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 37.05,
-      "final_pnl_pct": 1.51,
+      "close_price": 36.95,
+      "final_pnl_pct": 1.23,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.09,
+      "realized_pnl_usd": 2.52,
       "position_usd": 204.59
     },
     {
@@ -1184,19 +1184,19 @@
         },
         "2026-06-26": {
           "open": 38.7,
-          "high": 38.97,
-          "low": 38.23,
-          "close": 38.27,
-          "pnl_pct": -0.34
+          "high": 39.23,
+          "low": 38.04,
+          "close": 38.93,
+          "pnl_pct": 1.38
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 38.27,
-      "final_pnl_pct": -0.34,
+      "close_price": 38.93,
+      "final_pnl_pct": 1.38,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.7,
+      "realized_pnl_usd": 2.82,
       "position_usd": 204.59
     },
     {
@@ -1223,18 +1223,18 @@
         "2026-06-26": {
           "open": 15.55,
           "high": 15.7,
-          "low": 14.85,
-          "close": 14.93,
-          "pnl_pct": 10.44
+          "low": 14.84,
+          "close": 15.23,
+          "pnl_pct": 8.64
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 14.93,
-      "final_pnl_pct": 10.44,
+      "close_price": 15.23,
+      "final_pnl_pct": 8.64,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 21.36,
+      "realized_pnl_usd": 17.68,
       "position_usd": 204.59
     },
     {
@@ -1255,7 +1255,7 @@
           "open": 16.98,
           "high": 17.41,
           "low": 16.8,
-          "close": 17.26,
+          "close": 17.1,
           "pnl_pct": -1.99
         }
       },
@@ -1272,11 +1272,11 @@
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 30,
-    "win_trades": 16,
-    "win_rate": 53.3,
-    "total_realized_pnl_usd": 82.28,
-    "open_unrealized_pnl_usd": 20.06,
-    "portfolio_value": 2102.34,
+    "win_trades": 17,
+    "win_rate": 56.7,
+    "total_realized_pnl_usd": 81.55,
+    "open_unrealized_pnl_usd": 20.27,
+    "portfolio_value": 2101.82,
     "total_commission_usd": 60.0,
     "skipped_gap": 12,
     "skipped_zero_shares": 0,
