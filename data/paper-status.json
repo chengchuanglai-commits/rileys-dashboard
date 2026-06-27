@@ -100,11 +100,11 @@
       "sym": "AMD",
       "shares": 4.0,
       "avg_fill": 521.72,
-      "cur_price": 532.5700073242188,
-      "change_pct": 2.08,
-      "pnl_usd": 43.4,
-      "today_price": 532.5700073242188,
-      "slippage_pct": -2.04,
+      "cur_price": 521.5800170898438,
+      "change_pct": -0.03,
+      "pnl_usd": -0.56,
+      "today_price": 521.5800170898438,
+      "slippage_pct": 0.03,
       "sim_price": 537.37,
       "delay_gap_pct": -2.91,
       "target_usd": 333.0
@@ -191,6 +191,6 @@
   "open_orders": 14,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": 130.98,
-  "updated_at": "2026-06-27 22:20"
+  "total_unrealized_pnl": 87.02,
+  "updated_at": "2026-06-27 22:25"
 }
