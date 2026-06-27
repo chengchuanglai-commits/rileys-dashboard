@@ -61,11 +61,11 @@
       "sym": "VICR",
       "shares": 8.0,
       "avg_fill": 313.44,
-      "cur_price": 326.92999267578125,
-      "change_pct": 4.3,
-      "pnl_usd": 107.92,
-      "today_price": 326.92999267578125,
-      "slippage_pct": -4.13,
+      "cur_price": 331.5899963378906,
+      "change_pct": 5.79,
+      "pnl_usd": 145.2,
+      "today_price": 331.5899963378906,
+      "slippage_pct": -5.47,
       "sim_price": 331.37,
       "delay_gap_pct": -5.41,
       "target_usd": 333.0
@@ -191,6 +191,6 @@
   "open_orders": 14,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": 87.02,
-  "updated_at": "2026-06-28 02:10"
+  "total_unrealized_pnl": 124.3,
+  "updated_at": "2026-06-28 02:15"
 }
