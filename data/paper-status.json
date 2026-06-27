@@ -139,11 +139,11 @@
       "sym": "NU",
       "shares": 33.0,
       "avg_fill": 12.53,
-      "cur_price": 12.460000038146973,
-      "change_pct": -0.56,
-      "pnl_usd": -2.31,
-      "today_price": 12.460000038146973,
-      "slippage_pct": 0.56,
+      "cur_price": 13.170000076293945,
+      "change_pct": 5.11,
+      "pnl_usd": 21.12,
+      "today_price": 13.170000076293945,
+      "slippage_pct": -4.86,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -178,11 +178,11 @@
       "sym": "NVDA",
       "shares": 2.0,
       "avg_fill": 196.51,
-      "cur_price": 195.74000549316406,
-      "change_pct": -0.39,
-      "pnl_usd": -1.54,
-      "today_price": 195.74000549316406,
-      "slippage_pct": 0.39,
+      "cur_price": 192.52999877929688,
+      "change_pct": -2.03,
+      "pnl_usd": -7.96,
+      "today_price": 192.52999877929688,
+      "slippage_pct": 2.07,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -191,6 +191,6 @@
   "open_orders": 14,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": 70.01,
-  "updated_at": "2026-06-28 00:05"
+  "total_unrealized_pnl": 87.02,
+  "updated_at": "2026-06-28 00:10"
 }
