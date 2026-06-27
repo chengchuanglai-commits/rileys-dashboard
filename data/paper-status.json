@@ -74,11 +74,11 @@
       "sym": "RVMD",
       "shares": 13.0,
       "avg_fill": 170.27,
-      "cur_price": 182.0800018310547,
-      "change_pct": 6.94,
-      "pnl_usd": 153.53,
-      "today_price": 182.0800018310547,
-      "slippage_pct": -6.49,
+      "cur_price": 178.1699981689453,
+      "change_pct": 4.64,
+      "pnl_usd": 102.7,
+      "today_price": 178.1699981689453,
+      "slippage_pct": -4.43,
       "sim_price": 162.99,
       "delay_gap_pct": 4.47,
       "target_usd": 333.0
@@ -191,6 +191,6 @@
   "open_orders": 14,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": 87.02,
-  "updated_at": "2026-06-28 03:35"
+  "total_unrealized_pnl": 36.19,
+  "updated_at": "2026-06-28 03:40"
 }
