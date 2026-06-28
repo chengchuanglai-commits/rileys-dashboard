@@ -66,9 +66,9 @@
       "pnl_usd": 107.92,
       "today_price": 326.92999267578125,
       "slippage_pct": -4.13,
-      "sim_price": 331.37,
-      "delay_gap_pct": -5.41,
-      "target_usd": 333.0
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
     },
     {
       "sym": "RVMD",
@@ -81,7 +81,7 @@
       "slippage_pct": -6.49,
       "sim_price": 162.99,
       "delay_gap_pct": 4.47,
-      "target_usd": 333.0
+      "target_usd": 500.0
     },
     {
       "sym": "QQQ",
@@ -107,7 +107,7 @@
       "slippage_pct": 0.03,
       "sim_price": 537.37,
       "delay_gap_pct": -2.91,
-      "target_usd": 333.0
+      "target_usd": 500.0
     },
     {
       "sym": "KSPI",
@@ -192,5 +192,5 @@
   "note": "",
   "account": "DUQ627583",
   "total_unrealized_pnl": 87.02,
-  "updated_at": "2026-06-28 04:05"
+  "updated_at": "2026-06-28 21:30"
 }
