@@ -166,9 +166,9 @@
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-26": {
-          "open": 17.33,
+          "open": 17.34,
           "high": 18.82,
-          "low": 17.35,
+          "low": 17.34,
           "close": 18.73,
           "pnl_pct": 8.14
         }
@@ -242,8 +242,8 @@
       "daily_prices": {
         "2026-06-26": {
           "open": 61.86,
-          "high": 61.97,
-          "low": 60.5,
+          "high": 61.98,
+          "low": 60.43,
           "close": 60.79,
           "pnl_pct": -0.67
         }
@@ -2191,6 +2191,6 @@
     "skipped_gap": 28,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 64,
-    "updated_at": "2026-06-26"
+    "updated_at": "2026-06-29"
   }
 }
