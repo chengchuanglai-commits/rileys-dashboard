@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29 11:40",
+  "generated": "2026-06-29 16:57",
   "spy_fwd_ret_pct": -2.63,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -7,38 +7,38 @@
   "legs": {
     "momma": {
       "name": "MOM-MA·动量+20MA",
-      "n": 8,
-      "alpha_pct": -1.12,
+      "n": 12,
+      "alpha_pct": -1.24,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -3.75,
+      "fwd_ret_pct": -3.87,
       "tradeable": true
     },
     "momh": {
       "name": "MOM-H·动量+H",
-      "n": 10,
-      "alpha_pct": 1.4,
+      "n": 17,
+      "alpha_pct": 0.02,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -1.23,
+      "fwd_ret_pct": -2.61,
       "tradeable": false
     },
     "bq": {
       "name": "B-quant·多因子",
-      "n": 5,
-      "alpha_pct": -0.57,
+      "n": 6,
+      "alpha_pct": 2.24,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -3.2,
+      "fwd_ret_pct": -0.39,
       "tradeable": true
     },
     "bai": {
       "name": "B-AI·多因子+DS",
-      "n": 11,
-      "alpha_pct": 4.78,
-      "robust": false,
-      "conviction": 0.0,
-      "fwd_ret_pct": 2.15,
+      "n": 13,
+      "alpha_pct": 8.3,
+      "robust": true,
+      "conviction": 0.2697,
+      "fwd_ret_pct": 5.67,
       "tradeable": false
     },
     "h": {
@@ -79,14 +79,14 @@
     }
   },
   "weights": {
-    "momma": 0.0553,
+    "momma": 0.0481,
     "momh": 0.0,
     "bq": 0.0,
-    "bai": 0.0,
+    "bai": 0.1297,
     "h": 0.0,
-    "hds": 0.2779,
-    "mn": 0.4168,
-    "c": 0.2501
+    "hds": 0.2418,
+    "mn": 0.3627,
+    "c": 0.2176
   },
   "final_allocation": {
     "momma": 0.5,
