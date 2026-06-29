@@ -925,9 +925,9 @@ window.PORTFOLIO_E = {
       "daily_prices": {
         "2026-06-29": {
           "open": 18.15,
-          "high": 18.59,
+          "high": 18.86,
           "low": 17.79,
-          "close": 18.57,
+          "close": 18.63,
           "pnl_pct": -3.01
         }
       },

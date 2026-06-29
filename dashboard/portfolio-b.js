@@ -31,28 +31,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -1.23
         },
         "2026-06-29": {
-          "close": 37.01,
-          "pnl_pct": -1.4
-        }
-      }
-    },
-    {
-      "ticker": "TRVI",
-      "name": "TRVI",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 17.93,
-      "allocated_usd": 500,
-      "shares": 27,
-      "actual_position_usd": 484.11,
-      "entry_commission": 1.0,
-      "take_profit": 16.5,
-      "stop_loss": 18.65,
-      "max_hold_date": "2026-07-03",
-      "daily_prices": {
-        "2026-06-29": {
-          "close": 18.57,
-          "pnl_pct": -3.57
+          "close": 37.24,
+          "pnl_pct": -2.03
         }
       }
     }
@@ -1158,8 +1138,8 @@ window.PORTFOLIO_B = {
         "2026-06-29": {
           "open": 134.12,
           "high": 136.01,
-          "low": 115.2,
-          "close": 116.25,
+          "low": 115.0,
+          "close": 115.85,
           "pnl_pct": 8.0
         }
       },
@@ -1245,9 +1225,9 @@ window.PORTFOLIO_B = {
         },
         "2026-06-29": {
           "open": 15.8,
-          "high": 17.15,
+          "high": 17.36,
           "low": 15.08,
-          "close": 17.01,
+          "close": 17.03,
           "pnl_pct": 8.0
         }
       },
@@ -1344,7 +1324,7 @@ window.PORTFOLIO_B = {
           "open": 24.71,
           "high": 24.89,
           "low": 23.61,
-          "close": 24.55,
+          "close": 24.46,
           "pnl_pct": -3.98
         }
       },
@@ -1355,16 +1335,46 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.32
+    },
+    {
+      "ticker": "TRVI",
+      "name": "TRVI",
+      "action": "SELL",
+      "signal_date": "2026-06-26",
+      "entry_price": 17.93,
+      "allocated_usd": 500,
+      "shares": 27,
+      "actual_position_usd": 484.11,
+      "entry_commission": 1.0,
+      "take_profit": 16.5,
+      "stop_loss": 18.65,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {
+        "2026-06-29": {
+          "open": 18.15,
+          "high": 18.86,
+          "low": 17.79,
+          "close": 18.63,
+          "pnl_pct": -4.02
+        }
+      },
+      "close_date": "2026-06-29",
+      "close_price": 18.65,
+      "final_pnl_pct": -4.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.46
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 33,
+    "total_trades": 34,
     "win_trades": 15,
-    "win_rate": 45.5,
-    "total_realized_pnl_usd": 85.13,
-    "open_unrealized_pnl_usd": -24.85,
-    "portfolio_value": 2060.28,
+    "win_rate": 44.1,
+    "total_realized_pnl_usd": 63.67,
+    "open_unrealized_pnl_usd": -10.15,
+    "portfolio_value": 2053.52,
     "updated_at": "2026-06-30"
   }
 };

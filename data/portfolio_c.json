@@ -31,39 +31,14 @@
           "pnl_pct": -1.23
         },
         "2026-06-29": {
-          "close": 37.01,
-          "pnl_pct": -1.4
+          "close": 37.24,
+          "pnl_pct": -2.03
         }
       },
       "position_usd": 210.38,
-      "unrealized_pnl_usd": -2.95,
+      "unrealized_pnl_usd": -4.27,
       "gap_checked": true,
       "day1_gap_pct": 1.29
-    },
-    {
-      "ticker": "TRVI",
-      "name": "TRVI",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 17.93,
-      "allocated_usd": 500,
-      "shares": 27,
-      "actual_position_usd": 484.11,
-      "entry_commission": 1.0,
-      "take_profit": 16.5,
-      "stop_loss": 18.65,
-      "max_hold_date": "2026-07-03",
-      "day1_open": 18.15,
-      "daily_prices": {
-        "2026-06-29": {
-          "close": 18.57,
-          "pnl_pct": -3.57
-        }
-      },
-      "position_usd": 211.2,
-      "unrealized_pnl_usd": -7.54,
-      "gap_checked": true,
-      "day1_gap_pct": 1.23
     }
   ],
   "closed_positions": [
@@ -1016,8 +991,8 @@
         "2026-06-29": {
           "open": 134.12,
           "high": 136.01,
-          "low": 115.2,
-          "close": 116.25,
+          "low": 115.0,
+          "close": 115.85,
           "pnl_pct": 8.0
         }
       },
@@ -1068,16 +1043,48 @@
       "commission_total": 2.0,
       "realized_pnl_usd": 16.79,
       "position_usd": 210.38
+    },
+    {
+      "ticker": "TRVI",
+      "name": "TRVI",
+      "action": "SELL",
+      "signal_date": "2026-06-26",
+      "entry_price": 17.93,
+      "allocated_usd": 500,
+      "shares": 27,
+      "actual_position_usd": 484.11,
+      "entry_commission": 1.0,
+      "take_profit": 16.5,
+      "stop_loss": 18.65,
+      "max_hold_date": "2026-07-03",
+      "day1_open": 18.15,
+      "daily_prices": {
+        "2026-06-29": {
+          "open": 18.15,
+          "high": 18.86,
+          "low": 17.79,
+          "close": 18.63,
+          "pnl_pct": -4.02
+        }
+      },
+      "close_date": "2026-06-29",
+      "close_price": 18.65,
+      "final_pnl_pct": -4.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.49,
+      "position_usd": 211.2
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 23,
+    "total_trades": 24,
     "win_trades": 14,
-    "win_rate": 60.9,
-    "total_realized_pnl_usd": 129.18,
-    "open_unrealized_pnl_usd": -24.85,
-    "portfolio_value": 2104.33,
+    "win_rate": 58.3,
+    "total_realized_pnl_usd": 120.69,
+    "open_unrealized_pnl_usd": -10.15,
+    "portfolio_value": 2110.54,
     "skipped_gap": 10,
     "updated_at": "2026-06-30"
   }
