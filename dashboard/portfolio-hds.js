@@ -1185,7 +1185,7 @@ window.PORTFOLIO_HDS = {
         },
         "2026-06-26": {
           "open": 38.7,
-          "high": 39.23,
+          "high": 39.27,
           "low": 38.04,
           "close": 38.93,
           "pnl_pct": 1.38
@@ -1253,7 +1253,7 @@ window.PORTFOLIO_HDS = {
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-26": {
-          "open": 16.98,
+          "open": 16.97,
           "high": 17.41,
           "low": 16.8,
           "close": 17.1,
@@ -1281,7 +1281,7 @@ window.PORTFOLIO_HDS = {
     "total_commission_usd": 60.0,
     "skipped_gap": 12,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 0,
-    "updated_at": "2026-06-26"
+    "skipped_no_cash": 4,
+    "updated_at": "2026-06-29"
   }
 };
