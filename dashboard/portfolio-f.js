@@ -68,82 +68,6 @@ window.PORTFOLIO_F = {
           "pnl_pct": -0.05
         }
       }
-    },
-    {
-      "ticker": "SWBI",
-      "name": "SWBI",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 16.67,
-      "allocated_usd": 500,
-      "shares": 29,
-      "t1_shares": 14,
-      "t2_shares": 15,
-      "actual_position_usd": 483.43,
-      "entry_commission": 1.0,
-      "take_profit_1": 15.42,
-      "take_profit_2": 14.17,
-      "stop_loss": 17.17,
-      "max_hold_date": "2026-06-29",
-      "day1_open": 16.19,
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
-        },
-        "2026-06-26": {
-          "open": 15.55,
-          "high": 15.7,
-          "low": 14.84,
-          "close": 15.23,
-          "pnl_pct": 8.64
-        }
-      },
-      "t1_exit_date": "2026-06-26",
-      "t1_exit_price": 15.42,
-      "t1_exit_reason": "take_profit_1",
-      "t1_locked_pnl": 15.5
-    },
-    {
-      "ticker": "SBFG",
-      "name": "SBFG",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 23.12,
-      "allocated_usd": 500,
-      "shares": 21,
-      "t1_shares": 10,
-      "t2_shares": 11,
-      "actual_position_usd": 485.52,
-      "entry_commission": 1.0,
-      "take_profit_1": 21.38,
-      "take_profit_2": 19.65,
-      "stop_loss": 23.81,
-      "max_hold_date": "2026-07-01",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "TRVI",
-      "name": "TRVI",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 17.93,
-      "allocated_usd": 500,
-      "shares": 27,
-      "t1_shares": 13,
-      "t2_shares": 14,
-      "actual_position_usd": 484.11,
-      "entry_commission": 1.0,
-      "take_profit_1": 16.59,
-      "take_profit_2": 15.24,
-      "stop_loss": 18.47,
-      "max_hold_date": "2026-07-01",
-      "day1_open": null,
-      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -1129,6 +1053,61 @@ window.PORTFOLIO_F = {
       "sl_unified": true
     },
     {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29,
+      "t1_shares": 14,
+      "t2_shares": 15,
+      "actual_position_usd": 483.43,
+      "entry_commission": 1.0,
+      "take_profit_1": 15.42,
+      "take_profit_2": 14.17,
+      "stop_loss": 17.17,
+      "max_hold_date": "2026-06-29",
+      "day1_open": 16.19,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.19,
+          "high": 16.39,
+          "low": 15.61,
+          "close": 15.69,
+          "pnl_pct": 5.88
+        },
+        "2026-06-26": {
+          "open": 15.55,
+          "high": 15.7,
+          "low": 14.84,
+          "close": 15.23,
+          "pnl_pct": 8.64
+        },
+        "2026-06-29": {
+          "open": 15.68,
+          "high": 15.7,
+          "low": 15.17,
+          "close": 15.3,
+          "pnl_pct": 8.22
+        }
+      },
+      "t1_exit_date": "2026-06-26",
+      "t1_exit_price": 15.42,
+      "t1_exit_reason": "take_profit_1",
+      "t2_exit_date": "2026-06-29",
+      "t2_exit_price": 15.3,
+      "t2_exit_reason": "max_hold",
+      "t1_gross_pnl": 17.5,
+      "t2_gross_pnl": 20.55,
+      "close_date": "2026-06-29",
+      "close_reason": "take_profit_1+max_hold",
+      "final_pnl_pct": 7.87,
+      "commission_total": 3.0,
+      "realized_pnl_usd": 35.05,
+      "sl_unified": false
+    },
+    {
       "ticker": "OBT",
       "name": "OBT",
       "action": "SELL",
@@ -1179,14 +1158,14 @@ window.PORTFOLIO_F = {
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 21,
-    "win_trades": 9,
-    "win_rate": 42.9,
-    "total_realized_pnl_usd": 13.07,
-    "open_unrealized_pnl_usd": 35.74,
-    "portfolio_value": 2048.81,
-    "total_commission_usd": 52.0,
-    "skipped_gap": 6,
+    "total_trades": 22,
+    "win_trades": 10,
+    "win_rate": 45.5,
+    "total_realized_pnl_usd": 48.12,
+    "open_unrealized_pnl_usd": -1.36,
+    "portfolio_value": 2046.76,
+    "total_commission_usd": 55.0,
+    "skipped_gap": 8,
     "skipped_zero_shares": 3,
     "updated_at": "2026-06-29"
   }

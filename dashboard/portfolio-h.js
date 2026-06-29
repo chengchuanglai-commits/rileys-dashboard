@@ -18,40 +18,6 @@ window.PORTFOLIO_H = {
       "daily_prices": {},
       "position_usd": 205.06,
       "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "SBFG",
-      "name": "SBFG",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 23.12,
-      "allocated_usd": 500,
-      "shares": 21.6263,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 19.65,
-      "stop_loss": 23.58,
-      "max_hold_date": "2026-06-30",
-      "daily_prices": {},
-      "position_usd": 204.84,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "TRVI",
-      "name": "TRVI",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 17.93,
-      "allocated_usd": 500,
-      "shares": 27.8862,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 15.24,
-      "stop_loss": 18.29,
-      "max_hold_date": "2026-06-30",
-      "daily_prices": {},
-      "position_usd": 204.84,
-      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -976,7 +942,7 @@ window.PORTFOLIO_H = {
     "open_unrealized_pnl_usd": 0.0,
     "portfolio_value": 2048.44,
     "total_commission_usd": 52.0,
-    "skipped_gap": 7,
+    "skipped_gap": 9,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
     "updated_at": "2026-06-29"

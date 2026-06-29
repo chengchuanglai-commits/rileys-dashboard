@@ -1,54 +1,7 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "SELL",
-      "signal_date": "2026-06-22",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 127.89,
-      "stop_loss": 144.57,
-      "max_hold_date": "2026-06-29",
-      "day1_open": 135.42,
-      "daily_prices": {
-        "2026-06-23": {
-          "open": 135.42,
-          "high": 141.27,
-          "low": 134.75,
-          "close": 137.94,
-          "pnl_pct": 0.77
-        },
-        "2026-06-24": {
-          "open": 138.0,
-          "high": 139.89,
-          "low": 133.74,
-          "close": 136.13,
-          "pnl_pct": 2.07
-        },
-        "2026-06-25": {
-          "open": 138.06,
-          "high": 139.18,
-          "low": 135.62,
-          "close": 137.28,
-          "pnl_pct": 1.24
-        },
-        "2026-06-26": {
-          "open": 136.96,
-          "high": 137.76,
-          "low": 131.38,
-          "close": 135.42,
-          "pnl_pct": 2.58
-        }
-      },
-      "position_usd": 214.34,
-      "unrealized_pnl_usd": 5.53
-    },
     {
       "ticker": "OBT",
       "name": "OBT",
@@ -62,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 33.58,
       "stop_loss": 37.96,
       "max_hold_date": "2026-07-01",
-      "day1_open": 36.55,
+      "day1_open": 36.97,
       "daily_prices": {
         "2026-06-25": {
           "open": 36.55,
@@ -77,28 +30,16 @@ window.PORTFOLIO_C = {
           "low": 36.5,
           "close": 36.95,
           "pnl_pct": -1.23
+        },
+        "2026-06-29": {
+          "close": 37.01,
+          "pnl_pct": -1.4
         }
       },
       "position_usd": 210.38,
-      "unrealized_pnl_usd": -2.59
-    },
-    {
-      "ticker": "SBFG",
-      "name": "SBFG",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 23.12,
-      "allocated_usd": 500,
-      "shares": 21,
-      "actual_position_usd": 485.52,
-      "entry_commission": 1.0,
-      "take_profit": 21.27,
-      "stop_loss": 24.04,
-      "max_hold_date": "2026-07-03",
-      "day1_open": null,
-      "daily_prices": {},
-      "position_usd": 211.2,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -2.95,
+      "gap_checked": true,
+      "day1_gap_pct": 1.29
     },
     {
       "ticker": "TRVI",
@@ -113,10 +54,17 @@ window.PORTFOLIO_C = {
       "take_profit": 16.5,
       "stop_loss": 18.65,
       "max_hold_date": "2026-07-03",
-      "day1_open": null,
-      "daily_prices": {},
+      "day1_open": 18.15,
+      "daily_prices": {
+        "2026-06-29": {
+          "close": 18.57,
+          "pnl_pct": -3.57
+        }
+      },
       "position_usd": 211.2,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -7.54,
+      "gap_checked": true,
+      "day1_gap_pct": 1.23
     }
   ],
   "closed_positions": [
@@ -1024,6 +972,66 @@ window.PORTFOLIO_C = {
       "position_usd": 214.34
     },
     {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 127.89,
+      "stop_loss": 144.57,
+      "max_hold_date": "2026-06-29",
+      "day1_open": 135.42,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.27,
+          "low": 134.75,
+          "close": 137.94,
+          "pnl_pct": 0.77
+        },
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.13,
+          "pnl_pct": 2.07
+        },
+        "2026-06-25": {
+          "open": 138.06,
+          "high": 139.18,
+          "low": 135.62,
+          "close": 137.28,
+          "pnl_pct": 1.24
+        },
+        "2026-06-26": {
+          "open": 136.96,
+          "high": 137.76,
+          "low": 131.38,
+          "close": 135.42,
+          "pnl_pct": 2.58
+        },
+        "2026-06-29": {
+          "open": 134.12,
+          "high": 136.01,
+          "low": 115.2,
+          "close": 116.25,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-29",
+      "close_price": 127.89,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 17.15,
+      "position_usd": 214.34
+    },
+    {
       "ticker": "SWBI",
       "name": "SWBI",
       "action": "SELL",
@@ -1065,15 +1073,13 @@ window.PORTFOLIO_C = {
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 22,
-    "win_trades": 13,
-    "win_rate": 59.1,
-    "total_realized_pnl_usd": 112.04,
-    "open_unrealized_pnl_usd": 2.94,
-    "portfolio_value": 2114.98,
-    "total_commission_usd": 44.0,
-    "skipped_gap": 9,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-29"
+    "total_trades": 23,
+    "win_trades": 14,
+    "win_rate": 60.9,
+    "total_realized_pnl_usd": 129.18,
+    "open_unrealized_pnl_usd": -24.85,
+    "portfolio_value": 2104.33,
+    "skipped_gap": 10,
+    "updated_at": "2026-06-30"
   }
 };
