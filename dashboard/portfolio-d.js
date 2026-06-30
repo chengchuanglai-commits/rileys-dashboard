@@ -1,23 +1,7 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
-  "open_positions": [
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {}
-    }
-  ],
+  "open_positions": [],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -894,19 +878,45 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -16.19
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {
+        "2026-06-29": {
+          "close": 9.24,
+          "pnl_pct": 25.24
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 9.06,
+      "day1_gap_pct": -26.7,
+      "close_date": "2026-06-29",
+      "close_price": 9.24,
+      "final_pnl_pct": 25.24,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 126.21
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 25,
-    "win_trades": 9,
-    "win_rate": 36.0,
-    "total_realized_pnl_usd": 57.07,
+    "total_trades": 26,
+    "win_trades": 12,
+    "win_rate": 46.2,
+    "total_realized_pnl_usd": 183.28,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2057.07,
-    "total_commission_usd": 50.0,
+    "portfolio_value": 2183.28,
     "skipped_gap": 9,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-30"
+    "updated_at": "2026-07-01"
   }
 };

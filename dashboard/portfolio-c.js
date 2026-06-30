@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 33.58,
       "stop_loss": 37.96,
       "max_hold_date": "2026-07-01",
-      "day1_open": 36.55,
+      "day1_open": 37.04,
       "daily_prices": {
         "2026-06-25": {
           "open": 36.55,
@@ -37,10 +37,16 @@ window.PORTFOLIO_C = {
           "low": 36.67,
           "close": 37.24,
           "pnl_pct": -2.03
+        },
+        "2026-06-30": {
+          "close": 36.81,
+          "pnl_pct": -0.85
         }
       },
       "position_usd": 210.38,
-      "unrealized_pnl_usd": -4.27
+      "unrealized_pnl_usd": -1.79,
+      "gap_checked": true,
+      "day1_gap_pct": 1.48
     }
   ],
   "closed_positions": [
@@ -1084,12 +1090,10 @@ window.PORTFOLIO_C = {
     "total_trades": 24,
     "win_trades": 14,
     "win_rate": 58.3,
-    "total_realized_pnl_usd": 120.7,
-    "open_unrealized_pnl_usd": -4.27,
-    "portfolio_value": 2116.43,
-    "total_commission_usd": 48.0,
+    "total_realized_pnl_usd": 120.69,
+    "open_unrealized_pnl_usd": -4.25,
+    "portfolio_value": 2116.44,
     "skipped_gap": 10,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-30"
+    "updated_at": "2026-07-01"
   }
 };

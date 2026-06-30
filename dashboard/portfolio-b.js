@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -36,6 +36,10 @@ window.PORTFOLIO_B = {
           "low": 36.67,
           "close": 37.24,
           "pnl_pct": -2.03
+        },
+        "2026-06-30": {
+          "close": 36.81,
+          "pnl_pct": -0.85
         }
       }
     }
@@ -1376,10 +1380,8 @@ window.PORTFOLIO_B = {
     "win_trades": 15,
     "win_rate": 44.1,
     "total_realized_pnl_usd": 63.67,
-    "open_unrealized_pnl_usd": -10.63,
-    "portfolio_value": 2053.04,
-    "total_commission_usd": 68.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-06-30"
+    "open_unrealized_pnl_usd": -4.25,
+    "portfolio_value": 2059.42,
+    "updated_at": "2026-07-01"
   }
 };
