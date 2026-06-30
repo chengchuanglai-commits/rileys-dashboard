@@ -2102,8 +2102,8 @@ window.PORTFOLIO_MN = {
         },
         "2026-06-29": {
           "open": 18.73,
-          "high": 19.52,
-          "low": 18.58,
+          "high": 19.53,
+          "low": 18.57,
           "close": 19.1,
           "pnl_pct": 10.28
         }
@@ -2140,7 +2140,7 @@ window.PORTFOLIO_MN = {
         },
         "2026-06-29": {
           "open": 158.04,
-          "high": 159.57,
+          "high": 159.97,
           "low": 153.53,
           "close": 156.57,
           "pnl_pct": 8.14
@@ -2177,7 +2177,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 1.83
         },
         "2026-06-29": {
-          "open": 244.0,
+          "open": 244.08,
           "high": 248.15,
           "low": 236.47,
           "close": 241.12,
@@ -2215,7 +2215,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": -0.67
         },
         "2026-06-29": {
-          "open": 60.74,
+          "open": 60.75,
           "high": 61.24,
           "low": 59.37,
           "close": 60.15,
@@ -2244,6 +2244,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 34,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 66,
-    "updated_at": "2026-06-29"
+    "updated_at": "2026-06-30"
   }
 };

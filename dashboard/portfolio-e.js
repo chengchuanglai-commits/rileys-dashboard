@@ -237,34 +237,20 @@ window.PORTFOLIO_E = {
       "vix": 16.05,
       "daily_prices": {
         "2026-06-02": {
-          "open": 64.1,
-          "high": 64.74,
-          "low": 61.75,
-          "close": 64.61,
-          "pnl_pct": 4.63
-        },
-        "2026-06-03": {
-          "open": 63.5,
-          "high": 63.5,
-          "low": 61.16,
-          "close": 62.75,
-          "pnl_pct": 7.38
-        },
-        "2026-06-04": {
-          "open": 62.81,
-          "high": 64.34,
-          "low": 61.86,
-          "close": 63.93,
-          "pnl_pct": 5.64
+          "open": 63.27,
+          "high": 63.9,
+          "low": 60.95,
+          "close": 63.77,
+          "pnl_pct": 9.99
         }
       },
-      "close_date": "2026-06-04",
-      "close_price": 63.93,
-      "final_pnl_pct": 5.64,
-      "close_reason": "max_hold",
+      "close_date": "2026-06-02",
+      "close_price": 60.98,
+      "final_pnl_pct": 9.99,
+      "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 24.75
+      "realized_pnl_usd": 45.38
     },
     {
       "ticker": "KLIC",
@@ -945,13 +931,13 @@ window.PORTFOLIO_E = {
     "total_trades": 21,
     "win_trades": 9,
     "win_rate": 42.9,
-    "total_realized_pnl_usd": 58.99,
+    "total_realized_pnl_usd": 79.62,
     "open_unrealized_pnl_usd": -1.36,
-    "portfolio_value": 2057.63,
+    "portfolio_value": 2078.26,
     "total_commission_usd": 42.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 7,
-    "updated_at": "2026-06-29"
+    "updated_at": "2026-06-30"
   }
 };

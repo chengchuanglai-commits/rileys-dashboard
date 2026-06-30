@@ -30,6 +30,9 @@
           "pnl_pct": -1.23
         },
         "2026-06-29": {
+          "open": 36.97,
+          "high": 37.7,
+          "low": 36.67,
           "close": 37.24,
           "pnl_pct": -2.03
         }
@@ -228,10 +231,10 @@
       "max_hold_date": "2026-06-08",
       "daily_prices": {
         "2026-06-02": {
-          "open": 64.1,
-          "high": 64.74,
-          "low": 61.75,
-          "close": 64.61,
+          "open": 63.27,
+          "high": 63.9,
+          "low": 60.95,
+          "close": 63.77,
           "pnl_pct": 8.0
         }
       },
@@ -1321,8 +1324,8 @@
       "daily_prices": {
         "2026-06-29": {
           "open": 24.71,
-          "high": 24.89,
-          "low": 23.61,
+          "high": 24.91,
+          "low": 23.62,
           "close": 24.46,
           "pnl_pct": -3.98
         }
@@ -1372,8 +1375,10 @@
     "win_trades": 15,
     "win_rate": 44.1,
     "total_realized_pnl_usd": 63.67,
-    "open_unrealized_pnl_usd": -10.15,
-    "portfolio_value": 2053.52,
+    "open_unrealized_pnl_usd": -10.63,
+    "portfolio_value": 2053.04,
+    "total_commission_usd": 68.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-06-30"
   }
 }

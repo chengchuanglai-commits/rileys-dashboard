@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-29 16:57",
-  "spy_fwd_ret_pct": -2.63,
+  "generated": "2026-06-30 11:34",
+  "spy_fwd_ret_pct": -1.02,
   "max_conviction": 0.0,
   "active_pct": 0.5,
   "index_pct": 0.5,
@@ -8,7 +8,7 @@
     "momma": {
       "name": "MOM-MA·动量+20MA",
       "n": 12,
-      "alpha_pct": -1.24,
+      "alpha_pct": -2.85,
       "robust": false,
       "conviction": 0.0,
       "fwd_ret_pct": -3.87,
@@ -17,7 +17,7 @@
     "momh": {
       "name": "MOM-H·动量+H",
       "n": 17,
-      "alpha_pct": 0.02,
+      "alpha_pct": -1.59,
       "robust": false,
       "conviction": 0.0,
       "fwd_ret_pct": -2.61,
@@ -26,7 +26,7 @@
     "bq": {
       "name": "B-quant·多因子",
       "n": 6,
-      "alpha_pct": 2.24,
+      "alpha_pct": 0.63,
       "robust": false,
       "conviction": 0.0,
       "fwd_ret_pct": -0.39,
@@ -35,58 +35,58 @@
     "bai": {
       "name": "B-AI·多因子+DS",
       "n": 13,
-      "alpha_pct": 8.3,
+      "alpha_pct": 6.7,
       "robust": true,
-      "conviction": 0.2697,
+      "conviction": 0.2176,
       "fwd_ret_pct": 5.67,
       "tradeable": false
     },
     "h": {
       "name": "H·小盘Haiku",
       "n": 26,
-      "alpha_pct": 5.05,
-      "robust": false,
-      "conviction": 0.0,
-      "fwd_ret_pct": 2.42,
+      "alpha_pct": 3.57,
+      "robust": true,
+      "conviction": 0.2319,
+      "fwd_ret_pct": 2.54,
       "tradeable": false
     },
     "hds": {
       "name": "H-DS·小盘DS",
-      "n": 30,
-      "alpha_pct": 6.7,
+      "n": 32,
+      "alpha_pct": 5.49,
       "robust": true,
-      "conviction": 0.5029,
-      "fwd_ret_pct": 4.08,
+      "conviction": 0.4396,
+      "fwd_ret_pct": 4.47,
       "tradeable": false
     },
     "mn": {
       "name": "H-广池·晨报",
-      "n": 56,
-      "alpha_pct": 7.54,
+      "n": 60,
+      "alpha_pct": 7.83,
       "robust": true,
-      "conviction": 0.7543,
-      "fwd_ret_pct": 4.92,
+      "conviction": 0.7831,
+      "fwd_ret_pct": 6.81,
       "tradeable": false
     },
     "c": {
       "name": "C·B+跳空",
-      "n": 22,
-      "alpha_pct": 8.23,
+      "n": 24,
+      "alpha_pct": 7.06,
       "robust": true,
-      "conviction": 0.4526,
-      "fwd_ret_pct": 5.6,
+      "conviction": 0.4235,
+      "fwd_ret_pct": 6.03,
       "tradeable": false
     }
   },
   "weights": {
-    "momma": 0.0481,
+    "momma": 0.0455,
     "momh": 0.0,
     "bq": 0.0,
-    "bai": 0.1297,
-    "h": 0.0,
-    "hds": 0.2418,
-    "mn": 0.3627,
-    "c": 0.2176
+    "bai": 0.0991,
+    "h": 0.1056,
+    "hds": 0.2002,
+    "mn": 0.3567,
+    "c": 0.1929
   },
   "final_allocation": {
     "momma": 0.5,

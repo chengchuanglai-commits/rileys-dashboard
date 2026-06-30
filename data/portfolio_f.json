@@ -279,43 +279,43 @@
       "take_profit_2": 57.59,
       "stop_loss": 69.78,
       "max_hold_date": "2026-06-04",
-      "day1_open": 64.1,
+      "day1_open": 63.27,
       "daily_prices": {
         "2026-06-02": {
-          "open": 64.1,
-          "high": 64.74,
-          "low": 61.75,
-          "close": 64.61,
-          "pnl_pct": 4.63
+          "open": 63.27,
+          "high": 63.9,
+          "low": 60.95,
+          "close": 63.77,
+          "pnl_pct": 5.87
         },
         "2026-06-03": {
-          "open": 63.5,
-          "high": 63.5,
-          "low": 61.16,
-          "close": 62.75,
-          "pnl_pct": 7.38
+          "open": 62.68,
+          "high": 62.68,
+          "low": 60.37,
+          "close": 61.94,
+          "pnl_pct": 8.58
         },
         "2026-06-04": {
-          "open": 62.81,
-          "high": 64.34,
-          "low": 61.86,
-          "close": 63.93,
-          "pnl_pct": 5.64
+          "open": 62.0,
+          "high": 63.51,
+          "low": 61.06,
+          "close": 63.1,
+          "pnl_pct": 6.86
         }
       },
       "t1_exit_date": "2026-06-02",
       "t1_exit_price": 62.67,
       "t1_exit_reason": "take_profit_1",
       "t2_exit_date": "2026-06-04",
-      "t2_exit_price": 63.93,
+      "t2_exit_price": 63.1,
       "t2_exit_reason": "max_hold",
       "t1_gross_pnl": 15.24,
-      "t2_gross_pnl": 15.28,
+      "t2_gross_pnl": 18.6,
       "close_date": "2026-06-04",
       "close_reason": "take_profit_1+max_hold",
-      "final_pnl_pct": 6.44,
+      "final_pnl_pct": 7.14,
       "commission_total": 3.0,
-      "realized_pnl_usd": 27.52,
+      "realized_pnl_usd": 30.84,
       "sl_unified": false
     },
     {
@@ -1161,12 +1161,12 @@
     "total_trades": 22,
     "win_trades": 10,
     "win_rate": 45.5,
-    "total_realized_pnl_usd": 46.62,
+    "total_realized_pnl_usd": 49.94,
     "open_unrealized_pnl_usd": -1.36,
-    "portfolio_value": 2045.26,
+    "portfolio_value": 2048.58,
     "total_commission_usd": 55.0,
     "skipped_gap": 8,
     "skipped_zero_shares": 3,
-    "updated_at": "2026-06-29"
+    "updated_at": "2026-06-30"
   }
 }
