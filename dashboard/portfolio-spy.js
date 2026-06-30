@@ -4,7 +4,7 @@ window.PORTFOLIO_SPY = {
   "benchmark": "SPY 买入持有",
   "start_date": "2026-05-26",
   "start_price": 748.66,
-  "current_price": 746.54,
+  "current_price": 747.64,
   "current_date": "2026-06-30",
   "open_positions": [
     {
@@ -23,9 +23,9 @@ window.PORTFOLIO_SPY = {
     "win_trades": 0,
     "win_rate": 0,
     "total_realized_pnl_usd": 0,
-    "open_unrealized_pnl_usd": -5.66,
-    "portfolio_value": 1994.34,
-    "total_return_pct": -0.28,
+    "open_unrealized_pnl_usd": -2.72,
+    "portfolio_value": 1997.28,
+    "total_return_pct": -0.14,
     "total_commission_usd": 1.0,
     "updated_at": "2026-06-30"
   },

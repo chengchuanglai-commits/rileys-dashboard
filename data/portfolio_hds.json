@@ -86,31 +86,6 @@
       "unrealized_pnl_usd": 7.82
     },
     {
-      "ticker": "PTGX",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-29",
-      "entry_price": 121.88,
-      "allocated_usd": 500,
-      "shares": 4.1024,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 103.6,
-      "stop_loss": 124.32,
-      "max_hold_date": "2026-07-01",
-      "daily_prices": {
-        "2026-06-30": {
-          "open": 122.31,
-          "high": 124.0,
-          "low": 119.57,
-          "close": 123.94,
-          "pnl_pct": -1.69
-        }
-      },
-      "position_usd": 208.94,
-      "unrealized_pnl_usd": -3.53
-    },
-    {
       "ticker": "SRRK",
       "name": "",
       "action": "SELL",
@@ -124,7 +99,7 @@
       "stop_loss": 56.06,
       "max_hold_date": "2026-07-02",
       "daily_prices": {},
-      "position_usd": 210.32,
+      "position_usd": 210.22,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -141,7 +116,7 @@
       "stop_loss": 61.39,
       "max_hold_date": "2026-07-02",
       "daily_prices": {},
-      "position_usd": 210.32,
+      "position_usd": 210.22,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -158,7 +133,7 @@
       "stop_loss": 23.97,
       "max_hold_date": "2026-07-02",
       "daily_prices": {},
-      "position_usd": 210.32,
+      "position_usd": 210.22,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -175,7 +150,7 @@
       "stop_loss": 320.32,
       "max_hold_date": "2026-07-02",
       "daily_prices": {},
-      "position_usd": 210.32,
+      "position_usd": 210.22,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1344,17 +1319,17 @@
           "open": 44.26,
           "high": 44.8,
           "low": 44.0,
-          "close": 44.42,
-          "pnl_pct": 1.02
+          "close": 44.65,
+          "pnl_pct": 0.51
         }
       },
       "close_date": "2026-06-30",
-      "close_price": 44.42,
-      "final_pnl_pct": 1.02,
+      "close_price": 44.65,
+      "final_pnl_pct": 0.51,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.12,
+      "realized_pnl_usd": 1.06,
       "position_usd": 208.15
     },
     {
@@ -1380,31 +1355,62 @@
         },
         "2026-06-30": {
           "open": 24.5,
-          "high": 24.6,
+          "high": 25.14,
           "low": 24.12,
-          "close": 24.5,
-          "pnl_pct": 5.6
+          "close": 24.97,
+          "pnl_pct": 7.63
         }
       },
       "close_date": "2026-06-30",
-      "close_price": 24.5,
-      "final_pnl_pct": 5.6,
+      "close_price": 24.97,
+      "final_pnl_pct": 7.63,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 11.66,
+      "realized_pnl_usd": 15.88,
       "position_usd": 208.15
+    },
+    {
+      "ticker": "PTGX",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-29",
+      "entry_price": 121.88,
+      "allocated_usd": 500,
+      "shares": 4.1024,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 103.6,
+      "stop_loss": 124.32,
+      "max_hold_date": "2026-07-01",
+      "daily_prices": {
+        "2026-06-30": {
+          "open": 122.31,
+          "high": 124.71,
+          "low": 119.57,
+          "close": 122.45,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-06-30",
+      "close_price": 124.32,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.18,
+      "position_usd": 208.94
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 34,
+    "total_trades": 35,
     "win_trades": 21,
-    "win_rate": 61.8,
-    "total_realized_pnl_usd": 103.21,
-    "open_unrealized_pnl_usd": 10.44,
-    "portfolio_value": 2113.65,
-    "total_commission_usd": 68.0,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 102.19,
+    "open_unrealized_pnl_usd": 13.98,
+    "portfolio_value": 2116.17,
+    "total_commission_usd": 70.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
