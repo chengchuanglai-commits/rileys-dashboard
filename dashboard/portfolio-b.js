@@ -38,8 +38,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -2.03
         },
         "2026-06-30": {
-          "close": 36.72,
-          "pnl_pct": -0.6
+          "close": 36.78,
+          "pnl_pct": -0.77
         }
       }
     }
@@ -1380,8 +1380,8 @@ window.PORTFOLIO_B = {
     "win_trades": 15,
     "win_rate": 44.1,
     "total_realized_pnl_usd": 63.67,
-    "open_unrealized_pnl_usd": -3.0,
-    "portfolio_value": 2060.67,
+    "open_unrealized_pnl_usd": -3.85,
+    "portfolio_value": 2059.82,
     "updated_at": "2026-07-01"
   }
 };

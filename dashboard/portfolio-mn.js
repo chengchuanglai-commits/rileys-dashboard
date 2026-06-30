@@ -2243,7 +2243,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 120.0,
     "skipped_gap": 34,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 66,
+    "skipped_no_cash": 65,
     "updated_at": "2026-06-30"
   }
 };

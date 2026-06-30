@@ -38,12 +38,12 @@
           "pnl_pct": -2.03
         },
         "2026-06-30": {
-          "close": 36.72,
-          "pnl_pct": -0.6
+          "close": 36.78,
+          "pnl_pct": -0.77
         }
       },
       "position_usd": 210.38,
-      "unrealized_pnl_usd": -1.26,
+      "unrealized_pnl_usd": -1.62,
       "gap_checked": true,
       "day1_gap_pct": 1.48
     }
@@ -1090,8 +1090,8 @@
     "win_trades": 14,
     "win_rate": 58.3,
     "total_realized_pnl_usd": 120.69,
-    "open_unrealized_pnl_usd": -3.0,
-    "portfolio_value": 2117.69,
+    "open_unrealized_pnl_usd": -3.85,
+    "portfolio_value": 2116.84,
     "skipped_gap": 10,
     "updated_at": "2026-07-01"
   }
