@@ -1,0 +1,224 @@
+{
+  "date": "2026-06-30",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "ACGL",
+      "action": "BUY",
+      "mf_action": "BUY",
+      "current_price": 98.38
+    },
+    {
+      "ticker": "KLAC",
+      "action": "BUY",
+      "mf_action": "BUY",
+      "current_price": 296.72
+    },
+    {
+      "ticker": "INCY",
+      "action": "BUY",
+      "mf_action": "BUY",
+      "current_price": 115.09
+    },
+    {
+      "ticker": "LYG",
+      "action": "SELL",
+      "mf_action": "BUY",
+      "current_price": 5.88
+    },
+    {
+      "ticker": "TSM",
+      "action": "SELL",
+      "mf_action": "BUY",
+      "current_price": 468.26
+    },
+    {
+      "ticker": "BN",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 42.36
+    },
+    {
+      "ticker": "EXE",
+      "action": "SELL",
+      "mf_action": "BUY",
+      "current_price": 92.36
+    },
+    {
+      "ticker": "TEAM",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 76.71
+    },
+    {
+      "ticker": "BNH",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 15.25
+    },
+    {
+      "ticker": "BNJ",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 14.9
+    },
+    {
+      "ticker": "INSM",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 106.81
+    },
+    {
+      "ticker": "TSLA",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 413.4
+    },
+    {
+      "ticker": "SATS",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 100.85
+    },
+    {
+      "ticker": "SONY",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 20.14
+    },
+    {
+      "ticker": "NKE",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 40.97
+    },
+    {
+      "ticker": "SNOW",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 249.96
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "ACGL",
+      "action": "BUY",
+      "mf_action": "BUY",
+      "current_price": 98.38
+    },
+    {
+      "ticker": "KLAC",
+      "action": "BUY",
+      "mf_action": "BUY",
+      "current_price": 296.72
+    },
+    {
+      "ticker": "INCY",
+      "action": "BUY",
+      "mf_action": "BUY",
+      "current_price": 115.09
+    },
+    {
+      "ticker": "KSPI",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 86.04
+    },
+    {
+      "ticker": "CINF",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 187.2
+    },
+    {
+      "ticker": "CNQ",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 39.78
+    },
+    {
+      "ticker": "LYG",
+      "action": "SELL",
+      "mf_action": "BUY",
+      "current_price": 5.88
+    },
+    {
+      "ticker": "TSM",
+      "action": "SELL",
+      "mf_action": "BUY",
+      "current_price": 468.26
+    },
+    {
+      "ticker": "WDC",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 647.8
+    },
+    {
+      "ticker": "BN",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 42.36
+    },
+    {
+      "ticker": "EXE",
+      "action": "SELL",
+      "mf_action": "BUY",
+      "current_price": 92.36
+    },
+    {
+      "ticker": "TEAM",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 76.71
+    },
+    {
+      "ticker": "BNH",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 15.25
+    },
+    {
+      "ticker": "BNJ",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 14.9
+    },
+    {
+      "ticker": "INSM",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 106.81
+    },
+    {
+      "ticker": "TSLA",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 413.4
+    },
+    {
+      "ticker": "SATS",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 100.85
+    },
+    {
+      "ticker": "SONY",
+      "action": "BUY",
+      "mf_action": "SELL",
+      "current_price": 20.14
+    },
+    {
+      "ticker": "NKE",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 40.97
+    },
+    {
+      "ticker": "SNOW",
+      "action": "SELL",
+      "mf_action": "SELL",
+      "current_price": 249.96
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30 11:34",
+  "generated": "2026-06-30 15:44",
   "spy_fwd_ret_pct": -1.02,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -8,19 +8,19 @@
     "momma": {
       "name": "MOM-MA·动量+20MA",
       "n": 12,
-      "alpha_pct": -2.85,
+      "alpha_pct": -2.5,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -3.87,
+      "fwd_ret_pct": -3.52,
       "tradeable": true
     },
     "momh": {
       "name": "MOM-H·动量+H",
-      "n": 17,
-      "alpha_pct": -1.59,
+      "n": 20,
+      "alpha_pct": -0.65,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -2.61,
+      "fwd_ret_pct": -1.67,
       "tradeable": false
     },
     "bq": {
@@ -37,8 +37,8 @@
       "n": 13,
       "alpha_pct": 6.7,
       "robust": true,
-      "conviction": 0.2176,
-      "fwd_ret_pct": 5.67,
+      "conviction": 0.2178,
+      "fwd_ret_pct": 5.68,
       "tradeable": false
     },
     "h": {
@@ -82,10 +82,10 @@
     "momma": 0.0455,
     "momh": 0.0,
     "bq": 0.0,
-    "bai": 0.0991,
+    "bai": 0.0992,
     "h": 0.1056,
     "hds": 0.2002,
-    "mn": 0.3567,
+    "mn": 0.3566,
     "c": 0.1929
   },
   "final_allocation": {
