@@ -148,7 +148,7 @@
           "pnl_pct": 6.17
         }
       },
-      "position_usd": 205.88,
+      "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
     }
   ],
@@ -1217,37 +1217,37 @@
       "name": "Starwood Property Trust",
       "action": "BUY",
       "signal_date": "2026-06-09",
-      "entry_price": 17.16,
+      "entry_price": 16.67,
       "allocated_usd": 500,
-      "shares": 29.1375,
+      "shares": 29.994,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 19.73,
-      "stop_loss": 16.82,
+      "take_profit": 19.17,
+      "stop_loss": 16.34,
       "max_hold_date": "2026-06-11",
       "daily_prices": {
         "2026-06-10": {
-          "open": 17.2,
-          "high": 17.25,
-          "low": 17.05,
-          "close": 17.05,
-          "pnl_pct": -0.64
+          "open": 16.71,
+          "high": 16.76,
+          "low": 16.57,
+          "close": 16.57,
+          "pnl_pct": -0.6
         },
         "2026-06-11": {
-          "open": 17.16,
-          "high": 17.21,
-          "low": 16.91,
-          "close": 16.94,
-          "pnl_pct": -1.28
+          "open": 16.67,
+          "high": 16.72,
+          "low": 16.43,
+          "close": 16.46,
+          "pnl_pct": -1.26
         }
       },
       "close_date": "2026-06-11",
-      "close_price": 16.94,
-      "final_pnl_pct": -1.28,
+      "close_price": 16.46,
+      "final_pnl_pct": -1.26,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.61,
+      "realized_pnl_usd": -2.57,
       "position_usd": 204.22
     },
     {
@@ -1255,32 +1255,32 @@
       "name": "Monolithic Power Systems Inc",
       "action": "BUY",
       "signal_date": "2026-06-10",
-      "entry_price": 1473.04,
+      "entry_price": 1470.8,
       "allocated_usd": 500,
-      "shares": 0.3394,
-      "actual_position_usd": 499.95,
+      "shares": 0.34,
+      "actual_position_usd": 500.07,
       "entry_commission": 1.0,
-      "take_profit": 1694.0,
-      "stop_loss": 1443.58,
+      "take_profit": 1691.42,
+      "stop_loss": 1441.38,
       "max_hold_date": "2026-06-12",
       "daily_prices": {
         "2026-06-11": {
-          "open": 1523.44,
-          "high": 1593.77,
-          "low": 1506.82,
-          "close": 1589.55,
+          "open": 1521.12,
+          "high": 1591.34,
+          "low": 1504.52,
+          "close": 1587.13,
           "pnl_pct": 7.91
         },
         "2026-06-12": {
-          "open": 1592.21,
-          "high": 1598.42,
-          "low": 1558.19,
-          "close": 1577.32,
+          "open": 1589.78,
+          "high": 1595.98,
+          "low": 1555.82,
+          "close": 1574.92,
           "pnl_pct": 7.08
         }
       },
       "close_date": "2026-06-12",
-      "close_price": 1577.32,
+      "close_price": 1574.92,
       "final_pnl_pct": 7.08,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
@@ -1431,7 +1431,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.06,
-      "position_usd": 203.14
+      "position_usd": 203.15
     },
     {
       "ticker": "CRWD",
@@ -1638,7 +1638,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.13,
-      "position_usd": 206.71
+      "position_usd": 206.72
     },
     {
       "ticker": "FLNC",
@@ -1668,8 +1668,8 @@
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.15,
-      "position_usd": 206.71
+      "realized_pnl_usd": -4.16,
+      "position_usd": 206.72
     },
     {
       "ticker": "KLIC",
@@ -1707,7 +1707,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 8.5,
-      "position_usd": 206.71
+      "position_usd": 206.72
     },
     {
       "ticker": "OKLO",
@@ -1744,8 +1744,8 @@
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 13.39,
-      "position_usd": 206.71
+      "realized_pnl_usd": 13.4,
+      "position_usd": 206.72
     },
     {
       "ticker": "AXSM",
@@ -1783,7 +1783,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -1.16,
-      "position_usd": 206.71
+      "position_usd": 206.72
     },
     {
       "ticker": "VERU",
@@ -1814,7 +1814,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.14,
-      "position_usd": 205.88
+      "position_usd": 205.89
     },
     {
       "ticker": "FORM",
@@ -1845,7 +1845,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 9.86,
-      "position_usd": 207.54
+      "position_usd": 207.55
     },
     {
       "ticker": "ACMR",
@@ -1876,7 +1876,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.15,
-      "position_usd": 207.54
+      "position_usd": 207.55
     },
     {
       "ticker": "ASPI",
@@ -1907,7 +1907,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.05,
-      "position_usd": 207.54
+      "position_usd": 207.55
     },
     {
       "ticker": "BHVN",
@@ -1938,32 +1938,32 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 31.19,
-      "position_usd": 207.54
+      "position_usd": 207.55
     },
     {
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
       "action": "BUY",
       "signal_date": "2026-06-23",
-      "entry_price": 1423.76,
+      "entry_price": 1421.59,
       "allocated_usd": 500,
-      "shares": 0.3512,
-      "actual_position_usd": 500.02,
+      "shares": 0.3517,
+      "actual_position_usd": 499.97,
       "entry_commission": 1.0,
-      "take_profit": 1637.32,
-      "stop_loss": 1395.28,
+      "take_profit": 1634.83,
+      "stop_loss": 1393.16,
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-24": {
-          "open": 1423.02,
-          "high": 1446.96,
-          "low": 1392.5,
-          "close": 1434.95,
+          "open": 1420.85,
+          "high": 1444.76,
+          "low": 1390.38,
+          "close": 1432.76,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-24",
-      "close_price": 1395.28,
+      "close_price": 1393.16,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -2114,7 +2114,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 21.57,
-      "position_usd": 209.83
+      "position_usd": 209.84
     },
     {
       "ticker": "APPF",
@@ -2152,7 +2152,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 17.08,
-      "position_usd": 209.83
+      "position_usd": 209.84
     },
     {
       "ticker": "AXSM",
@@ -2190,45 +2190,45 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 3.36,
-      "position_usd": 209.83
+      "position_usd": 209.84
     },
     {
       "ticker": "MDLZ",
       "name": "Mondelez International",
       "action": "BUY",
       "signal_date": "2026-06-25",
-      "entry_price": 61.2,
+      "entry_price": 60.69,
       "allocated_usd": 500,
-      "shares": 8.1699,
+      "shares": 8.2386,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 70.38,
-      "stop_loss": 59.98,
+      "take_profit": 69.79,
+      "stop_loss": 59.48,
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-26": {
-          "open": 61.86,
-          "high": 61.98,
-          "low": 60.43,
-          "close": 60.79,
-          "pnl_pct": -0.67
+          "open": 61.35,
+          "high": 61.46,
+          "low": 59.93,
+          "close": 60.28,
+          "pnl_pct": -0.68
         },
         "2026-06-29": {
-          "open": 60.75,
-          "high": 61.24,
-          "low": 59.37,
-          "close": 60.15,
+          "open": 60.25,
+          "high": 60.73,
+          "low": 58.88,
+          "close": 59.65,
           "pnl_pct": -1.99
         }
       },
       "close_date": "2026-06-29",
-      "close_price": 59.98,
+      "close_price": 59.48,
       "final_pnl_pct": -1.99,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.18,
-      "position_usd": 209.83
+      "position_usd": 209.84
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
@@ -2236,13 +2236,13 @@
     "total_trades": 60,
     "win_trades": 21,
     "win_rate": 35.0,
-    "total_realized_pnl_usd": 136.15,
+    "total_realized_pnl_usd": 136.19,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2160.79,
+    "portfolio_value": 2160.83,
     "total_commission_usd": 120.0,
-    "skipped_gap": 34,
+    "skipped_gap": 33,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 65,
-    "updated_at": "2026-06-30"
+    "skipped_no_cash": 67,
+    "updated_at": "2026-07-01"
   }
 }

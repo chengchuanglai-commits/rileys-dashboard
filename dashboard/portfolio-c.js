@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 33.58,
       "stop_loss": 37.96,
       "max_hold_date": "2026-07-01",
-      "day1_open": 37.04,
+      "day1_open": 36.55,
       "daily_prices": {
         "2026-06-25": {
           "open": 36.55,
@@ -39,14 +39,51 @@ window.PORTFOLIO_C = {
           "pnl_pct": -2.03
         },
         "2026-06-30": {
+          "open": 37.04,
+          "high": 37.4,
+          "low": 36.55,
           "close": 36.78,
           "pnl_pct": -0.77
         }
       },
-      "position_usd": 210.38,
-      "unrealized_pnl_usd": -1.62,
-      "gap_checked": true,
-      "day1_gap_pct": 1.48
+      "position_usd": 210.43,
+      "unrealized_pnl_usd": -1.62
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 50.6,
+      "stop_loss": 57.2,
+      "max_hold_date": "2026-07-08",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 212.12,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 493.17,
+      "entry_commission": 1.0,
+      "take_profit": 26.69,
+      "stop_loss": 30.17,
+      "max_hold_date": "2026-07-08",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 212.12,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -736,44 +773,44 @@ window.PORTFOLIO_C = {
       "take_profit": 34.08,
       "stop_loss": 38.52,
       "max_hold_date": "2026-06-23",
-      "day1_open": 37.03,
+      "day1_open": 36.67,
       "daily_prices": {
         "2026-06-17": {
-          "open": 37.03,
-          "high": 37.04,
-          "low": 36.26,
-          "close": 36.38,
-          "pnl_pct": 1.78
+          "open": 36.67,
+          "high": 36.68,
+          "low": 35.91,
+          "close": 36.03,
+          "pnl_pct": 2.73
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "open": 36.22,
+          "high": 36.75,
+          "low": 35.7,
+          "close": 36.7,
+          "pnl_pct": 0.92
         },
         "2026-06-22": {
-          "open": 36.99,
-          "high": 37.6,
-          "low": 36.79,
-          "close": 37.49,
-          "pnl_pct": -1.21
+          "open": 36.63,
+          "high": 37.24,
+          "low": 36.44,
+          "close": 37.13,
+          "pnl_pct": -0.24
         },
         "2026-06-23": {
-          "open": 37.86,
-          "high": 38.82,
-          "low": 37.69,
-          "close": 38.8,
-          "pnl_pct": -4.0
+          "open": 37.5,
+          "high": 38.45,
+          "low": 37.33,
+          "close": 38.43,
+          "pnl_pct": -3.75
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 38.52,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
+      "close_price": 38.43,
+      "final_pnl_pct": -3.75,
+      "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -8.51,
+      "realized_pnl_usd": -7.97,
       "position_usd": 212.66
     },
     {
@@ -1050,7 +1087,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 16.79,
-      "position_usd": 210.38
+      "position_usd": 210.43
     },
     {
       "ticker": "TRVI",
@@ -1082,7 +1119,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -8.49,
-      "position_usd": 211.2
+      "position_usd": 211.26
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -1090,10 +1127,12 @@ window.PORTFOLIO_C = {
     "total_trades": 24,
     "win_trades": 14,
     "win_rate": 58.3,
-    "total_realized_pnl_usd": 120.69,
-    "open_unrealized_pnl_usd": -3.85,
-    "portfolio_value": 2116.84,
+    "total_realized_pnl_usd": 121.23,
+    "open_unrealized_pnl_usd": -1.62,
+    "portfolio_value": 2119.61,
+    "total_commission_usd": 48.0,
     "skipped_gap": 10,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-01"
   }
 };

@@ -51,23 +51,61 @@ window.PORTFOLIO_F = {
       "take_profit_2": 31.48,
       "stop_loss": 38.15,
       "max_hold_date": "2026-06-19",
-      "day1_open": 37.03,
+      "day1_open": 36.67,
       "daily_prices": {
         "2026-06-17": {
-          "open": 37.03,
-          "high": 37.04,
-          "low": 36.26,
-          "close": 36.38,
-          "pnl_pct": 1.78
+          "open": 36.67,
+          "high": 36.68,
+          "low": 35.91,
+          "close": 36.03,
+          "pnl_pct": 2.73
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "open": 36.22,
+          "high": 36.75,
+          "low": 35.7,
+          "close": 36.7,
+          "pnl_pct": 0.92
         }
       }
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "t1_shares": 4,
+      "t2_shares": 5,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit_1": 50.88,
+      "take_profit_2": 46.75,
+      "stop_loss": 56.65,
+      "max_hold_date": "2026-07-06",
+      "day1_open": null,
+      "daily_prices": {}
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17,
+      "t1_shares": 8,
+      "t2_shares": 9,
+      "actual_position_usd": 493.17,
+      "entry_commission": 1.0,
+      "take_profit_1": 26.84,
+      "take_profit_2": 24.66,
+      "stop_loss": 29.88,
+      "max_hold_date": "2026-07-06",
+      "day1_open": null,
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -1162,11 +1200,11 @@ window.PORTFOLIO_F = {
     "win_trades": 10,
     "win_rate": 45.5,
     "total_realized_pnl_usd": 49.94,
-    "open_unrealized_pnl_usd": -1.36,
-    "portfolio_value": 2048.58,
+    "open_unrealized_pnl_usd": 3.31,
+    "portfolio_value": 2053.25,
     "total_commission_usd": 55.0,
     "skipped_gap": 8,
     "skipped_zero_shares": 3,
-    "updated_at": "2026-06-30"
+    "updated_at": "2026-07-01"
   }
 };

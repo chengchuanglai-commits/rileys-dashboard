@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -38,10 +38,43 @@ window.PORTFOLIO_B = {
           "pnl_pct": -2.03
         },
         "2026-06-30": {
+          "open": 37.04,
+          "high": 37.4,
+          "low": 36.55,
           "close": 36.78,
           "pnl_pct": -0.77
         }
       }
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 50.6,
+      "stop_loss": 57.2,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 493.17,
+      "entry_commission": 1.0,
+      "take_profit": 26.69,
+      "stop_loss": 30.17,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -821,41 +854,41 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-17": {
-          "open": 37.03,
-          "high": 37.04,
-          "low": 36.26,
-          "close": 36.38,
-          "pnl_pct": 1.78
+          "open": 36.67,
+          "high": 36.68,
+          "low": 35.91,
+          "close": 36.03,
+          "pnl_pct": 2.73
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "open": 36.22,
+          "high": 36.75,
+          "low": 35.7,
+          "close": 36.7,
+          "pnl_pct": 0.92
         },
         "2026-06-22": {
-          "open": 36.99,
-          "high": 37.6,
-          "low": 36.79,
-          "close": 37.49,
-          "pnl_pct": -1.21
+          "open": 36.63,
+          "high": 37.24,
+          "low": 36.44,
+          "close": 37.13,
+          "pnl_pct": -0.24
         },
         "2026-06-23": {
-          "open": 37.86,
-          "high": 38.82,
-          "low": 37.69,
-          "close": 38.8,
-          "pnl_pct": -4.0
+          "open": 37.5,
+          "high": 38.45,
+          "low": 37.33,
+          "close": 38.43,
+          "pnl_pct": -3.75
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 38.52,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
+      "close_price": 38.43,
+      "final_pnl_pct": -3.75,
+      "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -21.26
+      "realized_pnl_usd": -20.06
     },
     {
       "ticker": "TWST",
@@ -1379,9 +1412,11 @@ window.PORTFOLIO_B = {
     "total_trades": 34,
     "win_trades": 15,
     "win_rate": 44.1,
-    "total_realized_pnl_usd": 63.67,
-    "open_unrealized_pnl_usd": -3.85,
-    "portfolio_value": 2059.82,
+    "total_realized_pnl_usd": 64.87,
+    "open_unrealized_pnl_usd": -4.65,
+    "portfolio_value": 2060.22,
+    "total_commission_usd": 68.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-01"
   }
 };

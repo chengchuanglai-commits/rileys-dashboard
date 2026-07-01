@@ -73,22 +73,60 @@ window.PORTFOLIO_E = {
       "vix": 16.41,
       "daily_prices": {
         "2026-06-17": {
-          "open": 37.03,
-          "high": 37.04,
-          "low": 36.26,
-          "close": 36.38,
-          "pnl_pct": 1.78
+          "open": 36.67,
+          "high": 36.68,
+          "low": 35.91,
+          "close": 36.03,
+          "pnl_pct": 2.73
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "open": 36.22,
+          "high": 36.75,
+          "low": 35.7,
+          "close": 36.7,
+          "pnl_pct": 0.92
         }
       },
       "gap_checked": true,
-      "day1_open": 37.03
+      "day1_open": 36.67
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 49.5,
+      "stop_loss": 56.65,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-06",
+      "regime": "neutral",
+      "vix": 16.67,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 493.17,
+      "entry_commission": 1.0,
+      "take_profit": 26.11,
+      "stop_loss": 29.88,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-06",
+      "regime": "neutral",
+      "vix": 16.67,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -932,12 +970,12 @@ window.PORTFOLIO_E = {
     "win_trades": 9,
     "win_rate": 42.9,
     "total_realized_pnl_usd": 79.62,
-    "open_unrealized_pnl_usd": -1.36,
-    "portfolio_value": 2078.26,
+    "open_unrealized_pnl_usd": 3.31,
+    "portfolio_value": 2082.93,
     "total_commission_usd": 42.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 7,
-    "updated_at": "2026-06-30"
+    "updated_at": "2026-07-01"
   }
 };
