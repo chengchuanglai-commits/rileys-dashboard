@@ -153,6 +153,40 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {},
       "position_usd": 210.41,
       "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SPXC",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 245.17,
+      "allocated_usd": 500,
+      "shares": 2.0394,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 208.39,
+      "stop_loss": 250.07,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 210.41,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17.2354,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 33.36,
+      "stop_loss": 28.43,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 210.41,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1317,7 +1351,7 @@ window.PORTFOLIO_HDS = {
           "pnl_pct": 0.56
         },
         "2026-06-30": {
-          "open": 44.26,
+          "open": 44.47,
           "high": 44.81,
           "low": 44.0,
           "close": 44.81,
@@ -1356,7 +1390,7 @@ window.PORTFOLIO_HDS = {
         },
         "2026-06-30": {
           "open": 24.5,
-          "high": 25.6,
+          "high": 25.67,
           "low": 24.12,
           "close": 25.27,
           "pnl_pct": 8.92
@@ -1386,7 +1420,7 @@ window.PORTFOLIO_HDS = {
       "max_hold_date": "2026-07-01",
       "daily_prices": {
         "2026-06-30": {
-          "open": 122.31,
+          "open": 122.04,
           "high": 124.71,
           "low": 119.57,
           "close": 122.58,
@@ -1414,7 +1448,7 @@ window.PORTFOLIO_HDS = {
     "total_commission_usd": 70.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 0,
-    "updated_at": "2026-06-30"
+    "skipped_no_cash": 2,
+    "updated_at": "2026-07-01"
   }
 };

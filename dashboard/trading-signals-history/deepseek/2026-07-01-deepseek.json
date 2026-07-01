@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-01",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "SPXC",
+      "action": "SELL",
+      "current_price": 245.17,
+      "target_price": 269.69,
+      "stop_loss": 232.91
+    },
+    {
+      "ticker": "MVBF",
+      "action": "BUY",
+      "current_price": 29.01,
+      "target_price": 31.91,
+      "stop_loss": 27.56
+    },
+    {
+      "ticker": "SRRK",
+      "action": "SELL",
+      "current_price": 55.0,
+      "target_price": 60.5,
+      "stop_loss": 52.25
+    },
+    {
+      "ticker": "SBFG",
+      "action": "BUY",
+      "current_price": 25.27,
+      "target_price": 27.8,
+      "stop_loss": 24.01
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "SPXC",
+      "action": "SELL",
+      "current_price": 245.17,
+      "target_price": 269.69,
+      "stop_loss": 232.91
+    },
+    {
+      "ticker": "MVBF",
+      "action": "BUY",
+      "current_price": 29.01,
+      "target_price": 31.91,
+      "stop_loss": 27.56
+    },
+    {
+      "ticker": "SRRK",
+      "action": "SELL",
+      "current_price": 55.0,
+      "target_price": 60.5,
+      "stop_loss": 52.25
+    },
+    {
+      "ticker": "LGND",
+      "action": "HOLD",
+      "current_price": 316.09,
+      "target_price": 347.7,
+      "stop_loss": 300.29
+    },
+    {
+      "ticker": "DGII",
+      "action": "HOLD",
+      "current_price": 74.95,
+      "target_price": 82.45,
+      "stop_loss": 71.2
+    },
+    {
+      "ticker": "SBFG",
+      "action": "BUY",
+      "current_price": 25.27,
+      "target_price": 27.8,
+      "stop_loss": 24.01
+    },
+    {
+      "ticker": "TRVI",
+      "action": "HOLD",
+      "current_price": 18.65,
+      "target_price": 20.52,
+      "stop_loss": 17.72
+    },
+    {
+      "ticker": "OBT",
+      "action": "BUY",
+      "current_price": 36.78,
+      "target_price": 40.46,
+      "stop_loss": 34.94
+    },
+    {
+      "ticker": "FMBH",
+      "action": "BUY",
+      "current_price": 48.09,
+      "target_price": 52.9,
+      "stop_loss": 45.69
+    },
+    {
+      "ticker": "UVSP",
+      "action": "HOLD",
+      "current_price": 43.75,
+      "target_price": 48.13,
+      "stop_loss": 41.56
+    },
+    {
+      "ticker": "SKWD",
+      "action": "BUY",
+      "current_price": 58.35,
+      "target_price": 64.19,
+      "stop_loss": 55.43
+    },
+    {
+      "ticker": "MFIN",
+      "action": "SELL",
+      "current_price": 10.21,
+      "target_price": 11.23,
+      "stop_loss": 9.7
+    },
+    {
+      "ticker": "TSBK",
+      "action": "SELL",
+      "current_price": 44.81,
+      "target_price": 49.29,
+      "stop_loss": 42.57
+    },
+    {
+      "ticker": "FISI",
+      "action": "BUY",
+      "current_price": 38.97,
+      "target_price": 42.87,
+      "stop_loss": 37.02
+    },
+    {
+      "ticker": "GABC",
+      "action": "BUY",
+      "current_price": 47.46,
+      "target_price": 52.21,
+      "stop_loss": 45.09
+    },
+    {
+      "ticker": "WTBA",
+      "action": "SELL",
+      "current_price": 26.53,
+      "target_price": 29.18,
+      "stop_loss": 25.2
+    },
+    {
+      "ticker": "PTGX",
+      "action": "BUY",
+      "current_price": 122.58,
+      "target_price": 134.84,
+      "stop_loss": 116.45
+    },
+    {
+      "ticker": "SBCF",
+      "action": "SELL",
+      "current_price": 33.25,
+      "target_price": 36.58,
+      "stop_loss": 31.59
+    },
+    {
+      "ticker": "APOG",
+      "action": "BUY",
+      "current_price": 45.74,
+      "target_price": 50.31,
+      "stop_loss": 43.45
+    },
+    {
+      "ticker": "ITIC",
+      "action": "HOLD",
+      "current_price": 273.68,
+      "target_price": 301.05,
+      "stop_loss": 260.0
+    }
+  ]
+}
