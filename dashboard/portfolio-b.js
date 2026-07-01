@@ -1,51 +1,7 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "OBT",
-      "name": "OBT",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 36.5,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 474.5,
-      "entry_commission": 1.0,
-      "take_profit": 33.58,
-      "stop_loss": 37.96,
-      "max_hold_date": "2026-07-01",
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 36.55,
-          "high": 37.19,
-          "low": 36.55,
-          "close": 36.89,
-          "pnl_pct": -1.07
-        },
-        "2026-06-26": {
-          "open": 37.02,
-          "high": 37.71,
-          "low": 36.5,
-          "close": 36.95,
-          "pnl_pct": -1.23
-        },
-        "2026-06-29": {
-          "open": 36.97,
-          "high": 37.7,
-          "low": 36.67,
-          "close": 37.24,
-          "pnl_pct": -2.03
-        },
-        "2026-06-30": {
-          "open": 37.04,
-          "high": 37.4,
-          "low": 36.55,
-          "close": 36.78,
-          "pnl_pct": -0.77
-        }
-      }
-    },
     {
       "ticker": "SRRK",
       "name": "SRRK",
@@ -59,7 +15,12 @@ window.PORTFOLIO_B = {
       "take_profit": 50.6,
       "stop_loss": 57.2,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-01": {
+          "close": 53.74,
+          "pnl_pct": 2.29
+        }
+      }
     },
     {
       "ticker": "MVBF",
@@ -74,7 +35,12 @@ window.PORTFOLIO_B = {
       "take_profit": 26.69,
       "stop_loss": 30.17,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-01": {
+          "close": 29.67,
+          "pnl_pct": -2.28
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -1347,6 +1313,64 @@ window.PORTFOLIO_B = {
       "realized_pnl_usd": 36.58
     },
     {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.5,
+      "entry_commission": 1.0,
+      "take_profit": 33.58,
+      "stop_loss": 37.96,
+      "max_hold_date": "2026-07-01",
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "open": 37.02,
+          "high": 37.71,
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": -1.23
+        },
+        "2026-06-29": {
+          "open": 36.97,
+          "high": 37.7,
+          "low": 36.67,
+          "close": 37.24,
+          "pnl_pct": -2.03
+        },
+        "2026-06-30": {
+          "open": 37.04,
+          "high": 37.4,
+          "low": 36.55,
+          "close": 36.78,
+          "pnl_pct": -0.77
+        },
+        "2026-07-01": {
+          "open": 36.81,
+          "high": 37.91,
+          "low": 36.78,
+          "close": 37.76,
+          "pnl_pct": -3.45
+        }
+      },
+      "close_date": "2026-07-01",
+      "close_price": 37.76,
+      "final_pnl_pct": -3.45,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -18.37
+    },
+    {
       "ticker": "SBFG",
       "name": "SBFG",
       "action": "SELL",
@@ -1409,14 +1433,12 @@ window.PORTFOLIO_B = {
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 34,
+    "total_trades": 35,
     "win_trades": 15,
-    "win_rate": 44.1,
-    "total_realized_pnl_usd": 64.87,
-    "open_unrealized_pnl_usd": -4.65,
-    "portfolio_value": 2060.22,
-    "total_commission_usd": 68.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-07-01"
+    "win_rate": 42.9,
+    "total_realized_pnl_usd": 46.5,
+    "open_unrealized_pnl_usd": 0.05,
+    "portfolio_value": 2046.55,
+    "updated_at": "2026-07-02"
   }
 };

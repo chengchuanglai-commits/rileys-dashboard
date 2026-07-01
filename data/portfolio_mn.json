@@ -150,6 +150,74 @@
       },
       "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "SIMO",
+      "name": "Silicon Motion Technology Corp.",
+      "action": "BUY",
+      "signal_date": "2026-07-01",
+      "entry_price": 319.14,
+      "allocated_usd": 500,
+      "shares": 1.5667,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 367.01,
+      "stop_loss": 312.76,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 213.62,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SMR",
+      "name": "NuScale Power Corporation",
+      "action": "BUY",
+      "signal_date": "2026-07-01",
+      "entry_price": 10.31,
+      "allocated_usd": 500,
+      "shares": 48.4966,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.86,
+      "stop_loss": 10.1,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 213.62,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "IOVA",
+      "name": "Iovance Biotherapeutics Inc.",
+      "action": "BUY",
+      "signal_date": "2026-07-01",
+      "entry_price": 3.93,
+      "allocated_usd": 500,
+      "shares": 127.2265,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 4.52,
+      "stop_loss": 3.85,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 213.62,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CENT",
+      "name": "Central Garden & Pet Company",
+      "action": "BUY",
+      "signal_date": "2026-07-01",
+      "entry_price": 44.31,
+      "allocated_usd": 500,
+      "shares": 11.2841,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 50.96,
+      "stop_loss": 43.42,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 213.62,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2242,7 +2310,7 @@
     "total_commission_usd": 120.0,
     "skipped_gap": 33,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 67,
+    "skipped_no_cash": 71,
     "updated_at": "2026-07-01"
   }
 }
