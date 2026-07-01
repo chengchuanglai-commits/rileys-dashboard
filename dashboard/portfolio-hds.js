@@ -85,132 +85,6 @@ window.PORTFOLIO_HDS = {
       },
       "position_usd": 201.66,
       "unrealized_pnl_usd": 7.82
-    },
-    {
-      "ticker": "SNEX",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-23",
-      "entry_price": 138.79,
-      "allocated_usd": 500,
-      "shares": 3.6026,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 117.97,
-      "stop_loss": 141.57,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {
-        "2026-06-24": {
-          "open": 138.0,
-          "high": 139.89,
-          "low": 133.74,
-          "close": 136.13,
-          "pnl_pct": 1.92
-        }
-      },
-      "position_usd": 202.68,
-      "unrealized_pnl_usd": 3.89
-    },
-    {
-      "ticker": "FISI",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-23",
-      "entry_price": 37.89,
-      "allocated_usd": 500,
-      "shares": 13.1961,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 43.57,
-      "stop_loss": 37.13,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {
-        "2026-06-24": {
-          "open": 38.4,
-          "high": 38.85,
-          "low": 38.25,
-          "close": 38.67,
-          "pnl_pct": 2.06
-        }
-      },
-      "position_usd": 202.68,
-      "unrealized_pnl_usd": 4.18
-    },
-    {
-      "ticker": "WSBC",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-23",
-      "entry_price": 36.7,
-      "allocated_usd": 500,
-      "shares": 13.624,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 42.2,
-      "stop_loss": 35.97,
-      "max_hold_date": "2026-06-25",
-      "daily_prices": {
-        "2026-06-24": {
-          "open": 37.28,
-          "high": 38.09,
-          "low": 36.92,
-          "close": 37.86,
-          "pnl_pct": 3.16
-        }
-      },
-      "position_usd": 202.68,
-      "unrealized_pnl_usd": 6.4
-    },
-    {
-      "ticker": "OBT",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-24",
-      "entry_price": 36.5,
-      "allocated_usd": 500,
-      "shares": 13.6986,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 41.97,
-      "stop_loss": 35.77,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {},
-      "position_usd": 204.59,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "FISI",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-06-24",
-      "entry_price": 38.4,
-      "allocated_usd": 500,
-      "shares": 13.0208,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 44.16,
-      "stop_loss": 37.63,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {},
-      "position_usd": 204.59,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "LGND",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 279.44,
-      "allocated_usd": 500,
-      "shares": 1.7893,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 237.52,
-      "stop_loss": 285.03,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {},
-      "position_usd": 204.59,
-      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1017,20 +891,355 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": 7.07,
       "position_usd": 203.09
+    },
+    {
+      "ticker": "SNEX",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-23",
+      "entry_price": 138.79,
+      "allocated_usd": 500,
+      "shares": 3.6026,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 117.97,
+      "stop_loss": 141.57,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.13,
+          "pnl_pct": 1.92
+        },
+        "2026-06-25": {
+          "open": 138.06,
+          "high": 139.18,
+          "low": 135.62,
+          "close": 137.28,
+          "pnl_pct": 1.09
+        }
+      },
+      "close_date": "2026-06-25",
+      "close_price": 137.28,
+      "final_pnl_pct": 1.09,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.21,
+      "position_usd": 202.68
+    },
+    {
+      "ticker": "FISI",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 37.89,
+      "allocated_usd": 500,
+      "shares": 13.1961,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 43.57,
+      "stop_loss": 37.13,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 38.4,
+          "high": 38.85,
+          "low": 38.25,
+          "close": 38.67,
+          "pnl_pct": 2.06
+        },
+        "2026-06-25": {
+          "open": 38.67,
+          "high": 39.19,
+          "low": 38.4,
+          "close": 38.7,
+          "pnl_pct": 2.14
+        }
+      },
+      "close_date": "2026-06-25",
+      "close_price": 38.7,
+      "final_pnl_pct": 2.14,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 4.34,
+      "position_usd": 202.68
+    },
+    {
+      "ticker": "WSBC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-23",
+      "entry_price": 36.7,
+      "allocated_usd": 500,
+      "shares": 13.624,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 42.2,
+      "stop_loss": 35.97,
+      "max_hold_date": "2026-06-25",
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.86,
+          "pnl_pct": 3.16
+        },
+        "2026-06-25": {
+          "open": 38.08,
+          "high": 38.65,
+          "low": 38.0,
+          "close": 38.55,
+          "pnl_pct": 5.04
+        }
+      },
+      "close_date": "2026-06-25",
+      "close_price": 38.55,
+      "final_pnl_pct": 5.04,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 10.22,
+      "position_usd": 202.68
+    },
+    {
+      "ticker": "OBT",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13.6986,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 41.97,
+      "stop_loss": 35.77,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": 1.07
+        },
+        "2026-06-26": {
+          "open": 37.02,
+          "high": 37.71,
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": 1.23
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 36.95,
+      "final_pnl_pct": 1.23,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.52,
+      "position_usd": 204.59
+    },
+    {
+      "ticker": "FISI",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-24",
+      "entry_price": 38.4,
+      "allocated_usd": 500,
+      "shares": 13.0208,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 44.16,
+      "stop_loss": 37.63,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 38.67,
+          "high": 39.19,
+          "low": 38.4,
+          "close": 38.7,
+          "pnl_pct": 0.78
+        },
+        "2026-06-26": {
+          "open": 38.7,
+          "high": 39.27,
+          "low": 38.04,
+          "close": 38.93,
+          "pnl_pct": 1.38
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 38.93,
+      "final_pnl_pct": 1.38,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.82,
+      "position_usd": 204.59
+    },
+    {
+      "ticker": "SWBI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29.994,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 14.17,
+      "stop_loss": 17.0,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.19,
+          "high": 16.39,
+          "low": 15.61,
+          "close": 15.69,
+          "pnl_pct": 5.88
+        },
+        "2026-06-26": {
+          "open": 15.55,
+          "high": 15.7,
+          "low": 14.84,
+          "close": 15.23,
+          "pnl_pct": 8.64
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 15.23,
+      "final_pnl_pct": 8.64,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 17.68,
+      "position_usd": 204.59
+    },
+    {
+      "ticker": "HOFT",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-25",
+      "entry_price": 17.05,
+      "allocated_usd": 500,
+      "shares": 29.3255,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 14.49,
+      "stop_loss": 17.39,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {
+        "2026-06-26": {
+          "open": 16.97,
+          "high": 17.41,
+          "low": 16.8,
+          "close": 17.1,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 17.39,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.1,
+      "position_usd": 206.26
+    },
+    {
+      "ticker": "WSBC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-25",
+      "entry_price": 37.86,
+      "allocated_usd": 500,
+      "shares": 13.2066,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 43.54,
+      "stop_loss": 37.1,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {
+        "2026-06-26": {
+          "open": 38.61,
+          "high": 39.25,
+          "low": 38.5,
+          "close": 38.8,
+          "pnl_pct": 2.48
+        },
+        "2026-06-29": {
+          "open": 38.57,
+          "high": 38.81,
+          "low": 38.22,
+          "close": 38.79,
+          "pnl_pct": 2.46
+        }
+      },
+      "close_date": "2026-06-29",
+      "close_price": 38.79,
+      "final_pnl_pct": 2.46,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 5.07,
+      "position_usd": 206.26
+    },
+    {
+      "ticker": "OBT",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-06-25",
+      "entry_price": 36.74,
+      "allocated_usd": 500,
+      "shares": 13.6091,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 42.25,
+      "stop_loss": 36.01,
+      "max_hold_date": "2026-06-29",
+      "daily_prices": {
+        "2026-06-26": {
+          "open": 37.02,
+          "high": 37.71,
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": 0.57
+        },
+        "2026-06-29": {
+          "open": 36.97,
+          "high": 37.7,
+          "low": 36.67,
+          "close": 37.24,
+          "pnl_pct": 1.36
+        }
+      },
+      "close_date": "2026-06-29",
+      "close_price": 37.24,
+      "final_pnl_pct": 1.36,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.81,
+      "position_usd": 206.26
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 23,
-    "win_trades": 11,
-    "win_rate": 47.8,
-    "total_realized_pnl_usd": 45.87,
-    "open_unrealized_pnl_usd": 28.45,
-    "portfolio_value": 2074.32,
-    "total_commission_usd": 46.0,
-    "skipped_gap": 10,
+    "total_trades": 32,
+    "win_trades": 19,
+    "win_rate": 59.4,
+    "total_realized_pnl_usd": 89.43,
+    "open_unrealized_pnl_usd": 13.98,
+    "portfolio_value": 2103.41,
+    "total_commission_usd": 64.0,
+    "skipped_gap": 12,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 5,
-    "updated_at": "2026-06-25"
+    "skipped_no_cash": 0,
+    "updated_at": "2026-07-01"
   }
 };

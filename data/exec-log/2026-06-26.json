@@ -1,0 +1,11 @@
+{
+  "date": "2026-06-26",
+  "live": false,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [],
+  "note": "DRY-RUN(LIVE=False),未下单"
+}

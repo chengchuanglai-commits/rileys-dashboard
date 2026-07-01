@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apple Watch 健康数据接入指南</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; background: #f5f5f7; color: #111; }
+  .page { max-width: 680px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: 26px; font-weight: 800; letter-spacing: -.4px; margin-bottom: 6px; }
+  .subtitle { font-size: 14px; color: #666; margin-bottom: 36px; }
+  .step-block { background: #fff; border-radius: 16px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e8; }
+  .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #111; color: #fff; border-radius: 50%; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .step-title { font-size: 16px; font-weight: 700; }
+  .step-sub   { font-size: 12px; color: #888; margin-top: 2px; }
+
+  /* Phone mockup */
+  .phone { width: 220px; background: #1c1c1e; border-radius: 38px; padding: 14px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+  .phone-notch { width: 80px; height: 22px; background: #1c1c1e; border-radius: 12px; margin: 0 auto 10px; }
+  .phone-screen { background: #fff; border-radius: 26px; overflow: hidden; min-height: 380px; }
+
+  /* iOS-style UI in mockup */
+  .ios-nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px 10px; border-bottom: 1px solid #f0f0f0; }
+  .ios-nav-title { font-size: 17px; font-weight: 700; }
+  .ios-nav-btn { font-size: 15px; color: #007aff; }
+  .ios-list { }
+  .ios-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #f5f5f5; }
+  .ios-row-left { display: flex; align-items: center; gap: 12px; }
+  .ios-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .ios-row-text { font-size: 14px; font-weight: 500; }
+  .ios-row-sub  { font-size: 11px; color: #999; }
+  .ios-chevron  { color: #c8c8ca; font-size: 13px; }
+  .ios-badge    { background: #ff3b30; color: #fff; border-radius: 10px; padding: 1px 7px; font-size: 11px; font-weight: 700; }
+  .ios-section-hd { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: .06em; padding: 10px 16px 4px; background: #f5f5f7; }
+
+  /* Action block mockup */
+  .action-block { background: #f5f5f7; border-radius: 10px; margin: 8px 10px; padding: 10px 12px; }
+  .action-label { font-size: 11px; font-weight: 600; color: #555; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .05em; }
+  .action-value { font-size: 13px; color: #111; font-weight: 500; }
+  .action-tag   { display: inline-block; background: #e8f4ff; color: #007aff; border-radius: 6px; padding: 2px 8px; font-size: 12px; font-weight: 600; margin: 2px 2px 0 0; }
+  .action-green { background: #e6f9ee; }
+  .action-purple{ background: #f0eaff; }
+  .action-orange{ background: #fff3e6; }
+  .action-red   { background: #ffecec; }
+
+  .connector { text-align: center; font-size: 20px; color: #ccc; margin: 4px 0; }
+
+  /* Instructions list */
+  .instr { list-style: none; }
+  .instr li { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f5f5f5; font-size: 14px; line-height: 1.5; }
+  .instr li:last-child { border-bottom: none; }
+  .instr .dot { width: 6px; height: 6px; background: #111; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+
+  /* Code block */
+  .code { background: #1c1c1e; color: #f8f8f2; border-radius: 10px; padding: 16px; font-size: 12px; font-family: 'SF Mono', 'Fira Code', monospace; line-height: 1.7; overflow-x: auto; }
+  .code .key   { color: #ff79c6; }
+  .code .val   { color: #50fa7b; }
+  .code .str   { color: #f1fa8c; }
+  .code .var   { color: #8be9fd; }
+
+  .tip { background: #fff8e7; border-left: 3px solid #f59e0b; border-radius: 6px; padding: 10px 14px; font-size: 13px; color: #7a5800; margin-top: 12px; }
+  .tip strong { font-weight: 700; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 540px) { .two-col { grid-template-columns: 1fr; } }
+
+  .success-banner { background: #e6f9ee; border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; gap: 14px; }
+  .success-icon { width: 36px; height: 36px; background: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .success-text { font-size: 14px; color: #166534; }
+  .success-text strong { font-weight: 700; }
+
+  .url-box { background: #f5f5f7; border-radius: 8px; padding: 10px 14px; font-family: monospace; font-size: 12px; color: #333; word-break: break-all; margin-top: 8px; border: 1px dashed #ccc; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Apple Watch → Dashboard</h1>
+  <p class="subtitle">用 iPhone 快捷指令每天自动推送健康数据，全程约 10 分钟配置完成</p>
+
+  <!-- Step 1 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">1</span>
+      <div>
+        <div class="step-title">打开快捷指令 App，新建快捷指令</div>
+        <div class="step-sub">iPhone 自带 App，灰色底+彩色方块图标</div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="ios-nav">
+          <span class="ios-nav-btn">‹ 资料库</span>
+          <span class="ios-nav-title">快捷指令</span>
+          <span class="ios-nav-btn" style="font-size:22px;font-weight:300">+</span>
+        </div>
+        <div class="ios-section-hd">我的快捷指令</div>
+        <div style="padding:20px;text-align:center;color:#ccc;font-size:13px;padding-top:40px">
+          点右上角 <strong style="color:#007aff">+</strong> 新建
+        </div>
+      </div>
+    </div>
+    <div class="tip" style="margin-top:16px"><strong>命名：</strong>在顶部输入「同步健康数据」作为快捷指令名称</div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">2</span>
+      <div>
+        <div class="step-title">依次添加 7 个「获取健康样本」动作</div>
+        <div class="step-sub">点「添加动作」→ 搜索「健康」→ 选「获取健康样本」</div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="ios-nav">
+          <span class="ios-nav-btn">取消</span>
+          <span class="ios-nav-title">同步健康数据</span>
+          <span class="ios-nav-btn">完成</span>
+        </div>
+        <div class="action-block action-green">
+          <div class="action-label">获取健康样本</div>
+          <div class="action-value">类型：<span class="action-tag">步数</span>&nbsp; 时间：<span class="action-tag">今天</span></div>
+        </div>
+        <div class="connector">↓</div>
+        <div class="action-block action-green">
+          <div class="action-label">获取健康样本</div>
+          <div class="action-value">类型：<span class="action-tag">活动能量</span>&nbsp; 时间：<span class="action-tag">今天</span></div>
+        </div>
+        <div class="connector">↓</div>
+        <div class="action-block action-green">
+          <div class="action-label">获取健康样本</div>
+          <div class="action-value">类型：<span class="action-tag">锻炼时间</span>&nbsp; 时间：<span class="action-tag">今天</span></div>
+        </div>
+        <div class="connector">↓</div>
+        <div style="padding:0 10px;font-size:11px;color:#aaa;text-align:center">（下方继续添加…）</div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr style="background:#f5f5f7">
+            <th style="padding:8px 12px;text-align:left;border-radius:8px 0 0 0;font-weight:600;color:#555">动作</th>
+            <th style="padding:8px 12px;text-align:left;font-weight:600;color:#555">类型</th>
+            <th style="padding:8px 12px;text-align:left;border-radius:0 8px 0 0;font-weight:600;color:#555">时间范围</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #f0f0f0"><td style="padding:8px 12px">获取健康样本</td><td style="padding:8px 12px"><strong>步数</strong></td><td style="padding:8px 12px;color:#888">今天</td></tr>
+          <tr style="border-bottom:1px solid #f0f0f0"><td style="padding:8px 12px">获取健康样本</td><td style="padding:8px 12px"><strong>活动能量（卡路里）</strong></td><td style="padding:8px 12px;color:#888">今天</td></tr>
+          <tr style="border-bottom:1px solid #f0f0f0"><td style="padding:8px 12px">获取健康样本</td><td style="padding:8px 12px"><strong>锻炼时间</strong></td><td style="padding:8px 12px;color:#888">今天</td></tr>
+          <tr style="border-bottom:1px solid #f0f0f0"><td style="padding:8px 12px">获取健康样本</td><td style="padding:8px 12px"><strong>静息心率</strong></td><td style="padding:8px 12px;color:#888">今天</td></tr>
+          <tr style="border-bottom:1px solid #f0f0f0"><td style="padding:8px 12px">获取健康样本</td><td style="padding:8px 12px"><strong>睡眠分析</strong></td><td style="padding:8px 12px;color:#888">昨晚（last night）</td></tr>
+          <tr style="border-bottom:1px solid #f0f0f0"><td style="padding:8px 12px">获取健康样本</td><td style="padding:8px 12px"><strong>步行+跑步距离</strong></td><td style="padding:8px 12px;color:#888">今天</td></tr>
+          <tr><td style="padding:8px 12px">获取健康样本</td><td style="padding:8px 12px"><strong>站立时间</strong></td><td style="padding:8px 12px;color:#888">今天</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><strong>注意：</strong>每个动作添加后，点动作里的「总和」改为「总和」或「最新」（步数/卡路里/锻炼/距离用「总和」，心率用「平均值」，睡眠/站立用「总和」）</div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">3</span>
+      <div>
+        <div class="step-title">添加「获取当前日期」动作</div>
+        <div class="step-sub">格式选 ISO 8601 → 输出像 2026-05-27</div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="ios-nav" style="border-bottom:none;padding-bottom:6px">
+          <span style="font-size:13px;color:#888">上一步继续</span>
+        </div>
+        <div class="action-block action-purple">
+          <div class="action-label">获取当前日期</div>
+          <div class="action-value">格式：<span class="action-tag" style="background:#f0eaff;color:#7c3aed">ISO 8601</span></div>
+        </div>
+        <div class="connector">↓</div>
+        <div class="action-block action-purple">
+          <div class="action-label">格式化日期</div>
+          <div class="action-value">格式：<span class="action-tag" style="background:#f0eaff;color:#7c3aed">自定义</span>&nbsp; <span class="action-tag" style="background:#f0eaff;color:#7c3aed">yyyy-MM-dd</span></div>
+        </div>
+        <div style="padding:12px 10px 8px;font-size:11px;color:#aaa;text-align:center">→ 得到「2026-05-27」这样的格式</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">4</span>
+      <div>
+        <div class="step-title">添加「获取 URL 内容」动作（POST）</div>
+        <div class="step-sub">把健康数据打包成 JSON 推送到你的服务器</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:#555;margin-bottom:10px">推送地址：</p>
+    <div class="url-box">https://questrade-proxy.chengchuang-lai.workers.dev/sync</div>
+
+    <div style="margin-top:16px">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="action-block action-orange" style="margin-top:10px">
+            <div class="action-label">获取 URL 内容</div>
+            <div class="action-value" style="margin-top:4px">
+              方法：<span class="action-tag" style="background:#fff3e6;color:#c2410c">POST</span><br>
+              请求正文：<span class="action-tag" style="background:#fff3e6;color:#c2410c">JSON</span>
+            </div>
+          </div>
+          <div style="margin:6px 10px;background:#fff3e6;border-radius:8px;padding:8px 10px;font-size:11px;color:#92400e">
+            <div style="font-weight:700;margin-bottom:4px">JSON 字段（点「添加」逐一填入）：</div>
+            <div>health_data →</div>
+            <div style="padding-left:10px;color:#b45309">
+              date → 格式化日期<br>
+              steps → 步数总和<br>
+              calories → 活动能量总和<br>
+              exercise_min → 锻炼时间总和<br>
+              heart_rate_resting → 心率平均值<br>
+              sleep_hours → 睡眠总和<br>
+              distance_km → 距离总和<br>
+              stand_hours → 站立总和
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px">
+      <p style="font-size:13px;font-weight:600;margin-bottom:8px">最终发出的 JSON 结构：</p>
+      <div class="code">
+{<br>
+&nbsp;&nbsp;<span class="key">"health_data"</span>: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"date"</span>: <span class="var">格式化日期</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"steps"</span>: <span class="var">步数</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"calories"</span>: <span class="var">活动能量</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"exercise_min"</span>: <span class="var">锻炼时间</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"heart_rate_resting"</span>: <span class="var">心率</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sleep_hours"</span>: <span class="var">睡眠</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"distance_km"</span>: <span class="var">距离</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"stand_hours"</span>: <span class="var">站立</span><br>
+&nbsp;&nbsp;}<br>
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">5</span>
+      <div>
+        <div class="step-title">设置每天定时自动运行</div>
+        <div class="step-sub">建议早上 8:00 触发，同步前一天完整数据</div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="ios-nav">
+          <span></span>
+          <span class="ios-nav-title">自动化</span>
+          <span class="ios-nav-btn" style="font-size:22px;font-weight:300">+</span>
+        </div>
+        <div class="ios-section-hd">新建个人自动化</div>
+        <div class="ios-row">
+          <div class="ios-row-left">
+            <div class="ios-icon" style="background:#ff9f0a">⏰</div>
+            <div>
+              <div class="ios-row-text">一天中的某个时间</div>
+              <div class="ios-row-sub">每天 08:00</div>
+            </div>
+          </div>
+          <span class="ios-chevron">›</span>
+        </div>
+        <div style="padding:14px 16px;font-size:13px;color:#555">
+          选择动作：<br>
+          <span style="color:#007aff;font-weight:600">运行快捷指令</span> → 同步健康数据
+        </div>
+        <div class="tip" style="margin:0 12px 12px;font-size:12px">
+          <strong>取消勾选</strong>「运行前询问」，这样才能全自动运行
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 6: Test -->
+  <div class="step-block">
+    <div class="step-header">
+      <span class="step-num">6</span>
+      <div>
+        <div class="step-title">手动运行一次测试</div>
+        <div class="step-sub">快捷指令列表 → 长按「同步健康数据」→ 运行</div>
+      </div>
+    </div>
+    <ul class="instr">
+      <li><span class="dot"></span><span>运行后回到 Dashboard，刷新页面（Cmd+R）</span></li>
+      <li><span class="dot"></span><span>「健康中心」卡片顶部应出现今天日期，并显示步数、卡路里等数据</span></li>
+      <li><span class="dot"></span><span>如果显示「暂无数据」，检查第 4 步的 URL 是否完全一致</span></li>
+    </ul>
+    <div style="margin-top:16px" class="success-banner">
+      <div class="success-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="success-text">
+        <strong>配置完成后</strong>，每天早上 8 点自动同步。数据备份在 Cloudflare KV，换设备也不丢。
+      </div>
+    </div>
+  </div>
+
+  <!-- Note -->
+  <div style="background:#fff;border-radius:12px;padding:20px;border:1px solid #e8e8e8">
+    <div style="font-size:13px;font-weight:700;margin-bottom:10px">⚠️ 常见问题</div>
+    <ul class="instr">
+      <li><span class="dot"></span><span><strong>快捷指令提示「无法连接」</strong>：检查手机有网络，URL 没有多余空格</span></li>
+      <li><span class="dot"></span><span><strong>睡眠数据为 0</strong>：需要戴着 Apple Watch 睡觉，且在健康 App 里开启睡眠追踪</span></li>
+      <li><span class="dot"></span><span><strong>自动化没有运行</strong>：确认「运行前询问」已关闭，且手机有网</span></li>
+      <li><span class="dot"></span><span><strong>数据单位不对</strong>：距离选「千米」，睡眠选「小时」</span></li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "window": [
+    "2021-06-01",
+    "2026-06-18"
+  ],
+  "init": 2000.0,
+  "monthly": 500.0,
+  "strategy": {
+    "invested": 32500,
+    "final": 52386,
+    "profit": 19886,
+    "ret": 61.2,
+    "maxdd": -12.9
+  },
+  "dca_qqq": {
+    "invested": 32500,
+    "final": 61420,
+    "ret": 89.0,
+    "maxdd": -20.4
+  },
+  "dca_spy": {
+    "invested": 32500,
+    "final": 51903,
+    "ret": 59.7,
+    "maxdd": -16.2
+  },
+  "params": "牛市60%QQQ/40%动量(18只),熊市现金;复利+佣金0.1%+滑点0.2%",
+  "note": "动量腿FMP缓存(含退市/point-in-time)但仍有残留幸存者偏差,偏乐观。"
+}

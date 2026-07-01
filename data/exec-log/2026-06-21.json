@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-21",
+  "live": false,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "STM",
+      "qty": 1,
+      "px": 78.38999938964844,
+      "usd": 78.38999938964844
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [],
+  "note": "DRY-RUN(LIVE=False),未下单"
+}

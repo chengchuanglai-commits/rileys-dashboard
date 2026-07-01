@@ -1,0 +1,56 @@
+{
+  "date": "2026-06-29",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "AMD",
+      "qty": 5.0,
+      "px": 527.26,
+      "usd": 2636.3
+    },
+    {
+      "sym": "GFS",
+      "qty": -31.0,
+      "px": 81.0,
+      "usd": 2511.0
+    },
+    {
+      "sym": "RVMD",
+      "qty": 14.0,
+      "px": 182.96,
+      "usd": 2561.44
+    },
+    {
+      "sym": "VICR",
+      "qty": -8.0,
+      "px": 333.85,
+      "usd": 2670.8
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "AMD",
+      "qty": 5.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "GFS",
+      "qty": -31.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 14.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "VICR",
+      "qty": -8.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}

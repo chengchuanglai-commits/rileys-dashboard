@@ -1,0 +1,80 @@
+{
+  "date": "2026-06-26",
+  "anomalies": [
+    "持仓对不上 KSPI: 目标0 实际5.0",
+    "持仓对不上 NVDA: 目标0 实际2.0",
+    "持仓对不上 VICR: 目标0 实际6.0",
+    "持仓对不上 AEM: 目标0 实际2.0",
+    "持仓对不上 QQQ: 目标0 实际8.0",
+    "持仓对不上 PDD: 目标0 实际6.0",
+    "持仓对不上 AMD: 目标0 实际3.0",
+    "持仓对不上 NBIX: 目标0 实际2.0",
+    "持仓对不上 NU: 目标0 实际35.0",
+    "持仓对不上 GFS: 目标0 实际22.0",
+    "持仓对不上 RVMD: 目标0 实际11.0",
+    "持仓对不上 STRL: 目标0 实际2.0",
+    "持仓对不上 ONC: 目标0 实际1.0",
+    "持仓对不上 FUTU: 目标0 实际4.0",
+    "持仓对不上 AU: 目标0 实际5.0"
+  ],
+  "nav": 999991.9,
+  "drawdown_pct": 0.0,
+  "actions": [
+    {
+      "sym": "AEM",
+      "qty": 2,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "AU",
+      "qty": 5,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FUTU",
+      "qty": 4,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "GFS",
+      "qty": 15.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "KSPI",
+      "qty": 5,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NBIX",
+      "qty": 2,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NU",
+      "qty": 35,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NVDA",
+      "qty": 2,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "ONC",
+      "qty": 1,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "PDD",
+      "qty": 6,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "QQQ",
+      "qty": -6.0,
+      "status": "PendingSubmit"
+    }
+  ],
+  "breaker": "normal"
+}

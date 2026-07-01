@@ -1,0 +1,29 @@
+{
+  "window": [
+    "2022-05-31",
+    "2026-06-18"
+  ],
+  "commission_pct": 0.1,
+  "slippage_pct": 0.2,
+  "regime_adaptive": {
+    "final": 6339.0,
+    "ret": 216.9,
+    "maxdd": -29.8
+  },
+  "static_5050": {
+    "final": 5817.0,
+    "ret": 190.8,
+    "maxdd": -24.9
+  },
+  "buyhold_qqq": {
+    "final": 4928.0,
+    "ret": 146.4,
+    "maxdd": -22.8
+  },
+  "buyhold_spy": {
+    "final": 3832.0,
+    "ret": 91.6,
+    "maxdd": -18.8
+  },
+  "note": "50%QQQ+50%动量,牛市持有/熊市转现金(regime自适应) vs 不换腿。复利+佣金+滑点。动量腿FMP缓存(含退市票/point-in-time,少幸存者偏差)但仍有残留偏差,偏乐观。"
+}

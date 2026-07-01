@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-24",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "AMD",
+      "qty": 3,
+      "px": 519.8499755859375,
+      "usd": 1559.5499267578125
+    },
+    {
+      "sym": "GFS",
+      "qty": 15.0,
+      "px": 83.38999938964844,
+      "usd": 1250.8499908447266
+    },
+    {
+      "sym": "QQQ",
+      "qty": 14,
+      "px": 713.6500244140625,
+      "usd": 9991.100341796875
+    },
+    {
+      "sym": "RVMD",
+      "qty": 7.0,
+      "px": 169.50999450683594,
+      "usd": 1186.5699615478516
+    },
+    {
+      "sym": "SPY",
+      "qty": -16.0,
+      "px": 733.5800170898438,
+      "usd": 11737.2802734375
+    },
+    {
+      "sym": "STRL",
+      "qty": 2,
+      "px": 892.25,
+      "usd": 1784.5
+    },
+    {
+      "sym": "VICR",
+      "qty": 5,
+      "px": 336.1199951171875,
+      "usd": 1680.5999755859375
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "AMD",
+      "qty": 3,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "GFS",
+      "qty": 15.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "QQQ",
+      "qty": 14,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 7.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "SPY",
+      "qty": -16.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "STRL",
+      "qty": 2,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "VICR",
+      "qty": 5,
+      "status": "PendingSubmit"
+    }
+  ]
+}
