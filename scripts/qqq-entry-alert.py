@@ -64,7 +64,7 @@ def run():
     json.dump(st, open(STATE, "w"), ensure_ascii=False, indent=2)
 
     if not alerts:
-        print(f"[qqq-alert] QQQ ${px:.2f} (20MA${ma20:.0f}/50MA${ma50:.0f}/200MA${ma200:.0f}),无新入场信号")
+        print(f"[qqq-alert] QQQ ${px:.2f} (50MA${ma50:.0f}/200MA${ma200:.0f}/突破位${BREAKOUT}),无新入场信号-等待")
         return
     msg = "\n".join(["📥 QQQ 入场提醒"] + alerts + ["（入场价格提醒·交易信号系统）"])
     print(msg)
