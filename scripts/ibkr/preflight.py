@@ -19,18 +19,19 @@ def run():
     ib.reqAllOpenOrders(); ib.sleep(1)
     nonstop = [t for t in ib.openTrades() if t.order.orderType not in ("STP", "STP LMT")]
     stop_cnt = len(ib.openTrades()) - len(nonstop)
-    # allocation 新鲜度
+    # 三线目标新鲜度:检查 master-allocation.json(实际驱动下单的文件,由review批次每日重算)。
+    # 旧的 allocation.json 是从不触发的fallback、且由独立的Cloudflare/GitHub管道更新常掉链子→曾反复误报,不再检查它。
     try:
-        a = json.load(open("data/allocation.json"))
-        gen = a.get("generated", "")
+        m = json.load(open("data/master-allocation.json"))
+        gen = m.get("date", "")
         if gen[:10] != time.strftime("%Y-%m-%d"):
-            fails.append(f"allocation.json 不是今天({gen}) → 引擎可能没更新")
+            fails.append(f"master-allocation.json 不是今天({gen}) → 三线目标没刷新(查review批次的master-allocator)")
         # 回撤红线
         nav, peak = h["nav"], max(h["nav"], NOTIONAL)
         if peak > 0 and (peak - nav) / peak >= HARD_REDLINE:
             fails.append(f"已破回撤红线 {HARD_REDLINE*100:.0f}%")
     except Exception as e:
-        fails.append(f"读 allocation.json 失败: {e}")
+        fails.append(f"读 master-allocation.json 失败: {e}")
     # 只有"非止损"的遗留挂单才警告(止损单是正常常驻保护,不算遗留)
     if nonstop:
         syms = ",".join(t.contract.symbol for t in nonstop[:5])

@@ -20,8 +20,5 @@ jobs:
         env:
           NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
         run: python scripts/ibkr-reminder.py
-      - name: 小数股权限提醒(完成则自跳过)
-        continue-on-error: true
-        env:
-          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
-        run: python scripts/fractional-permission-reminder.py
+      # 小数股提醒已改本地自动探测(scripts/ibkr/fractional_probe.py + launchd周一22:00),
+      # GitHub云端连不到本机Gateway故无法探测,这里不再发死提醒(避免与本地探针重复刷屏)。

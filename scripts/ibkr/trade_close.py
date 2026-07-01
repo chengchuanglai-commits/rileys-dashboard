@@ -50,7 +50,7 @@ def run():
     if exits and LIVE:
         for e in exits:
             try:
-                tr = place_limit(ib, e["sym"], -e["qty"], e["close"])
+                tr = place_limit(ib, e["sym"], -e["qty"], e["close"], oca_sell=True)  # 退出进OCA组→成交即撤该票止损,防孤儿
                 log["placed"].append({"sym": e["sym"], "status": tr.orderStatus.status})
             except Exception as ex:
                 log["placed"].append({"sym": e["sym"], "error": str(ex)[:80]})

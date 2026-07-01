@@ -16,7 +16,7 @@ HARD_REDLINE = 0.30       # Riley 风险预算
 
 # 出场
 INIT_STOP_PCT = 0.08      # 单仓 -8% 固定 stop
-LIMIT_BUFFER = 0.01       # 限价缓冲
+LIMIT_BUFFER = 0.015      # 限价缓冲(marketable limit:买limit=价×1.015确保成交,实际成交在市价附近≠按limit吃;延迟数据下也填得上)
 
 LEG_PORT = {"momma": "data/portfolio_momma.json", "bq": "data/portfolio_bq.json"}
 

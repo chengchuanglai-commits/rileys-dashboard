@@ -35,11 +35,23 @@ def health(ib):
         "open_orders": len(ib.openTrades()),
     }
 
-def cancel_all(ib):
-    """全局撤单(跨session,reqGlobalCancel——避开今天踩的10147坑)。"""
-    ib.reqGlobalCancel(); ib.sleep(3)
+def cancel_all(ib, wait=24):
+    """全局撤单(跨session,reqGlobalCancel——避开10147坑)。
+    ⚠️reqGlobalCancel是异步的,传播要~15s。固定sleep(3)太短→旧止损没真撤掉就返回,
+    调用方接着下rebalance单时旧止损仍可能触发→双卖把多头超卖成空头(2026-06-29 GFS踩坑)。
+    故改为轮询:等到无活跃挂单或超时,确保旧单(尤其止损)真的清掉再返回。"""
+    ib.reqGlobalCancel()
+    deadline = time.time() + wait
+    while time.time() < deadline:
+        ib.sleep(2)
+        ib.reqAllOpenOrders(); ib.sleep(1)
+        active = [t for t in ib.openTrades()
+                  if t.orderStatus.status in ("PreSubmitted", "Submitted", "PendingSubmit", "PendingCancel")]
+        if not active:
+            break
     ib.reqAllOpenOrders(); ib.sleep(1)
-    return len(ib.openTrades())
+    return len([t for t in ib.openTrades()
+                if t.orderStatus.status in ("PreSubmitted", "Submitted")])
 
 def cancel_orphan_limits(ib):
     """清掉非止损的遗留挂单(LMT/MKT等),保留STP止损单。

@@ -44,9 +44,19 @@ def main():
     vol_usd=W_VOLATILITY*cap
     momma=load("data/portfolio_momma.json",{})
     mom_holds=[p.get("ticker") for p in (momma.get("open_positions") or []) if p.get("ticker")]
+    vol_warn=""
+    # 护栏:momma空大概率是断网/回填失败(2026-06-27踩坑)→若上次master有持仓,保留之,绝不把波动腿清零
+    #(否则trade_open会把动量仓全卖掉=误清仓)。真要空仓避险也得连续两次确认,这里宁可滞后不误清。
+    if not mom_holds:
+        prev=load("data/master-allocation.json",{})
+        prev_holds=(prev.get("sleeves",{}).get("volatility",{}) or {}).get("current_holdings",[])
+        if prev_holds:
+            mom_holds=prev_holds
+            vol_warn=f" ⚠️momma为空(疑回填失败),保留上次持仓{prev_holds}防误清仓"
+            print(f"  ⚠️ 护栏触发:momma open_positions为空→保留上次波动腿持仓{prev_holds}(防断网导致误清仓)")
     out["sleeves"]["volatility"]={"target_usd":round(vol_usd),"engine":"IBKR动量腿(MOM-MA自动)",
-        "current_holdings":mom_holds,
-        "action":f"动量腿 ≈${vol_usd:.0f},IBKR系统自动选股/止损/出场。当前持仓{len(mom_holds)}只: {', '.join(mom_holds) if mom_holds else '(空仓避险)'}"}
+        "current_holdings":mom_holds,"warn":vol_warn,
+        "action":f"动量腿 ≈${vol_usd:.0f},IBKR系统自动选股/止损/出场。当前持仓{len(mom_holds)}只: {', '.join(mom_holds) if mom_holds else '(空仓避险)'}{vol_warn}"}
 
     json.dump(out,open("data/master-allocation.json","w"),ensure_ascii=False,indent=2)
     with open("dashboard/master-allocation.js","w",encoding="utf-8") as f:
