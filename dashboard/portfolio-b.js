@@ -17,8 +17,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-01": {
-          "close": 53.74,
-          "pnl_pct": 2.29
+          "close": 52.84,
+          "pnl_pct": 3.93
         }
       }
     },
@@ -37,8 +37,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-01": {
-          "close": 29.67,
-          "pnl_pct": -2.28
+          "close": 29.84,
+          "pnl_pct": -2.86
         }
       }
     }
@@ -1356,19 +1356,19 @@ window.PORTFOLIO_B = {
         },
         "2026-07-01": {
           "open": 36.81,
-          "high": 37.91,
+          "high": 37.97,
           "low": 36.78,
-          "close": 37.76,
-          "pnl_pct": -3.45
+          "close": 37.64,
+          "pnl_pct": -4.0
         }
       },
       "close_date": "2026-07-01",
-      "close_price": 37.76,
-      "final_pnl_pct": -3.45,
-      "close_reason": "max_hold",
+      "close_price": 37.96,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -18.37
+      "realized_pnl_usd": -20.98
     },
     {
       "ticker": "SBFG",
@@ -1436,9 +1436,9 @@ window.PORTFOLIO_B = {
     "total_trades": 35,
     "win_trades": 15,
     "win_rate": 42.9,
-    "total_realized_pnl_usd": 46.5,
-    "open_unrealized_pnl_usd": 0.05,
-    "portfolio_value": 2046.55,
+    "total_realized_pnl_usd": 43.89,
+    "open_unrealized_pnl_usd": 5.35,
+    "portfolio_value": 2049.24,
     "updated_at": "2026-07-02"
   }
 };
