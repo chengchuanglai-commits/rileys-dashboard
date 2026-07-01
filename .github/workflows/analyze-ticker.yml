@@ -1,0 +1,42 @@
+name: 单票 TradingAgents 分析
+
+# 手动触发:用 TradingAgents 多智能体框架分析指定 ticker(默认QQQ),可选 deepseek/haiku 大脑。
+# 结果打印在 run 日志 + 飞书简报。用于给某只票做一次性完整分析(如入场判断)。
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: '股票代码(如 QQQ)'
+        required: true
+        default: 'QQQ'
+      model:
+        description: '大脑: deepseek 或 haiku'
+        required: true
+        default: 'deepseek'
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: pip 缓存
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-tradingagents-analyze
+          restore-keys: ${{ runner.os }}-pip-tradingagents-
+      - name: 装依赖
+        run: pip install yfinance anthropic lxml "git+https://github.com/TauricResearch/TradingAgents.git"
+      - name: 跑分析
+        env:
+          MODEL: ${{ inputs.model }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: python scripts/run-qqq-tradingagents.py "${{ inputs.ticker }}"
