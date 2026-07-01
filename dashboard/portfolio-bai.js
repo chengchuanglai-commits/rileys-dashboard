@@ -13,16 +13,6 @@ window.PORTFOLIO_BAI = {
       "stop_loss": 38.65
     },
     {
-      "ticker": "SNOW",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 232.29,
-      "shares": 1.023,
-      "atr": 15.65,
-      "take_profit": 169.7,
-      "stop_loss": 271.41
-    },
-    {
       "ticker": "TSLA",
       "action": "SELL",
       "signal_date": "2026-06-18",
@@ -31,26 +21,6 @@ window.PORTFOLIO_BAI = {
       "atr": 18.39,
       "take_profit": 326.95,
       "stop_loss": 446.45
-    },
-    {
-      "ticker": "BNJ",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 15.13,
-      "shares": 121.344,
-      "atr": 0.13,
-      "take_profit": 14.6,
-      "stop_loss": 15.46
-    },
-    {
-      "ticker": "CNQ",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 40.62,
-      "shares": 11.208,
-      "atr": 1.43,
-      "take_profit": 34.91,
-      "stop_loss": 44.19
     },
     {
       "ticker": "BNH",
@@ -63,14 +33,34 @@ window.PORTFOLIO_BAI = {
       "stop_loss": 16.11
     },
     {
-      "ticker": "TEAM",
-      "action": "BUY",
-      "signal_date": "2026-06-26",
-      "entry_price": 78.74,
-      "shares": 3.089,
-      "atr": 5.18,
-      "take_profit": 99.46,
-      "stop_loss": 65.79
+      "ticker": "CNQ",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 40.62,
+      "shares": 11.208,
+      "atr": 1.43,
+      "take_profit": 34.91,
+      "stop_loss": 44.19
+    },
+    {
+      "ticker": "SNOW",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 232.29,
+      "shares": 1.023,
+      "atr": 15.65,
+      "take_profit": 169.7,
+      "stop_loss": 271.41
+    },
+    {
+      "ticker": "BNJ",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 15.13,
+      "shares": 121.344,
+      "atr": 0.13,
+      "take_profit": 14.6,
+      "stop_loss": 15.46
     },
     {
       "ticker": "SATS",
@@ -83,26 +73,6 @@ window.PORTFOLIO_BAI = {
       "stop_loss": 74.22
     },
     {
-      "ticker": "BN",
-      "action": "BUY",
-      "signal_date": "2026-06-26",
-      "entry_price": 42.87,
-      "shares": 14.784,
-      "atr": 1.08,
-      "take_profit": 47.2,
-      "stop_loss": 40.16
-    },
-    {
-      "ticker": "KSPI",
-      "action": "BUY",
-      "signal_date": "2026-06-26",
-      "entry_price": 88.95,
-      "shares": 5.102,
-      "atr": 3.14,
-      "take_profit": 101.49,
-      "stop_loss": 81.11
-    },
-    {
       "ticker": "INCY",
       "action": "BUY",
       "signal_date": "2026-06-26",
@@ -111,6 +81,26 @@ window.PORTFOLIO_BAI = {
       "atr": 4.82,
       "take_profit": 133.03,
       "stop_loss": 101.7
+    },
+    {
+      "ticker": "TEAM",
+      "action": "BUY",
+      "signal_date": "2026-06-26",
+      "entry_price": 78.74,
+      "shares": 3.089,
+      "atr": 5.18,
+      "take_profit": 99.46,
+      "stop_loss": 65.79
+    },
+    {
+      "ticker": "BN",
+      "action": "BUY",
+      "signal_date": "2026-06-26",
+      "entry_price": 42.87,
+      "shares": 14.784,
+      "atr": 1.08,
+      "take_profit": 47.2,
+      "stop_loss": 40.16
     },
     {
       "ticker": "KLAC",
@@ -123,34 +113,14 @@ window.PORTFOLIO_BAI = {
       "stop_loss": 199.76
     },
     {
-      "ticker": "EXE",
-      "action": "SELL",
+      "ticker": "KSPI",
+      "action": "BUY",
       "signal_date": "2026-06-26",
-      "entry_price": 88.47,
-      "shares": 7.985,
-      "atr": 2.0,
-      "take_profit": 80.46,
-      "stop_loss": 93.48
-    },
-    {
-      "ticker": "CINF",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 184.08,
-      "shares": 4.133,
-      "atr": 3.87,
-      "take_profit": 168.6,
-      "stop_loss": 193.76
-    },
-    {
-      "ticker": "SONY",
-      "action": "SELL",
-      "signal_date": "2026-06-26",
-      "entry_price": 19.71,
-      "shares": 30.685,
-      "atr": 0.52,
-      "take_profit": 17.62,
-      "stop_loss": 21.01
+      "entry_price": 88.95,
+      "shares": 5.102,
+      "atr": 3.14,
+      "take_profit": 101.49,
+      "stop_loss": 81.11
     },
     {
       "ticker": "LYG",
@@ -163,6 +133,26 @@ window.PORTFOLIO_BAI = {
       "stop_loss": 6.05
     },
     {
+      "ticker": "CINF",
+      "action": "SELL",
+      "signal_date": "2026-06-26",
+      "entry_price": 184.08,
+      "shares": 4.133,
+      "atr": 3.87,
+      "take_profit": 168.6,
+      "stop_loss": 193.76
+    },
+    {
+      "ticker": "EXE",
+      "action": "SELL",
+      "signal_date": "2026-06-26",
+      "entry_price": 88.47,
+      "shares": 7.985,
+      "atr": 2.0,
+      "take_profit": 80.46,
+      "stop_loss": 93.48
+    },
+    {
       "ticker": "RIVN",
       "action": "SELL",
       "signal_date": "2026-06-26",
@@ -171,6 +161,16 @@ window.PORTFOLIO_BAI = {
       "atr": 1.02,
       "take_profit": 11.57,
       "stop_loss": 18.17
+    },
+    {
+      "ticker": "SONY",
+      "action": "SELL",
+      "signal_date": "2026-06-26",
+      "entry_price": 19.71,
+      "shares": 30.685,
+      "atr": 0.52,
+      "take_profit": 17.62,
+      "stop_loss": 21.01
     }
   ],
   "closed_positions": [
@@ -207,22 +207,6 @@ window.PORTFOLIO_BAI = {
       "commission_total": 2.0
     },
     {
-      "ticker": "SONY",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 20.33,
-      "shares": 31.417,
-      "atr": 0.51,
-      "take_profit": 22.37,
-      "stop_loss": 19.06,
-      "close_date": "2026-06-26",
-      "close_price": 19.71,
-      "close_reason": "rebalance",
-      "final_pnl_pct": -3.05,
-      "realized_pnl_usd": -19.48,
-      "commission_total": 2.0
-    },
-    {
       "ticker": "AEM",
       "action": "BUY",
       "signal_date": "2026-06-18",
@@ -255,19 +239,19 @@ window.PORTFOLIO_BAI = {
       "commission_total": 2.0
     },
     {
-      "ticker": "TEAM",
-      "action": "SELL",
+      "ticker": "SONY",
+      "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 82.72,
-      "shares": 2.395,
-      "atr": 6.68,
-      "take_profit": 56.0,
-      "stop_loss": 99.42,
+      "entry_price": 20.33,
+      "shares": 31.417,
+      "atr": 0.51,
+      "take_profit": 22.37,
+      "stop_loss": 19.06,
       "close_date": "2026-06-26",
-      "close_price": 78.74,
+      "close_price": 19.71,
       "close_reason": "rebalance",
-      "final_pnl_pct": 4.81,
-      "realized_pnl_usd": 9.53,
+      "final_pnl_pct": -3.05,
+      "realized_pnl_usd": -19.48,
       "commission_total": 2.0
     },
     {
@@ -287,6 +271,38 @@ window.PORTFOLIO_BAI = {
       "commission_total": 2.0
     },
     {
+      "ticker": "LI",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 13.21,
+      "shares": 30.116,
+      "atr": 0.53,
+      "take_profit": 11.08,
+      "stop_loss": 14.54,
+      "close_date": "2026-06-26",
+      "close_price": 12.04,
+      "close_reason": "rebalance",
+      "final_pnl_pct": 8.86,
+      "realized_pnl_usd": 35.24,
+      "commission_total": 2.0
+    },
+    {
+      "ticker": "TEAM",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 82.72,
+      "shares": 2.395,
+      "atr": 6.68,
+      "take_profit": 56.0,
+      "stop_loss": 99.42,
+      "close_date": "2026-06-26",
+      "close_price": 78.74,
+      "close_reason": "rebalance",
+      "final_pnl_pct": 4.81,
+      "realized_pnl_usd": 9.53,
+      "commission_total": 2.0
+    },
+    {
       "ticker": "BN",
       "action": "SELL",
       "signal_date": "2026-06-18",
@@ -300,6 +316,22 @@ window.PORTFOLIO_BAI = {
       "close_reason": "rebalance",
       "final_pnl_pct": 3.53,
       "realized_pnl_usd": 21.53,
+      "commission_total": 2.0
+    },
+    {
+      "ticker": "KLAC",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 259.56,
+      "shares": 0.894,
+      "atr": 17.9,
+      "take_profit": 187.97,
+      "stop_loss": 304.31,
+      "close_date": "2026-06-26",
+      "close_price": 248.64,
+      "close_reason": "rebalance",
+      "final_pnl_pct": 4.21,
+      "realized_pnl_usd": 9.76,
       "commission_total": 2.0
     },
     {
@@ -319,22 +351,6 @@ window.PORTFOLIO_BAI = {
       "commission_total": 2.0
     },
     {
-      "ticker": "LI",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 13.21,
-      "shares": 30.116,
-      "atr": 0.53,
-      "take_profit": 11.08,
-      "stop_loss": 14.54,
-      "close_date": "2026-06-26",
-      "close_price": 12.04,
-      "close_reason": "rebalance",
-      "final_pnl_pct": 8.86,
-      "realized_pnl_usd": 35.24,
-      "commission_total": 2.0
-    },
-    {
       "ticker": "NEM",
       "action": "SELL",
       "signal_date": "2026-06-18",
@@ -348,22 +364,6 @@ window.PORTFOLIO_BAI = {
       "close_reason": "rebalance",
       "final_pnl_pct": 7.38,
       "realized_pnl_usd": 24.43,
-      "commission_total": 2.0
-    },
-    {
-      "ticker": "KLAC",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 259.56,
-      "shares": 0.894,
-      "atr": 17.9,
-      "take_profit": 187.97,
-      "stop_loss": 304.31,
-      "close_date": "2026-06-26",
-      "close_price": 248.64,
-      "close_reason": "rebalance",
-      "final_pnl_pct": 4.21,
-      "realized_pnl_usd": 9.76,
       "commission_total": 2.0
     },
     {
@@ -389,9 +389,9 @@ window.PORTFOLIO_BAI = {
     "win_trades": 9,
     "win_rate": 69.2,
     "total_realized_pnl_usd": 113.59,
-    "open_unrealized_pnl_usd": -67.08,
-    "portfolio_value": 2046.51,
+    "open_unrealized_pnl_usd": -57.55,
+    "portfolio_value": 2056.04,
     "total_commission_usd": 43.0,
-    "updated_at": "2026-06-30"
+    "updated_at": "2026-07-01"
   }
 };
