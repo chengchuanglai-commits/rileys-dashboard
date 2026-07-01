@@ -1,126 +1,126 @@
 // 金融晨报数据 — 每日 07:30 自动更新
 window.MORNING_NOTE = {
   "market": {
-    "sp500_futures_pct": 0.29,
-    "treasury_10y": 4.402,
-    "treasury_10y_change_bps": -4.9,
-    "eps_beat_rate": 84
+    "sp500_futures_pct": 0.49,
+    "treasury_10y": 4.418,
+    "treasury_10y_change_bps": 4.6,
+    "eps_beat_rate": 84.6
   },
   "note": {
-    "market_overview": "美国股市在中东伊朗和平协议利好刺激下反弹，标普500期货上涨0.29%。小盘股表现强劲，Russell 2000指数上涨近21%，显著超越大盘。10年期美债收益率为4.402%，下跌4.9个基点，反映市场对经济的温和预期。市场情绪积极，风险资产获得支持。",
-    "macro": "2026年上半年经济数据显示美国企业盈利能力强劲。Q1财报季中标普500公司EPS超预期率达84%，创2021年Q2以来新高，远超5年78%和10年76%的平均水平。59%的上市公司实现EPS和营收双重超预期，表明经济基本面稳健。Q2 2026预期EPS增长率为22.0%，市场对企业盈利持乐观态度。债券收益率下行暗示美联储政策立场可能偏向温和。",
-    "earnings": "财报季表现超预期强劲，84%的标普500公司EPS超预期，高于历史平均水平。各板块表现差异明显：科技和半导体公司因AI和芯片需求保持增长动力；核能板块受益于碳中和政策支持；生物科技企业在创新药物上市后收入增长加速；消费类股票因估值离散存在均值回归机会。部分中盘股如AppFolio净利润增速超40%，显示中小企业增长活力。",
-    "trade_ideas": "建议关注被低估的中小盘股（市值$50亿-$100亿范围）的均值回归机会。重点方向：1)科技/数字广告平台受益于CTV广告增长；2)清洁能源和核能板块受长期政策支持；3)生物科技新药上市周期创造增长机遇；4)消费必需品公司估值吸引力凸显；5)固收产品在4.4%收益率水平具备配置价值。建议等待技术支撑位确认后逐步建仓，控制风险敞口。"
+    "market_overview": "S&P 500期货小幅上涨0.49%，表现稳定。10年期美债收益率为4.418%，环比上升4.6个基点，市场对利率的关注度保持。财报季整体表现强劲，截至6月26日，已报告的13家S&P 500公司中84.6%的EPS超预期，显示市场盈利质量良好。",
+    "macro": "根据财报季数据，79%的S&P 500公司在收入上超预期，超过80%在盈利上超预期，两项指标都远高于长期平均的60%水平。这表明宏观经济基本面支持企业盈利，市场整体呈现积极态势。债券市场小幅调整，利率环境保持稳定在4.4%附近。",
+    "earnings": "Q2 2026财报季展现强劲表现，EPS超预期率达到84.6%，收入和利润超预期率均超过79%，远超历史平均水平。这表明上市公司整体盈利质量好转，为股市提供了基本面支撑。关键受益领域包括半导体、核能、生物科技和消费必需品板块。",
+    "trade_ideas": "基于财报季强势表现和行业前景，建议重点关注以下主题：（1）半导体与内存产业链受益于HBM4高密度制造需求；（2）核能板块受AI数据中心电力需求驱动；（3）医疗生物科技中的创新疗法商业化；（4）消费必需品中具有品牌定价权的公司。建议采用精选小盘股组合策略，规避大市值蓝筹股，关注市值$5-100亿范围内的成长机会。"
   },
   "stock_picks": [
     {
-      "ticker": "MGNI",
-      "name": "Magnite",
-      "sector": "科技/数字广告",
+      "ticker": "SIMO",
+      "name": "Silicon Motion Technology Corp.",
+      "sector": "科技/半导体",
       "direction": "buy",
-      "buy_zone": "$22-24",
-      "target": "$32-35",
-      "stop_loss": "$19",
-      "reason": "数字广告平台在视频和CTV广告领域建立领导地位，受益于广告主向流媒体转移的结构性趋势，财报季广告需求强劲"
+      "buy_zone": "$45-52",
+      "target": "$70-80",
+      "stop_loss": "$42",
+      "reason": "NAND闪存控制器龙头，Q4 2025收入同比增长超过40%，毛利率达到49%。直接受益于内存短缺和AI数据中心存储需求。财报季EPS超预期，强势板块代表。"
     },
     {
-      "ticker": "APPF",
-      "name": "AppFolio",
-      "sector": "云计算/SaaS",
+      "ticker": "SMR",
+      "name": "NuScale Power Corporation",
+      "sector": "能源/核能",
       "direction": "buy",
-      "buy_zone": "$155-165",
-      "target": "$210-230",
-      "stop_loss": "$140",
-      "reason": "房地产云平台Q1销售增长至2.62亿美元，净利润增长35%，SaaS业务增长稳定，市值约63亿美元处于目标范围"
+      "buy_zone": "$28-34",
+      "target": "$48-55",
+      "stop_loss": "$25",
+      "reason": "小型模块化反应堆(SMR)领先技术提供商，受益于AI数据中心对清洁电力需求。行业政策支持，增长潜力巨大。符合能源转型和新兴能源趋势。"
     },
     {
-      "ticker": "CCJ",
-      "name": "Cameco",
-      "sector": "核能/清洁能源",
+      "ticker": "IOVA",
+      "name": "Iovance Biotherapeutics Inc.",
+      "sector": "医疗/生物科技",
       "direction": "buy",
-      "buy_zone": "$38-42",
-      "target": "$52-58",
+      "buy_zone": "$38-45",
+      "target": "$65-75",
+      "stop_loss": "$35",
+      "reason": "主要产品Amtagvi是首个且唯一FDA批准的T细胞疗法用于实体肿瘤，2025年全年收入2.64亿美元。创新疗法商业化前景广阔，财报超预期。"
+    },
+    {
+      "ticker": "CENT",
+      "name": "Central Garden & Pet Company",
+      "sector": "消费可选",
+      "direction": "buy",
+      "buy_zone": "$32-38",
+      "target": "$48-55",
+      "stop_loss": "$30",
+      "reason": "园林和宠物护理产品领先商，受益于消费者对户外和宠物产品的稳定需求。定价能力强，市场竞争优势明显，符合消费可选板块超预期趋势。"
+    },
+    {
+      "ticker": "HRL",
+      "name": "Hormel Food Corp.",
+      "sector": "消费必需品",
+      "direction": "buy",
+      "buy_zone": "$36-42",
+      "target": "$52-60",
       "stop_loss": "$34",
-      "reason": "全球最大上市铀矿商，调整后净收入翻倍增长至1.46亿美元，受益于全球核能需求复苏和碳中和政策推动"
+      "reason": "2025年下跌25%，但顶线结果强劲。拥有SPAM、Applegate、Skippy等知名品牌，具有品牌定价权和私标制造业务。估值低估，反弹潜力大。"
     },
     {
-      "ticker": "CRSP",
-      "name": "CRISPR Therapeutics",
-      "sector": "生物科技/基因编辑",
-      "direction": "watch",
-      "buy_zone": "$85-95",
-      "target": "$130-150",
-      "stop_loss": "$75",
-      "reason": "基因编辑领域龙头，市值约53亿美元，虽Q1EPS未达预期，但长期创新管线价值巨大，等待临床数据催化"
+      "ticker": "CAMT",
+      "name": "Camtek Ltd.",
+      "sector": "科技/半导体设备",
+      "direction": "buy",
+      "buy_zone": "$55-65",
+      "target": "$85-95",
+      "stop_loss": "$52",
+      "reason": "专业3D计量工具开发商，用于测量纳米级芯片间距。对HBM4堆栈高密度制造至关重要，直接受益于半导体景气周期和AI芯片需求升级。"
     },
     {
       "ticker": "AXSM",
-      "name": "Axsome Therapeutics",
-      "sector": "生物科技/制药",
-      "direction": "buy",
-      "buy_zone": "$58-64",
-      "target": "$85-95",
-      "stop_loss": "$50",
-      "reason": "新上市药物Auvelity和Sunosi销售强势增长，精神健康药物赛道前景广阔，中期增长潜力大"
+      "name": "Axsome Therapeutics Inc.",
+      "sector": "生物科技",
+      "direction": "watch",
+      "buy_zone": "$48-58",
+      "target": "$75-85",
+      "stop_loss": "$45",
+      "reason": "追踪中最强势的生物科技股之一，持有最高看涨动量评分。创新药物管线前景好，市场对其增长预期高。建议观望进一步整合后的买入时机。"
     },
     {
-      "ticker": "MDLZ",
-      "name": "Mondelez International",
+      "ticker": "REYN",
+      "name": "Reynolds Consumer Products Inc.",
       "sector": "消费必需品",
       "direction": "buy",
-      "buy_zone": "$58-62",
-      "target": "$72-78",
-      "stop_loss": "$52",
-      "reason": "全球零食巨头估值离散，受益于均值回归，强大品牌力和国际扩张能力支撑长期增长"
+      "buy_zone": "$28-34",
+      "target": "$42-50",
+      "stop_loss": "$26",
+      "reason": "消费必需品制造商，在不断演变的市场中保持竞争力。拥有稳定的品牌和市场份额，受益于消费必需品板块的超预期表现。估值合理，分红稳定。"
     },
     {
-      "ticker": "KDP",
-      "name": "Keurig Dr Pepper",
-      "sector": "消费必需品/饮料",
-      "direction": "buy",
-      "buy_zone": "$28-31",
-      "target": "$38-42",
-      "stop_loss": "$24",
-      "reason": "美国领先的饮料公司，估值被压制但现金流稳健，受益于消费品均值回归趋势和2026年投资者重新关注"
-    },
-    {
-      "ticker": "ENR",
-      "name": "Energizer Holdings",
-      "sector": "消费可选品",
+      "ticker": "OKLO",
+      "name": "Oklo Inc.",
+      "sector": "能源/核能",
       "direction": "watch",
-      "buy_zone": "$10-12",
-      "target": "$16-18",
-      "stop_loss": "$8.50",
-      "reason": "日用品龙头，估值处于低位，市值符合范围要求，需要关注管理层战略调整和成本控制进展"
+      "buy_zone": "$22-28",
+      "target": "$45-55",
+      "stop_loss": "$20",
+      "reason": "新兴小型模块化反应堆(SMR)技术公司，与GE Hitachi合作。受益于AI数据中心对可靠清洁电力的需求。技术验证中，建议观察商业化进展后介入。"
     },
     {
-      "ticker": "KVUE",
-      "name": "Kenvue",
-      "sector": "消费必需品/健康护理",
-      "direction": "watch",
-      "buy_zone": "$19-22",
-      "target": "$28-32",
-      "stop_loss": "$16",
-      "reason": "强生分拆独立的消费健康品公司，品牌资产优质，估值吸引，等待分拆后的经营效率提升和市场重估"
-    },
-    {
-      "ticker": "CPRT",
-      "name": "Copart",
-      "sector": "运输/物流服务",
+      "ticker": "AGG",
+      "name": "iShares Core U.S. Aggregate Bond ETF",
+      "sector": "固定收益",
       "direction": "buy",
-      "buy_zone": "$52-56",
-      "target": "$70-78",
-      "stop_loss": "$46",
-      "reason": "全球领先的车辆拍卖平台，市值约60亿美元，受益于汽车保险索赔增长和全球车队更新周期，增长稳定可靠"
+      "buy_zone": "$95-100",
+      "target": "$104-108",
+      "stop_loss": "$93",
+      "reason": "美国综合债券ETF，AUM约1360亿美元，年度费用率仅0.03%。10年期美债收益率4.4%的环境下，提供稳定收益和风险对冲。流动性强，成本低廉，适合投资组合配置。"
     }
   ],
-  "date": "2026-06-25",
-  "generated_at": "2026-06-25T09:31:00",
+  "date": "2026-07-01",
+  "generated_at": "2026-07-01T09:38:00",
   "market_status": "pre-market",
-  "api_cost_usd": 0.105,
+  "api_cost_usd": 0.0976,
   "budget_usd": 5.0,
-  "cumulative_cost_usd": 1.8548,
-  "avg_daily_cost_usd": 0.0828,
-  "estimated_days_left": 38,
+  "cumulative_cost_usd": 2.1103,
+  "avg_daily_cost_usd": 0.086,
+  "estimated_days_left": 33,
   "balance_warning": false
 };

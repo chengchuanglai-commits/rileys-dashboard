@@ -1,0 +1,23 @@
+{
+  "date": "2026-06-30",
+  "generated_at": "2026-06-30T19:32:00",
+  "signals": [],
+  "accuracy": {
+    "total": 40,
+    "correct": 18,
+    "rate": 0.45,
+    "history": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "api_cost_usd": 0.0
+}

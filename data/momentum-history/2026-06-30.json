@@ -1,0 +1,114 @@
+{
+  "date": "2026-06-30",
+  "universe_size": 497,
+  "passed_trend": 156,
+  "market_uptrend": true,
+  "factors": [
+    "rs_rank",
+    "edge_pullback",
+    "edge_volcontract",
+    "edge_nearhigh"
+  ],
+  "buy": [
+    {
+      "ticker": "STM",
+      "action": "BUY",
+      "score": 89.2,
+      "price": 73.57,
+      "rs": 1.7498,
+      "ret_6m": 1.8387,
+      "dist_to_ma_pct": -2.3,
+      "vol_ratio": 0.65
+    },
+    {
+      "ticker": "GFS",
+      "action": "BUY",
+      "score": 85.3,
+      "price": 81.18,
+      "rs": 1.1788,
+      "ret_6m": 1.2677,
+      "dist_to_ma_pct": -2.3,
+      "vol_ratio": 0.52
+    },
+    {
+      "ticker": "MRVL",
+      "action": "BUY",
+      "score": 84.4,
+      "price": 296.53,
+      "rs": 2.373,
+      "ret_6m": 2.4619,
+      "dist_to_ma_pct": 3.5,
+      "vol_ratio": 0.72
+    },
+    {
+      "ticker": "NBIS",
+      "action": "BUY",
+      "score": 83.4,
+      "price": 282.14,
+      "rs": 2.1902,
+      "ret_6m": 2.2792,
+      "dist_to_ma_pct": 4.8,
+      "vol_ratio": 0.75
+    },
+    {
+      "ticker": "INTC",
+      "action": "BUY",
+      "score": 83.1,
+      "price": 139.78,
+      "rs": 2.7219,
+      "ret_6m": 2.8108,
+      "dist_to_ma_pct": 6.7,
+      "vol_ratio": 0.69
+    },
+    {
+      "ticker": "ARM",
+      "action": "BUY",
+      "score": 81.8,
+      "price": 354.98,
+      "rs": 2.1233,
+      "ret_6m": 2.2122,
+      "dist_to_ma_pct": -5.8,
+      "vol_ratio": 0.59
+    },
+    {
+      "ticker": "DELL",
+      "action": "BUY",
+      "score": 81.8,
+      "price": 423.53,
+      "rs": 2.2588,
+      "ret_6m": 2.3477,
+      "dist_to_ma_pct": 1.8,
+      "vol_ratio": 0.89
+    },
+    {
+      "ticker": "COHR",
+      "action": "BUY",
+      "score": 79.9,
+      "price": 387.8,
+      "rs": 0.9627,
+      "ret_6m": 1.0516,
+      "dist_to_ma_pct": -1.0,
+      "vol_ratio": 0.83
+    },
+    {
+      "ticker": "SNDK",
+      "action": "BUY",
+      "score": 79.8,
+      "price": 2188.0,
+      "rs": 7.8691,
+      "ret_6m": 7.958,
+      "dist_to_ma_pct": 4.4,
+      "vol_ratio": 0.91
+    },
+    {
+      "ticker": "AMKR",
+      "action": "BUY",
+      "score": 79.5,
+      "price": 84.38,
+      "rs": 1.0222,
+      "ret_6m": 1.1112,
+      "dist_to_ma_pct": -1.6,
+      "vol_ratio": 0.87
+    }
+  ]
+}

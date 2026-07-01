@@ -1,0 +1,198 @@
+{
+  "date": "2026-06-30",
+  "universe_size": 497,
+  "scored": 474,
+  "factors": [
+    "value_ey",
+    "value_pb",
+    "qual_roe",
+    "qual_margin",
+    "qual_lowdebt",
+    "growth_rev",
+    "momentum"
+  ],
+  "buy": [
+    {
+      "ticker": "KLAC",
+      "action": "BUY",
+      "score": 79.2,
+      "price": 296.72,
+      "pe": 7.275087519465005,
+      "roe": 0.8907440967876512,
+      "momentum": 1.571
+    },
+    {
+      "ticker": "KSPI",
+      "action": "BUY",
+      "score": 78.4,
+      "price": 86.04,
+      "pe": 7.322804346913995,
+      "roe": 0.44344741377632485,
+      "momentum": 0.14
+    },
+    {
+      "ticker": "ACGL",
+      "action": "BUY",
+      "score": 73.6,
+      "price": 98.38,
+      "pe": 6.731730316091954,
+      "roe": 0.20480484267608298,
+      "momentum": 0.056
+    },
+    {
+      "ticker": "CNQ",
+      "action": "BUY",
+      "score": 73.3,
+      "price": 39.78,
+      "pe": 12.44056395386715,
+      "roe": 0.22744974028331663,
+      "momentum": 0.191
+    },
+    {
+      "ticker": "CINF",
+      "action": "BUY",
+      "score": 72.8,
+      "price": 187.2,
+      "pe": 9.55652689590134,
+      "roe": 0.17980825670123263,
+      "momentum": 0.146
+    },
+    {
+      "ticker": "INCY",
+      "action": "BUY",
+      "score": 72.4,
+      "price": 115.09,
+      "pe": 13.674943416467787,
+      "roe": 0.2930693401673611,
+      "momentum": 0.128
+    },
+    {
+      "ticker": "LYG",
+      "action": "BUY",
+      "score": 71.5,
+      "price": 5.88,
+      "pe": 12.193996934335443,
+      "roe": 0.10754586546131348,
+      "momentum": 0.192
+    },
+    {
+      "ticker": "TSM",
+      "action": "BUY",
+      "score": 71.0,
+      "price": 468.26,
+      "pe": 32.40039640729801,
+      "roe": 0.3693259591723171,
+      "momentum": 0.641
+    },
+    {
+      "ticker": "EXE",
+      "action": "BUY",
+      "score": 70.9,
+      "price": 92.36,
+      "pe": 6.466223117446546,
+      "roe": 0.1739364784196413,
+      "momentum": -0.232
+    },
+    {
+      "ticker": "WDC",
+      "action": "BUY",
+      "score": 70.6,
+      "price": 647.8,
+      "pe": 39.69308510638298,
+      "roe": 0.8941109041409944,
+      "momentum": 1.616
+    }
+  ],
+  "sell": [
+    {
+      "ticker": "BN",
+      "action": "SELL",
+      "score": 21.1,
+      "price": 42.36,
+      "pe": 83.30277796666557,
+      "roe": 0.028396569105587955,
+      "momentum": -0.082
+    },
+    {
+      "ticker": "TEAM",
+      "action": "SELL",
+      "score": 21.2,
+      "price": 76.71,
+      "pe": -99.56793284740776,
+      "roe": -0.16695225823939203,
+      "momentum": -0.336
+    },
+    {
+      "ticker": "BNH",
+      "action": "SELL",
+      "score": 22.2,
+      "price": 15.25,
+      "pe": 83.30277796666557,
+      "roe": 0.028396569105587955,
+      "momentum": -0.017
+    },
+    {
+      "ticker": "BNJ",
+      "action": "SELL",
+      "score": 23.1,
+      "price": 14.9,
+      "pe": 83.30277796666557,
+      "roe": 0.028396569105587955,
+      "momentum": 0.014
+    },
+    {
+      "ticker": "TSLA",
+      "action": "SELL",
+      "score": 23.2,
+      "price": 413.4,
+      "pe": 334.1549690402477,
+      "roe": 0.04792077449738722,
+      "momentum": -0.039
+    },
+    {
+      "ticker": "SATS",
+      "action": "SELL",
+      "score": 24.5,
+      "price": 100.85,
+      "pe": -2.1848066751995443,
+      "roe": -0.367263632966338,
+      "momentum": 0.382
+    },
+    {
+      "ticker": "INSM",
+      "action": "SELL",
+      "score": 25.2,
+      "price": 106.81,
+      "pe": -17.43759004185832,
+      "roe": -0.367263632966338,
+      "momentum": -0.336
+    },
+    {
+      "ticker": "SONY",
+      "action": "SELL",
+      "score": 26.1,
+      "price": 20.14,
+      "pe": -58.00116470102336,
+      "roe": -0.04052213822355305,
+      "momentum": -0.3
+    },
+    {
+      "ticker": "NKE",
+      "action": "SELL",
+      "score": 26.2,
+      "price": 40.97,
+      "pe": 29.709457777777782,
+      "roe": 0.16406591803995915,
+      "momentum": -0.336
+    },
+    {
+      "ticker": "SNOW",
+      "action": "SELL",
+      "score": 26.7,
+      "price": 249.96,
+      "pe": -67.02131024688934,
+      "roe": -0.367263632966338,
+      "momentum": -0.008
+    }
+  ]
+}

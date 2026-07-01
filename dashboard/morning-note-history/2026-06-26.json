@@ -1,0 +1,125 @@
+{
+  "market": {
+    "sp500_futures_pct": -0.1,
+    "treasury_10y": 4.392,
+    "treasury_10y_change_bps": -5.9,
+    "eps_beat_rate": 4.1
+  },
+  "note": {
+    "market_overview": "S&P 500期货小幅下跌0.10%，显示市场谨慎态势。10年期美债收益率为4.392%，日内下行5.9个基点，表明债券市场避险情绪升温，资金流向防守性资产。",
+    "macro": "美债收益率下行反映市场对经济增长前景的担忧。当前政策环保和通胀压力仍需密切关注，近期经济数据将成为影响市场方向的关键因素。",
+    "earnings": "最新财报季数据显示EPS超预期率约为4.1%，低于历史平均水平，表明企业盈利增长动力不足。二季报季将在7月底前陆续披露，需关注后续业绩兑现情况。",
+    "trade_ideas": "建议在当前市场调整中寻找中小盘价值机会。重点关注受益于经济结构调整和产业升级的行业，避免高估值科技股。可关注消费、工业、通信等防守性板块中的优质中小盘标的。"
+  },
+  "stock_picks": [
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "sector": "Technology",
+      "direction": "buy",
+      "buy_zone": "$28-32",
+      "target": "$42-45",
+      "stop_loss": "$25",
+      "reason": "数据中心基础设施供应商，受益于AI服务器需求。市值约80亿美元，处于中盘范围内。尽管市场波动，但长期增长逻辑清晰。"
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "sector": "Cybersecurity",
+      "direction": "buy",
+      "buy_zone": "$68-72",
+      "target": "$85-90",
+      "stop_loss": "$63",
+      "reason": "网络安全领导者，市值约70亿美元。企业安全支出韧性强，云和AI驱动新增长点。防守性特征适合当前市场环境。"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings",
+      "sector": "Cybersecurity",
+      "direction": "buy",
+      "buy_zone": "$32-36",
+      "target": "$48-52",
+      "stop_loss": "$29",
+      "reason": "云端威胁防护平台领先者，市值约65亿美元。SaaS模式高增长，客户续费率保持在95%+，业绩增长稳定。"
+    },
+    {
+      "ticker": "MCHP",
+      "name": "Microchip Technology",
+      "sector": "Semiconductors",
+      "direction": "buy",
+      "buy_zone": "$94-100",
+      "target": "$125-135",
+      "stop_loss": "$88",
+      "reason": "模拟芯片和微控制器龙头，市值约95亿美元。产品应用广泛，受益于工业和汽车电动化趋势。估值相对合理。"
+    },
+    {
+      "ticker": "CTAS",
+      "name": "Cintas Corporation",
+      "sector": "Industrials",
+      "direction": "buy",
+      "buy_zone": "$485-510",
+      "target": "$620-650",
+      "stop_loss": "$460",
+      "reason": "企业服务和工作服装提供商，市值约75亿美元。历史稳定增长，定价能力强，业绩预期可靠性高。"
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "Software",
+      "direction": "watch",
+      "buy_zone": "$520-560",
+      "target": "$680-720",
+      "stop_loss": "$495",
+      "reason": "创意和文档处理软件领导者，市值约90亿美元。AI功能集成进展关键，订阅模式提供稳定现金流。需观察AI落地进展。"
+    },
+    {
+      "ticker": "PAYC",
+      "name": "Paylocity Holding Corporation",
+      "sector": "Software",
+      "direction": "buy",
+      "buy_zone": "$265-285",
+      "target": "$380-410",
+      "stop_loss": "$250",
+      "reason": "人力资源云计算平台，市值约88亿美元。中端市场渗透空间大，国际扩张初期。增长动能持续。"
+    },
+    {
+      "ticker": "EXPE",
+      "name": "Expedia Group",
+      "sector": "Consumer Discretionary",
+      "direction": "watch",
+      "buy_zone": "$155-170",
+      "target": "$210-230",
+      "stop_loss": "$145",
+      "reason": "在线旅游平台，市值约78亿美元。受益于旅游复苏趋势，但需关注宏观经济影响。AI搜索功能优化值得期待。"
+    },
+    {
+      "ticker": "LFVS",
+      "name": "LifeVantage Corporation",
+      "sector": "Consumer Staples",
+      "direction": "watch",
+      "buy_zone": "$8-10",
+      "target": "$14-16",
+      "stop_loss": "$7",
+      "reason": "营养保健品公司，市值约6.5亿美元。处于市值范围下端。需关注产品销售趋势和库存管理情况。"
+    },
+    {
+      "ticker": "CCC",
+      "name": "CCC Holdings Inc.",
+      "sector": "Industrials",
+      "direction": "buy",
+      "buy_zone": "$8.50-10",
+      "target": "$14-16",
+      "stop_loss": "$7.50",
+      "reason": "汽车和财产保险工作流软件提供商，市值约78亿美元。垂直SaaS模式，市场需求稳定。AI驱动的自动化潜力大。"
+    }
+  ],
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T09:36:00",
+  "market_status": "pre-market",
+  "api_cost_usd": 0.0618,
+  "budget_usd": 5.0,
+  "cumulative_cost_usd": 1.9166,
+  "avg_daily_cost_usd": 0.0785,
+  "estimated_days_left": 39,
+  "balance_warning": false
+}

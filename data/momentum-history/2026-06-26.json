@@ -1,0 +1,114 @@
+{
+  "date": "2026-06-26",
+  "universe_size": 497,
+  "passed_trend": 155,
+  "market_uptrend": true,
+  "factors": [
+    "rs_rank",
+    "edge_pullback",
+    "edge_volcontract",
+    "edge_nearhigh"
+  ],
+  "buy": [
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "score": 90.5,
+      "price": 519.29,
+      "rs": 1.3433,
+      "ret_6m": 1.4149,
+      "dist_to_ma_pct": -1.3,
+      "vol_ratio": 0.64
+    },
+    {
+      "ticker": "INTC",
+      "action": "BUY",
+      "score": 89.7,
+      "price": 128.88,
+      "rs": 2.4926,
+      "ret_6m": 2.5642,
+      "dist_to_ma_pct": -0.2,
+      "vol_ratio": 0.75
+    },
+    {
+      "ticker": "STM",
+      "action": "BUY",
+      "score": 87.3,
+      "price": 71.72,
+      "rs": 1.6851,
+      "ret_6m": 1.7567,
+      "dist_to_ma_pct": -4.7,
+      "vol_ratio": 0.72
+    },
+    {
+      "ticker": "TTMI",
+      "action": "BUY",
+      "score": 86.2,
+      "price": 197.0,
+      "rs": 1.6423,
+      "ret_6m": 1.7139,
+      "dist_to_ma_pct": -4.9,
+      "vol_ratio": 0.72
+    },
+    {
+      "ticker": "GFS",
+      "action": "BUY",
+      "score": 86.0,
+      "price": 79.96,
+      "rs": 1.1683,
+      "ret_6m": 1.2399,
+      "dist_to_ma_pct": -4.1,
+      "vol_ratio": 0.56
+    },
+    {
+      "ticker": "MPC",
+      "action": "BUY",
+      "score": 84.9,
+      "price": 254.6,
+      "rs": 0.4782,
+      "ret_6m": 0.5498,
+      "dist_to_ma_pct": -0.5,
+      "vol_ratio": 0.64
+    },
+    {
+      "ticker": "FFIV",
+      "action": "BUY",
+      "score": 83.9,
+      "price": 392.15,
+      "rs": 0.4233,
+      "ret_6m": 0.4949,
+      "dist_to_ma_pct": -0.3,
+      "vol_ratio": 0.69
+    },
+    {
+      "ticker": "FTNT",
+      "action": "BUY",
+      "score": 82.6,
+      "price": 151.71,
+      "rs": 0.7971,
+      "ret_6m": 0.8687,
+      "dist_to_ma_pct": 3.1,
+      "vol_ratio": 0.77
+    },
+    {
+      "ticker": "MRVL",
+      "action": "BUY",
+      "score": 82.2,
+      "price": 267.85,
+      "rs": 2.0291,
+      "ret_6m": 2.1007,
+      "dist_to_ma_pct": -7.0,
+      "vol_ratio": 0.81
+    },
+    {
+      "ticker": "ALAB",
+      "action": "BUY",
+      "score": 82.0,
+      "price": 380.72,
+      "rs": 1.1683,
+      "ret_6m": 1.2399,
+      "dist_to_ma_pct": -3.0,
+      "vol_ratio": 0.73
+    }
+  ]
+}

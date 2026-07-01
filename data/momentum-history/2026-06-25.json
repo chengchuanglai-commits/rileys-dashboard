@@ -1,0 +1,114 @@
+{
+  "date": "2026-06-25",
+  "universe_size": 497,
+  "passed_trend": 162,
+  "market_uptrend": true,
+  "factors": [
+    "rs_rank",
+    "edge_pullback",
+    "edge_volcontract",
+    "edge_nearhigh"
+  ],
+  "buy": [
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "score": 88.2,
+      "price": 519.89,
+      "rs": 1.3457,
+      "ret_6m": 1.4192,
+      "dist_to_ma_pct": -0.3,
+      "vol_ratio": 0.73
+    },
+    {
+      "ticker": "STM",
+      "action": "BUY",
+      "score": 87.4,
+      "price": 74.55,
+      "rs": 1.7986,
+      "ret_6m": 1.8721,
+      "dist_to_ma_pct": -1.8,
+      "vol_ratio": 0.84
+    },
+    {
+      "ticker": "TTMI",
+      "action": "BUY",
+      "score": 87.0,
+      "price": 208.36,
+      "rs": 1.8369,
+      "ret_6m": 1.9105,
+      "dist_to_ma_pct": 1.2,
+      "vol_ratio": 0.78
+    },
+    {
+      "ticker": "GFS",
+      "action": "BUY",
+      "score": 84.6,
+      "price": 86.4,
+      "rs": 1.344,
+      "ret_6m": 1.4176,
+      "dist_to_ma_pct": 3.5,
+      "vol_ratio": 0.57
+    },
+    {
+      "ticker": "LSCC",
+      "action": "BUY",
+      "score": 83.6,
+      "price": 145.92,
+      "rs": 0.8332,
+      "ret_6m": 0.9067,
+      "dist_to_ma_pct": -0.3,
+      "vol_ratio": 0.76
+    },
+    {
+      "ticker": "INTC",
+      "action": "BUY",
+      "score": 83.2,
+      "price": 129.05,
+      "rs": 2.4767,
+      "ret_6m": 2.5502,
+      "dist_to_ma_pct": 1.2,
+      "vol_ratio": 0.95
+    },
+    {
+      "ticker": "DELL",
+      "action": "BUY",
+      "score": 82.0,
+      "price": 407.24,
+      "rs": 2.1414,
+      "ret_6m": 2.2149,
+      "dist_to_ma_pct": -1.1,
+      "vol_ratio": 0.93
+    },
+    {
+      "ticker": "NBIS",
+      "action": "BUY",
+      "score": 79.9,
+      "price": 256.86,
+      "rs": 1.7796,
+      "ret_6m": 1.8531,
+      "dist_to_ma_pct": -2.1,
+      "vol_ratio": 1.07
+    },
+    {
+      "ticker": "AMKR",
+      "action": "BUY",
+      "score": 79.0,
+      "price": 84.07,
+      "rs": 0.9904,
+      "ret_6m": 1.0639,
+      "dist_to_ma_pct": -1.7,
+      "vol_ratio": 0.91
+    },
+    {
+      "ticker": "STX",
+      "action": "BUY",
+      "score": 79.0,
+      "price": 1022.19,
+      "rs": 2.5594,
+      "ret_6m": 2.6329,
+      "dist_to_ma_pct": 0.9,
+      "vol_ratio": 1.3
+    }
+  ]
+}

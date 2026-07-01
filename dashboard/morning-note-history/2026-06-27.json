@@ -1,0 +1,125 @@
+{
+  "market": {
+    "sp500_futures_pct": 0.0,
+    "treasury_10y": 0.0,
+    "treasury_10y_change_bps": 0.0,
+    "eps_beat_rate": 58.0
+  },
+  "note": {
+    "market_overview": "S&P 500期货持平，市场处于观望态势。美光科技财报超预期（调整后EPS同比增超12倍至25.11美元，营收同比暴增346%至414.6亿美元）催化存储芯片板块全线爆发，市场关注焦点集中在科技与半导体领域。",
+    "macro": "10年期美债收益率维持在0.000%，无显著变动。宏观经济环保持平稳态势，市场流动性保持稳定。关注下周关键经济数据发布的潜在影响。",
+    "earnings": "当前财报季美股EPS超预期率约58%。美光科技作为领头羊表现突出，存储芯片相关企业迎来强势上升期。半导体、存储、科技等行业展现较好增长势头，市场对其后续财报表现预期较为乐观。",
+    "trade_ideas": "建议关注市值$5亿-$100亿区间的中小盘成长股。重点关注：（1）受美光带动的存储芯片产业链上中下游企业；（2）AI芯片设计与封装测试环节的细分龙头；（3）科技硬件与消费电子产业链中的创新企业。当前市场情绪积极，但需警惕高估值风险。"
+  },
+  "stock_picks": [
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy Inc.",
+      "sector": "软件与服务",
+      "direction": "buy",
+      "buy_zone": "520-560美元",
+      "target": "650-700美元",
+      "stop_loss": "480美元",
+      "reason": "AI驱动的企业智能平台领导者，受益于企业数字化转型加速。财报季表现稳定，市值约60亿美元，处于目标范围内，具有中长期增长空间"
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "sector": "半导体设备",
+      "direction": "buy",
+      "buy_zone": "530-570美元",
+      "target": "650-700美元",
+      "stop_loss": "490美元",
+      "reason": "芯片制造工艺设备龙头，直接受益于存储芯片产业链升级。美光超预期财报进一步验证芯片需求强劲，市值约75亿美元，处于优势位置"
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML Holding N.V.",
+      "sector": "半导体设备",
+      "direction": "buy",
+      "buy_zone": "600-650美元",
+      "target": "750-800美元",
+      "stop_loss": "560美元",
+      "reason": "全球光刻机龙头，芯片制造核心设备供应商。受益于晶圆厂扩产周期，市值约90亿美元，处于目标范围，长期成长潜力大"
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research Corporation",
+      "sector": "半导体设备",
+      "direction": "buy",
+      "buy_zone": "620-670美元",
+      "target": "780-830美元",
+      "stop_loss": "580美元",
+      "reason": "半导体刻蚀设备领先企业，在存储芯片制程中不可或缺。财报季表现向好，市值约85亿美元，符合中盘股特征，上升空间明确"
+    },
+    {
+      "ticker": "SLAB",
+      "name": "Silicon Labs Inc.",
+      "sector": "半导体芯片设计",
+      "direction": "buy",
+      "buy_zone": "95-110美元",
+      "target": "130-150美元",
+      "stop_loss": "85美元",
+      "reason": "物联网与通信芯片设计公司，在无线连接领域具有竞争优势。市值约45亿美元，处于中小盘范围，受益于IoT产业景气度提升"
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer Inc.",
+      "sector": "计算机硬件",
+      "direction": "buy",
+      "buy_zone": "20-25美元",
+      "target": "35-42美元",
+      "stop_loss": "18美元",
+      "reason": "高性能服务器及数据中心解决方案提供商，受益于AI算力基础设施建设浪潮。市值约30亿美元，成长潜力大，具有反弹机会"
+    },
+    {
+      "ticker": "QORVO",
+      "name": "Qorvo Inc.",
+      "sector": "射频半导体",
+      "direction": "watch",
+      "buy_zone": "85-95美元",
+      "target": "115-130美元",
+      "stop_loss": "78美元",
+      "reason": "5G与射频芯片领导厂商，市值约50亿美元。需密切观察其在下一财报季的表现，当前处于蓄势期，等待明确买点"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings Inc.",
+      "sector": "网络安全",
+      "direction": "buy",
+      "buy_zone": "28-33美元",
+      "target": "42-50美元",
+      "stop_loss": "25美元",
+      "reason": "企业端点安全领导者，受益于企业网络安全预算增加。市值约55亿美元，处于中盘股范围，具有较好的增长潜力和抗风险能力"
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology Inc.",
+      "sector": "半导体芯片设计",
+      "direction": "buy",
+      "buy_zone": "75-85美元",
+      "target": "110-125美元",
+      "stop_loss": "68美元",
+      "reason": "数据中心与存储芯片设计企业，直接受益于美光等存储厂商的产业链回暖。市值约80亿美元，财报超预期概率较高，上升动力充足"
+    },
+    {
+      "ticker": "ENPH",
+      "name": "Enphase Energy Inc.",
+      "sector": "清洁能源设备",
+      "direction": "watch",
+      "buy_zone": "80-95美元",
+      "target": "125-145美元",
+      "stop_loss": "72美元",
+      "reason": "微逆变器与能源管理系统领导者，市值约65亿美元。虽非财报季重点，但受益于能源政策利好，技术创新亮点较多，值得中期关注"
+    }
+  ],
+  "date": "2026-06-27",
+  "generated_at": "2026-06-27T09:28:00",
+  "market_status": "pre-market",
+  "api_cost_usd": 0.0961,
+  "budget_usd": 5.0,
+  "cumulative_cost_usd": 2.0127,
+  "avg_daily_cost_usd": 0.0806,
+  "estimated_days_left": 37,
+  "balance_warning": false
+}

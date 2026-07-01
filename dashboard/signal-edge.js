@@ -1,44 +1,44 @@
 // 信号 edge 分析 — analyze-signal-edge.py 自动生成
 window.SIGNAL_EDGE = {
-  "generated_at": "2026-06-25 12:33",
-  "sample_total": 34,
+  "generated_at": "2026-07-01 12:33",
+  "sample_total": 38,
   "date_range": [
     "2026-05-27",
-    "2026-06-24"
+    "2026-07-01"
   ],
   "benchmark": "SPY",
   "horizons": [
     {
       "horizon": 1,
-      "n": 29,
-      "hit_rate": 41.4,
-      "ci_lo": 23,
-      "ci_hi": 59,
-      "beat_spy_pct": 37.9,
-      "avg_pnl": 0.83,
-      "avg_alpha": 0.66,
-      "verdict": "⚠️ 与噪声难区分"
+      "n": 34,
+      "hit_rate": 38.2,
+      "ci_lo": 22,
+      "ci_hi": 55,
+      "beat_spy_pct": 35.3,
+      "avg_pnl": 0.14,
+      "avg_alpha": 0.1,
+      "verdict": "❌ 无 edge"
     },
     {
       "horizon": 3,
-      "n": 24,
-      "hit_rate": 58.3,
+      "n": 32,
+      "hit_rate": 56.2,
       "ci_lo": 39,
-      "ci_hi": 78,
-      "beat_spy_pct": 58.3,
-      "avg_pnl": 0.75,
-      "avg_alpha": 0.98,
+      "ci_hi": 73,
+      "beat_spy_pct": 53.1,
+      "avg_pnl": 1.06,
+      "avg_alpha": 1.2,
       "verdict": "✅ 初步有正 edge"
     },
     {
       "horizon": 5,
-      "n": 22,
-      "hit_rate": 59.1,
-      "ci_lo": 39,
-      "ci_hi": 80,
-      "beat_spy_pct": 54.5,
-      "avg_pnl": 1.66,
-      "avg_alpha": 1.83,
+      "n": 29,
+      "hit_rate": 55.2,
+      "ci_lo": 37,
+      "ci_hi": 73,
+      "beat_spy_pct": 51.7,
+      "avg_pnl": 2.09,
+      "avg_alpha": 2.13,
       "verdict": "✅ 初步有正 edge"
     }
   ]

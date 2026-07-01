@@ -18,6 +18,40 @@ window.PORTFOLIO_H = {
       "daily_prices": {},
       "position_usd": 205.31,
       "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9.0909,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 46.75,
+      "stop_loss": 56.1,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 205.29,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17.2354,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 24.66,
+      "stop_loss": 29.59,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {},
+      "position_usd": 205.29,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -595,27 +629,27 @@ window.PORTFOLIO_H = {
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-17": {
-          "open": 37.03,
-          "high": 37.04,
-          "low": 36.26,
-          "close": 36.38,
-          "pnl_pct": 1.78
+          "open": 36.67,
+          "high": 36.68,
+          "low": 35.91,
+          "close": 36.03,
+          "pnl_pct": 2.73
         },
         "2026-06-18": {
-          "open": 36.57,
-          "high": 37.11,
-          "low": 36.05,
-          "close": 37.06,
-          "pnl_pct": -0.05
+          "open": 36.22,
+          "high": 36.75,
+          "low": 35.7,
+          "close": 36.7,
+          "pnl_pct": 0.92
         }
       },
       "close_date": "2026-06-18",
-      "close_price": 37.06,
-      "final_pnl_pct": -0.05,
+      "close_price": 36.7,
+      "final_pnl_pct": 0.92,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.1,
+      "realized_pnl_usd": 1.9,
       "position_usd": 206.2
     },
     {
@@ -647,7 +681,7 @@ window.PORTFOLIO_H = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.16,
-      "position_usd": 205.78
+      "position_usd": 205.98
     },
     {
       "ticker": "SBFG",
@@ -678,7 +712,7 @@ window.PORTFOLIO_H = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.12,
-      "position_usd": 205.78
+      "position_usd": 205.98
     },
     {
       "ticker": "SNEX",
@@ -716,7 +750,7 @@ window.PORTFOLIO_H = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.12,
-      "position_usd": 205.78
+      "position_usd": 205.98
     },
     {
       "ticker": "WSBC",
@@ -754,7 +788,7 @@ window.PORTFOLIO_H = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.14,
-      "position_usd": 205.78
+      "position_usd": 205.98
     },
     {
       "ticker": "SWBI",
@@ -785,7 +819,7 @@ window.PORTFOLIO_H = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.08,
-      "position_usd": 204.96
+      "position_usd": 205.16
     },
     {
       "ticker": "WSBC",
@@ -816,7 +850,7 @@ window.PORTFOLIO_H = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.12,
-      "position_usd": 204.96
+      "position_usd": 205.16
     },
     {
       "ticker": "SNEX",
@@ -853,8 +887,8 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.24,
-      "position_usd": 204.96
+      "realized_pnl_usd": 4.25,
+      "position_usd": 205.16
     },
     {
       "ticker": "SWBI",
@@ -891,8 +925,8 @@ window.PORTFOLIO_H = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 17.6,
-      "position_usd": 203.74
+      "realized_pnl_usd": 17.62,
+      "position_usd": 203.93
     },
     {
       "ticker": "OBT",
@@ -929,20 +963,20 @@ window.PORTFOLIO_H = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.07,
-      "position_usd": 203.74
+      "realized_pnl_usd": -4.08,
+      "position_usd": 203.93
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
     "total_trades": 26,
-    "win_trades": 8,
-    "win_rate": 30.8,
-    "total_realized_pnl_usd": 50.88,
+    "win_trades": 9,
+    "win_rate": 34.6,
+    "total_realized_pnl_usd": 52.88,
     "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2050.88,
+    "portfolio_value": 2052.88,
     "total_commission_usd": 52.0,
-    "skipped_gap": 7,
+    "skipped_gap": 9,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
     "updated_at": "2026-07-01"
