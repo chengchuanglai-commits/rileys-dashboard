@@ -127,6 +127,82 @@
       "vix": 16.59,
       "daily_prices": {},
       "gap_checked": true
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 312.01,
+      "entry_commission": 1.0,
+      "take_profit": 280.81,
+      "stop_loss": 321.37,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-07",
+      "regime": "neutral",
+      "vix": 16.59,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16,
+      "actual_position_usd": 477.44,
+      "entry_commission": 1.0,
+      "take_profit": 26.86,
+      "stop_loss": 30.74,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-07",
+      "regime": "neutral",
+      "vix": 16.59,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "DGII",
+      "name": "DGII",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 74.12,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 444.72,
+      "entry_commission": 1.0,
+      "take_profit": 66.71,
+      "stop_loss": 76.34,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-07",
+      "regime": "neutral",
+      "vix": 16.59,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit": 53.56,
+      "stop_loss": 61.3,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-07",
+      "regime": "neutral",
+      "vix": 16.59,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -748,10 +824,10 @@
       "vix": 17.28,
       "daily_prices": {
         "2026-06-23": {
-          "open": 16.17,
-          "high": 17.5,
-          "low": 16.02,
-          "close": 16.67,
+          "open": 16.03,
+          "high": 17.35,
+          "low": 15.88,
+          "close": 16.53,
           "pnl_pct": -2.99
         }
       },
@@ -868,17 +944,17 @@
       "vix": 18.63,
       "daily_prices": {
         "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
+          "open": 16.05,
+          "high": 16.25,
+          "low": 15.48,
+          "close": 15.55,
+          "pnl_pct": 6.72
         },
         "2026-06-26": {
-          "open": 15.55,
-          "high": 15.7,
-          "low": 14.84,
-          "close": 15.23,
+          "open": 15.42,
+          "high": 15.56,
+          "low": 14.71,
+          "close": 15.1,
           "pnl_pct": 10.02
         }
       },
@@ -976,6 +1052,6 @@
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 7,
-    "updated_at": "2026-07-01"
+    "updated_at": "2026-07-02"
   }
 }

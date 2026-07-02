@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,12 +15,7 @@ window.PORTFOLIO_B = {
       "take_profit": 50.6,
       "stop_loss": 57.2,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-01": {
-          "close": 52.84,
-          "pnl_pct": 3.93
-        }
-      }
+      "daily_prices": {}
     },
     {
       "ticker": "MVBF",
@@ -35,12 +30,67 @@ window.PORTFOLIO_B = {
       "take_profit": 26.69,
       "stop_loss": 30.17,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-01": {
-          "close": 29.84,
-          "pnl_pct": -2.86
-        }
-      }
+      "daily_prices": {}
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 312.01,
+      "entry_commission": 1.0,
+      "take_profit": 287.05,
+      "stop_loss": 324.49,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16,
+      "actual_position_usd": 477.44,
+      "entry_commission": 1.0,
+      "take_profit": 27.45,
+      "stop_loss": 31.03,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "DGII",
+      "name": "DGII",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 74.12,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 444.72,
+      "entry_commission": 1.0,
+      "take_profit": 68.19,
+      "stop_loss": 77.08,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit": 54.75,
+      "stop_loss": 61.89,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -1084,10 +1134,10 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-23": {
-          "open": 16.17,
-          "high": 17.5,
-          "low": 16.02,
-          "close": 16.67,
+          "open": 16.03,
+          "high": 17.35,
+          "low": 15.88,
+          "close": 16.53,
           "pnl_pct": -3.98
         }
       },
@@ -1290,17 +1340,17 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-01",
       "daily_prices": {
         "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
+          "open": 16.05,
+          "high": 16.25,
+          "low": 15.48,
+          "close": 15.55,
+          "pnl_pct": 6.72
         },
         "2026-06-26": {
-          "open": 15.55,
-          "high": 15.7,
-          "low": 14.84,
-          "close": 15.23,
+          "open": 15.42,
+          "high": 15.56,
+          "low": 14.71,
+          "close": 15.1,
           "pnl_pct": 7.98
         }
       },
@@ -1355,9 +1405,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.77
         },
         "2026-07-01": {
-          "open": 36.81,
+          "open": 36.56,
           "high": 37.97,
-          "low": 36.78,
+          "low": 36.56,
           "close": 37.64,
           "pnl_pct": -4.0
         }
@@ -1437,8 +1487,10 @@ window.PORTFOLIO_B = {
     "win_trades": 15,
     "win_rate": 42.9,
     "total_realized_pnl_usd": 43.89,
-    "open_unrealized_pnl_usd": 5.35,
-    "portfolio_value": 2049.24,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2043.89,
+    "total_commission_usd": 70.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-02"
   }
 };
