@@ -34,14 +34,14 @@
       "daily_prices": {
         "2026-07-02": {
           "open": 52.8,
-          "high": 52.93,
+          "high": 53.24,
           "low": 51.32,
-          "close": 52.67,
-          "pnl_pct": 4.24
+          "close": 52.6,
+          "pnl_pct": 4.36
         }
       },
       "position_usd": 205.45,
-      "unrealized_pnl_usd": 8.71
+      "unrealized_pnl_usd": 8.96
     },
     {
       "ticker": "LGND",
@@ -1031,8 +1031,8 @@
     "win_trades": 9,
     "win_rate": 34.6,
     "total_realized_pnl_usd": 54.47,
-    "open_unrealized_pnl_usd": 8.71,
-    "portfolio_value": 2063.18,
+    "open_unrealized_pnl_usd": 8.96,
+    "portfolio_value": 2063.43,
     "total_commission_usd": 52.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 0,

@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-03",
       "daily_prices": {
         "2026-07-02": {
-          "close": 52.71,
-          "pnl_pct": 4.16
+          "close": 52.6,
+          "pnl_pct": 4.36
         }
       },
       "gap_checked": true,
@@ -40,8 +40,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-02": {
-          "close": 309.39,
-          "pnl_pct": 0.84
+          "close": 311.49,
+          "pnl_pct": 0.17
         }
       },
       "gap_checked": true,
@@ -63,8 +63,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-02": {
-          "close": 29.52,
-          "pnl_pct": 1.07
+          "close": 29.62,
+          "pnl_pct": 0.74
         }
       },
       "gap_checked": true,
@@ -86,36 +86,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-02": {
-          "close": 72.42,
-          "pnl_pct": 2.29
+          "close": 72.71,
+          "pnl_pct": 1.9
         }
       },
       "gap_checked": true,
       "day1_open": 73.97,
       "day1_gap_pct": -0.2
-    },
-    {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 59.51,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 476.08,
-      "entry_commission": 1.0,
-      "take_profit": 50.58,
-      "stop_loss": 61.3,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 61.1,
-          "pnl_pct": -2.67
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 59.4,
-      "day1_gap_pct": -0.18
     }
   ],
   "closed_positions": [
@@ -1022,17 +999,45 @@ window.PORTFOLIO_D = {
       "final_pnl_pct": 22.82,
       "close_reason": "take_profit",
       "realized_pnl_usd": 114.08
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit": 50.58,
+      "stop_loss": 61.3,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 61.69,
+          "pnl_pct": -3.66
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 59.4,
+      "day1_gap_pct": -0.18,
+      "close_date": "2026-07-02",
+      "close_price": 61.69,
+      "final_pnl_pct": -3.66,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -18.32
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 26,
+    "total_trades": 27,
     "win_trades": 13,
-    "win_rate": 50.0,
-    "total_realized_pnl_usd": 179.59,
-    "open_unrealized_pnl_usd": 28.45,
-    "portfolio_value": 2208.04,
+    "win_rate": 48.1,
+    "total_realized_pnl_usd": 161.27,
+    "open_unrealized_pnl_usd": 35.85,
+    "portfolio_value": 2197.12,
     "skipped_gap": 10,
-    "updated_at": "2026-07-02"
+    "updated_at": "2026-07-03"
   }
 };
