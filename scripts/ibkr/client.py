@@ -3,10 +3,11 @@ import time
 from ib_insync import IB
 from scripts.ibkr.config import PORTS
 
-def connect(client_id=10, timeout=8, retries=4, retry_wait=6):
+def connect(client_id=10, timeout=8, retries=9, retry_wait=18):
     """尝试 PORTS 列表,返回 (ib, port) 或 (None, None)。
-    内置重试:Gateway 数据农场初次同步常间歇性超时(Error 1100/farm reconnect),
-    单次失败不放弃→整轮 batch 不会因一次卡顿而中止(真钱时=该交易却没交易的洞)。"""
+    内置重试(~2.7分钟):①数据农场初次同步间歇超时 ②**IB Gateway每5.5小时滚动自动重启**
+    (无固定时间可设,重启窗口会飘移撞上任何批次),重启期间端口ConnectionRefused~1-2分钟。
+    重试够久=撞上重启也只是多等会儿就连上,不会误报"网关连不上"中止批次(真钱时=该交易却没交易的洞)。"""
     for attempt in range(retries):
         for port in PORTS:
             ib = IB()
