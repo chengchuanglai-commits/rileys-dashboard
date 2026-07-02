@@ -35,14 +35,14 @@ window.PORTFOLIO_H = {
       "daily_prices": {
         "2026-07-02": {
           "open": 52.8,
-          "high": 53.24,
+          "high": 53.9,
           "low": 51.32,
-          "close": 52.6,
-          "pnl_pct": 4.36
+          "close": 53.51,
+          "pnl_pct": 2.71
         }
       },
       "position_usd": 205.45,
-      "unrealized_pnl_usd": 8.96
+      "unrealized_pnl_usd": 5.57
     },
     {
       "ticker": "LGND",
@@ -1032,8 +1032,8 @@ window.PORTFOLIO_H = {
     "win_trades": 9,
     "win_rate": 34.6,
     "total_realized_pnl_usd": 54.47,
-    "open_unrealized_pnl_usd": 8.96,
-    "portfolio_value": 2063.43,
+    "open_unrealized_pnl_usd": 5.57,
+    "portfolio_value": 2060.04,
     "total_commission_usd": 52.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 0,

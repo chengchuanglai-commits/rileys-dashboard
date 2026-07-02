@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-03",
       "daily_prices": {
         "2026-07-02": {
-          "close": 52.6,
-          "pnl_pct": 4.36
+          "close": 53.53,
+          "pnl_pct": 2.67
         }
       },
       "gap_checked": true,
@@ -40,8 +40,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-02": {
-          "close": 311.49,
-          "pnl_pct": 0.17
+          "close": 314.79,
+          "pnl_pct": -0.89
         }
       },
       "gap_checked": true,
@@ -63,8 +63,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-02": {
-          "close": 29.62,
-          "pnl_pct": 0.74
+          "close": 29.52,
+          "pnl_pct": 1.07
         }
       },
       "gap_checked": true,
@@ -86,8 +86,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-02": {
-          "close": 72.71,
-          "pnl_pct": 1.9
+          "close": 71.96,
+          "pnl_pct": 2.91
         }
       },
       "gap_checked": true,
@@ -1015,18 +1015,18 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-02": {
-          "close": 61.69,
-          "pnl_pct": -3.66
+          "close": 62.09,
+          "pnl_pct": -4.34
         }
       },
       "gap_checked": true,
       "day1_open": 59.4,
       "day1_gap_pct": -0.18,
       "close_date": "2026-07-02",
-      "close_price": 61.69,
-      "final_pnl_pct": -3.66,
+      "close_price": 62.09,
+      "final_pnl_pct": -4.34,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -18.32
+      "realized_pnl_usd": -21.68
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1034,9 +1034,9 @@ window.PORTFOLIO_D = {
     "total_trades": 27,
     "win_trades": 13,
     "win_rate": 48.1,
-    "total_realized_pnl_usd": 161.27,
-    "open_unrealized_pnl_usd": 35.85,
-    "portfolio_value": 2197.12,
+    "total_realized_pnl_usd": 157.91,
+    "open_unrealized_pnl_usd": 28.8,
+    "portfolio_value": 2186.71,
     "skipped_gap": 10,
     "updated_at": "2026-07-03"
   }

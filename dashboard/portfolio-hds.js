@@ -103,13 +103,13 @@ window.PORTFOLIO_HDS = {
         "2026-07-02": {
           "open": 233.25,
           "high": 235.45,
-          "low": 223.24,
-          "close": 223.28,
-          "pnl_pct": 8.93
+          "low": 221.86,
+          "close": 223.84,
+          "pnl_pct": 8.7
         }
       },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 18.79
+      "unrealized_pnl_usd": 18.3
     },
     {
       "ticker": "MVBF",
@@ -129,12 +129,12 @@ window.PORTFOLIO_HDS = {
           "open": 29.99,
           "high": 30.23,
           "low": 29.19,
-          "close": 29.62,
-          "pnl_pct": 2.1
+          "close": 29.52,
+          "pnl_pct": 1.76
         }
       },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 4.42
+      "unrealized_pnl_usd": 3.7
     },
     {
       "ticker": "SRRK",
@@ -152,14 +152,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-07-02": {
           "open": 52.8,
-          "high": 53.24,
+          "high": 53.9,
           "low": 51.32,
-          "close": 52.6,
-          "pnl_pct": 4.36
+          "close": 53.51,
+          "pnl_pct": 2.71
         }
       },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 9.17
+      "unrealized_pnl_usd": 5.7
     },
     {
       "ticker": "LGND",
@@ -175,7 +175,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 318.25,
       "max_hold_date": "2026-07-06",
       "daily_prices": {},
-      "position_usd": 211.02,
+      "position_usd": 210.45,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -192,7 +192,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 58.32,
       "max_hold_date": "2026-07-06",
       "daily_prices": {},
-      "position_usd": 211.02,
+      "position_usd": 210.45,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -209,7 +209,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 30.44,
       "max_hold_date": "2026-07-06",
       "daily_prices": {},
-      "position_usd": 211.02,
+      "position_usd": 210.45,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1514,19 +1514,19 @@ window.PORTFOLIO_HDS = {
         },
         "2026-07-02": {
           "open": 52.8,
-          "high": 53.24,
+          "high": 53.9,
           "low": 51.32,
-          "close": 52.6,
-          "pnl_pct": 4.29
+          "close": 53.51,
+          "pnl_pct": 2.64
         }
       },
       "close_date": "2026-07-02",
-      "close_price": 52.6,
-      "final_pnl_pct": 4.29,
+      "close_price": 53.51,
+      "final_pnl_pct": 2.64,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 9.04,
+      "realized_pnl_usd": 5.56,
       "position_usd": 210.78
     },
     {
@@ -1552,9 +1552,9 @@ window.PORTFOLIO_HDS = {
         },
         "2026-07-02": {
           "open": 59.4,
-          "high": 61.77,
+          "high": 62.2,
           "low": 58.78,
-          "close": 61.69,
+          "close": 62.09,
           "pnl_pct": -1.99
         }
       },
@@ -1592,28 +1592,28 @@ window.PORTFOLIO_HDS = {
           "open": 314.81,
           "high": 316.29,
           "low": 308.76,
-          "close": 311.49,
-          "pnl_pct": 0.81
+          "close": 314.79,
+          "pnl_pct": -0.24
         }
       },
       "close_date": "2026-07-02",
-      "close_price": 311.49,
-      "final_pnl_pct": 0.81,
+      "close_price": 314.79,
+      "final_pnl_pct": -0.24,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.71,
+      "realized_pnl_usd": -0.51,
       "position_usd": 210.78
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 39,
-    "win_trades": 23,
-    "win_rate": 59.0,
-    "total_realized_pnl_usd": 110.16,
-    "open_unrealized_pnl_usd": 46.35,
-    "portfolio_value": 2156.51,
+    "win_trades": 22,
+    "win_rate": 56.4,
+    "total_realized_pnl_usd": 104.47,
+    "open_unrealized_pnl_usd": 41.68,
+    "portfolio_value": 2146.15,
     "total_commission_usd": 78.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 0,
