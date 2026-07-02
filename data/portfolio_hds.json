@@ -103,12 +103,12 @@
           "open": 233.25,
           "high": 235.45,
           "low": 221.86,
-          "close": 223.84,
-          "pnl_pct": 8.7
+          "close": 227.74,
+          "pnl_pct": 7.11
         }
       },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 18.3
+      "unrealized_pnl_usd": 14.96
     },
     {
       "ticker": "MVBF",
@@ -128,12 +128,12 @@
           "open": 29.99,
           "high": 30.23,
           "low": 29.19,
-          "close": 29.52,
-          "pnl_pct": 1.76
+          "close": 29.41,
+          "pnl_pct": 1.38
         }
       },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 3.7
+      "unrealized_pnl_usd": 2.9
     },
     {
       "ticker": "SRRK",
@@ -151,14 +151,14 @@
       "daily_prices": {
         "2026-07-02": {
           "open": 52.8,
-          "high": 53.9,
+          "high": 54.94,
           "low": 51.32,
-          "close": 53.51,
-          "pnl_pct": 2.71
+          "close": 54.88,
+          "pnl_pct": 0.22
         }
       },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 5.7
+      "unrealized_pnl_usd": 0.46
     },
     {
       "ticker": "LGND",
@@ -174,7 +174,7 @@
       "stop_loss": 318.25,
       "max_hold_date": "2026-07-06",
       "daily_prices": {},
-      "position_usd": 210.45,
+      "position_usd": 209.6,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -191,7 +191,7 @@
       "stop_loss": 58.32,
       "max_hold_date": "2026-07-06",
       "daily_prices": {},
-      "position_usd": 210.45,
+      "position_usd": 209.6,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -208,7 +208,7 @@
       "stop_loss": 30.44,
       "max_hold_date": "2026-07-06",
       "daily_prices": {},
-      "position_usd": 210.45,
+      "position_usd": 209.6,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1513,19 +1513,19 @@
         },
         "2026-07-02": {
           "open": 52.8,
-          "high": 53.9,
+          "high": 54.94,
           "low": 51.32,
-          "close": 53.51,
-          "pnl_pct": 2.64
+          "close": 54.88,
+          "pnl_pct": 0.15
         }
       },
       "close_date": "2026-07-02",
-      "close_price": 53.51,
-      "final_pnl_pct": 2.64,
+      "close_price": 54.88,
+      "final_pnl_pct": 0.15,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.56,
+      "realized_pnl_usd": 0.32,
       "position_usd": 210.78
     },
     {
@@ -1553,7 +1553,7 @@
           "open": 59.4,
           "high": 62.2,
           "low": 58.78,
-          "close": 62.09,
+          "close": 61.42,
           "pnl_pct": -1.99
         }
       },
@@ -1589,19 +1589,19 @@
         },
         "2026-07-02": {
           "open": 314.81,
-          "high": 316.29,
+          "high": 319.99,
           "low": 308.76,
-          "close": 314.79,
-          "pnl_pct": -0.24
+          "close": 319.55,
+          "pnl_pct": -1.75
         }
       },
       "close_date": "2026-07-02",
-      "close_price": 314.79,
-      "final_pnl_pct": -0.24,
+      "close_price": 319.55,
+      "final_pnl_pct": -1.75,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.51,
+      "realized_pnl_usd": -3.69,
       "position_usd": 210.78
     }
   ],
@@ -1610,9 +1610,9 @@
     "total_trades": 39,
     "win_trades": 22,
     "win_rate": 56.4,
-    "total_realized_pnl_usd": 104.47,
-    "open_unrealized_pnl_usd": 41.68,
-    "portfolio_value": 2146.15,
+    "total_realized_pnl_usd": 96.04,
+    "open_unrealized_pnl_usd": 32.3,
+    "portfolio_value": 2128.34,
     "total_commission_usd": 78.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 0,

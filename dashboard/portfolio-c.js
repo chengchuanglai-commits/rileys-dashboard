@@ -18,12 +18,12 @@ window.PORTFOLIO_C = {
       "day1_open": 52.8,
       "daily_prices": {
         "2026-07-02": {
-          "close": 53.53,
-          "pnl_pct": 2.67
+          "close": 54.88,
+          "pnl_pct": 0.22
         }
       },
       "position_usd": 211.28,
-      "unrealized_pnl_usd": 5.54,
+      "unrealized_pnl_usd": 0.46,
       "gap_checked": true,
       "day1_gap_pct": -4.0
     },
@@ -43,8 +43,8 @@ window.PORTFOLIO_C = {
       "day1_open": 314.81,
       "daily_prices": {
         "2026-07-02": {
-          "close": 314.79,
-          "pnl_pct": -0.89
+          "close": 319.55,
+          "pnl_pct": -2.42
         }
       },
       "position_usd": 211.28,
@@ -68,8 +68,8 @@ window.PORTFOLIO_C = {
       "day1_open": 29.99,
       "daily_prices": {
         "2026-07-02": {
-          "close": 29.52,
-          "pnl_pct": 1.07
+          "close": 29.41,
+          "pnl_pct": 1.44
         }
       },
       "position_usd": 211.28,
@@ -90,17 +90,42 @@ window.PORTFOLIO_C = {
       "take_profit": 68.19,
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
-      "day1_open": 73.97,
+      "day1_open": 74.0,
       "daily_prices": {
         "2026-07-02": {
-          "close": 71.96,
-          "pnl_pct": 2.91
+          "close": 72.15,
+          "pnl_pct": 2.66
         }
       },
       "position_usd": 211.28,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
-      "day1_gap_pct": -0.2
+      "day1_gap_pct": -0.16
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit": 54.75,
+      "stop_loss": 61.89,
+      "max_hold_date": "2026-07-09",
+      "day1_open": 59.4,
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 61.42,
+          "pnl_pct": -3.21
+        }
+      },
+      "position_usd": 211.28,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -0.18
     }
   ],
   "closed_positions": [
@@ -1197,46 +1222,16 @@ window.PORTFOLIO_C = {
       "commission_total": 2.0,
       "realized_pnl_usd": -8.49,
       "position_usd": 211.26
-    },
-    {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 59.51,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 476.08,
-      "entry_commission": 1.0,
-      "take_profit": 54.75,
-      "stop_loss": 61.89,
-      "max_hold_date": "2026-07-09",
-      "day1_open": 59.4,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 62.09,
-          "pnl_pct": -4.34
-        }
-      },
-      "position_usd": 211.28,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.18,
-      "close_date": "2026-07-02",
-      "close_price": 62.09,
-      "final_pnl_pct": -4.34,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -21.68
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 26,
+    "total_trades": 25,
     "win_trades": 14,
-    "win_rate": 53.8,
-    "total_realized_pnl_usd": 91.13,
-    "open_unrealized_pnl_usd": 28.8,
-    "portfolio_value": 2119.93,
+    "win_rate": 56.0,
+    "total_realized_pnl_usd": 112.81,
+    "open_unrealized_pnl_usd": -6.55,
+    "portfolio_value": 2106.26,
     "skipped_gap": 11,
     "updated_at": "2026-07-03"
   }
