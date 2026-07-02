@@ -87,81 +87,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 7.82
     },
     {
-      "ticker": "SRRK",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-30",
-      "entry_price": 54.96,
-      "allocated_usd": 500,
-      "shares": 9.0975,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 46.72,
-      "stop_loss": 56.06,
-      "max_hold_date": "2026-07-02",
-      "daily_prices": {
-        "2026-07-01": {
-          "open": 54.79,
-          "high": 55.02,
-          "low": 52.84,
-          "close": 52.84,
-          "pnl_pct": 3.86
-        }
-      },
-      "position_usd": 210.78,
-      "unrealized_pnl_usd": 8.14
-    },
-    {
-      "ticker": "SKWD",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-30",
-      "entry_price": 60.19,
-      "allocated_usd": 500,
-      "shares": 8.307,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 51.16,
-      "stop_loss": 61.39,
-      "max_hold_date": "2026-07-02",
-      "daily_prices": {
-        "2026-07-01": {
-          "open": 58.35,
-          "high": 59.81,
-          "low": 57.88,
-          "close": 59.51,
-          "pnl_pct": 1.13
-        }
-      },
-      "position_usd": 210.78,
-      "unrealized_pnl_usd": 2.38
-    },
-    {
-      "ticker": "LGND",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-06-30",
-      "entry_price": 314.04,
-      "allocated_usd": 500,
-      "shares": 1.5922,
-      "actual_position_usd": 500.01,
-      "entry_commission": 1.0,
-      "take_profit": 266.93,
-      "stop_loss": 320.32,
-      "max_hold_date": "2026-07-02",
-      "daily_prices": {
-        "2026-07-01": {
-          "open": 315.2,
-          "high": 318.41,
-          "low": 305.31,
-          "close": 312.01,
-          "pnl_pct": 0.65
-        }
-      },
-      "position_usd": 210.78,
-      "unrealized_pnl_usd": 1.37
-    },
-    {
       "ticker": "SPXC",
       "name": "",
       "action": "SELL",
@@ -174,9 +99,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 208.39,
       "stop_loss": 250.07,
       "max_hold_date": "2026-07-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 233.25,
+          "high": 235.45,
+          "low": 226.34,
+          "close": 226.34,
+          "pnl_pct": 7.68
+        }
+      },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 16.16
     },
     {
       "ticker": "MVBF",
@@ -191,9 +124,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 33.36,
       "stop_loss": 28.43,
       "max_hold_date": "2026-07-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 29.99,
+          "high": 30.23,
+          "low": 29.19,
+          "close": 29.52,
+          "pnl_pct": 1.76
+        }
+      },
       "position_usd": 210.36,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.7
     },
     {
       "ticker": "SRRK",
@@ -208,8 +149,67 @@ window.PORTFOLIO_HDS = {
       "take_profit": 46.75,
       "stop_loss": 56.1,
       "max_hold_date": "2026-07-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 52.93,
+          "low": 51.32,
+          "close": 52.71,
+          "pnl_pct": 4.16
+        }
+      },
       "position_usd": 210.36,
+      "unrealized_pnl_usd": 8.75
+    },
+    {
+      "ticker": "LGND",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1.6025,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 265.21,
+      "stop_loss": 318.25,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {},
+      "position_usd": 211.2,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SKWD",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8.4019,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 68.44,
+      "stop_loss": 58.32,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {},
+      "position_usd": 211.2,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16.756,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 25.36,
+      "stop_loss": 30.44,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {},
+      "position_usd": 211.2,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1490,20 +1490,134 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.22,
       "position_usd": 210.78
+    },
+    {
+      "ticker": "SRRK",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-30",
+      "entry_price": 54.96,
+      "allocated_usd": 500,
+      "shares": 9.0975,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 46.72,
+      "stop_loss": 56.06,
+      "max_hold_date": "2026-07-02",
+      "daily_prices": {
+        "2026-07-01": {
+          "open": 54.79,
+          "high": 55.02,
+          "low": 52.84,
+          "close": 52.84,
+          "pnl_pct": 3.86
+        },
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 52.93,
+          "low": 51.32,
+          "close": 52.76,
+          "pnl_pct": 4.0
+        }
+      },
+      "close_date": "2026-07-02",
+      "close_price": 52.76,
+      "final_pnl_pct": 4.0,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 8.43,
+      "position_usd": 210.78
+    },
+    {
+      "ticker": "SKWD",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-30",
+      "entry_price": 60.19,
+      "allocated_usd": 500,
+      "shares": 8.307,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 51.16,
+      "stop_loss": 61.39,
+      "max_hold_date": "2026-07-02",
+      "daily_prices": {
+        "2026-07-01": {
+          "open": 58.35,
+          "high": 59.81,
+          "low": 57.88,
+          "close": 59.51,
+          "pnl_pct": 1.13
+        },
+        "2026-07-02": {
+          "open": 59.4,
+          "high": 61.24,
+          "low": 58.78,
+          "close": 61.1,
+          "pnl_pct": -1.51
+        }
+      },
+      "close_date": "2026-07-02",
+      "close_price": 61.1,
+      "final_pnl_pct": -1.51,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.18,
+      "position_usd": 210.78
+    },
+    {
+      "ticker": "LGND",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-06-30",
+      "entry_price": 314.04,
+      "allocated_usd": 500,
+      "shares": 1.5922,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 266.93,
+      "stop_loss": 320.32,
+      "max_hold_date": "2026-07-02",
+      "daily_prices": {
+        "2026-07-01": {
+          "open": 315.2,
+          "high": 318.41,
+          "low": 305.31,
+          "close": 312.01,
+          "pnl_pct": 0.65
+        },
+        "2026-07-02": {
+          "open": 314.81,
+          "high": 316.29,
+          "low": 308.76,
+          "close": 309.39,
+          "pnl_pct": 1.48
+        }
+      },
+      "close_date": "2026-07-02",
+      "close_price": 309.39,
+      "final_pnl_pct": 1.48,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 3.12,
+      "position_usd": 210.78
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 36,
-    "win_trades": 21,
-    "win_rate": 58.3,
-    "total_realized_pnl_usd": 103.61,
-    "open_unrealized_pnl_usd": 25.86,
-    "portfolio_value": 2129.47,
-    "total_commission_usd": 72.0,
+    "total_trades": 39,
+    "win_trades": 23,
+    "win_rate": 59.0,
+    "total_realized_pnl_usd": 111.97,
+    "open_unrealized_pnl_usd": 42.58,
+    "portfolio_value": 2154.55,
+    "total_commission_usd": 78.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 5,
+    "skipped_no_cash": 2,
     "updated_at": "2026-07-02"
   }
 };

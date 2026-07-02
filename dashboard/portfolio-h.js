@@ -32,26 +32,17 @@ window.PORTFOLIO_H = {
       "take_profit": 46.75,
       "stop_loss": 56.1,
       "max_hold_date": "2026-07-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 52.93,
+          "low": 51.32,
+          "close": 52.67,
+          "pnl_pct": 4.24
+        }
+      },
       "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 29.01,
-      "allocated_usd": 500,
-      "shares": 17.2354,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 24.66,
-      "stop_loss": 29.59,
-      "max_hold_date": "2026-07-03",
-      "daily_prices": {},
-      "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 8.71
     },
     {
       "ticker": "LGND",
@@ -1041,10 +1032,10 @@ window.PORTFOLIO_H = {
     "win_trades": 9,
     "win_rate": 34.6,
     "total_realized_pnl_usd": 54.47,
-    "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2054.47,
+    "open_unrealized_pnl_usd": 8.71,
+    "portfolio_value": 2063.18,
     "total_commission_usd": 52.0,
-    "skipped_gap": 9,
+    "skipped_gap": 10,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
     "updated_at": "2026-07-02"

@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,22 +15,12 @@ window.PORTFOLIO_B = {
       "take_profit": 50.6,
       "stop_loss": 57.2,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {}
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 29.01,
-      "allocated_usd": 500,
-      "shares": 17,
-      "actual_position_usd": 493.17,
-      "entry_commission": 1.0,
-      "take_profit": 26.69,
-      "stop_loss": 30.17,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 52.71,
+          "pnl_pct": 4.16
+        }
+      }
     },
     {
       "ticker": "LGND",
@@ -45,7 +35,12 @@ window.PORTFOLIO_B = {
       "take_profit": 287.05,
       "stop_loss": 324.49,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 309.39,
+          "pnl_pct": 0.84
+        }
+      }
     },
     {
       "ticker": "MVBF",
@@ -60,7 +55,12 @@ window.PORTFOLIO_B = {
       "take_profit": 27.45,
       "stop_loss": 31.03,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 29.52,
+          "pnl_pct": 1.07
+        }
+      }
     },
     {
       "ticker": "DGII",
@@ -75,7 +75,12 @@ window.PORTFOLIO_B = {
       "take_profit": 68.19,
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 72.42,
+          "pnl_pct": 2.29
+        }
+      }
     },
     {
       "ticker": "SKWD",
@@ -90,7 +95,12 @@ window.PORTFOLIO_B = {
       "take_profit": 54.75,
       "stop_loss": 61.89,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 61.1,
+          "pnl_pct": -2.67
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -1479,18 +1489,46 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.46
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 493.17,
+      "entry_commission": 1.0,
+      "take_profit": 26.69,
+      "stop_loss": 30.17,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 29.99,
+          "high": 30.23,
+          "low": 29.19,
+          "close": 29.52,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-02",
+      "close_price": 30.17,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.73
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 35,
+    "total_trades": 36,
     "win_trades": 15,
-    "win_rate": 42.9,
-    "total_realized_pnl_usd": 43.89,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2043.89,
-    "total_commission_usd": 70.0,
-    "skipped_zero_shares": 1,
+    "win_rate": 41.7,
+    "total_realized_pnl_usd": 22.16,
+    "open_unrealized_pnl_usd": 28.45,
+    "portfolio_value": 2050.61,
     "updated_at": "2026-07-02"
   }
 };

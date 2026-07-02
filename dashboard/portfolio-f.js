@@ -85,27 +85,16 @@ window.PORTFOLIO_F = {
       "take_profit_2": 46.75,
       "stop_loss": 56.65,
       "max_hold_date": "2026-07-06",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 29.01,
-      "allocated_usd": 500,
-      "shares": 17,
-      "t1_shares": 8,
-      "t2_shares": 9,
-      "actual_position_usd": 493.17,
-      "entry_commission": 1.0,
-      "take_profit_1": 26.84,
-      "take_profit_2": 24.66,
-      "stop_loss": 29.88,
-      "max_hold_date": "2026-07-06",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 52.8,
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 52.93,
+          "low": 51.32,
+          "close": 52.69,
+          "pnl_pct": 4.2
+        }
+      }
     },
     {
       "ticker": "MVBF",
@@ -1257,10 +1246,10 @@ window.PORTFOLIO_F = {
     "win_trades": 10,
     "win_rate": 45.5,
     "total_realized_pnl_usd": 51.89,
-    "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2055.2,
+    "open_unrealized_pnl_usd": 23.1,
+    "portfolio_value": 2074.99,
     "total_commission_usd": 55.0,
-    "skipped_gap": 8,
+    "skipped_gap": 9,
     "skipped_zero_shares": 4,
     "updated_at": "2026-07-02"
   }
