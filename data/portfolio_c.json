@@ -89,7 +89,7 @@
       "take_profit": 68.19,
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
-      "day1_open": 74.0,
+      "day1_open": 73.97,
       "daily_prices": {
         "2026-07-02": {
           "close": 72.15,
@@ -99,7 +99,7 @@
       "position_usd": 211.28,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
-      "day1_gap_pct": -0.16
+      "day1_gap_pct": -0.2
     },
     {
       "ticker": "SKWD",

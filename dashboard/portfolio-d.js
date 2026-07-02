@@ -91,8 +91,8 @@ window.PORTFOLIO_D = {
         }
       },
       "gap_checked": true,
-      "day1_open": 74.0,
-      "day1_gap_pct": -0.16
+      "day1_open": 73.97,
+      "day1_gap_pct": -0.2
     }
   ],
   "closed_positions": [
