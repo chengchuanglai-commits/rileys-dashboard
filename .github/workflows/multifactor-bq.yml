@@ -51,16 +51,18 @@ jobs:
       - name: B-quant 回填(读归档,ATR定价+风险定额+周再平衡)
         run: python scripts/backfill-portfolio-bq.py
 
-      - name: B-AI — DeepSeek 分析多因子候选
-        continue-on-error: true
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: python scripts/generate-deepseek-multifactor.py
-
-      - name: B-AI 回填(DeepSeek决定+同定价)
-        continue-on-error: true
-        run: python scripts/backfill-portfolio-bai.py
+      # 【已停用 2026-07-03】B-AI DeepSeek 分析——每天烧~39分钟V4-pro的钱、结果还常因git冲突没保存(纯浪费)。
+      # bai腿+1.1%跟不赢指数,不值得。省一半DeepSeek成本(~10-15→~5-7元/天)。hds(shadow)那条有价值的腿另留。
+      # 要恢复:取消下面两步注释即可。
+      # - name: B-AI — DeepSeek 分析多因子候选
+      #   continue-on-error: true
+      #   env:
+      #     DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      #     FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      #   run: python scripts/generate-deepseek-multifactor.py
+      # - name: B-AI 回填(DeepSeek决定+同定价)
+      #   continue-on-error: true
+      #   run: python scripts/backfill-portfolio-bai.py
 
       - name: 动量/趋势选股(Minervini趋势模板+J Law M.E.T.A.,归档)
         env:
