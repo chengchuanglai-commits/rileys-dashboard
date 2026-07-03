@@ -2,8 +2,8 @@
   "date": "2026-07-03",
   "live": false,
   "connected": true,
-  "nav": 1000043.35,
-  "cash": 975767.38,
+  "nav": 1000043.62,
+  "cash": 975773.06,
   "positions": [
     {
       "sym": "NBIX",
@@ -192,5 +192,5 @@
   "note": "",
   "account": "DUQ627583",
   "total_unrealized_pnl": 32.75,
-  "updated_at": "2026-07-03 21:45"
+  "updated_at": "2026-07-03 21:50"
 }
