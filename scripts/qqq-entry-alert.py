@@ -12,6 +12,7 @@ import os, json
 TICKER = "QQQ"
 STATE = "data/qqq-alert-state.json"
 BREAKOUT = 748.65   # DeepSeek突破触发位(6月高点)
+PULLBACK = 707.0    # DeepSeek吸纳区上沿(固定,非漂移的50日线——50MA会随时间涨,用固定值才贴DeepSeek原意)
 ADD_USD = 300       # 每次加仓建议额
 
 
@@ -52,11 +53,11 @@ def run():
     if px <= BREAKOUT * 0.985:
         st["breakout"] = False
 
-    # 回调触发(DeepSeek: 回到50日线$700-707站稳=吸纳点)
-    if px >= ma200 and px <= ma50 and not st.get("pullback"):
-        alerts.append(f"🟢 QQQ ${px:.2f} 回调到50日线 ${ma50:.2f} → DeepSeek触发2:吸纳点,可加 ≈${ADD_USD}(RSI {rsi:.0f})")
+    # 回调触发(DeepSeek吸纳区上沿固定$707,不用漂移的50日线)
+    if px >= ma200 and px <= PULLBACK and not st.get("pullback"):
+        alerts.append(f"🟢 QQQ ${px:.2f} 跌进DeepSeek吸纳区(≤${PULLBACK:.0f}) → 触发2:吸纳点,可加 ≈${ADD_USD}(RSI {rsi:.0f})")
         st["pullback"] = True
-    if px >= ma50 * 1.015:
+    if px >= PULLBACK * 1.01:
         st["pullback"] = False
 
     os.makedirs("data", exist_ok=True)
