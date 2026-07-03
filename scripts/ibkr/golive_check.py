@@ -27,7 +27,7 @@ def gate_funded():
 
 
 def gate_lite():
-    return _flag("lite"), "IBKR Pro→Lite($0佣金)"
+    return _flag("lite"), "佣金优化(加拿大无Lite→已切阶梯式Tiered)"
 
 
 def gate_clean():
