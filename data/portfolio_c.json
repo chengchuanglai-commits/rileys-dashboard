@@ -2,53 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "OBT",
-      "name": "OBT",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 36.5,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 474.5,
-      "entry_commission": 1.0,
-      "take_profit": 33.58,
-      "stop_loss": 37.96,
-      "max_hold_date": "2026-07-01",
-      "day1_open": 36.55,
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 36.55,
-          "high": 37.19,
-          "low": 36.55,
-          "close": 36.89,
-          "pnl_pct": -1.07
-        },
-        "2026-06-26": {
-          "open": 37.02,
-          "high": 37.71,
-          "low": 36.5,
-          "close": 36.95,
-          "pnl_pct": -1.23
-        },
-        "2026-06-29": {
-          "open": 36.97,
-          "high": 37.7,
-          "low": 36.67,
-          "close": 37.24,
-          "pnl_pct": -2.03
-        },
-        "2026-06-30": {
-          "open": 37.04,
-          "high": 37.4,
-          "low": 36.55,
-          "close": 36.78,
-          "pnl_pct": -0.77
-        }
-      },
-      "position_usd": 210.43,
-      "unrealized_pnl_usd": -1.62
-    },
-    {
       "ticker": "SRRK",
       "name": "SRRK",
       "action": "SELL",
@@ -61,28 +14,18 @@
       "take_profit": 50.6,
       "stop_loss": 57.2,
       "max_hold_date": "2026-07-08",
-      "day1_open": null,
-      "daily_prices": {},
-      "position_usd": 212.12,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 29.01,
-      "allocated_usd": 500,
-      "shares": 17,
-      "actual_position_usd": 493.17,
-      "entry_commission": 1.0,
-      "take_profit": 26.69,
-      "stop_loss": 30.17,
-      "max_hold_date": "2026-07-08",
-      "day1_open": null,
-      "daily_prices": {},
-      "position_usd": 212.12,
-      "unrealized_pnl_usd": 0.0
+      "day1_open": 52.8,
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        }
+      },
+      "position_usd": 211.28,
+      "unrealized_pnl_usd": 0.46
     }
   ],
   "closed_positions": [
@@ -931,13 +874,13 @@
       "take_profit": 14.79,
       "stop_loss": 16.72,
       "max_hold_date": "2026-06-29",
-      "day1_open": 16.17,
+      "day1_open": 16.03,
       "daily_prices": {
         "2026-06-23": {
-          "open": 16.17,
-          "high": 17.5,
-          "low": 16.02,
-          "close": 16.67,
+          "open": 16.03,
+          "high": 17.35,
+          "low": 15.88,
+          "close": 16.53,
           "pnl_pct": -3.98
         }
       },
@@ -1062,20 +1005,20 @@
       "take_profit": 15.34,
       "stop_loss": 17.34,
       "max_hold_date": "2026-07-01",
-      "day1_open": 16.19,
+      "day1_open": 16.05,
       "daily_prices": {
         "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
+          "open": 16.05,
+          "high": 16.25,
+          "low": 15.48,
+          "close": 15.55,
+          "pnl_pct": 6.72
         },
         "2026-06-26": {
-          "open": 15.55,
-          "high": 15.7,
-          "low": 14.84,
-          "close": 15.23,
+          "open": 15.42,
+          "high": 15.56,
+          "low": 14.71,
+          "close": 15.1,
           "pnl_pct": 7.98
         }
       },
@@ -1086,6 +1029,66 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 16.79,
+      "position_usd": 210.43
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.5,
+      "entry_commission": 1.0,
+      "take_profit": 33.58,
+      "stop_loss": 37.96,
+      "max_hold_date": "2026-07-01",
+      "day1_open": 36.55,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "open": 37.02,
+          "high": 37.71,
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": -1.23
+        },
+        "2026-06-29": {
+          "open": 36.97,
+          "high": 37.7,
+          "low": 36.67,
+          "close": 37.24,
+          "pnl_pct": -2.03
+        },
+        "2026-06-30": {
+          "open": 37.04,
+          "high": 37.4,
+          "low": 36.55,
+          "close": 36.78,
+          "pnl_pct": -0.77
+        },
+        "2026-07-01": {
+          "open": 36.56,
+          "high": 37.97,
+          "low": 36.56,
+          "close": 37.64,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-01",
+      "close_price": 37.96,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.42,
       "position_usd": 210.43
     },
     {
@@ -1123,15 +1126,15 @@
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 24,
+    "total_trades": 25,
     "win_trades": 14,
-    "win_rate": 58.3,
-    "total_realized_pnl_usd": 121.23,
-    "open_unrealized_pnl_usd": -1.62,
-    "portfolio_value": 2119.61,
-    "total_commission_usd": 48.0,
-    "skipped_gap": 10,
+    "win_rate": 56.0,
+    "total_realized_pnl_usd": 112.81,
+    "open_unrealized_pnl_usd": 0.46,
+    "portfolio_value": 2113.27,
+    "total_commission_usd": 50.0,
+    "skipped_gap": 11,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-01"
+    "updated_at": "2026-07-03"
   }
 }

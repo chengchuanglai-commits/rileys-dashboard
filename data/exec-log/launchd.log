@@ -1147,3 +1147,287 @@ API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0
 Make sure API port on TWS/IBG is open
 [webhook] 发送失败(不影响主流程): <urlopen error [Errno 8] nodename nor servname provided, or not known>
 [2026-07-01 21:31:59] === done trade_open (exit 0) ===
+[2026-07-02 04:00:01] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-02",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[2026-07-02 04:00:09] === done trade_close (exit 0) ===
+[2026-07-02 04:30:00] === run review ===
+
+================================================================
+  统一组合 2026-07-02 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前5只: RVMD, AMD, ALAB, INTC, FTNT
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 平仓60/80笔,未到线,静默
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-02 04:33:49] === done review (exit 0) ===
+前向验证 2026-07-02 第6个交易日 | 三线组合 +1.27% | 无脑QQQ +2.58% | alpha -1.31% (book $20253, 持仓12只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-02 21:00:02] === run preflight ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-02 21:00:22] === done preflight (exit 0) ===
+[2026-07-02 21:10:05] === run preflight ===
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-02 21:10:11] === done preflight (exit 0) ===
+[2026-07-02 21:30:04] === run trade_open ===
+全局撤单后剩余挂单 0
+{
+  "date": "2026-07-02",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "ALAB",
+      "qty": 4,
+      "px": 439.6,
+      "usd": 1758.4
+    },
+    {
+      "sym": "AMD",
+      "qty": -6.0,
+      "px": 546.6,
+      "usd": 3279.6000000000004
+    },
+    {
+      "sym": "FTNT",
+      "qty": 12,
+      "px": 158.45,
+      "usd": 1901.3999999999999
+    },
+    {
+      "sym": "INTC",
+      "qty": 15,
+      "px": 129.1,
+      "usd": 1936.5
+    },
+    {
+      "sym": "NU",
+      "qty": -1.0,
+      "px": 13.56,
+      "usd": 13.56
+    },
+    {
+      "sym": "RVMD",
+      "qty": -17.0,
+      "px": 188.03,
+      "usd": 3196.51
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "ALAB",
+      "qty": 4,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "AMD",
+      "qty": -6.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FTNT",
+      "qty": 12,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "INTC",
+      "qty": 15,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NU",
+      "qty": -1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": -17.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+[2026-07-02 21:30:56] === done trade_open (exit 0) ===
+[2026-07-03 04:00:01] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-03",
+  "type": "close",
+  "live": true,
+  "exits": [
+    {
+      "sym": "INTC",
+      "qty": 15.0,
+      "close": 120.4000015258789,
+      "ma20": 123.12700004577637
+    }
+  ],
+  "placed": [
+    {
+      "sym": "INTC",
+      "status": "PendingSubmit"
+    }
+  ]
+}
+[2026-07-03 04:00:12] === done trade_close (exit 0) ===
+[2026-07-03 04:30:03] === run review ===
+
+================================================================
+  统一组合 2026-07-03 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前4只: AMD, RVMD, FFIV, ALAB
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 平仓64/80笔,未到线,静默
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-03 04:33:24] === done review (exit 0) ===
+前向验证 2026-07-03 第7个交易日 | 三线组合 +0.31% | 无脑QQQ +1.00% | alpha -0.69% (book $20061, 持仓12只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-03 21:10:03] === run preflight ===
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-03 21:10:06] === done preflight (exit 0) ===
+[2026-07-03 21:30:01] === run trade_open ===
+全局撤单后剩余挂单 0
+{
+  "date": "2026-07-03",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "ALAB",
+      "qty": 6,
+      "px": 409.6,
+      "usd": 2457.6000000000004
+    },
+    {
+      "sym": "AMD",
+      "qty": 1.0,
+      "px": 519.5,
+      "usd": 519.5
+    },
+    {
+      "sym": "FFIV",
+      "qty": 6,
+      "px": 408.14,
+      "usd": 2448.84
+    },
+    {
+      "sym": "FTNT",
+      "qty": -12.0,
+      "px": 155.08,
+      "usd": 1860.96
+    },
+    {
+      "sym": "INTC",
+      "qty": -15.0,
+      "px": 121.0,
+      "usd": 1815.0
+    },
+    {
+      "sym": "KSPI",
+      "qty": -1.0,
+      "px": 89.82,
+      "usd": 89.82
+    },
+    {
+      "sym": "RVMD",
+      "qty": 3.0,
+      "px": 189.44,
+      "usd": 568.3199999999999
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "ALAB",
+      "qty": 6,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "AMD",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FFIV",
+      "qty": 6,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FTNT",
+      "qty": -12.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "INTC",
+      "qty": -15.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "KSPI",
+      "qty": -1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 3.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+[2026-07-03 21:30:39] === done trade_open (exit 0) ===
