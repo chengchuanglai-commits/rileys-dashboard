@@ -1,0 +1,147 @@
+{
+  "date": "2026-07-03",
+  "model": "deepseek-v4-pro",
+  "signals": [],
+  "all_verdicts": [
+    {
+      "ticker": "INCY",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 116.86,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "CINF",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 192.03,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "ACGL",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 102.2,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "KSPI",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 89.82,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "KLAC",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 235.55,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "CNQ",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 39.64,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "GH",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 167.98,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "MFC",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 41.18,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "LYG",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 6.06,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "TSLA",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 393.45,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "TSM",
+      "action": "HOLD",
+      "mf_action": "BUY",
+      "current_price": 434.16,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "BN",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 43.43,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "BNH",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 15.05,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "BNJ",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 14.99,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "TEAM",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 83.84,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "INSM",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 111.6,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "SATS",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 101.49,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "WBD",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 26.48,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "SONY",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 20.79,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "ticker": "SNOW",
+      "action": "HOLD",
+      "mf_action": "SELL",
+      "current_price": 260.15,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  ]
+}
