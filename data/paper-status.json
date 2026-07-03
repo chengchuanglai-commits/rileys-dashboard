@@ -2,8 +2,8 @@
   "date": "2026-07-03",
   "live": false,
   "connected": true,
-  "nav": 1000043.77,
-  "cash": 975776.33,
+  "nav": 1000043.75,
+  "cash": 975775.92,
   "positions": [
     {
       "sym": "NBIX",
@@ -74,11 +74,11 @@
       "sym": "RVMD",
       "shares": 10.0,
       "avg_fill": 182.63,
-      "cur_price": null,
-      "change_pct": null,
-      "pnl_usd": null,
-      "today_price": null,
-      "slippage_pct": null,
+      "cur_price": 189.24000549316406,
+      "change_pct": 3.62,
+      "pnl_usd": 66.1,
+      "today_price": 189.24000549316406,
+      "slippage_pct": -3.49,
       "sim_price": 162.99,
       "delay_gap_pct": 12.05,
       "target_usd": 250.0
@@ -191,6 +191,6 @@
   "open_orders": 21,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -33.35,
-  "updated_at": "2026-07-03 22:50"
+  "total_unrealized_pnl": 32.75,
+  "updated_at": "2026-07-03 22:55"
 }
