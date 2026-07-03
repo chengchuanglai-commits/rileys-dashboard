@@ -2,8 +2,8 @@
   "date": "2026-07-04",
   "live": false,
   "connected": true,
-  "nav": 1000043.31,
-  "cash": 975766.47,
+  "nav": 1000043.34,
+  "cash": 975767.04,
   "positions": [
     {
       "sym": "NBIX",
@@ -113,11 +113,11 @@
       "sym": "FTNT",
       "shares": 12.0,
       "avg_fill": 158.17,
-      "cur_price": null,
-      "change_pct": null,
-      "pnl_usd": null,
-      "today_price": null,
-      "slippage_pct": null,
+      "cur_price": 156.25,
+      "change_pct": -1.21,
+      "pnl_usd": -23.04,
+      "today_price": 156.25,
+      "slippage_pct": 1.23,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -191,6 +191,6 @@
   "open_orders": 21,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": 55.79,
-  "updated_at": "2026-07-04 00:55"
+  "total_unrealized_pnl": 32.75,
+  "updated_at": "2026-07-04 01:00"
 }
