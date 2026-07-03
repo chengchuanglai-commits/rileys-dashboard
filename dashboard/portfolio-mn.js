@@ -151,6 +151,74 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "VEEV",
+      "name": "Veeva Systems Inc.",
+      "action": "BUY",
+      "signal_date": "2026-07-02",
+      "entry_price": 192.74,
+      "allocated_usd": 500,
+      "shares": 2.5942,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 221.65,
+      "stop_loss": 188.89,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {},
+      "position_usd": 211.91,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog Inc.",
+      "action": "BUY",
+      "signal_date": "2026-07-02",
+      "entry_price": 260.36,
+      "allocated_usd": 500,
+      "shares": 1.9204,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 299.41,
+      "stop_loss": 255.15,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {},
+      "position_usd": 211.91,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings Inc.",
+      "action": "BUY",
+      "signal_date": "2026-07-02",
+      "entry_price": 193.98,
+      "allocated_usd": 500,
+      "shares": 2.5776,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 223.08,
+      "stop_loss": 190.1,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {},
+      "position_usd": 211.91,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "action": "BUY",
+      "signal_date": "2026-07-02",
+      "entry_price": 219.72,
+      "allocated_usd": 500,
+      "shares": 2.2756,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 252.68,
+      "stop_loss": 215.33,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {},
+      "position_usd": 211.91,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2367,7 +2435,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 128.0,
     "skipped_gap": 34,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 70,
+    "skipped_no_cash": 74,
     "updated_at": "2026-07-03"
   }
 };

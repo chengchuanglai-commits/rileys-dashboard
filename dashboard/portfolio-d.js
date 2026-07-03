@@ -1,22 +1,7 @@
-// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {}
-    },
     {
       "ticker": "SRRK",
       "name": "SRRK",
@@ -30,22 +15,130 @@ window.PORTFOLIO_D = {
       "take_profit": 46.75,
       "stop_loss": 56.65,
       "max_hold_date": "2026-07-03",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 54.88,
+          "pnl_pct": 0.22
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 52.8,
+      "day1_gap_pct": -4.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 312.01,
+      "entry_commission": 1.0,
+      "take_profit": 265.21,
+      "stop_loss": 321.37,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 319.55,
+          "pnl_pct": -2.42
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 314.81,
+      "day1_gap_pct": 0.9
     },
     {
       "ticker": "MVBF",
       "name": "MVBF",
       "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 29.01,
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
       "allocated_usd": 500,
-      "shares": 17,
-      "actual_position_usd": 493.17,
+      "shares": 16,
+      "actual_position_usd": 477.44,
       "entry_commission": 1.0,
-      "take_profit": 24.66,
-      "stop_loss": 29.88,
-      "max_hold_date": "2026-07-03",
-      "daily_prices": {}
+      "take_profit": 25.36,
+      "stop_loss": 30.74,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 29.41,
+          "pnl_pct": 1.44
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 29.99,
+      "day1_gap_pct": 0.5
+    },
+    {
+      "ticker": "DGII",
+      "name": "DGII",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 74.12,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 444.72,
+      "entry_commission": 1.0,
+      "take_profit": 63.0,
+      "stop_loss": 76.34,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 72.15,
+          "pnl_pct": 2.66
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 74.0,
+      "day1_gap_pct": -0.16
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "take_profit": 271.62,
+      "stop_loss": 329.14,
+      "max_hold_date": "2026-07-07",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 319.55,
+          "pnl_pct": -0.0
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 314.81,
+      "day1_gap_pct": -1.48
+    },
+    {
+      "ticker": "UTMD",
+      "name": "UTMD",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 72.78,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 436.68,
+      "entry_commission": 1.0,
+      "take_profit": 61.86,
+      "stop_loss": 74.96,
+      "max_hold_date": "2026-07-07",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 72.78,
+          "pnl_pct": -0.0
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 70.68,
+      "day1_gap_pct": -2.89
     }
   ],
   "closed_positions": [
@@ -376,10 +469,10 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-10",
       "daily_prices": {
         "2026-06-09": {
-          "open": 39.43,
-          "high": 40.93,
-          "low": 39.37,
-          "close": 39.7,
+          "open": 39.2,
+          "high": 40.69,
+          "low": 39.14,
+          "close": 39.47,
           "pnl_pct": -3.0
         }
       },
@@ -762,10 +855,10 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-23": {
-          "open": 16.17,
-          "high": 17.5,
-          "low": 16.02,
-          "close": 16.67,
+          "open": 16.03,
+          "high": 17.35,
+          "low": 15.88,
+          "close": 16.53,
           "pnl_pct": -2.99
         }
       },
@@ -866,27 +959,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-25": {
-          "open": 16.19,
-          "high": 16.39,
-          "low": 15.61,
-          "close": 15.69,
-          "pnl_pct": 5.88
+          "open": 16.05,
+          "high": 16.25,
+          "low": 15.48,
+          "close": 15.55,
+          "pnl_pct": 6.72
         },
         "2026-06-26": {
-          "open": 15.55,
-          "high": 15.7,
-          "low": 14.84,
-          "close": 15.23,
-          "pnl_pct": 8.64
+          "open": 15.42,
+          "high": 15.56,
+          "low": 14.71,
+          "close": 15.1,
+          "pnl_pct": 9.42
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 15.23,
-      "final_pnl_pct": 8.64,
+      "close_price": 15.1,
+      "final_pnl_pct": 9.42,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 39.77
+      "realized_pnl_usd": 43.54
     },
     {
       "ticker": "OBT",
@@ -924,19 +1017,73 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -16.19
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 9.78,
+          "pnl_pct": 20.87
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 9.64,
+      "day1_gap_pct": -22.01,
+      "close_date": "2026-07-02",
+      "close_price": 9.78,
+      "final_pnl_pct": 20.87,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 104.37
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit": 50.58,
+      "stop_loss": 61.3,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 61.42,
+          "pnl_pct": -3.21
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 59.4,
+      "day1_gap_pct": -0.18,
+      "close_date": "2026-07-02",
+      "close_price": 61.42,
+      "final_pnl_pct": -3.21,
+      "close_reason": "stop_loss",
+      "realized_pnl_usd": -16.05
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 25,
-    "win_trades": 10,
-    "win_rate": 40.0,
-    "total_realized_pnl_usd": 61.74,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2061.74,
-    "total_commission_usd": 50.0,
-    "skipped_gap": 9,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-07-01"
+    "total_trades": 27,
+    "win_trades": 13,
+    "win_rate": 48.1,
+    "total_realized_pnl_usd": 153.83,
+    "open_unrealized_pnl_usd": 9.5,
+    "portfolio_value": 2163.33,
+    "skipped_gap": 11,
+    "updated_at": "2026-07-03"
   }
 };

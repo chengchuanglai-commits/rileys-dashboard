@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -18,15 +18,164 @@ window.PORTFOLIO_C = {
       "day1_open": 52.8,
       "daily_prices": {
         "2026-07-02": {
-          "open": 52.8,
-          "high": 54.94,
-          "low": 51.32,
           "close": 54.88,
           "pnl_pct": 0.22
         }
       },
-      "position_usd": 211.28,
-      "unrealized_pnl_usd": 0.46
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.46,
+      "gap_checked": true,
+      "day1_gap_pct": -4.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 312.01,
+      "entry_commission": 1.0,
+      "take_profit": 287.05,
+      "stop_loss": 324.49,
+      "max_hold_date": "2026-07-09",
+      "day1_open": 314.81,
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 319.55,
+          "pnl_pct": -2.42
+        }
+      },
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": 0.9
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16,
+      "actual_position_usd": 477.44,
+      "entry_commission": 1.0,
+      "take_profit": 27.45,
+      "stop_loss": 31.03,
+      "max_hold_date": "2026-07-09",
+      "day1_open": 29.99,
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 29.41,
+          "pnl_pct": 1.44
+        }
+      },
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": 0.5
+    },
+    {
+      "ticker": "DGII",
+      "name": "DGII",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 74.12,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 444.72,
+      "entry_commission": 1.0,
+      "take_profit": 68.19,
+      "stop_loss": 77.08,
+      "max_hold_date": "2026-07-09",
+      "day1_open": 74.0,
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 72.15,
+          "pnl_pct": 2.66
+        }
+      },
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -0.16
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit": 54.75,
+      "stop_loss": 61.89,
+      "max_hold_date": "2026-07-09",
+      "day1_open": 59.4,
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 61.42,
+          "pnl_pct": -3.21
+        }
+      },
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -0.18
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "take_profit": 293.99,
+      "stop_loss": 332.33,
+      "max_hold_date": "2026-07-10",
+      "day1_open": 314.81,
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 319.55,
+          "pnl_pct": -0.0
+        }
+      },
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -1.48
+    },
+    {
+      "ticker": "UTMD",
+      "name": "UTMD",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 72.78,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 436.68,
+      "entry_commission": 1.0,
+      "take_profit": 66.96,
+      "stop_loss": 75.69,
+      "max_hold_date": "2026-07-10",
+      "day1_open": 70.68,
+      "daily_prices": {
+        "2026-07-02": {
+          "close": 72.78,
+          "pnl_pct": -0.0
+        }
+      },
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -2.89
     }
   ],
   "closed_positions": [
@@ -364,38 +513,6 @@ window.PORTFOLIO_C = {
       "position_usd": 206.02
     },
     {
-      "ticker": "VLGEA",
-      "name": "VLGEA",
-      "action": "SELL",
-      "signal_date": "2026-06-08",
-      "entry_price": 39.33,
-      "allocated_usd": 500,
-      "shares": 12,
-      "actual_position_usd": 471.96,
-      "entry_commission": 1.0,
-      "take_profit": 36.18,
-      "stop_loss": 40.9,
-      "max_hold_date": "2026-06-15",
-      "day1_open": 39.43,
-      "daily_prices": {
-        "2026-06-09": {
-          "open": 39.43,
-          "high": 40.93,
-          "low": 39.37,
-          "close": 39.7,
-          "pnl_pct": -3.99
-        }
-      },
-      "close_date": "2026-06-09",
-      "close_price": 40.9,
-      "final_pnl_pct": -3.99,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -8.22,
-      "position_usd": 206.02
-    },
-    {
       "ticker": "TISI",
       "name": "TISI",
       "action": "SELL",
@@ -435,6 +552,45 @@ window.PORTFOLIO_C = {
       "position_usd": 206.02
     },
     {
+      "ticker": "VLGEA",
+      "name": "VLGEA",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 39.33,
+      "allocated_usd": 500,
+      "shares": 12,
+      "actual_position_usd": 471.96,
+      "entry_commission": 1.0,
+      "take_profit": 36.18,
+      "stop_loss": 40.9,
+      "max_hold_date": "2026-06-15",
+      "day1_open": 39.2,
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 39.2,
+          "high": 40.69,
+          "low": 39.14,
+          "close": 39.47,
+          "pnl_pct": -0.36
+        },
+        "2026-06-10": {
+          "open": 39.77,
+          "high": 41.25,
+          "low": 39.02,
+          "close": 41.12,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-10",
+      "close_price": 40.9,
+      "final_pnl_pct": -3.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.22,
+      "position_usd": 206.02
+    },
+    {
       "ticker": "TCNNF",
       "name": "TCNNF",
       "action": "SELL",
@@ -463,8 +619,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 16.5,
-      "position_usd": 206.03
+      "realized_pnl_usd": 16.57,
+      "position_usd": 206.85
     },
     {
       "ticker": "PBHC",
@@ -648,7 +804,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 9.24,
-      "position_usd": 210.99
+      "position_usd": 211.0
     },
     {
       "ticker": "AMRX",
@@ -701,7 +857,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -5.51,
-      "position_usd": 212.66
+      "position_usd": 212.67
     },
     {
       "ticker": "CTRE",
@@ -753,8 +909,8 @@ window.PORTFOLIO_C = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -7.97,
-      "position_usd": 212.66
+      "realized_pnl_usd": -7.98,
+      "position_usd": 212.67
     },
     {
       "ticker": "WSBC",
@@ -800,7 +956,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -8.54,
-      "position_usd": 213.42
+      "position_usd": 213.43
     },
     {
       "ticker": "SNEX",
@@ -860,7 +1016,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -8.54,
-      "position_usd": 213.42
+      "position_usd": 213.43
     },
     {
       "ticker": "SWBI",
@@ -892,7 +1048,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -8.53,
-      "position_usd": 214.34
+      "position_usd": 214.35
     },
     {
       "ticker": "WSBC",
@@ -931,7 +1087,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -8.57,
-      "position_usd": 214.34
+      "position_usd": 214.35
     },
     {
       "ticker": "SNEX",
@@ -991,7 +1147,7 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 17.15,
-      "position_usd": 214.34
+      "position_usd": 214.35
     },
     {
       "ticker": "SWBI",
@@ -1030,7 +1186,67 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 16.79,
-      "position_usd": 210.43
+      "position_usd": 210.44
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.5,
+      "entry_commission": 1.0,
+      "take_profit": 33.58,
+      "stop_loss": 37.96,
+      "max_hold_date": "2026-07-01",
+      "day1_open": 36.55,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "open": 37.02,
+          "high": 37.71,
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": -1.23
+        },
+        "2026-06-29": {
+          "open": 36.97,
+          "high": 37.7,
+          "low": 36.67,
+          "close": 37.24,
+          "pnl_pct": -2.03
+        },
+        "2026-06-30": {
+          "open": 37.04,
+          "high": 37.4,
+          "low": 36.55,
+          "close": 36.78,
+          "pnl_pct": -0.77
+        },
+        "2026-07-01": {
+          "open": 36.56,
+          "high": 37.97,
+          "low": 36.56,
+          "close": 37.64,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-01",
+      "close_price": 37.96,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.42,
+      "position_usd": 210.44
     },
     {
       "ticker": "OBT",
@@ -1130,12 +1346,10 @@ window.PORTFOLIO_C = {
     "total_trades": 25,
     "win_trades": 14,
     "win_rate": 56.0,
-    "total_realized_pnl_usd": 112.81,
-    "open_unrealized_pnl_usd": 0.46,
-    "portfolio_value": 2113.27,
-    "total_commission_usd": 50.0,
-    "skipped_gap": 11,
-    "skipped_zero_shares": 1,
+    "total_realized_pnl_usd": 112.87,
+    "open_unrealized_pnl_usd": -6.55,
+    "portfolio_value": 2106.32,
+    "skipped_gap": 12,
     "updated_at": "2026-07-03"
   }
 };

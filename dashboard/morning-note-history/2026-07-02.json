@@ -1,0 +1,125 @@
+{
+  "market": {
+    "sp500_futures_pct": 0.01,
+    "treasury_10y": 4.475,
+    "treasury_10y_change_bps": 10.3,
+    "eps_beat_rate": 65
+  },
+  "note": {
+    "market_overview": "S&P 500期货小幅上涨0.01%，市场持稳。美债收益率上升10.3个基点至4.475%，反映市场对利率政策的重新评估。整体市场流动性充足，风险情绪相对平衡。",
+    "macro": "美债10年期收益率继续上行，表明市场对中期通胀预期的担忧有所上升。联邦基金利率维持高位，经济增长数据稳定，但长期利率上升可能对科技股和成长股估值形成压力。",
+    "earnings": "当前财报季(Q2 2026)EPS超预期率约65%，部分公司表现出色。在限制条件下，小盘股中维瓦系统等公司有出现超预期情况，但整体小盘股财报数据仍在持续发布中。建议关注中盘成长企业的指引更新。",
+    "trade_ideas": "市场环境下，应优先关注：1)业绩稳定增长的小盘股，特别是非黑名单范围内的公司；2)受益于利率环境的价值型股票；3)关注下周财报季继续发布的数据反应；4)美债收益率上升背景下，防守型行业表现可能相对更优。"
+  },
+  "stock_picks": [
+    {
+      "ticker": "VEEV",
+      "name": "Veeva Systems Inc.",
+      "sector": "软件与IT服务",
+      "direction": "buy",
+      "buy_zone": "$75-82",
+      "target": "$95-100",
+      "stop_loss": "$70",
+      "reason": "Q1 EPS超预期4.67%，产品线强劲，云计算业务增长稳定，在合规企业软件领域领先地位突出"
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog Inc.",
+      "sector": "软件与IT服务",
+      "direction": "buy",
+      "buy_zone": "$95-105",
+      "target": "$130-140",
+      "stop_loss": "$90",
+      "reason": "云监控和分析平台高增长，客户续费率优异，财报季表现稳健，享受AI与云计算红利"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings Inc.",
+      "sector": "网络安全",
+      "direction": "buy",
+      "buy_zone": "$300-320",
+      "target": "$380-420",
+      "stop_loss": "$280",
+      "reason": "端点安全市场领导者，财报超预期，企业安全投入持续增加，政府合规需求支撑"
+    },
+    {
+      "ticker": "GTLB",
+      "name": "Gitlab Inc.",
+      "sector": "开发者工具",
+      "direction": "watch",
+      "buy_zone": "$45-55",
+      "target": "$70-75",
+      "stop_loss": "$40",
+      "reason": "DevOps平台增速加快，AI编程工具功能完善，Q2财报有望接近预期，关键指标需观察"
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "创意和数字媒体",
+      "direction": "buy",
+      "buy_zone": "$480-510",
+      "target": "$580-620",
+      "stop_loss": "$460",
+      "reason": "生成式AI集成加速，订阅模式稳定增长，企业用户留存率高，Firefly等新产品商业化进展良好"
+    },
+    {
+      "ticker": "BILL",
+      "name": "Bill.com Holdings Inc.",
+      "sector": "金融科技",
+      "direction": "buy",
+      "buy_zone": "$115-130",
+      "target": "$165-180",
+      "stop_loss": "$105",
+      "reason": "中小企业支付和财务管理SaaS龙头，付费客户数持续增长，现金流转正，收购DIVVY扩大市场"
+    },
+    {
+      "ticker": "MNST",
+      "name": "Monster Beverage Corp.",
+      "sector": "食品饮料",
+      "direction": "buy",
+      "buy_zone": "$42-48",
+      "target": "$62-68",
+      "stop_loss": "$38",
+      "reason": "能量饮料需求旺盛，国际市场渗透加速，毛利率扩张，体育营销效果显著，估值相对合理"
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research Corporation.",
+      "sector": "半导体设备",
+      "direction": "buy",
+      "buy_zone": "$610-650",
+      "target": "$780-850",
+      "stop_loss": "$580",
+      "reason": "晶圆代工产能扩张刺激设备需求，先进制程工艺投资增加，客户订单能见度良好"
+    },
+    {
+      "ticker": "UPS",
+      "name": "United Parcel Service Inc.",
+      "sector": "运输与物流",
+      "direction": "watch",
+      "buy_zone": "$155-170",
+      "target": "$210-230",
+      "stop_loss": "$145",
+      "reason": "物流网络优化降本增效，电商包裹量稳增，国际快递业务扭亏为盈，运费提价有望继续"
+    },
+    {
+      "ticker": "CSGP",
+      "name": "CoStar Group Inc.",
+      "sector": "房地产科技",
+      "direction": "buy",
+      "buy_zone": "$85-98",
+      "target": "$130-145",
+      "stop_loss": "$78",
+      "reason": "商业地产数据和分析平台垄断优势强，AI增强功能吸引高价值客户，SaaS转型进展良好，续费率稳定"
+    }
+  ],
+  "date": "2026-07-02",
+  "generated_at": "2026-07-02T09:31:00",
+  "market_status": "pre-market",
+  "api_cost_usd": 0.072,
+  "budget_usd": 5.0,
+  "cumulative_cost_usd": 2.1823,
+  "avg_daily_cost_usd": 0.089,
+  "estimated_days_left": 31,
+  "balance_warning": false
+}

@@ -1,0 +1,198 @@
+{
+  "date": "2026-07-02",
+  "universe_size": 497,
+  "scored": 474,
+  "factors": [
+    "value_ey",
+    "value_pb",
+    "qual_roe",
+    "qual_margin",
+    "qual_lowdebt",
+    "growth_rev",
+    "momentum"
+  ],
+  "buy": [
+    {
+      "ticker": "KSPI",
+      "action": "BUY",
+      "score": 80.1,
+      "price": 90.69,
+      "pe": 7.322804346913995,
+      "roe": 0.44344741377632485,
+      "momentum": 0.198
+    },
+    {
+      "ticker": "KLAC",
+      "action": "BUY",
+      "score": 78.9,
+      "price": 246.09,
+      "pe": 7.275087519465005,
+      "roe": 0.8907440967876512,
+      "momentum": 1.074
+    },
+    {
+      "ticker": "ACGL",
+      "action": "BUY",
+      "score": 73.6,
+      "price": 99.65,
+      "pe": 6.731730316091954,
+      "roe": 0.20480484267608298,
+      "momentum": 0.075
+    },
+    {
+      "ticker": "CINF",
+      "action": "BUY",
+      "score": 73.6,
+      "price": 189.85,
+      "pe": 9.55652689590134,
+      "roe": 0.17980825670123263,
+      "momentum": 0.179
+    },
+    {
+      "ticker": "CNQ",
+      "action": "BUY",
+      "score": 73.2,
+      "price": 39.65,
+      "pe": 12.44056395386715,
+      "roe": 0.22744974028331663,
+      "momentum": 0.205
+    },
+    {
+      "ticker": "INCY",
+      "action": "BUY",
+      "score": 73.1,
+      "price": 118.25,
+      "pe": 13.674943416467787,
+      "roe": 0.2930693401673611,
+      "momentum": 0.166
+    },
+    {
+      "ticker": "LYG",
+      "action": "BUY",
+      "score": 71.4,
+      "price": 6.09,
+      "pe": 12.193996934335443,
+      "roe": 0.10754586546131348,
+      "momentum": 0.207
+    },
+    {
+      "ticker": "GH",
+      "action": "BUY",
+      "score": 71.1,
+      "price": 168.62,
+      "pe": -39.93406158455931,
+      "roe": 0.8941109041409944,
+      "momentum": 0.623
+    },
+    {
+      "ticker": "EXE",
+      "action": "BUY",
+      "score": 70.8,
+      "price": 90.44,
+      "pe": 6.466223117446546,
+      "roe": 0.1739364784196413,
+      "momentum": -0.223
+    },
+    {
+      "ticker": "TSM",
+      "action": "BUY",
+      "score": 70.6,
+      "price": 449.22,
+      "pe": 32.40039640729801,
+      "roe": 0.3693259591723171,
+      "momentum": 0.55
+    }
+  ],
+  "sell": [
+    {
+      "ticker": "BN",
+      "action": "SELL",
+      "score": 20.8,
+      "price": 43.28,
+      "pe": 83.30277796666557,
+      "roe": 0.028396569105587955,
+      "momentum": -0.062
+    },
+    {
+      "ticker": "BNH",
+      "action": "SELL",
+      "score": 21.1,
+      "price": 15.01,
+      "pe": 83.30277796666557,
+      "roe": 0.028396569105587955,
+      "momentum": -0.047
+    },
+    {
+      "ticker": "TEAM",
+      "action": "SELL",
+      "score": 21.2,
+      "price": 83.54,
+      "pe": -99.56793284740776,
+      "roe": -0.16695225823939203,
+      "momentum": -0.308
+    },
+    {
+      "ticker": "TSLA",
+      "action": "SELL",
+      "score": 21.8,
+      "price": 398.85,
+      "pe": 334.1549690402477,
+      "roe": 0.04792077449738722,
+      "momentum": -0.071
+    },
+    {
+      "ticker": "BNJ",
+      "action": "SELL",
+      "score": 22.1,
+      "price": 14.87,
+      "pe": 83.30277796666557,
+      "roe": 0.028396569105587955,
+      "momentum": 0.004
+    },
+    {
+      "ticker": "SATS",
+      "action": "SELL",
+      "score": 24.3,
+      "price": 100.92,
+      "pe": -2.1848066751995443,
+      "roe": -0.367263632966338,
+      "momentum": 0.363
+    },
+    {
+      "ticker": "INSM",
+      "action": "SELL",
+      "score": 25.1,
+      "price": 111.07,
+      "pe": -17.43759004185832,
+      "roe": -0.367263632966338,
+      "momentum": -0.308
+    },
+    {
+      "ticker": "WBD",
+      "action": "SELL",
+      "score": 25.8,
+      "price": 26.66,
+      "pe": -37.60967741935483,
+      "roe": -0.04940098460487749,
+      "momentum": 0.087
+    },
+    {
+      "ticker": "SONY",
+      "action": "SELL",
+      "score": 26.1,
+      "price": 20.74,
+      "pe": -58.00116470102336,
+      "roe": -0.04052213822355305,
+      "momentum": -0.274
+    },
+    {
+      "ticker": "NKE",
+      "action": "SELL",
+      "score": 26.1,
+      "price": 43.87,
+      "pe": 29.709457777777782,
+      "roe": 0.16406591803995915,
+      "momentum": -0.308
+    }
+  ]
+}
