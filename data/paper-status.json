@@ -2,8 +2,8 @@
   "date": "2026-07-04",
   "live": false,
   "connected": true,
-  "nav": 1000043.34,
-  "cash": 975767.04,
+  "nav": 1000043.56,
+  "cash": 975771.92,
   "positions": [
     {
       "sym": "NBIX",
@@ -118,9 +118,9 @@
       "pnl_usd": -23.04,
       "today_price": 156.25,
       "slippage_pct": 1.23,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
+      "sim_price": 151.35,
+      "delay_gap_pct": 4.51,
+      "target_usd": 250.0
     },
     {
       "sym": "KSPI",
@@ -192,5 +192,5 @@
   "note": "",
   "account": "DUQ627583",
   "total_unrealized_pnl": 32.75,
-  "updated_at": "2026-07-04 01:00"
+  "updated_at": "2026-07-04 21:30"
 }
