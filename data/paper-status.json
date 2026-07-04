@@ -22,11 +22,11 @@
       "sym": "AU",
       "shares": 5.0,
       "avg_fill": 80.49,
-      "cur_price": null,
-      "change_pct": null,
-      "pnl_usd": null,
-      "today_price": null,
-      "slippage_pct": null,
+      "cur_price": 84.6500015258789,
+      "change_pct": 5.17,
+      "pnl_usd": 20.8,
+      "today_price": 84.6500015258789,
+      "slippage_pct": -4.91,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -191,6 +191,6 @@
   "open_orders": 20,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": 11.95,
-  "updated_at": "2026-07-04 23:05"
+  "total_unrealized_pnl": 32.75,
+  "updated_at": "2026-07-04 23:10"
 }
