@@ -1,19 +1,19 @@
 {
-  "date": "2026-07-03",
+  "date": "2026-07-05",
   "live": false,
   "connected": true,
-  "nav": 1000043.1,
-  "cash": 975761.94,
+  "nav": 1000043.56,
+  "cash": 975771.92,
   "positions": [
     {
       "sym": "NBIX",
       "shares": 2.0,
       "avg_fill": 165.7,
-      "cur_price": 174.25999450683594,
-      "change_pct": 5.17,
-      "pnl_usd": 17.12,
-      "today_price": 174.25999450683594,
-      "slippage_pct": -4.91,
+      "cur_price": null,
+      "change_pct": null,
+      "pnl_usd": null,
+      "today_price": null,
+      "slippage_pct": null,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -118,9 +118,9 @@
       "pnl_usd": -23.04,
       "today_price": 156.25,
       "slippage_pct": 1.23,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
+      "sim_price": 151.35,
+      "delay_gap_pct": 4.51,
+      "target_usd": 250.0
     },
     {
       "sym": "KSPI",
@@ -188,9 +188,9 @@
       "target_usd": 0
     }
   ],
-  "open_orders": 21,
+  "open_orders": 20,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": 32.75,
-  "updated_at": "2026-07-03 23:30"
+  "total_unrealized_pnl": 15.63,
+  "updated_at": "2026-07-05 00:20"
 }
