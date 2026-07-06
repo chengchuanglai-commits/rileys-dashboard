@@ -111,8 +111,8 @@
           "open": 29.28,
           "high": 29.77,
           "low": 28.7,
-          "close": 29.23,
-          "pnl_pct": 2.04
+          "close": 28.91,
+          "pnl_pct": 3.12
         }
       },
       "gap_checked": true,
@@ -139,8 +139,8 @@
           "open": 72.21,
           "high": 75.31,
           "low": 72.05,
-          "close": 74.29,
-          "pnl_pct": -0.23
+          "close": 73.22,
+          "pnl_pct": 1.21
         }
       },
       "gap_checked": true,
@@ -165,10 +165,10 @@
       "daily_prices": {
         "2026-07-06": {
           "open": 318.31,
-          "high": 321.89,
+          "high": 322.31,
           "low": 315.76,
-          "close": 318.01,
-          "pnl_pct": 0.48
+          "close": 320.42,
+          "pnl_pct": -0.27
         }
       },
       "gap_checked": true,
@@ -195,8 +195,8 @@
           "open": 29.28,
           "high": 29.77,
           "low": 28.7,
-          "close": 29.23,
-          "pnl_pct": 0.61
+          "close": 28.91,
+          "pnl_pct": 1.7
         }
       },
       "gap_checked": true,
@@ -217,7 +217,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-07-09",
       "regime": "neutral",
-      "vix": 15.79,
+      "vix": 15.59,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -236,7 +236,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-07-09",
       "regime": "neutral",
-      "vix": 15.79,
+      "vix": 15.59,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1101,19 +1101,19 @@
         },
         "2026-07-06": {
           "open": 54.68,
-          "high": 55.65,
+          "high": 56.0,
           "low": 54.0,
-          "close": 55.62,
-          "pnl_pct": -1.13
+          "close": 55.36,
+          "pnl_pct": -0.65
         }
       },
       "close_date": "2026-07-06",
-      "close_price": 55.62,
-      "final_pnl_pct": -1.13,
+      "close_price": 55.36,
+      "final_pnl_pct": -0.65,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -7.59
+      "realized_pnl_usd": -5.22
     },
     {
       "ticker": "LGND",
@@ -1134,9 +1134,9 @@
       "daily_prices": {
         "2026-07-06": {
           "open": 318.31,
-          "high": 321.89,
+          "high": 322.31,
           "low": 315.76,
-          "close": 318.01,
+          "close": 320.42,
           "pnl_pct": -3.0
         }
       },
@@ -1169,7 +1169,7 @@
           "open": 61.0,
           "high": 61.37,
           "low": 59.29,
-          "close": 59.4,
+          "close": 60.2,
           "pnl_pct": -3.01
         }
       },
@@ -1187,9 +1187,9 @@
     "total_trades": 24,
     "win_trades": 9,
     "win_rate": 37.5,
-    "total_realized_pnl_usd": 44.34,
-    "open_unrealized_pnl_usd": 12.61,
-    "portfolio_value": 2056.95,
+    "total_realized_pnl_usd": 46.71,
+    "open_unrealized_pnl_usd": 27.22,
+    "portfolio_value": 2073.93,
     "total_commission_usd": 48.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

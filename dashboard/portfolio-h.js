@@ -60,14 +60,14 @@ window.PORTFOLIO_H = {
       "daily_prices": {
         "2026-07-06": {
           "open": 318.31,
-          "high": 321.89,
+          "high": 322.31,
           "low": 315.76,
-          "close": 318.01,
-          "pnl_pct": 0.48
+          "close": 320.42,
+          "pnl_pct": -0.27
         }
       },
       "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.99
+      "unrealized_pnl_usd": -0.55
     },
     {
       "ticker": "MVBF",
@@ -87,12 +87,12 @@ window.PORTFOLIO_H = {
           "open": 29.28,
           "high": 29.77,
           "low": 28.7,
-          "close": 29.23,
-          "pnl_pct": 0.61
+          "close": 28.91,
+          "pnl_pct": 1.7
         }
       },
       "position_usd": 205.45,
-      "unrealized_pnl_usd": 1.25
+      "unrealized_pnl_usd": 3.49
     },
     {
       "ticker": "LGND",
@@ -108,7 +108,7 @@ window.PORTFOLIO_H = {
       "stop_loss": 325.94,
       "max_hold_date": "2026-07-08",
       "daily_prices": {},
-      "position_usd": 205.0,
+      "position_usd": 205.51,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -125,7 +125,7 @@ window.PORTFOLIO_H = {
       "stop_loss": 30.0,
       "max_hold_date": "2026-07-08",
       "daily_prices": {},
-      "position_usd": 205.0,
+      "position_usd": 205.51,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1057,9 +1057,9 @@ window.PORTFOLIO_H = {
       "daily_prices": {
         "2026-07-06": {
           "open": 318.31,
-          "high": 321.89,
+          "high": 322.31,
           "low": 315.76,
-          "close": 318.01,
+          "close": 320.42,
           "pnl_pct": -2.0
         }
       },
@@ -1090,17 +1090,17 @@ window.PORTFOLIO_H = {
           "open": 29.28,
           "high": 29.77,
           "low": 28.7,
-          "close": 29.23,
-          "pnl_pct": 2.04
+          "close": 28.91,
+          "pnl_pct": 3.12
         }
       },
       "close_date": "2026-07-06",
-      "close_price": 29.23,
-      "final_pnl_pct": 2.04,
+      "close_price": 28.91,
+      "final_pnl_pct": 3.12,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.19,
+      "realized_pnl_usd": 6.41,
       "position_usd": 205.45
     },
     {
@@ -1121,17 +1121,17 @@ window.PORTFOLIO_H = {
           "open": 72.21,
           "high": 75.31,
           "low": 72.05,
-          "close": 74.29,
-          "pnl_pct": -0.23
+          "close": 73.22,
+          "pnl_pct": 1.21
         }
       },
       "close_date": "2026-07-06",
-      "close_price": 74.29,
-      "final_pnl_pct": -0.23,
+      "close_price": 73.22,
+      "final_pnl_pct": 1.21,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.47,
+      "realized_pnl_usd": 2.49,
       "position_usd": 205.45
     },
     {
@@ -1152,7 +1152,7 @@ window.PORTFOLIO_H = {
           "open": 61.0,
           "high": 61.37,
           "low": 59.29,
-          "close": 59.4,
+          "close": 60.2,
           "pnl_pct": -2.0
         }
       },
@@ -1169,11 +1169,11 @@ window.PORTFOLIO_H = {
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
     "total_trades": 30,
-    "win_trades": 10,
-    "win_rate": 33.3,
-    "total_realized_pnl_usd": 49.97,
-    "open_unrealized_pnl_usd": 2.69,
-    "portfolio_value": 2052.66,
+    "win_trades": 11,
+    "win_rate": 36.7,
+    "total_realized_pnl_usd": 55.15,
+    "open_unrealized_pnl_usd": 3.39,
+    "portfolio_value": 2058.54,
     "total_commission_usd": 60.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 0,
