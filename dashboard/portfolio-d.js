@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-07",
       "daily_prices": {
         "2026-07-06": {
-          "close": 318.27,
-          "pnl_pct": 0.4
+          "close": 318.01,
+          "pnl_pct": 0.48
         }
       },
       "gap_checked": true,
@@ -40,8 +40,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-07",
       "daily_prices": {
         "2026-07-06": {
-          "close": 28.85,
-          "pnl_pct": 1.9
+          "close": 29.23,
+          "pnl_pct": 0.61
         }
       },
       "gap_checked": true,
@@ -63,8 +63,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-06": {
-          "close": 318.27,
-          "pnl_pct": 0.4
+          "close": 318.01,
+          "pnl_pct": 0.48
         }
       },
       "gap_checked": true,
@@ -86,8 +86,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-06": {
-          "close": 28.85,
-          "pnl_pct": 1.9
+          "close": 29.23,
+          "pnl_pct": 0.61
         }
       },
       "gap_checked": true,
@@ -990,7 +990,7 @@ window.PORTFOLIO_D = {
           "open": 318.31,
           "high": 321.89,
           "low": 315.76,
-          "close": 318.27,
+          "close": 318.01,
           "pnl_pct": -3.0
         }
       },
@@ -1020,17 +1020,17 @@ window.PORTFOLIO_D = {
           "open": 29.28,
           "high": 29.77,
           "low": 28.7,
-          "close": 28.85,
-          "pnl_pct": 3.32
+          "close": 29.23,
+          "pnl_pct": 2.04
         }
       },
       "close_date": "2026-07-06",
-      "close_price": 28.85,
-      "final_pnl_pct": 3.32,
+      "close_price": 29.23,
+      "final_pnl_pct": 2.04,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 13.85
+      "realized_pnl_usd": 7.74
     },
     {
       "ticker": "DGII",
@@ -1050,17 +1050,17 @@ window.PORTFOLIO_D = {
           "open": 72.21,
           "high": 75.31,
           "low": 72.05,
-          "close": 74.45,
-          "pnl_pct": -0.45
+          "close": 74.29,
+          "pnl_pct": -0.23
         }
       },
       "close_date": "2026-07-06",
-      "close_price": 74.45,
-      "final_pnl_pct": -0.45,
+      "close_price": 74.29,
+      "final_pnl_pct": -0.23,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.0
+      "realized_pnl_usd": -3.02
     },
     {
       "ticker": "SKWD",
@@ -1079,8 +1079,8 @@ window.PORTFOLIO_D = {
         "2026-07-06": {
           "open": 61.0,
           "high": 61.37,
-          "low": 59.95,
-          "close": 60.21,
+          "low": 59.29,
+          "close": 59.4,
           "pnl_pct": -3.01
         }
       },
@@ -1142,28 +1142,28 @@ window.PORTFOLIO_D = {
           "pnl_pct": 0.22
         },
         "2026-07-06": {
-          "close": 54.81,
-          "pnl_pct": 0.35
+          "close": 55.62,
+          "pnl_pct": -1.13
         }
       },
       "gap_checked": true,
       "day1_open": 54.68,
       "day1_gap_pct": -0.58,
       "close_date": "2026-07-06",
-      "close_price": 54.81,
-      "final_pnl_pct": 0.35,
+      "close_price": 55.62,
+      "final_pnl_pct": -1.13,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 1.73
+      "realized_pnl_usd": -5.64
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 31,
-    "win_trades": 15,
-    "win_rate": 48.4,
-    "total_realized_pnl_usd": 153.77,
-    "open_unrealized_pnl_usd": 23.0,
-    "portfolio_value": 2176.77,
+    "win_trades": 14,
+    "win_rate": 45.2,
+    "total_realized_pnl_usd": 141.27,
+    "open_unrealized_pnl_usd": 10.9,
+    "portfolio_value": 2152.17,
     "skipped_gap": 11,
     "updated_at": "2026-07-07"
   }

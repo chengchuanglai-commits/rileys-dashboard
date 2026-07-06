@@ -111,8 +111,8 @@ window.PORTFOLIO_E = {
           "open": 29.28,
           "high": 29.77,
           "low": 28.7,
-          "close": 28.85,
-          "pnl_pct": 3.32
+          "close": 29.23,
+          "pnl_pct": 2.04
         }
       },
       "gap_checked": true,
@@ -139,8 +139,8 @@ window.PORTFOLIO_E = {
           "open": 72.21,
           "high": 75.31,
           "low": 72.05,
-          "close": 74.45,
-          "pnl_pct": -0.45
+          "close": 74.29,
+          "pnl_pct": -0.23
         }
       },
       "gap_checked": true,
@@ -167,8 +167,8 @@ window.PORTFOLIO_E = {
           "open": 318.31,
           "high": 321.89,
           "low": 315.76,
-          "close": 318.27,
-          "pnl_pct": 0.4
+          "close": 318.01,
+          "pnl_pct": 0.48
         }
       },
       "gap_checked": true,
@@ -195,8 +195,8 @@ window.PORTFOLIO_E = {
           "open": 29.28,
           "high": 29.77,
           "low": 28.7,
-          "close": 28.85,
-          "pnl_pct": 1.9
+          "close": 29.23,
+          "pnl_pct": 0.61
         }
       },
       "gap_checked": true,
@@ -217,7 +217,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-09",
       "regime": "neutral",
-      "vix": 15.91,
+      "vix": 15.79,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -236,7 +236,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-09",
       "regime": "neutral",
-      "vix": 15.91,
+      "vix": 15.79,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1101,19 +1101,19 @@ window.PORTFOLIO_E = {
         },
         "2026-07-06": {
           "open": 54.68,
-          "high": 55.62,
+          "high": 55.65,
           "low": 54.0,
-          "close": 54.83,
-          "pnl_pct": 0.31
+          "close": 55.62,
+          "pnl_pct": -1.13
         }
       },
       "close_date": "2026-07-06",
-      "close_price": 54.83,
-      "final_pnl_pct": 0.31,
+      "close_price": 55.62,
+      "final_pnl_pct": -1.13,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.47
+      "realized_pnl_usd": -7.59
     },
     {
       "ticker": "LGND",
@@ -1136,7 +1136,7 @@ window.PORTFOLIO_E = {
           "open": 318.31,
           "high": 321.89,
           "low": 315.76,
-          "close": 318.27,
+          "close": 318.01,
           "pnl_pct": -3.0
         }
       },
@@ -1168,8 +1168,8 @@ window.PORTFOLIO_E = {
         "2026-07-06": {
           "open": 61.0,
           "high": 61.37,
-          "low": 59.95,
-          "close": 60.21,
+          "low": 59.29,
+          "close": 59.4,
           "pnl_pct": -3.01
         }
       },
@@ -1187,9 +1187,9 @@ window.PORTFOLIO_E = {
     "total_trades": 24,
     "win_trades": 9,
     "win_rate": 37.5,
-    "total_realized_pnl_usd": 51.46,
-    "open_unrealized_pnl_usd": 23.93,
-    "portfolio_value": 2075.39,
+    "total_realized_pnl_usd": 44.34,
+    "open_unrealized_pnl_usd": 12.61,
+    "portfolio_value": 2056.95,
     "total_commission_usd": 48.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
