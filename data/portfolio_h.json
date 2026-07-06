@@ -47,74 +47,6 @@
       "ticker": "LGND",
       "name": "LGND",
       "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 312.01,
-      "allocated_usd": 500,
-      "shares": 1.6025,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 265.21,
-      "stop_loss": 318.25,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {},
-      "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 29.84,
-      "allocated_usd": 500,
-      "shares": 16.756,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 25.36,
-      "stop_loss": 30.44,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {},
-      "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "DGII",
-      "name": "DGII",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 74.12,
-      "allocated_usd": 500,
-      "shares": 6.7458,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 63.0,
-      "stop_loss": 75.6,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {},
-      "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 59.51,
-      "allocated_usd": 500,
-      "shares": 8.4019,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 50.58,
-      "stop_loss": 60.7,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {},
-      "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
       "signal_date": "2026-07-03",
       "entry_price": 319.55,
       "allocated_usd": 500,
@@ -124,9 +56,17 @@
       "take_profit": 271.62,
       "stop_loss": 325.94,
       "max_hold_date": "2026-07-07",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 318.31,
+          "high": 321.89,
+          "low": 315.76,
+          "close": 318.27,
+          "pnl_pct": 0.4
+        }
+      },
       "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 0.82
     },
     {
       "ticker": "MVBF",
@@ -141,26 +81,17 @@
       "take_profit": 25.0,
       "stop_loss": 30.0,
       "max_hold_date": "2026-07-07",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.85,
+          "pnl_pct": 1.9
+        }
+      },
       "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "UTMD",
-      "name": "UTMD",
-      "action": "SELL",
-      "signal_date": "2026-07-03",
-      "entry_price": 72.78,
-      "allocated_usd": 500,
-      "shares": 6.87,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 61.86,
-      "stop_loss": 74.24,
-      "max_hold_date": "2026-07-07",
-      "daily_prices": {},
-      "position_usd": 205.45,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.9
     },
     {
       "ticker": "LGND",
@@ -176,7 +107,24 @@
       "stop_loss": 325.94,
       "max_hold_date": "2026-07-08",
       "daily_prices": {},
-      "position_usd": 205.45,
+      "position_usd": 205.21,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17.001,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 25.0,
+      "stop_loss": 30.0,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {},
+      "position_usd": 205.21,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1091,20 +1039,144 @@
       "commission_total": 2.0,
       "realized_pnl_usd": -4.08,
       "position_usd": 203.93
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1.6025,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 265.21,
+      "stop_loss": 318.25,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 318.31,
+          "high": 321.89,
+          "low": 315.76,
+          "close": 318.27,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-06",
+      "close_price": 318.25,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 205.45
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16.756,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 25.36,
+      "stop_loss": 30.44,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.85,
+          "pnl_pct": 3.32
+        }
+      },
+      "close_date": "2026-07-06",
+      "close_price": 28.85,
+      "final_pnl_pct": 3.32,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 6.82,
+      "position_usd": 205.45
+    },
+    {
+      "ticker": "DGII",
+      "name": "DGII",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 74.12,
+      "allocated_usd": 500,
+      "shares": 6.7458,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 63.0,
+      "stop_loss": 75.6,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
+          "close": 74.45,
+          "pnl_pct": -0.45
+        }
+      },
+      "close_date": "2026-07-06",
+      "close_price": 74.45,
+      "final_pnl_pct": -0.45,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.92,
+      "position_usd": 205.45
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8.4019,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 50.58,
+      "stop_loss": 60.7,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 61.0,
+          "high": 61.37,
+          "low": 59.95,
+          "close": 60.21,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-06",
+      "close_price": 60.7,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 205.45
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 26,
-    "win_trades": 9,
-    "win_rate": 34.6,
-    "total_realized_pnl_usd": 54.47,
-    "open_unrealized_pnl_usd": 0.45,
-    "portfolio_value": 2054.92,
-    "total_commission_usd": 52.0,
-    "skipped_gap": 10,
+    "total_trades": 30,
+    "win_trades": 10,
+    "win_rate": 33.3,
+    "total_realized_pnl_usd": 52.15,
+    "open_unrealized_pnl_usd": 5.18,
+    "portfolio_value": 2057.33,
+    "total_commission_usd": 60.0,
+    "skipped_gap": 11,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 1,
+    "skipped_no_cash": 0,
     "updated_at": "2026-07-06"
   }
 }

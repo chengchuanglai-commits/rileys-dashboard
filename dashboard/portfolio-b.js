@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -22,6 +22,10 @@ window.PORTFOLIO_B = {
           "low": 51.32,
           "close": 54.88,
           "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "close": 54.81,
+          "pnl_pct": 0.35
         }
       }
     },
@@ -38,7 +42,12 @@ window.PORTFOLIO_B = {
       "take_profit": 287.05,
       "stop_loss": 324.49,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 318.27,
+          "pnl_pct": -2.01
+        }
+      }
     },
     {
       "ticker": "MVBF",
@@ -53,7 +62,12 @@ window.PORTFOLIO_B = {
       "take_profit": 27.45,
       "stop_loss": 31.03,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 28.85,
+          "pnl_pct": 3.32
+        }
+      }
     },
     {
       "ticker": "DGII",
@@ -68,7 +82,12 @@ window.PORTFOLIO_B = {
       "take_profit": 68.19,
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 74.45,
+          "pnl_pct": -0.45
+        }
+      }
     },
     {
       "ticker": "SKWD",
@@ -83,7 +102,12 @@ window.PORTFOLIO_B = {
       "take_profit": 54.75,
       "stop_loss": 61.89,
       "max_hold_date": "2026-07-09",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 60.21,
+          "pnl_pct": -1.18
+        }
+      }
     },
     {
       "ticker": "LGND",
@@ -98,7 +122,12 @@ window.PORTFOLIO_B = {
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-10",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 318.27,
+          "pnl_pct": 0.4
+        }
+      }
     },
     {
       "ticker": "MVBF",
@@ -113,7 +142,12 @@ window.PORTFOLIO_B = {
       "take_profit": 27.06,
       "stop_loss": 30.59,
       "max_hold_date": "2026-07-10",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 28.85,
+          "pnl_pct": 1.9
+        }
+      }
     },
     {
       "ticker": "UTMD",
@@ -128,7 +162,12 @@ window.PORTFOLIO_B = {
       "take_profit": 66.96,
       "stop_loss": 75.69,
       "max_hold_date": "2026-07-10",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 71.5,
+          "pnl_pct": 1.76
+        }
+      }
     },
     {
       "ticker": "LGND",
@@ -143,7 +182,12 @@ window.PORTFOLIO_B = {
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-13",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 318.27,
+          "pnl_pct": 0.4
+        }
+      }
     },
     {
       "ticker": "MVBF",
@@ -158,7 +202,12 @@ window.PORTFOLIO_B = {
       "take_profit": 27.06,
       "stop_loss": 30.59,
       "max_hold_date": "2026-07-13",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "close": 28.85,
+          "pnl_pct": 1.9
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -1592,10 +1641,8 @@ window.PORTFOLIO_B = {
     "win_trades": 15,
     "win_rate": 41.7,
     "total_realized_pnl_usd": 22.16,
-    "open_unrealized_pnl_usd": 0.09,
-    "portfolio_value": 2022.25,
-    "total_commission_usd": 72.0,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-07-06"
+    "open_unrealized_pnl_usd": 31.95,
+    "portfolio_value": 2054.11,
+    "updated_at": "2026-07-07"
   }
 };

@@ -70,33 +70,6 @@ window.PORTFOLIO_F = {
       }
     },
     {
-      "ticker": "SRRK",
-      "name": "SRRK",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 55.0,
-      "allocated_usd": 500,
-      "shares": 9,
-      "t1_shares": 4,
-      "t2_shares": 5,
-      "actual_position_usd": 495.0,
-      "entry_commission": 1.0,
-      "take_profit_1": 50.88,
-      "take_profit_2": 46.75,
-      "stop_loss": 56.65,
-      "max_hold_date": "2026-07-06",
-      "day1_open": 52.8,
-      "daily_prices": {
-        "2026-07-02": {
-          "open": 52.8,
-          "high": 54.94,
-          "low": 51.32,
-          "close": 54.88,
-          "pnl_pct": 0.22
-        }
-      }
-    },
-    {
       "ticker": "MVBF",
       "name": "MVBF",
       "action": "SELL",
@@ -113,7 +86,15 @@ window.PORTFOLIO_F = {
       "stop_loss": 30.74,
       "max_hold_date": "2026-07-07",
       "day1_open": null,
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.85,
+          "pnl_pct": 3.32
+        }
+      }
     },
     {
       "ticker": "DGII",
@@ -132,26 +113,15 @@ window.PORTFOLIO_F = {
       "stop_loss": 76.34,
       "max_hold_date": "2026-07-07",
       "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 59.51,
-      "allocated_usd": 500,
-      "shares": 8,
-      "t1_shares": 4,
-      "t2_shares": 4,
-      "actual_position_usd": 476.08,
-      "entry_commission": 1.0,
-      "take_profit_1": 55.05,
-      "take_profit_2": 50.58,
-      "stop_loss": 61.3,
-      "max_hold_date": "2026-07-07",
-      "day1_open": null,
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
+          "close": 74.45,
+          "pnl_pct": -0.45
+        }
+      }
     },
     {
       "ticker": "MVBF",
@@ -169,25 +139,33 @@ window.PORTFOLIO_F = {
       "take_profit_2": 25.0,
       "stop_loss": 30.29,
       "max_hold_date": "2026-07-08",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 29.28,
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.85,
+          "pnl_pct": 1.9
+        }
+      }
     },
     {
-      "ticker": "UTMD",
-      "name": "UTMD",
+      "ticker": "MVBF",
+      "name": "MVBF",
       "action": "SELL",
-      "signal_date": "2026-07-03",
-      "entry_price": 72.78,
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
       "allocated_usd": 500,
-      "shares": 6,
-      "t1_shares": 3,
-      "t2_shares": 3,
-      "actual_position_usd": 436.68,
+      "shares": 17,
+      "t1_shares": 8,
+      "t2_shares": 9,
+      "actual_position_usd": 499.97,
       "entry_commission": 1.0,
-      "take_profit_1": 67.32,
-      "take_profit_2": 61.86,
-      "stop_loss": 74.96,
-      "max_hold_date": "2026-07-08",
+      "take_profit_1": 27.2,
+      "take_profit_2": 25.0,
+      "stop_loss": 30.29,
+      "max_hold_date": "2026-07-09",
       "day1_open": null,
       "daily_prices": {}
     }
@@ -1276,18 +1254,107 @@ window.PORTFOLIO_F = {
       "commission_total": 2.0,
       "realized_pnl_usd": -16.17,
       "sl_unified": true
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "t1_shares": 4,
+      "t2_shares": 5,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit_1": 50.88,
+      "take_profit_2": 46.75,
+      "stop_loss": 56.65,
+      "max_hold_date": "2026-07-06",
+      "day1_open": 52.8,
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "open": 54.68,
+          "high": 55.62,
+          "low": 54.0,
+          "close": 54.78,
+          "pnl_pct": 0.4
+        }
+      },
+      "t1_exit_date": "2026-07-06",
+      "t1_exit_price": 54.78,
+      "t1_exit_reason": "max_hold",
+      "t2_exit_date": "2026-07-06",
+      "t2_exit_price": 54.78,
+      "t2_exit_reason": "max_hold",
+      "t1_gross_pnl": 0.88,
+      "t2_gross_pnl": 1.1,
+      "close_date": "2026-07-06",
+      "close_reason": "max_hold+max_hold",
+      "final_pnl_pct": 0.4,
+      "commission_total": 3.0,
+      "realized_pnl_usd": -1.02,
+      "sl_unified": false
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "t1_shares": 4,
+      "t2_shares": 4,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit_1": 55.05,
+      "take_profit_2": 50.58,
+      "stop_loss": 61.3,
+      "max_hold_date": "2026-07-07",
+      "day1_open": null,
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 61.0,
+          "high": 61.37,
+          "low": 59.95,
+          "close": 60.21,
+          "pnl_pct": -1.18
+        }
+      },
+      "t1_exit_date": "2026-07-06",
+      "t1_exit_price": 61.3,
+      "t1_exit_reason": "stop_loss",
+      "t2_exit_date": "2026-07-06",
+      "t2_exit_price": 61.3,
+      "t2_exit_reason": "stop_loss",
+      "t1_gross_pnl": -7.16,
+      "t2_gross_pnl": -7.16,
+      "close_date": "2026-07-06",
+      "close_reason": "stop_loss+stop_loss",
+      "final_pnl_pct": -3.01,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -16.32,
+      "sl_unified": true
     }
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 22,
+    "total_trades": 24,
     "win_trades": 10,
-    "win_rate": 45.5,
-    "total_realized_pnl_usd": 51.89,
-    "open_unrealized_pnl_usd": 3.4,
-    "portfolio_value": 2055.29,
-    "total_commission_usd": 55.0,
-    "skipped_gap": 9,
+    "win_rate": 41.7,
+    "total_realized_pnl_usd": 34.55,
+    "open_unrealized_pnl_usd": 23.66,
+    "portfolio_value": 2058.21,
+    "total_commission_usd": 60.0,
+    "skipped_gap": 10,
     "skipped_zero_shares": 6,
     "updated_at": "2026-07-06"
   }
