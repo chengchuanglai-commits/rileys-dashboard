@@ -13,7 +13,18 @@ def connect(client_id=10, timeout=8, retries=9, retry_wait=18):
             ib = IB()
             try:
                 ib.connect("127.0.0.1", port, clientId=client_id, timeout=timeout)
-                return ib, port
+                # socket通还不够:重启后数据农场resync期间"连上但positions/account超时"(2026-07-06踩坑)。
+                # 必须验证数据真的在流(nav可取)才算ready,否则断开继续等农场同步。
+                try:
+                    ib.sleep(1)
+                    summ = {v.tag: v.value for v in ib.accountSummary()}
+                    nav = float(summ.get("NetLiquidation", 0) or 0)
+                except Exception:
+                    nav = 0
+                if nav > 0:
+                    return ib, port          # 连上且数据就绪
+                try: ib.disconnect()          # 连上但农场没同步→断开重试
+                except Exception: pass
             except Exception:
                 try: ib.disconnect()
                 except Exception: pass
