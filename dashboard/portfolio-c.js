@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -18,14 +18,15 @@ window.PORTFOLIO_C = {
       "day1_open": 52.8,
       "daily_prices": {
         "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
           "close": 54.88,
           "pnl_pct": 0.22
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.46,
-      "gap_checked": true,
-      "day1_gap_pct": -4.0
+      "unrealized_pnl_usd": 0.46
     },
     {
       "ticker": "LGND",
@@ -40,17 +41,10 @@ window.PORTFOLIO_C = {
       "take_profit": 287.05,
       "stop_loss": 324.49,
       "max_hold_date": "2026-07-09",
-      "day1_open": 314.81,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 319.55,
-          "pnl_pct": -2.42
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": 0.9
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "MVBF",
@@ -65,17 +59,10 @@ window.PORTFOLIO_C = {
       "take_profit": 27.45,
       "stop_loss": 31.03,
       "max_hold_date": "2026-07-09",
-      "day1_open": 29.99,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 29.41,
-          "pnl_pct": 1.44
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": 0.5
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "DGII",
@@ -90,17 +77,10 @@ window.PORTFOLIO_C = {
       "take_profit": 68.19,
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
-      "day1_open": 74.0,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 72.15,
-          "pnl_pct": 2.66
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.16
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "SKWD",
@@ -115,17 +95,10 @@ window.PORTFOLIO_C = {
       "take_profit": 54.75,
       "stop_loss": 61.89,
       "max_hold_date": "2026-07-09",
-      "day1_open": 59.4,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 61.42,
-          "pnl_pct": -3.21
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.18
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "LGND",
@@ -140,17 +113,28 @@ window.PORTFOLIO_C = {
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-10",
-      "day1_open": 314.81,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 319.55,
-          "pnl_pct": -0.0
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -1.48
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "take_profit": 27.06,
+      "stop_loss": 30.59,
+      "max_hold_date": "2026-07-10",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "UTMD",
@@ -165,17 +149,46 @@ window.PORTFOLIO_C = {
       "take_profit": 66.96,
       "stop_loss": 75.69,
       "max_hold_date": "2026-07-10",
-      "day1_open": 70.68,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 72.78,
-          "pnl_pct": -0.0
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -2.89
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "take_profit": 293.99,
+      "stop_loss": 332.33,
+      "max_hold_date": "2026-07-13",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "take_profit": 27.06,
+      "stop_loss": 30.59,
+      "max_hold_date": "2026-07-13",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 211.29,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1286,10 +1299,12 @@ window.PORTFOLIO_C = {
     "total_trades": 25,
     "win_trades": 14,
     "win_rate": 56.0,
-    "total_realized_pnl_usd": 112.87,
-    "open_unrealized_pnl_usd": -6.55,
-    "portfolio_value": 2106.32,
-    "skipped_gap": 12,
-    "updated_at": "2026-07-04"
+    "total_realized_pnl_usd": 112.88,
+    "open_unrealized_pnl_usd": 0.46,
+    "portfolio_value": 2113.34,
+    "total_commission_usd": 50.0,
+    "skipped_gap": 11,
+    "skipped_zero_shares": 1,
+    "updated_at": "2026-07-06"
   }
 };

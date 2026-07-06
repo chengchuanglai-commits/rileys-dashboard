@@ -162,6 +162,23 @@ window.PORTFOLIO_H = {
       "daily_prices": {},
       "position_usd": 205.45,
       "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1.5647,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 271.62,
+      "stop_loss": 325.94,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {},
+      "position_usd": 205.45,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1088,7 +1105,7 @@ window.PORTFOLIO_H = {
     "total_commission_usd": 52.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 0,
-    "updated_at": "2026-07-03"
+    "skipped_no_cash": 1,
+    "updated_at": "2026-07-06"
   }
 };

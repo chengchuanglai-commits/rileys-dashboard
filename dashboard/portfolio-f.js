@@ -1288,7 +1288,7 @@ window.PORTFOLIO_F = {
     "portfolio_value": 2055.29,
     "total_commission_usd": 55.0,
     "skipped_gap": 9,
-    "skipped_zero_shares": 5,
-    "updated_at": "2026-07-03"
+    "skipped_zero_shares": 6,
+    "updated_at": "2026-07-06"
   }
 };

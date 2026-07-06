@@ -209,7 +209,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-08",
       "regime": "neutral",
-      "vix": 15.81,
+      "vix": 16.15,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -228,7 +228,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-08",
       "regime": "neutral",
-      "vix": 15.81,
+      "vix": 16.15,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -247,7 +247,45 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-08",
       "regime": "neutral",
-      "vix": 15.81,
+      "vix": 16.15,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "take_profit": 287.6,
+      "stop_loss": 329.14,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-09",
+      "regime": "neutral",
+      "vix": 16.33,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "take_profit": 26.47,
+      "stop_loss": 30.29,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-09",
+      "regime": "neutral",
+      "vix": 16.33,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1099,6 +1137,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 8,
-    "updated_at": "2026-07-03"
+    "updated_at": "2026-07-06"
   }
 };

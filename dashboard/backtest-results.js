@@ -1,7 +1,7 @@
 // 策略回测优化结果
 window.BACKTEST_RESULTS = {
-  "generated_at": "2026-07-03 13:37",
-  "total_signals": 45,
+  "generated_at": "2026-07-06 11:46",
+  "total_signals": 47,
   "total_combos_tested": 1750,
   "top_strategies": [
     {
