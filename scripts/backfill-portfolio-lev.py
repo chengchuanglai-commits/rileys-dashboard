@@ -49,6 +49,16 @@ def main():
     s = out["stats"]
     print(f"杠杆腿 净值${s['portfolio_value']:,.0f} CAGR{s['cagr_pct']:+.1f}% 最大回撤{s['maxdd_pct']:.0f}% "
           f"当前{s['current_lev']}x | vs 1xQQQ ${s['vs_qqq_1x_usd']:+,.0f}")
+    # 每日飞书一行
+    if os.environ.get("NOTIFY_WEBHOOK"):
+        msg = (f"📈 杠杆指数腿 {s['updated_at']}\n"
+               f"净值${s['portfolio_value']:,.0f} | CAGR{s['cagr_pct']:+.1f}% | 最大回撤{s['maxdd_pct']:.0f}% | 当前{s['current_lev']}x\n"
+               f"vs 无杠杆1x QQQ: {'+'if s['vs_qqq_1x_usd']>=0 else ''}${s['vs_qqq_1x_usd']:,.0f}"
+               f"{' 💀爆仓' if s['ruined'] else ''}\n（1.5x QQQ+200MA闸门·paper跟踪）")
+        os.environ["NOTIFY_MESSAGE"] = msg
+        import runpy
+        try: runpy.run_path("scripts/notify-webhook.py", run_name="__main__")
+        except Exception: pass
 
 
 if __name__ == "__main__":
