@@ -1,0 +1,125 @@
+{
+  "market": {
+    "sp500_futures_pct": 0.0,
+    "treasury_10y": 0.0,
+    "treasury_10y_change_bps": 0.0,
+    "eps_beat_rate": 45.5
+  },
+  "note": {
+    "market_overview": "标普500期货持平于0.00%，市场陷入震荡格局。10年期美债收益率保持在0.000%，无明显波动。投资者观望情绪浓厚，等待后续宏观数据指引。",
+    "macro": "联邦基金利率预期维持稳定，通胀数据仍待关注。美债收益率曲线平坦，反映市场对经济增速担忧。美元指数相对稳定，为美股小盘股提供一定支撑。",
+    "earnings": "当前财报季EPS超预期率为45.5%，显示上市公司业绩表现整体较弱。中小盘股中仍有部分公司通过成本控制和创新实现业绩超预期，机会与风险并存。建议聚焦高增长板块中的优质标的。",
+    "trade_ideas": "市场缺乏明确方向，建议采取选择性策略：(1)精选AI与云计算产业链中的中小盘公司；(2)关注能源转型及新能源相关标的；(3)医疗生物科技中的创新型企业；(4)半导体供应链上的优质中段玩家；(5)通过分散配置规避系统性风险。"
+  },
+  "stock_picks": [
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy Inc",
+      "sector": "科技/软件",
+      "direction": "buy",
+      "buy_zone": "$25-28",
+      "target": "$35-38",
+      "stop_loss": "$22",
+      "reason": "企业数据分析平台领导者，AI赋能BI工具，市值约50亿美元。近期财报超预期，云端订阅增长强劲。"
+    },
+    {
+      "ticker": "NVVE",
+      "name": "Novavax Inc",
+      "sector": "生物科技/医疗",
+      "direction": "watch",
+      "buy_zone": "$6-7",
+      "target": "$10-12",
+      "stop_loss": "$5",
+      "reason": "疫苗研发企业，多个在研管线进入临床阶段。市值约30亿美元，政策支持力度大。"
+    },
+    {
+      "ticker": "IRDM",
+      "name": "Iridium Communications Inc",
+      "sector": "通信/卫星",
+      "direction": "buy",
+      "buy_zone": "$15-16",
+      "target": "$20-22",
+      "stop_loss": "$13",
+      "reason": "卫星通信运营商，全球服务覆盖。市值约35亿美元，受益于太空经济和国防应用。"
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova Inc",
+      "sector": "能源/新能源",
+      "direction": "buy",
+      "buy_zone": "$90-95",
+      "target": "$120-130",
+      "stop_loss": "$80",
+      "reason": "能源设备及可再生能源领导者，剥离自通用电气。核能和风能订单充足，市值约80亿美元。"
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer Inc",
+      "sector": "半导体/硬件",
+      "direction": "watch",
+      "buy_zone": "$25-28",
+      "target": "$40-45",
+      "stop_loss": "$22",
+      "reason": "AI服务器及存储解决方案供应商，市值约55亿美元。受益于数据中心扩建周期，财报波动较大。"
+    },
+    {
+      "ticker": "VEEV",
+      "name": "Veeva Systems Inc",
+      "sector": "医疗信息化",
+      "direction": "buy",
+      "buy_zone": "$150-160",
+      "target": "$195-210",
+      "stop_loss": "$140",
+      "reason": "制药及医疗器械行业云解决方案领导者，市值约70亿美元。SaaS模式稳定，客户粘性强。"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies Inc",
+      "sector": "大数据/AI",
+      "direction": "buy",
+      "buy_zone": "$22-24",
+      "target": "$32-35",
+      "stop_loss": "$19",
+      "reason": "大数据和AI分析平台，政府和商业客户基数扩大。市值约75亿美元，利润率改善趋势明确。"
+    },
+    {
+      "ticker": "AERI",
+      "name": "Aerion Therapeutics",
+      "sector": "生物科技/药物",
+      "direction": "watch",
+      "buy_zone": "$4-5",
+      "target": "$8-10",
+      "stop_loss": "$3",
+      "reason": "小分子药物研发企业，多个临床期项目。市值约15亿美元，存在变数但上升空间大。"
+    },
+    {
+      "ticker": "CEVA",
+      "name": "CEVA Inc",
+      "sector": "芯片设计/IP",
+      "direction": "buy",
+      "buy_zone": "$32-35",
+      "target": "$48-52",
+      "stop_loss": "$28",
+      "reason": "AI芯片和信号处理IP领导者，授权许可模式。市值约60亿美元，新兴芯片架构需求旺盛。"
+    },
+    {
+      "ticker": "HELE",
+      "name": "Helen of Troy Limited",
+      "sector": "消费品/家电",
+      "direction": "watch",
+      "buy_zone": "$72-76",
+      "target": "$95-105",
+      "stop_loss": "$65",
+      "reason": "家用电器和消费品制造商，品牌组合多样。市值约45亿美元，估值偏低，成本管理空间较大。"
+    }
+  ],
+  "date": "2026-07-04",
+  "generated_at": "2026-07-04T09:07:00",
+  "market_status": "pre-market",
+  "api_cost_usd": 0.1032,
+  "budget_usd": 5.0,
+  "cumulative_cost_usd": 2.3846,
+  "avg_daily_cost_usd": 0.0907,
+  "estimated_days_left": 28,
+  "balance_warning": false
+}

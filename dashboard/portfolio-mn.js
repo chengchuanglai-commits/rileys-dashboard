@@ -190,32 +190,32 @@ window.PORTFOLIO_MN = {
       "name": "英伟达",
       "action": "BUY",
       "signal_date": "2026-05-19",
-      "entry_price": 220.35,
+      "entry_price": 220.61,
       "allocated_usd": 500,
-      "shares": 2.2691,
-      "actual_position_usd": 500.0,
+      "shares": 2.2664,
+      "actual_position_usd": 499.99,
       "entry_commission": 1.0,
-      "take_profit": 253.4,
-      "stop_loss": 215.94,
+      "take_profit": 253.7,
+      "stop_loss": 216.2,
       "max_hold_date": "2026-05-21",
       "daily_prices": {
         "2026-05-20": {
-          "open": 222.92,
-          "high": 225.87,
-          "low": 220.24,
-          "close": 223.21,
+          "open": 223.18,
+          "high": 226.13,
+          "low": 220.5,
+          "close": 223.47,
           "pnl_pct": 1.3
         },
         "2026-05-21": {
-          "open": 222.03,
-          "high": 227.14,
-          "low": 217.68,
-          "close": 219.25,
+          "open": 222.29,
+          "high": 227.4,
+          "low": 217.93,
+          "close": 219.51,
           "pnl_pct": -0.5
         }
       },
       "close_date": "2026-05-21",
-      "close_price": 219.25,
+      "close_price": 219.51,
       "final_pnl_pct": -0.5,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
@@ -704,25 +704,25 @@ window.PORTFOLIO_MN = {
       "name": "NVIDIA Corporation",
       "action": "BUY",
       "signal_date": "2026-06-02",
-      "entry_price": 222.56,
+      "entry_price": 222.82,
       "allocated_usd": 500,
-      "shares": 2.2466,
-      "actual_position_usd": 500.0,
+      "shares": 2.244,
+      "actual_position_usd": 500.01,
       "entry_commission": 1.0,
-      "take_profit": 255.94,
-      "stop_loss": 218.11,
+      "take_profit": 256.24,
+      "stop_loss": 218.36,
       "max_hold_date": "2026-06-04",
       "daily_prices": {
         "2026-06-03": {
-          "open": 221.46,
-          "high": 222.56,
-          "low": 214.26,
-          "close": 214.5,
+          "open": 221.72,
+          "high": 222.82,
+          "low": 214.51,
+          "close": 214.75,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-03",
-      "close_price": 218.11,
+      "close_price": 218.36,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -735,25 +735,25 @@ window.PORTFOLIO_MN = {
       "name": "Micron Technology",
       "action": "BUY",
       "signal_date": "2026-06-02",
-      "entry_price": 1064.1,
+      "entry_price": 1063.94,
       "allocated_usd": 500,
-      "shares": 0.4699,
-      "actual_position_usd": 500.02,
+      "shares": 0.47,
+      "actual_position_usd": 500.05,
       "entry_commission": 1.0,
-      "take_profit": 1223.71,
-      "stop_loss": 1042.82,
+      "take_profit": 1223.53,
+      "stop_loss": 1042.66,
       "max_hold_date": "2026-06-04",
       "daily_prices": {
         "2026-06-03": {
-          "open": 1079.01,
-          "high": 1089.29,
-          "low": 1038.5,
-          "close": 1079.57,
+          "open": 1078.84,
+          "high": 1089.12,
+          "low": 1038.34,
+          "close": 1079.4,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-03",
-      "close_price": 1042.82,
+      "close_price": 1042.66,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -2372,7 +2372,7 @@ window.PORTFOLIO_MN = {
         "2026-07-06": {
           "open": 191.34,
           "high": 193.52,
-          "low": 187.91,
+          "low": 187.75,
           "close": 192.01,
           "pnl_pct": -2.0
         }
@@ -2403,7 +2403,7 @@ window.PORTFOLIO_MN = {
         "2026-07-06": {
           "open": 249.79,
           "high": 262.84,
-          "low": 248.34,
+          "low": 248.01,
           "close": 255.37,
           "pnl_pct": -2.0
         }
@@ -2433,7 +2433,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-06": {
           "open": 189.51,
-          "high": 209.49,
+          "high": 209.5,
           "low": 188.55,
           "close": 199.38,
           "pnl_pct": -2.0
@@ -2489,9 +2489,9 @@ window.PORTFOLIO_MN = {
     "open_unrealized_pnl_usd": 24.63,
     "portfolio_value": 2125.71,
     "total_commission_usd": 136.0,
-    "skipped_gap": 35,
+    "skipped_gap": 38,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 80,
+    "skipped_no_cash": 83,
     "updated_at": "2026-07-07"
   }
 };

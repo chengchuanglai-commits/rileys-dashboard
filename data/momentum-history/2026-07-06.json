@@ -1,0 +1,114 @@
+{
+  "date": "2026-07-06",
+  "universe_size": 497,
+  "passed_trend": 145,
+  "market_uptrend": true,
+  "factors": [
+    "rs_rank",
+    "edge_pullback",
+    "edge_volcontract",
+    "edge_nearhigh"
+  ],
+  "buy": [
+    {
+      "ticker": "UMC",
+      "action": "BUY",
+      "score": 91.3,
+      "price": 26.44,
+      "rs": 2.2677,
+      "ret_6m": 2.3724,
+      "dist_to_ma_pct": -0.5,
+      "vol_ratio": 0.81
+    },
+    {
+      "ticker": "DELL",
+      "action": "BUY",
+      "score": 88.5,
+      "price": 415.01,
+      "rs": 2.1669,
+      "ret_6m": 2.2716,
+      "dist_to_ma_pct": -0.5,
+      "vol_ratio": 0.72
+    },
+    {
+      "ticker": "INTC",
+      "action": "BUY",
+      "score": 87.3,
+      "price": 124.34,
+      "rs": 2.0527,
+      "ret_6m": 2.1574,
+      "dist_to_ma_pct": -5.0,
+      "vol_ratio": 0.71
+    },
+    {
+      "ticker": "STM",
+      "action": "BUY",
+      "score": 85.1,
+      "price": 72.33,
+      "rs": 1.5485,
+      "ret_6m": 1.6532,
+      "dist_to_ma_pct": -2.3,
+      "vol_ratio": 0.84
+    },
+    {
+      "ticker": "FLEX",
+      "action": "BUY",
+      "score": 84.4,
+      "price": 141.18,
+      "rs": 1.1123,
+      "ret_6m": 1.217,
+      "dist_to_ma_pct": -7.1,
+      "vol_ratio": 0.62
+    },
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "score": 82.0,
+      "price": 565.5,
+      "rs": 1.4258,
+      "ret_6m": 1.5305,
+      "dist_to_ma_pct": 4.9,
+      "vol_ratio": 0.72
+    },
+    {
+      "ticker": "RPRX",
+      "action": "BUY",
+      "score": 81.8,
+      "price": 57.45,
+      "rs": 0.388,
+      "ret_6m": 0.4927,
+      "dist_to_ma_pct": 2.9,
+      "vol_ratio": 0.6
+    },
+    {
+      "ticker": "BTSG",
+      "action": "BUY",
+      "score": 81.5,
+      "price": 71.41,
+      "rs": 0.7549,
+      "ret_6m": 0.8596,
+      "dist_to_ma_pct": 3.6,
+      "vol_ratio": 0.82
+    },
+    {
+      "ticker": "LSCC",
+      "action": "BUY",
+      "score": 81.4,
+      "price": 140.12,
+      "rs": 0.6769,
+      "ret_6m": 0.7816,
+      "dist_to_ma_pct": -3.3,
+      "vol_ratio": 0.78
+    },
+    {
+      "ticker": "BMO",
+      "action": "BUY",
+      "score": 81.2,
+      "price": 174.98,
+      "rs": 0.2296,
+      "ret_6m": 0.3343,
+      "dist_to_ma_pct": 0.1,
+      "vol_ratio": 0.63
+    }
+  ]
+}

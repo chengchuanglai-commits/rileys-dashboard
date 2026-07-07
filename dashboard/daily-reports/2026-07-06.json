@@ -1,100 +1,60 @@
 {
-  "date": "2026-07-07",
-  "generated_at": "2026-07-07T23:44:00",
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T19:46:00",
   "pipeline": {
-    "morning_note_found": true,
+    "morning_note_found": false,
     "signal_file_found": true,
-    "signals_generated": 0
+    "signals_generated": 2
   },
   "data_quality": [
     {
       "check": "晨报文件",
-      "pass": true,
-      "detail": "2026-07-07"
+      "pass": false,
+      "detail": "2026-07-06"
     },
     {
       "check": "信号文件",
       "pass": true,
-      "detail": "2026-07-07"
+      "detail": "2026-07-06"
     },
     {
       "check": "昨日准确率填充",
       "pass": true,
-      "detail": "2 条已验证"
+      "detail": "0 条已验证"
     },
     {
       "check": "无警告",
-      "pass": true,
-      "detail": "0 条警告"
+      "pass": false,
+      "detail": "1 条警告"
     }
   ],
-  "signals_today": [],
+  "signals_today": [
+    {
+      "ticker": "LGND",
+      "action": "SELL",
+      "current_price": 319.55,
+      "target_price": 351.51,
+      "stop_loss": 303.57
+    },
+    {
+      "ticker": "MVBF",
+      "action": "SELL",
+      "current_price": 29.41,
+      "target_price": 32.35,
+      "stop_loss": 27.94
+    }
+  ],
   "accuracy_update": {
-    "date": "2026-07-06",
-    "total": 2,
-    "verified": 2,
-    "pending": 0,
-    "results": [
-      {
-        "ticker": "LGND",
-        "action": "SELL",
-        "entry": 319.55,
-        "open": 319.94,
-        "actual": 320.42,
-        "pct": 0.15,
-        "pct_from_signal": 0.27,
-        "correct": false,
-        "correct_direction": false
-      },
-      {
-        "ticker": "MVBF",
-        "action": "SELL",
-        "entry": 29.41,
-        "open": 29.28,
-        "actual": 28.91,
-        "pct": -1.26,
-        "pct_from_signal": -1.7,
-        "correct": true,
-        "correct_direction": true
-      }
-    ]
+    "date": "2026-07-05",
+    "total": 0,
+    "note": "无历史信号文件"
   },
   "running_totals": {
-    "total_signals_verified": 51,
-    "total_signals_active": 47,
+    "total_signals_verified": 49,
+    "total_signals_active": 45,
     "total_signals_hold": 4,
-    "hold_rate_pct": 7.8,
+    "hold_rate_pct": 8.2,
     "signals_history": [
-      {
-        "date": "2026-07-06",
-        "ticker": "MVBF",
-        "name": "MVBF",
-        "action": "SELL",
-        "signal_price": 29.41,
-        "open_price": 29.28,
-        "close_price": 28.91,
-        "pct_change": -1.26,
-        "pct_from_signal": -1.7,
-        "correct": true,
-        "correct_direction": true,
-        "limit_filled": true,
-        "gap_filtered": false
-      },
-      {
-        "date": "2026-07-06",
-        "ticker": "LGND",
-        "name": "LGND",
-        "action": "SELL",
-        "signal_price": 319.55,
-        "open_price": 319.94,
-        "close_price": 320.42,
-        "pct_change": 0.15,
-        "pct_from_signal": 0.27,
-        "correct": false,
-        "correct_direction": false,
-        "limit_filled": true,
-        "gap_filtered": false
-      },
       {
         "date": "2026-07-03",
         "ticker": "UTMD",
@@ -853,8 +813,7 @@
       "2026-06-26",
       "2026-07-01",
       "2026-07-02",
-      "2026-07-03",
-      "2026-07-06"
+      "2026-07-03"
     ],
     "cum_capital_a": [
       2000.0,
@@ -869,7 +828,6 @@
       2268.64,
       2273.74,
       2294.21,
-      NaN,
       NaN,
       NaN,
       NaN,
@@ -905,7 +863,6 @@
       NaN,
       NaN,
       NaN,
-      NaN,
       NaN
     ],
     "cum_capital_c": [
@@ -921,7 +878,6 @@
       2288.87,
       2294.02,
       2314.66,
-      NaN,
       NaN,
       NaN,
       NaN,
@@ -957,12 +913,11 @@
       1915.49,
       1925.74,
       1918.37,
-      1918.37,
-      1932.09
+      1918.37
     ],
-    "correct": 23,
-    "accuracy_rate": 0.451,
-    "accuracy_pct": "45.1%",
+    "correct": 22,
+    "accuracy_rate": 0.449,
+    "accuracy_pct": "44.9%",
     "simulated_capital": NaN,
     "simulated_pnl_usd": NaN,
     "simulated_pnl_pct": "+nan%",
@@ -988,12 +943,11 @@
       NaN,
       NaN,
       NaN,
-      NaN,
       NaN
     ],
-    "correct_direction": 20,
-    "accuracy_direction_rate": 0.392,
-    "accuracy_direction_pct": "39.2%",
+    "correct_direction": 19,
+    "accuracy_direction_rate": 0.388,
+    "accuracy_direction_pct": "38.8%",
     "simulated_capital_direction": NaN,
     "simulated_pnl_direction_usd": NaN,
     "simulated_pnl_direction_pct": "+nan%",
@@ -1019,13 +973,12 @@
       NaN,
       NaN,
       NaN,
-      NaN,
       NaN
     ],
-    "total_gap_filtered": 41,
-    "correct_gap": 19,
-    "accuracy_gap_rate": 0.463,
-    "accuracy_gap_pct": "46.3%",
+    "total_gap_filtered": 39,
+    "correct_gap": 18,
+    "accuracy_gap_rate": 0.462,
+    "accuracy_gap_pct": "46.2%",
     "simulated_capital_gap": NaN,
     "simulated_pnl_gap_usd": NaN,
     "simulated_pnl_gap_pct": "+nan%",
@@ -1051,17 +1004,16 @@
       NaN,
       NaN,
       NaN,
-      NaN,
       NaN
     ],
     "gap_cost_usd": NaN,
-    "total_limit": 42,
-    "correct_limit": 17,
-    "accuracy_limit_rate": 0.405,
-    "accuracy_limit_pct": "40.5%",
-    "simulated_capital_limit": 1932.09,
-    "simulated_pnl_limit_usd": -67.91,
-    "simulated_pnl_limit_pct": "-3.40%",
+    "total_limit": 40,
+    "correct_limit": 16,
+    "accuracy_limit_rate": 0.4,
+    "accuracy_limit_pct": "40.0%",
+    "simulated_capital_limit": 1918.37,
+    "simulated_pnl_limit_usd": -81.63,
+    "simulated_pnl_limit_pct": "-4.08%",
     "daily_returns_limit": [
       2.6,
       1.38,
@@ -1084,10 +1036,11 @@
       -4.14,
       0.535,
       -0.383,
-      0.0,
-      0.715
+      0.0
     ]
   },
-  "warnings": [],
-  "api_cost_usd": 0.0
+  "warnings": [
+    "晨报文件不存在: dashboard/morning-note-history/2026-07-06.json（周末/节假日正常）"
+  ],
+  "api_cost_usd": 3.1538
 }

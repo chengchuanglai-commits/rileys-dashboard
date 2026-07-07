@@ -16,8 +16,22 @@
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
           "close": 54.88,
           "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "open": 54.94,
+          "high": 56.03,
+          "low": 54.0,
+          "close": 55.36,
+          "pnl_pct": -0.65
+        },
+        "2026-07-07": {
+          "close": 56.42,
+          "pnl_pct": -2.58
         }
       }
     },
@@ -35,9 +49,16 @@
       "stop_loss": 324.49,
       "max_hold_date": "2026-07-09",
       "daily_prices": {
-        "2026-07-02": {
-          "close": 319.55,
-          "pnl_pct": -2.42
+        "2026-07-06": {
+          "open": 319.94,
+          "high": 322.31,
+          "low": 315.76,
+          "close": 320.42,
+          "pnl_pct": -2.7
+        },
+        "2026-07-07": {
+          "close": 322.63,
+          "pnl_pct": -3.4
         }
       }
     },
@@ -55,9 +76,16 @@
       "stop_loss": 31.03,
       "max_hold_date": "2026-07-09",
       "daily_prices": {
-        "2026-07-02": {
-          "close": 29.41,
-          "pnl_pct": 1.44
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 3.12
+        },
+        "2026-07-07": {
+          "close": 29.06,
+          "pnl_pct": 2.61
         }
       }
     },
@@ -75,29 +103,16 @@
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
       "daily_prices": {
-        "2026-07-02": {
-          "close": 72.15,
-          "pnl_pct": 2.66
-        }
-      }
-    },
-    {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 59.51,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 476.08,
-      "entry_commission": 1.0,
-      "take_profit": 54.75,
-      "stop_loss": 61.89,
-      "max_hold_date": "2026-07-09",
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 61.42,
-          "pnl_pct": -3.21
+        "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
+          "close": 73.22,
+          "pnl_pct": 1.21
+        },
+        "2026-07-07": {
+          "close": 70.47,
+          "pnl_pct": 4.92
         }
       }
     },
@@ -115,9 +130,16 @@
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-10",
       "daily_prices": {
-        "2026-07-02": {
-          "close": 319.55,
-          "pnl_pct": -0.0
+        "2026-07-06": {
+          "open": 319.94,
+          "high": 322.31,
+          "low": 315.76,
+          "close": 320.42,
+          "pnl_pct": -0.27
+        },
+        "2026-07-07": {
+          "close": 322.63,
+          "pnl_pct": -0.96
         }
       }
     },
@@ -135,9 +157,16 @@
       "stop_loss": 30.59,
       "max_hold_date": "2026-07-10",
       "daily_prices": {
-        "2026-07-02": {
-          "close": 29.41,
-          "pnl_pct": -0.0
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 1.7
+        },
+        "2026-07-07": {
+          "close": 29.06,
+          "pnl_pct": 1.19
         }
       }
     },
@@ -155,9 +184,56 @@
       "stop_loss": 75.69,
       "max_hold_date": "2026-07-10",
       "daily_prices": {
-        "2026-07-02": {
-          "close": 72.78,
-          "pnl_pct": -0.0
+        "2026-07-06": {
+          "open": 74.4,
+          "high": 74.4,
+          "low": 71.5,
+          "close": 71.81,
+          "pnl_pct": 1.33
+        },
+        "2026-07-07": {
+          "close": 71.48,
+          "pnl_pct": 1.79
+        }
+      }
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "take_profit": 293.99,
+      "stop_loss": 332.33,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {
+        "2026-07-07": {
+          "close": 322.63,
+          "pnl_pct": -0.96
+        }
+      }
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "take_profit": 27.06,
+      "stop_loss": 30.59,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {
+        "2026-07-07": {
+          "close": 29.06,
+          "pnl_pct": 1.19
         }
       }
     }
@@ -1585,16 +1661,53 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.73
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 476.08,
+      "entry_commission": 1.0,
+      "take_profit": 54.75,
+      "stop_loss": 61.89,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 61.0,
+          "high": 61.37,
+          "low": 59.29,
+          "close": 60.2,
+          "pnl_pct": -1.16
+        },
+        "2026-07-07": {
+          "open": 61.38,
+          "high": 63.03,
+          "low": 61.06,
+          "close": 62.88,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-07",
+      "close_price": 61.89,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.04
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 36,
+    "total_trades": 37,
     "win_trades": 15,
-    "win_rate": 41.7,
-    "total_realized_pnl_usd": 22.16,
-    "open_unrealized_pnl_usd": -6.55,
-    "portfolio_value": 2015.61,
-    "updated_at": "2026-07-03"
+    "win_rate": 40.5,
+    "total_realized_pnl_usd": 1.12,
+    "open_unrealized_pnl_usd": 19.0,
+    "portfolio_value": 2020.12,
+    "updated_at": "2026-07-07"
   }
 }

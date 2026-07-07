@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-07",
+  "date": "2026-07-06",
   "universe_size": 497,
   "scored": 491,
   "factors": [
@@ -15,99 +15,99 @@
     {
       "ticker": "KSPI",
       "action": "BUY",
-      "score": 81.8,
-      "price": 90.34,
+      "score": 81.4,
+      "price": 89.28,
       "pe": 7.322804346913995,
       "roe": 0.44344741377632485,
-      "momentum": 0.24
+      "momentum": 0.226
     },
     {
       "ticker": "KLAC",
       "action": "BUY",
-      "score": 78.9,
-      "price": 213.48,
+      "score": 79.0,
+      "price": 236.65,
       "pe": 7.275087519465005,
       "roe": 0.8907440967876512,
-      "momentum": 0.748
+      "momentum": 0.937
     },
     {
       "ticker": "ACGL",
       "action": "BUY",
-      "score": 75.3,
-      "price": 104.17,
+      "score": 74.7,
+      "price": 101.18,
       "pe": 6.731730316091954,
       "roe": 0.20480484267608298,
-      "momentum": 0.145
-    },
-    {
-      "ticker": "INCY",
-      "action": "BUY",
-      "score": 74.8,
-      "price": 117.56,
-      "pe": 13.674943416467787,
-      "roe": 0.2930693401673611,
-      "momentum": 0.216
+      "momentum": 0.113
     },
     {
       "ticker": "CINF",
       "action": "BUY",
-      "score": 74.7,
-      "price": 192.84,
+      "score": 74.4,
+      "price": 189.85,
       "pe": 9.55652689590134,
       "roe": 0.17980825670123263,
-      "momentum": 0.216
+      "momentum": 0.197
+    },
+    {
+      "ticker": "INCY",
+      "action": "BUY",
+      "score": 74.2,
+      "price": 115.62,
+      "pe": 13.674943416467787,
+      "roe": 0.2930693401673611,
+      "momentum": 0.196
     },
     {
       "ticker": "LYG",
       "action": "BUY",
-      "score": 72.7,
-      "price": 6.11,
+      "score": 73.0,
+      "price": 6.14,
       "pe": 12.193996934335443,
       "roe": 0.10754586546131348,
-      "momentum": 0.232
+      "momentum": 0.237
     },
     {
       "ticker": "CNQ",
       "action": "BUY",
-      "score": 72.6,
-      "price": 39.83,
+      "score": 72.3,
+      "price": 39.46,
       "pe": 12.44056395386715,
       "roe": 0.22744974028331663,
-      "momentum": 0.192
-    },
-    {
-      "ticker": "ALL",
-      "action": "BUY",
-      "score": 71.5,
-      "price": 255.36,
-      "pe": 4.723877956264307,
-      "roe": 0.4271107164522907,
-      "momentum": 0.278
-    },
-    {
-      "ticker": "GH",
-      "action": "BUY",
-      "score": 71.3,
-      "price": 167.55,
-      "pe": -39.93406158455931,
-      "roe": 0.8907440967876512,
-      "momentum": 0.608
+      "momentum": 0.181
     },
     {
       "ticker": "MFC",
       "action": "BUY",
-      "score": 71.0,
-      "price": 41.23,
+      "score": 71.6,
+      "price": 41.31,
       "pe": 14.994689934559053,
       "roe": 0.1265334890850572,
-      "momentum": 0.203
+      "momentum": 0.205
+    },
+    {
+      "ticker": "GH",
+      "action": "BUY",
+      "score": 71.0,
+      "price": 172.23,
+      "pe": -39.93406158455931,
+      "roe": 0.8907440967876512,
+      "momentum": 0.653
+    },
+    {
+      "ticker": "ALL",
+      "action": "BUY",
+      "score": 70.7,
+      "price": 246.81,
+      "pe": 4.723877956264307,
+      "roe": 0.4271107164522907,
+      "momentum": 0.235
     }
   ],
   "sell": [
     {
       "ticker": "SATS",
       "action": "SELL",
-      "score": 18.6,
+      "score": 19.0,
       "price": 101.5,
       "pe": -2.1848066751995443,
       "roe": -0.3778773499613705,
@@ -116,83 +116,83 @@
     {
       "ticker": "BN",
       "action": "SELL",
-      "score": 21.1,
-      "price": 43.59,
+      "score": 21.2,
+      "price": 44.02,
       "pe": 83.30277796666557,
       "roe": 0.028396569105587955,
-      "momentum": -0.057
+      "momentum": -0.048
+    },
+    {
+      "ticker": "BNH",
+      "action": "SELL",
+      "score": 21.7,
+      "price": 15.06,
+      "pe": 83.30277796666557,
+      "roe": 0.028396569105587955,
+      "momentum": -0.026
     },
     {
       "ticker": "TSLA",
       "action": "SELL",
-      "score": 21.4,
-      "price": 405.96,
+      "score": 21.8,
+      "price": 414.34,
       "pe": 334.1549690402477,
       "roe": 0.04792077449738722,
-      "momentum": -0.076
+      "momentum": -0.057
     },
     {
       "ticker": "TEAM",
       "action": "SELL",
       "score": 21.8,
-      "price": 89.14,
+      "price": 85.07,
       "pe": -99.56793284740776,
       "roe": -0.16695225823939203,
-      "momentum": -0.298
+      "momentum": -0.296
     },
     {
       "ticker": "WBD",
       "action": "SELL",
-      "score": 22.3,
-      "price": 26.19,
+      "score": 22.6,
+      "price": 26.33,
       "pe": -37.60967741935483,
       "roe": -0.04940098460487749,
-      "momentum": -0.038
-    },
-    {
-      "ticker": "BNH",
-      "action": "SELL",
-      "score": 22.4,
-      "price": 15.46,
-      "pe": 83.30277796666557,
-      "roe": 0.028396569105587955,
-      "momentum": 0.0
+      "momentum": -0.033
     },
     {
       "ticker": "BNJ",
       "action": "SELL",
-      "score": 23.8,
-      "price": 15.62,
+      "score": 23.3,
+      "price": 15.22,
       "pe": 83.30277796666557,
       "roe": 0.028396569105587955,
-      "momentum": 0.062
+      "momentum": 0.035
     },
     {
       "ticker": "INSM",
       "action": "SELL",
-      "score": 25.2,
-      "price": 112.72,
+      "score": 25.1,
+      "price": 110.47,
       "pe": -17.43759004185832,
       "roe": -0.3778773499613705,
-      "momentum": -0.298
+      "momentum": -0.296
     },
     {
-      "ticker": "RIVN",
+      "ticker": "SONY",
       "action": "SELL",
-      "score": 26.0,
-      "price": 17.22,
-      "pe": -5.866784191071937,
-      "roe": -0.3778773499613705,
-      "momentum": -0.022
+      "score": 26.2,
+      "price": 21.1,
+      "pe": -58.00116470102336,
+      "roe": -0.04052213822355305,
+      "momentum": -0.234
     },
     {
       "ticker": "NKE",
       "action": "SELL",
       "score": 26.2,
-      "price": 43.19,
+      "price": 42.69,
       "pe": 29.709457777777782,
       "roe": 0.16406591803995915,
-      "momentum": -0.298
+      "momentum": -0.296
     }
   ]
 }
