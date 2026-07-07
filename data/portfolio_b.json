@@ -2,46 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "SRRK",
-      "name": "SRRK",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 55.0,
-      "allocated_usd": 500,
-      "shares": 9,
-      "actual_position_usd": 495.0,
-      "entry_commission": 1.0,
-      "take_profit": 50.6,
-      "stop_loss": 57.2,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-07": {
-          "close": 56.56,
-          "pnl_pct": -2.84
-        }
-      }
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 29.01,
-      "allocated_usd": 500,
-      "shares": 17,
-      "actual_position_usd": 493.17,
-      "entry_commission": 1.0,
-      "take_profit": 26.69,
-      "stop_loss": 30.17,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-07": {
-          "close": 28.62,
-          "pnl_pct": 1.34
-        }
-      }
-    },
-    {
       "ticker": "LGND",
       "name": "LGND",
       "action": "SELL",
@@ -55,6 +15,13 @@
       "stop_loss": 324.49,
       "max_hold_date": "2026-07-09",
       "daily_prices": {
+        "2026-07-06": {
+          "open": 319.94,
+          "high": 322.31,
+          "low": 315.76,
+          "close": 320.42,
+          "pnl_pct": -2.7
+        },
         "2026-07-07": {
           "close": 319.43,
           "pnl_pct": -2.38
@@ -75,6 +42,13 @@
       "stop_loss": 31.03,
       "max_hold_date": "2026-07-09",
       "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 3.12
+        },
         "2026-07-07": {
           "close": 28.62,
           "pnl_pct": 4.09
@@ -95,6 +69,13 @@
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
       "daily_prices": {
+        "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
+          "close": 73.22,
+          "pnl_pct": 1.21
+        },
         "2026-07-07": {
           "close": 70.16,
           "pnl_pct": 5.34
@@ -1155,6 +1136,108 @@
       "realized_pnl_usd": -21.81
     },
     {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "take_profit": 150.13,
+      "stop_loss": 133.45,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 140.64,
+          "high": 141.99,
+          "low": 137.61,
+          "close": 138.79,
+          "pnl_pct": -0.16
+        },
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.27,
+          "low": 134.75,
+          "close": 137.94,
+          "pnl_pct": -0.77
+        },
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.13,
+          "pnl_pct": -2.07
+        },
+        "2026-06-25": {
+          "open": 138.06,
+          "high": 139.18,
+          "low": 135.62,
+          "close": 137.28,
+          "pnl_pct": -1.24
+        },
+        "2026-06-26": {
+          "open": 136.96,
+          "high": 137.76,
+          "low": 131.38,
+          "close": 135.42,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 133.45,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -18.68
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "take_profit": 33.39,
+      "stop_loss": 37.74,
+      "max_hold_date": "2026-06-26",
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 36.1,
+          "high": 36.85,
+          "low": 36.1,
+          "close": 36.7,
+          "pnl_pct": -1.13
+        },
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.36,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.73
+        },
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.86,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 37.74,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -20.87
+    },
+    {
       "ticker": "SWBI",
       "name": "SWBI",
       "action": "SELL",
@@ -1243,56 +1326,6 @@
       "realized_pnl_usd": 31.36
     },
     {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "BUY",
-      "signal_date": "2026-06-19",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 150.13,
-      "stop_loss": 133.45,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {
-        "2026-07-07": {
-          "close": 121.49,
-          "pnl_pct": -12.6
-        }
-      },
-      "close_date": "2026-07-07",
-      "close_price": 121.49,
-      "final_pnl_pct": -12.6,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -63.02
-    },
-    {
-      "ticker": "WSBC",
-      "name": "WSBC",
-      "action": "SELL",
-      "signal_date": "2026-06-19",
-      "entry_price": 36.29,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 471.77,
-      "entry_commission": 1.0,
-      "take_profit": 33.39,
-      "stop_loss": 37.74,
-      "max_hold_date": "2026-06-26",
-      "daily_prices": {
-        "2026-07-07": {
-          "close": 39.31,
-          "pnl_pct": -8.32
-        }
-      },
-      "close_date": "2026-07-07",
-      "close_price": 39.31,
-      "final_pnl_pct": -8.32,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -41.61
-    },
-    {
       "ticker": "WSBC",
       "name": "WSBC",
       "action": "SELL",
@@ -1306,16 +1339,28 @@
       "stop_loss": 37.74,
       "max_hold_date": "2026-06-29",
       "daily_prices": {
-        "2026-07-07": {
-          "close": 39.31,
-          "pnl_pct": -8.32
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.36,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.73
+        },
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.86,
+          "pnl_pct": -4.0
         }
       },
-      "close_date": "2026-07-07",
-      "close_price": 39.31,
-      "final_pnl_pct": -8.32,
+      "close_date": "2026-06-24",
+      "close_price": 37.74,
+      "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -41.61
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -20.87
     },
     {
       "ticker": "HOFT",
@@ -1331,16 +1376,42 @@
       "stop_loss": 17.68,
       "max_hold_date": "2026-06-30",
       "daily_prices": {
-        "2026-07-07": {
-          "close": 15.57,
-          "pnl_pct": 8.41
+        "2026-06-24": {
+          "open": 17.36,
+          "high": 17.61,
+          "low": 16.82,
+          "close": 17.05,
+          "pnl_pct": -0.29
+        },
+        "2026-06-25": {
+          "open": 17.18,
+          "high": 17.44,
+          "low": 16.9,
+          "close": 17.15,
+          "pnl_pct": -0.88
+        },
+        "2026-06-26": {
+          "open": 16.97,
+          "high": 17.41,
+          "low": 16.8,
+          "close": 17.1,
+          "pnl_pct": -0.59
+        },
+        "2026-06-29": {
+          "open": 15.8,
+          "high": 17.36,
+          "low": 15.08,
+          "close": 17.03,
+          "pnl_pct": 8.0
         }
       },
-      "close_date": "2026-07-07",
-      "close_price": 15.57,
-      "final_pnl_pct": 8.41,
+      "close_date": "2026-06-29",
+      "close_price": 15.64,
+      "final_pnl_pct": 8.0,
       "close_reason": "take_profit",
-      "realized_pnl_usd": 42.06
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 37.44
     },
     {
       "ticker": "LGND",
@@ -1356,16 +1427,21 @@
       "stop_loss": 290.62,
       "max_hold_date": "2026-07-01",
       "daily_prices": {
-        "2026-07-07": {
-          "close": 319.43,
-          "pnl_pct": -14.31
+        "2026-06-25": {
+          "open": 288.34,
+          "high": 300.12,
+          "low": 288.34,
+          "close": 295.92,
+          "pnl_pct": -4.0
         }
       },
-      "close_date": "2026-07-07",
-      "close_price": 319.43,
-      "final_pnl_pct": -14.31,
+      "close_date": "2026-06-25",
+      "close_price": 290.62,
+      "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -71.55
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -13.18
     },
     {
       "ticker": "SWBI",
@@ -1381,16 +1457,28 @@
       "stop_loss": 17.34,
       "max_hold_date": "2026-07-01",
       "daily_prices": {
-        "2026-07-07": {
-          "close": 15.44,
-          "pnl_pct": 7.38
+        "2026-06-25": {
+          "open": 16.05,
+          "high": 16.25,
+          "low": 15.48,
+          "close": 15.55,
+          "pnl_pct": 6.72
+        },
+        "2026-06-26": {
+          "open": 15.42,
+          "high": 15.56,
+          "low": 14.71,
+          "close": 15.1,
+          "pnl_pct": 7.98
         }
       },
-      "close_date": "2026-07-07",
-      "close_price": 15.44,
-      "final_pnl_pct": 7.38,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": 36.89
+      "close_date": "2026-06-26",
+      "close_price": 15.34,
+      "final_pnl_pct": 7.98,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 36.58
     },
     {
       "ticker": "OBT",
@@ -1406,16 +1494,49 @@
       "stop_loss": 37.96,
       "max_hold_date": "2026-07-01",
       "daily_prices": {
-        "2026-07-07": {
-          "close": 36.49,
-          "pnl_pct": 0.03
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "open": 37.02,
+          "high": 37.71,
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": -1.23
+        },
+        "2026-06-29": {
+          "open": 36.97,
+          "high": 37.7,
+          "low": 36.67,
+          "close": 37.24,
+          "pnl_pct": -2.03
+        },
+        "2026-06-30": {
+          "open": 37.04,
+          "high": 37.4,
+          "low": 36.55,
+          "close": 36.78,
+          "pnl_pct": -0.77
+        },
+        "2026-07-01": {
+          "open": 36.56,
+          "high": 37.97,
+          "low": 36.56,
+          "close": 37.64,
+          "pnl_pct": -4.0
         }
       },
-      "close_date": "2026-07-07",
-      "close_price": 36.49,
-      "final_pnl_pct": 0.03,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": 0.14
+      "close_date": "2026-07-01",
+      "close_price": 37.96,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -20.98
     },
     {
       "ticker": "SBFG",
@@ -1431,16 +1552,21 @@
       "stop_loss": 24.04,
       "max_hold_date": "2026-07-03",
       "daily_prices": {
-        "2026-07-07": {
-          "close": 26.13,
-          "pnl_pct": -13.02
+        "2026-06-29": {
+          "open": 24.71,
+          "high": 24.91,
+          "low": 23.62,
+          "close": 24.46,
+          "pnl_pct": -3.98
         }
       },
-      "close_date": "2026-07-07",
-      "close_price": 26.13,
-      "final_pnl_pct": -13.02,
+      "close_date": "2026-06-29",
+      "close_price": 24.04,
+      "final_pnl_pct": -3.98,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -65.1
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.32
     },
     {
       "ticker": "TRVI",
@@ -1456,16 +1582,95 @@
       "stop_loss": 18.65,
       "max_hold_date": "2026-07-03",
       "daily_prices": {
+        "2026-06-29": {
+          "open": 18.15,
+          "high": 18.86,
+          "low": 17.79,
+          "close": 18.63,
+          "pnl_pct": -4.02
+        }
+      },
+      "close_date": "2026-06-29",
+      "close_price": 18.65,
+      "final_pnl_pct": -4.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.46
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 50.6,
+      "stop_loss": 57.2,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "open": 54.94,
+          "high": 56.03,
+          "low": 54.0,
+          "close": 55.36,
+          "pnl_pct": -0.65
+        },
         "2026-07-07": {
-          "close": 19.5,
-          "pnl_pct": -8.76
+          "open": 55.52,
+          "high": 57.8,
+          "low": 55.13,
+          "close": 56.56,
+          "pnl_pct": -4.0
         }
       },
       "close_date": "2026-07-07",
-      "close_price": 19.5,
-      "final_pnl_pct": -8.76,
+      "close_price": 57.2,
+      "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -43.78
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.8
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 29.01,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 493.17,
+      "entry_commission": 1.0,
+      "take_profit": 26.69,
+      "stop_loss": 30.17,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 29.99,
+          "high": 30.23,
+          "low": 29.19,
+          "close": 29.41,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-02",
+      "close_price": 30.17,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.73
     },
     {
       "ticker": "SKWD",
@@ -1481,26 +1686,38 @@
       "stop_loss": 61.89,
       "max_hold_date": "2026-07-09",
       "daily_prices": {
+        "2026-07-06": {
+          "open": 61.0,
+          "high": 61.37,
+          "low": 59.29,
+          "close": 60.2,
+          "pnl_pct": -1.16
+        },
         "2026-07-07": {
+          "open": 61.38,
+          "high": 63.03,
+          "low": 61.06,
           "close": 62.41,
-          "pnl_pct": -4.87
+          "pnl_pct": -4.0
         }
       },
       "close_date": "2026-07-07",
-      "close_price": 62.41,
-      "final_pnl_pct": -4.87,
+      "close_price": 61.89,
+      "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
-      "realized_pnl_usd": -24.37
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.04
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 36,
-    "win_trades": 16,
-    "win_rate": 44.4,
-    "total_realized_pnl_usd": -164.72,
-    "open_unrealized_pnl_usd": 78.75,
-    "portfolio_value": 1914.03,
+    "total_trades": 38,
+    "win_trades": 15,
+    "win_rate": 39.5,
+    "total_realized_pnl_usd": -20.68,
+    "open_unrealized_pnl_usd": 86.25,
+    "portfolio_value": 2065.57,
     "updated_at": "2026-07-08"
   }
 }
