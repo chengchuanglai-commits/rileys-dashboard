@@ -1,46 +1,7 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "SRRK",
-      "name": "SRRK",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 55.0,
-      "allocated_usd": 500,
-      "shares": 9,
-      "actual_position_usd": 495.0,
-      "entry_commission": 1.0,
-      "take_profit": 50.6,
-      "stop_loss": 57.2,
-      "max_hold_date": "2026-07-08",
-      "day1_open": 55.52,
-      "daily_prices": {
-        "2026-07-02": {
-          "open": 52.8,
-          "high": 54.94,
-          "low": 51.32,
-          "close": 54.88,
-          "pnl_pct": 0.22
-        },
-        "2026-07-06": {
-          "open": 54.94,
-          "high": 56.03,
-          "low": 54.0,
-          "close": 55.36,
-          "pnl_pct": -0.65
-        },
-        "2026-07-07": {
-          "close": 56.42,
-          "pnl_pct": -2.58
-        }
-      },
-      "position_usd": 211.29,
-      "unrealized_pnl_usd": -5.73,
-      "gap_checked": true,
-      "day1_gap_pct": 0.95
-    },
     {
       "ticker": "MVBF",
       "name": "MVBF",
@@ -64,12 +25,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 3.12
         },
         "2026-07-07": {
-          "close": 29.06,
-          "pnl_pct": 2.61
+          "close": 28.96,
+          "pnl_pct": 2.95
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 5.51,
+      "unrealized_pnl_usd": 6.23,
       "gap_checked": true,
       "day1_gap_pct": -2.31
     },
@@ -96,12 +57,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.21
         },
         "2026-07-07": {
-          "close": 70.47,
-          "pnl_pct": 4.92
+          "close": 70.7,
+          "pnl_pct": 4.61
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 10.4,
+      "unrealized_pnl_usd": 9.74,
       "gap_checked": true,
       "day1_gap_pct": -1.92
     },
@@ -128,12 +89,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.27
         },
         "2026-07-07": {
-          "close": 322.63,
-          "pnl_pct": -0.96
+          "close": 316.81,
+          "pnl_pct": 0.86
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": -2.03,
+      "unrealized_pnl_usd": 2.58,
       "gap_checked": true,
       "day1_gap_pct": -0.44
     },
@@ -160,12 +121,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.7
         },
         "2026-07-07": {
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "close": 28.96,
+          "pnl_pct": 1.53
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 2.51,
+      "unrealized_pnl_usd": 3.23,
       "gap_checked": true,
       "day1_gap_pct": -0.88
     },
@@ -185,12 +146,12 @@ window.PORTFOLIO_C = {
       "day1_open": 318.14,
       "daily_prices": {
         "2026-07-07": {
-          "close": 322.63,
-          "pnl_pct": -0.96
+          "close": 316.81,
+          "pnl_pct": 0.86
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": -2.03,
+      "unrealized_pnl_usd": 2.58,
       "gap_checked": true,
       "day1_gap_pct": -0.44
     },
@@ -210,12 +171,12 @@ window.PORTFOLIO_C = {
       "day1_open": 29.15,
       "daily_prices": {
         "2026-07-07": {
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "close": 28.96,
+          "pnl_pct": 1.53
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 2.51,
+      "unrealized_pnl_usd": 3.23,
       "gap_checked": true,
       "day1_gap_pct": -0.88
     }
@@ -1321,17 +1282,63 @@ window.PORTFOLIO_C = {
       "commission_total": 2.0,
       "realized_pnl_usd": -8.49,
       "position_usd": 211.26
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 50.6,
+      "stop_loss": 57.2,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 52.8,
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "open": 54.94,
+          "high": 56.03,
+          "low": 54.0,
+          "close": 55.36,
+          "pnl_pct": -0.65
+        },
+        "2026-07-07": {
+          "open": 55.52,
+          "high": 57.61,
+          "low": 55.13,
+          "close": 57.41,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-07",
+      "close_price": 57.2,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.45,
+      "position_usd": 211.29
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 25,
+    "total_trades": 26,
     "win_trades": 14,
-    "win_rate": 56.0,
-    "total_realized_pnl_usd": 112.87,
-    "open_unrealized_pnl_usd": 27.05,
-    "portfolio_value": 2139.92,
+    "win_rate": 53.8,
+    "total_realized_pnl_usd": 104.42,
+    "open_unrealized_pnl_usd": 61.7,
+    "portfolio_value": 2166.12,
     "skipped_gap": 14,
-    "updated_at": "2026-07-07"
+    "updated_at": "2026-07-08"
   }
 };

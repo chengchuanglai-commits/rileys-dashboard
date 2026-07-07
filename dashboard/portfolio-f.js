@@ -96,10 +96,10 @@ window.PORTFOLIO_F = {
         },
         "2026-07-07": {
           "open": 29.15,
-          "high": 29.26,
+          "high": 29.31,
           "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "close": 28.96,
+          "pnl_pct": 1.53
         }
       }
     },
@@ -123,10 +123,10 @@ window.PORTFOLIO_F = {
       "daily_prices": {
         "2026-07-07": {
           "open": 29.15,
-          "high": 29.26,
+          "high": 29.31,
           "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "close": 28.96,
+          "pnl_pct": 1.53
         }
       }
     }
@@ -1291,25 +1291,25 @@ window.PORTFOLIO_F = {
         },
         "2026-07-07": {
           "open": 29.15,
-          "high": 29.26,
+          "high": 29.31,
           "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 2.61
+          "close": 28.96,
+          "pnl_pct": 2.95
         }
       },
       "t1_exit_date": "2026-07-07",
-      "t1_exit_price": 29.06,
+      "t1_exit_price": 28.96,
       "t1_exit_reason": "max_hold",
       "t2_exit_date": "2026-07-07",
-      "t2_exit_price": 29.06,
+      "t2_exit_price": 28.96,
       "t2_exit_reason": "max_hold",
-      "t1_gross_pnl": 6.24,
-      "t2_gross_pnl": 6.24,
+      "t1_gross_pnl": 7.04,
+      "t2_gross_pnl": 7.04,
       "close_date": "2026-07-07",
       "close_reason": "max_hold+max_hold",
-      "final_pnl_pct": 2.61,
+      "final_pnl_pct": 2.95,
       "commission_total": 3.0,
-      "realized_pnl_usd": 9.48,
+      "realized_pnl_usd": 11.08,
       "sl_unified": false
     },
     {
@@ -1341,23 +1341,23 @@ window.PORTFOLIO_F = {
           "open": 72.7,
           "high": 72.7,
           "low": 69.56,
-          "close": 70.47,
-          "pnl_pct": 4.92
+          "close": 70.7,
+          "pnl_pct": 4.61
         }
       },
       "t1_exit_date": "2026-07-07",
-      "t1_exit_price": 70.47,
+      "t1_exit_price": 70.7,
       "t1_exit_reason": "max_hold",
       "t2_exit_date": "2026-07-07",
-      "t2_exit_price": 70.47,
+      "t2_exit_price": 70.7,
       "t2_exit_reason": "max_hold",
-      "t1_gross_pnl": 10.95,
-      "t2_gross_pnl": 10.95,
+      "t1_gross_pnl": 10.26,
+      "t2_gross_pnl": 10.26,
       "close_date": "2026-07-07",
       "close_reason": "max_hold+max_hold",
-      "final_pnl_pct": 4.92,
+      "final_pnl_pct": 4.61,
       "commission_total": 3.0,
-      "realized_pnl_usd": 18.9,
+      "realized_pnl_usd": 17.52,
       "sl_unified": false
     },
     {
@@ -1407,9 +1407,9 @@ window.PORTFOLIO_F = {
     "total_trades": 26,
     "win_trades": 12,
     "win_rate": 46.2,
-    "total_realized_pnl_usd": 57.71,
-    "open_unrealized_pnl_usd": 13.21,
-    "portfolio_value": 2070.92,
+    "total_realized_pnl_usd": 57.93,
+    "open_unrealized_pnl_usd": 16.61,
+    "portfolio_value": 2074.54,
     "total_commission_usd": 66.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 6,

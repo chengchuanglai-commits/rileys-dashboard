@@ -3,40 +3,6 @@ window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "SRRK",
-      "name": "SRRK",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 55.0,
-      "allocated_usd": 500,
-      "shares": 9,
-      "actual_position_usd": 495.0,
-      "entry_commission": 1.0,
-      "take_profit": 50.6,
-      "stop_loss": 57.2,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-02": {
-          "open": 52.8,
-          "high": 54.94,
-          "low": 51.32,
-          "close": 54.88,
-          "pnl_pct": 0.22
-        },
-        "2026-07-06": {
-          "open": 54.94,
-          "high": 56.03,
-          "low": 54.0,
-          "close": 55.36,
-          "pnl_pct": -0.65
-        },
-        "2026-07-07": {
-          "close": 56.42,
-          "pnl_pct": -2.58
-        }
-      }
-    },
-    {
       "ticker": "LGND",
       "name": "LGND",
       "action": "SELL",
@@ -58,8 +24,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -2.7
         },
         "2026-07-07": {
-          "close": 322.63,
-          "pnl_pct": -3.4
+          "close": 316.81,
+          "pnl_pct": -1.54
         }
       }
     },
@@ -85,8 +51,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.12
         },
         "2026-07-07": {
-          "close": 29.06,
-          "pnl_pct": 2.61
+          "close": 28.96,
+          "pnl_pct": 2.95
         }
       }
     },
@@ -112,8 +78,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.21
         },
         "2026-07-07": {
-          "close": 70.47,
-          "pnl_pct": 4.92
+          "close": 70.7,
+          "pnl_pct": 4.61
         }
       }
     },
@@ -139,8 +105,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.27
         },
         "2026-07-07": {
-          "close": 322.63,
-          "pnl_pct": -0.96
+          "close": 316.81,
+          "pnl_pct": 0.86
         }
       }
     },
@@ -166,8 +132,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.7
         },
         "2026-07-07": {
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "close": 28.96,
+          "pnl_pct": 1.53
         }
       }
     },
@@ -193,8 +159,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.33
         },
         "2026-07-07": {
-          "close": 71.48,
-          "pnl_pct": 1.79
+          "close": 69.77,
+          "pnl_pct": 4.14
         }
       }
     },
@@ -213,8 +179,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-07": {
-          "close": 322.63,
-          "pnl_pct": -0.96
+          "close": 316.81,
+          "pnl_pct": 0.86
         }
       }
     },
@@ -233,8 +199,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-07": {
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "close": 28.96,
+          "pnl_pct": 1.53
         }
       }
     }
@@ -1634,6 +1600,50 @@ window.PORTFOLIO_B = {
       "realized_pnl_usd": -21.46
     },
     {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 50.6,
+      "stop_loss": 57.2,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "open": 54.94,
+          "high": 56.03,
+          "low": 54.0,
+          "close": 55.36,
+          "pnl_pct": -0.65
+        },
+        "2026-07-07": {
+          "open": 55.52,
+          "high": 57.61,
+          "low": 55.13,
+          "close": 57.41,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-07",
+      "close_price": 57.2,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -21.8
+    },
+    {
       "ticker": "MVBF",
       "name": "MVBF",
       "action": "SELL",
@@ -1688,7 +1698,7 @@ window.PORTFOLIO_B = {
           "open": 61.38,
           "high": 63.03,
           "low": 61.06,
-          "close": 62.88,
+          "close": 61.96,
           "pnl_pct": -4.0
         }
       },
@@ -1703,12 +1713,12 @@ window.PORTFOLIO_B = {
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 37,
+    "total_trades": 38,
     "win_trades": 15,
-    "win_rate": 40.5,
-    "total_realized_pnl_usd": 1.12,
-    "open_unrealized_pnl_usd": 19.0,
-    "portfolio_value": 2020.12,
-    "updated_at": "2026-07-07"
+    "win_rate": 39.5,
+    "total_realized_pnl_usd": -20.68,
+    "open_unrealized_pnl_usd": 74.7,
+    "portfolio_value": 2054.02,
+    "updated_at": "2026-07-08"
   }
 };

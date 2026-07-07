@@ -178,13 +178,13 @@ window.PORTFOLIO_HDS = {
         "2026-07-07": {
           "open": 71.53,
           "high": 71.53,
-          "low": 71.48,
-          "close": 71.48,
-          "pnl_pct": 1.79
+          "low": 69.77,
+          "close": 69.77,
+          "pnl_pct": 4.14
         }
       },
       "position_usd": 210.16,
-      "unrealized_pnl_usd": 3.76
+      "unrealized_pnl_usd": 8.7
     },
     {
       "ticker": "OBT",
@@ -203,13 +203,13 @@ window.PORTFOLIO_HDS = {
         "2026-07-07": {
           "open": 37.7,
           "high": 37.99,
-          "low": 37.04,
-          "close": 37.37,
-          "pnl_pct": 0.74
+          "low": 36.81,
+          "close": 36.82,
+          "pnl_pct": 2.2
         }
       },
       "position_usd": 210.16,
-      "unrealized_pnl_usd": 1.56
+      "unrealized_pnl_usd": 4.62
     },
     {
       "ticker": "MVBF",
@@ -227,14 +227,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-07-07": {
           "open": 29.15,
-          "high": 29.26,
+          "high": 29.31,
           "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "close": 28.96,
+          "pnl_pct": 1.53
         }
       },
       "position_usd": 210.16,
-      "unrealized_pnl_usd": 2.5
+      "unrealized_pnl_usd": 3.22
     }
   ],
   "closed_positions": [
@@ -1729,8 +1729,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 24,
     "win_rate": 57.1,
     "total_realized_pnl_usd": 101.64,
-    "open_unrealized_pnl_usd": 40.12,
-    "portfolio_value": 2141.76,
+    "open_unrealized_pnl_usd": 48.84,
+    "portfolio_value": 2150.48,
     "total_commission_usd": 84.0,
     "skipped_gap": 18,
     "skipped_zero_shares": 0,
