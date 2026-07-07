@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 50.6,
       "stop_loss": 57.2,
       "max_hold_date": "2026-07-08",
-      "day1_open": 52.8,
+      "day1_open": 55.52,
       "daily_prices": {
         "2026-07-02": {
           "open": 52.8,
@@ -30,10 +30,16 @@ window.PORTFOLIO_C = {
           "low": 54.0,
           "close": 55.36,
           "pnl_pct": -0.65
+        },
+        "2026-07-07": {
+          "close": 56.42,
+          "pnl_pct": -2.58
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": -1.37
+      "unrealized_pnl_usd": -5.73,
+      "gap_checked": true,
+      "day1_gap_pct": 0.95
     },
     {
       "ticker": "MVBF",
@@ -48,7 +54,7 @@ window.PORTFOLIO_C = {
       "take_profit": 27.45,
       "stop_loss": 31.03,
       "max_hold_date": "2026-07-09",
-      "day1_open": 29.28,
+      "day1_open": 29.15,
       "daily_prices": {
         "2026-07-06": {
           "open": 29.28,
@@ -56,10 +62,16 @@ window.PORTFOLIO_C = {
           "low": 28.7,
           "close": 28.91,
           "pnl_pct": 3.12
+        },
+        "2026-07-07": {
+          "close": 29.06,
+          "pnl_pct": 2.61
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 6.59
+      "unrealized_pnl_usd": 5.51,
+      "gap_checked": true,
+      "day1_gap_pct": -2.31
     },
     {
       "ticker": "DGII",
@@ -74,7 +86,7 @@ window.PORTFOLIO_C = {
       "take_profit": 68.19,
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
-      "day1_open": 72.21,
+      "day1_open": 72.7,
       "daily_prices": {
         "2026-07-06": {
           "open": 72.21,
@@ -82,10 +94,16 @@ window.PORTFOLIO_C = {
           "low": 72.05,
           "close": 73.22,
           "pnl_pct": 1.21
+        },
+        "2026-07-07": {
+          "close": 70.47,
+          "pnl_pct": 4.92
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 2.56
+      "unrealized_pnl_usd": 10.4,
+      "gap_checked": true,
+      "day1_gap_pct": -1.92
     },
     {
       "ticker": "LGND",
@@ -100,7 +118,7 @@ window.PORTFOLIO_C = {
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-10",
-      "day1_open": 319.94,
+      "day1_open": 318.14,
       "daily_prices": {
         "2026-07-06": {
           "open": 319.94,
@@ -108,10 +126,16 @@ window.PORTFOLIO_C = {
           "low": 315.76,
           "close": 320.42,
           "pnl_pct": -0.27
+        },
+        "2026-07-07": {
+          "close": 322.63,
+          "pnl_pct": -0.96
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": -0.57
+      "unrealized_pnl_usd": -2.03,
+      "gap_checked": true,
+      "day1_gap_pct": -0.44
     },
     {
       "ticker": "MVBF",
@@ -126,7 +150,7 @@ window.PORTFOLIO_C = {
       "take_profit": 27.06,
       "stop_loss": 30.59,
       "max_hold_date": "2026-07-10",
-      "day1_open": 29.28,
+      "day1_open": 29.15,
       "daily_prices": {
         "2026-07-06": {
           "open": 29.28,
@@ -134,10 +158,16 @@ window.PORTFOLIO_C = {
           "low": 28.7,
           "close": 28.91,
           "pnl_pct": 1.7
+        },
+        "2026-07-07": {
+          "close": 29.06,
+          "pnl_pct": 1.19
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 3.59
+      "unrealized_pnl_usd": 2.51,
+      "gap_checked": true,
+      "day1_gap_pct": -0.88
     },
     {
       "ticker": "LGND",
@@ -152,10 +182,17 @@ window.PORTFOLIO_C = {
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-13",
-      "day1_open": null,
-      "daily_prices": {},
+      "day1_open": 318.14,
+      "daily_prices": {
+        "2026-07-07": {
+          "close": 322.63,
+          "pnl_pct": -0.96
+        }
+      },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -2.03,
+      "gap_checked": true,
+      "day1_gap_pct": -0.44
     },
     {
       "ticker": "MVBF",
@@ -170,10 +207,17 @@ window.PORTFOLIO_C = {
       "take_profit": 27.06,
       "stop_loss": 30.59,
       "max_hold_date": "2026-07-13",
-      "day1_open": null,
-      "daily_prices": {},
+      "day1_open": 29.15,
+      "daily_prices": {
+        "2026-07-07": {
+          "close": 29.06,
+          "pnl_pct": 1.19
+        }
+      },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 2.51,
+      "gap_checked": true,
+      "day1_gap_pct": -0.88
     }
   ],
   "closed_positions": [
@@ -1284,12 +1328,10 @@ window.PORTFOLIO_C = {
     "total_trades": 25,
     "win_trades": 14,
     "win_rate": 56.0,
-    "total_realized_pnl_usd": 112.88,
-    "open_unrealized_pnl_usd": 10.8,
-    "portfolio_value": 2123.68,
-    "total_commission_usd": 50.0,
+    "total_realized_pnl_usd": 112.87,
+    "open_unrealized_pnl_usd": 27.05,
+    "portfolio_value": 2139.92,
     "skipped_gap": 14,
-    "skipped_zero_shares": 1,
     "updated_at": "2026-07-07"
   }
 };

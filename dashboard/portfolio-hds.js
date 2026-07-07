@@ -174,9 +174,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 61.86,
       "stop_loss": 74.24,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 71.53,
+          "high": 71.53,
+          "low": 71.48,
+          "close": 71.48,
+          "pnl_pct": 1.79
+        }
+      },
       "position_usd": 210.16,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.76
     },
     {
       "ticker": "OBT",
@@ -191,9 +199,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 32.0,
       "stop_loss": 38.4,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 37.7,
+          "high": 37.99,
+          "low": 37.04,
+          "close": 37.37,
+          "pnl_pct": 0.74
+        }
+      },
       "position_usd": 210.16,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 1.56
     },
     {
       "ticker": "MVBF",
@@ -208,9 +224,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 25.0,
       "stop_loss": 30.0,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.26,
+          "low": 28.63,
+          "close": 29.06,
+          "pnl_pct": 1.19
+        }
+      },
       "position_usd": 210.16,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 2.5
     }
   ],
   "closed_positions": [
@@ -1705,12 +1729,12 @@ window.PORTFOLIO_HDS = {
     "win_trades": 24,
     "win_rate": 57.1,
     "total_realized_pnl_usd": 101.64,
-    "open_unrealized_pnl_usd": 32.3,
-    "portfolio_value": 2133.94,
+    "open_unrealized_pnl_usd": 40.12,
+    "portfolio_value": 2141.76,
     "total_commission_usd": 84.0,
-    "skipped_gap": 17,
+    "skipped_gap": 18,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 7,
+    "skipped_no_cash": 6,
     "updated_at": "2026-07-07"
   }
 };
