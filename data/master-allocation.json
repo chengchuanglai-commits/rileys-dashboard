@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-03",
+  "date": "2026-07-07",
   "capital": 20000.0,
   "weights": {
     "index": 0.3,
@@ -32,13 +32,13 @@
       "target_usd": 10000,
       "engine": "IBKR动量腿(MOM-MA自动)",
       "current_holdings": [
-        "AMD",
         "RVMD",
+        "AMD",
         "FFIV",
-        "ALAB"
+        "FTNT"
       ],
       "warn": "",
-      "action": "动量腿 ≈$10000,IBKR系统自动选股/止损/出场。当前持仓4只: AMD, RVMD, FFIV, ALAB"
+      "action": "动量腿 ≈$10000,IBKR系统自动选股/止损/出场。当前持仓4只: RVMD, AMD, FFIV, FTNT"
     }
   }
 }

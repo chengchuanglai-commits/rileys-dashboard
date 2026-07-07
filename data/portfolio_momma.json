@@ -2,18 +2,6 @@
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "AMD",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 537.37,
-      "shares": 0.9305,
-      "stop_loss": 494.38,
-      "score": 74.3,
-      "actual_position_usd": 500.02,
-      "position_usd": 200.0,
-      "unrealized_pnl_usd": -7.28
-    },
-    {
       "ticker": "RVMD",
       "action": "BUY",
       "signal_date": "2026-06-18",
@@ -23,7 +11,19 @@
       "score": 75.4,
       "actual_position_usd": 500.0,
       "position_usd": 200.0,
-      "unrealized_pnl_usd": 32.21
+      "unrealized_pnl_usd": 33.13
+    },
+    {
+      "ticker": "AMD",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 537.37,
+      "shares": 0.9305,
+      "stop_loss": 494.38,
+      "score": 74.3,
+      "actual_position_usd": 500.02,
+      "position_usd": 200.0,
+      "unrealized_pnl_usd": 5.46
     },
     {
       "ticker": "FFIV",
@@ -35,10 +35,10 @@
       "score": 83.9,
       "actual_position_usd": 499.99,
       "position_usd": 192.5,
-      "unrealized_pnl_usd": 6.64
+      "unrealized_pnl_usd": 11.95
     },
     {
-      "ticker": "ALAB",
+      "ticker": "FTNT",
       "action": "BUY",
       "signal_date": "2026-06-26",
       "entry_price": 151.35,
@@ -47,90 +47,10 @@
       "score": 82.6,
       "actual_position_usd": 500.0,
       "position_usd": 177.49,
-      "unrealized_pnl_usd": 5.75
+      "unrealized_pnl_usd": 12.9
     }
   ],
   "closed_positions": [
-    {
-      "ticker": "ON",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 121.62,
-      "shares": 4.1112,
-      "stop_loss": 111.89,
-      "score": 76.2,
-      "close_date": "2026-06-23",
-      "close_price": 117.06,
-      "close_reason": "ma_break",
-      "final_pnl_pct": -3.75,
-      "realized_pnl_usd": -7.5,
-      "commission_total": 2.0,
-      "position_usd": 200.0
-    },
-    {
-      "ticker": "STM",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 78.3,
-      "shares": 6.3857,
-      "stop_loss": 72.04,
-      "score": 78.7,
-      "close_date": "2026-06-23",
-      "close_price": 72.04,
-      "close_reason": "init_stop",
-      "final_pnl_pct": -7.99,
-      "realized_pnl_usd": -15.98,
-      "commission_total": 2.0,
-      "position_usd": 200.0
-    },
-    {
-      "ticker": "STM",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 78.3,
-      "shares": 6.3857,
-      "stop_loss": 72.04,
-      "score": 78.7,
-      "close_date": "2026-06-23",
-      "close_price": 72.04,
-      "close_reason": "init_stop",
-      "final_pnl_pct": -7.99,
-      "realized_pnl_usd": -15.98,
-      "commission_total": 2.0,
-      "position_usd": 200.0
-    },
-    {
-      "ticker": "ON",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 121.62,
-      "shares": 4.1112,
-      "stop_loss": 111.89,
-      "score": 76.2,
-      "close_date": "2026-06-23",
-      "close_price": 117.06,
-      "close_reason": "ma_break",
-      "final_pnl_pct": -3.75,
-      "realized_pnl_usd": -7.5,
-      "commission_total": 2.0,
-      "position_usd": 200.0
-    },
-    {
-      "ticker": "COHR",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 389.57,
-      "shares": 1.2835,
-      "stop_loss": 358.4,
-      "score": 75.9,
-      "close_date": "2026-06-23",
-      "close_price": 381.22,
-      "close_reason": "ma_break",
-      "final_pnl_pct": -2.14,
-      "realized_pnl_usd": -4.28,
-      "commission_total": 2.0,
-      "position_usd": 200.0
-    },
     {
       "ticker": "HUT",
       "action": "BUY",
@@ -148,6 +68,38 @@
       "position_usd": 200.0
     },
     {
+      "ticker": "ON",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 121.62,
+      "shares": 4.1112,
+      "stop_loss": 111.89,
+      "score": 76.2,
+      "close_date": "2026-06-23",
+      "close_price": 117.06,
+      "close_reason": "ma_break",
+      "final_pnl_pct": -3.75,
+      "realized_pnl_usd": -7.5,
+      "commission_total": 2.0,
+      "position_usd": 200.0
+    },
+    {
+      "ticker": "STM",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 78.3,
+      "shares": 6.3857,
+      "stop_loss": 72.04,
+      "score": 78.7,
+      "close_date": "2026-06-23",
+      "close_price": 72.04,
+      "close_reason": "init_stop",
+      "final_pnl_pct": -7.99,
+      "realized_pnl_usd": -15.98,
+      "commission_total": 2.0,
+      "position_usd": 200.0
+    },
+    {
       "ticker": "IESC",
       "action": "BUY",
       "signal_date": "2026-06-18",
@@ -160,6 +112,22 @@
       "close_reason": "ma_break",
       "final_pnl_pct": -0.26,
       "realized_pnl_usd": -0.52,
+      "commission_total": 2.0,
+      "position_usd": 200.0
+    },
+    {
+      "ticker": "COHR",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 389.57,
+      "shares": 1.2835,
+      "stop_loss": 358.4,
+      "score": 75.9,
+      "close_date": "2026-06-23",
+      "close_price": 381.22,
+      "close_reason": "ma_break",
+      "final_pnl_pct": -2.14,
+      "realized_pnl_usd": -4.28,
       "commission_total": 2.0,
       "position_usd": 200.0
     },
@@ -196,18 +164,18 @@
       "position_usd": 200.0
     },
     {
-      "ticker": "STM",
+      "ticker": "VICR",
       "action": "BUY",
-      "signal_date": "2026-06-26",
-      "entry_price": 71.42,
-      "shares": 7.0008,
-      "stop_loss": 65.71,
-      "score": 87.3,
-      "close_date": "2026-06-29",
-      "close_price": 74.79,
-      "close_reason": "ma_break",
-      "final_pnl_pct": 4.72,
-      "realized_pnl_usd": 9.09,
+      "signal_date": "2026-06-18",
+      "entry_price": 331.37,
+      "shares": 1.5089,
+      "stop_loss": 304.86,
+      "score": 77.0,
+      "close_date": "2026-06-26",
+      "close_price": 304.86,
+      "close_reason": "init_stop",
+      "final_pnl_pct": -8.0,
+      "realized_pnl_usd": -16.0,
       "commission_total": 2.0,
       "position_usd": 200.0
     },
@@ -224,6 +192,22 @@
       "close_reason": "init_stop",
       "final_pnl_pct": -8.0,
       "realized_pnl_usd": -15.4,
+      "commission_total": 2.0,
+      "position_usd": 192.5
+    },
+    {
+      "ticker": "STM",
+      "action": "BUY",
+      "signal_date": "2026-06-26",
+      "entry_price": 71.42,
+      "shares": 7.0008,
+      "stop_loss": 65.71,
+      "score": 87.3,
+      "close_date": "2026-06-29",
+      "close_price": 74.79,
+      "close_reason": "ma_break",
+      "final_pnl_pct": 4.72,
+      "realized_pnl_usd": 9.09,
       "commission_total": 2.0,
       "position_usd": 192.5
     },
@@ -298,10 +282,10 @@
     "win_trades": 5,
     "win_rate": 35.7,
     "total_realized_pnl_usd": -84.66,
-    "open_unrealized_pnl_usd": 37.32,
-    "portfolio_value": 1952.66,
+    "open_unrealized_pnl_usd": 63.45,
+    "portfolio_value": 1978.79,
     "total_commission_usd": 32.0,
     "skipped_no_cash": 1,
-    "updated_at": "2026-07-03"
+    "updated_at": "2026-07-07"
   }
 }

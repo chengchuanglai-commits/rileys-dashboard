@@ -160,57 +160,6 @@ window.PORTFOLIO_HDS = {
       },
       "position_usd": 210.45,
       "unrealized_pnl_usd": 0.46
-    },
-    {
-      "ticker": "LGND",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 312.01,
-      "allocated_usd": 500,
-      "shares": 1.6025,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 265.21,
-      "stop_loss": 318.25,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {},
-      "position_usd": 209.69,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "SKWD",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-02",
-      "entry_price": 59.51,
-      "allocated_usd": 500,
-      "shares": 8.4019,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 68.44,
-      "stop_loss": 58.32,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {},
-      "position_usd": 209.69,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "MVBF",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 29.84,
-      "allocated_usd": 500,
-      "shares": 16.756,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 25.36,
-      "stop_loss": 30.44,
-      "max_hold_date": "2026-07-06",
-      "daily_prices": {},
-      "position_usd": 209.69,
-      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1604,20 +1553,113 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.69,
       "position_usd": 210.87
+    },
+    {
+      "ticker": "LGND",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1.6025,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 265.21,
+      "stop_loss": 318.25,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 318.31,
+          "high": 322.31,
+          "low": 315.76,
+          "close": 320.42,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-06",
+      "close_price": 318.25,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.19,
+      "position_usd": 209.69
+    },
+    {
+      "ticker": "SKWD",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-02",
+      "entry_price": 59.51,
+      "allocated_usd": 500,
+      "shares": 8.4019,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 68.44,
+      "stop_loss": 58.32,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 61.0,
+          "high": 61.37,
+          "low": 59.29,
+          "close": 60.2,
+          "pnl_pct": 1.16
+        }
+      },
+      "close_date": "2026-07-06",
+      "close_price": 60.2,
+      "final_pnl_pct": 1.16,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.43,
+      "position_usd": 209.69
+    },
+    {
+      "ticker": "MVBF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16.756,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 25.36,
+      "stop_loss": 30.44,
+      "max_hold_date": "2026-07-06",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 3.12
+        }
+      },
+      "close_date": "2026-07-06",
+      "close_price": 28.91,
+      "final_pnl_pct": 3.12,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 6.54,
+      "position_usd": 209.69
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 39,
-    "win_trades": 22,
-    "win_rate": 56.4,
-    "total_realized_pnl_usd": 96.91,
+    "total_trades": 42,
+    "win_trades": 24,
+    "win_rate": 57.1,
+    "total_realized_pnl_usd": 101.69,
     "open_unrealized_pnl_usd": 32.31,
-    "portfolio_value": 2129.22,
-    "total_commission_usd": 78.0,
+    "portfolio_value": 2134.0,
+    "total_commission_usd": 84.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 2,
-    "updated_at": "2026-07-03"
+    "updated_at": "2026-07-07"
   }
 };

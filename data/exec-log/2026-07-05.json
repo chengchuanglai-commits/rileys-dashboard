@@ -1,0 +1,78 @@
+{
+  "date": "2026-07-05",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "ALAB",
+      "qty": 6,
+      "px": 409.6,
+      "usd": 2457.6000000000004
+    },
+    {
+      "sym": "AMD",
+      "qty": 1.0,
+      "px": 519.5,
+      "usd": 519.5
+    },
+    {
+      "sym": "FTNT",
+      "qty": 4.0,
+      "px": 155.08,
+      "usd": 620.32
+    },
+    {
+      "sym": "INTC",
+      "qty": -15.0,
+      "px": 121.0,
+      "usd": 1815.0
+    },
+    {
+      "sym": "KSPI",
+      "qty": -1.0,
+      "px": 89.82,
+      "usd": 89.82
+    },
+    {
+      "sym": "RVMD",
+      "qty": 3.0,
+      "px": 189.44,
+      "usd": 568.3199999999999
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "ALAB",
+      "qty": 6,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "AMD",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FTNT",
+      "qty": 4.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "INTC",
+      "qty": -15.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "KSPI",
+      "qty": -1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 3.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}

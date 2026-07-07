@@ -17,39 +17,22 @@
       "day1_open": 52.8,
       "daily_prices": {
         "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
           "close": 54.88,
           "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "open": 54.68,
+          "high": 56.0,
+          "low": 54.0,
+          "close": 55.36,
+          "pnl_pct": -0.65
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.46,
-      "gap_checked": true,
-      "day1_gap_pct": -4.0
-    },
-    {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 312.01,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 312.01,
-      "entry_commission": 1.0,
-      "take_profit": 287.05,
-      "stop_loss": 324.49,
-      "max_hold_date": "2026-07-09",
-      "day1_open": 314.81,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 319.55,
-          "pnl_pct": -2.42
-        }
-      },
-      "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": 0.9
+      "unrealized_pnl_usd": -1.37
     },
     {
       "ticker": "MVBF",
@@ -64,17 +47,18 @@
       "take_profit": 27.45,
       "stop_loss": 31.03,
       "max_hold_date": "2026-07-09",
-      "day1_open": 29.99,
+      "day1_open": 29.28,
       "daily_prices": {
-        "2026-07-02": {
-          "close": 29.41,
-          "pnl_pct": 1.44
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 3.12
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": 0.5
+      "unrealized_pnl_usd": 6.59
     },
     {
       "ticker": "DGII",
@@ -89,42 +73,18 @@
       "take_profit": 68.19,
       "stop_loss": 77.08,
       "max_hold_date": "2026-07-09",
-      "day1_open": 74.0,
+      "day1_open": 72.21,
       "daily_prices": {
-        "2026-07-02": {
-          "close": 72.15,
-          "pnl_pct": 2.66
+        "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
+          "close": 73.22,
+          "pnl_pct": 1.21
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.16
-    },
-    {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 59.51,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 476.08,
-      "entry_commission": 1.0,
-      "take_profit": 54.75,
-      "stop_loss": 61.89,
-      "max_hold_date": "2026-07-09",
-      "day1_open": 59.4,
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 61.42,
-          "pnl_pct": -3.21
-        }
-      },
-      "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.18
+      "unrealized_pnl_usd": 2.56
     },
     {
       "ticker": "LGND",
@@ -139,42 +99,44 @@
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-10",
-      "day1_open": 314.81,
+      "day1_open": 318.31,
       "daily_prices": {
-        "2026-07-02": {
-          "close": 319.55,
-          "pnl_pct": -0.0
+        "2026-07-06": {
+          "open": 318.31,
+          "high": 322.31,
+          "low": 315.76,
+          "close": 320.42,
+          "pnl_pct": -0.27
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -1.48
+      "unrealized_pnl_usd": -0.57
     },
     {
-      "ticker": "UTMD",
-      "name": "UTMD",
+      "ticker": "MVBF",
+      "name": "MVBF",
       "action": "SELL",
       "signal_date": "2026-07-03",
-      "entry_price": 72.78,
+      "entry_price": 29.41,
       "allocated_usd": 500,
-      "shares": 6,
-      "actual_position_usd": 436.68,
+      "shares": 17,
+      "actual_position_usd": 499.97,
       "entry_commission": 1.0,
-      "take_profit": 66.96,
-      "stop_loss": 75.69,
+      "take_profit": 27.06,
+      "stop_loss": 30.59,
       "max_hold_date": "2026-07-10",
-      "day1_open": 70.68,
+      "day1_open": 29.28,
       "daily_prices": {
-        "2026-07-02": {
-          "close": 72.78,
-          "pnl_pct": -0.0
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 1.7
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -2.89
+      "unrealized_pnl_usd": 3.59
     }
   ],
   "closed_positions": [
@@ -1248,66 +1210,6 @@
       "position_usd": 210.44
     },
     {
-      "ticker": "OBT",
-      "name": "OBT",
-      "action": "SELL",
-      "signal_date": "2026-06-24",
-      "entry_price": 36.5,
-      "allocated_usd": 500,
-      "shares": 13,
-      "actual_position_usd": 474.5,
-      "entry_commission": 1.0,
-      "take_profit": 33.58,
-      "stop_loss": 37.96,
-      "max_hold_date": "2026-07-01",
-      "day1_open": 36.55,
-      "daily_prices": {
-        "2026-06-25": {
-          "open": 36.55,
-          "high": 37.19,
-          "low": 36.55,
-          "close": 36.89,
-          "pnl_pct": -1.07
-        },
-        "2026-06-26": {
-          "open": 37.02,
-          "high": 37.71,
-          "low": 36.5,
-          "close": 36.95,
-          "pnl_pct": -1.23
-        },
-        "2026-06-29": {
-          "open": 36.97,
-          "high": 37.7,
-          "low": 36.67,
-          "close": 37.24,
-          "pnl_pct": -2.03
-        },
-        "2026-06-30": {
-          "open": 37.04,
-          "high": 37.4,
-          "low": 36.55,
-          "close": 36.78,
-          "pnl_pct": -0.77
-        },
-        "2026-07-01": {
-          "open": 36.56,
-          "high": 37.97,
-          "low": 36.56,
-          "close": 37.64,
-          "pnl_pct": -4.0
-        }
-      },
-      "close_date": "2026-07-01",
-      "close_price": 37.96,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -8.42,
-      "position_usd": 210.43
-    },
-    {
       "ticker": "TRVI",
       "name": "TRVI",
       "action": "SELL",
@@ -1345,10 +1247,12 @@
     "total_trades": 25,
     "win_trades": 14,
     "win_rate": 56.0,
-    "total_realized_pnl_usd": 112.87,
-    "open_unrealized_pnl_usd": -6.55,
-    "portfolio_value": 2106.32,
-    "skipped_gap": 12,
-    "updated_at": "2026-07-03"
+    "total_realized_pnl_usd": 112.88,
+    "open_unrealized_pnl_usd": 10.8,
+    "portfolio_value": 2123.68,
+    "total_commission_usd": 50.0,
+    "skipped_gap": 14,
+    "skipped_zero_shares": 1,
+    "updated_at": "2026-07-07"
   }
 }

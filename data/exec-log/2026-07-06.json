@@ -1,0 +1,56 @@
+{
+  "date": "2026-07-06",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "ALAB",
+      "qty": -6.0,
+      "px": 450.48,
+      "usd": 2702.88
+    },
+    {
+      "sym": "FFIV",
+      "qty": 5,
+      "px": 417.05,
+      "usd": 2085.25
+    },
+    {
+      "sym": "FTNT",
+      "qty": -1.0,
+      "px": 162.67,
+      "usd": 162.67
+    },
+    {
+      "sym": "KSPI",
+      "qty": 1.0,
+      "px": 88.59,
+      "usd": 88.59
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "ALAB",
+      "qty": -6.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FFIV",
+      "qty": 5,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FTNT",
+      "qty": -1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "KSPI",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
