@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-07": {
-          "close": 316.81,
-          "pnl_pct": 0.86
+          "close": 319.43,
+          "pnl_pct": 0.04
         }
       },
       "gap_checked": true,
@@ -40,8 +40,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-07": {
-          "close": 28.96,
-          "pnl_pct": 1.53
+          "close": 28.62,
+          "pnl_pct": 2.69
         }
       },
       "gap_checked": true,
@@ -1071,17 +1071,17 @@ window.PORTFOLIO_D = {
           "open": 318.14,
           "high": 323.26,
           "low": 312.73,
-          "close": 315.66,
-          "pnl_pct": 1.22
+          "close": 319.43,
+          "pnl_pct": 0.04
         }
       },
       "close_date": "2026-07-07",
-      "close_price": 315.66,
-      "final_pnl_pct": 1.22,
+      "close_price": 319.43,
+      "final_pnl_pct": 0.04,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.9
+      "realized_pnl_usd": -1.87
     },
     {
       "ticker": "MVBF",
@@ -1107,18 +1107,18 @@ window.PORTFOLIO_D = {
         "2026-07-07": {
           "open": 29.15,
           "high": 29.31,
-          "low": 28.63,
-          "close": 28.96,
-          "pnl_pct": 1.53
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
         }
       },
       "close_date": "2026-07-07",
-      "close_price": 28.96,
-      "final_pnl_pct": 1.53,
+      "close_price": 28.62,
+      "final_pnl_pct": 2.69,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.65
+      "realized_pnl_usd": 11.45
     },
     {
       "ticker": "TCNNF",
@@ -1170,18 +1170,18 @@ window.PORTFOLIO_D = {
           "pnl_pct": 0.22
         },
         "2026-07-07": {
-          "close": 57.44,
-          "pnl_pct": -4.44
+          "close": 56.56,
+          "pnl_pct": -2.84
         }
       },
       "gap_checked": true,
       "day1_open": 55.52,
       "day1_gap_pct": 0.95,
       "close_date": "2026-07-07",
-      "close_price": 57.44,
-      "final_pnl_pct": -4.44,
-      "close_reason": "stop_loss",
-      "realized_pnl_usd": -22.18
+      "close_price": 56.56,
+      "final_pnl_pct": -2.84,
+      "close_reason": "max_hold",
+      "realized_pnl_usd": -14.18
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1189,9 +1189,9 @@ window.PORTFOLIO_D = {
     "total_trades": 33,
     "win_trades": 17,
     "win_rate": 51.5,
-    "total_realized_pnl_usd": 182.67,
-    "open_unrealized_pnl_usd": 11.95,
-    "portfolio_value": 2194.62,
+    "total_realized_pnl_usd": 192.7,
+    "open_unrealized_pnl_usd": 13.65,
+    "portfolio_value": 2206.35,
     "skipped_gap": 11,
     "updated_at": "2026-07-08"
   }

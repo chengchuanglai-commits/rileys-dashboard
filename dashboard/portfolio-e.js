@@ -118,8 +118,8 @@ window.PORTFOLIO_E = {
           "open": 318.14,
           "high": 323.26,
           "low": 312.73,
-          "close": 315.66,
-          "pnl_pct": 1.22
+          "close": 319.43,
+          "pnl_pct": 0.04
         }
       },
       "gap_checked": true,
@@ -152,9 +152,9 @@ window.PORTFOLIO_E = {
         "2026-07-07": {
           "open": 29.15,
           "high": 29.31,
-          "low": 28.63,
-          "close": 28.96,
-          "pnl_pct": 1.53
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
         }
       },
       "gap_checked": true,
@@ -181,8 +181,8 @@ window.PORTFOLIO_E = {
           "open": 318.14,
           "high": 323.26,
           "low": 312.73,
-          "close": 315.66,
-          "pnl_pct": 1.22
+          "close": 319.43,
+          "pnl_pct": 0.04
         }
       },
       "gap_checked": true,
@@ -208,9 +208,9 @@ window.PORTFOLIO_E = {
         "2026-07-07": {
           "open": 29.15,
           "high": 29.31,
-          "low": 28.63,
-          "close": 28.96,
-          "pnl_pct": 1.53
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
         }
       },
       "gap_checked": true,
@@ -1151,18 +1151,18 @@ window.PORTFOLIO_E = {
         "2026-07-07": {
           "open": 29.15,
           "high": 29.31,
-          "low": 28.63,
-          "close": 28.96,
-          "pnl_pct": 2.95
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 4.09
         }
       },
       "close_date": "2026-07-07",
-      "close_price": 28.96,
-      "final_pnl_pct": 2.95,
+      "close_price": 28.62,
+      "final_pnl_pct": 4.09,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 12.08
+      "realized_pnl_usd": 17.53
     },
     {
       "ticker": "DGII",
@@ -1192,17 +1192,17 @@ window.PORTFOLIO_E = {
           "open": 72.7,
           "high": 72.7,
           "low": 69.56,
-          "close": 70.7,
-          "pnl_pct": 4.61
+          "close": 70.16,
+          "pnl_pct": 5.34
         }
       },
       "close_date": "2026-07-07",
-      "close_price": 70.7,
-      "final_pnl_pct": 4.61,
+      "close_price": 70.16,
+      "final_pnl_pct": 5.34,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 18.5
+      "realized_pnl_usd": 21.75
     },
     {
       "ticker": "SKWD",
@@ -1243,9 +1243,9 @@ window.PORTFOLIO_E = {
     "total_trades": 26,
     "win_trades": 11,
     "win_rate": 42.3,
-    "total_realized_pnl_usd": 77.29,
-    "open_unrealized_pnl_usd": 22.4,
-    "portfolio_value": 2099.69,
+    "total_realized_pnl_usd": 85.99,
+    "open_unrealized_pnl_usd": 26.46,
+    "portfolio_value": 2112.45,
     "total_commission_usd": 52.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
