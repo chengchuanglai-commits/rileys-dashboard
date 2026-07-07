@@ -1281,8 +1281,8 @@
           "pnl_pct": 0.22
         },
         "2026-07-06": {
-          "open": 54.68,
-          "high": 56.0,
+          "open": 54.94,
+          "high": 56.03,
           "low": 54.0,
           "close": 55.36,
           "pnl_pct": -0.65
@@ -1356,6 +1356,6 @@
     "total_commission_usd": 60.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 6,
-    "updated_at": "2026-07-06"
+    "updated_at": "2026-07-07"
   }
 }

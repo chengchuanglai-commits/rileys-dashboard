@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -15,7 +15,7 @@ window.PORTFOLIO_C = {
       "take_profit": 50.6,
       "stop_loss": 57.2,
       "max_hold_date": "2026-07-08",
-      "day1_open": 54.68,
+      "day1_open": 52.8,
       "daily_prices": {
         "2026-07-02": {
           "open": 52.8,
@@ -25,14 +25,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.22
         },
         "2026-07-06": {
+          "open": 54.94,
+          "high": 56.03,
+          "low": 54.0,
           "close": 55.36,
           "pnl_pct": -0.65
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": -1.37,
-      "gap_checked": true,
-      "day1_gap_pct": -0.58
+      "unrealized_pnl_usd": -1.37
     },
     {
       "ticker": "MVBF",
@@ -50,14 +51,15 @@ window.PORTFOLIO_C = {
       "day1_open": 29.28,
       "daily_prices": {
         "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
           "close": 28.91,
           "pnl_pct": 3.12
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 6.59,
-      "gap_checked": true,
-      "day1_gap_pct": -1.88
+      "unrealized_pnl_usd": 6.59
     },
     {
       "ticker": "DGII",
@@ -75,14 +77,15 @@ window.PORTFOLIO_C = {
       "day1_open": 72.21,
       "daily_prices": {
         "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
           "close": 73.22,
           "pnl_pct": 1.21
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 2.56,
-      "gap_checked": true,
-      "day1_gap_pct": -2.58
+      "unrealized_pnl_usd": 2.56
     },
     {
       "ticker": "LGND",
@@ -97,17 +100,18 @@ window.PORTFOLIO_C = {
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-10",
-      "day1_open": 318.31,
+      "day1_open": 319.94,
       "daily_prices": {
         "2026-07-06": {
+          "open": 319.94,
+          "high": 322.31,
+          "low": 315.76,
           "close": 320.42,
           "pnl_pct": -0.27
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": -0.57,
-      "gap_checked": true,
-      "day1_gap_pct": -0.39
+      "unrealized_pnl_usd": -0.57
     },
     {
       "ticker": "MVBF",
@@ -125,14 +129,15 @@ window.PORTFOLIO_C = {
       "day1_open": 29.28,
       "daily_prices": {
         "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
           "close": 28.91,
           "pnl_pct": 1.7
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 3.59,
-      "gap_checked": true,
-      "day1_gap_pct": -0.44
+      "unrealized_pnl_usd": 3.59
     },
     {
       "ticker": "LGND",
@@ -147,17 +152,10 @@ window.PORTFOLIO_C = {
       "take_profit": 293.99,
       "stop_loss": 332.33,
       "max_hold_date": "2026-07-13",
-      "day1_open": 318.31,
-      "daily_prices": {
-        "2026-07-06": {
-          "close": 320.42,
-          "pnl_pct": -0.27
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.39
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "MVBF",
@@ -172,17 +170,10 @@ window.PORTFOLIO_C = {
       "take_profit": 27.06,
       "stop_loss": 30.59,
       "max_hold_date": "2026-07-13",
-      "day1_open": 29.28,
-      "daily_prices": {
-        "2026-07-06": {
-          "close": 28.91,
-          "pnl_pct": 1.7
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -0.44
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1293,10 +1284,12 @@ window.PORTFOLIO_C = {
     "total_trades": 25,
     "win_trades": 14,
     "win_rate": 56.0,
-    "total_realized_pnl_usd": 112.87,
-    "open_unrealized_pnl_usd": 32.7,
-    "portfolio_value": 2145.57,
+    "total_realized_pnl_usd": 112.88,
+    "open_unrealized_pnl_usd": 10.8,
+    "portfolio_value": 2123.68,
+    "total_commission_usd": 50.0,
     "skipped_gap": 14,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-07"
   }
 };

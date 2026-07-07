@@ -2,6 +2,44 @@
   "capital_usd": 2000,
   "open_positions": [
     {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 46.75,
+      "stop_loss": 56.65,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        }
+      }
+    },
+    {
       "ticker": "LGND",
       "name": "LGND",
       "action": "SELL",
@@ -16,13 +54,13 @@
       "max_hold_date": "2026-07-07",
       "daily_prices": {
         "2026-07-06": {
+          "open": 319.94,
+          "high": 322.31,
+          "low": 315.76,
           "close": 320.42,
           "pnl_pct": -0.27
         }
-      },
-      "gap_checked": true,
-      "day1_open": 318.31,
-      "day1_gap_pct": -0.39
+      }
     },
     {
       "ticker": "MVBF",
@@ -39,13 +77,13 @@
       "max_hold_date": "2026-07-07",
       "daily_prices": {
         "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
           "close": 28.91,
           "pnl_pct": 1.7
         }
-      },
-      "gap_checked": true,
-      "day1_open": 29.28,
-      "day1_gap_pct": -0.44
+      }
     },
     {
       "ticker": "LGND",
@@ -60,15 +98,7 @@
       "take_profit": 271.62,
       "stop_loss": 329.14,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-06": {
-          "close": 320.42,
-          "pnl_pct": -0.27
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 318.31,
-      "day1_gap_pct": -0.39
+      "daily_prices": {}
     },
     {
       "ticker": "MVBF",
@@ -83,15 +113,7 @@
       "take_profit": 25.0,
       "stop_loss": 30.29,
       "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-06": {
-          "close": 28.91,
-          "pnl_pct": 1.7
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 29.28,
-      "day1_gap_pct": -0.44
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -986,7 +1008,7 @@
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-06": {
-          "open": 318.31,
+          "open": 319.94,
           "high": 322.31,
           "low": 315.76,
           "close": 320.42,
@@ -1090,80 +1112,19 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -16.33
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {
-        "2026-07-02": {
-          "close": 9.78,
-          "pnl_pct": 20.87
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 9.64,
-      "day1_gap_pct": -22.01,
-      "close_date": "2026-07-02",
-      "close_price": 9.78,
-      "final_pnl_pct": 20.87,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 104.37
-    },
-    {
-      "ticker": "SRRK",
-      "name": "SRRK",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 55.0,
-      "allocated_usd": 500,
-      "shares": 9,
-      "actual_position_usd": 495.0,
-      "entry_commission": 1.0,
-      "take_profit": 46.75,
-      "stop_loss": 56.65,
-      "max_hold_date": "2026-07-03",
-      "daily_prices": {
-        "2026-07-02": {
-          "open": 52.8,
-          "high": 54.94,
-          "low": 51.32,
-          "close": 54.88,
-          "pnl_pct": 0.22
-        },
-        "2026-07-06": {
-          "close": 55.36,
-          "pnl_pct": -0.65
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 54.68,
-      "day1_gap_pct": -0.58,
-      "close_date": "2026-07-06",
-      "close_price": 55.36,
-      "final_pnl_pct": -0.65,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": -3.27
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 31,
-    "win_trades": 15,
-    "win_rate": 48.4,
-    "total_realized_pnl_usd": 155.2,
-    "open_unrealized_pnl_usd": 14.3,
-    "portfolio_value": 2169.5,
+    "total_trades": 29,
+    "win_trades": 12,
+    "win_rate": 41.4,
+    "total_realized_pnl_usd": 54.1,
+    "open_unrealized_pnl_usd": 5.73,
+    "portfolio_value": 2059.83,
+    "total_commission_usd": 58.0,
     "skipped_gap": 11,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-07"
   }
 }
