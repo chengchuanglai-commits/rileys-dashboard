@@ -12,25 +12,35 @@ import os, json
 TICKER = "QQQ"
 STATE = "data/qqq-alert-state.json"
 BREAKOUT = 748.65   # DeepSeek突破触发位(6月高点)
-PULLBACK = 707.0    # DeepSeek吸纳区上沿(固定,非漂移的50日线——50MA会随时间涨,用固定值才贴DeepSeek原意)
+PULLBACK = 707.0    # DeepSeek吸纳区上沿(固定,非漂移的50日线)
+APPROACH = 710.0    # 接近提醒:到这就先给抬头(防抽样漏掉$707那一下)
 ADD_USD = 300       # 每次加仓建议额
 
 
 def levels():
-    import yfinance as yf
-    c = yf.download(TICKER, period="260d", progress=False)["Close"]
-    c = (c[TICKER] if hasattr(c, "columns") else c).dropna()
-    px = float(c.iloc[-1])
-    ma50 = float(c.rolling(50).mean().iloc[-1])
-    ma200 = float(c.rolling(200).mean().iloc[-1])
-    delta = c.diff(); up = delta.clip(lower=0).rolling(14).mean(); dn = (-delta.clip(upper=0)).rolling(14).mean()
-    rsi = float((100 - 100 / (1 + up / dn)).iloc[-1])
-    return px, ma50, ma200, rsi
+    """取当前价+今日日内低(low)+均线+RSI。用day_low判断吸纳区→哪怕瞬间探一下又弹回也抓得到。
+    取价加重试(yfinance偶发抖动)。"""
+    import yfinance as yf, time
+    for attempt in range(3):
+        try:
+            d = yf.download(TICKER, period="260d", progress=False)
+            c = (d["Close"][TICKER] if hasattr(d["Close"], "columns") else d["Close"]).dropna()
+            lo = (d["Low"][TICKER] if hasattr(d["Low"], "columns") else d["Low"]).dropna()
+            if len(c) < 200:
+                raise ValueError("数据太短")
+            px = float(c.iloc[-1]); day_low = float(lo.iloc[-1])
+            ma50 = float(c.rolling(50).mean().iloc[-1]); ma200 = float(c.rolling(200).mean().iloc[-1])
+            delta = c.diff(); up = delta.clip(lower=0).rolling(14).mean(); dn = (-delta.clip(upper=0)).rolling(14).mean()
+            rsi = float((100 - 100 / (1 + up / dn)).iloc[-1])
+            return px, day_low, ma50, ma200, rsi
+        except Exception:
+            time.sleep(3)
+    raise RuntimeError("取价失败(重试3次)")
 
 
 def run():
     try:
-        px, ma50, ma200, rsi = levels()
+        px, day_low, ma50, ma200, rsi = levels()
     except Exception as e:
         print(f"[qqq-alert] 取价失败,跳过: {e}"); return
     st = {}
@@ -53,9 +63,16 @@ def run():
     if px <= BREAKOUT * 0.985:
         st["breakout"] = False
 
-    # 回调触发(DeepSeek吸纳区上沿固定$707,不用漂移的50日线)
-    if px >= ma200 and px <= PULLBACK and not st.get("pullback"):
-        alerts.append(f"🟢 QQQ ${px:.2f} 跌进DeepSeek吸纳区(≤${PULLBACK:.0f}) → 触发2:吸纳点,可加 ≈${ADD_USD}(RSI {rsi:.0f})")
+    # 接近提醒:今日日内低碰到$710就先抬头(防抽样漏掉$707那一下)
+    if px >= ma200 and day_low <= APPROACH and not st.get("approach"):
+        alerts.append(f"🟡 QQQ 现${px:.2f}(今日低${day_low:.2f}) 接近DeepSeek吸纳区$707 → 盯紧,快到了")
+        st["approach"] = True
+    if px >= APPROACH * 1.015:
+        st["approach"] = False
+
+    # 回调触发(DeepSeek吸纳区上沿固定$707;用今日日内低判断→瞬间探到也算)
+    if px >= ma200 and day_low <= PULLBACK and not st.get("pullback"):
+        alerts.append(f"🟢 QQQ 现${px:.2f}(今日低${day_low:.2f}) 触及DeepSeek吸纳区(≤${PULLBACK:.0f}) → 触发2:可加 ≈${ADD_USD}(RSI {rsi:.0f})")
         st["pullback"] = True
     if px >= PULLBACK * 1.01:
         st["pullback"] = False
@@ -65,7 +82,7 @@ def run():
     json.dump(st, open(STATE, "w"), ensure_ascii=False, indent=2)
 
     if not alerts:
-        print(f"[qqq-alert] QQQ ${px:.2f} (50MA${ma50:.0f}/200MA${ma200:.0f}/突破位${BREAKOUT}),无新入场信号-等待")
+        print(f"[qqq-alert] QQQ ${px:.2f}(今日低${day_low:.2f}) 吸纳$707/接近$710/突破${BREAKOUT},无新信号-等待")
         return
     msg = "\n".join(["📥 QQQ 入场提醒"] + alerts + ["（入场价格提醒·交易信号系统）"])
     print(msg)
