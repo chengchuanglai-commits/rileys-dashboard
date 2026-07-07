@@ -25,6 +25,8 @@ if [ "$1" = "review" ]; then
   for L in mn hds; do
     LEG=$L /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
   done
+  # 杠杆指数腿:每日重算净值曲线+回撤(paper跟踪,见 spec 2026-07-07)。FMP_API_KEY上面已export
+  /usr/bin/python3 scripts/backfill-portfolio-lev.py >> data/exec-log/launchd.log 2>&1 || true
 fi
 # caffeinate -i: 跑期间阻止系统空闲睡眠(合盖+插电也保持唤醒执行)
 /usr/bin/caffeinate -i /usr/bin/python3 -m scripts.ibkr.$1 >> data/exec-log/launchd.log 2>&1
