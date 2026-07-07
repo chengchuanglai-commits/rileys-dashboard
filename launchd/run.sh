@@ -21,8 +21,10 @@ if [ "$1" = "review" ]; then
   done
   # momma回填后立刻重算三线统一目标(否则master-allocation停在旧日期→波动腿目标用已剔除的幽灵票)
   /usr/bin/python3 scripts/master-allocator.py >> data/exec-log/launchd.log 2>&1 || true
-  # mn腿edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书(判断够不够格上真钱)
-  /usr/bin/python3 scripts/analyze-mn-edge.py >> data/exec-log/launchd.log 2>&1 || true
+  # 腿edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书裁决(mn/hds各一次,通用脚本)
+  for L in mn hds; do
+    LEG=$L /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
+  done
 fi
 # caffeinate -i: 跑期间阻止系统空闲睡眠(合盖+插电也保持唤醒执行)
 /usr/bin/caffeinate -i /usr/bin/python3 -m scripts.ibkr.$1 >> data/exec-log/launchd.log 2>&1
