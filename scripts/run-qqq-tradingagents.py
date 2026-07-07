@@ -28,6 +28,10 @@ def run():
         config["backend_url"] = "https://api.deepseek.com"
         config["deep_think_llm"] = "deepseek-v4-pro"
         config["quick_think_llm"] = "deepseek-v4-flash"
+    elif MODEL == "fable":
+        config["llm_provider"] = "anthropic"
+        config["deep_think_llm"] = "claude-fable-5"
+        config["quick_think_llm"] = "claude-fable-5"
     else:
         config["llm_provider"] = "anthropic"
         config["deep_think_llm"] = "claude-haiku-4-5-20251001"
