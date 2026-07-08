@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-07": {
-          "open": 37.7,
+          "open": 37.68,
           "high": 37.99,
           "low": 36.32,
           "close": 36.49,
@@ -1734,7 +1734,7 @@ window.PORTFOLIO_HDS = {
     "total_commission_usd": 84.0,
     "skipped_gap": 18,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 6,
-    "updated_at": "2026-07-07"
+    "skipped_no_cash": 10,
+    "updated_at": "2026-07-08"
   }
 };

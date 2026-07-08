@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-08",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "ITIC",
+      "action": "SELL",
+      "current_price": 276.75,
+      "target_price": 304.43,
+      "stop_loss": 262.91
+    },
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 19.5,
+      "target_price": 21.45,
+      "stop_loss": 18.52
+    },
+    {
+      "ticker": "LGND",
+      "action": "SELL",
+      "current_price": 319.43,
+      "target_price": 351.37,
+      "stop_loss": 303.46
+    },
+    {
+      "ticker": "EZPW",
+      "action": "SELL",
+      "current_price": 35.44,
+      "target_price": 38.98,
+      "stop_loss": 33.67
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "AOUT",
+      "action": "HOLD",
+      "current_price": 13.92,
+      "target_price": 15.31,
+      "stop_loss": 13.22
+    },
+    {
+      "ticker": "SKWD",
+      "action": "HOLD",
+      "current_price": 62.41,
+      "target_price": 68.65,
+      "stop_loss": 59.29
+    },
+    {
+      "ticker": "ITIC",
+      "action": "SELL",
+      "current_price": 276.75,
+      "target_price": 304.43,
+      "stop_loss": 262.91
+    },
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 19.5,
+      "target_price": 21.45,
+      "stop_loss": 18.52
+    },
+    {
+      "ticker": "LGND",
+      "action": "SELL",
+      "current_price": 319.43,
+      "target_price": 351.37,
+      "stop_loss": 303.46
+    },
+    {
+      "ticker": "EZPW",
+      "action": "SELL",
+      "current_price": 35.44,
+      "target_price": 38.98,
+      "stop_loss": 33.67
+    },
+    {
+      "ticker": "DGII",
+      "action": "BUY",
+      "current_price": 70.16,
+      "target_price": 77.18,
+      "stop_loss": 66.65
+    },
+    {
+      "ticker": "APEI",
+      "action": "BUY",
+      "current_price": 59.34,
+      "target_price": 65.27,
+      "stop_loss": 56.37
+    },
+    {
+      "ticker": "ECPG",
+      "action": "BUY",
+      "current_price": 90.17,
+      "target_price": 99.19,
+      "stop_loss": 85.66
+    },
+    {
+      "ticker": "PRGS",
+      "action": "BUY",
+      "current_price": 39.21,
+      "target_price": 43.13,
+      "stop_loss": 37.25
+    },
+    {
+      "ticker": "SBFG",
+      "action": "BUY",
+      "current_price": 26.13,
+      "target_price": 28.74,
+      "stop_loss": 24.82
+    },
+    {
+      "ticker": "ACIW",
+      "action": "SELL",
+      "current_price": 55.62,
+      "target_price": 61.18,
+      "stop_loss": 52.84
+    },
+    {
+      "ticker": "HBNC",
+      "action": "BUY",
+      "current_price": 19.64,
+      "target_price": 21.6,
+      "stop_loss": 18.66
+    },
+    {
+      "ticker": "AVAV",
+      "action": "BUY",
+      "current_price": 162.53,
+      "target_price": 178.78,
+      "stop_loss": 154.4
+    },
+    {
+      "ticker": "WLFC",
+      "action": "HOLD",
+      "current_price": 221.88,
+      "target_price": 244.07,
+      "stop_loss": 210.79
+    },
+    {
+      "ticker": "GPOR",
+      "action": "BUY",
+      "current_price": 166.61,
+      "target_price": 183.27,
+      "stop_loss": 158.28
+    },
+    {
+      "ticker": "TCBK",
+      "action": "HOLD",
+      "current_price": 53.72,
+      "target_price": 59.09,
+      "stop_loss": 51.03
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 69.33,
+      "target_price": 76.26,
+      "stop_loss": 65.86
+    },
+    {
+      "ticker": "PGEN",
+      "action": "SELL",
+      "current_price": 5.51,
+      "target_price": 6.06,
+      "stop_loss": 5.23
+    },
+    {
+      "ticker": "LOVE",
+      "action": "SELL",
+      "current_price": 18.43,
+      "target_price": 20.27,
+      "stop_loss": 17.51
+    }
+  ]
+}
