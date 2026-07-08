@@ -1,37 +1,7 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 312.01,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 312.01,
-      "entry_commission": 1.0,
-      "take_profit": 287.05,
-      "stop_loss": 324.49,
-      "max_hold_date": "2026-07-09",
-      "daily_prices": {
-        "2026-07-06": {
-          "open": 319.94,
-          "high": 322.31,
-          "low": 315.76,
-          "close": 320.42,
-          "pnl_pct": -2.7
-        },
-        "2026-07-07": {
-          "open": 317.97,
-          "high": 323.3,
-          "low": 312.74,
-          "close": 319.43,
-          "pnl_pct": -2.38
-        }
-      }
-    },
     {
       "ticker": "MVBF",
       "name": "MVBF",
@@ -59,6 +29,10 @@ window.PORTFOLIO_B = {
           "low": 28.58,
           "close": 28.62,
           "pnl_pct": 4.09
+        },
+        "2026-07-08": {
+          "close": 28.26,
+          "pnl_pct": 5.29
         }
       }
     },
@@ -89,6 +63,10 @@ window.PORTFOLIO_B = {
           "low": 69.56,
           "close": 70.16,
           "pnl_pct": 5.34
+        },
+        "2026-07-08": {
+          "close": 69.57,
+          "pnl_pct": 6.14
         }
       }
     },
@@ -119,6 +97,10 @@ window.PORTFOLIO_B = {
           "low": 312.74,
           "close": 319.43,
           "pnl_pct": 0.04
+        },
+        "2026-07-08": {
+          "close": 315.65,
+          "pnl_pct": 1.22
         }
       }
     },
@@ -149,6 +131,10 @@ window.PORTFOLIO_B = {
           "low": 28.58,
           "close": 28.62,
           "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "close": 28.26,
+          "pnl_pct": 3.91
         }
       }
     },
@@ -179,6 +165,10 @@ window.PORTFOLIO_B = {
           "low": 69.14,
           "close": 69.33,
           "pnl_pct": 4.74
+        },
+        "2026-07-08": {
+          "close": 68.21,
+          "pnl_pct": 6.28
         }
       }
     },
@@ -202,6 +192,10 @@ window.PORTFOLIO_B = {
           "low": 312.74,
           "close": 319.43,
           "pnl_pct": 0.04
+        },
+        "2026-07-08": {
+          "close": 315.65,
+          "pnl_pct": 1.22
         }
       }
     },
@@ -225,6 +219,10 @@ window.PORTFOLIO_B = {
           "low": 28.58,
           "close": 28.62,
           "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "close": 28.26,
+          "pnl_pct": 3.91
         }
       }
     }
@@ -1698,6 +1696,50 @@ window.PORTFOLIO_B = {
       "realized_pnl_usd": -21.73
     },
     {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 312.01,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 312.01,
+      "entry_commission": 1.0,
+      "take_profit": 287.05,
+      "stop_loss": 324.49,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 319.94,
+          "high": 322.31,
+          "low": 315.76,
+          "close": 320.42,
+          "pnl_pct": -2.7
+        },
+        "2026-07-07": {
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
+          "close": 319.43,
+          "pnl_pct": -2.38
+        },
+        "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 314.25,
+          "close": 315.65,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-08",
+      "close_price": 324.49,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -14.48
+    },
+    {
       "ticker": "SKWD",
       "name": "SKWD",
       "action": "SELL",
@@ -1737,14 +1779,12 @@ window.PORTFOLIO_B = {
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 38,
+    "total_trades": 39,
     "win_trades": 15,
-    "win_rate": 39.5,
-    "total_realized_pnl_usd": -20.68,
-    "open_unrealized_pnl_usd": 75.7,
-    "portfolio_value": 2055.02,
-    "total_commission_usd": 76.0,
-    "skipped_zero_shares": 1,
+    "win_rate": 38.5,
+    "total_realized_pnl_usd": -35.16,
+    "open_unrealized_pnl_usd": 139.85,
+    "portfolio_value": 2104.69,
     "updated_at": "2026-07-08"
   }
 };

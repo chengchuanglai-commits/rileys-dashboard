@@ -43,56 +43,6 @@ window.PORTFOLIO_H = {
       },
       "position_usd": 205.45,
       "unrealized_pnl_usd": 0.45
-    },
-    {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 319.55,
-      "allocated_usd": 500,
-      "shares": 1.5647,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 271.62,
-      "stop_loss": 325.94,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 317.97,
-          "high": 323.3,
-          "low": 312.74,
-          "close": 319.43,
-          "pnl_pct": 0.04
-        }
-      },
-      "position_usd": 205.51,
-      "unrealized_pnl_usd": 0.08
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 29.41,
-      "allocated_usd": 500,
-      "shares": 17.001,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 25.0,
-      "stop_loss": 30.0,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
-        }
-      },
-      "position_usd": 205.51,
-      "unrealized_pnl_usd": 5.53
     }
   ],
   "closed_positions": [
@@ -1206,17 +1156,93 @@ window.PORTFOLIO_H = {
       "commission_total": 2.0,
       "realized_pnl_usd": 5.53,
       "position_usd": 205.45
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1.5647,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 271.62,
+      "stop_loss": 325.94,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
+          "close": 319.43,
+          "pnl_pct": 0.04
+        },
+        "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 314.25,
+          "close": 315.65,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-08",
+      "close_price": 325.94,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 205.51
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17.001,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 25.0,
+      "stop_loss": 30.0,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 27.78,
+          "high": 28.26,
+          "low": 27.61,
+          "close": 28.26,
+          "pnl_pct": 3.91
+        }
+      },
+      "close_date": "2026-07-08",
+      "close_price": 28.26,
+      "final_pnl_pct": 3.91,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 8.04,
+      "position_usd": 205.51
     }
   ],
   "_note": "Plan H 模拟盘：历史最优参数 TP +15% / SL -2% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1（D的收紧止损版）",
   "stats": {
-    "total_trades": 32,
-    "win_trades": 13,
-    "win_rate": 40.6,
-    "total_realized_pnl_usd": 60.75,
-    "open_unrealized_pnl_usd": 6.06,
-    "portfolio_value": 2066.81,
-    "total_commission_usd": 64.0,
+    "total_trades": 34,
+    "win_trades": 14,
+    "win_rate": 41.2,
+    "total_realized_pnl_usd": 64.68,
+    "open_unrealized_pnl_usd": 0.45,
+    "portfolio_value": 2065.13,
+    "total_commission_usd": 68.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 0,
