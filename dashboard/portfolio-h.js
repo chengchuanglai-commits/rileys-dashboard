@@ -1181,8 +1181,8 @@ window.PORTFOLIO_H = {
         "2026-07-08": {
           "open": 321.91,
           "high": 326.63,
-          "low": 314.25,
-          "close": 315.65,
+          "low": 311.73,
+          "close": 316.0,
           "pnl_pct": -2.0
         }
       },
@@ -1218,19 +1218,19 @@ window.PORTFOLIO_H = {
         },
         "2026-07-08": {
           "open": 27.78,
-          "high": 28.26,
+          "high": 28.48,
           "low": 27.61,
-          "close": 28.26,
-          "pnl_pct": 3.91
+          "close": 28.48,
+          "pnl_pct": 3.16
         }
       },
       "close_date": "2026-07-08",
-      "close_price": 28.26,
-      "final_pnl_pct": 3.91,
+      "close_price": 28.48,
+      "final_pnl_pct": 3.16,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.04,
+      "realized_pnl_usd": 6.49,
       "position_usd": 205.51
     }
   ],
@@ -1239,9 +1239,9 @@ window.PORTFOLIO_H = {
     "total_trades": 34,
     "win_trades": 14,
     "win_rate": 41.2,
-    "total_realized_pnl_usd": 64.68,
+    "total_realized_pnl_usd": 63.14,
     "open_unrealized_pnl_usd": 0.45,
-    "portfolio_value": 2065.13,
+    "portfolio_value": 2063.59,
     "total_commission_usd": 68.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 0,

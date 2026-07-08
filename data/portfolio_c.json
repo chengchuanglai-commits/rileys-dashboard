@@ -31,12 +31,12 @@
           "pnl_pct": 4.09
         },
         "2026-07-08": {
-          "close": 28.26,
-          "pnl_pct": 5.29
+          "close": 28.48,
+          "pnl_pct": 4.56
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 11.18,
+      "unrealized_pnl_usd": 9.63,
       "gap_checked": true,
       "day1_gap_pct": -6.9
     },
@@ -70,12 +70,12 @@
           "pnl_pct": 5.34
         },
         "2026-07-08": {
-          "close": 69.57,
-          "pnl_pct": 6.14
+          "close": 70.62,
+          "pnl_pct": 4.72
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 12.85,
+      "unrealized_pnl_usd": 9.97,
       "gap_checked": true,
       "day1_gap_pct": -6.33
     },
@@ -109,12 +109,12 @@
           "pnl_pct": 0.04
         },
         "2026-07-08": {
-          "close": 315.65,
-          "pnl_pct": 1.22
+          "close": 316.0,
+          "pnl_pct": 1.11
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 2.58,
+      "unrealized_pnl_usd": 2.35,
       "gap_checked": true,
       "day1_gap_pct": 0.74
     },
@@ -148,12 +148,12 @@
           "pnl_pct": 2.69
         },
         "2026-07-08": {
-          "close": 28.26,
-          "pnl_pct": 3.91
+          "close": 28.48,
+          "pnl_pct": 3.16
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 8.26,
+      "unrealized_pnl_usd": 6.68,
       "gap_checked": true,
       "day1_gap_pct": -5.54
     },
@@ -180,12 +180,12 @@
           "pnl_pct": 0.04
         },
         "2026-07-08": {
-          "close": 315.65,
-          "pnl_pct": 1.22
+          "close": 316.0,
+          "pnl_pct": 1.11
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 2.58,
+      "unrealized_pnl_usd": 2.35,
       "gap_checked": true,
       "day1_gap_pct": 0.74
     },
@@ -212,12 +212,12 @@
           "pnl_pct": 2.69
         },
         "2026-07-08": {
-          "close": 28.26,
-          "pnl_pct": 3.91
+          "close": 28.48,
+          "pnl_pct": 3.16
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 8.26,
+      "unrealized_pnl_usd": 6.68,
       "gap_checked": true,
       "day1_gap_pct": -5.54
     }
@@ -1377,9 +1377,9 @@
     "win_trades": 14,
     "win_rate": 53.8,
     "total_realized_pnl_usd": 104.42,
-    "open_unrealized_pnl_usd": 108.45,
-    "portfolio_value": 2212.87,
+    "open_unrealized_pnl_usd": 89.1,
+    "portfolio_value": 2193.52,
     "skipped_gap": 14,
-    "updated_at": "2026-07-08"
+    "updated_at": "2026-07-09"
   }
 }
