@@ -12,9 +12,10 @@ import os, json
 TICKER = "QQQ"
 STATE = "data/qqq-alert-state.json"
 BREAKOUT = 748.65   # DeepSeek突破触发位(6月高点)
-PULLBACK = 707.0    # DeepSeek吸纳区上沿(固定,非漂移的50日线)
-APPROACH = 710.0    # 接近提醒:到这就先给抬头(防抽样漏掉$707那一下)
+RECLAIM = 722.0     # DeepSeek(2026-07-08反转为Underweight后)新加仓触发:收复$722=死叉修复趋势重新确认
+BREAKDOWN = 700.0   # 破位警告:跌破$700(布林下轨$695在下面)=加速下跌,别抄底该减
 ADD_USD = 300       # 每次加仓建议额
+# 注:2026-07-08 DeepSeek 从"低买$707"反转为"收复$722才买/跌破$700是危险"。旧的$707抄底逻辑已弃用。
 
 
 def levels():
@@ -63,26 +64,26 @@ def run():
     if px <= BREAKOUT * 0.985:
         st["breakout"] = False
 
-    # 接近提醒:今日日内低碰到$710就先抬头(防抽样漏掉$707那一下)
-    if px >= ma200 and day_low <= APPROACH and not st.get("approach"):
-        alerts.append(f"🟡 QQQ 现${px:.2f}(今日低${day_low:.2f}) 接近DeepSeek吸纳区$707 → 盯紧,快到了")
-        st["approach"] = True
-    if px >= APPROACH * 1.015:
-        st["approach"] = False
+    # 收复触发(DeepSeek新逻辑:站回$722=死叉修复趋势重新确认,可加)
+    if px >= RECLAIM and not st.get("reclaim"):
+        alerts.append(f"🚀 QQQ ${px:.2f} 收复 ${RECLAIM:.0f} → 死叉修复/趋势重新确认,可加 ≈${ADD_USD}(RSI {rsi:.0f})")
+        st["reclaim"] = True
+    if px <= RECLAIM * 0.99:
+        st["reclaim"] = False
 
-    # 回调触发(DeepSeek吸纳区上沿固定$707;用今日日内低判断→瞬间探到也算)
-    if px >= ma200 and day_low <= PULLBACK and not st.get("pullback"):
-        alerts.append(f"🟢 QQQ 现${px:.2f}(今日低${day_low:.2f}) 触及DeepSeek吸纳区(≤${PULLBACK:.0f}) → 触发2:可加 ≈${ADD_USD}(RSI {rsi:.0f})")
-        st["pullback"] = True
-    if px >= PULLBACK * 1.01:
-        st["pullback"] = False
+    # 破位警告(DeepSeek新逻辑:跌破$700=加速下跌,别抄底该减)
+    if day_low <= BREAKDOWN and not st.get("breakdown"):
+        alerts.append(f"🔻 QQQ 现${px:.2f}(今日低${day_low:.2f}) 跌破 ${BREAKDOWN:.0f} → 破位!别抄底(布林下轨$695在下面)")
+        st["breakdown"] = True
+    if px >= BREAKDOWN * 1.015:
+        st["breakdown"] = False
 
     os.makedirs("data", exist_ok=True)
     st["last_px"], st["last_check"] = round(px, 2), __import__("time").strftime("%F %T")
     json.dump(st, open(STATE, "w"), ensure_ascii=False, indent=2)
 
     if not alerts:
-        print(f"[qqq-alert] QQQ ${px:.2f}(今日低${day_low:.2f}) 吸纳$707/接近$710/突破${BREAKOUT},无新信号-等待")
+        print(f"[qqq-alert] QQQ ${px:.2f}(今日低${day_low:.2f}) 收复${RECLAIM:.0f}加/破${BREAKDOWN:.0f}减/突破${BREAKOUT:.0f},无新信号-等待")
         return
     msg = "\n".join(["📥 QQQ 入场提醒"] + alerts + ["（入场价格提醒·交易信号系统）"])
     print(msg)
