@@ -118,8 +118,8 @@
           "open": 321.91,
           "high": 326.63,
           "low": 311.73,
-          "close": 316.0,
-          "pnl_pct": 1.11
+          "close": 316.69,
+          "pnl_pct": 0.9
         }
       },
       "gap_checked": true,
@@ -1216,17 +1216,17 @@
           "open": 321.91,
           "high": 326.63,
           "low": 311.73,
-          "close": 316.0,
-          "pnl_pct": 1.11
+          "close": 316.69,
+          "pnl_pct": 0.9
         }
       },
       "close_date": "2026-07-08",
-      "close_price": 316.0,
-      "final_pnl_pct": 1.11,
+      "close_price": 316.69,
+      "final_pnl_pct": 0.9,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.55
+      "realized_pnl_usd": 0.88
     },
     {
       "ticker": "MVBF",
@@ -1281,9 +1281,9 @@
     "total_trades": 28,
     "win_trades": 13,
     "win_rate": 46.4,
-    "total_realized_pnl_usd": 101.34,
-    "open_unrealized_pnl_usd": 20.65,
-    "portfolio_value": 2121.99,
+    "total_realized_pnl_usd": 100.67,
+    "open_unrealized_pnl_usd": 19.98,
+    "portfolio_value": 2120.65,
     "total_commission_usd": 56.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

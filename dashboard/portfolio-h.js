@@ -1182,7 +1182,7 @@ window.PORTFOLIO_H = {
           "open": 321.91,
           "high": 326.63,
           "low": 311.73,
-          "close": 316.0,
+          "close": 316.69,
           "pnl_pct": -2.0
         }
       },
