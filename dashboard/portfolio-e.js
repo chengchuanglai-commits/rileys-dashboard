@@ -115,9 +115,9 @@ window.PORTFOLIO_E = {
           "pnl_pct": -0.27
         },
         "2026-07-07": {
-          "open": 318.14,
-          "high": 323.26,
-          "low": 312.73,
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
           "close": 319.43,
           "pnl_pct": 0.04
         }
@@ -178,15 +178,15 @@ window.PORTFOLIO_E = {
       "vix": 15.57,
       "daily_prices": {
         "2026-07-07": {
-          "open": 318.14,
-          "high": 323.26,
-          "low": 312.73,
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
           "close": 319.43,
           "pnl_pct": 0.04
         }
       },
       "gap_checked": true,
-      "day1_open": 318.14
+      "day1_open": 317.97
     },
     {
       "ticker": "MVBF",
@@ -1250,6 +1250,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,
-    "updated_at": "2026-07-07"
+    "updated_at": "2026-07-08"
   }
 };
