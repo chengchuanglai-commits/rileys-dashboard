@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-08 11:34",
+  "generated": "2026-07-08 14:57",
   "spy_fwd_ret_pct": -0.13,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -8,19 +8,19 @@
     "momma": {
       "name": "MOM-MA·动量+20MA",
       "n": 21,
-      "alpha_pct": -8.64,
+      "alpha_pct": -8.04,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -8.76,
+      "fwd_ret_pct": -8.17,
       "tradeable": true
     },
     "momh": {
       "name": "MOM-H·动量+H",
-      "n": 28,
-      "alpha_pct": -3.31,
+      "n": 30,
+      "alpha_pct": -3.22,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -3.44,
+      "fwd_ret_pct": -3.35,
       "tradeable": false
     },
     "bq": {
