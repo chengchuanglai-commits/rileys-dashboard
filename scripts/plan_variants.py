@@ -68,6 +68,35 @@ def _gap_ok(action, entry_price, day1_open, gap_filter):
     return unfavorable <= gap_filter
 
 
+# ── 出场判定核心(实盘 simulate_* / 配对回放 A / 大样本回测 B 三处共用,单一真相源)──
+
+def _fixed_hit(action, hi, lo, tp_price, sl_price):
+    """固定 TP/SL 单日判定:止损优先于止盈。返回 (close_reason, close_price) 或 (None, None)。"""
+    if action == "BUY":
+        if lo <= sl_price:   return "stop_loss", sl_price
+        if hi >= tp_price:   return "take_profit", tp_price
+    else:
+        if hi >= sl_price:   return "stop_loss", sl_price
+        if lo <= tp_price:   return "take_profit", tp_price
+    return None, None
+
+
+def _trail_hit(action, hi, lo, stop):
+    """移动止损单日是否触发。返回触发价或 None。"""
+    if action == "BUY" and lo <= stop:  return stop
+    if action == "SELL" and hi >= stop: return stop
+    return None
+
+
+def _trail_update(action, hi, lo, extreme, stop, trail_pct):
+    """用当日极值把移动止损棘轮跟上(只朝有利方向)。返回 (new_extreme, new_stop)。"""
+    if action == "BUY":
+        extreme = max(extreme, hi); stop = max(stop, extreme * (1 - trail_pct / 100))
+    else:
+        extreme = min(extreme, lo); stop = min(stop, extreme * (1 + trail_pct / 100))
+    return extreme, stop
+
+
 def simulate_fixed(ticker, action, entry_price, signal_date, tp_pct, sl_pct, max_hold, gap_filter):
     """固定 TP/SL/最大持仓出场(Plan C / Plan H 都走这条)。返回 c 同款六元组。"""
     tp_price = round(entry_price * (1 + (tp_pct if action == "BUY" else -tp_pct) / 100), 2)
@@ -90,13 +119,9 @@ def simulate_fixed(ticker, action, entry_price, signal_date, tp_pct, sl_pct, max
             if not _gap_ok(action, entry_price, o, gap_filter):
                 return None, None, "gap_filtered", None, {}, day1_open
 
-        close_reason, close_price = None, cl
-        if action == "BUY":
-            if lo <= sl_price:   close_reason, close_price = "stop_loss", sl_price
-            elif hi >= tp_price: close_reason, close_price = "take_profit", tp_price
-        else:
-            if hi >= sl_price:   close_reason, close_price = "stop_loss", sl_price
-            elif lo <= tp_price: close_reason, close_price = "take_profit", tp_price
+        close_reason, close_price = _fixed_hit(action, hi, lo, tp_price, sl_price)
+        if close_reason is None:
+            close_price = cl
 
         raw = (close_price - entry_price) / entry_price * 100
         pnl_pct = raw if action == "BUY" else -raw
@@ -122,9 +147,10 @@ def simulate_trail(ticker, action, entry_price, signal_date, sl_pct, trail_pct, 
     today_str = datetime.now().strftime("%Y-%m-%d")
     daily_prices, day1_open = {}, None
     if action == "BUY":
-        stop = entry_price * (1 - sl_pct / 100); peak = entry_price
+        stop = entry_price * (1 - sl_pct / 100)
     else:
-        stop = entry_price * (1 + sl_pct / 100); trough = entry_price
+        stop = entry_price * (1 + sl_pct / 100)
+    extreme = entry_price
 
     for i, td in enumerate(target_dates):
         if td not in bars:
@@ -138,16 +164,11 @@ def simulate_trail(ticker, action, entry_price, signal_date, sl_pct, trail_pct, 
                 return None, None, "gap_filtered", None, {}, day1_open
 
         close_reason, close_price = None, None
-        if action == "BUY":
-            if lo <= stop:
-                close_reason = "stop_loss" if i == 0 else "trail_stop"
-                close_price = round(stop, 2)
+        hit = _trail_hit(action, hi, lo, stop)
+        if hit is not None:
+            close_reason = "stop_loss" if i == 0 else "trail_stop"
+            close_price = round(hit, 2)
         else:
-            if hi >= stop:
-                close_reason = "stop_loss" if i == 0 else "trail_stop"
-                close_price = round(stop, 2)
-
-        if close_reason is None:
             close_price = cl
         raw = (close_price - entry_price) / entry_price * 100
         pnl_pct = raw if action == "BUY" else -raw
@@ -156,10 +177,7 @@ def simulate_trail(ticker, action, entry_price, signal_date, sl_pct, trail_pct, 
             return td, close_price, close_reason, round(pnl_pct, 2), daily_prices, day1_open
 
         # 棘轮:用当日极值更新明日止损
-        if action == "BUY":
-            peak = max(peak, hi); stop = max(stop, peak * (1 - trail_pct / 100))
-        else:
-            trough = min(trough, lo); stop = min(stop, trough * (1 + trail_pct / 100))
+        extreme, stop = _trail_update(action, hi, lo, extreme, stop, trail_pct)
 
         if td == target_dates[-1]:
             return td, cl, "max_hold", round(pnl_pct, 2), daily_prices, day1_open
