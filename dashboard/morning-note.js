@@ -1,25 +1,126 @@
 // 金融晨报数据 — 每日 07:30 自动更新
 window.MORNING_NOTE = {
-  "date": "2026-07-09",
-  "generated_at": "2026-07-09T09:08:00",
-  "market_status": "pre-market",
   "market": {
-    "sp500_futures_pct": 0,
-    "treasury_10y": 0,
-    "treasury_10y_change_bps": 0,
-    "eps_beat_rate": 0
+    "sp500_futures_pct": 0.29,
+    "treasury_10y": 4.569,
+    "treasury_10y_change_bps": 4.0,
+    "eps_beat_rate": 75.5
   },
   "note": {
-    "market_overview": "⚠️ Anthropic API 余额不足，请前往 console.anthropic.com/billing 充值后恢复。",
-    "macro": "",
-    "earnings": "",
-    "trade_ideas": ""
+    "market_overview": "标普500期货小幅上涨，10年期美债收益率上行，市场情绪中性偏谨慎。",
+    "macro": "关注明日CPI数据，美债收益率走高或反映通胀预期升温。",
+    "earnings": "当前财报季EPS超预期率75.5%，企业盈利表现稳健。",
+    "trade_ideas": "建议关注中小盘股机会，精选技术面与基本面共振的个股。"
   },
-  "stock_picks": [],
-  "api_cost_usd": 0,
-  "balance_warning": true,
-  "estimated_days_left": 0,
-  "cumulative_cost_usd": 0,
-  "avg_daily_cost_usd": 0,
-  "budget_usd": 5.0
+  "stock_picks": [
+    {
+      "ticker": "ITIC",
+      "name": "投资者合众公司",
+      "sector": "保险",
+      "direction": "buy",
+      "buy_zone": "275-278",
+      "target": "290",
+      "stop_loss": "270",
+      "reason": "RSI处于中性区域，距历史高点仅1.7%，保险板块防御性强，估值合理。"
+    },
+    {
+      "ticker": "TRVI",
+      "name": "Trevi Therapeutics",
+      "sector": "生物科技",
+      "direction": "watch",
+      "buy_zone": "",
+      "target": "",
+      "stop_loss": "",
+      "reason": "RSI极高，超买严重，观望等待回调。"
+    },
+    {
+      "ticker": "SKWD",
+      "name": "Skyward Specialty Insurance",
+      "sector": "保险",
+      "direction": "buy",
+      "buy_zone": "61-63",
+      "target": "68",
+      "stop_loss": "59",
+      "reason": "RSI极低，超卖反弹机会，距高点0%，有上行空间。"
+    },
+    {
+      "ticker": "LGND",
+      "name": "Ligand Pharmaceuticals",
+      "sector": "生物科技",
+      "direction": "buy",
+      "buy_zone": "315-320",
+      "target": "335",
+      "stop_loss": "310",
+      "reason": "RSI偏高但未超买，距高点仅0.3%，突破新高潜力。"
+    },
+    {
+      "ticker": "AOUT",
+      "name": "American Outdoor Brands",
+      "sector": "消费品",
+      "direction": "buy",
+      "buy_zone": "13.5-14.0",
+      "target": "15.0",
+      "stop_loss": "13.0",
+      "reason": "RSI中性偏低，距高点2.5%，户外品牌需求稳定。"
+    },
+    {
+      "ticker": "EZPW",
+      "name": "EZCorp",
+      "sector": "金融",
+      "direction": "watch",
+      "buy_zone": "",
+      "target": "",
+      "stop_loss": "",
+      "reason": "RSI偏高，短期可能回调，等待低吸机会。"
+    },
+    {
+      "ticker": "APEI",
+      "name": "American Public Education",
+      "sector": "教育",
+      "direction": "buy",
+      "buy_zone": "58-60",
+      "target": "65",
+      "stop_loss": "56",
+      "reason": "RSI中性，距高点2.5%，在线教育需求增长。"
+    },
+    {
+      "ticker": "DGII",
+      "name": "Digi International",
+      "sector": "科技",
+      "direction": "buy",
+      "buy_zone": "68-71",
+      "target": "78",
+      "stop_loss": "66",
+      "reason": "RSI中性偏强，距高点6.4%，物联网连接解决方案前景好。"
+    },
+    {
+      "ticker": "ECPG",
+      "name": "Encore Capital Group",
+      "sector": "金融",
+      "direction": "watch",
+      "buy_zone": "",
+      "target": "",
+      "stop_loss": "",
+      "reason": "RSI偏高，债务收购业务受利率影响，等待回调。"
+    },
+    {
+      "ticker": "SBFG",
+      "name": "SB Financial Group",
+      "sector": "银行",
+      "direction": "buy",
+      "buy_zone": "25.5-26.5",
+      "target": "28",
+      "stop_loss": "24.5",
+      "reason": "RSI中性，距高点0%，区域性银行估值低，股息稳定。"
+    }
+  ],
+  "api_cost_usd": 0.0004,
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T14:49:00",
+  "market_status": "pre-market",
+  "budget_usd": 5.0,
+  "cumulative_cost_usd": 2.385,
+  "avg_daily_cost_usd": 0.0532,
+  "estimated_days_left": 49,
+  "balance_warning": false
 };
