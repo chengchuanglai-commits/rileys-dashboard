@@ -160,81 +160,6 @@ window.PORTFOLIO_HDS = {
       },
       "position_usd": 210.44,
       "unrealized_pnl_usd": 0.46
-    },
-    {
-      "ticker": "UTMD",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 72.78,
-      "allocated_usd": 500,
-      "shares": 6.87,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 61.86,
-      "stop_loss": 74.24,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 71.53,
-          "high": 71.53,
-          "low": 71.48,
-          "close": 71.48,
-          "pnl_pct": 1.79
-        }
-      },
-      "position_usd": 210.16,
-      "unrealized_pnl_usd": 3.76
-    },
-    {
-      "ticker": "OBT",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 37.65,
-      "allocated_usd": 500,
-      "shares": 13.2802,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 32.0,
-      "stop_loss": 38.4,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 37.7,
-          "high": 37.99,
-          "low": 37.04,
-          "close": 37.37,
-          "pnl_pct": 0.74
-        }
-      },
-      "position_usd": 210.16,
-      "unrealized_pnl_usd": 1.56
-    },
-    {
-      "ticker": "MVBF",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 29.41,
-      "allocated_usd": 500,
-      "shares": 17.001,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 25.0,
-      "stop_loss": 30.0,
-      "max_hold_date": "2026-07-08",
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 29.15,
-          "high": 29.26,
-          "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 1.19
-        }
-      },
-      "position_usd": 210.16,
-      "unrealized_pnl_usd": 2.5
     }
   ],
   "closed_positions": [
@@ -1721,20 +1646,134 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": 6.54,
       "position_usd": 209.69
+    },
+    {
+      "ticker": "UTMD",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 72.78,
+      "allocated_usd": 500,
+      "shares": 6.87,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 61.86,
+      "stop_loss": 74.24,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 71.53,
+          "high": 71.53,
+          "low": 69.14,
+          "close": 69.33,
+          "pnl_pct": 4.74
+        },
+        "2026-07-08": {
+          "open": 68.21,
+          "high": 68.95,
+          "low": 67.31,
+          "close": 68.06,
+          "pnl_pct": 6.49
+        }
+      },
+      "close_date": "2026-07-08",
+      "close_price": 68.06,
+      "final_pnl_pct": 6.49,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 13.64,
+      "position_usd": 210.16
+    },
+    {
+      "ticker": "OBT",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 37.65,
+      "allocated_usd": 500,
+      "shares": 13.2802,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 32.0,
+      "stop_loss": 38.4,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 37.68,
+          "high": 37.99,
+          "low": 36.32,
+          "close": 36.49,
+          "pnl_pct": 3.08
+        },
+        "2026-07-08": {
+          "open": 36.37,
+          "high": 36.68,
+          "low": 35.6,
+          "close": 36.2,
+          "pnl_pct": 3.85
+        }
+      },
+      "close_date": "2026-07-08",
+      "close_price": 36.2,
+      "final_pnl_pct": 3.85,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 8.09,
+      "position_usd": 210.16
+    },
+    {
+      "ticker": "MVBF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17.001,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 25.0,
+      "stop_loss": 30.0,
+      "max_hold_date": "2026-07-08",
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 27.78,
+          "high": 28.48,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 4.76
+        }
+      },
+      "close_date": "2026-07-08",
+      "close_price": 28.01,
+      "final_pnl_pct": 4.76,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 10.0,
+      "position_usd": 210.16
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 42,
-    "win_trades": 24,
-    "win_rate": 57.1,
-    "total_realized_pnl_usd": 101.64,
-    "open_unrealized_pnl_usd": 40.12,
-    "portfolio_value": 2141.76,
-    "total_commission_usd": 84.0,
-    "skipped_gap": 18,
+    "total_trades": 45,
+    "win_trades": 27,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 133.38,
+    "open_unrealized_pnl_usd": 32.3,
+    "portfolio_value": 2165.68,
+    "total_commission_usd": 90.0,
+    "skipped_gap": 21,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 6,
-    "updated_at": "2026-07-07"
+    "skipped_no_cash": 3,
+    "updated_at": "2026-07-09"
   }
 };

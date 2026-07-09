@@ -1,8 +1,8 @@
 {
   "bear": false,
   "breakout": false,
-  "approach": true,
-  "pullback": true,
-  "last_px": 709.96,
-  "last_check": "2026-07-08 00:09:26"
+  "reclaim": false,
+  "last_px": 710.48,
+  "last_check": "2026-07-09 03:30:07",
+  "breakdown": false
 }

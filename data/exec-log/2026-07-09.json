@@ -1,0 +1,9 @@
+{
+  "close_batch": {
+    "date": "2026-07-09",
+    "type": "close",
+    "live": true,
+    "exits": [],
+    "placed": []
+  }
+}

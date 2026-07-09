@@ -57,20 +57,20 @@ window.PORTFOLIO_MN = {
       "name": "NextEra Energy",
       "action": "BUY",
       "signal_date": "2026-05-21",
-      "entry_price": 89.04,
+      "entry_price": 89.69,
       "allocated_usd": 500,
-      "shares": 5.6155,
+      "shares": 5.5748,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 102.4,
-      "stop_loss": 87.26,
+      "take_profit": 103.14,
+      "stop_loss": 87.9,
       "max_hold_date": "2026-05-25",
       "daily_prices": {
         "2026-05-22": {
-          "open": 89.06,
-          "high": 89.19,
-          "low": 87.31,
-          "close": 87.91,
+          "open": 89.71,
+          "high": 89.84,
+          "low": 87.95,
+          "close": 88.55,
           "pnl_pct": -1.27
         }
       },
@@ -2492,6 +2492,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 38,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 83,
-    "updated_at": "2026-07-07"
+    "updated_at": "2026-07-09"
   }
 };

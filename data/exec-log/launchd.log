@@ -2280,3 +2280,188 @@ Error 10147, reqId 876: \u672a\u627e\u5230\u9700\u8981\u53d6\u6d88\u7684OrderId 
   ]
 }
 [2026-07-07 21:31:05] === done trade_open (exit 0) ===
+[2026-07-08 04:00:04] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-08",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[2026-07-08 04:00:17] === done trade_close (exit 0) ===
+[2026-07-08 04:30:05] === run review ===
+
+================================================================
+  统一组合 2026-07-08 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前3只: RVMD, FFIV, DELL
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 平仓68/80笔,未到线,静默
+[hds-edge] 平仓42/80笔,未到线,静默
+杠杆腿 净值$8,553 CAGR+25.1% 最大回撤39% 当前1.0x | vs 1xQQQ $+1,990
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-08 04:34:11] === done review (exit 0) ===
+前向验证 2026-07-08 第11个交易日 | 三线组合 +1.21% | 无脑QQQ +0.51% | alpha +0.70% (book $20243, 持仓11只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-08 21:10:04] === run preflight ===
+completed orders request timed out
+Error 1100, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u4e2d\u65ad\u3002
+Error 1100, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u4e2d\u65ad\u3002
+Error 1102, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u6062\u590d - \u6570\u636e\u5df2\u4fdd\u5b58\u3002: \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u5df2\u8fde\u63a5\uff1a usfarm; secdefil. \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u672a\u8fde\u63a5\uff1a ushmds.
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-08 21:26:08] === done preflight (exit 0) ===
+[2026-07-08 21:30:05] === run trade_open ===
+全局撤单后剩余挂单 0
+{
+  "date": "2026-07-08",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "AEM",
+      "qty": 1.0,
+      "px": 147.34,
+      "usd": 147.34
+    },
+    {
+      "sym": "AMD",
+      "qty": -4.0,
+      "px": 510.78,
+      "usd": 2043.12
+    },
+    {
+      "sym": "DELL",
+      "qty": 8,
+      "px": 413.5,
+      "usd": 3308.0
+    },
+    {
+      "sym": "FFIV",
+      "qty": 3.0,
+      "px": 413.98,
+      "usd": 1241.94
+    },
+    {
+      "sym": "FTNT",
+      "qty": -15.0,
+      "px": 157.19,
+      "usd": 2357.85
+    },
+    {
+      "sym": "FUTU",
+      "qty": 4,
+      "px": 94.82,
+      "usd": 379.28
+    },
+    {
+      "sym": "KSPI",
+      "qty": 1.0,
+      "px": 87.0,
+      "usd": 87.0
+    },
+    {
+      "sym": "NU",
+      "qty": 2.0,
+      "px": 13.42,
+      "usd": 26.84
+    },
+    {
+      "sym": "RVMD",
+      "qty": 4.0,
+      "px": 191.9,
+      "usd": 767.6
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "AEM",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "AMD",
+      "qty": -4.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "DELL",
+      "qty": 8,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FFIV",
+      "qty": 3.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FTNT",
+      "qty": -15.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FUTU",
+      "qty": 4,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "KSPI",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NU",
+      "qty": 2.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 4.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+[2026-07-08 21:30:56] === done trade_open (exit 0) ===
+[2026-07-09 04:00:01] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-09",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[2026-07-09 04:00:10] === done trade_close (exit 0) ===
+[2026-07-09 04:30:01] === run review ===
+
+================================================================
+  统一组合 2026-07-09 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前3只: RVMD, FTNT, BMO
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 平仓68/80笔,未到线,静默
+[hds-edge] 平仓45/80笔,未到线,静默
+杠杆腿 净值$8,578 CAGR+25.2% 最大回撤39% 当前1.0x | vs 1xQQQ $+1,995
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-09 04:33:42] === done review (exit 0) ===
+前向验证 2026-07-09 第12个交易日 | 三线组合 +1.07% | 无脑QQQ +0.55% | alpha +0.51% (book $20213, 持仓11只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
