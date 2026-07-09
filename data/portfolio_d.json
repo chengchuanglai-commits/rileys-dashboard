@@ -21,8 +21,8 @@
         }
       },
       "gap_checked": true,
-      "day1_open": 60.57,
-      "day1_gap_pct": 0.33
+      "day1_open": 60.6,
+      "day1_gap_pct": 0.38
     },
     {
       "ticker": "PFIS",
@@ -44,8 +44,8 @@
         }
       },
       "gap_checked": true,
-      "day1_open": 64.85,
-      "day1_gap_pct": -0.61
+      "day1_open": 65.5,
+      "day1_gap_pct": 0.38
     },
     {
       "ticker": "ACIW",

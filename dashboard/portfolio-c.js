@@ -185,7 +185,7 @@ window.PORTFOLIO_C = {
       "take_profit": 55.54,
       "stop_loss": 62.78,
       "max_hold_date": "2026-07-16",
-      "day1_open": 60.57,
+      "day1_open": 60.6,
       "daily_prices": {
         "2026-07-09": {
           "close": 60.1,
@@ -195,7 +195,7 @@ window.PORTFOLIO_C = {
       "position_usd": 211.92,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
-      "day1_gap_pct": 0.33
+      "day1_gap_pct": 0.38
     },
     {
       "ticker": "PFIS",
@@ -210,7 +210,7 @@ window.PORTFOLIO_C = {
       "take_profit": 60.03,
       "stop_loss": 67.86,
       "max_hold_date": "2026-07-16",
-      "day1_open": 64.85,
+      "day1_open": 65.5,
       "daily_prices": {
         "2026-07-09": {
           "close": 65.85,
@@ -220,7 +220,7 @@ window.PORTFOLIO_C = {
       "position_usd": 211.92,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
-      "day1_gap_pct": -0.61
+      "day1_gap_pct": 0.38
     },
     {
       "ticker": "ACIW",

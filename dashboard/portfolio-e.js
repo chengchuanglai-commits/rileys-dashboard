@@ -105,7 +105,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 15.89,
+      "vix": 15.84,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -124,7 +124,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 15.89,
+      "vix": 15.84,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -143,7 +143,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 15.89,
+      "vix": 15.84,
       "daily_prices": {},
       "gap_checked": true
     }
