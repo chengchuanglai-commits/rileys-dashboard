@@ -1,0 +1,1300 @@
+// c-tight 变体:Plan C 出场(TP8/SL4/5天)+ 跳空过滤 >1.0% 跳过(比 c 更紧)
+window.PORTFOLIO_CTG = {
+  "capital_usd": 2000,
+  "open_positions": [
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16,
+      "actual_position_usd": 477.44,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 29.28,
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 3.12
+        },
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 4.09
+        },
+        "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 6.13
+        }
+      },
+      "position_usd": 212.14,
+      "unrealized_pnl_usd": 13.0
+    },
+    {
+      "ticker": "DGII",
+      "name": "DGII",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 74.12,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 444.72,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 72.21,
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
+          "close": 73.22,
+          "pnl_pct": 1.21
+        },
+        "2026-07-07": {
+          "open": 72.7,
+          "high": 72.7,
+          "low": 69.56,
+          "close": 70.16,
+          "pnl_pct": 5.34
+        },
+        "2026-07-08": {
+          "open": 69.43,
+          "high": 71.58,
+          "low": 68.73,
+          "close": 71.33,
+          "pnl_pct": 3.76
+        }
+      },
+      "position_usd": 212.14,
+      "unrealized_pnl_usd": 7.98
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 319.94,
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 319.94,
+          "high": 322.31,
+          "low": 315.76,
+          "close": 320.42,
+          "pnl_pct": -0.27
+        },
+        "2026-07-07": {
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
+          "close": 319.43,
+          "pnl_pct": 0.04
+        },
+        "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 311.73,
+          "close": 314.88,
+          "pnl_pct": 1.46
+        }
+      },
+      "position_usd": 212.14,
+      "unrealized_pnl_usd": 3.1
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 29.28,
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 1.7
+        },
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 4.76
+        }
+      },
+      "position_usd": 212.14,
+      "unrealized_pnl_usd": 10.1
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 317.97,
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
+          "close": 319.43,
+          "pnl_pct": 0.04
+        },
+        "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 311.73,
+          "close": 314.88,
+          "pnl_pct": 1.46
+        }
+      },
+      "position_usd": 212.14,
+      "unrealized_pnl_usd": 3.1
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 29.15,
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 4.76
+        }
+      },
+      "position_usd": 212.14,
+      "unrealized_pnl_usd": 10.1
+    }
+  ],
+  "closed_positions": [
+    {
+      "ticker": "UCTT",
+      "name": "Ultra Clean Holdings Inc.",
+      "action": "BUY",
+      "signal_date": "2026-05-27",
+      "entry_price": 87.46,
+      "allocated_usd": 500,
+      "shares": 5,
+      "actual_position_usd": 437.3,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-05-29",
+      "day1_open": 90.38,
+      "daily_prices": {
+        "2026-05-28": {
+          "open": 90.38,
+          "high": 90.8,
+          "low": 84.35,
+          "close": 87.29,
+          "pnl_pct": -0.19
+        },
+        "2026-05-29": {
+          "open": 88.11,
+          "high": 89.34,
+          "low": 83.23,
+          "close": 85.57,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-05-29",
+      "close_price": 83.96,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.0,
+      "position_usd": 200.0
+    },
+    {
+      "ticker": "WTTR",
+      "name": "Select Water Solutions Inc.",
+      "action": "SELL",
+      "signal_date": "2026-05-27",
+      "entry_price": 19.35,
+      "allocated_usd": 500,
+      "shares": 25,
+      "actual_position_usd": 483.75,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-03",
+      "day1_open": 18.78,
+      "daily_prices": {
+        "2026-05-28": {
+          "open": 18.78,
+          "high": 18.88,
+          "low": 18.08,
+          "close": 18.14,
+          "pnl_pct": 6.25
+        },
+        "2026-05-29": {
+          "open": 18.19,
+          "high": 18.36,
+          "low": 17.82,
+          "close": 17.93,
+          "pnl_pct": 7.34
+        },
+        "2026-06-01": {
+          "open": 18.14,
+          "high": 18.44,
+          "low": 17.86,
+          "close": 18.38,
+          "pnl_pct": 5.01
+        },
+        "2026-06-02": {
+          "open": 18.51,
+          "high": 19.02,
+          "low": 18.45,
+          "close": 18.86,
+          "pnl_pct": 2.53
+        },
+        "2026-06-03": {
+          "open": 18.99,
+          "high": 19.12,
+          "low": 18.79,
+          "close": 18.98,
+          "pnl_pct": 1.91
+        }
+      },
+      "close_date": "2026-06-03",
+      "close_price": 18.98,
+      "final_pnl_pct": 1.91,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 3.82,
+      "position_usd": 200.0
+    },
+    {
+      "ticker": "MXL",
+      "name": "MaxLinear Inc.",
+      "action": "SELL",
+      "signal_date": "2026-05-28",
+      "entry_price": 101.1,
+      "allocated_usd": 500,
+      "shares": 4,
+      "actual_position_usd": 404.4,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-05-29",
+      "day1_open": 99.24,
+      "daily_prices": {
+        "2026-05-29": {
+          "open": 99.24,
+          "high": 99.86,
+          "low": 85.64,
+          "close": 92.93,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-05-29",
+      "close_price": 93.01,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.0,
+      "position_usd": 200.0
+    },
+    {
+      "ticker": "ALGT",
+      "name": "Allegiant Travel Company",
+      "action": "SELL",
+      "signal_date": "2026-05-28",
+      "entry_price": 91.0,
+      "allocated_usd": 500,
+      "shares": 5,
+      "actual_position_usd": 455.0,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-03",
+      "day1_open": 90.73,
+      "daily_prices": {
+        "2026-05-29": {
+          "open": 90.73,
+          "high": 93.68,
+          "low": 89.87,
+          "close": 91.61,
+          "pnl_pct": -0.67
+        },
+        "2026-06-01": {
+          "open": 88.79,
+          "high": 89.99,
+          "low": 85.02,
+          "close": 89.16,
+          "pnl_pct": 2.02
+        },
+        "2026-06-02": {
+          "open": 90.7,
+          "high": 90.7,
+          "low": 87.02,
+          "close": 87.67,
+          "pnl_pct": 3.66
+        },
+        "2026-06-03": {
+          "open": 86.15,
+          "high": 86.24,
+          "low": 82.62,
+          "close": 82.98,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-03",
+      "close_price": 83.72,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.0,
+      "position_usd": 200.0
+    },
+    {
+      "ticker": "IMOS",
+      "name": "ChipMOS Technologies",
+      "action": "SELL",
+      "signal_date": "2026-06-01",
+      "entry_price": 67.75,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 474.25,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-02",
+      "day1_open": 63.27,
+      "daily_prices": {
+        "2026-06-02": {
+          "open": 63.27,
+          "high": 63.9,
+          "low": 60.95,
+          "close": 63.77,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-02",
+      "close_price": 62.33,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.06,
+      "position_usd": 200.8
+    },
+    {
+      "ticker": "KLIC",
+      "name": "Kulicke and Soffa Industries Inc.",
+      "action": "SELL",
+      "signal_date": "2026-06-03",
+      "entry_price": 108.36,
+      "allocated_usd": 500,
+      "shares": 4,
+      "actual_position_usd": 433.44,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-05",
+      "day1_open": 103.85,
+      "daily_prices": {
+        "2026-06-04": {
+          "open": 103.85,
+          "high": 109.2,
+          "low": 102.88,
+          "close": 107.33,
+          "pnl_pct": 0.95
+        },
+        "2026-06-05": {
+          "open": 103.72,
+          "high": 104.57,
+          "low": 97.16,
+          "close": 97.99,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-05",
+      "close_price": 99.69,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.35,
+      "position_usd": 204.39
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research Corporation",
+      "action": "BUY",
+      "signal_date": "2026-06-05",
+      "entry_price": 318.5,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 318.5,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-09",
+      "day1_open": 318.33,
+      "daily_prices": {
+        "2026-06-08": {
+          "open": 318.33,
+          "high": 330.45,
+          "low": 314.78,
+          "close": 324.22,
+          "pnl_pct": 1.8
+        },
+        "2026-06-09": {
+          "open": 335.26,
+          "high": 348.84,
+          "low": 305.79,
+          "close": 326.93,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 343.98,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.48,
+      "position_usd": 206.02
+    },
+    {
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "action": "SELL",
+      "signal_date": "2026-06-05",
+      "entry_price": 48.35,
+      "allocated_usd": 500,
+      "shares": 10,
+      "actual_position_usd": 483.5,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-09",
+      "day1_open": 47.58,
+      "daily_prices": {
+        "2026-06-08": {
+          "open": 47.58,
+          "high": 49.68,
+          "low": 47.12,
+          "close": 49.52,
+          "pnl_pct": -2.42
+        },
+        "2026-06-09": {
+          "open": 49.85,
+          "high": 51.55,
+          "low": 47.54,
+          "close": 49.48,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-09",
+      "close_price": 50.28,
+      "final_pnl_pct": -3.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.22,
+      "position_usd": 206.02
+    },
+    {
+      "ticker": "TISI",
+      "name": "TISI",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 17.93,
+      "allocated_usd": 500,
+      "shares": 27,
+      "actual_position_usd": 484.11,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-10",
+      "day1_open": 17.79,
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 17.79,
+          "high": 18.5,
+          "low": 16.94,
+          "close": 17.5,
+          "pnl_pct": 2.4
+        },
+        "2026-06-10": {
+          "open": 17.71,
+          "high": 17.86,
+          "low": 16.14,
+          "close": 16.34,
+          "pnl_pct": 7.98
+        }
+      },
+      "close_date": "2026-06-10",
+      "close_price": 16.5,
+      "final_pnl_pct": 7.98,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.44,
+      "position_usd": 206.02
+    },
+    {
+      "ticker": "VLGEA",
+      "name": "VLGEA",
+      "action": "SELL",
+      "signal_date": "2026-06-08",
+      "entry_price": 39.33,
+      "allocated_usd": 500,
+      "shares": 12,
+      "actual_position_usd": 471.96,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-10",
+      "day1_open": 39.2,
+      "daily_prices": {
+        "2026-06-09": {
+          "open": 39.2,
+          "high": 40.69,
+          "low": 39.14,
+          "close": 39.47,
+          "pnl_pct": -0.36
+        },
+        "2026-06-10": {
+          "open": 39.77,
+          "high": 41.25,
+          "low": 39.02,
+          "close": 41.12,
+          "pnl_pct": -3.99
+        }
+      },
+      "close_date": "2026-06-10",
+      "close_price": 40.9,
+      "final_pnl_pct": -3.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.22,
+      "position_usd": 206.02
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-15",
+      "day1_open": 10.6,
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 10.6,
+          "high": 10.8,
+          "low": 9.6,
+          "close": 9.86,
+          "pnl_pct": 8.01
+        }
+      },
+      "close_date": "2026-06-15",
+      "close_price": 11.37,
+      "final_pnl_pct": 8.01,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.57,
+      "position_usd": 206.85
+    },
+    {
+      "ticker": "PBHC",
+      "name": "PBHC",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 15.2,
+      "allocated_usd": 500,
+      "shares": 32,
+      "actual_position_usd": 486.4,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-12",
+      "day1_open": 14.88,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 14.88,
+          "high": 15.45,
+          "low": 13.72,
+          "close": 15.45,
+          "pnl_pct": 8.03
+        }
+      },
+      "close_date": "2026-06-12",
+      "close_price": 13.98,
+      "final_pnl_pct": 8.03,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.68,
+      "position_usd": 207.67
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-11",
+      "entry_price": 9.89,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 494.5,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-18",
+      "day1_open": 9.71,
+      "daily_prices": {
+        "2026-06-12": {
+          "open": 9.71,
+          "high": 9.95,
+          "low": 9.71,
+          "close": 9.81,
+          "pnl_pct": 0.81
+        },
+        "2026-06-15": {
+          "open": 9.82,
+          "high": 9.92,
+          "low": 9.76,
+          "close": 9.85,
+          "pnl_pct": 0.4
+        },
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": 0.2
+        },
+        "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
+          "close": 9.52,
+          "pnl_pct": 3.74
+        },
+        "2026-06-18": {
+          "open": 9.59,
+          "high": 9.69,
+          "low": 9.38,
+          "close": 9.53,
+          "pnl_pct": 3.64
+        }
+      },
+      "close_date": "2026-06-18",
+      "close_price": 9.53,
+      "final_pnl_pct": 3.64,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 7.56,
+      "position_usd": 207.67
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 347.2,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-16",
+      "day1_open": 172.51,
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.47
+        },
+        "2026-06-16": {
+          "open": 165.18,
+          "high": 166.94,
+          "low": 159.22,
+          "close": 159.8,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-16",
+      "close_price": 159.71,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.75,
+      "position_usd": 209.34
+    },
+    {
+      "ticker": "MFIN",
+      "name": "MFIN",
+      "action": "SELL",
+      "signal_date": "2026-06-15",
+      "entry_price": 9.81,
+      "allocated_usd": 500,
+      "shares": 50,
+      "actual_position_usd": 490.5,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-22",
+      "day1_open": 9.9,
+      "daily_prices": {
+        "2026-06-16": {
+          "open": 9.9,
+          "high": 10.09,
+          "low": 9.82,
+          "close": 9.87,
+          "pnl_pct": -0.61
+        },
+        "2026-06-17": {
+          "open": 9.89,
+          "high": 9.93,
+          "low": 9.47,
+          "close": 9.52,
+          "pnl_pct": 2.96
+        },
+        "2026-06-18": {
+          "open": 9.59,
+          "high": 9.69,
+          "low": 9.38,
+          "close": 9.53,
+          "pnl_pct": 2.85
+        },
+        "2026-06-22": {
+          "open": 9.53,
+          "high": 9.62,
+          "low": 9.36,
+          "close": 9.38,
+          "pnl_pct": 4.38
+        }
+      },
+      "close_date": "2026-06-22",
+      "close_price": 9.38,
+      "final_pnl_pct": 4.38,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 9.24,
+      "position_usd": 211.0
+    },
+    {
+      "ticker": "AMRX",
+      "name": "AMRX",
+      "action": "SELL",
+      "signal_date": "2026-06-16",
+      "entry_price": 16.24,
+      "allocated_usd": 500,
+      "shares": 30,
+      "actual_position_usd": 487.2,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-23",
+      "day1_open": 16.25,
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 16.25,
+          "high": 16.55,
+          "low": 16.18,
+          "close": 16.28,
+          "pnl_pct": -0.25
+        },
+        "2026-06-18": {
+          "open": 16.47,
+          "high": 16.61,
+          "low": 15.73,
+          "close": 16.21,
+          "pnl_pct": 0.18
+        },
+        "2026-06-22": {
+          "open": 16.21,
+          "high": 16.4,
+          "low": 16.01,
+          "close": 16.11,
+          "pnl_pct": 0.8
+        },
+        "2026-06-23": {
+          "open": 16.0,
+          "high": 16.73,
+          "low": 15.93,
+          "close": 16.66,
+          "pnl_pct": -2.59
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 16.66,
+      "final_pnl_pct": -2.59,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -5.51,
+      "position_usd": 212.67
+    },
+    {
+      "ticker": "CTRE",
+      "name": "CTRE",
+      "action": "SELL",
+      "signal_date": "2026-06-16",
+      "entry_price": 37.04,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 481.52,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-23",
+      "day1_open": 36.67,
+      "daily_prices": {
+        "2026-06-17": {
+          "open": 36.67,
+          "high": 36.68,
+          "low": 35.91,
+          "close": 36.03,
+          "pnl_pct": 2.73
+        },
+        "2026-06-18": {
+          "open": 36.22,
+          "high": 36.75,
+          "low": 35.7,
+          "close": 36.7,
+          "pnl_pct": 0.92
+        },
+        "2026-06-22": {
+          "open": 36.63,
+          "high": 37.24,
+          "low": 36.44,
+          "close": 37.13,
+          "pnl_pct": -0.24
+        },
+        "2026-06-23": {
+          "open": 37.5,
+          "high": 38.45,
+          "low": 37.33,
+          "close": 38.43,
+          "pnl_pct": -3.75
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 38.43,
+      "final_pnl_pct": -3.75,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -7.98,
+      "position_usd": 212.67
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-19",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-24",
+      "day1_open": 36.1,
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 36.1,
+          "high": 36.85,
+          "low": 36.1,
+          "close": 36.7,
+          "pnl_pct": -1.13
+        },
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.36,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.73
+        },
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.86,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 37.74,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.54,
+      "position_usd": 213.43
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "BUY",
+      "signal_date": "2026-06-19",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-26",
+      "day1_open": 140.64,
+      "daily_prices": {
+        "2026-06-22": {
+          "open": 140.64,
+          "high": 141.99,
+          "low": 137.61,
+          "close": 138.79,
+          "pnl_pct": -0.16
+        },
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.27,
+          "low": 134.75,
+          "close": 137.94,
+          "pnl_pct": -0.77
+        },
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.13,
+          "pnl_pct": -2.07
+        },
+        "2026-06-25": {
+          "open": 138.06,
+          "high": 139.18,
+          "low": 135.62,
+          "close": 137.28,
+          "pnl_pct": -1.24
+        },
+        "2026-06-26": {
+          "open": 136.96,
+          "high": 137.76,
+          "low": 131.38,
+          "close": 135.42,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 133.45,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.54,
+      "position_usd": 213.43
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 16.08,
+      "allocated_usd": 500,
+      "shares": 31,
+      "actual_position_usd": 498.48,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-23",
+      "day1_open": 16.03,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 16.03,
+          "high": 17.35,
+          "low": 15.88,
+          "close": 16.53,
+          "pnl_pct": -3.98
+        }
+      },
+      "close_date": "2026-06-23",
+      "close_price": 16.72,
+      "final_pnl_pct": -3.98,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.53,
+      "position_usd": 214.35
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WSBC",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 36.29,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 471.77,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-24",
+      "day1_open": 36.59,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 36.59,
+          "high": 37.36,
+          "low": 36.59,
+          "close": 37.28,
+          "pnl_pct": -2.73
+        },
+        "2026-06-24": {
+          "open": 37.28,
+          "high": 38.09,
+          "low": 36.92,
+          "close": 37.86,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-06-24",
+      "close_price": 37.74,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.57,
+      "position_usd": 214.35
+    },
+    {
+      "ticker": "SNEX",
+      "name": "SNEX",
+      "action": "SELL",
+      "signal_date": "2026-06-22",
+      "entry_price": 139.01,
+      "allocated_usd": 500,
+      "shares": 3,
+      "actual_position_usd": 417.03,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-29",
+      "day1_open": 135.42,
+      "daily_prices": {
+        "2026-06-23": {
+          "open": 135.42,
+          "high": 141.27,
+          "low": 134.75,
+          "close": 137.94,
+          "pnl_pct": 0.77
+        },
+        "2026-06-24": {
+          "open": 138.0,
+          "high": 139.89,
+          "low": 133.74,
+          "close": 136.13,
+          "pnl_pct": 2.07
+        },
+        "2026-06-25": {
+          "open": 138.06,
+          "high": 139.18,
+          "low": 135.62,
+          "close": 137.28,
+          "pnl_pct": 1.24
+        },
+        "2026-06-26": {
+          "open": 136.96,
+          "high": 137.76,
+          "low": 131.38,
+          "close": 135.42,
+          "pnl_pct": 2.58
+        },
+        "2026-06-29": {
+          "open": 134.12,
+          "high": 136.01,
+          "low": 115.0,
+          "close": 115.85,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-06-29",
+      "close_price": 127.89,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 17.15,
+      "position_usd": 214.35
+    },
+    {
+      "ticker": "SWBI",
+      "name": "SWBI",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 16.67,
+      "allocated_usd": 500,
+      "shares": 29,
+      "actual_position_usd": 483.43,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-06-26",
+      "day1_open": 16.05,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 16.05,
+          "high": 16.25,
+          "low": 15.48,
+          "close": 15.55,
+          "pnl_pct": 6.72
+        },
+        "2026-06-26": {
+          "open": 15.42,
+          "high": 15.56,
+          "low": 14.71,
+          "close": 15.1,
+          "pnl_pct": 7.98
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 15.34,
+      "final_pnl_pct": 7.98,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 16.79,
+      "position_usd": 210.44
+    },
+    {
+      "ticker": "OBT",
+      "name": "OBT",
+      "action": "SELL",
+      "signal_date": "2026-06-24",
+      "entry_price": 36.5,
+      "allocated_usd": 500,
+      "shares": 13,
+      "actual_position_usd": 474.5,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-01",
+      "day1_open": 36.55,
+      "daily_prices": {
+        "2026-06-25": {
+          "open": 36.55,
+          "high": 37.19,
+          "low": 36.55,
+          "close": 36.89,
+          "pnl_pct": -1.07
+        },
+        "2026-06-26": {
+          "open": 37.02,
+          "high": 37.71,
+          "low": 36.5,
+          "close": 36.95,
+          "pnl_pct": -1.23
+        },
+        "2026-06-29": {
+          "open": 36.97,
+          "high": 37.7,
+          "low": 36.67,
+          "close": 37.24,
+          "pnl_pct": -2.03
+        },
+        "2026-06-30": {
+          "open": 37.04,
+          "high": 37.4,
+          "low": 36.55,
+          "close": 36.78,
+          "pnl_pct": -0.77
+        },
+        "2026-07-01": {
+          "open": 36.56,
+          "high": 37.97,
+          "low": 36.56,
+          "close": 37.64,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-01",
+      "close_price": 37.96,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.42,
+      "position_usd": 210.44
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-07",
+      "day1_open": 52.8,
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        },
+        "2026-07-06": {
+          "open": 54.94,
+          "high": 56.03,
+          "low": 54.0,
+          "close": 55.36,
+          "pnl_pct": -0.65
+        },
+        "2026-07-07": {
+          "open": 55.52,
+          "high": 57.8,
+          "low": 55.13,
+          "close": 56.56,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-07",
+      "close_price": 57.2,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.49,
+      "position_usd": 212.14
+    }
+  ],
+  "_note": "c-tight 变体:Plan C 出场(TP8/SL4/5天)+ 跳空过滤 >1.0% 跳过(比 c 更紧)",
+  "stats": {
+    "total_trades": 25,
+    "win_trades": 14,
+    "win_rate": 56.0,
+    "total_realized_pnl_usd": 112.89,
+    "open_unrealized_pnl_usd": 47.37,
+    "portfolio_value": 2160.26,
+    "total_commission_usd": 50.0,
+    "skipped_gap": 15,
+    "skipped_zero_shares": 1,
+    "updated_at": "2026-07-09"
+  }
+};

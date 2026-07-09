@@ -52,6 +52,10 @@ jobs:
           python scripts/backfill-portfolio-mn.py
           # h腿已退役2026-07-09(Haiku弱+费Anthropic,A/B已证DeepSeek赢): python scripts/backfill-portfolio-h.py
           python scripts/backfill-portfolio-hds.py
+          # c 的三条平行 A/B 变体(c 本尊 backfill-portfolio-c.py 不动当基线)
+          python scripts/backfill-portfolio-ctg.py   # c-tight: 跳空过滤更紧 1.0%
+          python scripts/backfill-portfolio-ch.py    # c-H:     出场换 Plan H
+          python scripts/backfill-portfolio-ctr.py   # c-trail: 移动止损让赢家跑
           python scripts/backfill-portfolio-spy.py
 
       - name: Regenerate daily report
@@ -75,6 +79,9 @@ jobs:
           git add dashboard/portfolio-mn.js data/portfolio_mn.json 2>/dev/null || true
           git add dashboard/portfolio-h.js data/portfolio_h.json 2>/dev/null || true
           git add dashboard/portfolio-hds.js data/portfolio_hds.json 2>/dev/null || true
+          git add dashboard/portfolio-ctg.js data/portfolio_ctg.json 2>/dev/null || true
+          git add dashboard/portfolio-ch.js data/portfolio_ch.json 2>/dev/null || true
+          git add dashboard/portfolio-ctr.js data/portfolio_ctr.json 2>/dev/null || true
           git add dashboard/portfolio-spy.js data/portfolio_spy.json 2>/dev/null || true
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
