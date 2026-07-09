@@ -6,7 +6,10 @@ import time
 import yfinance as yf
 from datetime import datetime, timezone, timedelta
 
-client = anthropic.Anthropic(max_retries=5)
+try:
+    client = anthropic.Anthropic(max_retries=5)   # DeepSeek模式下没ANTHROPIC_API_KEY也不崩
+except Exception:
+    client = None
 
 beijing_tz = timezone(timedelta(hours=8))
 now_beijing = datetime.now(beijing_tz)
@@ -179,6 +182,45 @@ def write_balance_warning_note(today):
     print(f"⚠️  Balance warning note written for {today}")
 
 
+def deepseek_generate(market_data):
+    """DeepSeek(OpenAI兼容,JSON模式)+FMP选股器候选生成晨报,无需web搜索,极便宜。返回data dict(含api_cost_usd)。"""
+    import urllib.request
+    key = os.environ["DEEPSEEK_API_KEY"]
+    cands = []
+    try:
+        sd = json.load(open("data/screened-stocks.json"))
+        cands = (sd.get("candidates") or [])[:20]
+    except Exception:
+        pass
+    cand_txt = "\n".join(
+        f"- {c.get('ticker')} 价${c.get('price')} 12月RS{c.get('rs_12m','?')} 距高{c.get('dist_from_high','?')}%"
+        for c in cands) or "(选股器暂无数据,请用你的知识选真实存在的小盘股)"
+    prompt = (
+        f"今天是{today}。你是资深金融晨报分析师。基于以下数据生成结构化晨报,严格只返回JSON。\n\n"
+        f"市场数据(已确认):S&P500期货 {market_data['sp500_pct']:+.2f}%,10年期美债 "
+        f"{market_data['treasury_10y']:.3f}%(变动{market_data['treasury_bps']:+.1f}bps)\n\n"
+        f"候选股票池(从中挑10支,尽量不同板块,市值$5亿-$100亿):\n{cand_txt}\n\n"
+        f"返回JSON结构:\n"
+        '{"market":{"sp500_futures_pct":0,"treasury_10y":0,"treasury_10y_change_bps":0,"eps_beat_rate":<当前财报季EPS超预期率数字如75.5>},'
+        '"note":{"market_overview":"<中文>","macro":"<中文>","earnings":"<中文>","trade_ideas":"<中文>"},'
+        '"stock_picks":[{"ticker":"","name":"<中文名>","sector":"<板块>","direction":"buy|sell|watch","buy_zone":"","target":"","stop_loss":"","reason":"<中文理由>"}]}\n'
+        "要求:stock_picks正好10支;note和reason全中文;direction只能buy/sell/watch;禁止大市值股"
+        "(NVDA/AAPL/MSFT/AMZN/GOOGL/META/TSLA/AMD/INTC/SPY/QQQ/TLT等)。只返回JSON,无其他文字。"
+    )
+    body = json.dumps({"model": "deepseek-chat",
+                       "messages": [{"role": "user", "content": prompt}],
+                       "response_format": {"type": "json_object"},
+                       "max_tokens": 4000, "temperature": 0.7}).encode()
+    req = urllib.request.Request("https://api.deepseek.com/chat/completions", data=body,
+                                 headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+    r = json.load(urllib.request.urlopen(req, timeout=180))
+    data = json.loads(r["choices"][0]["message"]["content"])
+    u = r.get("usage", {})
+    data["api_cost_usd"] = round(u.get("prompt_tokens", 0) * 0.14 / 1e6 + u.get("completion_tokens", 0) * 0.28 / 1e6, 5)
+    print(f"[morning] DeepSeek 生成完成,成本 ${data['api_cost_usd']}")
+    return data
+
+
 # ── Main execution ──────────────────────────────────────────────────────────
 
 try:
@@ -188,25 +230,30 @@ except Exception as e:
     print(f"⚠️  yfinance fetch failed: {e}. Using zero values.")
     market_data = {"sp500_pct": 0.0, "treasury_10y": 0.0, "treasury_bps": 0.0}
 
-try:
-    resp1, response = call_with_retry(market_data)
-except anthropic.BadRequestError as e:
-    if 'credit balance' in str(e).lower():
-        print(f"⚠️  Anthropic credit balance too low: {e}")
-        write_balance_warning_note(today)
-        sys.exit(0)
-    raise
-
-# Extract save_morning_note tool call from turn 2
-data = None
-for block in response.content:
-    if hasattr(block, 'type') and block.type == "tool_use" and block.name == "save_morning_note":
-        data = block.input
-        print(f"[debug] save_morning_note called, keys: {list(data.keys())}")
-
-if data is None:
-    content_types = [getattr(b, 'type', str(b)) for b in response.content]
-    raise ValueError(f"save_morning_note not called. Content types: {content_types}")
+ENGINE = "deepseek" if (os.environ.get("DEEPSEEK_API_KEY") and os.environ.get("MORNING_ENGINE", "deepseek") != "anthropic") else "anthropic"
+print(f"[morning] 引擎: {ENGINE}")
+if ENGINE == "deepseek":
+    try:
+        data = deepseek_generate(market_data)   # 已含 api_cost_usd
+    except Exception as e:
+        print(f"⚠️  DeepSeek 晨报失败: {e}")
+        write_balance_warning_note(today); sys.exit(0)
+else:
+    try:
+        resp1, response = call_with_retry(market_data)
+    except anthropic.BadRequestError as e:
+        if 'credit balance' in str(e).lower():
+            print(f"⚠️  Anthropic credit balance too low: {e}")
+            write_balance_warning_note(today); sys.exit(0)
+        raise
+    data = None
+    for block in response.content:
+        if hasattr(block, 'type') and block.type == "tool_use" and block.name == "save_morning_note":
+            data = block.input
+    if data is None:
+        raise ValueError("save_morning_note not called")
+    data["api_cost_usd"] = round((resp1.usage.input_tokens + response.usage.input_tokens) * 0.8 / 1e6
+                                 + (resp1.usage.output_tokens + response.usage.output_tokens) * 4.0 / 1e6, 4)
 
 # Override market data with yfinance values (more accurate than AI's text output)
 data["market"]["sp500_futures_pct"] = market_data["sp500_pct"]
@@ -249,11 +296,8 @@ for pick in picks:
     if pick.get("direction") not in ("buy", "sell", "watch"):
         pick["direction"] = "watch"
 
-# Calculate API cost across both turns (claude-haiku-4-5: $0.80/MTok in, $4/MTok out)
-total_in  = resp1.usage.input_tokens  + response.usage.input_tokens
-total_out = resp1.usage.output_tokens + response.usage.output_tokens
-data["api_cost_usd"] = round(total_in * 0.8 / 1_000_000 + total_out * 4.0 / 1_000_000, 4)
-print(f"[debug] tokens in={total_in} out={total_out} cost=${data['api_cost_usd']}")
+# api_cost_usd 已在引擎分支里设好(DeepSeek/Anthropic各自算)
+print(f"[debug] api_cost=${data.get('api_cost_usd', 0)}")
 
 # Calculate cumulative cost from history files
 history_dir = "dashboard/morning-note-history"

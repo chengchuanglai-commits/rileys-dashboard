@@ -29,7 +29,8 @@ jobs:
       - name: Generate morning note
 
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}   # 有这个→自动走DeepSeek引擎(便宜)
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} # 懒加载client/兜底
           ANTHROPIC_BUDGET_USD: "5"
         run: python scripts/generate-morning-note.py
 
