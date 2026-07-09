@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-09",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "ITIC",
+      "action": "SELL",
+      "current_price": 273.45,
+      "target_price": 300.8,
+      "stop_loss": 259.78
+    },
+    {
+      "ticker": "SKWD",
+      "action": "SELL",
+      "current_price": 60.37,
+      "target_price": 66.41,
+      "stop_loss": 57.35
+    },
+    {
+      "ticker": "ACIW",
+      "action": "BUY",
+      "current_price": 55.88,
+      "target_price": 61.47,
+      "stop_loss": 53.09
+    },
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 18.59,
+      "target_price": 20.45,
+      "stop_loss": 17.66
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "PLMR",
+      "action": "HOLD",
+      "current_price": 144.52,
+      "target_price": 158.97,
+      "stop_loss": 137.29
+    },
+    {
+      "ticker": "ITIC",
+      "action": "SELL",
+      "current_price": 273.45,
+      "target_price": 300.8,
+      "stop_loss": 259.78
+    },
+    {
+      "ticker": "SKWD",
+      "action": "SELL",
+      "current_price": 60.37,
+      "target_price": 66.41,
+      "stop_loss": 57.35
+    },
+    {
+      "ticker": "ACIW",
+      "action": "BUY",
+      "current_price": 55.88,
+      "target_price": 61.47,
+      "stop_loss": 53.09
+    },
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 18.59,
+      "target_price": 20.45,
+      "stop_loss": 17.66
+    },
+    {
+      "ticker": "PFIS",
+      "action": "SELL",
+      "current_price": 65.25,
+      "target_price": 71.78,
+      "stop_loss": 61.99
+    },
+    {
+      "ticker": "YORW",
+      "action": "SELL",
+      "current_price": 30.0,
+      "target_price": 33.0,
+      "stop_loss": 28.5
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 68.06,
+      "target_price": 74.87,
+      "stop_loss": 64.66
+    },
+    {
+      "ticker": "STRS",
+      "action": "SELL",
+      "current_price": 27.41,
+      "target_price": 30.15,
+      "stop_loss": 26.04
+    },
+    {
+      "ticker": "PRGS",
+      "action": "BUY",
+      "current_price": 37.76,
+      "target_price": 41.54,
+      "stop_loss": 35.87
+    },
+    {
+      "ticker": "AOUT",
+      "action": "SELL",
+      "current_price": 13.93,
+      "target_price": 15.32,
+      "stop_loss": 13.23
+    },
+    {
+      "ticker": "ECPG",
+      "action": "SELL",
+      "current_price": 87.54,
+      "target_price": 96.29,
+      "stop_loss": 83.16
+    },
+    {
+      "ticker": "CHCO",
+      "action": "HOLD",
+      "current_price": 130.95,
+      "target_price": 144.04,
+      "stop_loss": 124.4
+    },
+    {
+      "ticker": "CNOB",
+      "action": "BUY",
+      "current_price": 31.4,
+      "target_price": 34.54,
+      "stop_loss": 29.83
+    },
+    {
+      "ticker": "EZPW",
+      "action": "BUY",
+      "current_price": 32.16,
+      "target_price": 35.38,
+      "stop_loss": 30.55
+    },
+    {
+      "ticker": "TCBK",
+      "action": "BUY",
+      "current_price": 52.43,
+      "target_price": 57.67,
+      "stop_loss": 49.81
+    },
+    {
+      "ticker": "PTEN",
+      "action": "HOLD",
+      "current_price": 9.7,
+      "target_price": 10.67,
+      "stop_loss": 9.21
+    },
+    {
+      "ticker": "ARCO",
+      "action": "SELL",
+      "current_price": 8.18,
+      "target_price": 9.0,
+      "stop_loss": 7.77
+    },
+    {
+      "ticker": "VRTS",
+      "action": "SELL",
+      "current_price": 154.39,
+      "target_price": 169.83,
+      "stop_loss": 146.67
+    },
+    {
+      "ticker": "AVAV",
+      "action": "BUY",
+      "current_price": 157.78,
+      "target_price": 173.56,
+      "stop_loss": 149.89
+    }
+  ]
+}
