@@ -50,7 +50,7 @@ jobs:
           python scripts/backfill-portfolio-e.py
           python scripts/backfill-portfolio-f.py
           python scripts/backfill-portfolio-mn.py
-          python scripts/backfill-portfolio-h.py
+          # h腿已退役2026-07-09(Haiku弱+费Anthropic,A/B已证DeepSeek赢): python scripts/backfill-portfolio-h.py
           python scripts/backfill-portfolio-hds.py
           python scripts/backfill-portfolio-spy.py
 

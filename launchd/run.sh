@@ -16,7 +16,7 @@ echo "[$(date '+%F %T')] === run $1 ===" >> data/exec-log/launchd.log
 # review batch(收盘后)前先回填模拟盘——这时当天日bar已出,各腿对照才是当天收盘最新值(否则慢一天)
 if [ "$1" = "review" ]; then
   export FMP_API_KEY="pOJlglH08lKz9RUmFeO5yYxOc87v5HzA"
-  for L in momma momh mn c h hds; do
+  for L in momma momh mn c hds; do   # h腿已退役(2026-07-09,Haiku弱且费Anthropic,A/B已证DeepSeek赢)
     /usr/bin/python3 scripts/backfill-portfolio-$L.py >> data/exec-log/legs-refill.log 2>&1 || true
   done
   # momma回填后立刻重算三线统一目标(否则master-allocation停在旧日期→波动腿目标用已剔除的幽灵票)

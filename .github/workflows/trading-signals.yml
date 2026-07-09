@@ -166,8 +166,9 @@ jobs:
       - name: Update Plan H-广池 portfolio (晨报精选)
         run: python scripts/backfill-portfolio-mn.py
 
-      - name: Update Plan H portfolio (历史最优参数)
-        run: python scripts/backfill-portfolio-h.py
+      # h腿已退役(2026-07-09):Haiku弱(过不了抗滑点关)且费Anthropic余额,A/B已证DeepSeek(hds)赢
+      # - name: Update Plan H portfolio (历史最优参数)
+      #   run: python scripts/backfill-portfolio-h.py
 
       - name: 复利曲线
         continue-on-error: true
