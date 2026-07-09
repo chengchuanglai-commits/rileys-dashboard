@@ -151,6 +151,74 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.78,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "ITIC",
+      "name": "投资者合众公司",
+      "action": "BUY",
+      "signal_date": "2026-07-09",
+      "entry_price": 271.3,
+      "allocated_usd": 500,
+      "shares": 1.843,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 312.0,
+      "stop_loss": 265.87,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {},
+      "position_usd": 210.11,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SKWD",
+      "name": "Skyward Specialty Insurance",
+      "action": "BUY",
+      "signal_date": "2026-07-09",
+      "entry_price": 59.93,
+      "allocated_usd": 500,
+      "shares": 8.3431,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 68.92,
+      "stop_loss": 58.73,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {},
+      "position_usd": 210.11,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "Ligand Pharmaceuticals",
+      "action": "BUY",
+      "signal_date": "2026-07-09",
+      "entry_price": 315.97,
+      "allocated_usd": 500,
+      "shares": 1.5824,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 363.37,
+      "stop_loss": 309.65,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {},
+      "position_usd": 210.11,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "AOUT",
+      "name": "American Outdoor Brands",
+      "action": "BUY",
+      "signal_date": "2026-07-09",
+      "entry_price": 14.08,
+      "allocated_usd": 500,
+      "shares": 35.5114,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 16.19,
+      "stop_loss": 13.8,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {},
+      "position_usd": 210.11,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2491,7 +2559,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 136.0,
     "skipped_gap": 38,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 83,
+    "skipped_no_cash": 86,
     "updated_at": "2026-07-09"
   }
 };

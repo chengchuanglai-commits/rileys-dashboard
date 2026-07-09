@@ -91,76 +91,6 @@ window.PORTFOLIO_E = {
       "day1_open": 36.67
     },
     {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 319.55,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 319.55,
-      "entry_commission": 1.0,
-      "take_profit": 287.6,
-      "stop_loss": 329.14,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-09",
-      "regime": "neutral",
-      "vix": 15.57,
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 317.97,
-          "high": 323.3,
-          "low": 312.74,
-          "close": 319.43,
-          "pnl_pct": 0.04
-        },
-        "2026-07-08": {
-          "open": 321.91,
-          "high": 326.63,
-          "low": 311.73,
-          "close": 314.88,
-          "pnl_pct": 1.46
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 317.97
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 29.41,
-      "allocated_usd": 500,
-      "shares": 17,
-      "actual_position_usd": 499.97,
-      "entry_commission": 1.0,
-      "take_profit": 26.47,
-      "stop_loss": 30.29,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-09",
-      "regime": "neutral",
-      "vix": 15.57,
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 4.76
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 29.15
-    },
-    {
       "ticker": "SKWD",
       "name": "SKWD",
       "action": "SELL",
@@ -175,7 +105,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 17.02,
+      "vix": 16.11,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -194,7 +124,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 17.02,
+      "vix": 16.11,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -213,7 +143,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 17.02,
+      "vix": 16.11,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1331,17 +1261,111 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 21.8
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "take_profit": 287.6,
+      "stop_loss": 329.14,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-09",
+      "regime": "neutral",
+      "vix": 15.57,
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
+          "close": 319.43,
+          "pnl_pct": 0.04
+        },
+        "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 311.73,
+          "close": 314.88,
+          "pnl_pct": 1.46
+        },
+        "2026-07-09": {
+          "open": 320.08,
+          "high": 323.26,
+          "low": 315.97,
+          "close": 315.97,
+          "pnl_pct": 1.12
+        }
+      },
+      "close_date": "2026-07-09",
+      "close_price": 315.97,
+      "final_pnl_pct": 1.12,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 1.58
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "take_profit": 26.47,
+      "stop_loss": 30.29,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-09",
+      "regime": "neutral",
+      "vix": 15.57,
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 4.76
+        },
+        "2026-07-09": {
+          "open": 28.0,
+          "high": 28.61,
+          "low": 27.92,
+          "close": 28.06,
+          "pnl_pct": 4.59
+        }
+      },
+      "close_date": "2026-07-09",
+      "close_price": 28.06,
+      "final_pnl_pct": 4.59,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 20.95
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 28,
-    "win_trades": 13,
-    "win_rate": 46.4,
-    "total_realized_pnl_usd": 110.46,
-    "open_unrealized_pnl_usd": 29.77,
-    "portfolio_value": 2140.23,
-    "total_commission_usd": 56.0,
+    "total_trades": 30,
+    "win_trades": 15,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 132.99,
+    "open_unrealized_pnl_usd": 3.31,
+    "portfolio_value": 2136.3,
+    "total_commission_usd": 60.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,

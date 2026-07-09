@@ -1,81 +1,7 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 29.84,
-      "allocated_usd": 500,
-      "shares": 16,
-      "actual_position_usd": 477.44,
-      "entry_commission": 1.0,
-      "take_profit": 27.45,
-      "stop_loss": 31.03,
-      "max_hold_date": "2026-07-09",
-      "daily_prices": {
-        "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 3.12
-        },
-        "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 4.09
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 6.13
-        }
-      }
-    },
-    {
-      "ticker": "DGII",
-      "name": "DGII",
-      "action": "SELL",
-      "signal_date": "2026-07-02",
-      "entry_price": 74.12,
-      "allocated_usd": 500,
-      "shares": 6,
-      "actual_position_usd": 444.72,
-      "entry_commission": 1.0,
-      "take_profit": 68.19,
-      "stop_loss": 77.08,
-      "max_hold_date": "2026-07-09",
-      "daily_prices": {
-        "2026-07-06": {
-          "open": 72.21,
-          "high": 75.31,
-          "low": 72.05,
-          "close": 73.22,
-          "pnl_pct": 1.21
-        },
-        "2026-07-07": {
-          "open": 72.7,
-          "high": 72.7,
-          "low": 69.56,
-          "close": 70.16,
-          "pnl_pct": 5.34
-        },
-        "2026-07-08": {
-          "open": 69.43,
-          "high": 71.58,
-          "low": 68.73,
-          "close": 71.33,
-          "pnl_pct": 3.76
-        }
-      }
-    },
     {
       "ticker": "LGND",
       "name": "LGND",
@@ -110,6 +36,10 @@ window.PORTFOLIO_B = {
           "low": 311.73,
           "close": 314.88,
           "pnl_pct": 1.46
+        },
+        "2026-07-09": {
+          "close": 315.97,
+          "pnl_pct": 1.12
         }
       }
     },
@@ -147,43 +77,10 @@ window.PORTFOLIO_B = {
           "low": 27.61,
           "close": 28.01,
           "pnl_pct": 4.76
-        }
-      }
-    },
-    {
-      "ticker": "UTMD",
-      "name": "UTMD",
-      "action": "SELL",
-      "signal_date": "2026-07-03",
-      "entry_price": 72.78,
-      "allocated_usd": 500,
-      "shares": 6,
-      "actual_position_usd": 436.68,
-      "entry_commission": 1.0,
-      "take_profit": 66.96,
-      "stop_loss": 75.69,
-      "max_hold_date": "2026-07-10",
-      "daily_prices": {
-        "2026-07-06": {
-          "open": 74.4,
-          "high": 74.4,
-          "low": 71.5,
-          "close": 71.81,
-          "pnl_pct": 1.33
         },
-        "2026-07-07": {
-          "open": 71.53,
-          "high": 71.53,
-          "low": 69.14,
-          "close": 69.33,
-          "pnl_pct": 4.74
-        },
-        "2026-07-08": {
-          "open": 68.21,
-          "high": 69.49,
-          "low": 67.25,
-          "close": 68.06,
-          "pnl_pct": 6.49
+        "2026-07-09": {
+          "close": 28.06,
+          "pnl_pct": 4.59
         }
       }
     },
@@ -214,6 +111,10 @@ window.PORTFOLIO_B = {
           "low": 311.73,
           "close": 314.88,
           "pnl_pct": 1.46
+        },
+        "2026-07-09": {
+          "close": 315.97,
+          "pnl_pct": 1.12
         }
       }
     },
@@ -244,6 +145,10 @@ window.PORTFOLIO_B = {
           "low": 27.61,
           "close": 28.01,
           "pnl_pct": 4.76
+        },
+        "2026-07-09": {
+          "close": 28.06,
+          "pnl_pct": 4.59
         }
       }
     },
@@ -260,7 +165,12 @@ window.PORTFOLIO_B = {
       "take_profit": 55.54,
       "stop_loss": 62.78,
       "max_hold_date": "2026-07-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-09": {
+          "close": 59.93,
+          "pnl_pct": 0.73
+        }
+      }
     },
     {
       "ticker": "PFIS",
@@ -275,7 +185,12 @@ window.PORTFOLIO_B = {
       "take_profit": 60.03,
       "stop_loss": 67.86,
       "max_hold_date": "2026-07-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-09": {
+          "close": 65.13,
+          "pnl_pct": 0.18
+        }
+      }
     },
     {
       "ticker": "ACIW",
@@ -290,7 +205,12 @@ window.PORTFOLIO_B = {
       "take_profit": 51.41,
       "stop_loss": 58.12,
       "max_hold_date": "2026-07-16",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-09": {
+          "close": 55.84,
+          "pnl_pct": 0.07
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -1806,6 +1726,108 @@ window.PORTFOLIO_B = {
       "realized_pnl_usd": -14.48
     },
     {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 29.84,
+      "allocated_usd": 500,
+      "shares": 16,
+      "actual_position_usd": 477.44,
+      "entry_commission": 1.0,
+      "take_profit": 27.45,
+      "stop_loss": 31.03,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 3.12
+        },
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 4.09
+        },
+        "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 6.13
+        },
+        "2026-07-09": {
+          "open": 28.0,
+          "high": 28.61,
+          "low": 27.92,
+          "close": 28.06,
+          "pnl_pct": 5.97
+        }
+      },
+      "close_date": "2026-07-09",
+      "close_price": 28.06,
+      "final_pnl_pct": 5.97,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 26.5
+    },
+    {
+      "ticker": "DGII",
+      "name": "DGII",
+      "action": "SELL",
+      "signal_date": "2026-07-02",
+      "entry_price": 74.12,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 444.72,
+      "entry_commission": 1.0,
+      "take_profit": 68.19,
+      "stop_loss": 77.08,
+      "max_hold_date": "2026-07-09",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 72.21,
+          "high": 75.31,
+          "low": 72.05,
+          "close": 73.22,
+          "pnl_pct": 1.21
+        },
+        "2026-07-07": {
+          "open": 72.7,
+          "high": 72.7,
+          "low": 69.56,
+          "close": 70.16,
+          "pnl_pct": 5.34
+        },
+        "2026-07-08": {
+          "open": 69.43,
+          "high": 71.58,
+          "low": 68.73,
+          "close": 71.33,
+          "pnl_pct": 3.76
+        },
+        "2026-07-09": {
+          "open": 72.73,
+          "high": 74.1,
+          "low": 72.05,
+          "close": 73.87,
+          "pnl_pct": 0.34
+        }
+      },
+      "close_date": "2026-07-09",
+      "close_price": 73.87,
+      "final_pnl_pct": 0.34,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.49
+    },
+    {
       "ticker": "SKWD",
       "name": "SKWD",
       "action": "SELL",
@@ -1841,18 +1863,67 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.04
+    },
+    {
+      "ticker": "UTMD",
+      "name": "UTMD",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 72.78,
+      "allocated_usd": 500,
+      "shares": 6,
+      "actual_position_usd": 436.68,
+      "entry_commission": 1.0,
+      "take_profit": 66.96,
+      "stop_loss": 75.69,
+      "max_hold_date": "2026-07-10",
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 74.4,
+          "high": 74.4,
+          "low": 71.5,
+          "close": 71.81,
+          "pnl_pct": 1.33
+        },
+        "2026-07-07": {
+          "open": 71.53,
+          "high": 71.53,
+          "low": 69.14,
+          "close": 69.33,
+          "pnl_pct": 4.74
+        },
+        "2026-07-08": {
+          "open": 68.21,
+          "high": 69.49,
+          "low": 67.25,
+          "close": 68.06,
+          "pnl_pct": 6.49
+        },
+        "2026-07-09": {
+          "open": 66.4,
+          "high": 68.04,
+          "low": 66.4,
+          "close": 68.04,
+          "pnl_pct": 8.0
+        }
+      },
+      "close_date": "2026-07-09",
+      "close_price": 66.96,
+      "final_pnl_pct": 8.0,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 32.93
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 39,
-    "win_trades": 15,
-    "win_rate": 38.5,
-    "total_realized_pnl_usd": -35.16,
-    "open_unrealized_pnl_usd": 124.26,
-    "portfolio_value": 2089.1,
-    "total_commission_usd": 78.0,
-    "skipped_zero_shares": 1,
+    "total_trades": 42,
+    "win_trades": 18,
+    "win_rate": 42.9,
+    "total_realized_pnl_usd": 23.78,
+    "open_unrealized_pnl_usd": 62.0,
+    "portfolio_value": 2085.78,
     "updated_at": "2026-07-09"
   }
 };
