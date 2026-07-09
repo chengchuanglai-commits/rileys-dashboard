@@ -38,8 +38,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.46
         },
         "2026-07-09": {
-          "close": 315.97,
-          "pnl_pct": 1.12
+          "close": 317.81,
+          "pnl_pct": 0.54
         }
       }
     },
@@ -79,8 +79,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 4.76
         },
         "2026-07-09": {
-          "close": 28.06,
-          "pnl_pct": 4.59
+          "close": 28.33,
+          "pnl_pct": 3.67
         }
       }
     },
@@ -113,8 +113,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.46
         },
         "2026-07-09": {
-          "close": 315.97,
-          "pnl_pct": 1.12
+          "close": 317.81,
+          "pnl_pct": 0.54
         }
       }
     },
@@ -147,8 +147,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 4.76
         },
         "2026-07-09": {
-          "close": 28.06,
-          "pnl_pct": 4.59
+          "close": 28.33,
+          "pnl_pct": 3.67
         }
       }
     },
@@ -167,8 +167,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-09": {
-          "close": 59.93,
-          "pnl_pct": 0.73
+          "close": 59.9,
+          "pnl_pct": 0.78
         }
       }
     },
@@ -187,8 +187,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-09": {
-          "close": 65.13,
-          "pnl_pct": 0.18
+          "close": 65.68,
+          "pnl_pct": -0.66
         }
       }
     },
@@ -207,8 +207,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-09": {
-          "close": 55.84,
-          "pnl_pct": 0.07
+          "close": 55.94,
+          "pnl_pct": -0.11
         }
       }
     }
@@ -1764,17 +1764,17 @@ window.PORTFOLIO_B = {
           "open": 28.0,
           "high": 28.61,
           "low": 27.92,
-          "close": 28.06,
-          "pnl_pct": 5.97
+          "close": 28.33,
+          "pnl_pct": 5.06
         }
       },
       "close_date": "2026-07-09",
-      "close_price": 28.06,
-      "final_pnl_pct": 5.97,
+      "close_price": 28.33,
+      "final_pnl_pct": 5.06,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 26.5
+      "realized_pnl_usd": 22.16
     },
     {
       "ticker": "DGII",
@@ -1813,19 +1813,19 @@ window.PORTFOLIO_B = {
         },
         "2026-07-09": {
           "open": 72.73,
-          "high": 74.1,
+          "high": 74.2,
           "low": 72.05,
-          "close": 73.87,
-          "pnl_pct": 0.34
+          "close": 74.2,
+          "pnl_pct": -0.11
         }
       },
       "close_date": "2026-07-09",
-      "close_price": 73.87,
-      "final_pnl_pct": 0.34,
+      "close_price": 74.2,
+      "final_pnl_pct": -0.11,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.49
+      "realized_pnl_usd": -2.49
     },
     {
       "ticker": "SKWD",
@@ -1903,7 +1903,7 @@ window.PORTFOLIO_B = {
           "open": 66.4,
           "high": 68.04,
           "low": 66.4,
-          "close": 68.04,
+          "close": 67.05,
           "pnl_pct": 8.0
         }
       },
@@ -1919,11 +1919,11 @@ window.PORTFOLIO_B = {
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 42,
-    "win_trades": 18,
-    "win_rate": 42.9,
-    "total_realized_pnl_usd": 23.78,
-    "open_unrealized_pnl_usd": 62.0,
-    "portfolio_value": 2085.78,
-    "updated_at": "2026-07-09"
+    "win_trades": 17,
+    "win_rate": 40.5,
+    "total_realized_pnl_usd": 17.44,
+    "open_unrealized_pnl_usd": 42.15,
+    "portfolio_value": 2059.59,
+    "updated_at": "2026-07-10"
   }
 };

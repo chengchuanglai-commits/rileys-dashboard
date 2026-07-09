@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-09": {
-          "close": 59.93,
-          "pnl_pct": 0.73
+          "close": 59.9,
+          "pnl_pct": 0.78
         }
       },
       "gap_checked": true,
@@ -40,8 +40,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-09": {
-          "close": 65.13,
-          "pnl_pct": 0.18
+          "close": 65.68,
+          "pnl_pct": -0.66
         }
       },
       "gap_checked": true,
@@ -63,8 +63,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-09": {
-          "close": 55.84,
-          "pnl_pct": 0.07
+          "close": 55.94,
+          "pnl_pct": -0.11
         }
       },
       "gap_checked": true,
@@ -1252,9 +1252,9 @@ window.PORTFOLIO_D = {
     "win_trades": 19,
     "win_rate": 55.9,
     "total_realized_pnl_usd": 228.52,
-    "open_unrealized_pnl_usd": 4.9,
-    "portfolio_value": 2233.42,
+    "open_unrealized_pnl_usd": 0.05,
+    "portfolio_value": 2228.57,
     "skipped_gap": 12,
-    "updated_at": "2026-07-09"
+    "updated_at": "2026-07-10"
   }
 };
