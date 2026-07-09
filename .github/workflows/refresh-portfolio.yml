@@ -57,6 +57,7 @@ jobs:
           python scripts/backfill-portfolio-ch.py    # c-H:     出场换 Plan H
           python scripts/backfill-portfolio-ctr.py   # c-trail: 移动止损让赢家跑
           python scripts/backfill-portfolio-spy.py
+          python scripts/qqq-realmoney-ledger.py   # 真钱QQQ指数核心台账(实时价+USDCAD)
 
       - name: Regenerate daily report
         run: python scripts/daily-report.py
@@ -83,6 +84,7 @@ jobs:
           git add dashboard/portfolio-ch.js data/portfolio_ch.json 2>/dev/null || true
           git add dashboard/portfolio-ctr.js data/portfolio_ctr.json 2>/dev/null || true
           git add dashboard/portfolio-spy.js data/portfolio_spy.json 2>/dev/null || true
+          git add dashboard/qqq-realmoney.js data/qqq_realmoney.json 2>/dev/null || true
           git add dashboard/daily-report.js dashboard/daily-report.json dashboard/daily-reports/ 2>/dev/null || true
           git add dashboard/version.js dashboard/index.html
           git diff --staged --quiet || git commit -m "chore: 刷新持仓+报告 $(date -u +'%Y-%m-%d %H:%M') UTC"
