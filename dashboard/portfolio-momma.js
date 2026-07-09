@@ -12,7 +12,7 @@ window.PORTFOLIO_MOMMA = {
       "score": 75.4,
       "actual_position_usd": 500.0,
       "position_usd": 200.0,
-      "unrealized_pnl_usd": 32.86
+      "unrealized_pnl_usd": 31.84
     },
     {
       "ticker": "FTNT",
@@ -24,35 +24,35 @@ window.PORTFOLIO_MOMMA = {
       "score": 82.6,
       "actual_position_usd": 500.0,
       "position_usd": 177.49,
-      "unrealized_pnl_usd": 6.29
+      "unrealized_pnl_usd": 5.17
     },
     {
-      "ticker": "BMO",
+      "ticker": "BTSG",
       "action": "BUY",
       "signal_date": "2026-07-06",
-      "entry_price": 176.1,
-      "shares": 2.8393,
-      "stop_loss": 162.01,
-      "score": 81.2,
+      "entry_price": 70.56,
+      "shares": 7.0862,
+      "stop_loss": 64.92,
+      "score": 81.5,
       "actual_position_usd": 500.0,
       "position_usd": 187.68,
-      "unrealized_pnl_usd": -1.69
+      "unrealized_pnl_usd": -1.6
     }
   ],
   "closed_positions": [
     {
-      "ticker": "STM",
+      "ticker": "COHR",
       "action": "BUY",
       "signal_date": "2026-06-18",
-      "entry_price": 78.3,
-      "shares": 6.3857,
-      "stop_loss": 72.04,
-      "score": 78.7,
+      "entry_price": 389.57,
+      "shares": 1.2835,
+      "stop_loss": 358.4,
+      "score": 75.9,
       "close_date": "2026-06-23",
-      "close_price": 72.04,
-      "close_reason": "init_stop",
-      "final_pnl_pct": -7.99,
-      "realized_pnl_usd": -15.98,
+      "close_price": 381.22,
+      "close_reason": "ma_break",
+      "final_pnl_pct": -2.14,
+      "realized_pnl_usd": -4.28,
       "commission_total": 2.0,
       "position_usd": 200.0
     },
@@ -121,6 +121,22 @@ window.PORTFOLIO_MOMMA = {
       "position_usd": 200.0
     },
     {
+      "ticker": "STM",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 78.3,
+      "shares": 6.3857,
+      "stop_loss": 72.04,
+      "score": 78.7,
+      "close_date": "2026-06-23",
+      "close_price": 72.04,
+      "close_reason": "init_stop",
+      "final_pnl_pct": -7.99,
+      "realized_pnl_usd": -15.98,
+      "commission_total": 2.0,
+      "position_usd": 200.0
+    },
+    {
       "ticker": "STRL",
       "action": "BUY",
       "signal_date": "2026-06-18",
@@ -185,22 +201,6 @@ window.PORTFOLIO_MOMMA = {
       "position_usd": 200.0
     },
     {
-      "ticker": "STM",
-      "action": "BUY",
-      "signal_date": "2026-06-26",
-      "entry_price": 71.42,
-      "shares": 7.0008,
-      "stop_loss": 65.71,
-      "score": 87.3,
-      "close_date": "2026-06-29",
-      "close_price": 74.79,
-      "close_reason": "ma_break",
-      "final_pnl_pct": 4.72,
-      "realized_pnl_usd": 9.09,
-      "commission_total": 2.0,
-      "position_usd": 192.5
-    },
-    {
       "ticker": "GFS",
       "action": "BUY",
       "signal_date": "2026-06-26",
@@ -213,6 +213,22 @@ window.PORTFOLIO_MOMMA = {
       "close_reason": "ma_break",
       "final_pnl_pct": 1.53,
       "realized_pnl_usd": 2.95,
+      "commission_total": 2.0,
+      "position_usd": 192.5
+    },
+    {
+      "ticker": "TTMI",
+      "action": "BUY",
+      "signal_date": "2026-06-26",
+      "entry_price": 191.49,
+      "shares": 2.6111,
+      "stop_loss": 176.17,
+      "score": 86.2,
+      "close_date": "2026-06-29",
+      "close_price": 176.17,
+      "close_reason": "init_stop",
+      "final_pnl_pct": -8.0,
+      "realized_pnl_usd": -15.4,
       "commission_total": 2.0,
       "position_usd": 192.5
     },
@@ -233,18 +249,18 @@ window.PORTFOLIO_MOMMA = {
       "position_usd": 192.5
     },
     {
-      "ticker": "TTMI",
+      "ticker": "STM",
       "action": "BUY",
       "signal_date": "2026-06-26",
-      "entry_price": 191.49,
-      "shares": 2.6111,
-      "stop_loss": 176.17,
-      "score": 86.2,
+      "entry_price": 71.42,
+      "shares": 7.0008,
+      "stop_loss": 65.71,
+      "score": 87.3,
       "close_date": "2026-06-29",
-      "close_price": 176.17,
-      "close_reason": "init_stop",
-      "final_pnl_pct": -8.0,
-      "realized_pnl_usd": -15.4,
+      "close_price": 74.79,
+      "close_reason": "ma_break",
+      "final_pnl_pct": 4.72,
+      "realized_pnl_usd": 9.09,
       "commission_total": 2.0,
       "position_usd": 192.5
     },
@@ -297,22 +313,6 @@ window.PORTFOLIO_MOMMA = {
       "position_usd": 192.5
     },
     {
-      "ticker": "STM",
-      "action": "BUY",
-      "signal_date": "2026-07-06",
-      "entry_price": 71.39,
-      "shares": 7.0038,
-      "stop_loss": 65.68,
-      "score": 85.1,
-      "close_date": "2026-07-07",
-      "close_price": 67.28,
-      "close_reason": "ma_break",
-      "final_pnl_pct": -5.76,
-      "realized_pnl_usd": -11.03,
-      "commission_total": 2.0,
-      "position_usd": 191.53
-    },
-    {
       "ticker": "INTC",
       "action": "BUY",
       "signal_date": "2026-07-06",
@@ -345,6 +345,22 @@ window.PORTFOLIO_MOMMA = {
       "position_usd": 191.53
     },
     {
+      "ticker": "UMC",
+      "action": "BUY",
+      "signal_date": "2026-07-06",
+      "entry_price": 25.83,
+      "shares": 19.3573,
+      "stop_loss": 23.76,
+      "score": 91.3,
+      "close_date": "2026-07-07",
+      "close_price": 23.76,
+      "close_reason": "init_stop",
+      "final_pnl_pct": -8.01,
+      "realized_pnl_usd": -15.34,
+      "commission_total": 2.0,
+      "position_usd": 191.53
+    },
+    {
       "ticker": "LSCC",
       "action": "BUY",
       "signal_date": "2026-07-06",
@@ -361,18 +377,18 @@ window.PORTFOLIO_MOMMA = {
       "position_usd": 191.53
     },
     {
-      "ticker": "UMC",
+      "ticker": "STM",
       "action": "BUY",
       "signal_date": "2026-07-06",
-      "entry_price": 25.83,
-      "shares": 19.3573,
-      "stop_loss": 23.76,
-      "score": 91.3,
+      "entry_price": 71.39,
+      "shares": 7.0038,
+      "stop_loss": 65.68,
+      "score": 85.1,
       "close_date": "2026-07-07",
-      "close_price": 23.76,
-      "close_reason": "init_stop",
-      "final_pnl_pct": -8.01,
-      "realized_pnl_usd": -15.34,
+      "close_price": 67.28,
+      "close_reason": "ma_break",
+      "final_pnl_pct": -5.76,
+      "realized_pnl_usd": -11.03,
       "commission_total": 2.0,
       "position_usd": 191.53
     }
@@ -383,10 +399,10 @@ window.PORTFOLIO_MOMMA = {
     "win_trades": 5,
     "win_rate": 23.8,
     "total_realized_pnl_usd": -163.31,
-    "open_unrealized_pnl_usd": 37.45,
-    "portfolio_value": 1874.14,
+    "open_unrealized_pnl_usd": 35.42,
+    "portfolio_value": 1872.11,
     "total_commission_usd": 45.0,
     "skipped_no_cash": 4,
-    "updated_at": "2026-07-09"
+    "updated_at": "2026-07-08"
   }
 };

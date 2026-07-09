@@ -159,6 +159,57 @@
       },
       "position_usd": 210.44,
       "unrealized_pnl_usd": 0.46
+    },
+    {
+      "ticker": "ITIC",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-08",
+      "entry_price": 276.75,
+      "allocated_usd": 500,
+      "shares": 1.8067,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 235.24,
+      "stop_loss": 282.29,
+      "max_hold_date": "2026-07-10",
+      "daily_prices": {},
+      "position_usd": 213.34,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "TRVI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-08",
+      "entry_price": 19.5,
+      "allocated_usd": 500,
+      "shares": 25.641,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 16.57,
+      "stop_loss": 19.89,
+      "max_hold_date": "2026-07-10",
+      "daily_prices": {},
+      "position_usd": 213.34,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "LGND",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-08",
+      "entry_price": 319.43,
+      "allocated_usd": 500,
+      "shares": 1.5653,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 271.52,
+      "stop_loss": 325.82,
+      "max_hold_date": "2026-07-10",
+      "daily_prices": {},
+      "position_usd": 213.34,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1772,7 +1823,7 @@
     "total_commission_usd": 90.0,
     "skipped_gap": 21,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 3,
-    "updated_at": "2026-07-09"
+    "skipped_no_cash": 4,
+    "updated_at": "2026-07-08"
   }
 }

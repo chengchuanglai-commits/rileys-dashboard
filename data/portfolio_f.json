@@ -73,40 +73,6 @@
       "ticker": "MVBF",
       "name": "MVBF",
       "action": "SELL",
-      "signal_date": "2026-07-03",
-      "entry_price": 29.41,
-      "allocated_usd": 500,
-      "shares": 17,
-      "t1_shares": 8,
-      "t2_shares": 9,
-      "actual_position_usd": 499.97,
-      "entry_commission": 1.0,
-      "take_profit_1": 27.2,
-      "take_profit_2": 25.0,
-      "stop_loss": 30.29,
-      "max_hold_date": "2026-07-08",
-      "day1_open": 29.28,
-      "daily_prices": {
-        "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 1.7
-        },
-        "2026-07-07": {
-          "open": 29.15,
-          "high": 29.26,
-          "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 1.19
-        }
-      }
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
       "signal_date": "2026-07-06",
       "entry_price": 29.41,
       "allocated_usd": 500,
@@ -123,10 +89,17 @@
       "daily_prices": {
         "2026-07-07": {
           "open": 29.15,
-          "high": 29.26,
-          "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 1.19
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 27.78,
+          "high": 28.48,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 4.76
         }
       }
     }
@@ -1291,25 +1264,25 @@
         },
         "2026-07-07": {
           "open": 29.15,
-          "high": 29.26,
-          "low": 28.63,
-          "close": 29.06,
-          "pnl_pct": 2.61
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 4.09
         }
       },
       "t1_exit_date": "2026-07-07",
-      "t1_exit_price": 29.06,
+      "t1_exit_price": 28.62,
       "t1_exit_reason": "max_hold",
       "t2_exit_date": "2026-07-07",
-      "t2_exit_price": 29.06,
+      "t2_exit_price": 28.62,
       "t2_exit_reason": "max_hold",
-      "t1_gross_pnl": 6.24,
-      "t2_gross_pnl": 6.24,
+      "t1_gross_pnl": 9.76,
+      "t2_gross_pnl": 9.76,
       "close_date": "2026-07-07",
       "close_reason": "max_hold+max_hold",
-      "final_pnl_pct": 2.61,
+      "final_pnl_pct": 4.09,
       "commission_total": 3.0,
-      "realized_pnl_usd": 9.48,
+      "realized_pnl_usd": 16.52,
       "sl_unified": false
     },
     {
@@ -1341,23 +1314,23 @@
           "open": 72.7,
           "high": 72.7,
           "low": 69.56,
-          "close": 70.47,
-          "pnl_pct": 4.92
+          "close": 70.16,
+          "pnl_pct": 5.34
         }
       },
       "t1_exit_date": "2026-07-07",
-      "t1_exit_price": 70.47,
+      "t1_exit_price": 70.16,
       "t1_exit_reason": "max_hold",
       "t2_exit_date": "2026-07-07",
-      "t2_exit_price": 70.47,
+      "t2_exit_price": 70.16,
       "t2_exit_reason": "max_hold",
-      "t1_gross_pnl": 10.95,
-      "t2_gross_pnl": 10.95,
+      "t1_gross_pnl": 11.88,
+      "t2_gross_pnl": 11.88,
       "close_date": "2026-07-07",
       "close_reason": "max_hold+max_hold",
-      "final_pnl_pct": 4.92,
+      "final_pnl_pct": 5.34,
       "commission_total": 3.0,
-      "realized_pnl_usd": 18.9,
+      "realized_pnl_usd": 20.76,
       "sl_unified": false
     },
     {
@@ -1400,19 +1373,74 @@
       "commission_total": 2.0,
       "realized_pnl_usd": -16.32,
       "sl_unified": true
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-03",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "t1_shares": 8,
+      "t2_shares": 9,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "take_profit_1": 27.2,
+      "take_profit_2": 25.0,
+      "stop_loss": 30.29,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 29.28,
+      "daily_prices": {
+        "2026-07-06": {
+          "open": 29.28,
+          "high": 29.77,
+          "low": 28.7,
+          "close": 28.91,
+          "pnl_pct": 1.7
+        },
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 27.78,
+          "high": 28.48,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 4.76
+        }
+      },
+      "t1_exit_date": "2026-07-08",
+      "t1_exit_price": 28.01,
+      "t1_exit_reason": "max_hold",
+      "t2_exit_date": "2026-07-08",
+      "t2_exit_price": 28.01,
+      "t2_exit_reason": "max_hold",
+      "t1_gross_pnl": 11.2,
+      "t2_gross_pnl": 12.6,
+      "close_date": "2026-07-08",
+      "close_reason": "max_hold+max_hold",
+      "final_pnl_pct": 4.76,
+      "commission_total": 3.0,
+      "realized_pnl_usd": 20.8,
+      "sl_unified": false
     }
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 26,
-    "win_trades": 12,
-    "win_rate": 46.2,
-    "total_realized_pnl_usd": 57.71,
-    "open_unrealized_pnl_usd": 13.21,
-    "portfolio_value": 2070.92,
-    "total_commission_usd": 66.0,
+    "total_trades": 27,
+    "win_trades": 13,
+    "win_rate": 48.1,
+    "total_realized_pnl_usd": 87.41,
+    "open_unrealized_pnl_usd": 26.11,
+    "portfolio_value": 2113.52,
+    "total_commission_usd": 69.0,
     "skipped_gap": 10,
     "skipped_zero_shares": 6,
-    "updated_at": "2026-07-07"
+    "updated_at": "2026-07-08"
   }
 }

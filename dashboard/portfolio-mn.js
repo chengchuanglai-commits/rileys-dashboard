@@ -2492,6 +2492,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 38,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 83,
-    "updated_at": "2026-07-09"
+    "updated_at": "2026-07-08"
   }
 };
