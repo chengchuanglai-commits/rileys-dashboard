@@ -1,10 +1,10 @@
 // 信号 edge 分析 — analyze-signal-edge.py 自动生成
 window.SIGNAL_EDGE = {
-  "generated_at": "2026-07-08 12:33",
-  "sample_total": 47,
+  "generated_at": "2026-07-09 11:48",
+  "sample_total": 50,
   "date_range": [
     "2026-05-27",
-    "2026-07-06"
+    "2026-07-09"
   ],
   "benchmark": "SPY",
   "horizons": [
@@ -21,13 +21,13 @@ window.SIGNAL_EDGE = {
     },
     {
       "horizon": 3,
-      "n": 36,
-      "hit_rate": 55.6,
-      "ci_lo": 39,
-      "ci_hi": 72,
-      "beat_spy_pct": 52.8,
-      "avg_pnl": 0.71,
-      "avg_alpha": 0.99,
+      "n": 40,
+      "hit_rate": 55.0,
+      "ci_lo": 40,
+      "ci_hi": 70,
+      "beat_spy_pct": 52.5,
+      "avg_pnl": 0.83,
+      "avg_alpha": 1.08,
       "verdict": "✅ 初步有正 edge"
     },
     {

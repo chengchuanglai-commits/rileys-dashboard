@@ -1,7 +1,91 @@
-// Plan D 模拟盘持仓 — 每日自动更新
+// Plan D 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "action": "SELL",
+      "signal_date": "2026-07-01",
+      "entry_price": 55.0,
+      "allocated_usd": 500,
+      "shares": 9,
+      "actual_position_usd": 495.0,
+      "entry_commission": 1.0,
+      "take_profit": 46.75,
+      "stop_loss": 56.65,
+      "max_hold_date": "2026-07-03",
+      "daily_prices": {
+        "2026-07-02": {
+          "open": 52.8,
+          "high": 54.94,
+          "low": 51.32,
+          "close": 54.88,
+          "pnl_pct": 0.22
+        }
+      }
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.37,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 482.96,
+      "entry_commission": 1.0,
+      "take_profit": 51.31,
+      "stop_loss": 62.18,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "take_profit": 55.46,
+      "stop_loss": 67.21,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "ACIW",
+      "name": "ACIW",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 55.88,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 447.04,
+      "entry_commission": 1.0,
+      "take_profit": 47.5,
+      "stop_loss": 57.56,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {}
+    }
+  ],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -1132,8 +1216,8 @@ window.PORTFOLIO_D = {
           "pnl_pct": 2.69
         },
         "2026-07-08": {
-          "open": 27.78,
-          "high": 28.48,
+          "open": 28.49,
+          "high": 28.49,
           "low": 27.61,
           "close": 28.01,
           "pnl_pct": 4.76
@@ -1146,45 +1230,19 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 21.8
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {
-        "2026-07-07": {
-          "close": 8.93,
-          "pnl_pct": 27.75
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 8.83,
-      "day1_gap_pct": -28.56,
-      "close_date": "2026-07-07",
-      "close_price": 8.93,
-      "final_pnl_pct": 27.75,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 138.75
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 34,
-    "win_trades": 19,
-    "win_rate": 55.9,
-    "total_realized_pnl_usd": 226.9,
-    "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2226.9,
-    "skipped_gap": 12,
+    "total_trades": 33,
+    "win_trades": 15,
+    "win_rate": 45.5,
+    "total_realized_pnl_usd": 88.15,
+    "open_unrealized_pnl_usd": 0.09,
+    "portfolio_value": 2088.24,
+    "total_commission_usd": 66.0,
+    "skipped_gap": 11,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-09"
   }
 };

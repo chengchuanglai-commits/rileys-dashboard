@@ -150,8 +150,8 @@ window.PORTFOLIO_E = {
           "pnl_pct": 2.69
         },
         "2026-07-08": {
-          "open": 27.78,
-          "high": 28.48,
+          "open": 28.49,
+          "high": 28.49,
           "low": 27.61,
           "close": 28.01,
           "pnl_pct": 4.76
@@ -159,6 +159,63 @@ window.PORTFOLIO_E = {
       },
       "gap_checked": true,
       "day1_open": 29.15
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.37,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 482.96,
+      "entry_commission": 1.0,
+      "take_profit": 54.33,
+      "stop_loss": 62.18,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-14",
+      "regime": "neutral",
+      "vix": 17.02,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "take_profit": 58.73,
+      "stop_loss": 67.21,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-14",
+      "regime": "neutral",
+      "vix": 17.02,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "ACIW",
+      "name": "ACIW",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 55.88,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 447.04,
+      "entry_commission": 1.0,
+      "take_profit": 50.29,
+      "stop_loss": 57.56,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-14",
+      "regime": "neutral",
+      "vix": 17.02,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -1260,8 +1317,8 @@ window.PORTFOLIO_E = {
           "pnl_pct": 2.69
         },
         "2026-07-08": {
-          "open": 27.78,
-          "high": 28.48,
+          "open": 28.49,
+          "high": 28.49,
           "low": 27.61,
           "close": 28.01,
           "pnl_pct": 4.76
@@ -1288,6 +1345,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,
-    "updated_at": "2026-07-08"
+    "updated_at": "2026-07-09"
   }
 };

@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -31,6 +31,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 4.09
         },
         "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
           "close": 28.01,
           "pnl_pct": 6.13
         }
@@ -65,6 +68,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 5.34
         },
         "2026-07-08": {
+          "open": 69.43,
+          "high": 71.58,
+          "low": 68.73,
           "close": 71.33,
           "pnl_pct": 3.76
         }
@@ -99,6 +105,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.04
         },
         "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 311.73,
           "close": 314.88,
           "pnl_pct": 1.46
         }
@@ -133,6 +142,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 2.69
         },
         "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
           "close": 28.01,
           "pnl_pct": 4.76
         }
@@ -167,6 +179,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 4.74
         },
         "2026-07-08": {
+          "open": 68.21,
+          "high": 69.49,
+          "low": 67.25,
           "close": 68.06,
           "pnl_pct": 6.49
         }
@@ -194,6 +209,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.04
         },
         "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 311.73,
           "close": 314.88,
           "pnl_pct": 1.46
         }
@@ -221,10 +239,58 @@ window.PORTFOLIO_B = {
           "pnl_pct": 2.69
         },
         "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
           "close": 28.01,
           "pnl_pct": 4.76
         }
       }
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.37,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 482.96,
+      "entry_commission": 1.0,
+      "take_profit": 55.54,
+      "stop_loss": 62.78,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "take_profit": 60.03,
+      "stop_loss": 67.86,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "ACIW",
+      "name": "ACIW",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 55.88,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 447.04,
+      "entry_commission": 1.0,
+      "take_profit": 51.41,
+      "stop_loss": 58.12,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -1783,8 +1849,10 @@ window.PORTFOLIO_B = {
     "win_trades": 15,
     "win_rate": 38.5,
     "total_realized_pnl_usd": -35.16,
-    "open_unrealized_pnl_usd": 144.1,
-    "portfolio_value": 2108.94,
+    "open_unrealized_pnl_usd": 124.26,
+    "portfolio_value": 2089.1,
+    "total_commission_usd": 78.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-09"
   }
 };
