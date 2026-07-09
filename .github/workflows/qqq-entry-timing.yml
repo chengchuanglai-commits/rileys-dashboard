@@ -1,0 +1,35 @@
+name: QQQ 定投入场时机 (TradingAgents)
+
+# 真钱 QQQ 指数核心 DCA 期间,每个交易日早上用 TradingAgents 多智能体给一份入场时机读数,推飞书。
+# DeepSeek 大脑(便宜,每次约几美分)。加满仓/不想要了 → 停用本工作流或喊我删。
+on:
+  schedule:
+    - cron: '0 0 * * 1-5'   # 每周一~五 UTC 00:00 = 北京时间 08:00(基于隔夜美股收盘)
+  workflow_dispatch:          # 也支持手动随时触发
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: pip 缓存
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-tradingagents-analyze
+          restore-keys: ${{ runner.os }}-pip-tradingagents-
+      - name: 装依赖
+        run: pip install yfinance anthropic lxml "git+https://github.com/TauricResearch/TradingAgents.git"
+      - name: 跑 QQQ 分析
+        env:
+          MODEL: deepseek
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: python scripts/run-qqq-tradingagents.py QQQ
