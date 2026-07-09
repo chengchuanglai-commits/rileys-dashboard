@@ -16,14 +16,14 @@ echo "[$(date '+%F %T')] === run $1 ===" >> data/exec-log/launchd.log
 # review batch(收盘后)前先回填模拟盘——这时当天日bar已出,各腿对照才是当天收盘最新值(否则慢一天)
 if [ "$1" = "review" ]; then
   export FMP_API_KEY="pOJlglH08lKz9RUmFeO5yYxOc87v5HzA"
-  for L in momma momh mn c ctg hds; do   # h腿已退役(2026-07-09);ctg=c-tight变体(与c并跑攒80笔裁决)
+  for L in momma momh mn c ctg ctr hds; do   # h退役(2026-07-09);ctg=c-tight,ctr=c-trail(方法B证移动止损稳赢固定TP,前向确认)
     /usr/bin/python3 scripts/backfill-portfolio-$L.py >> data/exec-log/legs-refill.log 2>&1 || true
   done
   # momma回填后立刻重算三线统一目标(否则master-allocation停在旧日期→波动腿目标用已剔除的幽灵票)
   /usr/bin/python3 scripts/master-allocator.py >> data/exec-log/launchd.log 2>&1 || true
   # 腿edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书裁决(通用脚本)
-  # c=最强前向基线,ctg=c-tight变体 → 攒够80笔各自自动裁决(Riley要的c vs c-tight对照)
-  for L in mn hds c ctg; do
+  # c=最强前向基线,ctg=c-tight,ctr=c-trail(方法B证移动止损最稳)→ 攒够80笔各自自动裁决
+  for L in mn hds c ctg ctr; do
     LEG=$L /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
   done
   # 杠杆指数腿:每日重算净值曲线+回撤(paper跟踪,见 spec 2026-07-07)。FMP_API_KEY上面已export
