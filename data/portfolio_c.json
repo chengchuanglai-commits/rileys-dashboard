@@ -38,12 +38,12 @@
           "pnl_pct": 1.46
         },
         "2026-07-09": {
-          "close": 317.81,
-          "pnl_pct": 0.54
+          "close": 322.61,
+          "pnl_pct": -0.96
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.36,
+      "unrealized_pnl_usd": -2.03,
       "gap_checked": true,
       "day1_gap_pct": 0.17
     },
@@ -84,12 +84,12 @@
           "pnl_pct": 4.76
         },
         "2026-07-09": {
-          "close": 28.33,
-          "pnl_pct": 3.67
+          "close": 28.46,
+          "pnl_pct": 3.23
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 7.75,
+      "unrealized_pnl_usd": 6.82,
       "gap_checked": true,
       "day1_gap_pct": -4.79
     },
@@ -123,12 +123,12 @@
           "pnl_pct": 1.46
         },
         "2026-07-09": {
-          "close": 317.81,
-          "pnl_pct": 0.54
+          "close": 322.61,
+          "pnl_pct": -0.96
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 0.36,
+      "unrealized_pnl_usd": -2.03,
       "gap_checked": true,
       "day1_gap_pct": 0.17
     },
@@ -162,12 +162,12 @@
           "pnl_pct": 4.76
         },
         "2026-07-09": {
-          "close": 28.33,
-          "pnl_pct": 3.67
+          "close": 28.46,
+          "pnl_pct": 3.23
         }
       },
       "position_usd": 211.29,
-      "unrealized_pnl_usd": 7.75,
+      "unrealized_pnl_usd": 6.82,
       "gap_checked": true,
       "day1_gap_pct": -4.79
     },
@@ -184,17 +184,17 @@
       "take_profit": 55.54,
       "stop_loss": 62.78,
       "max_hold_date": "2026-07-16",
-      "day1_open": 60.6,
+      "day1_open": 60.57,
       "daily_prices": {
         "2026-07-09": {
-          "close": 59.9,
-          "pnl_pct": 0.78
+          "close": 60.1,
+          "pnl_pct": 0.45
         }
       },
-      "position_usd": 211.49,
+      "position_usd": 211.92,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
-      "day1_gap_pct": 0.38
+      "day1_gap_pct": 0.33
     },
     {
       "ticker": "PFIS",
@@ -209,17 +209,17 @@
       "take_profit": 60.03,
       "stop_loss": 67.86,
       "max_hold_date": "2026-07-16",
-      "day1_open": 65.5,
+      "day1_open": 64.85,
       "daily_prices": {
         "2026-07-09": {
-          "close": 65.68,
-          "pnl_pct": -0.66
+          "close": 65.85,
+          "pnl_pct": -0.92
         }
       },
-      "position_usd": 211.49,
+      "position_usd": 211.92,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
-      "day1_gap_pct": 0.38
+      "day1_gap_pct": -0.61
     },
     {
       "ticker": "ACIW",
@@ -237,11 +237,11 @@
       "day1_open": 54.7,
       "daily_prices": {
         "2026-07-09": {
-          "close": 55.94,
-          "pnl_pct": -0.11
+          "close": 56.4,
+          "pnl_pct": -0.93
         }
       },
-      "position_usd": 211.49,
+      "position_usd": 211.92,
       "unrealized_pnl_usd": 0.0,
       "gap_checked": true,
       "day1_gap_pct": -2.11
@@ -1435,17 +1435,17 @@
           "open": 28.0,
           "high": 28.61,
           "low": 27.92,
-          "close": 28.33,
-          "pnl_pct": 5.06
+          "close": 28.46,
+          "pnl_pct": 4.62
         }
       },
       "close_date": "2026-07-09",
-      "close_price": 28.33,
-      "final_pnl_pct": 5.06,
+      "close_price": 28.46,
+      "final_pnl_pct": 4.62,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 10.69,
+      "realized_pnl_usd": 9.76,
       "position_usd": 211.29
     },
     {
@@ -1486,30 +1486,30 @@
         },
         "2026-07-09": {
           "open": 72.73,
-          "high": 74.2,
+          "high": 74.45,
           "low": 72.05,
-          "close": 74.2,
-          "pnl_pct": -0.11
+          "close": 72.36,
+          "pnl_pct": 2.37
         }
       },
       "close_date": "2026-07-09",
-      "close_price": 74.2,
-      "final_pnl_pct": -0.11,
+      "close_price": 72.36,
+      "final_pnl_pct": 2.37,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.23,
+      "realized_pnl_usd": 5.01,
       "position_usd": 211.29
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 28,
-    "win_trades": 15,
-    "win_rate": 53.6,
-    "total_realized_pnl_usd": 114.88,
-    "open_unrealized_pnl_usd": 42.15,
-    "portfolio_value": 2157.03,
+    "win_trades": 16,
+    "win_rate": 57.1,
+    "total_realized_pnl_usd": 119.19,
+    "open_unrealized_pnl_usd": 15.7,
+    "portfolio_value": 2134.89,
     "skipped_gap": 14,
     "updated_at": "2026-07-10"
   }

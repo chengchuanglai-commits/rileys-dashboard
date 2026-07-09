@@ -17,13 +17,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-09": {
-          "close": 59.9,
-          "pnl_pct": 0.78
+          "close": 60.1,
+          "pnl_pct": 0.45
         }
       },
       "gap_checked": true,
-      "day1_open": 60.6,
-      "day1_gap_pct": 0.38
+      "day1_open": 60.57,
+      "day1_gap_pct": 0.33
     },
     {
       "ticker": "PFIS",
@@ -40,13 +40,13 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-09": {
-          "close": 65.68,
-          "pnl_pct": -0.66
+          "close": 65.85,
+          "pnl_pct": -0.92
         }
       },
       "gap_checked": true,
-      "day1_open": 65.5,
-      "day1_gap_pct": 0.38
+      "day1_open": 64.85,
+      "day1_gap_pct": -0.61
     },
     {
       "ticker": "ACIW",
@@ -63,8 +63,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-09": {
-          "close": 55.94,
-          "pnl_pct": -0.11
+          "close": 56.4,
+          "pnl_pct": -0.93
         }
       },
       "gap_checked": true,
@@ -1252,8 +1252,8 @@ window.PORTFOLIO_D = {
     "win_trades": 19,
     "win_rate": 55.9,
     "total_realized_pnl_usd": 228.52,
-    "open_unrealized_pnl_usd": 0.05,
-    "portfolio_value": 2228.57,
+    "open_unrealized_pnl_usd": -7.0,
+    "portfolio_value": 2221.52,
     "skipped_gap": 12,
     "updated_at": "2026-07-10"
   }

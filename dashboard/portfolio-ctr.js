@@ -40,12 +40,12 @@ window.PORTFOLIO_CTR = {
           "open": 28.0,
           "high": 28.61,
           "low": 27.92,
-          "close": 28.33,
-          "pnl_pct": 5.06
+          "close": 28.46,
+          "pnl_pct": 4.62
         }
       },
       "position_usd": 211.76,
-      "unrealized_pnl_usd": 10.71
+      "unrealized_pnl_usd": 9.78
     },
     {
       "ticker": "MVBF",
@@ -85,12 +85,12 @@ window.PORTFOLIO_CTR = {
           "open": 28.0,
           "high": 28.61,
           "low": 27.92,
-          "close": 28.33,
-          "pnl_pct": 3.67
+          "close": 28.46,
+          "pnl_pct": 3.23
         }
       },
       "position_usd": 211.76,
-      "unrealized_pnl_usd": 7.77
+      "unrealized_pnl_usd": 6.84
     },
     {
       "ticker": "MVBF",
@@ -123,12 +123,12 @@ window.PORTFOLIO_CTR = {
           "open": 28.0,
           "high": 28.61,
           "low": 27.92,
-          "close": 28.33,
-          "pnl_pct": 3.67
+          "close": 28.46,
+          "pnl_pct": 3.23
         }
       },
       "position_usd": 212.38,
-      "unrealized_pnl_usd": 7.79
+      "unrealized_pnl_usd": 6.86
     },
     {
       "ticker": "SKWD",
@@ -1353,9 +1353,9 @@ window.PORTFOLIO_CTR = {
         },
         "2026-07-09": {
           "open": 72.73,
-          "high": 74.2,
+          "high": 74.45,
           "low": 72.05,
-          "close": 74.18,
+          "close": 72.36,
           "pnl_pct": 3.56
         }
       },
@@ -1456,8 +1456,8 @@ window.PORTFOLIO_CTR = {
     "win_trades": 14,
     "win_rate": 48.3,
     "total_realized_pnl_usd": 123.83,
-    "open_unrealized_pnl_usd": 26.28,
-    "portfolio_value": 2150.11,
+    "open_unrealized_pnl_usd": 23.48,
+    "portfolio_value": 2147.31,
     "total_commission_usd": 58.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,

@@ -105,7 +105,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 15.99,
+      "vix": 15.89,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -124,7 +124,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 15.99,
+      "vix": 15.89,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -143,7 +143,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
-      "vix": 15.99,
+      "vix": 15.89,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1295,19 +1295,19 @@ window.PORTFOLIO_E = {
         },
         "2026-07-09": {
           "open": 320.08,
-          "high": 323.26,
+          "high": 323.33,
           "low": 315.02,
-          "close": 318.16,
-          "pnl_pct": 0.43
+          "close": 322.61,
+          "pnl_pct": -0.96
         }
       },
       "close_date": "2026-07-09",
-      "close_price": 318.16,
-      "final_pnl_pct": 0.43,
+      "close_price": 322.61,
+      "final_pnl_pct": -0.96,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.63
+      "realized_pnl_usd": -5.07
     },
     {
       "ticker": "MVBF",
@@ -1344,17 +1344,17 @@ window.PORTFOLIO_E = {
           "open": 28.0,
           "high": 28.61,
           "low": 27.92,
-          "close": 28.33,
-          "pnl_pct": 3.67
+          "close": 28.46,
+          "pnl_pct": 3.23
         }
       },
       "close_date": "2026-07-09",
-      "close_price": 28.33,
-      "final_pnl_pct": 3.67,
+      "close_price": 28.46,
+      "final_pnl_pct": 3.23,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 16.35
+      "realized_pnl_usd": 14.15
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
@@ -1362,9 +1362,9 @@ window.PORTFOLIO_E = {
     "total_trades": 30,
     "win_trades": 14,
     "win_rate": 46.7,
-    "total_realized_pnl_usd": 126.18,
+    "total_realized_pnl_usd": 119.54,
     "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2129.49,
+    "portfolio_value": 2122.85,
     "total_commission_usd": 60.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
