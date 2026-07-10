@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-10 13:49",
+  "generated": "2026-07-10 15:14",
   "spy_fwd_ret_pct": 0.41,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -25,11 +25,11 @@
     },
     "bq": {
       "name": "B-quant·多因子",
-      "n": 15,
-      "alpha_pct": -9.07,
+      "n": 16,
+      "alpha_pct": -11.07,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -8.66,
+      "fwd_ret_pct": -10.66,
       "tradeable": true
     },
     "bai": {
@@ -52,11 +52,11 @@
     },
     "hds": {
       "name": "H-DS·小盘DS",
-      "n": 45,
-      "alpha_pct": 6.26,
+      "n": 48,
+      "alpha_pct": 7.31,
       "robust": true,
-      "conviction": 0.6261,
-      "fwd_ret_pct": 6.67,
+      "conviction": 0.7305,
+      "fwd_ret_pct": 7.71,
       "tradeable": false
     },
     "mn": {
@@ -79,14 +79,14 @@
     }
   },
   "weights": {
-    "momma": 0.0534,
+    "momma": 0.0506,
     "momh": 0.0,
     "bq": 0.0,
     "bai": 0.0,
-    "h": 0.1322,
-    "hds": 0.3342,
-    "mn": 0.2368,
-    "c": 0.2434
+    "h": 0.1252,
+    "hds": 0.3693,
+    "mn": 0.2243,
+    "c": 0.2306
   },
   "final_allocation": {
     "momma": 0.5,
