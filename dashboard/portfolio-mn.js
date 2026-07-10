@@ -165,9 +165,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 313.23,
       "stop_loss": 266.92,
       "max_hold_date": "2026-07-13",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 271.41,
+          "high": 277.6,
+          "low": 271.41,
+          "close": 277.09,
+          "pnl_pct": 1.73
+        }
+      },
       "position_usd": 210.11,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.63
     },
     {
       "ticker": "SKWD",
@@ -185,55 +193,47 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-10": {
           "open": 60.1,
-          "high": 61.08,
+          "high": 61.22,
           "low": 60.1,
-          "close": 60.85,
-          "pnl_pct": 1.25
+          "close": 60.74,
+          "pnl_pct": 1.06
         }
       },
       "position_usd": 210.11,
-      "unrealized_pnl_usd": 2.63
+      "unrealized_pnl_usd": 2.23
     },
     {
-      "ticker": "AOUT",
-      "name": "American Outdoor Brands",
+      "ticker": "ITIC",
+      "name": "投资者信托保险",
       "action": "BUY",
-      "signal_date": "2026-07-09",
-      "entry_price": 14.27,
+      "signal_date": "2026-07-10",
+      "entry_price": 277.09,
       "allocated_usd": 500,
-      "shares": 35.0385,
-      "actual_position_usd": 500.0,
+      "shares": 1.8045,
+      "actual_position_usd": 500.01,
       "entry_commission": 1.0,
-      "take_profit": 16.41,
-      "stop_loss": 13.98,
-      "max_hold_date": "2026-07-13",
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 14.19,
-          "high": 14.75,
-          "low": 14.16,
-          "close": 14.44,
-          "pnl_pct": 1.19
-        }
-      },
-      "position_usd": 210.11,
-      "unrealized_pnl_usd": 2.5
+      "take_profit": 318.65,
+      "stop_loss": 271.55,
+      "max_hold_date": "2026-07-14",
+      "daily_prices": {},
+      "position_usd": 209.26,
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "SKWD",
       "name": "Skyward Specialty Insurance",
       "action": "BUY",
       "signal_date": "2026-07-10",
-      "entry_price": 60.85,
+      "entry_price": 60.74,
       "allocated_usd": 500,
-      "shares": 8.2169,
+      "shares": 8.2318,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 69.98,
-      "stop_loss": 59.63,
+      "take_profit": 69.85,
+      "stop_loss": 59.53,
       "max_hold_date": "2026-07-14",
       "daily_prices": {},
-      "position_usd": 209.69,
+      "position_usd": 209.26,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2580,8 +2580,8 @@ window.PORTFOLIO_MN = {
         "2026-07-10": {
           "open": 322.23,
           "high": 322.8,
-          "low": 312.0,
-          "close": 314.78,
+          "low": 310.67,
+          "close": 312.01,
           "pnl_pct": -2.0
         }
       },
@@ -2593,17 +2593,48 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.2,
       "position_usd": 210.11
+    },
+    {
+      "ticker": "APEI",
+      "name": "American Public Education",
+      "action": "BUY",
+      "signal_date": "2026-07-09",
+      "entry_price": 57.83,
+      "allocated_usd": 500,
+      "shares": 8.646,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 66.5,
+      "stop_loss": 56.67,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 57.89,
+          "high": 58.37,
+          "low": 56.67,
+          "close": 57.68,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-07-10",
+      "close_price": 56.67,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.22,
+      "position_usd": 210.11
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 69,
+    "total_trades": 70,
     "win_trades": 20,
-    "win_rate": 29.0,
-    "total_realized_pnl_usd": 96.87,
-    "open_unrealized_pnl_usd": 29.76,
-    "portfolio_value": 2126.63,
-    "total_commission_usd": 138.0,
+    "win_rate": 28.6,
+    "total_realized_pnl_usd": 92.65,
+    "open_unrealized_pnl_usd": 30.49,
+    "portfolio_value": 2123.14,
+    "total_commission_usd": 140.0,
     "skipped_gap": 39,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 90,

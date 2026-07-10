@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -38,11 +38,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.96
         },
         "2026-07-10": {
-          "open": 322.23,
-          "high": 322.8,
-          "low": 312.0,
-          "close": 313.7,
-          "pnl_pct": 1.83
+          "close": 312.01,
+          "pnl_pct": 2.36
         }
       }
     },
@@ -82,11 +79,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.23
         },
         "2026-07-10": {
-          "open": 28.56,
-          "high": 29.47,
-          "low": 28.26,
-          "close": 28.48,
-          "pnl_pct": 3.16
+          "close": 28.6,
+          "pnl_pct": 2.75
         }
       }
     },
@@ -105,11 +99,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "open": 60.1,
-          "high": 61.08,
-          "low": 60.1,
-          "close": 60.85,
-          "pnl_pct": -0.8
+          "close": 60.76,
+          "pnl_pct": -0.65
         }
       }
     },
@@ -128,11 +119,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "open": 65.92,
-          "high": 66.7,
-          "low": 65.91,
-          "close": 66.14,
-          "pnl_pct": -1.36
+          "close": 66.63,
+          "pnl_pct": -2.11
         }
       }
     },
@@ -151,11 +139,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "open": 56.97,
-          "high": 57.25,
-          "low": 56.85,
-          "close": 56.88,
-          "pnl_pct": -1.79
+          "close": 57.17,
+          "pnl_pct": -2.31
         }
       }
     }
@@ -1856,18 +1841,18 @@ window.PORTFOLIO_B = {
         "2026-07-10": {
           "open": 322.23,
           "high": 322.8,
-          "low": 312.0,
-          "close": 313.7,
-          "pnl_pct": 1.83
+          "low": 310.67,
+          "close": 312.01,
+          "pnl_pct": 2.36
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 313.7,
-      "final_pnl_pct": 1.83,
+      "close_price": 312.01,
+      "final_pnl_pct": 2.36,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.85
+      "realized_pnl_usd": 5.54
     },
     {
       "ticker": "MVBF",
@@ -1914,18 +1899,18 @@ window.PORTFOLIO_B = {
         "2026-07-10": {
           "open": 28.56,
           "high": 29.47,
-          "low": 28.26,
-          "close": 28.48,
-          "pnl_pct": 3.16
+          "low": 28.25,
+          "close": 28.8,
+          "pnl_pct": 2.07
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 28.48,
-      "final_pnl_pct": 3.16,
+      "close_price": 28.8,
+      "final_pnl_pct": 2.07,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 13.8
+      "realized_pnl_usd": 8.35
     },
     {
       "ticker": "UTMD",
@@ -1984,11 +1969,9 @@ window.PORTFOLIO_B = {
     "total_trades": 44,
     "win_trades": 20,
     "win_rate": 45.5,
-    "total_realized_pnl_usd": 44.02,
-    "open_unrealized_pnl_usd": -1.43,
-    "portfolio_value": 2042.59,
-    "total_commission_usd": 88.0,
-    "skipped_zero_shares": 1,
+    "total_realized_pnl_usd": 40.26,
+    "open_unrealized_pnl_usd": 0.2,
+    "portfolio_value": 2040.46,
     "updated_at": "2026-07-10"
   }
 };

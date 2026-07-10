@@ -52,43 +52,19 @@ window.PORTFOLIO_CH = {
       "shares": 8,
       "actual_position_usd": 482.96,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-09",
-      "day1_open": null,
-      "daily_prices": {},
+      "max_hold_date": "2026-07-10",
+      "day1_open": 60.1,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.22,
+          "low": 60.1,
+          "close": 60.76,
+          "pnl_pct": -0.65
+        }
+      },
       "position_usd": 208.3,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-09",
-      "day1_open": null,
-      "daily_prices": {},
-      "position_usd": 208.3,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "ACIW",
-      "name": "ACIW",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 55.88,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 447.04,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-09",
-      "day1_open": null,
-      "daily_prices": {},
-      "position_usd": 208.3,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -1.35
     }
   ],
   "closed_positions": [
@@ -1117,19 +1093,49 @@ window.PORTFOLIO_CH = {
       "commission_total": 2.0,
       "realized_pnl_usd": 9.86,
       "position_usd": 207.16
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-10",
+      "day1_open": 65.92,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.92,
+          "high": 66.7,
+          "low": 65.9,
+          "close": 66.63,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-07-10",
+      "close_price": 66.56,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.19,
+      "position_usd": 208.3
     }
   ],
   "_note": "c-H 变体:Plan H 出场(TP15/SL2/2天)+ 跳空过滤 1.5%(信号同 c)",
   "stats": {
-    "total_trades": 30,
+    "total_trades": 31,
     "win_trades": 14,
-    "win_rate": 46.7,
-    "total_realized_pnl_usd": 82.98,
-    "open_unrealized_pnl_usd": 0.45,
-    "portfolio_value": 2083.43,
-    "total_commission_usd": 60.0,
-    "skipped_gap": 14,
+    "win_rate": 45.2,
+    "total_realized_pnl_usd": 78.79,
+    "open_unrealized_pnl_usd": -0.9,
+    "portfolio_value": 2077.89,
+    "total_commission_usd": 62.0,
+    "skipped_gap": 15,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-09"
+    "updated_at": "2026-07-10"
   }
 };
