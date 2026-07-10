@@ -106,8 +106,17 @@
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
       "vix": 15.84,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.08,
+          "low": 60.1,
+          "close": 60.85,
+          "pnl_pct": -0.8
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 60.1
     },
     {
       "ticker": "PFIS",
@@ -125,27 +134,17 @@
       "max_hold_date": "2026-07-14",
       "regime": "neutral",
       "vix": 15.84,
-      "daily_prices": {},
-      "gap_checked": true
-    },
-    {
-      "ticker": "ACIW",
-      "name": "ACIW",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 55.88,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 447.04,
-      "entry_commission": 1.0,
-      "take_profit": 50.29,
-      "stop_loss": 57.56,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-14",
-      "regime": "neutral",
-      "vix": 15.84,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.92,
+          "high": 66.7,
+          "low": 65.91,
+          "close": 66.14,
+          "pnl_pct": -1.36
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 65.92
     }
   ],
   "closed_positions": [
@@ -1363,12 +1362,12 @@
     "win_trades": 14,
     "win_rate": 46.7,
     "total_realized_pnl_usd": 119.54,
-    "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2122.85,
+    "open_unrealized_pnl_usd": -8.77,
+    "portfolio_value": 2110.77,
     "total_commission_usd": 60.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
-    "skipped_gap": 9,
-    "updated_at": "2026-07-09"
+    "skipped_gap": 10,
+    "updated_at": "2026-07-10"
   }
 }

@@ -85,46 +85,16 @@ window.PORTFOLIO_F = {
       "take_profit_2": 51.31,
       "stop_loss": 62.18,
       "max_hold_date": "2026-07-14",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "t1_shares": 3,
-      "t2_shares": 4,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "take_profit_1": 60.36,
-      "take_profit_2": 55.46,
-      "stop_loss": 67.21,
-      "max_hold_date": "2026-07-14",
-      "day1_open": null,
-      "daily_prices": {}
-    },
-    {
-      "ticker": "ACIW",
-      "name": "ACIW",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 55.88,
-      "allocated_usd": 500,
-      "shares": 8,
-      "t1_shares": 4,
-      "t2_shares": 4,
-      "actual_position_usd": 447.04,
-      "entry_commission": 1.0,
-      "take_profit_1": 51.69,
-      "take_profit_2": 47.5,
-      "stop_loss": 57.56,
-      "max_hold_date": "2026-07-14",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 60.1,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.08,
+          "low": 60.1,
+          "close": 60.85,
+          "pnl_pct": -0.8
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -1514,11 +1484,11 @@ window.PORTFOLIO_F = {
     "win_trades": 14,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 100.56,
-    "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2103.87,
+    "open_unrealized_pnl_usd": -1.56,
+    "portfolio_value": 2099.0,
     "total_commission_usd": 72.0,
-    "skipped_gap": 10,
+    "skipped_gap": 12,
     "skipped_zero_shares": 6,
-    "updated_at": "2026-07-09"
+    "updated_at": "2026-07-10"
   }
 };
