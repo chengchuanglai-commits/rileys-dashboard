@@ -226,8 +226,25 @@ for k,c in _curves.items():
     fin=float(c[-1]); dd=stats(list(c))[3]; _dollars[k]=[round(fin),round(fin-INIT),round(dd,1)]
     print(f"  {k:<26}${fin:>7,.0f}  +${fin-INIT:>6,.0f}  {dd:>7.0f}%")
 
+# ===== DCA: 起始$2000 + 每月加注$500(复利),至今各配置账户 =====
+_month_idx=[]; _seen=set()
+for i,d in enumerate(bt[:_ml]):
+    ym=d[:7]
+    if ym not in _seen: _seen.add(ym); _month_idx.append(i)
+_MONTHLY=500.0; _INIT0=2000.0
+_contrib=_INIT0+_MONTHLY*len(_month_idx)
+print(f"\n{'='*58}\n  起始 ${_INIT0:,.0f} + 每月加注 ${_MONTHLY:,.0f}(复利),至今\n{'='*58}")
+print(f"  投入本金合计: ${_contrib:,.0f}  ({len(_month_idx)}个月 × ${_MONTHLY:.0f} + 初始${_INIT0:.0f})")
+print(f"  {'配置':<26}{'账户变成':>11}{'净赚':>11}")
+_dca={}
+for k,c in _curves.items():
+    c=np.array(c[:_ml]); cend=float(c[-1])
+    val=_INIT0*cend/c[0] + sum(_MONTHLY*cend/c[j] for j in _month_idx)
+    _dca[k]=[round(val),round(val-_contrib)]
+    print(f"  {k:<26}${val:>9,.0f}  +${val-_contrib:>8,.0f}")
+
 out={"window":[bt[0],bt[-1]],"legs":keys,"corr":corr.tolist(),
      "stats":{k:list(stats(legs[k])) for k in keys},
      "static_combo":{"lev_sharpe":_ls,"qqq_sharpe":_qs,"qqq_mom_band":_cs,"lev_mom_band":_cl},
-     "dollars_2000":_dollars}
+     "dollars_2000":_dollars,"dca_500mo":{"months":len(_month_idx),"contributed":round(_contrib),"final":_dca}}
 json.dump(out,open("data/leg-correlation.json","w"),ensure_ascii=False,indent=2)
