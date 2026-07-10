@@ -181,16 +181,25 @@ _cs={}
 for wm,lab in _band.items():
     r,v,s,dd=stats(_combo(wm)); _cs[lab]=[r,v,s,dd]
     print(f"  {'QQQ+动量 '+lab:<15}{r:>+7.0f}%{v:>7.0f}%{s:>7.2f}{dd:>+7.1f}%")
+# lev+动量 叠加带(杠杆指数锚 + 动量卫星)——测叠加能否顶过0.91
+_lc=np.array(legs["lev(杠杆闸门)"]); _L3=min(len(_lc),len(_mc))
+_lr=np.diff(_lc[:_L3])/np.where(_lc[:_L3-1]==0,1,_lc[:_L3-1])
+_mr3=np.diff(_mc[:_L3])/np.where(_mc[:_L3-1]==0,1,_mc[:_L3-1])
+def _combo_lev(wm):
+    r=wm*_mr3+(1-wm)*_lr; c=[INIT]
+    for x in r: c.append(c[-1]*(1+float(x)))
+    return c
+_cl={}
+for wm,lab in _band.items():
+    r,v,s,dd=stats(_combo_lev(wm)); _cl[lab]=[r,v,s,dd]
+    print(f"  {'lev+动量 '+lab:<15}{r:>+7.0f}%{v:>7.0f}%{s:>7.2f}{dd:>+7.1f}%")
 _qs=stats(legs["QQQ"])[2]; _ls=stats(legs["lev(杠杆闸门)"])[2]
-_best=max(_cs.items(),key=lambda kv:kv[1][2])
-_consistent=all(v[2]>_qs for v in _cs.values()) or all(v[2]<=_qs for v in _cs.values())
-print(f"\n  裁决: 最佳组合 {_best[0]} 夏普 {_best[1][2]:.2f}  vs 裸QQQ {_qs:.2f}  vs 裸lev {_ls:.2f}")
-print(f"    → {'✅ 组合夏普>裸QQQ' if _best[1][2]>_qs else '❌ 组合打不赢裸QQQ(加动量无益)'} | "
-      f"{'✅>lev' if _best[1][2]>_ls else '打不赢lev(杠杆指数更优)'} | "
-      f"三档{'一致(稳)' if _consistent else '不一致(脆弱)'}")
-print("  ⚠️ 5年单一牛市窗口+动量幸存者偏差; 真裁决在前向.")
+_bq=max(_cs.items(),key=lambda kv:kv[1][2]); _bl=max(_cl.items(),key=lambda kv:kv[1][2])
+print(f"\n  裁决(夏普): 裸QQQ {_qs:.2f} | 裸lev {_ls:.2f} | QQQ+动量最佳 {_bq[1][2]:.2f}({_bq[0]}) | lev+动量最佳 {_bl[1][2]:.2f}({_bl[0]})")
+print(f"    → lev+动量叠加 {'✅ 顶过lev(叠加有效)' if _bl[1][2]>_ls+0.005 else '❌ 没顶过lev(叠加≈冗余防御)'}")
+print("  ⚠️ 5年单一牛市窗口+动量幸存者偏差; lev与动量崩盘都去防御→可能冗余; 真裁决在前向.")
 
 out={"window":[bt[0],bt[-1]],"legs":keys,"corr":corr.tolist(),
      "stats":{k:list(stats(legs[k])) for k in keys},
-     "static_combo":{"lev_sharpe":_ls,"qqq_sharpe":_qs,"weight_band":_cs}}
+     "static_combo":{"lev_sharpe":_ls,"qqq_sharpe":_qs,"qqq_mom_band":_cs,"lev_mom_band":_cl}}
 json.dump(out,open("data/leg-correlation.json","w"),ensure_ascii=False,indent=2)
