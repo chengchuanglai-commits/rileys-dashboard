@@ -34,13 +34,13 @@ window.PORTFOLIO_CTR = {
         "2026-07-10": {
           "open": 60.1,
           "high": 61.22,
-          "low": 59.56,
-          "close": 59.76,
-          "pnl_pct": 1.01
+          "low": 59.14,
+          "close": 59.34,
+          "pnl_pct": 1.71
         }
       },
       "position_usd": 208.46,
-      "unrealized_pnl_usd": 2.11
+      "unrealized_pnl_usd": 3.56
     },
     {
       "ticker": "PFIS",
@@ -57,14 +57,14 @@ window.PORTFOLIO_CTR = {
       "daily_prices": {
         "2026-07-10": {
           "open": 65.92,
-          "high": 66.74,
+          "high": 66.8,
           "low": 65.9,
-          "close": 66.73,
-          "pnl_pct": -2.27
+          "close": 66.52,
+          "pnl_pct": -1.95
         }
       },
       "position_usd": 208.46,
-      "unrealized_pnl_usd": -4.73
+      "unrealized_pnl_usd": -4.06
     }
   ],
   "closed_positions": [
@@ -1261,10 +1261,10 @@ window.PORTFOLIO_CTR = {
           "pnl_pct": 4.62
         },
         "2026-07-10": {
-          "open": 28.56,
+          "open": 28.48,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.55,
+          "close": 28.66,
           "pnl_pct": 3.79
         }
       },
@@ -1363,10 +1363,10 @@ window.PORTFOLIO_CTR = {
           "pnl_pct": 3.23
         },
         "2026-07-10": {
-          "open": 28.56,
+          "open": 28.48,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.55,
+          "close": 28.66,
           "pnl_pct": 2.38
         }
       },
@@ -1451,10 +1451,10 @@ window.PORTFOLIO_CTR = {
           "pnl_pct": 3.23
         },
         "2026-07-10": {
-          "open": 28.56,
+          "open": 28.48,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.55,
+          "close": 28.66,
           "pnl_pct": 2.38
         }
       },
@@ -1474,8 +1474,8 @@ window.PORTFOLIO_CTR = {
     "win_trades": 16,
     "win_rate": 51.6,
     "total_realized_pnl_usd": 102.35,
-    "open_unrealized_pnl_usd": -2.63,
-    "portfolio_value": 2099.72,
+    "open_unrealized_pnl_usd": -0.5,
+    "portfolio_value": 2101.85,
     "total_commission_usd": 62.0,
     "skipped_gap": 15,
     "skipped_zero_shares": 1,

@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-10": {
-          "close": 59.76,
-          "pnl_pct": 1.01
+          "close": 59.34,
+          "pnl_pct": 1.71
         }
       },
       "gap_checked": true,
@@ -1206,8 +1206,8 @@ window.PORTFOLIO_D = {
     "win_trades": 19,
     "win_rate": 55.9,
     "total_realized_pnl_usd": 230.54,
-    "open_unrealized_pnl_usd": 5.05,
-    "portfolio_value": 2235.59,
+    "open_unrealized_pnl_usd": 8.55,
+    "portfolio_value": 2239.09,
     "skipped_gap": 14,
     "updated_at": "2026-07-11"
   }

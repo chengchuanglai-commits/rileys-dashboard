@@ -38,8 +38,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.96
         },
         "2026-07-10": {
-          "close": 313.96,
-          "pnl_pct": 1.75
+          "close": 316.24,
+          "pnl_pct": 1.04
         }
       }
     },
@@ -79,8 +79,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.23
         },
         "2026-07-10": {
-          "close": 28.55,
-          "pnl_pct": 2.92
+          "close": 28.66,
+          "pnl_pct": 2.55
         }
       }
     },
@@ -99,8 +99,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "close": 59.76,
-          "pnl_pct": 1.01
+          "close": 59.34,
+          "pnl_pct": 1.71
         }
       }
     },
@@ -119,8 +119,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "close": 66.73,
-          "pnl_pct": -2.27
+          "close": 66.52,
+          "pnl_pct": -1.95
         }
       }
     },
@@ -139,8 +139,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "close": 56.31,
-          "pnl_pct": -0.77
+          "close": 56.42,
+          "pnl_pct": -0.97
         }
       }
     }
@@ -1812,17 +1812,17 @@ window.PORTFOLIO_B = {
           "open": 322.23,
           "high": 322.8,
           "low": 310.67,
-          "close": 313.96,
-          "pnl_pct": 1.75
+          "close": 316.24,
+          "pnl_pct": 1.04
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 313.96,
-      "final_pnl_pct": 1.75,
+      "close_price": 316.24,
+      "final_pnl_pct": 1.04,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.59
+      "realized_pnl_usd": 1.32
     },
     {
       "ticker": "MVBF",
@@ -1867,20 +1867,20 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.23
         },
         "2026-07-10": {
-          "open": 28.56,
+          "open": 28.48,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.55,
-          "pnl_pct": 2.92
+          "close": 28.66,
+          "pnl_pct": 2.55
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 28.55,
-      "final_pnl_pct": 2.92,
+      "close_price": 28.66,
+      "final_pnl_pct": 2.55,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 12.6
+      "realized_pnl_usd": 10.75
     },
     {
       "ticker": "UTMD",
@@ -1964,9 +1964,9 @@ window.PORTFOLIO_B = {
     "total_trades": 44,
     "win_trades": 20,
     "win_rate": 45.5,
-    "total_realized_pnl_usd": 147.35,
-    "open_unrealized_pnl_usd": 13.2,
-    "portfolio_value": 2160.55,
+    "total_realized_pnl_usd": 143.23,
+    "open_unrealized_pnl_usd": 11.9,
+    "portfolio_value": 2155.13,
     "updated_at": "2026-07-11"
   }
 };
