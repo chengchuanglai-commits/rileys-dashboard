@@ -148,6 +148,49 @@ combo=np.mean([np.array(legs["动量(多)"][:L+1]),np.array(legs["做空(熊市)
 r,v,s,dd=stats(combo); print(f"  {'等权组合(3腿)':<13}{r:>+7.0f}%{v:>7.0f}%{s:>7.2f}{dd:>+7.1f}%")
 print(f"\n  ⚠️ 动量腿幸存者偏差→绝对收益偏乐观;但相关性/夏普的'相对结论'更稳。")
 
+# ===== 静态互补组合 v1: 1x QQQ 锚 + 动量卫星(剔除做空) =====
+# 设计+红队: docs/superpowers/specs/2026-07-10-static-combo-design.md
+import sys as _sys, pandas as _pd; _sys.path.insert(0, "scripts")
+from lev_engine import simulate_leverage
+# lev(杠杆闸门指数)基准: 同窗口重归一到 bt[0]=INIT。curve元素=(date_str,equity,lev)
+_qd=sorted(qqq.keys())
+_ser=_pd.Series([qqq[d] for d in _qd], index=_pd.to_datetime(_qd))
+_lev=simulate_leverage(_ser)["curve"]
+_ceq={row[0]:row[1] for row in _lev}
+_bv=next((_ceq[d] for d in sorted(_ceq) if d>=bt[0]), _lev[0][1])
+_levbt=[]; _prev=INIT
+for d in bt:
+    _v=_ceq.get(d)
+    if _v is not None: _prev=INIT*_v/_bv
+    _levbt.append(_prev)
+legs["lev(杠杆闸门)"]=_levbt
+# QQQ+动量 锚重权重带(每日定权重再平衡, 不优化)
+_qc=np.array(legs["QQQ"]); _mc=np.array(legs["动量(多)"]); _L2=min(len(_qc),len(_mc))
+_qr=np.diff(_qc[:_L2])/np.where(_qc[:_L2-1]==0,1,_qc[:_L2-1])
+_mr=np.diff(_mc[:_L2])/np.where(_mc[:_L2-1]==0,1,_mc[:_L2-1])
+def _combo(wm):
+    r=wm*_mr+(1-wm)*_qr; c=[INIT]
+    for x in r: c.append(c[-1]*(1+float(x)))
+    return c
+_band={0.10:"90/10",0.20:"80/20",0.30:"70/30"}
+print(f"\n{'='*56}\n  静态组合: 1x QQQ 锚 + 动量卫星 (锚重带, 剔除做空)\n{'='*56}")
+print(f"  {'配置':<16}{'收益%':>8}{'波动%':>8}{'夏普':>7}{'回撤%':>8}")
+for k in ["QQQ","动量(多)","lev(杠杆闸门)"]:
+    r,v,s,dd=stats(legs[k]); print(f"  {k:<16}{r:>+7.0f}%{v:>7.0f}%{s:>7.2f}{dd:>+7.1f}%")
+_cs={}
+for wm,lab in _band.items():
+    r,v,s,dd=stats(_combo(wm)); _cs[lab]=[r,v,s,dd]
+    print(f"  {'QQQ+动量 '+lab:<15}{r:>+7.0f}%{v:>7.0f}%{s:>7.2f}{dd:>+7.1f}%")
+_qs=stats(legs["QQQ"])[2]; _ls=stats(legs["lev(杠杆闸门)"])[2]
+_best=max(_cs.items(),key=lambda kv:kv[1][2])
+_consistent=all(v[2]>_qs for v in _cs.values()) or all(v[2]<=_qs for v in _cs.values())
+print(f"\n  裁决: 最佳组合 {_best[0]} 夏普 {_best[1][2]:.2f}  vs 裸QQQ {_qs:.2f}  vs 裸lev {_ls:.2f}")
+print(f"    → {'✅ 组合夏普>裸QQQ' if _best[1][2]>_qs else '❌ 组合打不赢裸QQQ(加动量无益)'} | "
+      f"{'✅>lev' if _best[1][2]>_ls else '打不赢lev(杠杆指数更优)'} | "
+      f"三档{'一致(稳)' if _consistent else '不一致(脆弱)'}")
+print("  ⚠️ 5年单一牛市窗口+动量幸存者偏差; 真裁决在前向.")
+
 out={"window":[bt[0],bt[-1]],"legs":keys,"corr":corr.tolist(),
-     "stats":{k:list(stats(legs[k])) for k in keys}}
+     "stats":{k:list(stats(legs[k])) for k in keys},
+     "static_combo":{"lev_sharpe":_ls,"qqq_sharpe":_qs,"weight_band":_cs}}
 json.dump(out,open("data/leg-correlation.json","w"),ensure_ascii=False,indent=2)
