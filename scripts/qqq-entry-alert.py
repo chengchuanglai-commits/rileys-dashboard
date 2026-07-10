@@ -92,7 +92,8 @@ def run():
                 why = "跌破200日线" if not g["above_ma"] else ("波动>30%" if g["highv"] else f"未连站{g['confirm_days']}天")
                 alerts.append(f"⚙️🔻 杠杆闸门 降杠→1.0x({why};QQQ ${g['price']}/200线 ${g['ma']},20日波动 {g['vol_ann']*100:.0f}%)\n   动作:1.5x仓降回1x——卖约1/3 QQQ还掉保证金借款")
             else:
-                alerts.append(f"⚙️🚀 杠杆闸门 可加杠→1.5x(已连站200线上{g['streak']}天+波动正常{g['vol_ann']*100:.0f}%)\n   动作:借0.5x加仓QQQ回到1.5x")
+                armed = "★这就是启动真钱小步上杠的绿灯(前提:IBKR保证金账户已开+你确认扛得住深坑)" if not st.get("lev_realmoney") else "已在杠杆:借0.5x加仓QQQ回到1.5x"
+                alerts.append(f"⚙️🚀🟢 杠杆闸门 →1.5x(连站200线{g['streak']}天+波动{g['vol_ann']*100:.0f}%正常)\n   {armed}")
             st["lev_state"] = cur_lev
     except Exception as _e:
         print(f"[qqq-alert] 杠杆闸门信号跳过: {_e}")
