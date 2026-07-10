@@ -38,8 +38,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.96
         },
         "2026-07-10": {
-          "close": 314.25,
-          "pnl_pct": 1.66
+          "close": 313.96,
+          "pnl_pct": 1.75
         }
       }
     },
@@ -79,8 +79,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.23
         },
         "2026-07-10": {
-          "close": 28.44,
-          "pnl_pct": 3.3
+          "close": 28.55,
+          "pnl_pct": 2.92
         }
       }
     },
@@ -99,8 +99,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "close": 60.15,
-          "pnl_pct": 0.36
+          "close": 59.76,
+          "pnl_pct": 1.01
         }
       }
     },
@@ -119,8 +119,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "close": 66.68,
-          "pnl_pct": -2.19
+          "close": 66.73,
+          "pnl_pct": -2.27
         }
       }
     },
@@ -139,8 +139,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "close": 56.69,
-          "pnl_pct": -1.45
+          "close": 56.31,
+          "pnl_pct": -0.77
         }
       }
     }
@@ -566,36 +566,6 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -20.83
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 10.6,
-          "high": 10.8,
-          "low": 9.6,
-          "close": 9.86,
-          "pnl_pct": 8.01
-        }
-      },
-      "close_date": "2026-06-15",
-      "close_price": 11.37,
-      "final_pnl_pct": 8.01,
-      "close_reason": "take_profit",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 37.6
     },
     {
       "ticker": "STRS",
@@ -1842,17 +1812,17 @@ window.PORTFOLIO_B = {
           "open": 322.23,
           "high": 322.8,
           "low": 310.67,
-          "close": 314.25,
-          "pnl_pct": 1.66
+          "close": 313.96,
+          "pnl_pct": 1.75
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 314.25,
-      "final_pnl_pct": 1.66,
+      "close_price": 313.96,
+      "final_pnl_pct": 1.75,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.3
+      "realized_pnl_usd": 3.59
     },
     {
       "ticker": "MVBF",
@@ -1900,17 +1870,17 @@ window.PORTFOLIO_B = {
           "open": 28.56,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.44,
-          "pnl_pct": 3.3
+          "close": 28.55,
+          "pnl_pct": 2.92
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 28.44,
-      "final_pnl_pct": 3.3,
+      "close_price": 28.55,
+      "final_pnl_pct": 2.92,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 14.5
+      "realized_pnl_usd": 12.6
     },
     {
       "ticker": "UTMD",
@@ -1962,6 +1932,31 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 32.93
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-07-09": {
+          "close": 8.84,
+          "pnl_pct": 28.48
+        }
+      },
+      "close_date": "2026-07-09",
+      "close_price": 8.84,
+      "final_pnl_pct": 28.48,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 142.39
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
@@ -1969,9 +1964,9 @@ window.PORTFOLIO_B = {
     "total_trades": 44,
     "win_trades": 20,
     "win_rate": 45.5,
-    "total_realized_pnl_usd": 44.17,
-    "open_unrealized_pnl_usd": 8.4,
-    "portfolio_value": 2052.57,
+    "total_realized_pnl_usd": 147.35,
+    "open_unrealized_pnl_usd": 13.2,
+    "portfolio_value": 2160.55,
     "updated_at": "2026-07-11"
   }
 };
