@@ -18,13 +18,13 @@ window.PORTFOLIO_CTR = {
         "2026-07-10": {
           "open": 60.1,
           "high": 61.22,
-          "low": 60.1,
-          "close": 60.76,
-          "pnl_pct": -0.65
+          "low": 59.92,
+          "close": 60.15,
+          "pnl_pct": 0.36
         }
       },
       "position_usd": 212.38,
-      "unrealized_pnl_usd": -1.38
+      "unrealized_pnl_usd": 0.76
     },
     {
       "ticker": "PFIS",
@@ -43,12 +43,12 @@ window.PORTFOLIO_CTR = {
           "open": 65.92,
           "high": 66.7,
           "low": 65.9,
-          "close": 66.63,
-          "pnl_pct": -2.11
+          "close": 66.68,
+          "pnl_pct": -2.19
         }
       },
       "position_usd": 212.38,
-      "unrealized_pnl_usd": -4.48
+      "unrealized_pnl_usd": -4.65
     }
   ],
   "closed_positions": [
@@ -1285,7 +1285,7 @@ window.PORTFOLIO_CTR = {
           "open": 28.56,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.6,
+          "close": 28.44,
           "pnl_pct": 3.79
         }
       },
@@ -1387,7 +1387,7 @@ window.PORTFOLIO_CTR = {
           "open": 28.56,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.6,
+          "close": 28.44,
           "pnl_pct": 2.38
         }
       },
@@ -1475,7 +1475,7 @@ window.PORTFOLIO_CTR = {
           "open": 28.56,
           "high": 29.47,
           "low": 28.25,
-          "close": 28.6,
+          "close": 28.44,
           "pnl_pct": 2.38
         }
       },
@@ -1495,8 +1495,8 @@ window.PORTFOLIO_CTR = {
     "win_trades": 17,
     "win_rate": 53.1,
     "total_realized_pnl_usd": 141.95,
-    "open_unrealized_pnl_usd": -5.86,
-    "portfolio_value": 2136.09,
+    "open_unrealized_pnl_usd": -3.89,
+    "portfolio_value": 2138.06,
     "total_commission_usd": 64.0,
     "skipped_gap": 15,
     "skipped_zero_shares": 1,

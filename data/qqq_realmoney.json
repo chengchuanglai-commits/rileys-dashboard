@@ -14,14 +14,14 @@
     "shares": 0.5,
     "avg_price_usd": 721.24,
     "cost_usd": 360.62,
-    "qqq_now_usd": 724.06,
-    "value_usd": 362.03,
-    "pnl_usd": 1.41,
-    "pnl_pct": 0.39,
-    "usdcad": 1.4138,
-    "cost_cad_approx": 509.84,
-    "value_cad_approx": 511.84,
-    "pnl_cad_approx": 1.99,
-    "updated_at": "2026-07-10 15:34"
+    "qqq_now_usd": 726.14,
+    "value_usd": 363.07,
+    "pnl_usd": 2.45,
+    "pnl_pct": 0.68,
+    "usdcad": 1.4139,
+    "cost_cad_approx": 509.88,
+    "value_cad_approx": 513.34,
+    "pnl_cad_approx": 3.46,
+    "updated_at": "2026-07-10 17:50"
   }
 }
