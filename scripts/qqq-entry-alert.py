@@ -33,7 +33,7 @@ def levels():
             ma50 = float(c.rolling(50).mean().iloc[-1]); ma200 = float(c.rolling(200).mean().iloc[-1])
             delta = c.diff(); up = delta.clip(lower=0).rolling(14).mean(); dn = (-delta.clip(upper=0)).rolling(14).mean()
             rsi = float((100 - 100 / (1 + up / dn)).iloc[-1])
-            return px, day_low, ma50, ma200, rsi
+            return px, day_low, ma50, ma200, rsi, c
         except Exception:
             time.sleep(3)
     raise RuntimeError("取价失败(重试3次)")
@@ -41,7 +41,7 @@ def levels():
 
 def run():
     try:
-        px, day_low, ma50, ma200, rsi = levels()
+        px, day_low, ma50, ma200, rsi, c = levels()
     except Exception as e:
         print(f"[qqq-alert] 取价失败,跳过: {e}"); return
     st = {}
@@ -77,6 +77,25 @@ def run():
         st["breakdown"] = True
     if px >= BREAKDOWN * 1.015:
         st["breakdown"] = False
+
+    # ── 杠杆闸门信号(1.5x 真钱保证金/paper腿用;与 lev_engine 同逻辑)──
+    # 只在闸门档位切换时提醒:跌破200线/波动>30%→降杠回1x;连站5天+波动正常→可加杠回1.5x
+    try:
+        import sys as _sys; _sys.path.insert(0, "scripts")
+        from lev_engine import gate_signal
+        g = gate_signal(c)
+        cur_lev = f"{g['target']}x"; prev_lev = st.get("lev_state")
+        if prev_lev is None:
+            st["lev_state"] = cur_lev            # 首次静默建基线,不刷屏
+        elif cur_lev != prev_lev:
+            if g["target"] < 1.5:
+                why = "跌破200日线" if not g["above_ma"] else ("波动>30%" if g["highv"] else f"未连站{g['confirm_days']}天")
+                alerts.append(f"⚙️🔻 杠杆闸门 降杠→1.0x({why};QQQ ${g['price']}/200线 ${g['ma']},20日波动 {g['vol_ann']*100:.0f}%)\n   动作:1.5x仓降回1x——卖约1/3 QQQ还掉保证金借款")
+            else:
+                alerts.append(f"⚙️🚀 杠杆闸门 可加杠→1.5x(已连站200线上{g['streak']}天+波动正常{g['vol_ann']*100:.0f}%)\n   动作:借0.5x加仓QQQ回到1.5x")
+            st["lev_state"] = cur_lev
+    except Exception as _e:
+        print(f"[qqq-alert] 杠杆闸门信号跳过: {_e}")
 
     os.makedirs("data", exist_ok=True)
     st["last_px"], st["last_check"] = round(px, 2), __import__("time").strftime("%F %T")

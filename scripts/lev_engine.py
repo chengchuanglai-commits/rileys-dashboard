@@ -44,3 +44,24 @@ def simulate_leverage(prices, base_lev=1.5, ma_window=200, vol_window=20,
     cagr = (equity / start) ** (1 / yrs) - 1 if (equity > 0 and yrs > 0) else -1.0
     return {"curve": curve, "cagr": cagr, "maxdd": maxdd,
             "final": equity, "ruined": ruined, "days": len(curve)}
+
+
+def gate_signal(prices, base_lev=1.5, ma_window=200, vol_window=20,
+                vol_cap=0.30, confirm_days=5):
+    """给最新一根K线算当前杠杆闸门信号(与 simulate_leverage 同逻辑,供实时飞书提醒用)。
+    prices=pandas Series 日线收盘。返回当前建议杠杆档 + 诊断。
+    规则:价连续confirm_days天站上200MA 且 20日年化波动≤vol_cap → base_lev,否则 1.0x。"""
+    px = prices.dropna()
+    ma = px.rolling(ma_window).mean()
+    vol = px.pct_change().rolling(vol_window).std() * np.sqrt(252)
+    s = 0
+    for pi, mi in zip(px.values, ma.values):
+        s = s + 1 if (mi == mi and pi > mi) else 0   # 连续站上200MA天数(跌破归零)
+    v = float(vol.iloc[-1]) if vol.iloc[-1] == vol.iloc[-1] else 0.0
+    highv = v > vol_cap
+    above = s >= confirm_days
+    target = base_lev if (above and not highv) else 1.0
+    return {"target": target, "streak": int(s), "confirm_days": confirm_days,
+            "above_ma": bool(px.iloc[-1] > ma.iloc[-1]), "highv": bool(highv),
+            "vol_ann": round(v, 3), "ma": round(float(ma.iloc[-1]), 2),
+            "price": round(float(px.iloc[-1]), 2)}
