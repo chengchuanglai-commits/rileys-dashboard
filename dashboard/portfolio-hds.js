@@ -179,12 +179,12 @@ window.PORTFOLIO_HDS = {
           "open": 131.36,
           "high": 131.36,
           "low": 125.32,
-          "close": 128.74,
-          "pnl_pct": 2.33
+          "close": 129.89,
+          "pnl_pct": 1.46
         }
       },
       "position_usd": 215.42,
-      "unrealized_pnl_usd": 5.02
+      "unrealized_pnl_usd": 3.15
     },
     {
       "ticker": "YORW",
@@ -202,14 +202,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-07-13": {
           "open": 30.78,
-          "high": 30.99,
+          "high": 31.03,
           "low": 30.61,
-          "close": 30.93,
-          "pnl_pct": -0.42
+          "close": 30.97,
+          "pnl_pct": -0.55
         }
       },
       "position_usd": 215.42,
-      "unrealized_pnl_usd": -0.9
+      "unrealized_pnl_usd": -1.18
     },
     {
       "ticker": "ITIC",
@@ -1949,8 +1949,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 30,
     "win_rate": 62.5,
     "total_realized_pnl_usd": 154.24,
-    "open_unrealized_pnl_usd": 36.42,
-    "portfolio_value": 2190.66,
+    "open_unrealized_pnl_usd": 34.26,
+    "portfolio_value": 2188.5,
     "total_commission_usd": 96.0,
     "skipped_gap": 23,
     "skipped_zero_shares": 0,

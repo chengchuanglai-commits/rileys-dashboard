@@ -17,8 +17,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-15",
       "daily_prices": {
         "2026-07-13": {
-          "close": 280.5,
-          "pnl_pct": -1.63
+          "close": 279.2,
+          "pnl_pct": -1.16
         }
       },
       "gap_checked": true,
@@ -1196,17 +1196,17 @@ window.PORTFOLIO_D = {
           "open": 59.97,
           "high": 60.89,
           "low": 58.14,
-          "close": 59.42,
-          "pnl_pct": 1.57
+          "close": 59.76,
+          "pnl_pct": 1.01
         }
       },
       "close_date": "2026-07-13",
-      "close_price": 59.42,
-      "final_pnl_pct": 1.57,
+      "close_price": 59.76,
+      "final_pnl_pct": 1.01,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.58
+      "realized_pnl_usd": 2.88
     },
     {
       "ticker": "TCNNF",
@@ -1242,9 +1242,9 @@ window.PORTFOLIO_D = {
     "total_trades": 35,
     "win_trades": 20,
     "win_rate": 57.1,
-    "total_realized_pnl_usd": 245.02,
-    "open_unrealized_pnl_usd": -8.15,
-    "portfolio_value": 2236.87,
+    "total_realized_pnl_usd": 242.32,
+    "open_unrealized_pnl_usd": -5.8,
+    "portfolio_value": 2236.52,
     "skipped_gap": 14,
     "updated_at": "2026-07-14"
   }
