@@ -179,12 +179,12 @@ window.PORTFOLIO_HDS = {
           "open": 131.36,
           "high": 131.36,
           "low": 125.32,
-          "close": 129.15,
-          "pnl_pct": 2.02
+          "close": 128.74,
+          "pnl_pct": 2.33
         }
       },
       "position_usd": 215.42,
-      "unrealized_pnl_usd": 4.35
+      "unrealized_pnl_usd": 5.02
     },
     {
       "ticker": "YORW",
@@ -204,12 +204,12 @@ window.PORTFOLIO_HDS = {
           "open": 30.78,
           "high": 30.99,
           "low": 30.61,
-          "close": 30.88,
-          "pnl_pct": -0.26
+          "close": 30.93,
+          "pnl_pct": -0.42
         }
       },
       "position_usd": 215.42,
-      "unrealized_pnl_usd": -0.56
+      "unrealized_pnl_usd": -0.9
     },
     {
       "ticker": "ITIC",
@@ -1949,8 +1949,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 30,
     "win_rate": 62.5,
     "total_realized_pnl_usd": 154.24,
-    "open_unrealized_pnl_usd": 36.1,
-    "portfolio_value": 2190.34,
+    "open_unrealized_pnl_usd": 36.42,
+    "portfolio_value": 2190.66,
     "total_commission_usd": 96.0,
     "skipped_gap": 23,
     "skipped_zero_shares": 0,

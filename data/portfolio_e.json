@@ -118,8 +118,8 @@
           "open": 59.97,
           "high": 60.89,
           "low": 58.14,
-          "close": 59.39,
-          "pnl_pct": 1.62
+          "close": 59.42,
+          "pnl_pct": 1.57
         }
       },
       "gap_checked": true,
@@ -153,8 +153,8 @@
           "open": 66.47,
           "high": 67.12,
           "low": 66.22,
-          "close": 66.72,
-          "pnl_pct": -2.25
+          "close": 66.71,
+          "pnl_pct": -2.24
         }
       },
       "gap_checked": true,
@@ -175,7 +175,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-07-16",
       "regime": "neutral",
-      "vix": 16.72,
+      "vix": 17.1,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1395,8 +1395,8 @@
     "win_trades": 14,
     "win_rate": 46.7,
     "total_realized_pnl_usd": 119.54,
-    "open_unrealized_pnl_usd": -1.15,
-    "portfolio_value": 2118.39,
+    "open_unrealized_pnl_usd": -1.34,
+    "portfolio_value": 2118.2,
     "total_commission_usd": 60.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

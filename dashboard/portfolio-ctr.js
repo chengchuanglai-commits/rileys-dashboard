@@ -42,12 +42,12 @@ window.PORTFOLIO_CTR = {
           "open": 59.97,
           "high": 60.89,
           "low": 58.14,
-          "close": 59.39,
-          "pnl_pct": 1.62
+          "close": 59.51,
+          "pnl_pct": 1.42
         }
       },
       "position_usd": 208.46,
-      "unrealized_pnl_usd": 3.38
+      "unrealized_pnl_usd": 2.96
     },
     {
       "ticker": "PFIS",
@@ -73,12 +73,12 @@ window.PORTFOLIO_CTR = {
           "open": 66.47,
           "high": 67.12,
           "low": 66.22,
-          "close": 66.72,
-          "pnl_pct": -2.25
+          "close": 66.71,
+          "pnl_pct": -2.24
         }
       },
       "position_usd": 208.46,
-      "unrealized_pnl_usd": -4.69
+      "unrealized_pnl_usd": -4.67
     },
     {
       "ticker": "ITIC",
@@ -1504,8 +1504,8 @@ window.PORTFOLIO_CTR = {
     "win_trades": 16,
     "win_rate": 51.6,
     "total_realized_pnl_usd": 102.35,
-    "open_unrealized_pnl_usd": -1.31,
-    "portfolio_value": 2101.04,
+    "open_unrealized_pnl_usd": -1.71,
+    "portfolio_value": 2100.64,
     "total_commission_usd": 62.0,
     "skipped_gap": 15,
     "skipped_zero_shares": 1,
