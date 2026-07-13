@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13 11:48",
+  "generated": "2026-07-13 15:23",
   "spy_fwd_ret_pct": 0.84,
   "max_conviction": 0.0,
   "active_pct": 0.5,
@@ -25,11 +25,11 @@
     },
     "bq": {
       "name": "B-quant·多因子",
-      "n": 16,
-      "alpha_pct": -11.5,
+      "n": 24,
+      "alpha_pct": -8.85,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -10.66,
+      "fwd_ret_pct": -8.01,
       "tradeable": true
     },
     "bai": {
