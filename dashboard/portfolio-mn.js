@@ -151,90 +151,6 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
-    },
-    {
-      "ticker": "ITIC",
-      "name": "投资者合众公司",
-      "action": "BUY",
-      "signal_date": "2026-07-09",
-      "entry_price": 272.37,
-      "allocated_usd": 500,
-      "shares": 1.8357,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 313.23,
-      "stop_loss": 266.92,
-      "max_hold_date": "2026-07-13",
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 273.3,
-          "high": 277.85,
-          "low": 271.41,
-          "close": 276.0,
-          "pnl_pct": 1.33
-        }
-      },
-      "position_usd": 210.22,
-      "unrealized_pnl_usd": 2.8
-    },
-    {
-      "ticker": "SKWD",
-      "name": "Skyward Specialty Insurance",
-      "action": "BUY",
-      "signal_date": "2026-07-09",
-      "entry_price": 60.1,
-      "allocated_usd": 500,
-      "shares": 8.3195,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 69.11,
-      "stop_loss": 58.9,
-      "max_hold_date": "2026-07-13",
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 60.1,
-          "high": 61.22,
-          "low": 59.14,
-          "close": 59.34,
-          "pnl_pct": -1.26
-        }
-      },
-      "position_usd": 210.22,
-      "unrealized_pnl_usd": -2.65
-    },
-    {
-      "ticker": "ITIC",
-      "name": "投资者信托保险",
-      "action": "BUY",
-      "signal_date": "2026-07-10",
-      "entry_price": 276.0,
-      "allocated_usd": 500,
-      "shares": 1.8116,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 317.4,
-      "stop_loss": 270.48,
-      "max_hold_date": "2026-07-14",
-      "daily_prices": {},
-      "position_usd": 209.37,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "SKWD",
-      "name": "Skyward Specialty Insurance",
-      "action": "BUY",
-      "signal_date": "2026-07-10",
-      "entry_price": 59.34,
-      "allocated_usd": 500,
-      "shares": 8.426,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 68.24,
-      "stop_loss": 58.15,
-      "max_hold_date": "2026-07-14",
-      "daily_prices": {},
-      "position_usd": 209.37,
-      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2624,20 +2540,158 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.23,
       "position_usd": 210.22
+    },
+    {
+      "ticker": "ITIC",
+      "name": "投资者合众公司",
+      "action": "BUY",
+      "signal_date": "2026-07-09",
+      "entry_price": 272.37,
+      "allocated_usd": 500,
+      "shares": 1.8357,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 313.23,
+      "stop_loss": 266.92,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 273.3,
+          "high": 277.85,
+          "low": 271.41,
+          "close": 276.0,
+          "pnl_pct": 1.33
+        },
+        "2026-07-13": {
+          "open": 276.05,
+          "high": 276.74,
+          "low": 273.23,
+          "close": 275.08,
+          "pnl_pct": 0.99
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 275.08,
+      "final_pnl_pct": 0.99,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.08,
+      "position_usd": 210.22
+    },
+    {
+      "ticker": "SKWD",
+      "name": "Skyward Specialty Insurance",
+      "action": "BUY",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.1,
+      "allocated_usd": 500,
+      "shares": 8.3195,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 69.11,
+      "stop_loss": 58.9,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.22,
+          "low": 59.14,
+          "close": 59.34,
+          "pnl_pct": -1.26
+        },
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 58.9,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 58.9,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.2,
+      "position_usd": 210.22
+    },
+    {
+      "ticker": "SKWD",
+      "name": "Skyward Specialty Insurance",
+      "action": "BUY",
+      "signal_date": "2026-07-10",
+      "entry_price": 59.34,
+      "allocated_usd": 500,
+      "shares": 8.426,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 68.24,
+      "stop_loss": 58.15,
+      "max_hold_date": "2026-07-14",
+      "daily_prices": {
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 58.9,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 58.15,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.21,
+      "position_usd": 209.37
+    },
+    {
+      "ticker": "AOUT",
+      "name": "American Outdoor Brands",
+      "action": "BUY",
+      "signal_date": "2026-07-10",
+      "entry_price": 14.34,
+      "allocated_usd": 500,
+      "shares": 34.8675,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 16.49,
+      "stop_loss": 14.05,
+      "max_hold_date": "2026-07-14",
+      "daily_prices": {
+        "2026-07-13": {
+          "open": 14.41,
+          "high": 14.97,
+          "low": 14.03,
+          "close": 14.77,
+          "pnl_pct": -2.02
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 14.05,
+      "final_pnl_pct": -2.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.23,
+      "position_usd": 209.37
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 70,
-    "win_trades": 21,
-    "win_rate": 30.0,
-    "total_realized_pnl_usd": 93.74,
-    "open_unrealized_pnl_usd": 24.78,
-    "portfolio_value": 2118.52,
-    "total_commission_usd": 140.0,
-    "skipped_gap": 39,
+    "total_trades": 74,
+    "win_trades": 22,
+    "win_rate": 29.7,
+    "total_realized_pnl_usd": 83.18,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2107.82,
+    "total_commission_usd": 148.0,
+    "skipped_gap": 40,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 90,
+    "skipped_no_cash": 95,
     "updated_at": "2026-07-13"
   }
 };

@@ -162,23 +162,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.46
     },
     {
-      "ticker": "PBHC",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-10",
-      "entry_price": 16.05,
-      "allocated_usd": 500,
-      "shares": 31.1526,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 18.46,
-      "stop_loss": 15.73,
-      "max_hold_date": "2026-07-14",
-      "daily_prices": {},
-      "position_usd": 215.42,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "PTGX",
       "name": "",
       "action": "SELL",
@@ -191,23 +174,56 @@ window.PORTFOLIO_HDS = {
       "take_profit": 112.04,
       "stop_loss": 134.45,
       "max_hold_date": "2026-07-14",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-13": {
+          "open": 131.36,
+          "high": 131.36,
+          "low": 125.32,
+          "close": 128.08,
+          "pnl_pct": 2.83
+        }
+      },
       "position_usd": 215.42,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 6.1
+    },
+    {
+      "ticker": "YORW",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-10",
+      "entry_price": 30.8,
+      "allocated_usd": 500,
+      "shares": 16.2338,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 26.18,
+      "stop_loss": 31.42,
+      "max_hold_date": "2026-07-14",
+      "daily_prices": {
+        "2026-07-13": {
+          "open": 30.78,
+          "high": 30.99,
+          "low": 30.61,
+          "close": 30.74,
+          "pnl_pct": 0.19
+        }
+      },
+      "position_usd": 215.42,
+      "unrealized_pnl_usd": 0.41
     },
     {
       "ticker": "ITIC",
       "name": "",
       "action": "SELL",
-      "signal_date": "2026-07-10",
-      "entry_price": 271.41,
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
       "allocated_usd": 500,
-      "shares": 1.8422,
-      "actual_position_usd": 499.99,
+      "shares": 1.8116,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 230.7,
-      "stop_loss": 276.84,
-      "max_hold_date": "2026-07-14",
+      "take_profit": 234.6,
+      "stop_loss": 281.52,
+      "max_hold_date": "2026-07-15",
       "daily_prices": {},
       "position_usd": 215.42,
       "unrealized_pnl_usd": 0.0
@@ -1933,12 +1949,12 @@ window.PORTFOLIO_HDS = {
     "win_trades": 30,
     "win_rate": 62.5,
     "total_realized_pnl_usd": 154.24,
-    "open_unrealized_pnl_usd": 32.3,
-    "portfolio_value": 2186.54,
+    "open_unrealized_pnl_usd": 38.81,
+    "portfolio_value": 2193.05,
     "total_commission_usd": 96.0,
-    "skipped_gap": 21,
+    "skipped_gap": 23,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 13,
+    "skipped_no_cash": 11,
     "updated_at": "2026-07-13"
   }
 };

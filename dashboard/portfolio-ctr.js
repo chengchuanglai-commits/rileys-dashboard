@@ -28,7 +28,7 @@ window.PORTFOLIO_CTR = {
       "shares": 8,
       "actual_position_usd": 482.96,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-10",
+      "max_hold_date": "2026-07-13",
       "day1_open": 60.1,
       "daily_prices": {
         "2026-07-10": {
@@ -37,10 +37,17 @@ window.PORTFOLIO_CTR = {
           "low": 59.14,
           "close": 59.34,
           "pnl_pct": 1.71
+        },
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 58.9,
+          "pnl_pct": 2.43
         }
       },
       "position_usd": 208.46,
-      "unrealized_pnl_usd": 3.56
+      "unrealized_pnl_usd": 5.07
     },
     {
       "ticker": "PFIS",
@@ -52,7 +59,7 @@ window.PORTFOLIO_CTR = {
       "shares": 7,
       "actual_position_usd": 456.75,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-10",
+      "max_hold_date": "2026-07-13",
       "day1_open": 65.92,
       "daily_prices": {
         "2026-07-10": {
@@ -61,10 +68,33 @@ window.PORTFOLIO_CTR = {
           "low": 65.9,
           "close": 66.52,
           "pnl_pct": -1.95
+        },
+        "2026-07-13": {
+          "open": 66.47,
+          "high": 67.12,
+          "low": 66.22,
+          "close": 66.37,
+          "pnl_pct": -1.72
         }
       },
       "position_usd": 208.46,
-      "unrealized_pnl_usd": -4.06
+      "unrealized_pnl_usd": -3.59
+    },
+    {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-13",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 210.23,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1474,11 +1504,11 @@ window.PORTFOLIO_CTR = {
     "win_trades": 16,
     "win_rate": 51.6,
     "total_realized_pnl_usd": 102.35,
-    "open_unrealized_pnl_usd": -0.5,
-    "portfolio_value": 2101.85,
+    "open_unrealized_pnl_usd": 1.48,
+    "portfolio_value": 2103.83,
     "total_commission_usd": 62.0,
     "skipped_gap": 15,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-10"
+    "updated_at": "2026-07-13"
   }
 };

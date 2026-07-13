@@ -19,96 +19,6 @@ window.PORTFOLIO_CTG = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "LGND",
-      "name": "LGND",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 319.55,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 319.55,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-10",
-      "day1_open": 317.97,
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 317.97,
-          "high": 323.3,
-          "low": 312.74,
-          "close": 319.43,
-          "pnl_pct": 0.04
-        },
-        "2026-07-08": {
-          "open": 321.91,
-          "high": 326.63,
-          "low": 311.73,
-          "close": 314.88,
-          "pnl_pct": 1.46
-        },
-        "2026-07-09": {
-          "open": 320.08,
-          "high": 323.33,
-          "low": 315.02,
-          "close": 322.61,
-          "pnl_pct": -0.96
-        },
-        "2026-07-10": {
-          "open": 322.23,
-          "high": 322.8,
-          "low": 310.67,
-          "close": 316.24,
-          "pnl_pct": 1.04
-        }
-      },
-      "position_usd": 210.49,
-      "unrealized_pnl_usd": 2.19
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVBF",
-      "action": "SELL",
-      "signal_date": "2026-07-06",
-      "entry_price": 29.41,
-      "allocated_usd": 500,
-      "shares": 17,
-      "actual_position_usd": 499.97,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-10",
-      "day1_open": 29.15,
-      "daily_prices": {
-        "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 4.76
-        },
-        "2026-07-09": {
-          "open": 28.0,
-          "high": 28.61,
-          "low": 27.92,
-          "close": 28.46,
-          "pnl_pct": 3.23
-        },
-        "2026-07-10": {
-          "open": 28.48,
-          "high": 29.47,
-          "low": 28.25,
-          "close": 28.66,
-          "pnl_pct": 2.55
-        }
-      },
-      "position_usd": 210.49,
-      "unrealized_pnl_usd": 5.37
-    },
-    {
       "ticker": "SKWD",
       "name": "SKWD",
       "action": "SELL",
@@ -118,7 +28,7 @@ window.PORTFOLIO_CTG = {
       "shares": 8,
       "actual_position_usd": 482.96,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-10",
+      "max_hold_date": "2026-07-13",
       "day1_open": 60.1,
       "daily_prices": {
         "2026-07-10": {
@@ -127,10 +37,33 @@ window.PORTFOLIO_CTG = {
           "low": 59.14,
           "close": 59.34,
           "pnl_pct": 1.71
+        },
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 58.9,
+          "pnl_pct": 2.43
         }
       },
       "position_usd": 211.12,
-      "unrealized_pnl_usd": 3.61
+      "unrealized_pnl_usd": 5.13
+    },
+    {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-13",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 212.77,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1314,7 +1247,7 @@ window.PORTFOLIO_CTG = {
         },
         "2026-07-10": {
           "open": 322.23,
-          "high": 322.8,
+          "high": 322.81,
           "low": 310.67,
           "close": 316.24,
           "pnl_pct": 1.04
@@ -1386,19 +1319,135 @@ window.PORTFOLIO_CTG = {
       "commission_total": 2.0,
       "realized_pnl_usd": 5.37,
       "position_usd": 210.49
+    },
+    {
+      "ticker": "LGND",
+      "name": "LGND",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 319.55,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 319.55,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-13",
+      "day1_open": 317.97,
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 317.97,
+          "high": 323.3,
+          "low": 312.74,
+          "close": 319.43,
+          "pnl_pct": 0.04
+        },
+        "2026-07-08": {
+          "open": 321.91,
+          "high": 326.63,
+          "low": 311.73,
+          "close": 314.88,
+          "pnl_pct": 1.46
+        },
+        "2026-07-09": {
+          "open": 320.08,
+          "high": 323.33,
+          "low": 315.02,
+          "close": 322.61,
+          "pnl_pct": -0.96
+        },
+        "2026-07-10": {
+          "open": 322.23,
+          "high": 322.81,
+          "low": 310.67,
+          "close": 316.24,
+          "pnl_pct": 1.04
+        },
+        "2026-07-13": {
+          "open": 322.23,
+          "high": 316.42,
+          "low": 304.77,
+          "close": 312.79,
+          "pnl_pct": 2.12
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 312.79,
+      "final_pnl_pct": 2.12,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 4.46,
+      "position_usd": 210.49
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVBF",
+      "action": "SELL",
+      "signal_date": "2026-07-06",
+      "entry_price": 29.41,
+      "allocated_usd": 500,
+      "shares": 17,
+      "actual_position_usd": 499.97,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-13",
+      "day1_open": 29.15,
+      "daily_prices": {
+        "2026-07-07": {
+          "open": 29.15,
+          "high": 29.31,
+          "low": 28.58,
+          "close": 28.62,
+          "pnl_pct": 2.69
+        },
+        "2026-07-08": {
+          "open": 28.49,
+          "high": 28.49,
+          "low": 27.61,
+          "close": 28.01,
+          "pnl_pct": 4.76
+        },
+        "2026-07-09": {
+          "open": 28.0,
+          "high": 28.61,
+          "low": 27.92,
+          "close": 28.46,
+          "pnl_pct": 3.23
+        },
+        "2026-07-10": {
+          "open": 28.48,
+          "high": 29.47,
+          "low": 28.25,
+          "close": 28.66,
+          "pnl_pct": 2.55
+        },
+        "2026-07-13": {
+          "open": 28.46,
+          "high": 29.08,
+          "low": 28.46,
+          "close": 28.78,
+          "pnl_pct": 2.14
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 28.78,
+      "final_pnl_pct": 2.14,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 4.5,
+      "position_usd": 210.49
     }
   ],
   "_note": "c-tight 变体:Plan C 出场(TP8/SL4/5天)+ 跳空过滤 >1.0% 跳过(比 c 更紧)",
   "stats": {
-    "total_trades": 28,
-    "win_trades": 17,
-    "win_rate": 60.7,
-    "total_realized_pnl_usd": 118.75,
-    "open_unrealized_pnl_usd": 11.17,
-    "portfolio_value": 2129.92,
-    "total_commission_usd": 56.0,
+    "total_trades": 30,
+    "win_trades": 19,
+    "win_rate": 63.3,
+    "total_realized_pnl_usd": 127.72,
+    "open_unrealized_pnl_usd": 5.13,
+    "portfolio_value": 2132.85,
+    "total_commission_usd": 60.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-10"
+    "updated_at": "2026-07-13"
   }
 };

@@ -43,28 +43,20 @@ window.PORTFOLIO_CH = {
       "unrealized_pnl_usd": 0.45
     },
     {
-      "ticker": "SKWD",
-      "name": "SKWD",
+      "ticker": "ITIC",
+      "name": "ITIC",
       "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 60.37,
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
       "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 482.96,
+      "shares": 1,
+      "actual_position_usd": 276.0,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-10",
-      "day1_open": 60.1,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 60.1,
-          "high": 61.22,
-          "low": 59.14,
-          "close": 59.34,
-          "pnl_pct": 1.71
-        }
-      },
-      "position_usd": 208.3,
-      "unrealized_pnl_usd": 3.56
+      "max_hold_date": "2026-07-13",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 208.39,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1123,19 +1115,56 @@ window.PORTFOLIO_CH = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.19,
       "position_usd": 208.3
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.37,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 482.96,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-13",
+      "day1_open": 60.1,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.22,
+          "low": 59.14,
+          "close": 59.34,
+          "pnl_pct": 1.71
+        },
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 58.9,
+          "pnl_pct": 2.43
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 58.9,
+      "final_pnl_pct": 2.43,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 5.06,
+      "position_usd": 208.3
     }
   ],
   "_note": "c-H 变体:Plan H 出场(TP15/SL2/2天)+ 跳空过滤 1.5%(信号同 c)",
   "stats": {
-    "total_trades": 31,
-    "win_trades": 14,
-    "win_rate": 45.2,
-    "total_realized_pnl_usd": 78.79,
-    "open_unrealized_pnl_usd": 4.02,
-    "portfolio_value": 2082.81,
-    "total_commission_usd": 62.0,
+    "total_trades": 32,
+    "win_trades": 15,
+    "win_rate": 46.9,
+    "total_realized_pnl_usd": 83.85,
+    "open_unrealized_pnl_usd": 0.45,
+    "portfolio_value": 2084.3,
+    "total_commission_usd": 64.0,
     "skipped_gap": 15,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-10"
+    "updated_at": "2026-07-13"
   }
 };
