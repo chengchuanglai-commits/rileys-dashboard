@@ -24,8 +24,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.71
         },
         "2026-07-13": {
-          "close": 58.9,
-          "pnl_pct": 2.43
+          "close": 59.39,
+          "pnl_pct": 1.62
         }
       }
     },
@@ -51,8 +51,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -1.95
         },
         "2026-07-13": {
-          "close": 66.37,
-          "pnl_pct": -1.72
+          "close": 66.72,
+          "pnl_pct": -2.25
         }
       }
     },
@@ -78,8 +78,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.97
         },
         "2026-07-13": {
-          "close": 57.52,
-          "pnl_pct": -2.93
+          "close": 56.88,
+          "pnl_pct": -1.79
         }
       }
     },
@@ -98,8 +98,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-20",
       "daily_prices": {
         "2026-07-13": {
-          "close": 275.08,
-          "pnl_pct": 0.33
+          "close": 279.68,
+          "pnl_pct": -1.33
         }
       }
     }
@@ -1938,17 +1938,17 @@ window.PORTFOLIO_B = {
           "open": 322.23,
           "high": 316.42,
           "low": 304.77,
-          "close": 312.79,
-          "pnl_pct": 2.12
+          "close": 312.15,
+          "pnl_pct": 2.32
         }
       },
       "close_date": "2026-07-13",
-      "close_price": 312.79,
-      "final_pnl_pct": 2.12,
+      "close_price": 312.15,
+      "final_pnl_pct": 2.32,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.77
+      "realized_pnl_usd": 5.41
     },
     {
       "ticker": "MVBF",
@@ -1996,17 +1996,17 @@ window.PORTFOLIO_B = {
           "open": 28.46,
           "high": 29.08,
           "low": 28.46,
-          "close": 28.78,
-          "pnl_pct": 2.14
+          "close": 28.83,
+          "pnl_pct": 1.97
         }
       },
       "close_date": "2026-07-13",
-      "close_price": 28.78,
-      "final_pnl_pct": 2.14,
+      "close_price": 28.83,
+      "final_pnl_pct": 1.97,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.7
+      "realized_pnl_usd": 7.85
     },
     {
       "ticker": "TCNNF",
@@ -2039,9 +2039,9 @@ window.PORTFOLIO_B = {
     "total_trades": 46,
     "win_trades": 22,
     "win_rate": 47.8,
-    "total_realized_pnl_usd": 165.6,
-    "open_unrealized_pnl_usd": -9.45,
-    "portfolio_value": 2156.15,
-    "updated_at": "2026-07-13"
+    "total_realized_pnl_usd": 165.39,
+    "open_unrealized_pnl_usd": -18.75,
+    "portfolio_value": 2146.64,
+    "updated_at": "2026-07-14"
   }
 };

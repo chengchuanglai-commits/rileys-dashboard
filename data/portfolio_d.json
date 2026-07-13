@@ -16,8 +16,8 @@
       "max_hold_date": "2026-07-15",
       "daily_prices": {
         "2026-07-13": {
-          "close": 275.08,
-          "pnl_pct": 0.33
+          "close": 279.68,
+          "pnl_pct": -1.33
         }
       },
       "gap_checked": true,
@@ -1195,17 +1195,17 @@
           "open": 59.97,
           "high": 60.89,
           "low": 58.14,
-          "close": 58.89,
-          "pnl_pct": 2.45
+          "close": 59.39,
+          "pnl_pct": 1.62
         }
       },
       "close_date": "2026-07-13",
-      "close_price": 58.89,
-      "final_pnl_pct": 2.45,
+      "close_price": 59.39,
+      "final_pnl_pct": 1.62,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 9.83
+      "realized_pnl_usd": 5.82
     },
     {
       "ticker": "TCNNF",
@@ -1241,10 +1241,10 @@
     "total_trades": 35,
     "win_trades": 20,
     "win_rate": 57.1,
-    "total_realized_pnl_usd": 249.27,
-    "open_unrealized_pnl_usd": 1.65,
-    "portfolio_value": 2250.92,
+    "total_realized_pnl_usd": 245.26,
+    "open_unrealized_pnl_usd": -6.65,
+    "portfolio_value": 2238.61,
     "skipped_gap": 14,
-    "updated_at": "2026-07-13"
+    "updated_at": "2026-07-14"
   }
 }
