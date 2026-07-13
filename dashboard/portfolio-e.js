@@ -145,6 +145,25 @@ window.PORTFOLIO_E = {
       },
       "gap_checked": true,
       "day1_open": 65.92
+    },
+    {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "take_profit": 248.4,
+      "stop_loss": 284.28,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-16",
+      "regime": "neutral",
+      "vix": 16.28,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -1368,6 +1387,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 10,
-    "updated_at": "2026-07-10"
+    "updated_at": "2026-07-13"
   }
 };

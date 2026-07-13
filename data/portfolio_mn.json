@@ -56,20 +56,20 @@
       "name": "NextEra Energy",
       "action": "BUY",
       "signal_date": "2026-05-21",
-      "entry_price": 89.69,
+      "entry_price": 89.04,
       "allocated_usd": 500,
-      "shares": 5.5748,
+      "shares": 5.6155,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 103.14,
-      "stop_loss": 87.9,
+      "take_profit": 102.4,
+      "stop_loss": 87.26,
       "max_hold_date": "2026-05-25",
       "daily_prices": {
         "2026-05-22": {
-          "open": 89.71,
-          "high": 89.84,
-          "low": 87.95,
-          "close": 88.55,
+          "open": 89.06,
+          "high": 89.19,
+          "low": 87.31,
+          "close": 87.91,
           "pnl_pct": -1.27
         }
       },
@@ -167,7 +167,7 @@
       "daily_prices": {
         "2026-07-10": {
           "open": 273.3,
-          "high": 277.6,
+          "high": 277.85,
           "low": 271.41,
           "close": 276.0,
           "pnl_pct": 1.33
@@ -273,32 +273,32 @@
       "name": "英伟达",
       "action": "BUY",
       "signal_date": "2026-05-19",
-      "entry_price": 220.61,
+      "entry_price": 220.35,
       "allocated_usd": 500,
-      "shares": 2.2664,
-      "actual_position_usd": 499.99,
+      "shares": 2.2691,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 253.7,
-      "stop_loss": 216.2,
+      "take_profit": 253.4,
+      "stop_loss": 215.94,
       "max_hold_date": "2026-05-21",
       "daily_prices": {
         "2026-05-20": {
-          "open": 223.18,
-          "high": 226.13,
-          "low": 220.5,
-          "close": 223.47,
+          "open": 222.92,
+          "high": 225.87,
+          "low": 220.24,
+          "close": 223.21,
           "pnl_pct": 1.3
         },
         "2026-05-21": {
-          "open": 222.29,
-          "high": 227.4,
-          "low": 217.93,
-          "close": 219.51,
+          "open": 222.03,
+          "high": 227.14,
+          "low": 217.68,
+          "close": 219.25,
           "pnl_pct": -0.5
         }
       },
       "close_date": "2026-05-21",
-      "close_price": 219.51,
+      "close_price": 219.25,
       "final_pnl_pct": -0.5,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
@@ -787,25 +787,25 @@
       "name": "NVIDIA Corporation",
       "action": "BUY",
       "signal_date": "2026-06-02",
-      "entry_price": 222.82,
+      "entry_price": 222.56,
       "allocated_usd": 500,
-      "shares": 2.244,
-      "actual_position_usd": 500.01,
+      "shares": 2.2466,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 256.24,
-      "stop_loss": 218.36,
+      "take_profit": 255.94,
+      "stop_loss": 218.11,
       "max_hold_date": "2026-06-04",
       "daily_prices": {
         "2026-06-03": {
-          "open": 221.72,
-          "high": 222.82,
-          "low": 214.51,
-          "close": 214.75,
+          "open": 221.46,
+          "high": 222.56,
+          "low": 214.26,
+          "close": 214.5,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-03",
-      "close_price": 218.36,
+      "close_price": 218.11,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -2578,7 +2578,7 @@
       "daily_prices": {
         "2026-07-10": {
           "open": 322.23,
-          "high": 322.8,
+          "high": 322.81,
           "low": 310.67,
           "close": 316.24,
           "pnl_pct": -2.0
@@ -2610,7 +2610,7 @@
         "2026-07-10": {
           "open": 57.89,
           "high": 58.54,
-          "low": 56.67,
+          "low": 56.63,
           "close": 58.27,
           "pnl_pct": -2.01
         }
@@ -2637,6 +2637,6 @@
     "skipped_gap": 39,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 90,
-    "updated_at": "2026-07-10"
+    "updated_at": "2026-07-13"
   }
 }
