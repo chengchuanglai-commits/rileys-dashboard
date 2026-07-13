@@ -1,6 +1,6 @@
 // 信号 edge 分析 — analyze-signal-edge.py 自动生成
 window.SIGNAL_EDGE = {
-  "generated_at": "2026-07-13 11:48",
+  "generated_at": "2026-07-13 12:36",
   "sample_total": 51,
   "date_range": [
     "2026-05-27",

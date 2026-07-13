@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-13",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "ITIC",
+      "action": "SELL",
+      "current_price": 276.0,
+      "target_price": 303.6,
+      "stop_loss": 262.2
+    },
+    {
+      "ticker": "WDFC",
+      "action": "BUY",
+      "current_price": 264.91,
+      "target_price": 291.4,
+      "stop_loss": 251.66
+    },
+    {
+      "ticker": "PTGX",
+      "action": "SELL",
+      "current_price": 131.42,
+      "target_price": 144.56,
+      "stop_loss": 124.85
+    },
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 16.0,
+      "target_price": 17.6,
+      "stop_loss": 15.2
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "ITIC",
+      "action": "SELL",
+      "current_price": 276.0,
+      "target_price": 303.6,
+      "stop_loss": 262.2
+    },
+    {
+      "ticker": "STRS",
+      "action": "HOLD",
+      "current_price": 26.05,
+      "target_price": 28.66,
+      "stop_loss": 24.75
+    },
+    {
+      "ticker": "WDFC",
+      "action": "BUY",
+      "current_price": 264.91,
+      "target_price": 291.4,
+      "stop_loss": 251.66
+    },
+    {
+      "ticker": "PTGX",
+      "action": "SELL",
+      "current_price": 131.42,
+      "target_price": 144.56,
+      "stop_loss": 124.85
+    },
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 16.0,
+      "target_price": 17.6,
+      "stop_loss": 15.2
+    },
+    {
+      "ticker": "PSMT",
+      "action": "SELL",
+      "current_price": 196.3,
+      "target_price": 215.93,
+      "stop_loss": 186.49
+    },
+    {
+      "ticker": "YORW",
+      "action": "SELL",
+      "current_price": 30.6,
+      "target_price": 33.66,
+      "stop_loss": 29.07
+    },
+    {
+      "ticker": "PFIS",
+      "action": "SELL",
+      "current_price": 66.52,
+      "target_price": 73.17,
+      "stop_loss": 63.19
+    },
+    {
+      "ticker": "IMOS",
+      "action": "SELL",
+      "current_price": 75.79,
+      "target_price": 83.37,
+      "stop_loss": 72.0
+    },
+    {
+      "ticker": "PLMR",
+      "action": "BUY",
+      "current_price": 136.07,
+      "target_price": 149.68,
+      "stop_loss": 129.27
+    },
+    {
+      "ticker": "AOUT",
+      "action": "SELL",
+      "current_price": 14.34,
+      "target_price": 15.77,
+      "stop_loss": 13.62
+    },
+    {
+      "ticker": "SKWD",
+      "action": "BUY",
+      "current_price": 59.34,
+      "target_price": 65.27,
+      "stop_loss": 56.37
+    },
+    {
+      "ticker": "ARCO",
+      "action": "HOLD",
+      "current_price": 8.46,
+      "target_price": 9.31,
+      "stop_loss": 8.04
+    },
+    {
+      "ticker": "CNMD",
+      "action": "BUY",
+      "current_price": 38.48,
+      "target_price": 42.33,
+      "stop_loss": 36.56
+    },
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 17.84,
+      "target_price": 19.62,
+      "stop_loss": 16.95
+    },
+    {
+      "ticker": "VRTS",
+      "action": "SELL",
+      "current_price": 160.21,
+      "target_price": 176.23,
+      "stop_loss": 152.2
+    },
+    {
+      "ticker": "BCPC",
+      "action": "HOLD",
+      "current_price": 162.15,
+      "target_price": 178.37,
+      "stop_loss": 154.04
+    },
+    {
+      "ticker": "LOVE",
+      "action": "SELL",
+      "current_price": 16.77,
+      "target_price": 18.45,
+      "stop_loss": 15.93
+    },
+    {
+      "ticker": "DAKT",
+      "action": "BUY",
+      "current_price": 19.92,
+      "target_price": 21.91,
+      "stop_loss": 18.92
+    },
+    {
+      "ticker": "SMPL",
+      "action": "SELL",
+      "current_price": 12.77,
+      "target_price": 14.05,
+      "stop_loss": 12.13
+    }
+  ]
+}
