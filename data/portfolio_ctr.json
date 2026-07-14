@@ -47,13 +47,13 @@
         "2026-07-14": {
           "open": 59.43,
           "high": 60.46,
-          "low": 58.54,
-          "close": 58.78,
-          "pnl_pct": 2.63
+          "low": 58.24,
+          "close": 58.36,
+          "pnl_pct": 3.33
         }
       },
       "position_usd": 211.31,
-      "unrealized_pnl_usd": 5.56
+      "unrealized_pnl_usd": 7.04
     },
     {
       "ticker": "PFIS",
@@ -85,13 +85,13 @@
         "2026-07-14": {
           "open": 66.76,
           "high": 67.61,
-          "low": 66.43,
-          "close": 66.88,
-          "pnl_pct": -2.5
+          "low": 66.31,
+          "close": 66.68,
+          "pnl_pct": -2.19
         }
       },
       "position_usd": 211.31,
-      "unrealized_pnl_usd": -5.28
+      "unrealized_pnl_usd": -4.63
     },
     {
       "ticker": "ITIC",
@@ -109,13 +109,13 @@
         "2026-07-14": {
           "open": 278.21,
           "high": 280.3,
-          "low": 278.07,
-          "close": 280.3,
-          "pnl_pct": -1.56
+          "low": 277.95,
+          "close": 278.72,
+          "pnl_pct": -0.99
         }
       },
       "position_usd": 213.11,
-      "unrealized_pnl_usd": -3.32
+      "unrealized_pnl_usd": -2.11
     },
     {
       "ticker": "TCBK",
@@ -1629,8 +1629,8 @@
     "win_trades": 17,
     "win_rate": 53.1,
     "total_realized_pnl_usd": 131.1,
-    "open_unrealized_pnl_usd": -3.05,
-    "portfolio_value": 2128.05,
+    "open_unrealized_pnl_usd": 0.3,
+    "portfolio_value": 2131.4,
     "total_commission_usd": 64.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,

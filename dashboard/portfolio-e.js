@@ -110,9 +110,9 @@ window.PORTFOLIO_E = {
         "2026-07-14": {
           "open": 278.21,
           "high": 280.3,
-          "low": 278.07,
-          "close": 280.3,
-          "pnl_pct": -1.56
+          "low": 277.95,
+          "close": 278.72,
+          "pnl_pct": -0.99
         }
       },
       "gap_checked": true,
@@ -133,7 +133,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 16.44,
+      "vix": 16.5,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -152,7 +152,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 16.44,
+      "vix": 16.5,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1432,18 +1432,18 @@ window.PORTFOLIO_E = {
         "2026-07-14": {
           "open": 59.43,
           "high": 60.46,
-          "low": 58.54,
-          "close": 58.7,
-          "pnl_pct": 2.77
+          "low": 58.24,
+          "close": 58.36,
+          "pnl_pct": 3.33
         }
       },
       "close_date": "2026-07-14",
-      "close_price": 58.7,
-      "final_pnl_pct": 2.77,
+      "close_price": 58.36,
+      "final_pnl_pct": 3.33,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 11.38
+      "realized_pnl_usd": 14.08
     },
     {
       "ticker": "PFIS",
@@ -1479,8 +1479,8 @@ window.PORTFOLIO_E = {
         "2026-07-14": {
           "open": 66.76,
           "high": 67.61,
-          "low": 66.43,
-          "close": 66.88,
+          "low": 66.31,
+          "close": 66.68,
           "pnl_pct": -3.0
         }
       },
@@ -1498,9 +1498,9 @@ window.PORTFOLIO_E = {
     "total_trades": 33,
     "win_trades": 16,
     "win_rate": 48.5,
-    "total_realized_pnl_usd": 162.71,
-    "open_unrealized_pnl_usd": -2.0,
-    "portfolio_value": 2160.71,
+    "total_realized_pnl_usd": 165.41,
+    "open_unrealized_pnl_usd": -0.43,
+    "portfolio_value": 2164.98,
     "total_commission_usd": 66.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

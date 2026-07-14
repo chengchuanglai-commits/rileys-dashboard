@@ -57,13 +57,13 @@
         "2026-07-14": {
           "open": 278.21,
           "high": 280.3,
-          "low": 278.07,
-          "close": 280.3,
-          "pnl_pct": -1.56
+          "low": 277.95,
+          "close": 278.72,
+          "pnl_pct": -0.99
         }
       },
       "position_usd": 211.21,
-      "unrealized_pnl_usd": -3.29
+      "unrealized_pnl_usd": -2.09
     },
     {
       "ticker": "TCBK",
@@ -1229,8 +1229,8 @@
     "win_trades": 16,
     "win_rate": 48.5,
     "total_realized_pnl_usd": 112.09,
-    "open_unrealized_pnl_usd": -2.83,
-    "portfolio_value": 2109.26,
+    "open_unrealized_pnl_usd": -1.63,
+    "portfolio_value": 2110.46,
     "total_commission_usd": 66.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
