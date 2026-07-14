@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -33,7 +33,7 @@ window.PORTFOLIO_C = {
       "take_profit": 55.54,
       "stop_loss": 62.78,
       "max_hold_date": "2026-07-16",
-      "day1_open": 60.1,
+      "day1_open": 59.43,
       "daily_prices": {
         "2026-07-10": {
           "open": 60.1,
@@ -48,43 +48,16 @@ window.PORTFOLIO_C = {
           "low": 58.14,
           "close": 59.76,
           "pnl_pct": 1.01
-        }
-      },
-      "position_usd": 211.95,
-      "unrealized_pnl_usd": 2.14
-    },
-    {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "take_profit": 60.03,
-      "stop_loss": 67.86,
-      "max_hold_date": "2026-07-16",
-      "day1_open": 65.92,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 65.92,
-          "high": 66.8,
-          "low": 65.9,
-          "close": 66.52,
-          "pnl_pct": -1.95
         },
-        "2026-07-13": {
-          "open": 66.47,
-          "high": 67.12,
-          "low": 66.22,
-          "close": 66.71,
-          "pnl_pct": -2.24
+        "2026-07-14": {
+          "close": 60.35,
+          "pnl_pct": 0.03
         }
       },
       "position_usd": 211.95,
-      "unrealized_pnl_usd": -4.75
+      "unrealized_pnl_usd": 0.06,
+      "gap_checked": true,
+      "day1_gap_pct": -1.56
     },
     {
       "ticker": "ITIC",
@@ -99,10 +72,17 @@ window.PORTFOLIO_C = {
       "take_profit": 253.92,
       "stop_loss": 287.04,
       "max_hold_date": "2026-07-20",
-      "day1_open": null,
-      "daily_prices": {},
+      "day1_open": 278.21,
+      "daily_prices": {
+        "2026-07-14": {
+          "close": 279.1,
+          "pnl_pct": -1.12
+        }
+      },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -2.39,
+      "gap_checked": true,
+      "day1_gap_pct": 0.8
     },
     {
       "ticker": "TCBK",
@@ -117,10 +97,17 @@ window.PORTFOLIO_C = {
       "take_profit": 55.26,
       "stop_loss": 62.47,
       "max_hold_date": "2026-07-21",
-      "day1_open": null,
-      "daily_prices": {},
+      "day1_open": 58.89,
+      "daily_prices": {
+        "2026-07-14": {
+          "close": 59.42,
+          "pnl_pct": 1.08
+        }
+      },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -1.96
     },
     {
       "ticker": "STRS",
@@ -135,10 +122,17 @@ window.PORTFOLIO_C = {
       "take_profit": 19.26,
       "stop_loss": 21.77,
       "max_hold_date": "2026-07-21",
-      "day1_open": null,
-      "daily_prices": {},
+      "day1_open": 20.86,
+      "daily_prices": {
+        "2026-07-14": {
+          "close": 20.48,
+          "pnl_pct": 2.15
+        }
+      },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -0.33
     }
   ],
   "closed_positions": [
@@ -1641,12 +1635,10 @@ window.PORTFOLIO_C = {
     "total_trades": 32,
     "win_trades": 20,
     "win_rate": 62.5,
-    "total_realized_pnl_usd": 138.12,
-    "open_unrealized_pnl_usd": -2.61,
-    "portfolio_value": 2135.51,
-    "total_commission_usd": 64.0,
-    "skipped_gap": 14,
-    "skipped_zero_shares": 1,
+    "total_realized_pnl_usd": 138.11,
+    "open_unrealized_pnl_usd": 10.7,
+    "portfolio_value": 2148.81,
+    "skipped_gap": 15,
     "updated_at": "2026-07-14"
   }
 };

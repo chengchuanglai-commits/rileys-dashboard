@@ -151,6 +151,74 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "STRS",
+      "name": "斯特拉斯资产",
+      "action": "BUY",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.48,
+      "allocated_usd": 500,
+      "shares": 24.4141,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 23.55,
+      "stop_loss": 20.07,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {},
+      "position_usd": 208.64,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "YORW",
+      "name": "约克水务",
+      "action": "BUY",
+      "signal_date": "2026-07-14",
+      "entry_price": 31.07,
+      "allocated_usd": 500,
+      "shares": 16.0927,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 35.73,
+      "stop_loss": 30.45,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {},
+      "position_usd": 208.64,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "PFIS",
+      "name": "人民金融服务",
+      "action": "BUY",
+      "signal_date": "2026-07-14",
+      "entry_price": 67.12,
+      "allocated_usd": 500,
+      "shares": 7.4493,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 77.19,
+      "stop_loss": 65.78,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {},
+      "position_usd": 208.64,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "PLMR",
+      "name": "帕洛玛控股",
+      "action": "BUY",
+      "signal_date": "2026-07-14",
+      "entry_price": 138.84,
+      "allocated_usd": 500,
+      "shares": 3.6013,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 159.67,
+      "stop_loss": 136.06,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {},
+      "position_usd": 208.64,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2691,7 +2759,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 148.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 94,
+    "skipped_no_cash": 99,
     "updated_at": "2026-07-14"
   }
 };

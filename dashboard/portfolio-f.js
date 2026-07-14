@@ -70,40 +70,6 @@ window.PORTFOLIO_F = {
       }
     },
     {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 60.37,
-      "allocated_usd": 500,
-      "shares": 8,
-      "t1_shares": 4,
-      "t2_shares": 4,
-      "actual_position_usd": 482.96,
-      "entry_commission": 1.0,
-      "take_profit_1": 55.84,
-      "take_profit_2": 51.31,
-      "stop_loss": 62.18,
-      "max_hold_date": "2026-07-14",
-      "day1_open": 60.1,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 60.1,
-          "high": 61.22,
-          "low": 59.14,
-          "close": 59.34,
-          "pnl_pct": 1.71
-        },
-        "2026-07-13": {
-          "open": 59.97,
-          "high": 60.89,
-          "low": 58.14,
-          "close": 59.76,
-          "pnl_pct": 1.01
-        }
-      }
-    },
-    {
       "ticker": "TCBK",
       "name": "TCBK",
       "action": "SELL",
@@ -1562,17 +1528,72 @@ window.PORTFOLIO_F = {
       "commission_total": 3.0,
       "realized_pnl_usd": 13.15,
       "sl_unified": false
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.37,
+      "allocated_usd": 500,
+      "shares": 8,
+      "t1_shares": 4,
+      "t2_shares": 4,
+      "actual_position_usd": 482.96,
+      "entry_commission": 1.0,
+      "take_profit_1": 55.84,
+      "take_profit_2": 51.31,
+      "stop_loss": 62.18,
+      "max_hold_date": "2026-07-14",
+      "day1_open": 60.1,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.22,
+          "low": 59.14,
+          "close": 59.34,
+          "pnl_pct": 1.71
+        },
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 59.76,
+          "pnl_pct": 1.01
+        },
+        "2026-07-14": {
+          "open": 59.43,
+          "high": 60.46,
+          "low": 59.2,
+          "close": 60.35,
+          "pnl_pct": 0.03
+        }
+      },
+      "t1_exit_date": "2026-07-14",
+      "t1_exit_price": 60.35,
+      "t1_exit_reason": "max_hold",
+      "t2_exit_date": "2026-07-14",
+      "t2_exit_price": 60.35,
+      "t2_exit_reason": "max_hold",
+      "t1_gross_pnl": 0.08,
+      "t2_gross_pnl": 0.08,
+      "close_date": "2026-07-14",
+      "close_reason": "max_hold+max_hold",
+      "final_pnl_pct": 0.03,
+      "commission_total": 3.0,
+      "realized_pnl_usd": -2.84,
+      "sl_unified": false
     }
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 29,
+    "total_trades": 30,
     "win_trades": 15,
-    "win_rate": 51.7,
-    "total_realized_pnl_usd": 153.36,
-    "open_unrealized_pnl_usd": 7.18,
-    "portfolio_value": 2160.54,
-    "total_commission_usd": 75.0,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 150.52,
+    "open_unrealized_pnl_usd": 3.31,
+    "portfolio_value": 2153.83,
+    "total_commission_usd": 78.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 7,
     "updated_at": "2026-07-14"
