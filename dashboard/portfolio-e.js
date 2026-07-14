@@ -178,6 +178,44 @@ window.PORTFOLIO_E = {
       "vix": 17.16,
       "daily_prices": {},
       "gap_checked": true
+    },
+    {
+      "ticker": "TCBK",
+      "name": "TCBK",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 60.07,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 480.56,
+      "entry_commission": 1.0,
+      "take_profit": 54.06,
+      "stop_loss": 61.87,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-17",
+      "regime": "neutral",
+      "vix": 17.33,
+      "daily_prices": {},
+      "gap_checked": true
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.93,
+      "allocated_usd": 500,
+      "shares": 23,
+      "actual_position_usd": 481.39,
+      "entry_commission": 1.0,
+      "take_profit": 18.84,
+      "stop_loss": 21.56,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-17",
+      "regime": "neutral",
+      "vix": 17.33,
+      "daily_prices": {},
+      "gap_checked": true
     }
   ],
   "closed_positions": [
@@ -479,6 +517,39 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -16.16
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 27.55,
+      "allocated_usd": 500,
+      "shares": 18,
+      "actual_position_usd": 495.9,
+      "entry_commission": 1.0,
+      "take_profit": 24.8,
+      "stop_loss": 28.38,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-12",
+      "regime": "neutral",
+      "vix": 19.87,
+      "daily_prices": {
+        "2026-06-10": {
+          "open": 23.42,
+          "high": 23.76,
+          "low": 23.02,
+          "close": 23.34,
+          "pnl_pct": 9.98
+        }
+      },
+      "close_date": "2026-06-10",
+      "close_price": 24.8,
+      "final_pnl_pct": 9.98,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 47.49
     },
     {
       "ticker": "PBHC",
@@ -1391,16 +1462,16 @@ window.PORTFOLIO_E = {
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 30,
-    "win_trades": 14,
-    "win_rate": 46.7,
-    "total_realized_pnl_usd": 119.54,
+    "total_trades": 31,
+    "win_trades": 15,
+    "win_rate": 48.4,
+    "total_realized_pnl_usd": 167.03,
     "open_unrealized_pnl_usd": -4.05,
-    "portfolio_value": 2115.49,
-    "total_commission_usd": 60.0,
+    "portfolio_value": 2162.98,
+    "total_commission_usd": 62.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
-    "skipped_gap": 10,
-    "updated_at": "2026-07-13"
+    "skipped_gap": 9,
+    "updated_at": "2026-07-14"
   }
 };

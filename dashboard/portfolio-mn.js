@@ -2563,9 +2563,9 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 1.33
         },
         "2026-07-13": {
-          "open": 276.05,
+          "open": 276.0,
           "high": 280.86,
-          "low": 273.23,
+          "low": 269.46,
           "close": 279.2,
           "pnl_pct": 2.51
         }
@@ -2618,6 +2618,37 @@ window.PORTFOLIO_MN = {
       "position_usd": 210.22
     },
     {
+      "ticker": "ITIC",
+      "name": "投资者信托保险",
+      "action": "BUY",
+      "signal_date": "2026-07-10",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1.8116,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 317.4,
+      "stop_loss": 270.48,
+      "max_hold_date": "2026-07-14",
+      "daily_prices": {
+        "2026-07-13": {
+          "open": 276.0,
+          "high": 280.86,
+          "low": 269.46,
+          "close": 279.2,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 270.48,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.19,
+      "position_usd": 209.37
+    },
+    {
       "ticker": "SKWD",
       "name": "Skyward Specialty Insurance",
       "action": "BUY",
@@ -2647,37 +2678,6 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.21,
       "position_usd": 209.37
-    },
-    {
-      "ticker": "AOUT",
-      "name": "American Outdoor Brands",
-      "action": "BUY",
-      "signal_date": "2026-07-10",
-      "entry_price": 14.34,
-      "allocated_usd": 500,
-      "shares": 34.8675,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 16.49,
-      "stop_loss": 14.05,
-      "max_hold_date": "2026-07-14",
-      "daily_prices": {
-        "2026-07-13": {
-          "open": 14.41,
-          "high": 14.97,
-          "low": 13.95,
-          "close": 14.21,
-          "pnl_pct": -2.02
-        }
-      },
-      "close_date": "2026-07-13",
-      "close_price": 14.05,
-      "final_pnl_pct": -2.02,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.23,
-      "position_usd": 209.37
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
@@ -2685,13 +2685,13 @@ window.PORTFOLIO_MN = {
     "total_trades": 74,
     "win_trades": 22,
     "win_rate": 29.7,
-    "total_realized_pnl_usd": 86.37,
+    "total_realized_pnl_usd": 86.41,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2111.01,
+    "portfolio_value": 2111.05,
     "total_commission_usd": 148.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 94,
-    "updated_at": "2026-07-13"
+    "updated_at": "2026-07-14"
   }
 };

@@ -1,7 +1,22 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {}
+    },
     {
       "ticker": "SKWD",
       "name": "SKWD",
@@ -24,6 +39,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.71
         },
         "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
           "close": 59.76,
           "pnl_pct": 1.01
         }
@@ -51,6 +69,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": -1.95
         },
         "2026-07-13": {
+          "open": 66.47,
+          "high": 67.12,
+          "low": 66.22,
           "close": 66.71,
           "pnl_pct": -2.24
         }
@@ -78,6 +99,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.97
         },
         "2026-07-13": {
+          "open": 56.91,
+          "high": 57.6,
+          "low": 56.35,
           "close": 56.43,
           "pnl_pct": -0.98
         }
@@ -96,12 +120,37 @@ window.PORTFOLIO_B = {
       "take_profit": 253.92,
       "stop_loss": 287.04,
       "max_hold_date": "2026-07-20",
-      "daily_prices": {
-        "2026-07-13": {
-          "close": 279.2,
-          "pnl_pct": -1.16
-        }
-      }
+      "daily_prices": {}
+    },
+    {
+      "ticker": "TCBK",
+      "name": "TCBK",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 60.07,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 480.56,
+      "entry_commission": 1.0,
+      "take_profit": 55.26,
+      "stop_loss": 62.47,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {}
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.93,
+      "allocated_usd": 500,
+      "shares": 23,
+      "actual_position_usd": 481.39,
+      "entry_commission": 1.0,
+      "take_profit": 19.26,
+      "stop_loss": 21.77,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -541,20 +590,20 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-10": {
-          "open": 28.98,
-          "high": 29.4,
-          "low": 28.49,
-          "close": 28.89,
-          "pnl_pct": -3.99
+          "open": 23.42,
+          "high": 23.76,
+          "low": 23.02,
+          "close": 23.34,
+          "pnl_pct": 7.99
         }
       },
       "close_date": "2026-06-10",
-      "close_price": 28.65,
-      "final_pnl_pct": -3.99,
-      "close_reason": "stop_loss",
+      "close_price": 25.35,
+      "final_pnl_pct": 7.99,
+      "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -21.79
+      "realized_pnl_usd": 37.62
     },
     {
       "ticker": "PBHC",
@@ -1935,7 +1984,7 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.04
         },
         "2026-07-13": {
-          "open": 322.23,
+          "open": 315.09,
           "high": 316.42,
           "low": 304.77,
           "close": 309.25,
@@ -1993,9 +2042,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 2.55
         },
         "2026-07-13": {
-          "open": 28.46,
-          "high": 29.1,
-          "low": 28.46,
+          "open": 28.16,
+          "high": 29.15,
+          "low": 28.16,
           "close": 28.82,
           "pnl_pct": 2.01
         }
@@ -2007,41 +2056,18 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 8.05
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-07-10": {
-          "close": 8.62,
-          "pnl_pct": 30.26
-        }
-      },
-      "close_date": "2026-07-10",
-      "close_price": 8.62,
-      "final_pnl_pct": 30.26,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 151.29
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 46,
+    "total_trades": 45,
     "win_trades": 22,
-    "win_rate": 47.8,
-    "total_realized_pnl_usd": 168.47,
-    "open_unrealized_pnl_usd": -16.85,
-    "portfolio_value": 2151.62,
+    "win_rate": 48.9,
+    "total_realized_pnl_usd": 76.59,
+    "open_unrealized_pnl_usd": -12.73,
+    "portfolio_value": 2063.86,
+    "total_commission_usd": 90.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-14"
   }
 };
