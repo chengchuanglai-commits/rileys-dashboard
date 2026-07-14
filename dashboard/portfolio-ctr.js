@@ -49,12 +49,12 @@ window.PORTFOLIO_CTR = {
           "open": 59.43,
           "high": 60.46,
           "low": 59.2,
-          "close": 60.35,
-          "pnl_pct": 0.03
+          "close": 59.62,
+          "pnl_pct": 1.24
         }
       },
       "position_usd": 211.31,
-      "unrealized_pnl_usd": 0.06
+      "unrealized_pnl_usd": 2.62
     },
     {
       "ticker": "PFIS",
@@ -87,12 +87,12 @@ window.PORTFOLIO_CTR = {
           "open": 66.76,
           "high": 67.61,
           "low": 66.46,
-          "close": 67.12,
-          "pnl_pct": -2.87
+          "close": 66.59,
+          "pnl_pct": -2.05
         }
       },
       "position_usd": 211.31,
-      "unrealized_pnl_usd": -6.06
+      "unrealized_pnl_usd": -4.33
     },
     {
       "ticker": "ITIC",
@@ -111,12 +111,12 @@ window.PORTFOLIO_CTR = {
           "open": 278.21,
           "high": 279.62,
           "low": 278.21,
-          "close": 279.1,
-          "pnl_pct": -1.12
+          "close": 278.54,
+          "pnl_pct": -0.92
         }
       },
       "position_usd": 213.11,
-      "unrealized_pnl_usd": -2.39
+      "unrealized_pnl_usd": -1.96
     },
     {
       "ticker": "TCBK",
@@ -1630,8 +1630,8 @@ window.PORTFOLIO_CTR = {
     "win_trades": 17,
     "win_rate": 53.1,
     "total_realized_pnl_usd": 131.1,
-    "open_unrealized_pnl_usd": -8.39,
-    "portfolio_value": 2122.71,
+    "open_unrealized_pnl_usd": -3.67,
+    "portfolio_value": 2127.43,
     "total_commission_usd": 64.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,

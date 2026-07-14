@@ -32,8 +32,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-15",
       "daily_prices": {
         "2026-07-14": {
-          "close": 279.1,
-          "pnl_pct": -1.12
+          "close": 279.3,
+          "pnl_pct": -1.2
         }
       },
       "gap_checked": true,
@@ -55,8 +55,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-14": {
-          "close": 59.42,
-          "pnl_pct": 1.08
+          "close": 59.01,
+          "pnl_pct": 1.76
         }
       },
       "gap_checked": true,
@@ -78,8 +78,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-14": {
-          "close": 20.48,
-          "pnl_pct": 2.15
+          "close": 20.45,
+          "pnl_pct": 2.29
         }
       },
       "gap_checked": true,
@@ -533,6 +533,43 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -0.02
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 347.2,
+      "entry_commission": 1.0,
+      "take_profit": 147.56,
+      "stop_loss": 178.81,
+      "max_hold_date": "2026-06-16",
+      "daily_prices": {
+        "2026-06-15": {
+          "open": 172.51,
+          "high": 172.79,
+          "low": 162.32,
+          "close": 164.1,
+          "pnl_pct": 5.47
+        },
+        "2026-06-16": {
+          "open": 165.18,
+          "high": 166.94,
+          "low": 159.22,
+          "close": 159.8,
+          "pnl_pct": 7.95
+        }
+      },
+      "close_date": "2026-06-16",
+      "close_price": 159.8,
+      "final_pnl_pct": 7.95,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 25.6
     },
     {
       "ticker": "MFIN",
@@ -1263,34 +1300,6 @@ window.PORTFOLIO_D = {
       "realized_pnl_usd": 2.88
     },
     {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-12",
-      "entry_price": 173.6,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 347.2,
-      "entry_commission": 1.0,
-      "take_profit": 147.56,
-      "stop_loss": 178.81,
-      "max_hold_date": "2026-06-16",
-      "daily_prices": {
-        "2026-07-14": {
-          "close": 150.95,
-          "pnl_pct": 13.05
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 151.73,
-      "day1_gap_pct": -12.6,
-      "close_date": "2026-07-14",
-      "close_price": 150.95,
-      "final_pnl_pct": 13.05,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": 65.24
-    },
-    {
       "ticker": "SRRK",
       "name": "SRRK",
       "action": "SELL",
@@ -1312,18 +1321,18 @@ window.PORTFOLIO_D = {
           "pnl_pct": 0.22
         },
         "2026-07-14": {
-          "close": 54.0,
-          "pnl_pct": 1.82
+          "close": 54.03,
+          "pnl_pct": 1.76
         }
       },
       "gap_checked": true,
       "day1_open": 54.71,
       "day1_gap_pct": -0.53,
       "close_date": "2026-07-14",
-      "close_price": 54.0,
-      "final_pnl_pct": 1.82,
+      "close_price": 54.03,
+      "final_pnl_pct": 1.76,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 9.09
+      "realized_pnl_usd": 8.82
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1331,10 +1340,10 @@ window.PORTFOLIO_D = {
     "total_trades": 36,
     "win_trades": 21,
     "win_rate": 58.3,
-    "total_realized_pnl_usd": 212.1,
-    "open_unrealized_pnl_usd": 10.55,
-    "portfolio_value": 2222.65,
+    "total_realized_pnl_usd": 172.19,
+    "open_unrealized_pnl_usd": 14.25,
+    "portfolio_value": 2186.44,
     "skipped_gap": 12,
-    "updated_at": "2026-07-14"
+    "updated_at": "2026-07-15"
   }
 };

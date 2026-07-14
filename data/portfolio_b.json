@@ -45,8 +45,8 @@
           "pnl_pct": 1.01
         },
         "2026-07-14": {
-          "close": 60.35,
-          "pnl_pct": 0.03
+          "close": 59.62,
+          "pnl_pct": 1.24
         }
       }
     },
@@ -79,8 +79,8 @@
           "pnl_pct": -2.24
         },
         "2026-07-14": {
-          "close": 67.12,
-          "pnl_pct": -2.87
+          "close": 66.59,
+          "pnl_pct": -2.05
         }
       }
     },
@@ -113,8 +113,8 @@
           "pnl_pct": -0.98
         },
         "2026-07-14": {
-          "close": 55.88,
-          "pnl_pct": -0.0
+          "close": 55.79,
+          "pnl_pct": 0.16
         }
       }
     },
@@ -133,8 +133,8 @@
       "max_hold_date": "2026-07-20",
       "daily_prices": {
         "2026-07-14": {
-          "close": 279.1,
-          "pnl_pct": -1.12
+          "close": 279.3,
+          "pnl_pct": -1.2
         }
       }
     },
@@ -153,8 +153,8 @@
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-14": {
-          "close": 59.42,
-          "pnl_pct": 1.08
+          "close": 59.01,
+          "pnl_pct": 1.76
         }
       }
     },
@@ -173,8 +173,8 @@
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-14": {
-          "close": 20.48,
-          "pnl_pct": 2.15
+          "close": 20.45,
+          "pnl_pct": 2.29
         }
       }
     }
@@ -2090,8 +2090,8 @@
     "win_trades": 22,
     "win_rate": 48.9,
     "total_realized_pnl_usd": 76.59,
-    "open_unrealized_pnl_usd": -3.65,
-    "portfolio_value": 2072.94,
-    "updated_at": "2026-07-14"
+    "open_unrealized_pnl_usd": 11.0,
+    "portfolio_value": 2087.59,
+    "updated_at": "2026-07-15"
   }
 }
