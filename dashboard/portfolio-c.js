@@ -50,12 +50,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.01
         },
         "2026-07-14": {
-          "close": 59.62,
-          "pnl_pct": 1.24
+          "close": 59.03,
+          "pnl_pct": 2.22
         }
       },
       "position_usd": 211.95,
-      "unrealized_pnl_usd": 2.5,
+      "unrealized_pnl_usd": 4.71,
       "gap_checked": true,
       "day1_gap_pct": -1.56
     },
@@ -75,12 +75,12 @@ window.PORTFOLIO_C = {
       "day1_open": 278.21,
       "daily_prices": {
         "2026-07-14": {
-          "close": 279.3,
-          "pnl_pct": -1.2
+          "close": 278.07,
+          "pnl_pct": -0.75
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": -1.97,
+      "unrealized_pnl_usd": -1.6,
       "gap_checked": true,
       "day1_gap_pct": 0.8
     },
@@ -100,8 +100,8 @@ window.PORTFOLIO_C = {
       "day1_open": 58.89,
       "daily_prices": {
         "2026-07-14": {
-          "close": 59.01,
-          "pnl_pct": 1.76
+          "close": 58.98,
+          "pnl_pct": 1.81
         }
       },
       "position_usd": 213.81,
@@ -125,8 +125,8 @@ window.PORTFOLIO_C = {
       "day1_open": 20.86,
       "daily_prices": {
         "2026-07-14": {
-          "close": 20.45,
-          "pnl_pct": 2.29
+          "close": 20.46,
+          "pnl_pct": 2.25
         }
       },
       "position_usd": 213.81,
@@ -1636,8 +1636,8 @@ window.PORTFOLIO_C = {
     "win_trades": 20,
     "win_rate": 62.5,
     "total_realized_pnl_usd": 138.11,
-    "open_unrealized_pnl_usd": 20.45,
-    "portfolio_value": 2158.56,
+    "open_unrealized_pnl_usd": 27.65,
+    "portfolio_value": 2165.76,
     "skipped_gap": 15,
     "updated_at": "2026-07-15"
   }

@@ -110,9 +110,9 @@ window.PORTFOLIO_E = {
         "2026-07-14": {
           "open": 278.21,
           "high": 279.62,
-          "low": 278.21,
-          "close": 278.54,
-          "pnl_pct": -0.92
+          "low": 278.07,
+          "close": 278.07,
+          "pnl_pct": -0.75
         }
       },
       "gap_checked": true,
@@ -133,7 +133,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 16.65,
+      "vix": 16.39,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -152,7 +152,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 16.65,
+      "vix": 16.39,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1432,18 +1432,18 @@ window.PORTFOLIO_E = {
         "2026-07-14": {
           "open": 59.43,
           "high": 60.46,
-          "low": 59.2,
-          "close": 59.66,
-          "pnl_pct": 1.18
+          "low": 59.03,
+          "close": 59.03,
+          "pnl_pct": 2.22
         }
       },
       "close_date": "2026-07-14",
-      "close_price": 59.66,
-      "final_pnl_pct": 1.18,
+      "close_price": 59.03,
+      "final_pnl_pct": 2.22,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.7
+      "realized_pnl_usd": 8.72
     },
     {
       "ticker": "PFIS",
@@ -1480,7 +1480,7 @@ window.PORTFOLIO_E = {
           "open": 66.76,
           "high": 67.61,
           "low": 66.46,
-          "close": 66.59,
+          "close": 66.87,
           "pnl_pct": -3.0
         }
       },
@@ -1498,9 +1498,9 @@ window.PORTFOLIO_E = {
     "total_trades": 33,
     "win_trades": 16,
     "win_rate": 48.5,
-    "total_realized_pnl_usd": 155.03,
-    "open_unrealized_pnl_usd": -0.23,
-    "portfolio_value": 2154.8,
+    "total_realized_pnl_usd": 160.05,
+    "open_unrealized_pnl_usd": 0.24,
+    "portfolio_value": 2160.29,
     "total_commission_usd": 66.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
