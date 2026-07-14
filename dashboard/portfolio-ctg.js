@@ -48,13 +48,13 @@ window.PORTFOLIO_CTG = {
         "2026-07-14": {
           "open": 59.43,
           "high": 60.46,
-          "low": 59.03,
-          "close": 59.03,
-          "pnl_pct": 2.22
+          "low": 58.54,
+          "close": 58.78,
+          "pnl_pct": 2.63
         }
       },
       "position_usd": 212.8,
-      "unrealized_pnl_usd": 4.72
+      "unrealized_pnl_usd": 5.6
     },
     {
       "ticker": "ITIC",
@@ -71,14 +71,14 @@ window.PORTFOLIO_CTG = {
       "daily_prices": {
         "2026-07-14": {
           "open": 278.21,
-          "high": 279.62,
+          "high": 280.3,
           "low": 278.07,
-          "close": 278.07,
-          "pnl_pct": -0.75
+          "close": 280.3,
+          "pnl_pct": -1.56
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -1.61
+      "unrealized_pnl_usd": -3.35
     },
     {
       "ticker": "TCBK",
@@ -1520,8 +1520,8 @@ window.PORTFOLIO_CTG = {
     "win_trades": 20,
     "win_rate": 64.5,
     "total_realized_pnl_usd": 146.71,
-    "open_unrealized_pnl_usd": 3.11,
-    "portfolio_value": 2149.82,
+    "open_unrealized_pnl_usd": 2.25,
+    "portfolio_value": 2148.96,
     "total_commission_usd": 62.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,

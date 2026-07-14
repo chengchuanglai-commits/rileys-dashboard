@@ -109,10 +109,10 @@
       "daily_prices": {
         "2026-07-14": {
           "open": 278.21,
-          "high": 279.62,
+          "high": 280.3,
           "low": 278.07,
-          "close": 278.07,
-          "pnl_pct": -0.75
+          "close": 280.3,
+          "pnl_pct": -1.56
         }
       },
       "gap_checked": true,
@@ -133,7 +133,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 16.39,
+      "vix": 16.44,
       "daily_prices": {},
       "gap_checked": true
     },
@@ -152,7 +152,7 @@
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 16.39,
+      "vix": 16.44,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1432,18 +1432,18 @@
         "2026-07-14": {
           "open": 59.43,
           "high": 60.46,
-          "low": 59.03,
-          "close": 59.03,
-          "pnl_pct": 2.22
+          "low": 58.54,
+          "close": 58.7,
+          "pnl_pct": 2.77
         }
       },
       "close_date": "2026-07-14",
-      "close_price": 59.03,
-      "final_pnl_pct": 2.22,
+      "close_price": 58.7,
+      "final_pnl_pct": 2.77,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.72
+      "realized_pnl_usd": 11.38
     },
     {
       "ticker": "PFIS",
@@ -1479,8 +1479,8 @@
         "2026-07-14": {
           "open": 66.76,
           "high": 67.61,
-          "low": 66.46,
-          "close": 66.87,
+          "low": 66.43,
+          "close": 66.88,
           "pnl_pct": -3.0
         }
       },
@@ -1498,9 +1498,9 @@
     "total_trades": 33,
     "win_trades": 16,
     "win_rate": 48.5,
-    "total_realized_pnl_usd": 160.05,
-    "open_unrealized_pnl_usd": 0.24,
-    "portfolio_value": 2160.29,
+    "total_realized_pnl_usd": 162.71,
+    "open_unrealized_pnl_usd": -2.0,
+    "portfolio_value": 2160.71,
     "total_commission_usd": 66.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

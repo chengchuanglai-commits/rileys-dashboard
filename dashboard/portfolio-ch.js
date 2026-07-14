@@ -57,14 +57,14 @@ window.PORTFOLIO_CH = {
       "daily_prices": {
         "2026-07-14": {
           "open": 278.21,
-          "high": 279.62,
+          "high": 280.3,
           "low": 278.07,
-          "close": 278.07,
-          "pnl_pct": -0.75
+          "close": 280.3,
+          "pnl_pct": -1.56
         }
       },
       "position_usd": 211.21,
-      "unrealized_pnl_usd": -1.58
+      "unrealized_pnl_usd": -3.29
     },
     {
       "ticker": "TCBK",
@@ -1230,8 +1230,8 @@ window.PORTFOLIO_CH = {
     "win_trades": 16,
     "win_rate": 48.5,
     "total_realized_pnl_usd": 112.09,
-    "open_unrealized_pnl_usd": -1.12,
-    "portfolio_value": 2110.97,
+    "open_unrealized_pnl_usd": -2.83,
+    "portfolio_value": 2109.26,
     "total_commission_usd": 66.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
