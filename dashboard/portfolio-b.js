@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
+// Plan B 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -51,6 +51,10 @@ window.PORTFOLIO_B = {
           "low": 58.23,
           "close": 58.36,
           "pnl_pct": 3.33
+        },
+        "2026-07-15": {
+          "close": 56.83,
+          "pnl_pct": 5.86
         }
       }
     },
@@ -81,6 +85,10 @@ window.PORTFOLIO_B = {
           "low": 66.22,
           "close": 66.71,
           "pnl_pct": -2.24
+        },
+        "2026-07-15": {
+          "close": 66.96,
+          "pnl_pct": -2.62
         }
       }
     },
@@ -111,6 +119,10 @@ window.PORTFOLIO_B = {
           "low": 56.35,
           "close": 56.43,
           "pnl_pct": -0.98
+        },
+        "2026-07-15": {
+          "close": 55.94,
+          "pnl_pct": -0.11
         }
       }
     },
@@ -127,7 +139,12 @@ window.PORTFOLIO_B = {
       "take_profit": 253.92,
       "stop_loss": 287.04,
       "max_hold_date": "2026-07-20",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-15": {
+          "close": 276.4,
+          "pnl_pct": -0.14
+        }
+      }
     },
     {
       "ticker": "TCBK",
@@ -142,7 +159,12 @@ window.PORTFOLIO_B = {
       "take_profit": 55.26,
       "stop_loss": 62.47,
       "max_hold_date": "2026-07-21",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-15": {
+          "close": 59.64,
+          "pnl_pct": 0.72
+        }
+      }
     },
     {
       "ticker": "STRS",
@@ -157,7 +179,12 @@ window.PORTFOLIO_B = {
       "take_profit": 19.26,
       "stop_loss": 21.77,
       "max_hold_date": "2026-07-21",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-15": {
+          "close": 20.34,
+          "pnl_pct": 2.82
+        }
+      }
     },
     {
       "ticker": "SMPL",
@@ -172,7 +199,12 @@ window.PORTFOLIO_B = {
       "take_profit": 11.36,
       "stop_loss": 12.84,
       "max_hold_date": "2026-07-22",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-15": {
+          "close": 12.65,
+          "pnl_pct": -2.43
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -2086,10 +2118,8 @@ window.PORTFOLIO_B = {
     "win_trades": 22,
     "win_rate": 48.9,
     "total_realized_pnl_usd": 76.59,
-    "open_unrealized_pnl_usd": -1.53,
-    "portfolio_value": 2075.06,
-    "total_commission_usd": 90.0,
-    "skipped_zero_shares": 1,
+    "open_unrealized_pnl_usd": 20.5,
+    "portfolio_value": 2097.09,
     "updated_at": "2026-07-15"
   }
 };

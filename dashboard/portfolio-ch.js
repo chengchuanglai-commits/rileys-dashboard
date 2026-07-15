@@ -43,30 +43,6 @@ window.PORTFOLIO_CH = {
       "unrealized_pnl_usd": 0.46
     },
     {
-      "ticker": "ITIC",
-      "name": "ITIC",
-      "action": "SELL",
-      "signal_date": "2026-07-13",
-      "entry_price": 276.0,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 276.0,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-14",
-      "day1_open": 278.21,
-      "daily_prices": {
-        "2026-07-14": {
-          "open": 278.21,
-          "high": 280.3,
-          "low": 277.95,
-          "close": 278.72,
-          "pnl_pct": -0.99
-        }
-      },
-      "position_usd": 211.21,
-      "unrealized_pnl_usd": -2.09
-    },
-    {
       "ticker": "TCBK",
       "name": "TCBK",
       "action": "SELL",
@@ -76,11 +52,19 @@ window.PORTFOLIO_CH = {
       "shares": 8,
       "actual_position_usd": 480.56,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-14",
-      "day1_open": null,
-      "daily_prices": {},
+      "max_hold_date": "2026-07-15",
+      "day1_open": 58.59,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 58.59,
+          "high": 59.66,
+          "low": 58.59,
+          "close": 59.64,
+          "pnl_pct": 0.72
+        }
+      },
       "position_usd": 211.21,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 1.52
     },
     {
       "ticker": "STRS",
@@ -92,10 +76,34 @@ window.PORTFOLIO_CH = {
       "shares": 23,
       "actual_position_usd": 481.39,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-14",
+      "max_hold_date": "2026-07-15",
+      "day1_open": 20.66,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 20.66,
+          "low": 20.15,
+          "close": 20.34,
+          "pnl_pct": 2.82
+        }
+      },
+      "position_usd": 211.21,
+      "unrealized_pnl_usd": 5.96
+    },
+    {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-15",
       "day1_open": null,
       "daily_prices": {},
-      "position_usd": 211.21,
+      "position_usd": 211.18,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1222,19 +1230,49 @@ window.PORTFOLIO_CH = {
       "commission_total": 2.0,
       "realized_pnl_usd": 2.14,
       "position_usd": 211.42
+    },
+    {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-15",
+      "day1_open": 274.14,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 274.14,
+          "high": 278.9,
+          "low": 271.53,
+          "close": 276.4,
+          "pnl_pct": -0.14
+        }
+      },
+      "close_date": "2026-07-15",
+      "close_price": 276.4,
+      "final_pnl_pct": -0.14,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.3,
+      "position_usd": 211.21
     }
   ],
   "_note": "c-H 变体:Plan H 出场(TP15/SL2/2天)+ 跳空过滤 1.5%(信号同 c)",
   "stats": {
-    "total_trades": 33,
+    "total_trades": 34,
     "win_trades": 16,
-    "win_rate": 48.5,
-    "total_realized_pnl_usd": 112.09,
-    "open_unrealized_pnl_usd": -1.63,
-    "portfolio_value": 2110.46,
-    "total_commission_usd": 66.0,
+    "win_rate": 47.1,
+    "total_realized_pnl_usd": 111.79,
+    "open_unrealized_pnl_usd": 7.94,
+    "portfolio_value": 2119.73,
+    "total_commission_usd": 68.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-14"
+    "updated_at": "2026-07-15"
   }
 };

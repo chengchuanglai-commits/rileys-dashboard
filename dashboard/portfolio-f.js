@@ -85,8 +85,16 @@ window.PORTFOLIO_F = {
       "take_profit_2": 51.06,
       "stop_loss": 61.87,
       "max_hold_date": "2026-07-17",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 58.59,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 58.59,
+          "high": 59.66,
+          "low": 58.59,
+          "close": 59.59,
+          "pnl_pct": 0.8
+        }
+      }
     },
     {
       "ticker": "STRS",
@@ -104,8 +112,16 @@ window.PORTFOLIO_F = {
       "take_profit_2": 17.79,
       "stop_loss": 21.56,
       "max_hold_date": "2026-07-17",
-      "day1_open": null,
-      "daily_prices": {}
+      "day1_open": 20.66,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 20.66,
+          "low": 20.15,
+          "close": 20.26,
+          "pnl_pct": 3.2
+        }
+      }
     },
     {
       "ticker": "SMPL",
@@ -1610,8 +1626,8 @@ window.PORTFOLIO_F = {
     "win_trades": 16,
     "win_rate": 53.3,
     "total_realized_pnl_usd": 166.44,
-    "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2169.75,
+    "open_unrealized_pnl_usd": 20.56,
+    "portfolio_value": 2187.0,
     "total_commission_usd": 78.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 7,

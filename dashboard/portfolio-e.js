@@ -141,8 +141,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-07-16",
       "regime": "neutral",
       "vix": 17.16,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 274.14,
+          "high": 278.9,
+          "low": 271.53,
+          "close": 276.4,
+          "pnl_pct": -0.14
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 274.14
     },
     {
       "ticker": "TCBK",
@@ -160,8 +169,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
       "vix": 17.16,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 58.59,
+          "high": 59.66,
+          "low": 58.59,
+          "close": 59.59,
+          "pnl_pct": 0.8
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 58.59
     },
     {
       "ticker": "STRS",
@@ -179,8 +197,17 @@ window.PORTFOLIO_E = {
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
       "vix": 17.16,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 20.66,
+          "low": 20.15,
+          "close": 20.26,
+          "pnl_pct": 3.2
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 20.66
     },
     {
       "ticker": "SMPL",
@@ -197,7 +224,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-20",
       "regime": "neutral",
-      "vix": 16.38,
+      "vix": 16.17,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1497,8 +1524,8 @@ window.PORTFOLIO_E = {
     "win_trades": 16,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 181.11,
-    "open_unrealized_pnl_usd": -7.92,
-    "portfolio_value": 2173.19,
+    "open_unrealized_pnl_usd": 7.94,
+    "portfolio_value": 2189.05,
     "total_commission_usd": 64.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
