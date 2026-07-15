@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 20.66,
           "high": 21.28,
           "low": 20.15,
-          "close": 21.03,
-          "pnl_pct": 2.79
+          "close": 20.76,
+          "pnl_pct": 1.47
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": 5.82
+      "unrealized_pnl_usd": 3.07
     },
     {
       "ticker": "YORW",
@@ -194,54 +194,46 @@ window.PORTFOLIO_MN = {
         "2026-07-15": {
           "open": 30.94,
           "high": 31.12,
-          "low": 30.7,
-          "close": 30.75,
-          "pnl_pct": -0.81
+          "low": 30.51,
+          "close": 30.55,
+          "pnl_pct": -1.45
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": -1.69
-    },
-    {
-      "ticker": "PFIS",
-      "name": "人民金融服务",
-      "action": "BUY",
-      "signal_date": "2026-07-14",
-      "entry_price": 66.68,
-      "allocated_usd": 500,
-      "shares": 7.4985,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 76.68,
-      "stop_loss": 65.35,
-      "max_hold_date": "2026-07-16",
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 67.4,
-          "high": 67.66,
-          "low": 66.28,
-          "close": 67.53,
-          "pnl_pct": 1.27
-        }
-      },
-      "position_usd": 208.64,
-      "unrealized_pnl_usd": 2.65
+      "unrealized_pnl_usd": -3.03
     },
     {
       "ticker": "TCBK",
       "name": "Trico银行",
       "action": "BUY",
       "signal_date": "2026-07-15",
-      "entry_price": 59.88,
+      "entry_price": 59.46,
       "allocated_usd": 500,
-      "shares": 8.35,
+      "shares": 8.409,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 68.86,
-      "stop_loss": 58.68,
+      "take_profit": 68.38,
+      "stop_loss": 58.27,
       "max_hold_date": "2026-07-17",
       "daily_prices": {},
-      "position_usd": 208.22,
+      "position_usd": 207.8,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "PLMR",
+      "name": "Palomar控股",
+      "action": "BUY",
+      "signal_date": "2026-07-15",
+      "entry_price": 131.73,
+      "allocated_usd": 500,
+      "shares": 3.7956,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 151.49,
+      "stop_loss": 129.1,
+      "max_hold_date": "2026-07-17",
+      "daily_prices": {},
+      "position_usd": 207.8,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2788,8 +2780,8 @@ window.PORTFOLIO_MN = {
         "2026-07-15": {
           "open": 137.19,
           "high": 137.19,
-          "low": 131.26,
-          "close": 132.31,
+          "low": 131.24,
+          "close": 131.73,
           "pnl_pct": -2.0
         }
       },
@@ -2801,20 +2793,51 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.17,
       "position_usd": 208.64
+    },
+    {
+      "ticker": "SMPL",
+      "name": "简单食品",
+      "action": "BUY",
+      "signal_date": "2026-07-14",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40.4858,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 14.2,
+      "stop_loss": 12.1,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 12.38,
+          "high": 12.81,
+          "low": 12.01,
+          "close": 12.05,
+          "pnl_pct": -2.02
+        }
+      },
+      "close_date": "2026-07-15",
+      "close_price": 12.1,
+      "final_pnl_pct": -2.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.21,
+      "position_usd": 208.64
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 75,
+    "total_trades": 76,
     "win_trades": 22,
-    "win_rate": 29.3,
-    "total_realized_pnl_usd": 82.24,
-    "open_unrealized_pnl_usd": 31.42,
-    "portfolio_value": 2113.66,
-    "total_commission_usd": 150.0,
+    "win_rate": 28.9,
+    "total_realized_pnl_usd": 78.03,
+    "open_unrealized_pnl_usd": 24.68,
+    "portfolio_value": 2102.71,
+    "total_commission_usd": 152.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 104,
+    "skipped_no_cash": 103,
     "updated_at": "2026-07-15"
   }
 };

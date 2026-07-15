@@ -32,8 +32,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-15": {
-          "close": 59.89,
-          "pnl_pct": 0.3
+          "close": 59.46,
+          "pnl_pct": 1.02
         }
       },
       "gap_checked": true,
@@ -55,8 +55,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-15": {
-          "close": 21.15,
-          "pnl_pct": -1.05
+          "close": 20.76,
+          "pnl_pct": 0.81
         }
       },
       "gap_checked": true,
@@ -78,8 +78,8 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-17",
       "daily_prices": {
         "2026-07-15": {
-          "close": 12.19,
-          "pnl_pct": 1.3
+          "close": 12.04,
+          "pnl_pct": 2.51
         }
       },
       "gap_checked": true,
@@ -1324,17 +1324,17 @@ window.PORTFOLIO_D = {
           "open": 274.14,
           "high": 279.3,
           "low": 271.53,
-          "close": 278.77,
-          "pnl_pct": -1.0
+          "close": 274.77,
+          "pnl_pct": 0.45
         }
       },
       "close_date": "2026-07-15",
-      "close_price": 278.77,
-      "final_pnl_pct": -1.0,
+      "close_price": 274.77,
+      "final_pnl_pct": 0.45,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.76
+      "realized_pnl_usd": -0.76
     },
     {
       "ticker": "SRRK",
@@ -1358,28 +1358,28 @@ window.PORTFOLIO_D = {
           "pnl_pct": 0.22
         },
         "2026-07-15": {
-          "close": 54.06,
-          "pnl_pct": 1.71
+          "close": 53.78,
+          "pnl_pct": 2.22
         }
       },
       "gap_checked": true,
       "day1_open": 53.54,
       "day1_gap_pct": -2.65,
       "close_date": "2026-07-15",
-      "close_price": 54.06,
-      "final_pnl_pct": 1.71,
+      "close_price": 53.78,
+      "final_pnl_pct": 2.22,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 8.55
+      "realized_pnl_usd": 11.09
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 37,
-    "win_trades": 21,
-    "win_rate": 56.8,
-    "total_realized_pnl_usd": 167.16,
-    "open_unrealized_pnl_usd": 2.75,
-    "portfolio_value": 2169.91,
+    "win_trades": 22,
+    "win_rate": 59.5,
+    "total_realized_pnl_usd": 173.7,
+    "open_unrealized_pnl_usd": 21.7,
+    "portfolio_value": 2195.4,
     "skipped_gap": 12,
     "updated_at": "2026-07-16"
   }

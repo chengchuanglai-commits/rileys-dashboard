@@ -56,12 +56,12 @@ window.PORTFOLIO_CTG = {
           "open": 58.33,
           "high": 58.33,
           "low": 56.16,
-          "close": 57.6,
-          "pnl_pct": 4.59
+          "close": 56.94,
+          "pnl_pct": 5.68
         }
       },
       "position_usd": 212.8,
-      "unrealized_pnl_usd": 9.77
+      "unrealized_pnl_usd": 12.09
     },
     {
       "ticker": "ITIC",
@@ -87,12 +87,12 @@ window.PORTFOLIO_CTG = {
           "open": 274.14,
           "high": 279.3,
           "low": 271.53,
-          "close": 278.77,
-          "pnl_pct": -1.0
+          "close": 274.77,
+          "pnl_pct": 0.45
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -2.15
+      "unrealized_pnl_usd": 0.97
     },
     {
       "ticker": "TCBK",
@@ -111,12 +111,12 @@ window.PORTFOLIO_CTG = {
           "open": 58.59,
           "high": 59.92,
           "low": 58.59,
-          "close": 59.88,
-          "pnl_pct": 0.32
+          "close": 59.46,
+          "pnl_pct": 1.02
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 0.69
+      "unrealized_pnl_usd": 2.19
     },
     {
       "ticker": "STRS",
@@ -135,12 +135,12 @@ window.PORTFOLIO_CTG = {
           "open": 20.66,
           "high": 21.28,
           "low": 20.15,
-          "close": 21.03,
-          "pnl_pct": -0.48
+          "close": 20.76,
+          "pnl_pct": 0.81
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -1.03
+      "unrealized_pnl_usd": 1.74
     },
     {
       "ticker": "SMPL",
@@ -1566,8 +1566,8 @@ window.PORTFOLIO_CTG = {
     "win_trades": 20,
     "win_rate": 64.5,
     "total_realized_pnl_usd": 146.71,
-    "open_unrealized_pnl_usd": 7.28,
-    "portfolio_value": 2153.99,
+    "open_unrealized_pnl_usd": 16.98,
+    "portfolio_value": 2163.69,
     "total_commission_usd": 62.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,

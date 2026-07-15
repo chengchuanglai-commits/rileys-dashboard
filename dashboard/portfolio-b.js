@@ -53,8 +53,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.33
         },
         "2026-07-15": {
-          "close": 57.6,
-          "pnl_pct": 4.59
+          "close": 56.94,
+          "pnl_pct": 5.68
         }
       }
     },
@@ -94,8 +94,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -2.19
         },
         "2026-07-15": {
-          "close": 67.53,
-          "pnl_pct": -3.49
+          "close": 67.82,
+          "pnl_pct": -3.94
         }
       }
     },
@@ -135,8 +135,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.38
         },
         "2026-07-15": {
-          "close": 56.89,
-          "pnl_pct": -1.81
+          "close": 56.76,
+          "pnl_pct": -1.57
         }
       }
     },
@@ -162,8 +162,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.99
         },
         "2026-07-15": {
-          "close": 278.77,
-          "pnl_pct": -1.0
+          "close": 274.77,
+          "pnl_pct": 0.45
         }
       }
     },
@@ -182,8 +182,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-15": {
-          "close": 59.89,
-          "pnl_pct": 0.3
+          "close": 59.46,
+          "pnl_pct": 1.02
         }
       }
     },
@@ -202,8 +202,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-15": {
-          "close": 21.15,
-          "pnl_pct": -1.05
+          "close": 20.76,
+          "pnl_pct": 0.81
         }
       }
     },
@@ -222,8 +222,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-22",
       "daily_prices": {
         "2026-07-15": {
-          "close": 12.19,
-          "pnl_pct": 1.3
+          "close": 12.04,
+          "pnl_pct": 2.51
         }
       }
     }
@@ -2139,8 +2139,8 @@ window.PORTFOLIO_B = {
     "win_trades": 22,
     "win_rate": 48.9,
     "total_realized_pnl_usd": 76.59,
-    "open_unrealized_pnl_usd": -5.8,
-    "portfolio_value": 2070.79,
+    "open_unrealized_pnl_usd": 24.8,
+    "portfolio_value": 2101.39,
     "updated_at": "2026-07-16"
   }
 };

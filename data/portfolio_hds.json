@@ -178,12 +178,12 @@
           "open": 20.66,
           "high": 21.28,
           "low": 20.15,
-          "close": 21.03,
-          "pnl_pct": -0.48
+          "close": 20.76,
+          "pnl_pct": 0.81
         }
       },
       "position_usd": 226.07,
-      "unrealized_pnl_usd": -1.09
+      "unrealized_pnl_usd": 1.83
     },
     {
       "ticker": "TCBK",
@@ -203,12 +203,12 @@
           "open": 58.59,
           "high": 59.92,
           "low": 58.59,
-          "close": 59.88,
-          "pnl_pct": 0.32
+          "close": 59.46,
+          "pnl_pct": 1.02
         }
       },
       "position_usd": 226.07,
-      "unrealized_pnl_usd": 0.72
+      "unrealized_pnl_usd": 2.31
     },
     {
       "ticker": "TRVI",
@@ -224,7 +224,7 @@
       "stop_loss": 18.27,
       "max_hold_date": "2026-07-17",
       "daily_prices": {},
-      "position_usd": 225.84,
+      "position_usd": 226.17,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2028,28 +2028,28 @@
           "open": 274.14,
           "high": 279.3,
           "low": 271.53,
-          "close": 278.77,
-          "pnl_pct": -1.0
+          "close": 274.77,
+          "pnl_pct": 0.45
         }
       },
       "close_date": "2026-07-15",
-      "close_price": 278.77,
-      "final_pnl_pct": -1.0,
+      "close_price": 274.77,
+      "final_pnl_pct": 0.45,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.26,
+      "realized_pnl_usd": 1.02,
       "position_usd": 226.12
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 51,
-    "win_trades": 33,
-    "win_rate": 64.7,
-    "total_realized_pnl_usd": 258.42,
-    "open_unrealized_pnl_usd": 33.55,
-    "portfolio_value": 2291.97,
+    "win_trades": 34,
+    "win_rate": 66.7,
+    "total_realized_pnl_usd": 261.69,
+    "open_unrealized_pnl_usd": 38.05,
+    "portfolio_value": 2299.74,
     "total_commission_usd": 102.0,
     "skipped_gap": 26,
     "skipped_zero_shares": 0,
