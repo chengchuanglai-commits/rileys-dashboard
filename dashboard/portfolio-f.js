@@ -106,6 +106,25 @@ window.PORTFOLIO_F = {
       "max_hold_date": "2026-07-17",
       "day1_open": null,
       "daily_prices": {}
+    },
+    {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "t1_shares": 20,
+      "t2_shares": 20,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "take_profit_1": 11.43,
+      "take_profit_2": 10.5,
+      "stop_loss": 12.72,
+      "max_hold_date": "2026-07-20",
+      "day1_open": null,
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -1564,7 +1583,7 @@ window.PORTFOLIO_F = {
         "2026-07-14": {
           "open": 59.43,
           "high": 60.46,
-          "low": 58.24,
+          "low": 58.23,
           "close": 58.36,
           "pnl_pct": 3.33
         }
@@ -1596,6 +1615,6 @@ window.PORTFOLIO_F = {
     "total_commission_usd": 78.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 7,
-    "updated_at": "2026-07-14"
+    "updated_at": "2026-07-15"
   }
 };

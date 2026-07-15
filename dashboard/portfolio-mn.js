@@ -2760,6 +2760,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 99,
-    "updated_at": "2026-07-14"
+    "updated_at": "2026-07-15"
   }
 };
