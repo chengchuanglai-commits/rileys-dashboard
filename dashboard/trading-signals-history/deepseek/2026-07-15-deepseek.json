@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-15",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 17.91,
+      "target_price": 19.7,
+      "stop_loss": 17.01
+    },
+    {
+      "ticker": "SMPL",
+      "action": "SELL",
+      "current_price": 12.35,
+      "target_price": 13.59,
+      "stop_loss": 11.73
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "PTGX",
+      "action": "HOLD",
+      "current_price": 131.27,
+      "target_price": 144.4,
+      "stop_loss": 124.71
+    },
+    {
+      "ticker": "TRVI",
+      "action": "SELL",
+      "current_price": 17.91,
+      "target_price": 19.7,
+      "stop_loss": 17.01
+    },
+    {
+      "ticker": "SMPL",
+      "action": "SELL",
+      "current_price": 12.35,
+      "target_price": 13.59,
+      "stop_loss": 11.73
+    }
+  ]
+}
