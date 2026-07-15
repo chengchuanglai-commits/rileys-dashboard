@@ -157,88 +157,88 @@ window.PORTFOLIO_MN = {
       "name": "斯特拉斯资产",
       "action": "BUY",
       "signal_date": "2026-07-14",
-      "entry_price": 20.34,
+      "entry_price": 20.46,
       "allocated_usd": 500,
-      "shares": 24.5821,
+      "shares": 24.4379,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 23.39,
-      "stop_loss": 19.93,
+      "take_profit": 23.53,
+      "stop_loss": 20.05,
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
-          "high": 20.66,
+          "high": 20.95,
           "low": 20.15,
-          "close": 20.34,
-          "pnl_pct": 0.0
+          "close": 20.78,
+          "pnl_pct": 1.56
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.25
     },
     {
       "ticker": "YORW",
       "name": "约克水务",
       "action": "BUY",
       "signal_date": "2026-07-14",
-      "entry_price": 31.02,
+      "entry_price": 31.0,
       "allocated_usd": 500,
-      "shares": 16.1186,
+      "shares": 16.129,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 35.67,
-      "stop_loss": 30.4,
+      "take_profit": 35.65,
+      "stop_loss": 30.38,
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-15": {
           "open": 30.94,
-          "high": 31.04,
+          "high": 31.12,
           "low": 30.7,
-          "close": 31.02,
-          "pnl_pct": 0.0
+          "close": 30.97,
+          "pnl_pct": -0.1
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -0.21
     },
     {
       "ticker": "PFIS",
       "name": "人民金融服务",
       "action": "BUY",
       "signal_date": "2026-07-14",
-      "entry_price": 66.96,
+      "entry_price": 66.68,
       "allocated_usd": 500,
-      "shares": 7.4671,
+      "shares": 7.4985,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 77.0,
-      "stop_loss": 65.62,
+      "take_profit": 76.68,
+      "stop_loss": 65.35,
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-15": {
           "open": 67.4,
-          "high": 67.4,
+          "high": 67.64,
           "low": 66.28,
-          "close": 66.96,
-          "pnl_pct": 0.0
+          "close": 67.57,
+          "pnl_pct": 1.33
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 2.77
     },
     {
       "ticker": "TCBK",
       "name": "Trico银行",
       "action": "BUY",
       "signal_date": "2026-07-15",
-      "entry_price": 59.62,
+      "entry_price": 59.53,
       "allocated_usd": 500,
-      "shares": 8.3864,
+      "shares": 8.3991,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 68.56,
-      "stop_loss": 58.43,
+      "take_profit": 68.46,
+      "stop_loss": 58.34,
       "max_hold_date": "2026-07-17",
       "daily_prices": {},
       "position_usd": 208.22,
@@ -2789,7 +2789,7 @@ window.PORTFOLIO_MN = {
           "open": 137.19,
           "high": 137.19,
           "low": 131.26,
-          "close": 132.49,
+          "close": 133.01,
           "pnl_pct": -2.0
         }
       },
@@ -2809,12 +2809,12 @@ window.PORTFOLIO_MN = {
     "win_trades": 22,
     "win_rate": 29.3,
     "total_realized_pnl_usd": 82.24,
-    "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2106.88,
+    "open_unrealized_pnl_usd": 30.46,
+    "portfolio_value": 2112.7,
     "total_commission_usd": 150.0,
-    "skipped_gap": 42,
+    "skipped_gap": 41,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 103,
+    "skipped_no_cash": 104,
     "updated_at": "2026-07-15"
   }
 };

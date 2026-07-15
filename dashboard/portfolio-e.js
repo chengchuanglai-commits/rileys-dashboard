@@ -91,41 +91,6 @@ window.PORTFOLIO_E = {
       "day1_open": 36.67
     },
     {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "take_profit": 58.73,
-      "stop_loss": 67.21,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-14",
-      "regime": "neutral",
-      "vix": 15.84,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 65.92,
-          "high": 66.8,
-          "low": 65.9,
-          "close": 66.52,
-          "pnl_pct": -1.95
-        },
-        "2026-07-13": {
-          "open": 66.47,
-          "high": 67.12,
-          "low": 66.22,
-          "close": 66.71,
-          "pnl_pct": -2.24
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 65.92
-    },
-    {
       "ticker": "ITIC",
       "name": "ITIC",
       "action": "SELL",
@@ -142,16 +107,23 @@ window.PORTFOLIO_E = {
       "regime": "neutral",
       "vix": 17.16,
       "daily_prices": {
+        "2026-07-14": {
+          "open": 278.21,
+          "high": 281.14,
+          "low": 277.43,
+          "close": 278.72,
+          "pnl_pct": -0.99
+        },
         "2026-07-15": {
           "open": 274.14,
           "high": 278.9,
           "low": 271.53,
-          "close": 276.4,
-          "pnl_pct": -0.14
+          "close": 278.16,
+          "pnl_pct": -0.78
         }
       },
       "gap_checked": true,
-      "day1_open": 274.14
+      "day1_open": 278.21
     },
     {
       "ticker": "TCBK",
@@ -168,14 +140,14 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 17.16,
+      "vix": 16.5,
       "daily_prices": {
         "2026-07-15": {
           "open": 58.59,
-          "high": 59.66,
+          "high": 59.74,
           "low": 58.59,
-          "close": 59.59,
-          "pnl_pct": 0.8
+          "close": 59.53,
+          "pnl_pct": 0.9
         }
       },
       "gap_checked": true,
@@ -196,14 +168,14 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-17",
       "regime": "neutral",
-      "vix": 17.16,
+      "vix": 16.5,
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
-          "high": 20.66,
+          "high": 20.95,
           "low": 20.15,
-          "close": 20.26,
-          "pnl_pct": 3.2
+          "close": 20.78,
+          "pnl_pct": 0.72
         }
       },
       "gap_checked": true,
@@ -224,7 +196,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-20",
       "regime": "neutral",
-      "vix": 16.17,
+      "vix": 16.33,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1516,17 +1488,64 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 14.08
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "take_profit": 58.73,
+      "stop_loss": 67.21,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-14",
+      "regime": "neutral",
+      "vix": 15.84,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.92,
+          "high": 66.8,
+          "low": 65.9,
+          "close": 66.52,
+          "pnl_pct": -1.95
+        },
+        "2026-07-13": {
+          "open": 66.47,
+          "high": 67.12,
+          "low": 66.22,
+          "close": 66.71,
+          "pnl_pct": -2.24
+        },
+        "2026-07-14": {
+          "open": 66.76,
+          "high": 67.61,
+          "low": 66.06,
+          "close": 66.68,
+          "pnl_pct": -3.0
+        }
+      },
+      "close_date": "2026-07-14",
+      "close_price": 67.21,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -15.7
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 32,
+    "total_trades": 33,
     "win_trades": 16,
-    "win_rate": 50.0,
-    "total_realized_pnl_usd": 181.11,
-    "open_unrealized_pnl_usd": 7.94,
-    "portfolio_value": 2189.05,
-    "total_commission_usd": 64.0,
+    "win_rate": 48.5,
+    "total_realized_pnl_usd": 165.41,
+    "open_unrealized_pnl_usd": 5.95,
+    "portfolio_value": 2171.36,
+    "total_commission_usd": 66.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,

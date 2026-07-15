@@ -56,12 +56,12 @@ window.PORTFOLIO_CTG = {
           "open": 58.33,
           "high": 58.33,
           "low": 56.16,
-          "close": 56.83,
-          "pnl_pct": 5.86
+          "close": 57.9,
+          "pnl_pct": 4.09
         }
       },
       "position_usd": 212.8,
-      "unrealized_pnl_usd": 12.47
+      "unrealized_pnl_usd": 8.7
     },
     {
       "ticker": "ITIC",
@@ -74,18 +74,25 @@ window.PORTFOLIO_CTG = {
       "actual_position_usd": 276.0,
       "entry_commission": 1.0,
       "max_hold_date": "2026-07-15",
-      "day1_open": 274.14,
+      "day1_open": 278.21,
       "daily_prices": {
+        "2026-07-14": {
+          "open": 278.21,
+          "high": 281.14,
+          "low": 277.43,
+          "close": 278.72,
+          "pnl_pct": -0.99
+        },
         "2026-07-15": {
           "open": 274.14,
           "high": 278.9,
           "low": 271.53,
-          "close": 276.4,
-          "pnl_pct": -0.14
+          "close": 278.16,
+          "pnl_pct": -0.78
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -0.3
+      "unrealized_pnl_usd": -1.67
     },
     {
       "ticker": "TCBK",
@@ -102,14 +109,14 @@ window.PORTFOLIO_CTG = {
       "daily_prices": {
         "2026-07-15": {
           "open": 58.59,
-          "high": 59.66,
+          "high": 59.74,
           "low": 58.59,
-          "close": 59.64,
-          "pnl_pct": 0.72
+          "close": 59.53,
+          "pnl_pct": 0.9
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 1.55
+      "unrealized_pnl_usd": 1.93
     },
     {
       "ticker": "STRS",
@@ -126,14 +133,14 @@ window.PORTFOLIO_CTG = {
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
-          "high": 20.66,
+          "high": 20.95,
           "low": 20.15,
-          "close": 20.34,
-          "pnl_pct": 2.82
+          "close": 20.78,
+          "pnl_pct": 0.72
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 6.05
+      "unrealized_pnl_usd": 1.55
     },
     {
       "ticker": "SMPL",
@@ -1559,8 +1566,8 @@ window.PORTFOLIO_CTG = {
     "win_trades": 20,
     "win_rate": 64.5,
     "total_realized_pnl_usd": 146.71,
-    "open_unrealized_pnl_usd": 19.77,
-    "portfolio_value": 2166.48,
+    "open_unrealized_pnl_usd": 10.51,
+    "portfolio_value": 2157.22,
     "total_commission_usd": 62.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
