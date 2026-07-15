@@ -168,14 +168,14 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
-          "high": 20.95,
+          "high": 21.28,
           "low": 20.15,
-          "close": 20.78,
-          "pnl_pct": 1.56
+          "close": 21.03,
+          "pnl_pct": 2.79
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": 3.25
+      "unrealized_pnl_usd": 5.82
     },
     {
       "ticker": "YORW",
@@ -195,12 +195,12 @@ window.PORTFOLIO_MN = {
           "open": 30.94,
           "high": 31.12,
           "low": 30.7,
-          "close": 30.97,
-          "pnl_pct": -0.1
+          "close": 30.75,
+          "pnl_pct": -0.81
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": -0.21
+      "unrealized_pnl_usd": -1.69
     },
     {
       "ticker": "PFIS",
@@ -218,27 +218,27 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-15": {
           "open": 67.4,
-          "high": 67.64,
+          "high": 67.66,
           "low": 66.28,
-          "close": 67.57,
-          "pnl_pct": 1.33
+          "close": 67.53,
+          "pnl_pct": 1.27
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": 2.77
+      "unrealized_pnl_usd": 2.65
     },
     {
       "ticker": "TCBK",
       "name": "Trico银行",
       "action": "BUY",
       "signal_date": "2026-07-15",
-      "entry_price": 59.53,
+      "entry_price": 59.88,
       "allocated_usd": 500,
-      "shares": 8.3991,
+      "shares": 8.35,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 68.46,
-      "stop_loss": 58.34,
+      "take_profit": 68.86,
+      "stop_loss": 58.68,
       "max_hold_date": "2026-07-17",
       "daily_prices": {},
       "position_usd": 208.22,
@@ -2789,7 +2789,7 @@ window.PORTFOLIO_MN = {
           "open": 137.19,
           "high": 137.19,
           "low": 131.26,
-          "close": 133.01,
+          "close": 132.31,
           "pnl_pct": -2.0
         }
       },
@@ -2809,8 +2809,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 22,
     "win_rate": 29.3,
     "total_realized_pnl_usd": 82.24,
-    "open_unrealized_pnl_usd": 30.46,
-    "portfolio_value": 2112.7,
+    "open_unrealized_pnl_usd": 31.42,
+    "portfolio_value": 2113.66,
     "total_commission_usd": 150.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
