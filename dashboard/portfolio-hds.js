@@ -179,12 +179,12 @@ window.PORTFOLIO_HDS = {
           "open": 20.66,
           "high": 21.28,
           "low": 20.15,
-          "close": 20.76,
-          "pnl_pct": 0.81
+          "close": 20.7,
+          "pnl_pct": 1.1
         }
       },
       "position_usd": 226.07,
-      "unrealized_pnl_usd": 1.83
+      "unrealized_pnl_usd": 2.49
     },
     {
       "ticker": "TCBK",
@@ -204,12 +204,12 @@ window.PORTFOLIO_HDS = {
           "open": 58.59,
           "high": 59.92,
           "low": 58.59,
-          "close": 59.46,
-          "pnl_pct": 1.02
+          "close": 59.43,
+          "pnl_pct": 1.07
         }
       },
       "position_usd": 226.07,
-      "unrealized_pnl_usd": 2.31
+      "unrealized_pnl_usd": 2.42
     },
     {
       "ticker": "TRVI",
@@ -225,7 +225,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 18.27,
       "max_hold_date": "2026-07-17",
       "daily_prices": {},
-      "position_usd": 226.17,
+      "position_usd": 226.26,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2029,17 +2029,17 @@ window.PORTFOLIO_HDS = {
           "open": 274.14,
           "high": 279.3,
           "low": 271.53,
-          "close": 274.77,
-          "pnl_pct": 0.45
+          "close": 273.6,
+          "pnl_pct": 0.87
         }
       },
       "close_date": "2026-07-15",
-      "close_price": 274.77,
-      "final_pnl_pct": 0.45,
+      "close_price": 273.6,
+      "final_pnl_pct": 0.87,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.02,
+      "realized_pnl_usd": 1.97,
       "position_usd": 226.12
     }
   ],
@@ -2048,9 +2048,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 51,
     "win_trades": 34,
     "win_rate": 66.7,
-    "total_realized_pnl_usd": 261.69,
-    "open_unrealized_pnl_usd": 38.05,
-    "portfolio_value": 2299.74,
+    "total_realized_pnl_usd": 262.64,
+    "open_unrealized_pnl_usd": 38.81,
+    "portfolio_value": 2301.45,
     "total_commission_usd": 102.0,
     "skipped_gap": 26,
     "skipped_zero_shares": 0,

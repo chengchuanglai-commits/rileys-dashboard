@@ -118,8 +118,8 @@ window.PORTFOLIO_E = {
           "open": 274.14,
           "high": 279.3,
           "low": 271.53,
-          "close": 274.77,
-          "pnl_pct": 0.45
+          "close": 273.6,
+          "pnl_pct": 0.87
         }
       },
       "gap_checked": true,
@@ -146,8 +146,8 @@ window.PORTFOLIO_E = {
           "open": 58.59,
           "high": 59.92,
           "low": 58.59,
-          "close": 59.47,
-          "pnl_pct": 1.0
+          "close": 59.43,
+          "pnl_pct": 1.07
         }
       },
       "gap_checked": true,
@@ -174,8 +174,8 @@ window.PORTFOLIO_E = {
           "open": 20.66,
           "high": 21.28,
           "low": 20.15,
-          "close": 20.76,
-          "pnl_pct": 0.81
+          "close": 20.7,
+          "pnl_pct": 1.1
         }
       },
       "gap_checked": true,
@@ -196,7 +196,7 @@ window.PORTFOLIO_E = {
       "max_hold_days": 3,
       "max_hold_date": "2026-07-20",
       "regime": "neutral",
-      "vix": 15.9,
+      "vix": 15.67,
       "daily_prices": {},
       "gap_checked": true
     }
@@ -1543,8 +1543,8 @@ window.PORTFOLIO_E = {
     "win_trades": 16,
     "win_rate": 48.5,
     "total_realized_pnl_usd": 165.41,
-    "open_unrealized_pnl_usd": 10.25,
-    "portfolio_value": 2175.66,
+    "open_unrealized_pnl_usd": 13.15,
+    "portfolio_value": 2178.56,
     "total_commission_usd": 66.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

@@ -170,53 +170,28 @@ window.PORTFOLIO_MN = {
           "open": 20.66,
           "high": 21.28,
           "low": 20.15,
-          "close": 20.76,
-          "pnl_pct": 1.47
+          "close": 20.7,
+          "pnl_pct": 1.17
         }
       },
       "position_usd": 208.64,
-      "unrealized_pnl_usd": 3.07
-    },
-    {
-      "ticker": "YORW",
-      "name": "约克水务",
-      "action": "BUY",
-      "signal_date": "2026-07-14",
-      "entry_price": 31.0,
-      "allocated_usd": 500,
-      "shares": 16.129,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 35.65,
-      "stop_loss": 30.38,
-      "max_hold_date": "2026-07-16",
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 30.94,
-          "high": 31.12,
-          "low": 30.51,
-          "close": 30.55,
-          "pnl_pct": -1.45
-        }
-      },
-      "position_usd": 208.64,
-      "unrealized_pnl_usd": -3.03
+      "unrealized_pnl_usd": 2.44
     },
     {
       "ticker": "TCBK",
       "name": "Trico银行",
       "action": "BUY",
       "signal_date": "2026-07-15",
-      "entry_price": 59.46,
+      "entry_price": 59.43,
       "allocated_usd": 500,
-      "shares": 8.409,
+      "shares": 8.4133,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 68.38,
-      "stop_loss": 58.27,
+      "take_profit": 68.34,
+      "stop_loss": 58.24,
       "max_hold_date": "2026-07-17",
       "daily_prices": {},
-      "position_usd": 207.8,
+      "position_usd": 207.39,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -224,16 +199,33 @@ window.PORTFOLIO_MN = {
       "name": "Palomar控股",
       "action": "BUY",
       "signal_date": "2026-07-15",
-      "entry_price": 131.73,
+      "entry_price": 131.69,
       "allocated_usd": 500,
-      "shares": 3.7956,
-      "actual_position_usd": 499.99,
+      "shares": 3.7968,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 151.49,
-      "stop_loss": 129.1,
+      "take_profit": 151.44,
+      "stop_loss": 129.06,
       "max_hold_date": "2026-07-17",
       "daily_prices": {},
-      "position_usd": 207.8,
+      "position_usd": 207.39,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "PSMT",
+      "name": "普尔斯马特",
+      "action": "BUY",
+      "signal_date": "2026-07-15",
+      "entry_price": 188.58,
+      "allocated_usd": 500,
+      "shares": 2.6514,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 216.87,
+      "stop_loss": 184.81,
+      "max_hold_date": "2026-07-17",
+      "daily_prices": {},
+      "position_usd": 207.39,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2764,6 +2756,37 @@ window.PORTFOLIO_MN = {
       "position_usd": 209.37
     },
     {
+      "ticker": "YORW",
+      "name": "约克水务",
+      "action": "BUY",
+      "signal_date": "2026-07-14",
+      "entry_price": 31.0,
+      "allocated_usd": 500,
+      "shares": 16.129,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 35.65,
+      "stop_loss": 30.38,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 30.94,
+          "high": 31.12,
+          "low": 30.32,
+          "close": 30.35,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-15",
+      "close_price": 30.38,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.17,
+      "position_usd": 208.64
+    },
+    {
       "ticker": "PLMR",
       "name": "帕洛玛控股",
       "action": "BUY",
@@ -2780,8 +2803,8 @@ window.PORTFOLIO_MN = {
         "2026-07-15": {
           "open": 137.19,
           "high": 137.19,
-          "low": 131.24,
-          "close": 131.73,
+          "low": 130.79,
+          "close": 131.69,
           "pnl_pct": -2.0
         }
       },
@@ -2811,8 +2834,8 @@ window.PORTFOLIO_MN = {
         "2026-07-15": {
           "open": 12.38,
           "high": 12.81,
-          "low": 12.01,
-          "close": 12.05,
+          "low": 11.86,
+          "close": 11.88,
           "pnl_pct": -2.02
         }
       },
@@ -2828,16 +2851,16 @@ window.PORTFOLIO_MN = {
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 76,
+    "total_trades": 77,
     "win_trades": 22,
-    "win_rate": 28.9,
-    "total_realized_pnl_usd": 78.03,
-    "open_unrealized_pnl_usd": 24.68,
-    "portfolio_value": 2102.71,
-    "total_commission_usd": 152.0,
+    "win_rate": 28.6,
+    "total_realized_pnl_usd": 73.85,
+    "open_unrealized_pnl_usd": 27.08,
+    "portfolio_value": 2100.93,
+    "total_commission_usd": 154.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 103,
+    "skipped_no_cash": 102,
     "updated_at": "2026-07-15"
   }
 };

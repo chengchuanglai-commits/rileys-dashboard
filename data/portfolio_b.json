@@ -52,49 +52,8 @@
           "pnl_pct": 3.33
         },
         "2026-07-15": {
-          "close": 56.94,
-          "pnl_pct": 5.68
-        }
-      }
-    },
-    {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "take_profit": 60.03,
-      "stop_loss": 67.86,
-      "max_hold_date": "2026-07-16",
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 65.92,
-          "high": 66.8,
-          "low": 65.9,
-          "close": 66.52,
-          "pnl_pct": -1.95
-        },
-        "2026-07-13": {
-          "open": 66.47,
-          "high": 67.12,
-          "low": 66.22,
-          "close": 66.71,
-          "pnl_pct": -2.24
-        },
-        "2026-07-14": {
-          "open": 66.76,
-          "high": 67.61,
-          "low": 66.06,
-          "close": 66.68,
-          "pnl_pct": -2.19
-        },
-        "2026-07-15": {
-          "close": 67.82,
-          "pnl_pct": -3.94
+          "close": 56.87,
+          "pnl_pct": 5.8
         }
       }
     },
@@ -134,8 +93,8 @@
           "pnl_pct": 1.38
         },
         "2026-07-15": {
-          "close": 56.76,
-          "pnl_pct": -1.57
+          "close": 57.04,
+          "pnl_pct": -2.08
         }
       }
     },
@@ -161,8 +120,8 @@
           "pnl_pct": -0.99
         },
         "2026-07-15": {
-          "close": 274.77,
-          "pnl_pct": 0.45
+          "close": 273.6,
+          "pnl_pct": 0.87
         }
       }
     },
@@ -181,8 +140,8 @@
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-15": {
-          "close": 59.46,
-          "pnl_pct": 1.02
+          "close": 59.43,
+          "pnl_pct": 1.07
         }
       }
     },
@@ -201,8 +160,8 @@
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-15": {
-          "close": 20.76,
-          "pnl_pct": 0.81
+          "close": 20.7,
+          "pnl_pct": 1.1
         }
       }
     },
@@ -221,8 +180,8 @@
       "max_hold_date": "2026-07-22",
       "daily_prices": {
         "2026-07-15": {
-          "close": 12.04,
-          "pnl_pct": 2.51
+          "close": 11.88,
+          "pnl_pct": 3.81
         }
       }
     }
@@ -2130,16 +2089,67 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 8.05
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "take_profit": 60.03,
+      "stop_loss": 67.86,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.92,
+          "high": 66.8,
+          "low": 65.9,
+          "close": 66.52,
+          "pnl_pct": -1.95
+        },
+        "2026-07-13": {
+          "open": 66.47,
+          "high": 67.12,
+          "low": 66.22,
+          "close": 66.71,
+          "pnl_pct": -2.24
+        },
+        "2026-07-14": {
+          "open": 66.76,
+          "high": 67.61,
+          "low": 66.06,
+          "close": 66.68,
+          "pnl_pct": -2.19
+        },
+        "2026-07-15": {
+          "open": 67.4,
+          "high": 67.92,
+          "low": 66.28,
+          "close": 67.74,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-15",
+      "close_price": 67.86,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -20.27
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 45,
+    "total_trades": 46,
     "win_trades": 22,
-    "win_rate": 48.9,
-    "total_realized_pnl_usd": 76.59,
-    "open_unrealized_pnl_usd": 24.8,
-    "portfolio_value": 2101.39,
+    "win_rate": 47.8,
+    "total_realized_pnl_usd": 56.32,
+    "open_unrealized_pnl_usd": 52.85,
+    "portfolio_value": 2109.17,
     "updated_at": "2026-07-16"
   }
 }
