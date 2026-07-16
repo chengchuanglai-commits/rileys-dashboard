@@ -168,14 +168,14 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.62,
+          "high": 61.63,
           "low": 59.31,
-          "close": 61.36,
-          "pnl_pct": 3.25
+          "close": 61.58,
+          "pnl_pct": 3.62
         }
       },
       "position_usd": 207.39,
-      "unrealized_pnl_usd": 6.74
+      "unrealized_pnl_usd": 7.51
     },
     {
       "ticker": "PLMR",
@@ -195,12 +195,12 @@ window.PORTFOLIO_MN = {
           "open": 132.03,
           "high": 136.15,
           "low": 131.66,
-          "close": 134.69,
-          "pnl_pct": 2.28
+          "close": 134.19,
+          "pnl_pct": 1.9
         }
       },
       "position_usd": 207.39,
-      "unrealized_pnl_usd": 4.73
+      "unrealized_pnl_usd": 3.94
     },
     {
       "ticker": "PSMT",
@@ -220,28 +220,28 @@ window.PORTFOLIO_MN = {
           "open": 188.41,
           "high": 192.96,
           "low": 186.48,
-          "close": 190.63,
-          "pnl_pct": 1.09
+          "close": 189.5,
+          "pnl_pct": 0.49
         }
       },
       "position_usd": 207.39,
-      "unrealized_pnl_usd": 2.26
+      "unrealized_pnl_usd": 1.02
     },
     {
       "ticker": "PTGX",
       "name": "Protagonist Therapeutics",
       "action": "BUY",
       "signal_date": "2026-07-16",
-      "entry_price": 132.89,
+      "entry_price": 131.74,
       "allocated_usd": 500,
-      "shares": 3.7625,
-      "actual_position_usd": 500.0,
+      "shares": 3.7954,
+      "actual_position_usd": 500.01,
       "entry_commission": 1.0,
-      "take_profit": 152.82,
-      "stop_loss": 130.23,
+      "take_profit": 151.5,
+      "stop_loss": 129.11,
       "max_hold_date": "2026-07-20",
       "daily_prices": {},
-      "position_usd": 207.13,
+      "position_usd": 207.43,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2889,28 +2889,28 @@ window.PORTFOLIO_MN = {
           "open": 20.88,
           "high": 21.0,
           "low": 20.21,
-          "close": 20.21,
-          "pnl_pct": -1.22
+          "close": 20.5,
+          "pnl_pct": 0.2
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 20.21,
-      "final_pnl_pct": -1.22,
+      "close_price": 20.5,
+      "final_pnl_pct": 0.2,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.55,
+      "realized_pnl_usd": 0.42,
       "position_usd": 208.64
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
     "total_trades": 78,
-    "win_trades": 22,
-    "win_rate": 28.2,
-    "total_realized_pnl_usd": 71.31,
-    "open_unrealized_pnl_usd": 38.37,
-    "portfolio_value": 2109.68,
+    "win_trades": 23,
+    "win_rate": 29.5,
+    "total_realized_pnl_usd": 74.27,
+    "open_unrealized_pnl_usd": 37.1,
+    "portfolio_value": 2111.37,
     "total_commission_usd": 156.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
