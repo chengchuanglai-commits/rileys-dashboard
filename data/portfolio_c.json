@@ -20,6 +20,45 @@
       "unrealized_pnl_usd": 0.0
     },
     {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "take_profit": 253.92,
+      "stop_loss": 287.04,
+      "max_hold_date": "2026-07-20",
+      "day1_open": 277.65,
+      "daily_prices": {
+        "2026-07-14": {
+          "open": 278.21,
+          "high": 281.14,
+          "low": 277.43,
+          "close": 278.72,
+          "pnl_pct": -0.99
+        },
+        "2026-07-15": {
+          "open": 273.55,
+          "high": 279.3,
+          "low": 271.53,
+          "close": 273.6,
+          "pnl_pct": 0.87
+        },
+        "2026-07-16": {
+          "close": 283.96,
+          "pnl_pct": -2.88
+        }
+      },
+      "position_usd": 213.81,
+      "unrealized_pnl_usd": -6.16,
+      "gap_checked": true,
+      "day1_gap_pct": 0.6
+    },
+    {
       "ticker": "TCBK",
       "name": "TCBK",
       "action": "SELL",
@@ -42,8 +81,8 @@
           "pnl_pct": 1.07
         },
         "2026-07-16": {
-          "close": 61.58,
-          "pnl_pct": -2.51
+          "close": 61.62,
+          "pnl_pct": -2.58
         }
       },
       "position_usd": 213.81,
@@ -64,7 +103,7 @@
       "take_profit": 19.26,
       "stop_loss": 21.77,
       "max_hold_date": "2026-07-21",
-      "day1_open": 20.88,
+      "day1_open": 20.79,
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
@@ -74,14 +113,14 @@
           "pnl_pct": 1.1
         },
         "2026-07-16": {
-          "close": 20.5,
-          "pnl_pct": 2.05
+          "close": 20.67,
+          "pnl_pct": 1.24
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 4.38,
+      "unrealized_pnl_usd": 2.65,
       "gap_checked": true,
-      "day1_gap_pct": -0.24
+      "day1_gap_pct": -0.67
     },
     {
       "ticker": "SMPL",
@@ -104,7 +143,7 @@
         }
       },
       "position_usd": 212.96,
-      "unrealized_pnl_usd": 4.66,
+      "unrealized_pnl_usd": 4.83,
       "gap_checked": true,
       "day1_gap_pct": -1.3
     }
@@ -1700,20 +1739,20 @@
           "pnl_pct": 5.8
         },
         "2026-07-16": {
-          "open": 58.08,
+          "open": 58.1,
           "high": 59.71,
           "low": 57.62,
-          "close": 58.97,
-          "pnl_pct": 2.32
+          "close": 58.47,
+          "pnl_pct": 3.15
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 58.97,
-      "final_pnl_pct": 2.32,
+      "close_price": 58.47,
+      "final_pnl_pct": 3.15,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.92,
+      "realized_pnl_usd": 6.68,
       "position_usd": 211.95
     }
   ],
@@ -1722,10 +1761,10 @@
     "total_trades": 34,
     "win_trades": 21,
     "win_rate": 61.8,
-    "total_realized_pnl_usd": 134.55,
-    "open_unrealized_pnl_usd": 9.05,
-    "portfolio_value": 2143.6,
-    "skipped_gap": 15,
+    "total_realized_pnl_usd": 136.31,
+    "open_unrealized_pnl_usd": -9.75,
+    "portfolio_value": 2126.56,
+    "skipped_gap": 14,
     "updated_at": "2026-07-17"
   }
 }

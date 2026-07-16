@@ -1608,10 +1608,10 @@ window.PORTFOLIO_CTR = {
           "pnl_pct": 5.8
         },
         "2026-07-16": {
-          "open": 58.08,
+          "open": 58.1,
           "high": 59.71,
           "low": 57.62,
-          "close": 58.92,
+          "close": 58.47,
           "pnl_pct": 3.3
         }
       },
@@ -1652,10 +1652,10 @@ window.PORTFOLIO_CTR = {
           "pnl_pct": 0.87
         },
         "2026-07-16": {
-          "open": 280.6,
-          "high": 282.79,
+          "open": 277.65,
+          "high": 283.97,
           "low": 280.6,
-          "close": 281.8,
+          "close": 283.96,
           "pnl_pct": -2.32
         }
       },
@@ -1690,9 +1690,9 @@ window.PORTFOLIO_CTR = {
         },
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.63,
+          "high": 61.71,
           "low": 59.31,
-          "close": 61.58,
+          "close": 61.62,
           "pnl_pct": -1.43
         }
       },
@@ -1726,10 +1726,10 @@ window.PORTFOLIO_CTR = {
           "pnl_pct": 1.1
         },
         "2026-07-16": {
-          "open": 20.88,
+          "open": 20.79,
           "high": 21.0,
           "low": 20.21,
-          "close": 20.5,
+          "close": 20.67,
           "pnl_pct": -0.14
         }
       },

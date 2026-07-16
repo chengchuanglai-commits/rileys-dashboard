@@ -116,10 +116,10 @@ window.PORTFOLIO_E = {
         },
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.63,
+          "high": 61.71,
           "low": 59.31,
-          "close": 61.59,
-          "pnl_pct": -2.53
+          "close": 61.62,
+          "pnl_pct": -2.58
         }
       },
       "gap_checked": true,
@@ -150,11 +150,11 @@ window.PORTFOLIO_E = {
           "pnl_pct": 1.1
         },
         "2026-07-16": {
-          "open": 20.88,
+          "open": 20.79,
           "high": 21.0,
           "low": 20.21,
-          "close": 20.5,
-          "pnl_pct": 2.05
+          "close": 20.67,
+          "pnl_pct": 1.24
         }
       },
       "gap_checked": true,
@@ -181,8 +181,8 @@ window.PORTFOLIO_E = {
           "open": 12.19,
           "high": 12.37,
           "low": 11.94,
-          "close": 12.08,
-          "pnl_pct": 2.19
+          "close": 12.07,
+          "pnl_pct": 2.27
         }
       },
       "gap_checked": true,
@@ -1556,20 +1556,20 @@ window.PORTFOLIO_E = {
           "pnl_pct": 0.87
         },
         "2026-07-16": {
-          "open": 280.6,
-          "high": 282.79,
+          "open": 277.65,
+          "high": 283.97,
           "low": 280.6,
-          "close": 281.8,
-          "pnl_pct": -2.1
+          "close": 283.96,
+          "pnl_pct": -2.88
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 281.8,
-      "final_pnl_pct": -2.1,
+      "close_price": 283.96,
+      "final_pnl_pct": -2.88,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -7.8
+      "realized_pnl_usd": -9.95
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
@@ -1577,9 +1577,9 @@ window.PORTFOLIO_E = {
     "total_trades": 34,
     "win_trades": 16,
     "win_rate": 47.1,
-    "total_realized_pnl_usd": 157.61,
-    "open_unrealized_pnl_usd": 8.84,
-    "portfolio_value": 2166.45,
+    "total_realized_pnl_usd": 155.46,
+    "open_unrealized_pnl_usd": 5.09,
+    "portfolio_value": 2160.55,
     "total_commission_usd": 68.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

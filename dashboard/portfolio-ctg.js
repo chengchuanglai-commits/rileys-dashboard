@@ -46,15 +46,15 @@ window.PORTFOLIO_CTG = {
           "pnl_pct": 0.87
         },
         "2026-07-16": {
-          "open": 280.6,
-          "high": 282.79,
+          "open": 277.65,
+          "high": 283.97,
           "low": 280.6,
-          "close": 281.8,
-          "pnl_pct": -2.1
+          "close": 283.96,
+          "pnl_pct": -2.88
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -4.51
+      "unrealized_pnl_usd": -6.18
     },
     {
       "ticker": "TCBK",
@@ -78,14 +78,14 @@ window.PORTFOLIO_CTG = {
         },
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.63,
+          "high": 61.71,
           "low": 59.31,
-          "close": 61.58,
-          "pnl_pct": -2.51
+          "close": 61.62,
+          "pnl_pct": -2.58
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -5.39
+      "unrealized_pnl_usd": -5.54
     },
     {
       "ticker": "STRS",
@@ -108,15 +108,15 @@ window.PORTFOLIO_CTG = {
           "pnl_pct": 1.1
         },
         "2026-07-16": {
-          "open": 20.88,
+          "open": 20.79,
           "high": 21.0,
           "low": 20.21,
-          "close": 20.5,
-          "pnl_pct": 2.05
+          "close": 20.67,
+          "pnl_pct": 1.24
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 4.4
+      "unrealized_pnl_usd": 2.66
     },
     {
       "ticker": "SMPL",
@@ -1585,20 +1585,20 @@ window.PORTFOLIO_CTG = {
           "pnl_pct": 5.8
         },
         "2026-07-16": {
-          "open": 58.08,
+          "open": 58.1,
           "high": 59.71,
           "low": 57.62,
-          "close": 58.92,
-          "pnl_pct": 2.4
+          "close": 58.47,
+          "pnl_pct": 3.15
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 58.92,
-      "final_pnl_pct": 2.4,
+      "close_price": 58.47,
+      "final_pnl_pct": 3.15,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.11,
+      "realized_pnl_usd": 6.7,
       "position_usd": 212.8
     }
   ],
@@ -1607,9 +1607,9 @@ window.PORTFOLIO_CTG = {
     "total_trades": 32,
     "win_trades": 21,
     "win_rate": 65.6,
-    "total_realized_pnl_usd": 151.82,
-    "open_unrealized_pnl_usd": -0.62,
-    "portfolio_value": 2151.2,
+    "total_realized_pnl_usd": 153.41,
+    "open_unrealized_pnl_usd": -4.19,
+    "portfolio_value": 2149.22,
     "total_commission_usd": 64.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
