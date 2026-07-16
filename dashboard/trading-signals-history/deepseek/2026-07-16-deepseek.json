@@ -1,0 +1,162 @@
+{
+  "date": "2026-07-16",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 70.42,
+      "target_price": 77.46,
+      "stop_loss": 66.9
+    },
+    {
+      "ticker": "STRS",
+      "action": "BUY",
+      "current_price": 20.7,
+      "target_price": 22.77,
+      "stop_loss": 19.66
+    },
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 16.24,
+      "target_price": 17.86,
+      "stop_loss": 15.43
+    },
+    {
+      "ticker": "SFBC",
+      "action": "BUY",
+      "current_price": 46.72,
+      "target_price": 51.39,
+      "stop_loss": 44.38
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 70.42,
+      "target_price": 77.46,
+      "stop_loss": 66.9
+    },
+    {
+      "ticker": "STRS",
+      "action": "BUY",
+      "current_price": 20.7,
+      "target_price": 22.77,
+      "stop_loss": 19.66
+    },
+    {
+      "ticker": "PBHC",
+      "action": "SELL",
+      "current_price": 16.24,
+      "target_price": 17.86,
+      "stop_loss": 15.43
+    },
+    {
+      "ticker": "SFBC",
+      "action": "BUY",
+      "current_price": 46.72,
+      "target_price": 51.39,
+      "stop_loss": 44.38
+    },
+    {
+      "ticker": "WDFC",
+      "action": "SELL",
+      "current_price": 249.4,
+      "target_price": 274.34,
+      "stop_loss": 236.93
+    },
+    {
+      "ticker": "TCBK",
+      "action": "SELL",
+      "current_price": 59.43,
+      "target_price": 65.37,
+      "stop_loss": 56.46
+    },
+    {
+      "ticker": "CNMD",
+      "action": "HOLD",
+      "current_price": 42.79,
+      "target_price": 47.07,
+      "stop_loss": 40.65
+    },
+    {
+      "ticker": "CENT",
+      "action": "BUY",
+      "current_price": 43.07,
+      "target_price": 47.38,
+      "stop_loss": 40.92
+    },
+    {
+      "ticker": "IMOS",
+      "action": "HOLD",
+      "current_price": 68.64,
+      "target_price": 75.5,
+      "stop_loss": 65.21
+    },
+    {
+      "ticker": "UNTY",
+      "action": "SELL",
+      "current_price": 56.62,
+      "target_price": 62.28,
+      "stop_loss": 53.79
+    },
+    {
+      "ticker": "PTGX",
+      "action": "SELL",
+      "current_price": 135.46,
+      "target_price": 149.01,
+      "stop_loss": 128.69
+    },
+    {
+      "ticker": "APEI",
+      "action": "HOLD",
+      "current_price": 49.23,
+      "target_price": 54.15,
+      "stop_loss": 46.77
+    },
+    {
+      "ticker": "DGII",
+      "action": "BUY",
+      "current_price": 64.0,
+      "target_price": 70.4,
+      "stop_loss": 60.8
+    },
+    {
+      "ticker": "YORW",
+      "action": "SELL",
+      "current_price": 30.35,
+      "target_price": 33.39,
+      "stop_loss": 28.83
+    },
+    {
+      "ticker": "CALM",
+      "action": "BUY",
+      "current_price": 85.36,
+      "target_price": 93.9,
+      "stop_loss": 81.09
+    },
+    {
+      "ticker": "DAKT",
+      "action": "SELL",
+      "current_price": 19.76,
+      "target_price": 21.74,
+      "stop_loss": 18.77
+    },
+    {
+      "ticker": "SMPL",
+      "action": "BUY",
+      "current_price": 11.88,
+      "target_price": 13.07,
+      "stop_loss": 11.29
+    },
+    {
+      "ticker": "ARCO",
+      "action": "BUY",
+      "current_price": 8.19,
+      "target_price": 9.01,
+      "stop_loss": 7.78
+    }
+  ]
+}
