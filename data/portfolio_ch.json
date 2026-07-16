@@ -58,12 +58,12 @@
           "open": 12.19,
           "high": 12.37,
           "low": 11.94,
-          "close": 12.13,
-          "pnl_pct": 1.78
+          "close": 12.18,
+          "pnl_pct": 1.38
         }
       },
       "position_usd": 211.39,
-      "unrealized_pnl_usd": 3.76
+      "unrealized_pnl_usd": 2.92
     }
   ],
   "closed_positions": [
@@ -1249,19 +1249,19 @@
         },
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.18,
+          "high": 61.42,
           "low": 59.31,
           "close": 61.15,
-          "pnl_pct": -1.8
+          "pnl_pct": -2.0
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 61.15,
-      "final_pnl_pct": -1.8,
-      "close_reason": "max_hold",
+      "close_price": 61.27,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.8,
+      "realized_pnl_usd": -4.22,
       "position_usd": 211.21
     },
     {
@@ -1287,18 +1287,18 @@
         "2026-07-16": {
           "open": 20.88,
           "high": 21.0,
-          "low": 20.64,
-          "close": 20.86,
-          "pnl_pct": 0.33
+          "low": 20.39,
+          "close": 20.51,
+          "pnl_pct": 2.01
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 20.86,
-      "final_pnl_pct": 0.33,
+      "close_price": 20.51,
+      "final_pnl_pct": 2.01,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 0.7,
+      "realized_pnl_usd": 4.25,
       "position_usd": 211.21
     }
   ],
@@ -1307,9 +1307,9 @@
     "total_trades": 36,
     "win_trades": 18,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 110.82,
-    "open_unrealized_pnl_usd": 4.22,
-    "portfolio_value": 2115.04,
+    "total_realized_pnl_usd": 113.95,
+    "open_unrealized_pnl_usd": 3.38,
+    "portfolio_value": 2117.33,
     "total_commission_usd": 72.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,

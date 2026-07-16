@@ -168,14 +168,14 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.18,
+          "high": 61.42,
           "low": 59.31,
-          "close": 61.15,
-          "pnl_pct": 2.89
+          "close": 61.12,
+          "pnl_pct": 2.84
         }
       },
       "position_usd": 207.39,
-      "unrealized_pnl_usd": 5.99
+      "unrealized_pnl_usd": 5.89
     },
     {
       "ticker": "PLMR",
@@ -193,14 +193,14 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-16": {
           "open": 132.03,
-          "high": 135.68,
+          "high": 136.15,
           "low": 131.66,
-          "close": 134.63,
-          "pnl_pct": 2.23
+          "close": 134.95,
+          "pnl_pct": 2.48
         }
       },
       "position_usd": 207.39,
-      "unrealized_pnl_usd": 4.62
+      "unrealized_pnl_usd": 5.14
     },
     {
       "ticker": "PSMT",
@@ -220,28 +220,28 @@ window.PORTFOLIO_MN = {
           "open": 188.41,
           "high": 192.96,
           "low": 186.48,
-          "close": 191.32,
-          "pnl_pct": 1.45
+          "close": 191.02,
+          "pnl_pct": 1.29
         }
       },
       "position_usd": 207.39,
-      "unrealized_pnl_usd": 3.01
+      "unrealized_pnl_usd": 2.68
     },
     {
       "ticker": "PTGX",
       "name": "Protagonist Therapeutics",
       "action": "BUY",
       "signal_date": "2026-07-16",
-      "entry_price": 134.61,
+      "entry_price": 133.35,
       "allocated_usd": 500,
-      "shares": 3.7144,
+      "shares": 3.7495,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 154.8,
-      "stop_loss": 131.92,
+      "take_profit": 153.35,
+      "stop_loss": 130.68,
       "max_hold_date": "2026-07-20",
       "daily_prices": {},
-      "position_usd": 207.79,
+      "position_usd": 207.44,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2888,18 +2888,18 @@ window.PORTFOLIO_MN = {
         "2026-07-16": {
           "open": 20.88,
           "high": 21.0,
-          "low": 20.64,
-          "close": 20.86,
-          "pnl_pct": 1.96
+          "low": 20.39,
+          "close": 20.51,
+          "pnl_pct": 0.24
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 20.86,
-      "final_pnl_pct": 1.96,
+      "close_price": 20.51,
+      "final_pnl_pct": 0.24,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.09,
+      "realized_pnl_usd": 0.5,
       "position_usd": 208.64
     }
   ],
@@ -2908,9 +2908,9 @@ window.PORTFOLIO_MN = {
     "total_trades": 78,
     "win_trades": 23,
     "win_rate": 29.5,
-    "total_realized_pnl_usd": 77.94,
-    "open_unrealized_pnl_usd": 38.26,
-    "portfolio_value": 2116.2,
+    "total_realized_pnl_usd": 74.35,
+    "open_unrealized_pnl_usd": 38.35,
+    "portfolio_value": 2112.7,
     "total_commission_usd": 156.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,

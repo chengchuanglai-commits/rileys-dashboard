@@ -43,12 +43,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.07
         },
         "2026-07-16": {
-          "close": 61.21,
-          "pnl_pct": -1.9
+          "close": 61.16,
+          "pnl_pct": -1.81
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": -3.85,
+      "unrealized_pnl_usd": -3.66,
       "gap_checked": true,
       "day1_gap_pct": -0.92
     },
@@ -75,12 +75,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.1
         },
         "2026-07-16": {
-          "close": 20.86,
-          "pnl_pct": 0.33
+          "close": 20.51,
+          "pnl_pct": 2.01
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 2.87,
+      "unrealized_pnl_usd": 4.3,
       "gap_checked": true,
       "day1_gap_pct": -0.24
     },
@@ -100,12 +100,12 @@ window.PORTFOLIO_C = {
       "day1_open": 12.19,
       "daily_prices": {
         "2026-07-16": {
-          "close": 12.17,
-          "pnl_pct": 1.46
+          "close": 12.18,
+          "pnl_pct": 1.38
         }
       },
       "position_usd": 212.96,
-      "unrealized_pnl_usd": 3.96,
+      "unrealized_pnl_usd": 2.77,
       "gap_checked": true,
       "day1_gap_pct": -1.3
     }
@@ -1702,61 +1702,31 @@ window.PORTFOLIO_C = {
         },
         "2026-07-16": {
           "open": 58.08,
-          "high": 59.59,
+          "high": 59.71,
           "low": 57.62,
-          "close": 59.22,
-          "pnl_pct": 1.9
+          "close": 59.4,
+          "pnl_pct": 1.61
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 59.22,
-      "final_pnl_pct": 1.9,
+      "close_price": 59.4,
+      "final_pnl_pct": 1.61,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.03,
+      "realized_pnl_usd": 3.41,
       "position_usd": 211.95
-    },
-    {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 169.06,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 338.12,
-      "entry_commission": 1.0,
-      "take_profit": 155.54,
-      "stop_loss": 175.82,
-      "max_hold_date": "2026-06-18",
-      "day1_open": 149.25,
-      "daily_prices": {
-        "2026-07-16": {
-          "close": 156.8,
-          "pnl_pct": 7.25
-        }
-      },
-      "position_usd": 209.32,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -11.72,
-      "close_date": "2026-07-16",
-      "close_price": 156.8,
-      "final_pnl_pct": 7.25,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": 36.26
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 35,
-    "win_trades": 22,
-    "win_rate": 62.9,
-    "total_realized_pnl_usd": 169.92,
-    "open_unrealized_pnl_usd": -0.55,
-    "portfolio_value": 2169.37,
-    "skipped_gap": 14,
-    "updated_at": "2026-07-16"
+    "total_trades": 34,
+    "win_trades": 21,
+    "win_rate": 61.8,
+    "total_realized_pnl_usd": 133.04,
+    "open_unrealized_pnl_usd": 7.9,
+    "portfolio_value": 2140.94,
+    "skipped_gap": 15,
+    "updated_at": "2026-07-17"
   }
 };

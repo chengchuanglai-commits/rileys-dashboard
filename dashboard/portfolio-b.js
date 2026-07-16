@@ -46,8 +46,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.87
         },
         "2026-07-16": {
-          "close": 281.7,
-          "pnl_pct": -2.07
+          "close": 282.0,
+          "pnl_pct": -2.17
         }
       }
     },
@@ -73,8 +73,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.07
         },
         "2026-07-16": {
-          "close": 61.21,
-          "pnl_pct": -1.9
+          "close": 61.16,
+          "pnl_pct": -1.81
         }
       }
     },
@@ -100,8 +100,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.1
         },
         "2026-07-16": {
-          "close": 20.86,
-          "pnl_pct": 0.33
+          "close": 20.51,
+          "pnl_pct": 2.01
         }
       }
     },
@@ -120,8 +120,8 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-22",
       "daily_prices": {
         "2026-07-16": {
-          "close": 12.17,
-          "pnl_pct": 1.46
+          "close": 12.18,
+          "pnl_pct": 1.38
         }
       }
     }
@@ -2074,19 +2074,19 @@ window.PORTFOLIO_B = {
         },
         "2026-07-16": {
           "open": 58.08,
-          "high": 59.59,
+          "high": 59.71,
           "low": 57.62,
-          "close": 59.22,
-          "pnl_pct": 1.9
+          "close": 59.4,
+          "pnl_pct": 1.61
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 59.22,
-      "final_pnl_pct": 1.9,
+      "close_price": 59.4,
+      "final_pnl_pct": 1.61,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.18
+      "realized_pnl_usd": 5.78
     },
     {
       "ticker": "PFIS",
@@ -2183,9 +2183,9 @@ window.PORTFOLIO_B = {
         },
         "2026-07-16": {
           "open": 57.57,
-          "high": 58.62,
+          "high": 58.82,
           "low": 56.97,
-          "close": 58.26,
+          "close": 58.82,
           "pnl_pct": -4.01
         }
       },
@@ -2203,9 +2203,9 @@ window.PORTFOLIO_B = {
     "total_trades": 48,
     "win_trades": 23,
     "win_rate": 47.9,
-    "total_realized_pnl_usd": 43.57,
-    "open_unrealized_pnl_usd": -10.9,
-    "portfolio_value": 2032.67,
-    "updated_at": "2026-07-16"
+    "total_realized_pnl_usd": 42.17,
+    "open_unrealized_pnl_usd": -2.95,
+    "portfolio_value": 2039.22,
+    "updated_at": "2026-07-17"
   }
 };
