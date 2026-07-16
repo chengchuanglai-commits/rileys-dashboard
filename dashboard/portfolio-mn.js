@@ -168,7 +168,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
-          "high": 21.28,
+          "high": 21.29,
           "low": 20.15,
           "close": 20.7,
           "pnl_pct": 1.17
@@ -2770,8 +2770,8 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-15": {
-          "open": 30.94,
-          "high": 31.12,
+          "open": 30.91,
+          "high": 31.14,
           "low": 30.32,
           "close": 30.35,
           "pnl_pct": -2.0
@@ -2861,6 +2861,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 41,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 102,
-    "updated_at": "2026-07-15"
+    "updated_at": "2026-07-16"
   }
 };

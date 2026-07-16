@@ -1,4 +1,4 @@
-// Plan B 模拟盘持仓 — 每日自动更新
+// Plan B 模拟盘持仓 — 历史回溯 + 实时更新
 window.PORTFOLIO_B = {
   "capital_usd": 2000,
   "open_positions": [
@@ -53,6 +53,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.33
         },
         "2026-07-15": {
+          "open": 58.33,
+          "high": 58.33,
+          "low": 56.13,
           "close": 56.87,
           "pnl_pct": 5.8
         }
@@ -94,6 +97,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.38
         },
         "2026-07-15": {
+          "open": 55.2,
+          "high": 57.27,
+          "low": 55.2,
           "close": 57.04,
           "pnl_pct": -2.08
         }
@@ -121,6 +127,9 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.99
         },
         "2026-07-15": {
+          "open": 273.55,
+          "high": 279.3,
+          "low": 271.53,
           "close": 273.6,
           "pnl_pct": 0.87
         }
@@ -141,6 +150,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-15": {
+          "open": 59.43,
+          "high": 59.93,
+          "low": 58.59,
           "close": 59.43,
           "pnl_pct": 1.07
         }
@@ -161,6 +173,9 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-15": {
+          "open": 20.66,
+          "high": 21.29,
+          "low": 20.15,
           "close": 20.7,
           "pnl_pct": 1.1
         }
@@ -179,12 +194,7 @@ window.PORTFOLIO_B = {
       "take_profit": 11.36,
       "stop_loss": 12.84,
       "max_hold_date": "2026-07-22",
-      "daily_prices": {
-        "2026-07-15": {
-          "close": 11.88,
-          "pnl_pct": 3.81
-        }
-      }
+      "daily_prices": {}
     }
   ],
   "closed_positions": [
@@ -2149,8 +2159,10 @@ window.PORTFOLIO_B = {
     "win_trades": 22,
     "win_rate": 47.8,
     "total_realized_pnl_usd": 56.32,
-    "open_unrealized_pnl_usd": 52.85,
-    "portfolio_value": 2109.17,
+    "open_unrealized_pnl_usd": 26.55,
+    "portfolio_value": 2082.87,
+    "total_commission_usd": 92.0,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-16"
   }
 };

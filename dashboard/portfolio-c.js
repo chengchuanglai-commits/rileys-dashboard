@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -33,7 +33,7 @@ window.PORTFOLIO_C = {
       "take_profit": 55.54,
       "stop_loss": 62.78,
       "max_hold_date": "2026-07-16",
-      "day1_open": 58.33,
+      "day1_open": 60.1,
       "daily_prices": {
         "2026-07-10": {
           "open": 60.1,
@@ -57,14 +57,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": 3.33
         },
         "2026-07-15": {
+          "open": 58.33,
+          "high": 58.33,
+          "low": 56.13,
           "close": 56.87,
           "pnl_pct": 5.8
         }
       },
       "position_usd": 211.95,
-      "unrealized_pnl_usd": 12.29,
-      "gap_checked": true,
-      "day1_gap_pct": -3.38
+      "unrealized_pnl_usd": 12.29
     },
     {
       "ticker": "ITIC",
@@ -79,7 +80,7 @@ window.PORTFOLIO_C = {
       "take_profit": 253.92,
       "stop_loss": 287.04,
       "max_hold_date": "2026-07-20",
-      "day1_open": 274.14,
+      "day1_open": 278.21,
       "daily_prices": {
         "2026-07-14": {
           "open": 278.21,
@@ -89,14 +90,15 @@ window.PORTFOLIO_C = {
           "pnl_pct": -0.99
         },
         "2026-07-15": {
+          "open": 273.55,
+          "high": 279.3,
+          "low": 271.53,
           "close": 273.6,
           "pnl_pct": 0.87
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 1.86,
-      "gap_checked": true,
-      "day1_gap_pct": -0.67
+      "unrealized_pnl_usd": 1.86
     },
     {
       "ticker": "TCBK",
@@ -111,17 +113,18 @@ window.PORTFOLIO_C = {
       "take_profit": 55.26,
       "stop_loss": 62.47,
       "max_hold_date": "2026-07-21",
-      "day1_open": 58.59,
+      "day1_open": 59.43,
       "daily_prices": {
         "2026-07-15": {
+          "open": 59.43,
+          "high": 59.93,
+          "low": 58.59,
           "close": 59.43,
           "pnl_pct": 1.07
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 2.29,
-      "gap_checked": true,
-      "day1_gap_pct": -2.46
+      "unrealized_pnl_usd": 2.29
     },
     {
       "ticker": "STRS",
@@ -139,14 +142,15 @@ window.PORTFOLIO_C = {
       "day1_open": 20.66,
       "daily_prices": {
         "2026-07-15": {
+          "open": 20.66,
+          "high": 21.29,
+          "low": 20.15,
           "close": 20.7,
           "pnl_pct": 1.1
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 2.35,
-      "gap_checked": true,
-      "day1_gap_pct": -1.29
+      "unrealized_pnl_usd": 2.35
     },
     {
       "ticker": "SMPL",
@@ -161,17 +165,10 @@ window.PORTFOLIO_C = {
       "take_profit": 11.36,
       "stop_loss": 12.84,
       "max_hold_date": "2026-07-22",
-      "day1_open": 12.38,
-      "daily_prices": {
-        "2026-07-15": {
-          "close": 11.88,
-          "pnl_pct": 3.81
-        }
-      },
+      "day1_open": null,
+      "daily_prices": {},
       "position_usd": 212.96,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": 0.24
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1727,10 +1724,12 @@ window.PORTFOLIO_C = {
     "total_trades": 33,
     "win_trades": 20,
     "win_rate": 60.6,
-    "total_realized_pnl_usd": 129.63,
-    "open_unrealized_pnl_usd": 63.25,
-    "portfolio_value": 2192.88,
+    "total_realized_pnl_usd": 129.64,
+    "open_unrealized_pnl_usd": 18.79,
+    "portfolio_value": 2148.43,
+    "total_commission_usd": 66.0,
     "skipped_gap": 14,
+    "skipped_zero_shares": 1,
     "updated_at": "2026-07-16"
   }
 };

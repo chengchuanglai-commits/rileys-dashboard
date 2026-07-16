@@ -85,11 +85,11 @@ window.PORTFOLIO_F = {
       "take_profit_2": 51.06,
       "stop_loss": 61.87,
       "max_hold_date": "2026-07-17",
-      "day1_open": 58.59,
+      "day1_open": 59.43,
       "daily_prices": {
         "2026-07-15": {
-          "open": 58.59,
-          "high": 59.92,
+          "open": 59.43,
+          "high": 59.93,
           "low": 58.59,
           "close": 59.43,
           "pnl_pct": 1.07
@@ -116,7 +116,7 @@ window.PORTFOLIO_F = {
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
-          "high": 21.28,
+          "high": 21.29,
           "low": 20.15,
           "close": 20.7,
           "pnl_pct": 1.1
@@ -1631,6 +1631,6 @@ window.PORTFOLIO_F = {
     "total_commission_usd": 78.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 7,
-    "updated_at": "2026-07-15"
+    "updated_at": "2026-07-16"
   }
 };

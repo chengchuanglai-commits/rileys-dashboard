@@ -1,6 +1,6 @@
 // 信号 edge 分析 — analyze-signal-edge.py 自动生成
 window.SIGNAL_EDGE = {
-  "generated_at": "2026-07-15 12:12",
+  "generated_at": "2026-07-16 11:43",
   "sample_total": 54,
   "date_range": [
     "2026-05-27",
@@ -10,24 +10,24 @@ window.SIGNAL_EDGE = {
   "horizons": [
     {
       "horizon": 1,
-      "n": 44,
-      "hit_rate": 43.2,
-      "ci_lo": 29,
-      "ci_hi": 58,
-      "beat_spy_pct": 38.6,
-      "avg_pnl": 0.17,
-      "avg_alpha": 0.26,
+      "n": 47,
+      "hit_rate": 44.7,
+      "ci_lo": 30,
+      "ci_hi": 59,
+      "beat_spy_pct": 40.4,
+      "avg_pnl": 0.19,
+      "avg_alpha": 0.3,
       "verdict": "⚠️ 与噪声难区分"
     },
     {
       "horizon": 3,
-      "n": 41,
-      "hit_rate": 56.1,
-      "ci_lo": 41,
+      "n": 44,
+      "hit_rate": 56.8,
+      "ci_lo": 42,
       "ci_hi": 71,
-      "beat_spy_pct": 53.7,
+      "beat_spy_pct": 54.5,
       "avg_pnl": 0.78,
-      "avg_alpha": 1.01,
+      "avg_alpha": 1.0,
       "verdict": "✅ 初步有正 edge"
     },
     {
