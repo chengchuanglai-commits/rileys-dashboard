@@ -17,94 +17,6 @@
       "daily_prices": {}
     },
     {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 60.37,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 482.96,
-      "entry_commission": 1.0,
-      "take_profit": 55.54,
-      "stop_loss": 62.78,
-      "max_hold_date": "2026-07-16",
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 60.1,
-          "high": 61.22,
-          "low": 59.14,
-          "close": 59.34,
-          "pnl_pct": 1.71
-        },
-        "2026-07-13": {
-          "open": 59.97,
-          "high": 60.89,
-          "low": 58.14,
-          "close": 59.76,
-          "pnl_pct": 1.01
-        },
-        "2026-07-14": {
-          "open": 59.43,
-          "high": 60.46,
-          "low": 58.23,
-          "close": 58.36,
-          "pnl_pct": 3.33
-        },
-        "2026-07-15": {
-          "open": 58.33,
-          "high": 58.33,
-          "low": 56.13,
-          "close": 56.87,
-          "pnl_pct": 5.8
-        }
-      }
-    },
-    {
-      "ticker": "ACIW",
-      "name": "ACIW",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 55.88,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 447.04,
-      "entry_commission": 1.0,
-      "take_profit": 51.41,
-      "stop_loss": 58.12,
-      "max_hold_date": "2026-07-16",
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 56.97,
-          "high": 57.58,
-          "low": 56.29,
-          "close": 56.42,
-          "pnl_pct": -0.97
-        },
-        "2026-07-13": {
-          "open": 56.91,
-          "high": 57.6,
-          "low": 56.35,
-          "close": 56.43,
-          "pnl_pct": -0.98
-        },
-        "2026-07-14": {
-          "open": 54.75,
-          "high": 56.11,
-          "low": 53.81,
-          "close": 55.11,
-          "pnl_pct": 1.38
-        },
-        "2026-07-15": {
-          "open": 55.2,
-          "high": 57.27,
-          "low": 55.2,
-          "close": 57.04,
-          "pnl_pct": -2.08
-        }
-      }
-    },
-    {
       "ticker": "ITIC",
       "name": "ITIC",
       "action": "SELL",
@@ -131,6 +43,10 @@
           "low": 271.53,
           "close": 273.6,
           "pnl_pct": 0.87
+        },
+        "2026-07-16": {
+          "close": 281.7,
+          "pnl_pct": -2.07
         }
       }
     },
@@ -154,6 +70,10 @@
           "low": 58.59,
           "close": 59.43,
           "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "close": 61.21,
+          "pnl_pct": -1.9
         }
       }
     },
@@ -177,6 +97,10 @@
           "low": 20.15,
           "close": 20.7,
           "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "close": 20.86,
+          "pnl_pct": 0.33
         }
       }
     },
@@ -193,7 +117,12 @@
       "take_profit": 11.36,
       "stop_loss": 12.84,
       "max_hold_date": "2026-07-22",
-      "daily_prices": {}
+      "daily_prices": {
+        "2026-07-16": {
+          "close": 12.17,
+          "pnl_pct": 1.46
+        }
+      }
     }
   ],
   "closed_positions": [
@@ -2101,6 +2030,64 @@
       "realized_pnl_usd": 8.05
     },
     {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.37,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 482.96,
+      "entry_commission": 1.0,
+      "take_profit": 55.54,
+      "stop_loss": 62.78,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.22,
+          "low": 59.14,
+          "close": 59.34,
+          "pnl_pct": 1.71
+        },
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 59.76,
+          "pnl_pct": 1.01
+        },
+        "2026-07-14": {
+          "open": 59.43,
+          "high": 60.46,
+          "low": 58.23,
+          "close": 58.36,
+          "pnl_pct": 3.33
+        },
+        "2026-07-15": {
+          "open": 58.33,
+          "high": 58.33,
+          "low": 56.13,
+          "close": 56.87,
+          "pnl_pct": 5.8
+        },
+        "2026-07-16": {
+          "open": 58.08,
+          "high": 59.59,
+          "low": 57.62,
+          "close": 59.22,
+          "pnl_pct": 1.9
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 59.22,
+      "final_pnl_pct": 1.9,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 7.18
+    },
+    {
       "ticker": "PFIS",
       "name": "PFIS",
       "action": "SELL",
@@ -2150,18 +2137,74 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -20.27
+    },
+    {
+      "ticker": "ACIW",
+      "name": "ACIW",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 55.88,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 447.04,
+      "entry_commission": 1.0,
+      "take_profit": 51.41,
+      "stop_loss": 58.12,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 56.97,
+          "high": 57.58,
+          "low": 56.29,
+          "close": 56.42,
+          "pnl_pct": -0.97
+        },
+        "2026-07-13": {
+          "open": 56.91,
+          "high": 57.6,
+          "low": 56.35,
+          "close": 56.43,
+          "pnl_pct": -0.98
+        },
+        "2026-07-14": {
+          "open": 54.75,
+          "high": 56.11,
+          "low": 53.81,
+          "close": 55.11,
+          "pnl_pct": 1.38
+        },
+        "2026-07-15": {
+          "open": 55.2,
+          "high": 57.27,
+          "low": 55.2,
+          "close": 57.04,
+          "pnl_pct": -2.08
+        },
+        "2026-07-16": {
+          "open": 57.57,
+          "high": 58.62,
+          "low": 56.97,
+          "close": 58.26,
+          "pnl_pct": -4.01
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 58.12,
+      "final_pnl_pct": -4.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -19.93
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 46,
-    "win_trades": 22,
-    "win_rate": 47.8,
-    "total_realized_pnl_usd": 56.32,
-    "open_unrealized_pnl_usd": 26.55,
-    "portfolio_value": 2082.87,
-    "total_commission_usd": 92.0,
-    "skipped_zero_shares": 1,
+    "total_trades": 48,
+    "win_trades": 23,
+    "win_rate": 47.9,
+    "total_realized_pnl_usd": 43.57,
+    "open_unrealized_pnl_usd": -10.9,
+    "portfolio_value": 2032.67,
     "updated_at": "2026-07-16"
   }
 }

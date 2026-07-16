@@ -91,41 +91,6 @@
       "day1_open": 36.67
     },
     {
-      "ticker": "ITIC",
-      "name": "ITIC",
-      "action": "SELL",
-      "signal_date": "2026-07-13",
-      "entry_price": 276.0,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 276.0,
-      "entry_commission": 1.0,
-      "take_profit": 248.4,
-      "stop_loss": 284.28,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-16",
-      "regime": "neutral",
-      "vix": 17.16,
-      "daily_prices": {
-        "2026-07-14": {
-          "open": 278.21,
-          "high": 281.14,
-          "low": 277.43,
-          "close": 278.72,
-          "pnl_pct": -0.99
-        },
-        "2026-07-15": {
-          "open": 273.55,
-          "high": 279.3,
-          "low": 271.53,
-          "close": 273.6,
-          "pnl_pct": 0.87
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 278.21
-    },
-    {
       "ticker": "TCBK",
       "name": "TCBK",
       "action": "SELL",
@@ -148,6 +113,13 @@
           "low": 58.59,
           "close": 59.43,
           "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.18,
+          "low": 59.31,
+          "close": 61.15,
+          "pnl_pct": -1.8
         }
       },
       "gap_checked": true,
@@ -176,6 +148,13 @@
           "low": 20.15,
           "close": 20.7,
           "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "open": 20.88,
+          "high": 21.0,
+          "low": 20.64,
+          "close": 20.65,
+          "pnl_pct": 1.34
         }
       },
       "gap_checked": true,
@@ -197,8 +176,17 @@
       "max_hold_date": "2026-07-20",
       "regime": "neutral",
       "vix": 15.67,
-      "daily_prices": {},
-      "gap_checked": true
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.12,
+          "pnl_pct": 1.86
+        }
+      },
+      "gap_checked": true,
+      "day1_open": 12.19
     }
   ],
   "closed_positions": [
@@ -1535,17 +1523,64 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -15.7
+    },
+    {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "take_profit": 248.4,
+      "stop_loss": 284.28,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-16",
+      "regime": "neutral",
+      "vix": 17.16,
+      "daily_prices": {
+        "2026-07-14": {
+          "open": 278.21,
+          "high": 281.14,
+          "low": 277.43,
+          "close": 278.72,
+          "pnl_pct": -0.99
+        },
+        "2026-07-15": {
+          "open": 273.55,
+          "high": 279.3,
+          "low": 271.53,
+          "close": 273.6,
+          "pnl_pct": 0.87
+        },
+        "2026-07-16": {
+          "open": 280.6,
+          "high": 281.7,
+          "low": 280.6,
+          "close": 281.7,
+          "pnl_pct": -2.07
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 281.7,
+      "final_pnl_pct": -2.07,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -7.71
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 33,
+    "total_trades": 34,
     "win_trades": 16,
-    "win_rate": 48.5,
-    "total_realized_pnl_usd": 165.41,
-    "open_unrealized_pnl_usd": 13.15,
-    "portfolio_value": 2178.56,
-    "total_commission_usd": 66.0,
+    "win_rate": 47.1,
+    "total_realized_pnl_usd": 157.7,
+    "open_unrealized_pnl_usd": 7.3,
+    "portfolio_value": 2165.0,
+    "total_commission_usd": 68.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,

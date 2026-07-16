@@ -19,51 +19,6 @@ window.PORTFOLIO_CTG = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "SKWD",
-      "name": "SKWD",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 60.37,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 482.96,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-15",
-      "day1_open": 60.1,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 60.1,
-          "high": 61.22,
-          "low": 59.14,
-          "close": 59.34,
-          "pnl_pct": 1.71
-        },
-        "2026-07-13": {
-          "open": 59.97,
-          "high": 60.89,
-          "low": 58.14,
-          "close": 59.76,
-          "pnl_pct": 1.01
-        },
-        "2026-07-14": {
-          "open": 59.43,
-          "high": 60.46,
-          "low": 58.23,
-          "close": 58.36,
-          "pnl_pct": 3.33
-        },
-        "2026-07-15": {
-          "open": 58.33,
-          "high": 58.33,
-          "low": 56.16,
-          "close": 56.87,
-          "pnl_pct": 5.8
-        }
-      },
-      "position_usd": 212.8,
-      "unrealized_pnl_usd": 12.34
-    },
-    {
       "ticker": "ITIC",
       "name": "ITIC",
       "action": "SELL",
@@ -73,7 +28,7 @@ window.PORTFOLIO_CTG = {
       "shares": 1,
       "actual_position_usd": 276.0,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-15",
+      "max_hold_date": "2026-07-16",
       "day1_open": 278.21,
       "daily_prices": {
         "2026-07-14": {
@@ -84,15 +39,22 @@ window.PORTFOLIO_CTG = {
           "pnl_pct": -0.99
         },
         "2026-07-15": {
-          "open": 274.14,
+          "open": 273.55,
           "high": 279.3,
           "low": 271.53,
           "close": 273.6,
           "pnl_pct": 0.87
+        },
+        "2026-07-16": {
+          "open": 280.6,
+          "high": 281.7,
+          "low": 280.6,
+          "close": 281.7,
+          "pnl_pct": -2.07
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 1.87
+      "unrealized_pnl_usd": -4.44
     },
     {
       "ticker": "TCBK",
@@ -104,19 +66,26 @@ window.PORTFOLIO_CTG = {
       "shares": 8,
       "actual_position_usd": 480.56,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-15",
-      "day1_open": 58.59,
+      "max_hold_date": "2026-07-16",
+      "day1_open": 59.43,
       "daily_prices": {
         "2026-07-15": {
-          "open": 58.59,
-          "high": 59.92,
+          "open": 59.43,
+          "high": 59.93,
           "low": 58.59,
           "close": 59.43,
           "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.18,
+          "low": 59.31,
+          "close": 61.15,
+          "pnl_pct": -1.8
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 2.3
+      "unrealized_pnl_usd": -3.86
     },
     {
       "ticker": "STRS",
@@ -128,19 +97,26 @@ window.PORTFOLIO_CTG = {
       "shares": 23,
       "actual_position_usd": 481.39,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-15",
+      "max_hold_date": "2026-07-16",
       "day1_open": 20.66,
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
-          "high": 21.28,
+          "high": 21.29,
           "low": 20.15,
           "close": 20.7,
           "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "open": 20.88,
+          "high": 21.0,
+          "low": 20.64,
+          "close": 20.86,
+          "pnl_pct": 0.33
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 2.36
+      "unrealized_pnl_usd": 0.71
     },
     {
       "ticker": "SMPL",
@@ -152,11 +128,19 @@ window.PORTFOLIO_CTG = {
       "shares": 40,
       "actual_position_usd": 494.0,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-15",
-      "day1_open": null,
-      "daily_prices": {},
+      "max_hold_date": "2026-07-16",
+      "day1_open": 12.19,
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.12,
+          "pnl_pct": 1.86
+        }
+      },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.99
     }
   ],
   "closed_positions": [
@@ -1558,19 +1542,77 @@ window.PORTFOLIO_CTG = {
       "commission_total": 2.0,
       "realized_pnl_usd": 4.26,
       "position_usd": 212.17
+    },
+    {
+      "ticker": "SKWD",
+      "name": "SKWD",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 60.37,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 482.96,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-16",
+      "day1_open": 60.1,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 60.1,
+          "high": 61.22,
+          "low": 59.14,
+          "close": 59.34,
+          "pnl_pct": 1.71
+        },
+        "2026-07-13": {
+          "open": 59.97,
+          "high": 60.89,
+          "low": 58.14,
+          "close": 59.76,
+          "pnl_pct": 1.01
+        },
+        "2026-07-14": {
+          "open": 59.43,
+          "high": 60.46,
+          "low": 58.23,
+          "close": 58.36,
+          "pnl_pct": 3.33
+        },
+        "2026-07-15": {
+          "open": 58.33,
+          "high": 58.33,
+          "low": 56.13,
+          "close": 56.87,
+          "pnl_pct": 5.8
+        },
+        "2026-07-16": {
+          "open": 58.08,
+          "high": 59.59,
+          "low": 57.62,
+          "close": 59.3,
+          "pnl_pct": 1.77
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 59.3,
+      "final_pnl_pct": 1.77,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 3.77,
+      "position_usd": 212.8
     }
   ],
   "_note": "c-tight 变体:Plan C 出场(TP8/SL4/5天)+ 跳空过滤 >1.0% 跳过(比 c 更紧)",
   "stats": {
-    "total_trades": 31,
-    "win_trades": 20,
-    "win_rate": 64.5,
-    "total_realized_pnl_usd": 146.71,
-    "open_unrealized_pnl_usd": 18.87,
-    "portfolio_value": 2165.58,
-    "total_commission_usd": 62.0,
+    "total_trades": 32,
+    "win_trades": 21,
+    "win_rate": 65.6,
+    "total_realized_pnl_usd": 150.48,
+    "open_unrealized_pnl_usd": -3.61,
+    "portfolio_value": 2146.87,
+    "total_commission_usd": 64.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-15"
+    "updated_at": "2026-07-16"
   }
 };

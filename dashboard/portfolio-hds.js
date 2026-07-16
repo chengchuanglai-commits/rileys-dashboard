@@ -162,56 +162,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.49
     },
     {
-      "ticker": "STRS",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 20.93,
-      "allocated_usd": 500,
-      "shares": 23.8892,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 17.79,
-      "stop_loss": 21.35,
-      "max_hold_date": "2026-07-16",
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 20.66,
-          "high": 21.29,
-          "low": 20.15,
-          "close": 20.7,
-          "pnl_pct": 1.1
-        }
-      },
-      "position_usd": 226.07,
-      "unrealized_pnl_usd": 2.49
-    },
-    {
-      "ticker": "TCBK",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 60.07,
-      "allocated_usd": 500,
-      "shares": 8.3236,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 51.06,
-      "stop_loss": 61.27,
-      "max_hold_date": "2026-07-16",
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 59.43,
-          "high": 59.93,
-          "low": 58.59,
-          "close": 59.43,
-          "pnl_pct": 1.07
-        }
-      },
-      "position_usd": 226.07,
-      "unrealized_pnl_usd": 2.42
-    },
-    {
       "ticker": "TRVI",
       "name": "",
       "action": "SELL",
@@ -224,8 +174,50 @@ window.PORTFOLIO_HDS = {
       "take_profit": 15.22,
       "stop_loss": 18.27,
       "max_hold_date": "2026-07-17",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 17.97,
+          "high": 18.11,
+          "low": 17.62,
+          "close": 17.64,
+          "pnl_pct": 1.51
+        }
+      },
       "position_usd": 226.26,
+      "unrealized_pnl_usd": 3.42
+    },
+    {
+      "ticker": "UTMD",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-16",
+      "entry_price": 70.42,
+      "allocated_usd": 500,
+      "shares": 7.1003,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 59.86,
+      "stop_loss": 71.83,
+      "max_hold_date": "2026-07-20",
+      "daily_prices": {},
+      "position_usd": 225.93,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "STRS",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-16",
+      "entry_price": 20.7,
+      "allocated_usd": 500,
+      "shares": 24.1546,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 23.8,
+      "stop_loss": 20.29,
+      "max_hold_date": "2026-07-20",
+      "daily_prices": {},
+      "position_usd": 225.93,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2041,20 +2033,96 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": 1.97,
       "position_usd": 226.12
+    },
+    {
+      "ticker": "STRS",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.93,
+      "allocated_usd": 500,
+      "shares": 23.8892,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 17.79,
+      "stop_loss": 21.35,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 21.29,
+          "low": 20.15,
+          "close": 20.7,
+          "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "open": 20.88,
+          "high": 21.0,
+          "low": 20.64,
+          "close": 20.86,
+          "pnl_pct": 0.33
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 20.86,
+      "final_pnl_pct": 0.33,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 0.75,
+      "position_usd": 226.07
+    },
+    {
+      "ticker": "TCBK",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 60.07,
+      "allocated_usd": 500,
+      "shares": 8.3236,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 51.06,
+      "stop_loss": 61.27,
+      "max_hold_date": "2026-07-16",
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 59.43,
+          "high": 59.93,
+          "low": 58.59,
+          "close": 59.43,
+          "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.18,
+          "low": 59.31,
+          "close": 61.15,
+          "pnl_pct": -1.8
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 61.15,
+      "final_pnl_pct": -1.8,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.07,
+      "position_usd": 226.07
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 51,
-    "win_trades": 34,
-    "win_rate": 66.7,
-    "total_realized_pnl_usd": 262.64,
-    "open_unrealized_pnl_usd": 38.81,
-    "portfolio_value": 2301.45,
-    "total_commission_usd": 102.0,
+    "total_trades": 53,
+    "win_trades": 35,
+    "win_rate": 66.0,
+    "total_realized_pnl_usd": 259.32,
+    "open_unrealized_pnl_usd": 37.33,
+    "portfolio_value": 2296.65,
+    "total_commission_usd": 106.0,
     "skipped_gap": 26,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 15,
+    "skipped_no_cash": 13,
     "updated_at": "2026-07-16"
   }
 };
