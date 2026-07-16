@@ -116,10 +116,10 @@ window.PORTFOLIO_E = {
         },
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.42,
+          "high": 61.62,
           "low": 59.31,
-          "close": 61.1,
-          "pnl_pct": -1.71
+          "close": 61.37,
+          "pnl_pct": -2.16
         }
       },
       "gap_checked": true,
@@ -152,9 +152,9 @@ window.PORTFOLIO_E = {
         "2026-07-16": {
           "open": 20.88,
           "high": 21.0,
-          "low": 20.39,
-          "close": 20.51,
-          "pnl_pct": 2.01
+          "low": 20.21,
+          "close": 20.21,
+          "pnl_pct": 3.44
         }
       },
       "gap_checked": true,
@@ -181,8 +181,8 @@ window.PORTFOLIO_E = {
           "open": 12.19,
           "high": 12.37,
           "low": 11.94,
-          "close": 12.19,
-          "pnl_pct": 1.3
+          "close": 12.23,
+          "pnl_pct": 0.97
         }
       },
       "gap_checked": true,
@@ -1557,19 +1557,19 @@ window.PORTFOLIO_E = {
         },
         "2026-07-16": {
           "open": 280.6,
-          "high": 282.7,
+          "high": 282.79,
           "low": 280.6,
-          "close": 281.5,
-          "pnl_pct": -1.99
+          "close": 282.79,
+          "pnl_pct": -2.46
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 281.5,
-      "final_pnl_pct": -1.99,
+      "close_price": 282.79,
+      "final_pnl_pct": -2.46,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -7.49
+      "realized_pnl_usd": -8.79
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
@@ -1577,9 +1577,9 @@ window.PORTFOLIO_E = {
     "total_trades": 34,
     "win_trades": 16,
     "win_rate": 47.1,
-    "total_realized_pnl_usd": 157.92,
-    "open_unrealized_pnl_usd": 8.19,
-    "portfolio_value": 2166.11,
+    "total_realized_pnl_usd": 156.62,
+    "open_unrealized_pnl_usd": 11.28,
+    "portfolio_value": 2167.9,
     "total_commission_usd": 68.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

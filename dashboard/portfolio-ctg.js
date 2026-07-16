@@ -47,14 +47,14 @@ window.PORTFOLIO_CTG = {
         },
         "2026-07-16": {
           "open": 280.6,
-          "high": 282.7,
+          "high": 282.79,
           "low": 280.6,
-          "close": 282.0,
-          "pnl_pct": -2.17
+          "close": 282.79,
+          "pnl_pct": -2.46
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -4.66
+      "unrealized_pnl_usd": -5.28
     },
     {
       "ticker": "TCBK",
@@ -78,14 +78,14 @@ window.PORTFOLIO_CTG = {
         },
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.42,
+          "high": 61.62,
           "low": 59.31,
-          "close": 61.15,
-          "pnl_pct": -1.8
+          "close": 61.37,
+          "pnl_pct": -2.16
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -3.86
+      "unrealized_pnl_usd": -4.64
     },
     {
       "ticker": "STRS",
@@ -110,13 +110,13 @@ window.PORTFOLIO_CTG = {
         "2026-07-16": {
           "open": 20.88,
           "high": 21.0,
-          "low": 20.39,
-          "close": 20.51,
-          "pnl_pct": 2.01
+          "low": 20.21,
+          "close": 20.21,
+          "pnl_pct": 3.44
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 4.31
+      "unrealized_pnl_usd": 7.38
     },
     {
       "ticker": "SMPL",
@@ -135,12 +135,12 @@ window.PORTFOLIO_CTG = {
           "open": 12.19,
           "high": 12.37,
           "low": 11.94,
-          "close": 12.18,
-          "pnl_pct": 1.38
+          "close": 12.22,
+          "pnl_pct": 1.05
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 2.96
+      "unrealized_pnl_usd": 2.25
     }
   ],
   "closed_positions": [
@@ -1608,8 +1608,8 @@ window.PORTFOLIO_CTG = {
     "win_trades": 21,
     "win_rate": 65.6,
     "total_realized_pnl_usd": 150.16,
-    "open_unrealized_pnl_usd": -1.25,
-    "portfolio_value": 2148.91,
+    "open_unrealized_pnl_usd": -0.28,
+    "portfolio_value": 2149.88,
     "total_commission_usd": 64.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,

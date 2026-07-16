@@ -42,12 +42,12 @@
           "pnl_pct": 1.07
         },
         "2026-07-16": {
-          "close": 61.16,
-          "pnl_pct": -1.81
+          "close": 61.37,
+          "pnl_pct": -2.16
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": -3.66,
+      "unrealized_pnl_usd": -4.62,
       "gap_checked": true,
       "day1_gap_pct": -0.92
     },
@@ -74,12 +74,12 @@
           "pnl_pct": 1.1
         },
         "2026-07-16": {
-          "close": 20.51,
-          "pnl_pct": 2.01
+          "close": 20.21,
+          "pnl_pct": 3.44
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 4.3,
+      "unrealized_pnl_usd": 7.36,
       "gap_checked": true,
       "day1_gap_pct": -0.24
     },
@@ -99,12 +99,12 @@
       "day1_open": 12.19,
       "daily_prices": {
         "2026-07-16": {
-          "close": 12.18,
-          "pnl_pct": 1.38
+          "close": 12.21,
+          "pnl_pct": 1.13
         }
       },
       "position_usd": 212.96,
-      "unrealized_pnl_usd": 2.77,
+      "unrealized_pnl_usd": 2.07,
       "gap_checked": true,
       "day1_gap_pct": -1.3
     }
@@ -1703,17 +1703,17 @@
           "open": 58.08,
           "high": 59.71,
           "low": 57.62,
-          "close": 59.4,
-          "pnl_pct": 1.61
+          "close": 59.36,
+          "pnl_pct": 1.67
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 59.4,
-      "final_pnl_pct": 1.61,
+      "close_price": 59.36,
+      "final_pnl_pct": 1.67,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.41,
+      "realized_pnl_usd": 3.54,
       "position_usd": 211.95
     }
   ],
@@ -1722,9 +1722,9 @@
     "total_trades": 34,
     "win_trades": 21,
     "win_rate": 61.8,
-    "total_realized_pnl_usd": 133.04,
-    "open_unrealized_pnl_usd": 7.9,
-    "portfolio_value": 2140.94,
+    "total_realized_pnl_usd": 133.17,
+    "open_unrealized_pnl_usd": 12.05,
+    "portfolio_value": 2145.22,
     "skipped_gap": 15,
     "updated_at": "2026-07-17"
   }

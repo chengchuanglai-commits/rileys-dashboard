@@ -34,12 +34,12 @@
           "open": 12.19,
           "high": 12.37,
           "low": 11.94,
-          "close": 12.18,
-          "pnl_pct": 1.38
+          "close": 12.21,
+          "pnl_pct": 1.13
         }
       },
       "position_usd": 212.27,
-      "unrealized_pnl_usd": 2.93
+      "unrealized_pnl_usd": 2.4
     }
   ],
   "closed_positions": [
@@ -1652,9 +1652,9 @@
         },
         "2026-07-16": {
           "open": 280.6,
-          "high": 282.7,
+          "high": 282.79,
           "low": 280.6,
-          "close": 282.0,
+          "close": 282.79,
           "pnl_pct": -2.32
         }
       },
@@ -1689,9 +1689,9 @@
         },
         "2026-07-16": {
           "open": 59.52,
-          "high": 61.42,
+          "high": 61.62,
           "low": 59.31,
-          "close": 61.16,
+          "close": 61.37,
           "pnl_pct": -1.43
         }
       },
@@ -1727,8 +1727,8 @@
         "2026-07-16": {
           "open": 20.88,
           "high": 21.0,
-          "low": 20.39,
-          "close": 20.51,
+          "low": 20.21,
+          "close": 20.21,
           "pnl_pct": -0.14
         }
       },
@@ -1748,8 +1748,8 @@
     "win_trades": 18,
     "win_rate": 48.6,
     "total_realized_pnl_usd": 121.34,
-    "open_unrealized_pnl_usd": 2.93,
-    "portfolio_value": 2124.27,
+    "open_unrealized_pnl_usd": 2.4,
+    "portfolio_value": 2123.74,
     "total_commission_usd": 74.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
