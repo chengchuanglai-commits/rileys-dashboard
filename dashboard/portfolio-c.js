@@ -50,46 +50,14 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.24
         },
         "2026-07-17": {
-          "close": 20.26,
-          "pnl_pct": 3.2
+          "close": 20.48,
+          "pnl_pct": 2.15
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 6.84,
+      "unrealized_pnl_usd": 4.6,
       "gap_checked": true,
       "day1_gap_pct": -0.53
-    },
-    {
-      "ticker": "SMPL",
-      "name": "SMPL",
-      "action": "SELL",
-      "signal_date": "2026-07-15",
-      "entry_price": 12.35,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.0,
-      "entry_commission": 1.0,
-      "take_profit": 11.36,
-      "stop_loss": 12.84,
-      "max_hold_date": "2026-07-22",
-      "day1_open": 12.04,
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 12.19,
-          "high": 12.37,
-          "low": 11.94,
-          "close": 12.07,
-          "pnl_pct": 2.27
-        },
-        "2026-07-17": {
-          "close": 11.53,
-          "pnl_pct": 6.64
-        }
-      },
-      "position_usd": 212.96,
-      "unrealized_pnl_usd": 14.14,
-      "gap_checked": true,
-      "day1_gap_pct": -2.51
     }
   ],
   "closed_positions": [
@@ -1738,8 +1706,8 @@ window.PORTFOLIO_C = {
         "2026-07-17": {
           "open": 285.44,
           "high": 291.43,
-          "low": 285.44,
-          "close": 291.43,
+          "low": 285.11,
+          "close": 285.93,
           "pnl_pct": -4.0
         }
       },
@@ -1751,16 +1719,55 @@ window.PORTFOLIO_C = {
       "commission_total": 2.0,
       "realized_pnl_usd": -8.55,
       "position_usd": 213.81
+    },
+    {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.36,
+      "stop_loss": 12.84,
+      "max_hold_date": "2026-07-22",
+      "day1_open": 12.19,
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.07,
+          "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.26,
+          "low": 11.34,
+          "close": 11.38,
+          "pnl_pct": 8.02
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 11.36,
+      "final_pnl_pct": 8.02,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 17.08,
+      "position_usd": 212.96
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 35,
-    "win_trades": 21,
-    "win_rate": 60.0,
-    "total_realized_pnl_usd": 127.76,
-    "open_unrealized_pnl_usd": 49.2,
-    "portfolio_value": 2176.96,
+    "total_trades": 36,
+    "win_trades": 22,
+    "win_rate": 61.1,
+    "total_realized_pnl_usd": 144.84,
+    "open_unrealized_pnl_usd": 10.75,
+    "portfolio_value": 2155.59,
     "skipped_gap": 15,
     "updated_at": "2026-07-18"
   }

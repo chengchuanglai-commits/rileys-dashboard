@@ -41,13 +41,13 @@ window.PORTFOLIO_CTR = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.52,
-          "close": 11.53,
-          "pnl_pct": 6.64
+          "low": 11.34,
+          "close": 11.38,
+          "pnl_pct": 7.85
         }
       },
       "position_usd": 212.27,
-      "unrealized_pnl_usd": 14.09
+      "unrealized_pnl_usd": 16.66
     }
   ],
   "closed_positions": [
@@ -1756,8 +1756,8 @@ window.PORTFOLIO_CTR = {
     "win_trades": 18,
     "win_rate": 48.6,
     "total_realized_pnl_usd": 121.34,
-    "open_unrealized_pnl_usd": 14.09,
-    "portfolio_value": 2135.43,
+    "open_unrealized_pnl_usd": 16.66,
+    "portfolio_value": 2138.0,
     "total_commission_usd": 74.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,

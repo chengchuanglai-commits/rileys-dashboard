@@ -45,8 +45,8 @@
           "pnl_pct": -2.58
         },
         "2026-07-17": {
-          "close": 60.59,
-          "pnl_pct": -0.87
+          "close": 60.75,
+          "pnl_pct": -1.13
         }
       }
     },
@@ -79,35 +79,8 @@
           "pnl_pct": 1.24
         },
         "2026-07-17": {
-          "close": 20.26,
-          "pnl_pct": 3.2
-        }
-      }
-    },
-    {
-      "ticker": "SMPL",
-      "name": "SMPL",
-      "action": "SELL",
-      "signal_date": "2026-07-15",
-      "entry_price": 12.35,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.0,
-      "entry_commission": 1.0,
-      "take_profit": 11.36,
-      "stop_loss": 12.84,
-      "max_hold_date": "2026-07-22",
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 12.19,
-          "high": 12.37,
-          "low": 11.94,
-          "close": 12.07,
-          "pnl_pct": 2.27
-        },
-        "2026-07-17": {
-          "close": 11.53,
-          "pnl_pct": 6.64
+          "close": 20.48,
+          "pnl_pct": 2.15
         }
       }
     }
@@ -2221,8 +2194,8 @@
         "2026-07-17": {
           "open": 285.44,
           "high": 291.43,
-          "low": 285.44,
-          "close": 291.43,
+          "low": 285.11,
+          "close": 285.93,
           "pnl_pct": -4.0
         }
       },
@@ -2233,16 +2206,53 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -13.04
+    },
+    {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.36,
+      "stop_loss": 12.84,
+      "max_hold_date": "2026-07-22",
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.07,
+          "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.26,
+          "low": 11.34,
+          "close": 11.38,
+          "pnl_pct": 8.02
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 11.36,
+      "final_pnl_pct": 8.02,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 37.62
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 49,
-    "win_trades": 23,
-    "win_rate": 46.9,
-    "total_realized_pnl_usd": 36.56,
-    "open_unrealized_pnl_usd": 44.85,
-    "portfolio_value": 2081.41,
+    "total_trades": 50,
+    "win_trades": 24,
+    "win_rate": 48.0,
+    "total_realized_pnl_usd": 74.18,
+    "open_unrealized_pnl_usd": 5.1,
+    "portfolio_value": 2079.28,
     "updated_at": "2026-07-18"
   }
 }

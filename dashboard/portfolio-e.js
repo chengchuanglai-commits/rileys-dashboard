@@ -117,9 +117,9 @@ window.PORTFOLIO_E = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.52,
-          "close": 11.53,
-          "pnl_pct": 6.64
+          "low": 11.34,
+          "close": 11.38,
+          "pnl_pct": 7.85
         }
       },
       "gap_checked": true,
@@ -1542,18 +1542,18 @@ window.PORTFOLIO_E = {
         "2026-07-17": {
           "open": 61.24,
           "high": 61.5,
-          "low": 60.6,
-          "close": 60.61,
-          "pnl_pct": -0.9
+          "low": 60.52,
+          "close": 60.78,
+          "pnl_pct": -1.18
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 60.61,
-      "final_pnl_pct": -0.9,
+      "close_price": 60.78,
+      "final_pnl_pct": -1.18,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -6.33
+      "realized_pnl_usd": -7.67
     },
     {
       "ticker": "STRS",
@@ -1590,17 +1590,17 @@ window.PORTFOLIO_E = {
           "open": 20.82,
           "high": 21.05,
           "low": 20.23,
-          "close": 20.26,
-          "pnl_pct": 3.2
+          "close": 20.48,
+          "pnl_pct": 2.15
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 20.26,
-      "final_pnl_pct": 3.2,
+      "close_price": 20.48,
+      "final_pnl_pct": 2.15,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 13.4
+      "realized_pnl_usd": 8.35
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
@@ -1608,9 +1608,9 @@ window.PORTFOLIO_E = {
     "total_trades": 36,
     "win_trades": 17,
     "win_rate": 47.2,
-    "total_realized_pnl_usd": 162.53,
-    "open_unrealized_pnl_usd": 35.11,
-    "portfolio_value": 2197.64,
+    "total_realized_pnl_usd": 156.14,
+    "open_unrealized_pnl_usd": 41.09,
+    "portfolio_value": 2197.23,
     "total_commission_usd": 72.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
