@@ -157,16 +157,16 @@ window.PORTFOLIO_MN = {
       "name": "Pathfinder Bancorp",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 16.17,
+      "entry_price": 16.39,
       "allocated_usd": 500,
-      "shares": 30.9215,
+      "shares": 30.5064,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 18.6,
-      "stop_loss": 15.85,
+      "take_profit": 18.85,
+      "stop_loss": 16.06,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 211.41,
+      "position_usd": 211.4,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -174,16 +174,16 @@ window.PORTFOLIO_MN = {
       "name": "WD-40公司",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 247.38,
+      "entry_price": 246.79,
       "allocated_usd": 500,
-      "shares": 2.0212,
+      "shares": 2.026,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 284.49,
-      "stop_loss": 242.43,
+      "take_profit": 283.81,
+      "stop_loss": 241.85,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 211.41,
+      "position_usd": 211.4,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -191,16 +191,16 @@ window.PORTFOLIO_MN = {
       "name": "Sound Financial Bancorp",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 47.24,
+      "entry_price": 46.88,
       "allocated_usd": 500,
-      "shares": 10.5843,
+      "shares": 10.6655,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 54.33,
-      "stop_loss": 46.3,
+      "take_profit": 53.91,
+      "stop_loss": 45.94,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 211.41,
+      "position_usd": 211.4,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -208,16 +208,16 @@ window.PORTFOLIO_MN = {
       "name": "康美公司",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 42.77,
+      "entry_price": 43.2,
       "allocated_usd": 500,
-      "shares": 11.6904,
+      "shares": 11.5741,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 49.19,
-      "stop_loss": 41.91,
+      "take_profit": 49.68,
+      "stop_loss": 42.34,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 211.41,
+      "position_usd": 211.4,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2900,20 +2900,20 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 3.69
         },
         "2026-07-17": {
-          "open": 61.24,
+          "open": 61.2,
           "high": 61.5,
-          "low": 60.3,
-          "close": 60.34,
-          "pnl_pct": 1.53
+          "low": 60.27,
+          "close": 60.52,
+          "pnl_pct": 1.83
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 60.34,
-      "final_pnl_pct": 1.53,
+      "close_price": 60.52,
+      "final_pnl_pct": 1.83,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.17,
+      "realized_pnl_usd": 3.8,
       "position_usd": 207.39
     },
     {
@@ -2941,17 +2941,17 @@ window.PORTFOLIO_MN = {
           "open": 134.44,
           "high": 138.67,
           "low": 134.25,
-          "close": 135.41,
-          "pnl_pct": 2.82
+          "close": 135.44,
+          "pnl_pct": 2.85
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 135.41,
-      "final_pnl_pct": 2.82,
+      "close_price": 135.44,
+      "final_pnl_pct": 2.85,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.85,
+      "realized_pnl_usd": 5.91,
       "position_usd": 207.39
     },
     {
@@ -2978,18 +2978,18 @@ window.PORTFOLIO_MN = {
         "2026-07-17": {
           "open": 188.81,
           "high": 191.94,
-          "low": 186.46,
-          "close": 186.73,
-          "pnl_pct": -0.98
+          "low": 185.63,
+          "close": 186.0,
+          "pnl_pct": -1.37
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 186.73,
-      "final_pnl_pct": -0.98,
+      "close_price": 186.0,
+      "final_pnl_pct": -1.37,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.03,
+      "realized_pnl_usd": -2.84,
       "position_usd": 207.39
     },
     {
@@ -3010,7 +3010,7 @@ window.PORTFOLIO_MN = {
           "open": 17.58,
           "high": 20.14,
           "low": 17.24,
-          "close": 19.29,
+          "close": 19.07,
           "pnl_pct": 14.98
         }
       },
@@ -3029,13 +3029,13 @@ window.PORTFOLIO_MN = {
     "total_trades": 82,
     "win_trades": 26,
     "win_rate": 31.7,
-    "total_realized_pnl_usd": 114.09,
+    "total_realized_pnl_usd": 113.97,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2138.73,
+    "portfolio_value": 2138.61,
     "total_commission_usd": 164.0,
     "skipped_gap": 44,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 106,
+    "skipped_no_cash": 107,
     "updated_at": "2026-07-17"
   }
 };

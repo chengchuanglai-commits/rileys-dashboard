@@ -2127,7 +2127,7 @@ window.PORTFOLIO_HDS = {
           "open": 17.58,
           "high": 20.14,
           "low": 17.24,
-          "close": 19.29,
+          "close": 19.07,
           "pnl_pct": -2.01
         }
       },
@@ -2158,7 +2158,7 @@ window.PORTFOLIO_HDS = {
           "open": 20.82,
           "high": 21.05,
           "low": 20.23,
-          "close": 20.42,
+          "close": 20.72,
           "pnl_pct": -1.98
         }
       },
@@ -2189,7 +2189,7 @@ window.PORTFOLIO_HDS = {
           "open": 15.76,
           "high": 16.71,
           "low": 15.76,
-          "close": 16.17,
+          "close": 16.39,
           "pnl_pct": -1.97
         }
       },

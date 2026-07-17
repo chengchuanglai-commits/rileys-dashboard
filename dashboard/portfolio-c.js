@@ -50,12 +50,12 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.24
         },
         "2026-07-17": {
-          "close": 20.42,
-          "pnl_pct": 2.44
+          "close": 20.72,
+          "pnl_pct": 1.0
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 5.22,
+      "unrealized_pnl_usd": 2.14,
       "gap_checked": true,
       "day1_gap_pct": -0.53
     }
@@ -1707,7 +1707,7 @@ window.PORTFOLIO_C = {
           "open": 285.44,
           "high": 291.43,
           "low": 285.11,
-          "close": 286.79,
+          "close": 289.22,
           "pnl_pct": -4.0
         }
       },
@@ -1745,8 +1745,8 @@ window.PORTFOLIO_C = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.21,
-          "close": 11.23,
+          "low": 11.03,
+          "close": 11.08,
           "pnl_pct": 8.02
         }
       },
@@ -1766,8 +1766,8 @@ window.PORTFOLIO_C = {
     "win_trades": 22,
     "win_rate": 61.1,
     "total_realized_pnl_usd": 144.84,
-    "open_unrealized_pnl_usd": 12.2,
-    "portfolio_value": 2157.04,
+    "open_unrealized_pnl_usd": 5.0,
+    "portfolio_value": 2149.84,
     "skipped_gap": 15,
     "updated_at": "2026-07-18"
   }

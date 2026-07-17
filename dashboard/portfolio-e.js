@@ -89,41 +89,6 @@ window.PORTFOLIO_E = {
       },
       "gap_checked": true,
       "day1_open": 36.67
-    },
-    {
-      "ticker": "SMPL",
-      "name": "SMPL",
-      "action": "SELL",
-      "signal_date": "2026-07-15",
-      "entry_price": 12.35,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.0,
-      "entry_commission": 1.0,
-      "take_profit": 11.12,
-      "stop_loss": 12.72,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-20",
-      "regime": "neutral",
-      "vix": 15.67,
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 12.19,
-          "high": 12.37,
-          "low": 11.94,
-          "close": 12.07,
-          "pnl_pct": 2.27
-        },
-        "2026-07-17": {
-          "open": 12.04,
-          "high": 12.26,
-          "low": 11.21,
-          "close": 11.23,
-          "pnl_pct": 9.07
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 12.19
     }
   ],
   "closed_positions": [
@@ -1540,20 +1505,20 @@ window.PORTFOLIO_E = {
           "pnl_pct": -2.58
         },
         "2026-07-17": {
-          "open": 61.24,
+          "open": 61.2,
           "high": 61.5,
-          "low": 60.3,
-          "close": 60.36,
-          "pnl_pct": -0.48
+          "low": 60.27,
+          "close": 60.52,
+          "pnl_pct": -0.75
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 60.36,
-      "final_pnl_pct": -0.48,
+      "close_price": 60.52,
+      "final_pnl_pct": -0.75,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.31
+      "realized_pnl_usd": -5.6
     },
     {
       "ticker": "STRS",
@@ -1590,28 +1555,68 @@ window.PORTFOLIO_E = {
           "open": 20.82,
           "high": 21.05,
           "low": 20.23,
-          "close": 20.42,
-          "pnl_pct": 2.44
+          "close": 20.72,
+          "pnl_pct": 1.0
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 20.42,
-      "final_pnl_pct": 2.44,
+      "close_price": 20.72,
+      "final_pnl_pct": 1.0,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 9.75
+      "realized_pnl_usd": 2.81
+    },
+    {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.12,
+      "stop_loss": 12.72,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-20",
+      "regime": "neutral",
+      "vix": 15.67,
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.07,
+          "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.26,
+          "low": 11.03,
+          "close": 11.08,
+          "pnl_pct": 9.96
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 11.12,
+      "final_pnl_pct": 9.96,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 47.2
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 36,
-    "win_trades": 17,
-    "win_rate": 47.2,
-    "total_realized_pnl_usd": 160.9,
-    "open_unrealized_pnl_usd": 47.11,
-    "portfolio_value": 2208.01,
-    "total_commission_usd": 72.0,
+    "total_trades": 37,
+    "win_trades": 18,
+    "win_rate": 48.6,
+    "total_realized_pnl_usd": 199.87,
+    "open_unrealized_pnl_usd": 3.31,
+    "portfolio_value": 2203.18,
+    "total_commission_usd": 74.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,

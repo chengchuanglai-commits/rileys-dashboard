@@ -48,13 +48,13 @@ window.PORTFOLIO_CTG = {
         "2026-07-17": {
           "open": 61.24,
           "high": 61.5,
-          "low": 60.3,
-          "close": 60.34,
-          "pnl_pct": -0.45
+          "low": 60.27,
+          "close": 60.52,
+          "pnl_pct": -0.75
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -0.97
+      "unrealized_pnl_usd": -1.61
     },
     {
       "ticker": "STRS",
@@ -87,12 +87,12 @@ window.PORTFOLIO_CTG = {
           "open": 20.82,
           "high": 21.05,
           "low": 20.23,
-          "close": 20.42,
-          "pnl_pct": 2.44
+          "close": 20.72,
+          "pnl_pct": 1.0
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 5.24
+      "unrealized_pnl_usd": 2.15
     }
   ],
   "closed_positions": [
@@ -1591,7 +1591,7 @@ window.PORTFOLIO_CTG = {
           "open": 285.44,
           "high": 291.43,
           "low": 285.11,
-          "close": 286.79,
+          "close": 289.22,
           "pnl_pct": -4.0
         }
       },
@@ -1627,8 +1627,8 @@ window.PORTFOLIO_CTG = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.21,
-          "close": 11.23,
+          "low": 11.03,
+          "close": 11.08,
           "pnl_pct": 8.02
         }
       },
@@ -1648,8 +1648,8 @@ window.PORTFOLIO_CTG = {
     "win_trades": 22,
     "win_rate": 64.7,
     "total_realized_pnl_usd": 162.04,
-    "open_unrealized_pnl_usd": 4.27,
-    "portfolio_value": 2166.31,
+    "open_unrealized_pnl_usd": 0.54,
+    "portfolio_value": 2162.58,
     "total_commission_usd": 68.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
