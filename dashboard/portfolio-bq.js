@@ -14,15 +14,15 @@ window.PORTFOLIO_BQ = {
       "score": 71.4
     },
     {
-      "ticker": "LYG",
+      "ticker": "GH",
       "action": "BUY",
       "signal_date": "2026-07-06",
-      "entry_price": 6.17,
-      "shares": 123.077,
-      "atr": 0.13,
-      "take_profit": 6.69,
-      "stop_loss": 5.84,
-      "score": 73.0
+      "entry_price": 168.82,
+      "shares": 1.984,
+      "atr": 8.07,
+      "take_profit": 201.08,
+      "stop_loss": 148.66,
+      "score": 71.0
     },
     {
       "ticker": "ACGL",
@@ -36,26 +36,15 @@ window.PORTFOLIO_BQ = {
       "score": 74.7
     },
     {
-      "ticker": "GH",
-      "action": "BUY",
-      "signal_date": "2026-07-06",
-      "entry_price": 168.82,
-      "shares": 1.984,
-      "atr": 8.07,
-      "take_profit": 201.08,
-      "stop_loss": 148.66,
-      "score": 71.0
-    },
-    {
-      "ticker": "BNJ",
+      "ticker": "NKE",
       "action": "SELL",
       "signal_date": "2026-07-06",
-      "entry_price": 15.62,
-      "shares": 87.092,
-      "atr": 0.18,
-      "take_profit": 14.89,
-      "stop_loss": 16.08,
-      "score": 23.3
+      "entry_price": 43.34,
+      "shares": 10.433,
+      "atr": 1.53,
+      "take_profit": 37.21,
+      "stop_loss": 47.17,
+      "score": 26.2
     },
     {
       "ticker": "INSM",
@@ -69,26 +58,15 @@ window.PORTFOLIO_BQ = {
       "score": 25.1
     },
     {
-      "ticker": "NKE",
+      "ticker": "BNJ",
       "action": "SELL",
       "signal_date": "2026-07-06",
-      "entry_price": 43.34,
-      "shares": 10.433,
-      "atr": 1.53,
-      "take_profit": 37.21,
-      "stop_loss": 47.17,
-      "score": 26.2
-    },
-    {
-      "ticker": "CINF",
-      "action": "BUY",
-      "signal_date": "2026-07-13",
-      "entry_price": 182.67,
-      "shares": 3.23,
-      "atr": 4.95,
-      "take_profit": 202.48,
-      "stop_loss": 170.29,
-      "score": 71.9
+      "entry_price": 15.62,
+      "shares": 87.092,
+      "atr": 0.18,
+      "take_profit": 14.89,
+      "stop_loss": 16.08,
+      "score": 23.3
     },
     {
       "ticker": "CNQ",
@@ -102,15 +80,15 @@ window.PORTFOLIO_BQ = {
       "score": 76.8
     },
     {
-      "ticker": "KLAC",
+      "ticker": "CINF",
       "action": "BUY",
       "signal_date": "2026-07-13",
-      "entry_price": 222.25,
-      "shares": 0.719,
-      "atr": 22.25,
-      "take_profit": 311.25,
-      "stop_loss": 166.63,
-      "score": 79.0
+      "entry_price": 182.67,
+      "shares": 3.23,
+      "atr": 4.95,
+      "take_profit": 202.48,
+      "stop_loss": 170.29,
+      "score": 71.9
     },
     {
       "ticker": "TSM",
@@ -135,6 +113,17 @@ window.PORTFOLIO_BQ = {
       "score": 80.6
     },
     {
+      "ticker": "KLAC",
+      "action": "BUY",
+      "signal_date": "2026-07-13",
+      "entry_price": 222.25,
+      "shares": 0.719,
+      "atr": 22.25,
+      "take_profit": 311.25,
+      "stop_loss": 166.63,
+      "score": 79.0
+    },
+    {
       "ticker": "EXE",
       "action": "BUY",
       "signal_date": "2026-07-13",
@@ -146,6 +135,17 @@ window.PORTFOLIO_BQ = {
       "score": 71.1
     },
     {
+      "ticker": "RIVN",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 17.31,
+      "shares": 11.345,
+      "atr": 1.41,
+      "take_profit": 11.67,
+      "stop_loss": 20.84,
+      "score": 24.8
+    },
+    {
       "ticker": "DKNG",
       "action": "SELL",
       "signal_date": "2026-07-13",
@@ -155,6 +155,17 @@ window.PORTFOLIO_BQ = {
       "take_profit": 21.38,
       "stop_loss": 29.62,
       "score": 25.5
+    },
+    {
+      "ticker": "TEAM",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 96.16,
+      "shares": 2.948,
+      "atr": 5.43,
+      "take_profit": 74.45,
+      "stop_loss": 109.73,
+      "score": 20.6
     },
     {
       "ticker": "BN",
@@ -179,17 +190,6 @@ window.PORTFOLIO_BQ = {
       "score": 20.0
     },
     {
-      "ticker": "RIVN",
-      "action": "SELL",
-      "signal_date": "2026-07-13",
-      "entry_price": 17.31,
-      "shares": 11.345,
-      "atr": 1.41,
-      "take_profit": 11.67,
-      "stop_loss": 20.84,
-      "score": 24.8
-    },
-    {
       "ticker": "WBD",
       "action": "SELL",
       "signal_date": "2026-07-13",
@@ -210,17 +210,6 @@ window.PORTFOLIO_BQ = {
       "take_profit": 14.48,
       "stop_loss": 16.11,
       "score": 22.8
-    },
-    {
-      "ticker": "TEAM",
-      "action": "SELL",
-      "signal_date": "2026-07-13",
-      "entry_price": 96.16,
-      "shares": 2.948,
-      "atr": 5.43,
-      "take_profit": 74.45,
-      "stop_loss": 109.73,
-      "score": 20.6
     }
   ],
   "closed_positions": [
@@ -497,23 +486,6 @@ window.PORTFOLIO_BQ = {
       "commission_total": 2.0
     },
     {
-      "ticker": "MFC",
-      "action": "BUY",
-      "signal_date": "2026-06-18",
-      "entry_price": 40.61,
-      "shares": 20.364,
-      "atr": 0.79,
-      "take_profit": 43.75,
-      "stop_loss": 38.65,
-      "score": 71.1,
-      "close_date": "2026-07-13",
-      "close_price": 41.29,
-      "close_reason": "max_hold",
-      "final_pnl_pct": 1.67,
-      "realized_pnl_usd": 13.85,
-      "commission_total": 2.0
-    },
-    {
       "ticker": "CNQ",
       "action": "BUY",
       "signal_date": "2026-06-18",
@@ -545,6 +517,40 @@ window.PORTFOLIO_BQ = {
       "close_reason": "max_hold",
       "final_pnl_pct": 7.86,
       "realized_pnl_usd": 35.27,
+      "commission_total": 2.0
+    },
+    {
+      "ticker": "MFC",
+      "action": "BUY",
+      "signal_date": "2026-06-18",
+      "entry_price": 40.61,
+      "shares": 20.364,
+      "atr": 0.79,
+      "take_profit": 43.75,
+      "stop_loss": 38.65,
+      "score": 71.1,
+      "close_date": "2026-07-13",
+      "close_price": 41.29,
+      "close_reason": "max_hold",
+      "final_pnl_pct": 1.67,
+      "realized_pnl_usd": 13.85,
+      "commission_total": 2.0
+    },
+    {
+      "ticker": "TEAM",
+      "action": "SELL",
+      "signal_date": "2026-06-18",
+      "entry_price": 82.72,
+      "shares": 2.395,
+      "atr": 6.68,
+      "take_profit": 56.0,
+      "stop_loss": 99.42,
+      "score": 21.6,
+      "close_date": "2026-07-13",
+      "close_price": 96.16,
+      "close_reason": "max_hold",
+      "final_pnl_pct": -16.25,
+      "realized_pnl_usd": -32.19,
       "commission_total": 2.0
     },
     {
@@ -599,23 +605,6 @@ window.PORTFOLIO_BQ = {
       "commission_total": 2.0
     },
     {
-      "ticker": "TEAM",
-      "action": "SELL",
-      "signal_date": "2026-06-18",
-      "entry_price": 82.72,
-      "shares": 2.395,
-      "atr": 6.68,
-      "take_profit": 56.0,
-      "stop_loss": 99.42,
-      "score": 21.6,
-      "close_date": "2026-07-13",
-      "close_price": 96.16,
-      "close_reason": "max_hold",
-      "final_pnl_pct": -16.25,
-      "realized_pnl_usd": -32.19,
-      "commission_total": 2.0
-    },
-    {
       "ticker": "WBD",
       "action": "SELL",
       "signal_date": "2026-07-06",
@@ -648,17 +637,34 @@ window.PORTFOLIO_BQ = {
       "final_pnl_pct": 3.25,
       "realized_pnl_usd": 22.73,
       "commission_total": 2.0
+    },
+    {
+      "ticker": "LYG",
+      "action": "BUY",
+      "signal_date": "2026-07-06",
+      "entry_price": 6.17,
+      "shares": 123.077,
+      "atr": 0.13,
+      "take_profit": 6.69,
+      "stop_loss": 5.84,
+      "score": 73.0,
+      "close_date": "2026-07-17",
+      "close_price": 5.84,
+      "close_reason": "stop_loss",
+      "final_pnl_pct": -5.35,
+      "realized_pnl_usd": -40.62,
+      "commission_total": 2.0
     }
   ],
   "_note": "B-quant：多因子量化+ATR定价(TP4/SL2.5×ATR)+风险定额(2%)+每周再平衡。读点对点归档,前向无前视。全程无AI。",
   "stats": {
-    "total_trades": 25,
+    "total_trades": 26,
     "win_trades": 10,
-    "win_rate": 40.0,
-    "total_realized_pnl_usd": -184.15,
-    "open_unrealized_pnl_usd": -62.37,
-    "portfolio_value": 1753.48,
-    "total_commission_usd": 70.0,
-    "updated_at": "2026-07-16"
+    "win_rate": 38.5,
+    "total_realized_pnl_usd": -224.77,
+    "open_unrealized_pnl_usd": -0.23,
+    "portfolio_value": 1775.0,
+    "total_commission_usd": 71.0,
+    "updated_at": "2026-07-17"
   }
 };
