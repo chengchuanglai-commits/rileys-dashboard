@@ -3,7 +3,7 @@
   "benchmark": "SPY 买入持有",
   "start_date": "2026-05-26",
   "start_price": 748.66,
-  "current_price": 745.93,
+  "current_price": 742.73,
   "current_date": "2026-07-17",
   "open_positions": [
     {
@@ -22,9 +22,9 @@
     "win_trades": 0,
     "win_rate": 0,
     "total_realized_pnl_usd": 0,
-    "open_unrealized_pnl_usd": -7.29,
-    "portfolio_value": 1992.71,
-    "total_return_pct": -0.36,
+    "open_unrealized_pnl_usd": -15.84,
+    "portfolio_value": 1984.16,
+    "total_return_pct": -0.79,
     "total_commission_usd": 1.0,
     "updated_at": "2026-07-17"
   },

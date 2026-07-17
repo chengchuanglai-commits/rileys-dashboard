@@ -97,9 +97,9 @@ window.PORTFOLIO_F = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.34,
-          "close": 11.38,
-          "pnl_pct": 7.85
+          "low": 11.21,
+          "close": 11.23,
+          "pnl_pct": 9.07
         }
       },
       "t1_exit_date": "2026-07-17",
@@ -1619,24 +1619,24 @@ window.PORTFOLIO_F = {
         "2026-07-17": {
           "open": 61.24,
           "high": 61.5,
-          "low": 60.52,
-          "close": 60.78,
-          "pnl_pct": -1.18
+          "low": 60.3,
+          "close": 60.36,
+          "pnl_pct": -0.48
         }
       },
       "t1_exit_date": "2026-07-17",
-      "t1_exit_price": 60.78,
+      "t1_exit_price": 60.36,
       "t1_exit_reason": "max_hold",
       "t2_exit_date": "2026-07-17",
-      "t2_exit_price": 60.78,
+      "t2_exit_price": 60.36,
       "t2_exit_reason": "max_hold",
-      "t1_gross_pnl": -2.84,
-      "t2_gross_pnl": -2.84,
+      "t1_gross_pnl": -1.16,
+      "t2_gross_pnl": -1.16,
       "close_date": "2026-07-17",
       "close_reason": "max_hold+max_hold",
-      "final_pnl_pct": -1.18,
+      "final_pnl_pct": -0.48,
       "commission_total": 3.0,
-      "realized_pnl_usd": -8.68,
+      "realized_pnl_usd": -5.32,
       "sl_unified": false
     },
     {
@@ -1675,23 +1675,23 @@ window.PORTFOLIO_F = {
           "open": 20.82,
           "high": 21.05,
           "low": 20.23,
-          "close": 20.48,
-          "pnl_pct": 2.15
+          "close": 20.42,
+          "pnl_pct": 2.44
         }
       },
       "t1_exit_date": "2026-07-17",
-      "t1_exit_price": 20.48,
+      "t1_exit_price": 20.42,
       "t1_exit_reason": "max_hold",
       "t2_exit_date": "2026-07-17",
-      "t2_exit_price": 20.48,
+      "t2_exit_price": 20.42,
       "t2_exit_reason": "max_hold",
-      "t1_gross_pnl": 4.95,
-      "t2_gross_pnl": 5.4,
+      "t1_gross_pnl": 5.61,
+      "t2_gross_pnl": 6.12,
       "close_date": "2026-07-17",
       "close_reason": "max_hold+max_hold",
-      "final_pnl_pct": 2.15,
+      "final_pnl_pct": 2.44,
       "commission_total": 3.0,
-      "realized_pnl_usd": 7.35,
+      "realized_pnl_usd": 8.73,
       "sl_unified": false
     }
   ],
@@ -1700,9 +1700,9 @@ window.PORTFOLIO_F = {
     "total_trades": 32,
     "win_trades": 17,
     "win_rate": 53.1,
-    "total_realized_pnl_usd": 165.11,
-    "open_unrealized_pnl_usd": 39.1,
-    "portfolio_value": 2204.21,
+    "total_realized_pnl_usd": 169.85,
+    "open_unrealized_pnl_usd": 42.11,
+    "portfolio_value": 2211.96,
     "total_commission_usd": 84.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 7,
