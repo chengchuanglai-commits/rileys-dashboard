@@ -2,8 +2,8 @@
   "date": "2026-07-17",
   "live": false,
   "connected": true,
-  "nav": 1000091.62,
-  "cash": 967297.66,
+  "nav": 999888.64,
+  "cash": 972832.09,
   "positions": [
     {
       "sym": "NBIX",
@@ -58,9 +58,9 @@
       "target_usd": 0
     },
     {
-      "sym": "RVMD",
-      "shares": 27.0,
-      "avg_fill": 185.17,
+      "sym": "QQQ",
+      "shares": 8.0,
+      "avg_fill": 715.58,
       "cur_price": null,
       "change_pct": null,
       "pnl_usd": null,
@@ -68,37 +68,37 @@
       "slippage_pct": null,
       "sim_price": null,
       "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
-      "sym": "QQQ",
-      "shares": 8.0,
-      "avg_fill": 715.58,
-      "cur_price": 692.97998046875,
-      "change_pct": -3.16,
-      "pnl_usd": -180.8,
-      "today_price": 692.97998046875,
-      "slippage_pct": 3.26,
-      "sim_price": null,
-      "delay_gap_pct": null,
       "target_usd": 1000.0
     },
     {
+      "sym": "BMO",
+      "shares": 27.0,
+      "avg_fill": 181.27,
+      "cur_price": null,
+      "change_pct": null,
+      "pnl_usd": null,
+      "today_price": null,
+      "slippage_pct": null,
+      "sim_price": 176.1,
+      "delay_gap_pct": 2.94,
+      "target_usd": 500.0
+    },
+    {
       "sym": "FTNT",
-      "shares": 30.0,
-      "avg_fill": 165.36,
+      "shares": 31.0,
+      "avg_fill": 165.23,
       "cur_price": null,
       "change_pct": null,
       "pnl_usd": null,
       "today_price": null,
       "slippage_pct": null,
       "sim_price": 151.35,
-      "delay_gap_pct": 9.26,
+      "delay_gap_pct": 9.17,
       "target_usd": 500.0
     },
     {
       "sym": "KSPI",
-      "shares": 4.0,
+      "shares": 5.0,
       "avg_fill": 88.36,
       "cur_price": null,
       "change_pct": null,
@@ -126,19 +126,6 @@
       "sym": "NU",
       "shares": 32.0,
       "avg_fill": 12.66,
-      "cur_price": null,
-      "change_pct": null,
-      "pnl_usd": null,
-      "today_price": null,
-      "slippage_pct": null,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
-      "sym": "FFIV",
-      "shares": 11.0,
-      "avg_fill": 429.8,
       "cur_price": null,
       "change_pct": null,
       "pnl_usd": null,
@@ -178,6 +165,6 @@
   "open_orders": 13,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -180.8,
-  "updated_at": "2026-07-17 21:31"
+  "total_unrealized_pnl": 0.0,
+  "updated_at": "2026-07-17 21:35"
 }
