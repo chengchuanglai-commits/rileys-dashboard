@@ -2900,7 +2900,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 3.69
         },
         "2026-07-17": {
-          "open": 61.2,
+          "open": 61.24,
           "high": 61.5,
           "low": 60.27,
           "close": 60.52,
