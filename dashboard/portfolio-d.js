@@ -1365,18 +1365,18 @@ window.PORTFOLIO_D = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.82,
-          "close": 11.86,
-          "pnl_pct": 3.97
+          "low": 11.52,
+          "close": 11.53,
+          "pnl_pct": 6.64
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 11.86,
-      "final_pnl_pct": 3.97,
+      "close_price": 11.53,
+      "final_pnl_pct": 6.64,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 17.61
+      "realized_pnl_usd": 30.8
     },
     {
       "ticker": "SRRK",
@@ -1400,18 +1400,18 @@ window.PORTFOLIO_D = {
           "pnl_pct": 0.22
         },
         "2026-07-17": {
-          "close": 52.89,
-          "pnl_pct": 3.84
+          "close": 52.53,
+          "pnl_pct": 4.49
         }
       },
       "gap_checked": true,
       "day1_open": 50.87,
       "day1_gap_pct": -7.51,
       "close_date": "2026-07-17",
-      "close_price": 52.89,
-      "final_pnl_pct": 3.84,
+      "close_price": 52.53,
+      "final_pnl_pct": 4.49,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 19.18
+      "realized_pnl_usd": 22.45
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1419,10 +1419,10 @@ window.PORTFOLIO_D = {
     "total_trades": 40,
     "win_trades": 24,
     "win_rate": 60.0,
-    "total_realized_pnl_usd": 190.13,
+    "total_realized_pnl_usd": 206.59,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2190.13,
+    "portfolio_value": 2206.59,
     "skipped_gap": 12,
-    "updated_at": "2026-07-17"
+    "updated_at": "2026-07-18"
   }
 };

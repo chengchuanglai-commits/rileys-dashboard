@@ -117,9 +117,9 @@ window.PORTFOLIO_E = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.82,
-          "close": 11.87,
-          "pnl_pct": 3.89
+          "low": 11.52,
+          "close": 11.53,
+          "pnl_pct": 6.64
         }
       },
       "gap_checked": true,
@@ -1542,18 +1542,18 @@ window.PORTFOLIO_E = {
         "2026-07-17": {
           "open": 61.24,
           "high": 61.5,
-          "low": 60.91,
-          "close": 61.31,
-          "pnl_pct": -2.06
+          "low": 60.6,
+          "close": 60.61,
+          "pnl_pct": -0.9
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 61.31,
-      "final_pnl_pct": -2.06,
+      "close_price": 60.61,
+      "final_pnl_pct": -0.9,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -11.9
+      "realized_pnl_usd": -6.33
     },
     {
       "ticker": "STRS",
@@ -1589,18 +1589,18 @@ window.PORTFOLIO_E = {
         "2026-07-17": {
           "open": 20.82,
           "high": 21.05,
-          "low": 20.55,
-          "close": 20.8,
-          "pnl_pct": 0.62
+          "low": 20.23,
+          "close": 20.26,
+          "pnl_pct": 3.2
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 20.8,
-      "final_pnl_pct": 0.62,
+      "close_price": 20.26,
+      "final_pnl_pct": 3.2,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 0.98
+      "realized_pnl_usd": 13.4
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
@@ -1608,9 +1608,9 @@ window.PORTFOLIO_E = {
     "total_trades": 36,
     "win_trades": 17,
     "win_rate": 47.2,
-    "total_realized_pnl_usd": 144.54,
-    "open_unrealized_pnl_usd": 21.52,
-    "portfolio_value": 2166.06,
+    "total_realized_pnl_usd": 162.53,
+    "open_unrealized_pnl_usd": 35.11,
+    "portfolio_value": 2197.64,
     "total_commission_usd": 72.0,
     "skipped_fear": 0,
     "skipped_direction": 5,

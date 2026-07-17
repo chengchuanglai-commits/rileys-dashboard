@@ -157,16 +157,16 @@ window.PORTFOLIO_MN = {
       "name": "Pathfinder Bancorp",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 16.09,
+      "entry_price": 16.14,
       "allocated_usd": 500,
-      "shares": 31.0752,
+      "shares": 30.9789,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 18.5,
-      "stop_loss": 15.77,
+      "take_profit": 18.56,
+      "stop_loss": 15.82,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 212.24,
+      "position_usd": 211.66,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -174,16 +174,16 @@ window.PORTFOLIO_MN = {
       "name": "WD-40公司",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 255.04,
+      "entry_price": 249.29,
       "allocated_usd": 500,
-      "shares": 1.9605,
-      "actual_position_usd": 500.01,
+      "shares": 2.0057,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 293.3,
-      "stop_loss": 249.94,
+      "take_profit": 286.68,
+      "stop_loss": 244.3,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 212.24,
+      "position_usd": 211.66,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -200,7 +200,7 @@ window.PORTFOLIO_MN = {
       "stop_loss": 46.3,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 212.24,
+      "position_usd": 211.66,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -208,16 +208,16 @@ window.PORTFOLIO_MN = {
       "name": "康美公司",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 44.46,
+      "entry_price": 43.29,
       "allocated_usd": 500,
-      "shares": 11.2461,
+      "shares": 11.55,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 51.13,
-      "stop_loss": 43.57,
+      "take_profit": 49.78,
+      "stop_loss": 42.42,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 212.24,
+      "position_usd": 211.66,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2902,18 +2902,18 @@ window.PORTFOLIO_MN = {
         "2026-07-17": {
           "open": 61.24,
           "high": 61.5,
-          "low": 60.91,
-          "close": 61.31,
-          "pnl_pct": 3.16
+          "low": 60.6,
+          "close": 60.61,
+          "pnl_pct": 1.99
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 61.31,
-      "final_pnl_pct": 3.16,
+      "close_price": 60.61,
+      "final_pnl_pct": 1.99,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.55,
+      "realized_pnl_usd": 4.13,
       "position_usd": 207.39
     },
     {
@@ -2941,17 +2941,17 @@ window.PORTFOLIO_MN = {
           "open": 134.44,
           "high": 138.67,
           "low": 134.25,
-          "close": 136.32,
-          "pnl_pct": 3.52
+          "close": 135.14,
+          "pnl_pct": 2.62
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 136.32,
-      "final_pnl_pct": 3.52,
+      "close_price": 135.14,
+      "final_pnl_pct": 2.62,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.3,
+      "realized_pnl_usd": 5.43,
       "position_usd": 207.39
     },
     {
@@ -2979,17 +2979,17 @@ window.PORTFOLIO_MN = {
           "open": 188.81,
           "high": 191.94,
           "low": 186.49,
-          "close": 189.86,
-          "pnl_pct": 0.68
+          "close": 188.51,
+          "pnl_pct": -0.04
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 189.86,
-      "final_pnl_pct": 0.68,
+      "close_price": 188.51,
+      "final_pnl_pct": -0.04,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.41,
+      "realized_pnl_usd": -0.08,
       "position_usd": 207.39
     },
     {
@@ -3010,7 +3010,7 @@ window.PORTFOLIO_MN = {
           "open": 17.58,
           "high": 20.14,
           "low": 17.24,
-          "close": 19.77,
+          "close": 19.12,
           "pnl_pct": 14.98
         }
       },
@@ -3027,11 +3027,11 @@ window.PORTFOLIO_MN = {
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
     "total_trades": 82,
-    "win_trades": 27,
-    "win_rate": 32.9,
-    "total_realized_pnl_usd": 122.36,
+    "win_trades": 26,
+    "win_rate": 31.7,
+    "total_realized_pnl_usd": 116.58,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2147.0,
+    "portfolio_value": 2141.22,
     "total_commission_usd": 164.0,
     "skipped_gap": 44,
     "skipped_zero_shares": 0,

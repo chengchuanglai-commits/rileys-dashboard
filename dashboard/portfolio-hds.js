@@ -162,31 +162,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.49
     },
     {
-      "ticker": "UTMD",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-16",
-      "entry_price": 70.42,
-      "allocated_usd": 500,
-      "shares": 7.1003,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 59.86,
-      "stop_loss": 71.83,
-      "max_hold_date": "2026-07-20",
-      "daily_prices": {
-        "2026-07-17": {
-          "open": 71.03,
-          "high": 71.32,
-          "low": 71.03,
-          "close": 71.32,
-          "pnl_pct": -1.28
-        }
-      },
-      "position_usd": 226.09,
-      "unrealized_pnl_usd": -2.89
-    },
-    {
       "ticker": "TCBK",
       "name": "",
       "action": "SELL",
@@ -200,7 +175,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 62.42,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 225.19,
+      "position_usd": 224.74,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -217,7 +192,24 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 37.9,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 225.19,
+      "position_usd": 224.74,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "UTMD",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 71.03,
+      "allocated_usd": 500,
+      "shares": 7.0393,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 81.68,
+      "stop_loss": 69.61,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {},
+      "position_usd": 224.74,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2135,7 +2127,7 @@ window.PORTFOLIO_HDS = {
           "open": 17.58,
           "high": 20.14,
           "low": 17.24,
-          "close": 19.77,
+          "close": 19.1,
           "pnl_pct": -2.01
         }
       },
@@ -2147,6 +2139,37 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.55,
       "position_usd": 226.26
+    },
+    {
+      "ticker": "STRS",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-16",
+      "entry_price": 20.7,
+      "allocated_usd": 500,
+      "shares": 24.1546,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 23.8,
+      "stop_loss": 20.29,
+      "max_hold_date": "2026-07-20",
+      "daily_prices": {
+        "2026-07-17": {
+          "open": 20.82,
+          "high": 21.05,
+          "low": 20.23,
+          "close": 20.26,
+          "pnl_pct": -1.98
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 20.29,
+      "final_pnl_pct": -1.98,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.48,
+      "position_usd": 226.09
     },
     {
       "ticker": "PBHC",
@@ -2166,7 +2189,7 @@ window.PORTFOLIO_HDS = {
           "open": 15.76,
           "high": 16.71,
           "low": 15.76,
-          "close": 16.09,
+          "close": 16.14,
           "pnl_pct": -1.97
         }
       },
@@ -2182,16 +2205,16 @@ window.PORTFOLIO_HDS = {
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 55,
+    "total_trades": 56,
     "win_trades": 35,
-    "win_rate": 63.6,
-    "total_realized_pnl_usd": 251.92,
-    "open_unrealized_pnl_usd": 31.01,
-    "portfolio_value": 2282.93,
-    "total_commission_usd": 110.0,
+    "win_rate": 62.5,
+    "total_realized_pnl_usd": 247.45,
+    "open_unrealized_pnl_usd": 33.91,
+    "portfolio_value": 2281.36,
+    "total_commission_usd": 112.0,
     "skipped_gap": 26,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 15,
+    "skipped_no_cash": 14,
     "updated_at": "2026-07-17"
   }
 };

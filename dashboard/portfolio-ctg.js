@@ -48,13 +48,13 @@ window.PORTFOLIO_CTG = {
         "2026-07-17": {
           "open": 61.24,
           "high": 61.5,
-          "low": 60.91,
-          "close": 61.35,
-          "pnl_pct": -2.13
+          "low": 60.6,
+          "close": 60.61,
+          "pnl_pct": -0.9
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -4.57
+      "unrealized_pnl_usd": -1.93
     },
     {
       "ticker": "STRS",
@@ -86,13 +86,13 @@ window.PORTFOLIO_CTG = {
         "2026-07-17": {
           "open": 20.82,
           "high": 21.05,
-          "low": 20.55,
-          "close": 20.8,
-          "pnl_pct": 0.62
+          "low": 20.23,
+          "close": 20.26,
+          "pnl_pct": 3.2
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 1.33
+      "unrealized_pnl_usd": 6.87
     },
     {
       "ticker": "SMPL",
@@ -117,13 +117,13 @@ window.PORTFOLIO_CTG = {
         "2026-07-17": {
           "open": 12.04,
           "high": 12.26,
-          "low": 11.82,
-          "close": 11.88,
-          "pnl_pct": 3.81
+          "low": 11.52,
+          "close": 11.53,
+          "pnl_pct": 6.64
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 8.18
+      "unrealized_pnl_usd": 14.25
     }
   ],
   "closed_positions": [
@@ -1621,8 +1621,8 @@ window.PORTFOLIO_CTG = {
         "2026-07-17": {
           "open": 285.44,
           "high": 291.43,
-          "low": 285.44,
-          "close": 291.43,
+          "low": 285.11,
+          "close": 285.11,
           "pnl_pct": -4.0
         }
       },
@@ -1642,8 +1642,8 @@ window.PORTFOLIO_CTG = {
     "win_trades": 21,
     "win_rate": 63.6,
     "total_realized_pnl_usd": 144.83,
-    "open_unrealized_pnl_usd": 4.94,
-    "portfolio_value": 2149.77,
+    "open_unrealized_pnl_usd": 19.19,
+    "portfolio_value": 2164.02,
     "total_commission_usd": 66.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
