@@ -20,77 +20,6 @@
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "ITIC",
-      "name": "ITIC",
-      "action": "SELL",
-      "signal_date": "2026-07-13",
-      "entry_price": 276.0,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 276.0,
-      "entry_commission": 1.0,
-      "take_profit": 253.92,
-      "stop_loss": 287.04,
-      "max_hold_date": "2026-07-20",
-      "day1_open": 277.65,
-      "daily_prices": {
-        "2026-07-14": {
-          "open": 278.21,
-          "high": 281.14,
-          "low": 277.43,
-          "close": 278.72,
-          "pnl_pct": -0.99
-        },
-        "2026-07-15": {
-          "open": 273.55,
-          "high": 279.3,
-          "low": 271.53,
-          "close": 273.6,
-          "pnl_pct": 0.87
-        },
-        "2026-07-16": {
-          "close": 283.96,
-          "pnl_pct": -2.88
-        }
-      },
-      "position_usd": 213.81,
-      "unrealized_pnl_usd": -6.16,
-      "gap_checked": true,
-      "day1_gap_pct": 0.6
-    },
-    {
-      "ticker": "TCBK",
-      "name": "TCBK",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 60.07,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 480.56,
-      "entry_commission": 1.0,
-      "take_profit": 55.26,
-      "stop_loss": 62.47,
-      "max_hold_date": "2026-07-21",
-      "day1_open": 59.52,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 59.43,
-          "high": 59.93,
-          "low": 58.59,
-          "close": 59.43,
-          "pnl_pct": 1.07
-        },
-        "2026-07-16": {
-          "close": 61.62,
-          "pnl_pct": -2.58
-        }
-      },
-      "position_usd": 213.81,
-      "unrealized_pnl_usd": -5.52,
-      "gap_checked": true,
-      "day1_gap_pct": -0.92
-    },
-    {
       "ticker": "STRS",
       "name": "STRS",
       "action": "SELL",
@@ -103,7 +32,7 @@
       "take_profit": 19.26,
       "stop_loss": 21.77,
       "max_hold_date": "2026-07-21",
-      "day1_open": 20.79,
+      "day1_open": 20.82,
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
@@ -113,14 +42,21 @@
           "pnl_pct": 1.1
         },
         "2026-07-16": {
+          "open": 20.79,
+          "high": 21.0,
+          "low": 20.21,
           "close": 20.67,
           "pnl_pct": 1.24
+        },
+        "2026-07-17": {
+          "close": 20.8,
+          "pnl_pct": 0.62
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 2.65,
+      "unrealized_pnl_usd": 1.33,
       "gap_checked": true,
-      "day1_gap_pct": -0.67
+      "day1_gap_pct": -0.53
     },
     {
       "ticker": "SMPL",
@@ -135,17 +71,24 @@
       "take_profit": 11.36,
       "stop_loss": 12.84,
       "max_hold_date": "2026-07-22",
-      "day1_open": 12.19,
+      "day1_open": 12.04,
       "daily_prices": {
         "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
           "close": 12.07,
           "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "close": 11.89,
+          "pnl_pct": 3.72
         }
       },
       "position_usd": 212.96,
-      "unrealized_pnl_usd": 4.83,
+      "unrealized_pnl_usd": 8.45,
       "gap_checked": true,
-      "day1_gap_pct": -1.3
+      "day1_gap_pct": -2.51
     }
   ],
   "closed_positions": [
@@ -1754,17 +1697,70 @@
       "commission_total": 2.0,
       "realized_pnl_usd": 6.68,
       "position_usd": 211.95
+    },
+    {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "take_profit": 253.92,
+      "stop_loss": 287.04,
+      "max_hold_date": "2026-07-20",
+      "day1_open": 278.21,
+      "daily_prices": {
+        "2026-07-14": {
+          "open": 278.21,
+          "high": 281.14,
+          "low": 277.43,
+          "close": 278.72,
+          "pnl_pct": -0.99
+        },
+        "2026-07-15": {
+          "open": 273.55,
+          "high": 279.3,
+          "low": 271.53,
+          "close": 273.6,
+          "pnl_pct": 0.87
+        },
+        "2026-07-16": {
+          "open": 277.65,
+          "high": 283.97,
+          "low": 277.65,
+          "close": 283.96,
+          "pnl_pct": -2.88
+        },
+        "2026-07-17": {
+          "open": 285.44,
+          "high": 291.43,
+          "low": 285.44,
+          "close": 291.43,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 287.04,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.55,
+      "position_usd": 213.81
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 34,
+    "total_trades": 35,
     "win_trades": 21,
-    "win_rate": 61.8,
-    "total_realized_pnl_usd": 136.31,
-    "open_unrealized_pnl_usd": -9.75,
-    "portfolio_value": 2126.56,
-    "skipped_gap": 14,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 127.76,
+    "open_unrealized_pnl_usd": 21.7,
+    "portfolio_value": 2149.46,
+    "skipped_gap": 15,
     "updated_at": "2026-07-17"
   }
 }

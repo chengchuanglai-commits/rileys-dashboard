@@ -91,76 +91,6 @@ window.PORTFOLIO_E = {
       "day1_open": 36.67
     },
     {
-      "ticker": "TCBK",
-      "name": "TCBK",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 60.07,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 480.56,
-      "entry_commission": 1.0,
-      "take_profit": 54.06,
-      "stop_loss": 61.87,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-17",
-      "regime": "neutral",
-      "vix": 16.5,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 59.43,
-          "high": 59.93,
-          "low": 58.59,
-          "close": 59.43,
-          "pnl_pct": 1.07
-        },
-        "2026-07-16": {
-          "open": 59.52,
-          "high": 61.71,
-          "low": 59.31,
-          "close": 61.62,
-          "pnl_pct": -2.58
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 59.43
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 20.93,
-      "allocated_usd": 500,
-      "shares": 23,
-      "actual_position_usd": 481.39,
-      "entry_commission": 1.0,
-      "take_profit": 18.84,
-      "stop_loss": 21.56,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-07-17",
-      "regime": "neutral",
-      "vix": 16.5,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 20.66,
-          "high": 21.29,
-          "low": 20.15,
-          "close": 20.7,
-          "pnl_pct": 1.1
-        },
-        "2026-07-16": {
-          "open": 20.79,
-          "high": 21.0,
-          "low": 20.21,
-          "close": 20.67,
-          "pnl_pct": 1.24
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 20.66
-    },
-    {
       "ticker": "SMPL",
       "name": "SMPL",
       "action": "SELL",
@@ -183,6 +113,13 @@ window.PORTFOLIO_E = {
           "low": 11.94,
           "close": 12.07,
           "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.26,
+          "low": 11.82,
+          "close": 11.87,
+          "pnl_pct": 3.89
         }
       },
       "gap_checked": true,
@@ -1558,7 +1495,7 @@ window.PORTFOLIO_E = {
         "2026-07-16": {
           "open": 277.65,
           "high": 283.97,
-          "low": 280.6,
+          "low": 277.65,
           "close": 283.96,
           "pnl_pct": -2.88
         }
@@ -1570,20 +1507,114 @@ window.PORTFOLIO_E = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -9.95
+    },
+    {
+      "ticker": "TCBK",
+      "name": "TCBK",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 60.07,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 480.56,
+      "entry_commission": 1.0,
+      "take_profit": 54.06,
+      "stop_loss": 61.87,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-17",
+      "regime": "neutral",
+      "vix": 16.5,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 59.43,
+          "high": 59.93,
+          "low": 58.59,
+          "close": 59.43,
+          "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.71,
+          "low": 59.31,
+          "close": 61.62,
+          "pnl_pct": -2.58
+        },
+        "2026-07-17": {
+          "open": 61.24,
+          "high": 61.5,
+          "low": 60.91,
+          "close": 61.31,
+          "pnl_pct": -2.06
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 61.31,
+      "final_pnl_pct": -2.06,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -11.9
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.93,
+      "allocated_usd": 500,
+      "shares": 23,
+      "actual_position_usd": 481.39,
+      "entry_commission": 1.0,
+      "take_profit": 18.84,
+      "stop_loss": 21.56,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-07-17",
+      "regime": "neutral",
+      "vix": 16.5,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 21.29,
+          "low": 20.15,
+          "close": 20.7,
+          "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "open": 20.79,
+          "high": 21.0,
+          "low": 20.21,
+          "close": 20.67,
+          "pnl_pct": 1.24
+        },
+        "2026-07-17": {
+          "open": 20.82,
+          "high": 21.05,
+          "low": 20.55,
+          "close": 20.8,
+          "pnl_pct": 0.62
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 20.8,
+      "final_pnl_pct": 0.62,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 0.98
     }
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 34,
-    "win_trades": 16,
-    "win_rate": 47.1,
-    "total_realized_pnl_usd": 155.46,
-    "open_unrealized_pnl_usd": 5.09,
-    "portfolio_value": 2160.55,
-    "total_commission_usd": 68.0,
+    "total_trades": 36,
+    "win_trades": 17,
+    "win_rate": 47.2,
+    "total_realized_pnl_usd": 144.54,
+    "open_unrealized_pnl_usd": 21.52,
+    "portfolio_value": 2166.06,
+    "total_commission_usd": 72.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   }
 };

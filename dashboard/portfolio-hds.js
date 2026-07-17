@@ -177,14 +177,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-07-17": {
           "open": 71.03,
-          "high": 71.03,
+          "high": 71.32,
           "low": 71.03,
-          "close": 71.03,
-          "pnl_pct": -0.87
+          "close": 71.32,
+          "pnl_pct": -1.28
         }
       },
       "position_usd": 226.09,
-      "unrealized_pnl_usd": -1.97
+      "unrealized_pnl_usd": -2.89
     },
     {
       "ticker": "TCBK",
@@ -2133,9 +2133,9 @@ window.PORTFOLIO_HDS = {
         },
         "2026-07-17": {
           "open": 17.58,
-          "high": 18.98,
+          "high": 20.14,
           "low": 17.24,
-          "close": 18.6,
+          "close": 19.77,
           "pnl_pct": -2.01
         }
       },
@@ -2166,7 +2166,7 @@ window.PORTFOLIO_HDS = {
           "open": 15.76,
           "high": 16.71,
           "low": 15.76,
-          "close": 16.31,
+          "close": 16.09,
           "pnl_pct": -1.97
         }
       },
@@ -2186,8 +2186,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 35,
     "win_rate": 63.6,
     "total_realized_pnl_usd": 251.92,
-    "open_unrealized_pnl_usd": 31.94,
-    "portfolio_value": 2283.86,
+    "open_unrealized_pnl_usd": 31.01,
+    "portfolio_value": 2282.93,
     "total_commission_usd": 110.0,
     "skipped_gap": 26,
     "skipped_zero_shares": 0,

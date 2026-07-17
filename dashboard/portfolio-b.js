@@ -18,40 +18,6 @@ window.PORTFOLIO_B = {
       "daily_prices": {}
     },
     {
-      "ticker": "ITIC",
-      "name": "ITIC",
-      "action": "SELL",
-      "signal_date": "2026-07-13",
-      "entry_price": 276.0,
-      "allocated_usd": 500,
-      "shares": 1,
-      "actual_position_usd": 276.0,
-      "entry_commission": 1.0,
-      "take_profit": 253.92,
-      "stop_loss": 287.04,
-      "max_hold_date": "2026-07-20",
-      "daily_prices": {
-        "2026-07-14": {
-          "open": 278.21,
-          "high": 281.14,
-          "low": 277.43,
-          "close": 278.72,
-          "pnl_pct": -0.99
-        },
-        "2026-07-15": {
-          "open": 273.55,
-          "high": 279.3,
-          "low": 271.53,
-          "close": 273.6,
-          "pnl_pct": 0.87
-        },
-        "2026-07-16": {
-          "close": 283.96,
-          "pnl_pct": -2.88
-        }
-      }
-    },
-    {
       "ticker": "TCBK",
       "name": "TCBK",
       "action": "SELL",
@@ -73,8 +39,15 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.07
         },
         "2026-07-16": {
+          "open": 59.52,
+          "high": 61.71,
+          "low": 59.31,
           "close": 61.62,
           "pnl_pct": -2.58
+        },
+        "2026-07-17": {
+          "close": 61.35,
+          "pnl_pct": -2.13
         }
       }
     },
@@ -100,8 +73,15 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.1
         },
         "2026-07-16": {
+          "open": 20.79,
+          "high": 21.0,
+          "low": 20.21,
           "close": 20.67,
           "pnl_pct": 1.24
+        },
+        "2026-07-17": {
+          "close": 20.8,
+          "pnl_pct": 0.62
         }
       }
     },
@@ -120,8 +100,15 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-22",
       "daily_prices": {
         "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
           "close": 12.07,
           "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "close": 11.89,
+          "pnl_pct": 3.72
         }
       }
     }
@@ -725,43 +712,6 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -21.25
-    },
-    {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-12",
-      "entry_price": 173.6,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 347.2,
-      "entry_commission": 1.0,
-      "take_profit": 159.71,
-      "stop_loss": 180.54,
-      "max_hold_date": "2026-06-19",
-      "daily_prices": {
-        "2026-06-15": {
-          "open": 172.51,
-          "high": 172.79,
-          "low": 162.32,
-          "close": 164.1,
-          "pnl_pct": 5.47
-        },
-        "2026-06-16": {
-          "open": 165.18,
-          "high": 166.94,
-          "low": 159.22,
-          "close": 159.8,
-          "pnl_pct": 8.0
-        }
-      },
-      "close_date": "2026-06-16",
-      "close_price": 159.71,
-      "final_pnl_pct": 8.0,
-      "close_reason": "take_profit",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 25.78
     },
     {
       "ticker": "MFIN",
@@ -2196,16 +2146,92 @@ window.PORTFOLIO_B = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -19.93
+    },
+    {
+      "ticker": "ITIC",
+      "name": "ITIC",
+      "action": "SELL",
+      "signal_date": "2026-07-13",
+      "entry_price": 276.0,
+      "allocated_usd": 500,
+      "shares": 1,
+      "actual_position_usd": 276.0,
+      "entry_commission": 1.0,
+      "take_profit": 253.92,
+      "stop_loss": 287.04,
+      "max_hold_date": "2026-07-20",
+      "daily_prices": {
+        "2026-07-14": {
+          "open": 278.21,
+          "high": 281.14,
+          "low": 277.43,
+          "close": 278.72,
+          "pnl_pct": -0.99
+        },
+        "2026-07-15": {
+          "open": 273.55,
+          "high": 279.3,
+          "low": 271.53,
+          "close": 273.6,
+          "pnl_pct": 0.87
+        },
+        "2026-07-16": {
+          "open": 277.65,
+          "high": 283.97,
+          "low": 277.65,
+          "close": 283.96,
+          "pnl_pct": -2.88
+        },
+        "2026-07-17": {
+          "open": 285.44,
+          "high": 291.43,
+          "low": 285.44,
+          "close": 291.43,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 287.04,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -13.04
+    },
+    {
+      "ticker": "ARCB",
+      "name": "ARCB",
+      "action": "SELL",
+      "signal_date": "2026-06-12",
+      "entry_price": 173.6,
+      "allocated_usd": 500,
+      "shares": 2,
+      "actual_position_usd": 347.2,
+      "entry_commission": 1.0,
+      "take_profit": 159.71,
+      "stop_loss": 180.54,
+      "max_hold_date": "2026-06-19",
+      "daily_prices": {
+        "2026-07-17": {
+          "close": 158.63,
+          "pnl_pct": 8.62
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 158.63,
+      "final_pnl_pct": 8.62,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 43.12
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 48,
+    "total_trades": 49,
     "win_trades": 23,
-    "win_rate": 47.9,
-    "total_realized_pnl_usd": 49.6,
-    "open_unrealized_pnl_usd": -9.75,
-    "portfolio_value": 2039.85,
+    "win_rate": 46.9,
+    "total_realized_pnl_usd": 53.9,
+    "open_unrealized_pnl_usd": 11.05,
+    "portfolio_value": 2064.95,
     "updated_at": "2026-07-17"
   }
 };

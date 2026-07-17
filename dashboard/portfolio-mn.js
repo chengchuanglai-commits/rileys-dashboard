@@ -153,95 +153,71 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "TCBK",
-      "name": "Trico银行",
+      "ticker": "PBHC",
+      "name": "Pathfinder Bancorp",
       "action": "BUY",
-      "signal_date": "2026-07-15",
-      "entry_price": 59.43,
+      "signal_date": "2026-07-17",
+      "entry_price": 16.09,
       "allocated_usd": 500,
-      "shares": 8.4133,
+      "shares": 31.0752,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 68.34,
-      "stop_loss": 58.24,
-      "max_hold_date": "2026-07-17",
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 59.52,
-          "high": 61.71,
-          "low": 59.31,
-          "close": 61.62,
-          "pnl_pct": 3.69
-        }
-      },
-      "position_usd": 207.39,
-      "unrealized_pnl_usd": 7.65
-    },
-    {
-      "ticker": "PLMR",
-      "name": "Palomar控股",
-      "action": "BUY",
-      "signal_date": "2026-07-15",
-      "entry_price": 131.69,
-      "allocated_usd": 500,
-      "shares": 3.7968,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 151.44,
-      "stop_loss": 129.06,
-      "max_hold_date": "2026-07-17",
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 131.66,
-          "high": 136.15,
-          "low": 131.66,
-          "close": 134.23,
-          "pnl_pct": 1.93
-        }
-      },
-      "position_usd": 207.39,
-      "unrealized_pnl_usd": 4.0
-    },
-    {
-      "ticker": "PSMT",
-      "name": "普尔斯马特",
-      "action": "BUY",
-      "signal_date": "2026-07-15",
-      "entry_price": 188.58,
-      "allocated_usd": 500,
-      "shares": 2.6514,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 216.87,
-      "stop_loss": 184.81,
-      "max_hold_date": "2026-07-17",
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 188.41,
-          "high": 192.96,
-          "low": 186.48,
-          "close": 189.05,
-          "pnl_pct": 0.25
-        }
-      },
-      "position_usd": 207.39,
-      "unrealized_pnl_usd": 0.52
-    },
-    {
-      "ticker": "PTGX",
-      "name": "Protagonist Therapeutics",
-      "action": "BUY",
-      "signal_date": "2026-07-16",
-      "entry_price": 132.02,
-      "allocated_usd": 500,
-      "shares": 3.7873,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 151.82,
-      "stop_loss": 129.38,
-      "max_hold_date": "2026-07-20",
+      "take_profit": 18.5,
+      "stop_loss": 15.77,
+      "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 207.6,
+      "position_usd": 212.24,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "WDFC",
+      "name": "WD-40公司",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 255.04,
+      "allocated_usd": 500,
+      "shares": 1.9605,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 293.3,
+      "stop_loss": 249.94,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {},
+      "position_usd": 212.24,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SFBC",
+      "name": "Sound Financial Bancorp",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 47.24,
+      "allocated_usd": 500,
+      "shares": 10.5843,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 54.33,
+      "stop_loss": 46.3,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {},
+      "position_usd": 212.24,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CNMD",
+      "name": "康美公司",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 44.46,
+      "allocated_usd": 500,
+      "shares": 11.2461,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 51.13,
+      "stop_loss": 43.57,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {},
+      "position_usd": 212.24,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2901,20 +2877,165 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": 2.15,
       "position_usd": 208.64
+    },
+    {
+      "ticker": "TCBK",
+      "name": "Trico银行",
+      "action": "BUY",
+      "signal_date": "2026-07-15",
+      "entry_price": 59.43,
+      "allocated_usd": 500,
+      "shares": 8.4133,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 68.34,
+      "stop_loss": 58.24,
+      "max_hold_date": "2026-07-17",
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.71,
+          "low": 59.31,
+          "close": 61.62,
+          "pnl_pct": 3.69
+        },
+        "2026-07-17": {
+          "open": 61.24,
+          "high": 61.5,
+          "low": 60.91,
+          "close": 61.31,
+          "pnl_pct": 3.16
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 61.31,
+      "final_pnl_pct": 3.16,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 6.55,
+      "position_usd": 207.39
+    },
+    {
+      "ticker": "PLMR",
+      "name": "Palomar控股",
+      "action": "BUY",
+      "signal_date": "2026-07-15",
+      "entry_price": 131.69,
+      "allocated_usd": 500,
+      "shares": 3.7968,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 151.44,
+      "stop_loss": 129.06,
+      "max_hold_date": "2026-07-17",
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 131.66,
+          "high": 136.15,
+          "low": 131.66,
+          "close": 134.23,
+          "pnl_pct": 1.93
+        },
+        "2026-07-17": {
+          "open": 134.44,
+          "high": 138.67,
+          "low": 134.25,
+          "close": 136.32,
+          "pnl_pct": 3.52
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 136.32,
+      "final_pnl_pct": 3.52,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 7.3,
+      "position_usd": 207.39
+    },
+    {
+      "ticker": "PSMT",
+      "name": "普尔斯马特",
+      "action": "BUY",
+      "signal_date": "2026-07-15",
+      "entry_price": 188.58,
+      "allocated_usd": 500,
+      "shares": 2.6514,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 216.87,
+      "stop_loss": 184.81,
+      "max_hold_date": "2026-07-17",
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 188.41,
+          "high": 192.96,
+          "low": 186.48,
+          "close": 189.05,
+          "pnl_pct": 0.25
+        },
+        "2026-07-17": {
+          "open": 188.81,
+          "high": 191.94,
+          "low": 186.49,
+          "close": 189.86,
+          "pnl_pct": 0.68
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 189.86,
+      "final_pnl_pct": 0.68,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 1.41,
+      "position_usd": 207.39
+    },
+    {
+      "ticker": "TRVI",
+      "name": "Trevi Therapeutics",
+      "action": "BUY",
+      "signal_date": "2026-07-16",
+      "entry_price": 17.36,
+      "allocated_usd": 500,
+      "shares": 28.8018,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 19.96,
+      "stop_loss": 17.01,
+      "max_hold_date": "2026-07-20",
+      "daily_prices": {
+        "2026-07-17": {
+          "open": 17.58,
+          "high": 20.14,
+          "low": 17.24,
+          "close": 19.77,
+          "pnl_pct": 14.98
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 19.96,
+      "final_pnl_pct": 14.98,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 31.1,
+      "position_usd": 207.6
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 78,
-    "win_trades": 23,
-    "win_rate": 29.5,
-    "total_realized_pnl_usd": 76.0,
-    "open_unrealized_pnl_usd": 36.81,
-    "portfolio_value": 2112.81,
-    "total_commission_usd": 156.0,
-    "skipped_gap": 41,
+    "total_trades": 82,
+    "win_trades": 27,
+    "win_rate": 32.9,
+    "total_realized_pnl_usd": 122.36,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2147.0,
+    "total_commission_usd": 164.0,
+    "skipped_gap": 44,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 107,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   }
 };

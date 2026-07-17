@@ -16,29 +16,6 @@ window.PORTFOLIO_D = {
       "stop_loss": 12.73,
       "max_hold_date": "2026-06-11",
       "daily_prices": {}
-    },
-    {
-      "ticker": "SMPL",
-      "name": "SMPL",
-      "action": "SELL",
-      "signal_date": "2026-07-15",
-      "entry_price": 12.35,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.0,
-      "entry_commission": 1.0,
-      "take_profit": 10.5,
-      "stop_loss": 12.72,
-      "max_hold_date": "2026-07-17",
-      "daily_prices": {
-        "2026-07-16": {
-          "close": 12.07,
-          "pnl_pct": 2.27
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 12.19,
-      "day1_gap_pct": -1.3
     }
   ],
   "closed_positions": [
@@ -1365,6 +1342,43 @@ window.PORTFOLIO_D = {
       "realized_pnl_usd": 3.97
     },
     {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "take_profit": 10.5,
+      "stop_loss": 12.72,
+      "max_hold_date": "2026-07-17",
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.07,
+          "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.26,
+          "low": 11.82,
+          "close": 11.86,
+          "pnl_pct": 3.97
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 11.86,
+      "final_pnl_pct": 3.97,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 17.61
+    },
+    {
       "ticker": "SRRK",
       "name": "SRRK",
       "action": "SELL",
@@ -1385,29 +1399,29 @@ window.PORTFOLIO_D = {
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-07-16": {
-          "close": 51.73,
-          "pnl_pct": 5.95
+        "2026-07-17": {
+          "close": 52.89,
+          "pnl_pct": 3.84
         }
       },
       "gap_checked": true,
-      "day1_open": 53.76,
-      "day1_gap_pct": -2.25,
-      "close_date": "2026-07-16",
-      "close_price": 51.73,
-      "final_pnl_pct": 5.95,
+      "day1_open": 50.87,
+      "day1_gap_pct": -7.51,
+      "close_date": "2026-07-17",
+      "close_price": 52.89,
+      "final_pnl_pct": 3.84,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 29.73
+      "realized_pnl_usd": 19.18
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 39,
-    "win_trades": 23,
-    "win_rate": 59.0,
-    "total_realized_pnl_usd": 183.07,
-    "open_unrealized_pnl_usd": 11.35,
-    "portfolio_value": 2194.42,
+    "total_trades": 40,
+    "win_trades": 24,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 190.13,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2190.13,
     "skipped_gap": 12,
     "updated_at": "2026-07-17"
   }
