@@ -92,9 +92,9 @@
       "pnl_usd": -112.22,
       "today_price": 161.61000061035156,
       "slippage_pct": 2.24,
-      "sim_price": 151.35,
-      "delay_gap_pct": 9.17,
-      "target_usd": 1000.0
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
     },
     {
       "sym": "KSPI",
@@ -105,8 +105,8 @@
       "pnl_usd": -2.25,
       "today_price": 87.91000366210938,
       "slippage_pct": 0.51,
-      "sim_price": 82.21,
-      "delay_gap_pct": 7.48,
+      "sim_price": 88.67,
+      "delay_gap_pct": -0.35,
       "target_usd": 0
     },
     {
@@ -166,5 +166,5 @@
   "note": "",
   "account": "DUQ627583",
   "total_unrealized_pnl": -150.29,
-  "updated_at": "2026-07-19 00:05"
+  "updated_at": "2026-07-19 00:10"
 }
