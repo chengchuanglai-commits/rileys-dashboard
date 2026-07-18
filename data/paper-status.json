@@ -9,11 +9,11 @@
       "sym": "NBIX",
       "shares": 2.0,
       "avg_fill": 165.7,
-      "cur_price": 170.8800048828125,
-      "change_pct": 3.13,
-      "pnl_usd": 10.36,
-      "today_price": 170.8800048828125,
-      "slippage_pct": -3.03,
+      "cur_price": null,
+      "change_pct": null,
+      "pnl_usd": null,
+      "today_price": null,
+      "slippage_pct": null,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -165,6 +165,6 @@
   "open_orders": 14,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -150.29,
-  "updated_at": "2026-07-18 22:20"
+  "total_unrealized_pnl": -160.65,
+  "updated_at": "2026-07-18 22:25"
 }
