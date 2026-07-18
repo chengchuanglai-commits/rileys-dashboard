@@ -25,7 +25,7 @@ jobs:
           key: ${{ runner.os }}-pip-tradingagents-analyze
           restore-keys: ${{ runner.os }}-pip-tradingagents-
       - name: 装依赖
-        run: pip install yfinance anthropic lxml "git+https://github.com/TauricResearch/TradingAgents.git"
+        run: pip install yfinance anthropic lxml "git+https://github.com/TauricResearch/TradingAgents.git@a33fd4c0f134485a43553a2c23a63cb14adbd88f"  # 版本锁定2026-07-19防依赖漂移换脑,升级需显式改此SHA
       - name: 跑 QQQ 分析
         env:
           MODEL: deepseek

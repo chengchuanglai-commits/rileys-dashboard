@@ -49,7 +49,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install deps
-        run: pip install yfinance lxml "git+https://github.com/TauricResearch/TradingAgents.git"
+        run: pip install yfinance lxml "git+https://github.com/TauricResearch/TradingAgents.git@a33fd4c0f134485a43553a2c23a63cb14adbd88f"  # 版本锁定2026-07-19防依赖漂移换脑,升级需显式改此SHA
 
       - name: 飞书通知:广撒开始
         continue-on-error: true
