@@ -442,27 +442,20 @@ window.PORTFOLIO_E = {
       "vix": 19.44,
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.88,
-          "high": 15.45,
-          "low": 13.72,
-          "close": 15.45,
-          "pnl_pct": -1.64
-        },
-        "2026-06-15": {
-          "open": 16.08,
-          "high": 16.88,
-          "low": 15.22,
-          "close": 15.22,
-          "pnl_pct": -3.03
+          "open": 14.79,
+          "high": 15.35,
+          "low": 13.64,
+          "close": 15.35,
+          "pnl_pct": 10.0
         }
       },
-      "close_date": "2026-06-15",
-      "close_price": 15.66,
-      "final_pnl_pct": -3.03,
-      "close_reason": "stop_loss",
+      "close_date": "2026-06-12",
+      "close_price": 13.68,
+      "final_pnl_pct": 10.0,
+      "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -16.74
+      "realized_pnl_usd": 46.64
     },
     {
       "ticker": "MFIN",
@@ -623,14 +616,21 @@ window.PORTFOLIO_E = {
       "vix": 16.4,
       "daily_prices": {
         "2026-06-22": {
-          "open": 16.39,
-          "high": 16.4,
-          "low": 15.91,
-          "close": 16.2,
+          "open": 16.29,
+          "high": 16.3,
+          "low": 15.81,
+          "close": 16.1,
+          "pnl_pct": -1.64
+        },
+        "2026-06-23": {
+          "open": 15.68,
+          "high": 16.96,
+          "low": 15.68,
+          "close": 16.0,
           "pnl_pct": -3.03
         }
       },
-      "close_date": "2026-06-22",
+      "close_date": "2026-06-23",
       "close_price": 16.32,
       "final_pnl_pct": -3.03,
       "close_reason": "stop_loss",
@@ -1505,9 +1505,9 @@ window.PORTFOLIO_E = {
           "pnl_pct": -2.58
         },
         "2026-07-17": {
-          "open": 61.24,
+          "open": 61.2,
           "high": 61.5,
-          "low": 60.27,
+          "low": 60.25,
           "close": 60.52,
           "pnl_pct": -0.75
         }
@@ -1593,7 +1593,7 @@ window.PORTFOLIO_E = {
         },
         "2026-07-17": {
           "open": 12.04,
-          "high": 12.26,
+          "high": 12.36,
           "low": 11.03,
           "close": 11.08,
           "pnl_pct": 9.96
@@ -1611,15 +1611,15 @@ window.PORTFOLIO_E = {
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 37,
-    "win_trades": 18,
-    "win_rate": 48.6,
-    "total_realized_pnl_usd": 199.87,
+    "win_trades": 19,
+    "win_rate": 51.4,
+    "total_realized_pnl_usd": 263.25,
     "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2203.18,
+    "portfolio_value": 2266.56,
     "total_commission_usd": 74.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,
-    "updated_at": "2026-07-17"
+    "updated_at": "2026-07-20"
   }
 };

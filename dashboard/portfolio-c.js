@@ -3,22 +3,50 @@ window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
+      "ticker": "TCBK",
+      "name": "TCBK",
       "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
+      "signal_date": "2026-07-14",
+      "entry_price": 60.07,
       "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
+      "shares": 8,
+      "actual_position_usd": 480.56,
       "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "day1_open": null,
-      "daily_prices": {},
-      "position_usd": 206.85,
-      "unrealized_pnl_usd": 0.0
+      "take_profit": 55.26,
+      "stop_loss": 62.47,
+      "max_hold_date": "2026-07-21",
+      "day1_open": 60.61,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 59.43,
+          "high": 59.93,
+          "low": 58.59,
+          "close": 59.43,
+          "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.71,
+          "low": 59.31,
+          "close": 61.62,
+          "pnl_pct": -2.58
+        },
+        "2026-07-17": {
+          "open": 61.2,
+          "high": 61.5,
+          "low": 60.25,
+          "close": 60.52,
+          "pnl_pct": -0.75
+        },
+        "2026-07-20": {
+          "close": 60.24,
+          "pnl_pct": -0.28
+        }
+      },
+      "position_usd": 213.81,
+      "unrealized_pnl_usd": -0.6,
+      "gap_checked": true,
+      "day1_gap_pct": 0.9
     },
     {
       "ticker": "STRS",
@@ -33,7 +61,7 @@ window.PORTFOLIO_C = {
       "take_profit": 19.26,
       "stop_loss": 21.77,
       "max_hold_date": "2026-07-21",
-      "day1_open": 20.82,
+      "day1_open": 20.64,
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
@@ -50,14 +78,21 @@ window.PORTFOLIO_C = {
           "pnl_pct": 1.24
         },
         "2026-07-17": {
+          "open": 20.82,
+          "high": 21.05,
+          "low": 20.23,
           "close": 20.72,
           "pnl_pct": 1.0
+        },
+        "2026-07-20": {
+          "close": 20.1,
+          "pnl_pct": 3.97
         }
       },
       "position_usd": 213.81,
-      "unrealized_pnl_usd": 2.14,
+      "unrealized_pnl_usd": 8.49,
       "gap_checked": true,
-      "day1_gap_pct": -0.53
+      "day1_gap_pct": -1.39
     }
   ],
   "closed_positions": [
@@ -517,13 +552,13 @@ window.PORTFOLIO_C = {
       "take_profit": 13.98,
       "stop_loss": 15.81,
       "max_hold_date": "2026-06-18",
-      "day1_open": 14.88,
+      "day1_open": 14.79,
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.88,
-          "high": 15.45,
-          "low": 13.72,
-          "close": 15.45,
+          "open": 14.79,
+          "high": 15.35,
+          "low": 13.64,
+          "close": 15.35,
           "pnl_pct": 8.03
         }
       },
@@ -1704,9 +1739,9 @@ window.PORTFOLIO_C = {
           "pnl_pct": -2.88
         },
         "2026-07-17": {
-          "open": 285.44,
-          "high": 291.43,
-          "low": 285.11,
+          "open": 283.1,
+          "high": 291.44,
+          "low": 283.1,
           "close": 289.22,
           "pnl_pct": -4.0
         }
@@ -1744,7 +1779,7 @@ window.PORTFOLIO_C = {
         },
         "2026-07-17": {
           "open": 12.04,
-          "high": 12.26,
+          "high": 12.36,
           "low": 11.03,
           "close": 11.08,
           "pnl_pct": 8.02
@@ -1758,17 +1793,47 @@ window.PORTFOLIO_C = {
       "commission_total": 2.0,
       "realized_pnl_usd": 17.08,
       "position_usd": 212.96
+    },
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "day1_open": 8.26,
+      "daily_prices": {
+        "2026-07-17": {
+          "close": 8.79,
+          "pnl_pct": 28.88
+        }
+      },
+      "position_usd": 206.85,
+      "unrealized_pnl_usd": 0.0,
+      "gap_checked": true,
+      "day1_gap_pct": -33.17,
+      "close_date": "2026-07-17",
+      "close_price": 8.79,
+      "final_pnl_pct": 28.88,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 144.42
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 36,
-    "win_trades": 22,
-    "win_rate": 61.1,
-    "total_realized_pnl_usd": 144.84,
-    "open_unrealized_pnl_usd": 5.0,
-    "portfolio_value": 2149.84,
-    "skipped_gap": 15,
-    "updated_at": "2026-07-18"
+    "total_trades": 37,
+    "win_trades": 23,
+    "win_rate": 62.2,
+    "total_realized_pnl_usd": 289.26,
+    "open_unrealized_pnl_usd": 18.45,
+    "portfolio_value": 2307.71,
+    "skipped_gap": 14,
+    "updated_at": "2026-07-20"
   }
 };

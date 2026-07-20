@@ -28,7 +28,7 @@ window.PORTFOLIO_CTG = {
       "shares": 8,
       "actual_position_usd": 480.56,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-17",
+      "max_hold_date": "2026-07-20",
       "day1_open": 59.43,
       "daily_prices": {
         "2026-07-15": {
@@ -46,15 +46,22 @@ window.PORTFOLIO_CTG = {
           "pnl_pct": -2.58
         },
         "2026-07-17": {
-          "open": 61.24,
+          "open": 61.2,
           "high": 61.5,
-          "low": 60.27,
+          "low": 60.25,
           "close": 60.52,
           "pnl_pct": -0.75
+        },
+        "2026-07-20": {
+          "open": 60.61,
+          "high": 60.61,
+          "low": 59.97,
+          "close": 60.24,
+          "pnl_pct": -0.28
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": -1.61
+      "unrealized_pnl_usd": -0.6
     },
     {
       "ticker": "STRS",
@@ -66,7 +73,7 @@ window.PORTFOLIO_CTG = {
       "shares": 23,
       "actual_position_usd": 481.39,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-17",
+      "max_hold_date": "2026-07-20",
       "day1_open": 20.66,
       "daily_prices": {
         "2026-07-15": {
@@ -89,10 +96,17 @@ window.PORTFOLIO_CTG = {
           "low": 20.23,
           "close": 20.72,
           "pnl_pct": 1.0
+        },
+        "2026-07-20": {
+          "open": 20.64,
+          "high": 20.66,
+          "low": 20.01,
+          "close": 20.1,
+          "pnl_pct": 3.97
         }
       },
       "position_usd": 214.67,
-      "unrealized_pnl_usd": 2.15
+      "unrealized_pnl_usd": 8.52
     }
   ],
   "closed_positions": [
@@ -528,13 +542,13 @@ window.PORTFOLIO_CTG = {
       "actual_position_usd": 486.4,
       "entry_commission": 1.0,
       "max_hold_date": "2026-06-12",
-      "day1_open": 14.88,
+      "day1_open": 14.79,
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.88,
-          "high": 15.45,
-          "low": 13.72,
-          "close": 15.45,
+          "open": 14.79,
+          "high": 15.35,
+          "low": 13.64,
+          "close": 15.35,
           "pnl_pct": 8.03
         }
       },
@@ -1588,9 +1602,9 @@ window.PORTFOLIO_CTG = {
           "pnl_pct": -2.88
         },
         "2026-07-17": {
-          "open": 285.44,
-          "high": 291.43,
-          "low": 285.11,
+          "open": 283.1,
+          "high": 291.44,
+          "low": 283.1,
           "close": 289.22,
           "pnl_pct": -4.0
         }
@@ -1626,7 +1640,7 @@ window.PORTFOLIO_CTG = {
         },
         "2026-07-17": {
           "open": 12.04,
-          "high": 12.26,
+          "high": 12.36,
           "low": 11.03,
           "close": 11.08,
           "pnl_pct": 8.02
@@ -1648,11 +1662,11 @@ window.PORTFOLIO_CTG = {
     "win_trades": 22,
     "win_rate": 64.7,
     "total_realized_pnl_usd": 162.04,
-    "open_unrealized_pnl_usd": 0.54,
-    "portfolio_value": 2162.58,
+    "open_unrealized_pnl_usd": 7.92,
+    "portfolio_value": 2169.96,
     "total_commission_usd": 68.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-17"
+    "updated_at": "2026-07-20"
   }
 };

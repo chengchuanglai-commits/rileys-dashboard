@@ -413,20 +413,20 @@ window.PORTFOLIO_CH = {
       "actual_position_usd": 486.4,
       "entry_commission": 1.0,
       "max_hold_date": "2026-06-15",
-      "day1_open": 14.88,
+      "day1_open": 14.79,
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.88,
-          "high": 15.45,
-          "low": 13.72,
-          "close": 15.45,
-          "pnl_pct": -1.64
+          "open": 14.79,
+          "high": 15.35,
+          "low": 13.64,
+          "close": 15.35,
+          "pnl_pct": -0.99
         },
         "2026-06-15": {
-          "open": 16.08,
-          "high": 16.88,
-          "low": 15.22,
-          "close": 15.22,
+          "open": 15.98,
+          "high": 16.78,
+          "low": 15.13,
+          "close": 15.13,
           "pnl_pct": -1.97
         }
       },
@@ -1300,7 +1300,7 @@ window.PORTFOLIO_CH = {
         },
         "2026-07-17": {
           "open": 12.04,
-          "high": 12.26,
+          "high": 12.36,
           "low": 11.03,
           "close": 11.08,
           "pnl_pct": 10.28
@@ -1327,6 +1327,6 @@ window.PORTFOLIO_CH = {
     "total_commission_usd": 74.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-17"
+    "updated_at": "2026-07-20"
   }
 };

@@ -153,40 +153,6 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "PBHC",
-      "name": "Pathfinder Bancorp",
-      "action": "BUY",
-      "signal_date": "2026-07-17",
-      "entry_price": 16.39,
-      "allocated_usd": 500,
-      "shares": 30.5064,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 18.85,
-      "stop_loss": 16.06,
-      "max_hold_date": "2026-07-21",
-      "daily_prices": {},
-      "position_usd": 211.4,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "WDFC",
-      "name": "WD-40公司",
-      "action": "BUY",
-      "signal_date": "2026-07-17",
-      "entry_price": 246.79,
-      "allocated_usd": 500,
-      "shares": 2.026,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 283.81,
-      "stop_loss": 241.85,
-      "max_hold_date": "2026-07-21",
-      "daily_prices": {},
-      "position_usd": 211.4,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "SFBC",
       "name": "Sound Financial Bancorp",
       "action": "BUY",
@@ -199,9 +165,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 53.91,
       "stop_loss": 45.94,
       "max_hold_date": "2026-07-21",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 47.08,
+          "high": 47.08,
+          "low": 46.61,
+          "close": 46.61,
+          "pnl_pct": -0.58
+        }
+      },
       "position_usd": 211.4,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -1.23
     },
     {
       "ticker": "CNMD",
@@ -216,9 +190,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 49.68,
       "stop_loss": 42.34,
       "max_hold_date": "2026-07-21",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 43.42,
+          "high": 43.59,
+          "low": 42.43,
+          "close": 43.26,
+          "pnl_pct": 0.14
+        }
+      },
       "position_usd": 211.4,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 0.3
     }
   ],
   "closed_positions": [
@@ -2900,9 +2882,9 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 3.69
         },
         "2026-07-17": {
-          "open": 61.24,
+          "open": 61.2,
           "high": 61.5,
-          "low": 60.27,
+          "low": 60.25,
           "close": 60.52,
           "pnl_pct": 1.83
         }
@@ -2978,7 +2960,7 @@ window.PORTFOLIO_MN = {
         "2026-07-17": {
           "open": 188.81,
           "high": 191.94,
-          "low": 185.63,
+          "low": 185.64,
           "close": 186.0,
           "pnl_pct": -1.37
         }
@@ -3008,8 +2990,8 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-17": {
           "open": 17.58,
-          "high": 20.14,
-          "low": 17.24,
+          "high": 20.22,
+          "low": 17.23,
           "close": 19.07,
           "pnl_pct": 14.98
         }
@@ -3022,20 +3004,82 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": 31.1,
       "position_usd": 207.6
+    },
+    {
+      "ticker": "WDFC",
+      "name": "WD-40公司",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 246.79,
+      "allocated_usd": 500,
+      "shares": 2.026,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 283.81,
+      "stop_loss": 241.85,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 246.35,
+          "high": 247.32,
+          "low": 241.6,
+          "close": 241.6,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-20",
+      "close_price": 241.85,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.23,
+      "position_usd": 211.4
+    },
+    {
+      "ticker": "UNTY",
+      "name": "Unity Bancorp",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 57.25,
+      "allocated_usd": 500,
+      "shares": 8.7336,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 65.84,
+      "stop_loss": 56.1,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 57.7,
+          "high": 57.94,
+          "low": 56.09,
+          "close": 57.94,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-07-20",
+      "close_price": 56.1,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.25,
+      "position_usd": 211.4
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 82,
+    "total_trades": 84,
     "win_trades": 26,
-    "win_rate": 31.7,
-    "total_realized_pnl_usd": 113.97,
-    "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2138.61,
-    "total_commission_usd": 164.0,
-    "skipped_gap": 44,
+    "win_rate": 31.0,
+    "total_realized_pnl_usd": 105.49,
+    "open_unrealized_pnl_usd": 23.71,
+    "portfolio_value": 2129.2,
+    "total_commission_usd": 168.0,
+    "skipped_gap": 45,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 107,
-    "updated_at": "2026-07-17"
+    "skipped_no_cash": 111,
+    "updated_at": "2026-07-20"
   }
 };
