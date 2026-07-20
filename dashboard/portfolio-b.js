@@ -38,8 +38,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": -0.75
         },
         "2026-07-20": {
-          "close": 60.24,
-          "pnl_pct": -0.28
+          "close": 60.06,
+          "pnl_pct": 0.02
         }
       }
     },
@@ -79,8 +79,8 @@ window.PORTFOLIO_B = {
           "pnl_pct": 1.0
         },
         "2026-07-20": {
-          "close": 20.1,
-          "pnl_pct": 3.97
+          "close": 20.19,
+          "pnl_pct": 3.54
         }
       }
     }
@@ -2276,8 +2276,8 @@ window.PORTFOLIO_B = {
     "win_trades": 25,
     "win_rate": 49.0,
     "total_realized_pnl_usd": 218.6,
-    "open_unrealized_pnl_usd": 18.45,
-    "portfolio_value": 2237.05,
-    "updated_at": "2026-07-20"
+    "open_unrealized_pnl_usd": 17.8,
+    "portfolio_value": 2236.4,
+    "updated_at": "2026-07-21"
   }
 };
