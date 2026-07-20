@@ -178,13 +178,13 @@ window.PORTFOLIO_HDS = {
         "2026-07-20": {
           "open": 60.61,
           "high": 60.61,
-          "low": 59.62,
-          "close": 59.76,
-          "pnl_pct": 2.35
+          "low": 59.61,
+          "close": 59.8,
+          "pnl_pct": 2.29
         }
       },
       "position_usd": 224.75,
-      "unrealized_pnl_usd": 5.28
+      "unrealized_pnl_usd": 5.15
     },
     {
       "ticker": "CDNA",
@@ -204,12 +204,12 @@ window.PORTFOLIO_HDS = {
           "open": 39.3,
           "high": 39.84,
           "low": 38.04,
-          "close": 38.75,
-          "pnl_pct": 0.21
+          "close": 38.37,
+          "pnl_pct": -0.78
         }
       },
       "position_usd": 224.75,
-      "unrealized_pnl_usd": 0.47
+      "unrealized_pnl_usd": -1.75
     },
     {
       "ticker": "PBHC",
@@ -2226,8 +2226,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 35,
     "win_rate": 62.5,
     "total_realized_pnl_usd": 247.46,
-    "open_unrealized_pnl_usd": 38.27,
-    "portfolio_value": 2285.73,
+    "open_unrealized_pnl_usd": 35.91,
+    "portfolio_value": 2283.37,
     "total_commission_usd": 112.0,
     "skipped_gap": 27,
     "skipped_zero_shares": 0,
