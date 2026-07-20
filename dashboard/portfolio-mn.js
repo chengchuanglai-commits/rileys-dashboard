@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 43.42,
           "high": 43.87,
           "low": 42.43,
-          "close": 43.7,
-          "pnl_pct": 1.16
+          "close": 43.56,
+          "pnl_pct": 0.83
         }
       },
       "position_usd": 211.4,
-      "unrealized_pnl_usd": 2.45
+      "unrealized_pnl_usd": 1.75
     }
   ],
   "closed_positions": [
@@ -2997,8 +2997,8 @@ window.PORTFOLIO_MN = {
         "2026-07-20": {
           "open": 246.35,
           "high": 247.32,
-          "low": 238.26,
-          "close": 238.77,
+          "low": 238.08,
+          "close": 240.32,
           "pnl_pct": -2.0
         }
       },
@@ -3028,8 +3028,8 @@ window.PORTFOLIO_MN = {
         "2026-07-20": {
           "open": 47.08,
           "high": 47.08,
-          "low": 45.82,
-          "close": 45.82,
+          "low": 45.41,
+          "close": 45.41,
           "pnl_pct": -2.01
         }
       },
@@ -3060,7 +3060,7 @@ window.PORTFOLIO_MN = {
           "open": 57.7,
           "high": 57.94,
           "low": 56.09,
-          "close": 57.45,
+          "close": 57.56,
           "pnl_pct": -2.01
         }
       },
@@ -3080,8 +3080,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 26,
     "win_rate": 30.6,
     "total_realized_pnl_usd": 101.24,
-    "open_unrealized_pnl_usd": 27.09,
-    "portfolio_value": 2128.33,
+    "open_unrealized_pnl_usd": 26.39,
+    "portfolio_value": 2127.63,
     "total_commission_usd": 170.0,
     "skipped_gap": 45,
     "skipped_zero_shares": 0,
