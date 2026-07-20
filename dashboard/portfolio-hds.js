@@ -175,7 +175,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 62.42,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 224.74,
+      "position_usd": 224.75,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -192,7 +192,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 37.9,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 224.74,
+      "position_usd": 224.75,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -209,7 +209,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 69.61,
       "max_hold_date": "2026-07-21",
       "daily_prices": {},
-      "position_usd": 224.74,
+      "position_usd": 224.75,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -581,21 +581,14 @@ window.PORTFOLIO_HDS = {
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
-          "open": 16.08,
-          "high": 16.88,
-          "low": 15.22,
-          "close": 15.22,
-          "pnl_pct": -1.49
-        },
-        "2026-06-16": {
-          "open": 14.95,
-          "high": 16.1,
-          "low": 14.95,
-          "close": 15.65,
+          "open": 15.98,
+          "high": 16.78,
+          "low": 15.13,
+          "close": 15.13,
           "pnl_pct": -2.01
         }
       },
-      "close_date": "2026-06-16",
+      "close_date": "2026-06-15",
       "close_price": 15.14,
       "final_pnl_pct": -2.01,
       "close_reason": "stop_loss",
@@ -670,8 +663,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.31,
-      "position_usd": 211.33
+      "realized_pnl_usd": -4.3,
+      "position_usd": 210.9
     },
     {
       "ticker": "WSBC",
@@ -702,7 +695,7 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.24,
-      "position_usd": 212.09
+      "position_usd": 212.1
     },
     {
       "ticker": "CHEF",
@@ -2125,8 +2118,8 @@ window.PORTFOLIO_HDS = {
         },
         "2026-07-17": {
           "open": 17.58,
-          "high": 20.14,
-          "low": 17.24,
+          "high": 20.22,
+          "low": 17.23,
           "close": 19.07,
           "pnl_pct": -2.01
         }
@@ -2138,7 +2131,7 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.55,
-      "position_usd": 226.26
+      "position_usd": 226.27
     },
     {
       "ticker": "STRS",
@@ -2208,13 +2201,13 @@ window.PORTFOLIO_HDS = {
     "total_trades": 56,
     "win_trades": 35,
     "win_rate": 62.5,
-    "total_realized_pnl_usd": 247.45,
+    "total_realized_pnl_usd": 247.46,
     "open_unrealized_pnl_usd": 33.91,
-    "portfolio_value": 2281.36,
+    "portfolio_value": 2281.37,
     "total_commission_usd": 112.0,
     "skipped_gap": 26,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 14,
-    "updated_at": "2026-07-17"
+    "skipped_no_cash": 18,
+    "updated_at": "2026-07-20"
   }
 };
