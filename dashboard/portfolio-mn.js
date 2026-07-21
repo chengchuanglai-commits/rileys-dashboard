@@ -3141,7 +3141,7 @@ window.PORTFOLIO_MN = {
           "open": 42.62,
           "high": 44.06,
           "low": 41.74,
-          "close": 41.86,
+          "close": 41.88,
           "pnl_pct": -1.99
         }
       },
