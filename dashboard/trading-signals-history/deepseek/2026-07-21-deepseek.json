@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-21",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "LCNB",
+      "action": "BUY",
+      "current_price": 19.81,
+      "target_price": 21.79,
+      "stop_loss": 18.82
+    },
+    {
+      "ticker": "ACIW",
+      "action": "SELL",
+      "current_price": 56.87,
+      "target_price": 62.56,
+      "stop_loss": 54.03
+    },
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 95.58,
+      "target_price": 105.14,
+      "stop_loss": 90.8
+    },
+    {
+      "ticker": "UTMD",
+      "action": "BUY",
+      "current_price": 69.3,
+      "target_price": 76.23,
+      "stop_loss": 65.83
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "LCNB",
+      "action": "BUY",
+      "current_price": 19.81,
+      "target_price": 21.79,
+      "stop_loss": 18.82
+    },
+    {
+      "ticker": "ACIW",
+      "action": "SELL",
+      "current_price": 56.87,
+      "target_price": 62.56,
+      "stop_loss": 54.03
+    },
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 95.58,
+      "target_price": 105.14,
+      "stop_loss": 90.8
+    },
+    {
+      "ticker": "UTMD",
+      "action": "BUY",
+      "current_price": 69.3,
+      "target_price": 76.23,
+      "stop_loss": 65.83
+    },
+    {
+      "ticker": "TCBK",
+      "action": "SELL",
+      "current_price": 59.8,
+      "target_price": 65.78,
+      "stop_loss": 56.81
+    },
+    {
+      "ticker": "CDNA",
+      "action": "SELL",
+      "current_price": 38.37,
+      "target_price": 42.21,
+      "stop_loss": 36.45
+    },
+    {
+      "ticker": "FFBC",
+      "action": "SELL",
+      "current_price": 35.48,
+      "target_price": 39.03,
+      "stop_loss": 33.71
+    },
+    {
+      "ticker": "SFBC",
+      "action": "HOLD",
+      "current_price": 45.82,
+      "target_price": 50.4,
+      "stop_loss": 43.53
+    },
+    {
+      "ticker": "FBNC",
+      "action": "HOLD",
+      "current_price": 64.05,
+      "target_price": 70.45,
+      "stop_loss": 60.85
+    },
+    {
+      "ticker": "SNDR",
+      "action": "SELL",
+      "current_price": 37.47,
+      "target_price": 41.22,
+      "stop_loss": 35.6
+    },
+    {
+      "ticker": "SFNC",
+      "action": "HOLD",
+      "current_price": 22.61,
+      "target_price": 24.87,
+      "stop_loss": 21.48
+    },
+    {
+      "ticker": "XNCR",
+      "action": "SELL",
+      "current_price": 18.81,
+      "target_price": 20.69,
+      "stop_loss": 17.87
+    },
+    {
+      "ticker": "HFWA",
+      "action": "BUY",
+      "current_price": 30.56,
+      "target_price": 33.62,
+      "stop_loss": 29.03
+    },
+    {
+      "ticker": "CTAS",
+      "action": "HOLD",
+      "current_price": 201.8,
+      "target_price": 221.98,
+      "stop_loss": 191.71
+    },
+    {
+      "ticker": "PRVA",
+      "action": "SELL",
+      "current_price": 26.26,
+      "target_price": 28.89,
+      "stop_loss": 24.95
+    },
+    {
+      "ticker": "CENT",
+      "action": "BUY",
+      "current_price": 43.37,
+      "target_price": 47.71,
+      "stop_loss": 41.2
+    },
+    {
+      "ticker": "UFCS",
+      "action": "BUY",
+      "current_price": 51.37,
+      "target_price": 56.51,
+      "stop_loss": 48.8
+    },
+    {
+      "ticker": "NBTB",
+      "action": "BUY",
+      "current_price": 52.33,
+      "target_price": 57.56,
+      "stop_loss": 49.71
+    },
+    {
+      "ticker": "APEI",
+      "action": "BUY",
+      "current_price": 49.27,
+      "target_price": 54.2,
+      "stop_loss": 46.81
+    },
+    {
+      "ticker": "UNTY",
+      "action": "HOLD",
+      "current_price": 57.11,
+      "target_price": 62.82,
+      "stop_loss": 54.25
+    }
+  ]
+}
