@@ -162,79 +162,55 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.49
     },
     {
-      "ticker": "TCBK",
+      "ticker": "LCNB",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-21",
+      "entry_price": 19.81,
+      "allocated_usd": 500,
+      "shares": 25.2398,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 22.78,
+      "stop_loss": 19.41,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {},
+      "position_usd": 224.42,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "ACIW",
       "name": "",
       "action": "SELL",
-      "signal_date": "2026-07-17",
-      "entry_price": 61.2,
+      "signal_date": "2026-07-21",
+      "entry_price": 56.87,
       "allocated_usd": 500,
-      "shares": 8.1699,
+      "shares": 8.792,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 52.02,
-      "stop_loss": 62.42,
-      "max_hold_date": "2026-07-21",
-      "daily_prices": {
-        "2026-07-20": {
-          "open": 60.61,
-          "high": 60.61,
-          "low": 59.61,
-          "close": 59.8,
-          "pnl_pct": 2.29
-        }
-      },
-      "position_usd": 224.75,
-      "unrealized_pnl_usd": 5.15
+      "take_profit": 48.34,
+      "stop_loss": 58.01,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {},
+      "position_usd": 224.42,
+      "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "CDNA",
+      "ticker": "CHEF",
       "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-17",
-      "entry_price": 38.67,
+      "action": "SELL",
+      "signal_date": "2026-07-21",
+      "entry_price": 95.58,
       "allocated_usd": 500,
-      "shares": 12.9299,
+      "shares": 5.2312,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 44.47,
-      "stop_loss": 37.9,
-      "max_hold_date": "2026-07-21",
-      "daily_prices": {
-        "2026-07-20": {
-          "open": 39.3,
-          "high": 39.84,
-          "low": 38.03,
-          "close": 38.37,
-          "pnl_pct": -0.78
-        }
-      },
-      "position_usd": 224.75,
-      "unrealized_pnl_usd": -1.75
-    },
-    {
-      "ticker": "PBHC",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-17",
-      "entry_price": 16.15,
-      "allocated_usd": 500,
-      "shares": 30.9598,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 18.57,
-      "stop_loss": 15.83,
-      "max_hold_date": "2026-07-21",
-      "daily_prices": {
-        "2026-07-20": {
-          "open": 16.08,
-          "high": 16.08,
-          "low": 16.05,
-          "close": 16.05,
-          "pnl_pct": -0.62
-        }
-      },
-      "position_usd": 224.75,
-      "unrealized_pnl_usd": -1.39
+      "take_profit": 81.24,
+      "stop_loss": 97.49,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {},
+      "position_usd": 224.42,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2218,20 +2194,134 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.45,
       "position_usd": 226.09
+    },
+    {
+      "ticker": "TCBK",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-17",
+      "entry_price": 61.2,
+      "allocated_usd": 500,
+      "shares": 8.1699,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 52.02,
+      "stop_loss": 62.42,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 60.61,
+          "high": 60.61,
+          "low": 59.61,
+          "close": 59.8,
+          "pnl_pct": 2.29
+        },
+        "2026-07-21": {
+          "open": 59.59,
+          "high": 59.87,
+          "low": 59.38,
+          "close": 59.66,
+          "pnl_pct": 2.52
+        }
+      },
+      "close_date": "2026-07-21",
+      "close_price": 59.66,
+      "final_pnl_pct": 2.52,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 5.66,
+      "position_usd": 224.75
+    },
+    {
+      "ticker": "CDNA",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 38.67,
+      "allocated_usd": 500,
+      "shares": 12.9299,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 44.47,
+      "stop_loss": 37.9,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 39.3,
+          "high": 39.84,
+          "low": 38.03,
+          "close": 38.37,
+          "pnl_pct": -0.78
+        },
+        "2026-07-21": {
+          "open": 37.7,
+          "high": 38.79,
+          "low": 37.25,
+          "close": 38.2,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-07-21",
+      "close_price": 37.9,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.47,
+      "position_usd": 224.75
+    },
+    {
+      "ticker": "PBHC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 16.15,
+      "allocated_usd": 500,
+      "shares": 30.9598,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 18.57,
+      "stop_loss": 15.83,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 16.08,
+          "high": 16.08,
+          "low": 16.05,
+          "close": 16.05,
+          "pnl_pct": -0.62
+        },
+        "2026-07-21": {
+          "open": 15.86,
+          "high": 16.23,
+          "low": 15.82,
+          "close": 15.83,
+          "pnl_pct": -1.98
+        }
+      },
+      "close_date": "2026-07-21",
+      "close_price": 15.83,
+      "final_pnl_pct": -1.98,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.45,
+      "position_usd": 224.75
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 56,
-    "win_trades": 35,
-    "win_rate": 62.5,
-    "total_realized_pnl_usd": 247.46,
-    "open_unrealized_pnl_usd": 35.91,
-    "portfolio_value": 2283.37,
-    "total_commission_usd": 112.0,
-    "skipped_gap": 27,
+    "total_trades": 59,
+    "win_trades": 36,
+    "win_rate": 61.0,
+    "total_realized_pnl_usd": 244.2,
+    "open_unrealized_pnl_usd": 33.91,
+    "portfolio_value": 2278.11,
+    "total_commission_usd": 118.0,
+    "skipped_gap": 30,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 21,
+    "skipped_no_cash": 15,
     "updated_at": "2026-07-21"
   }
 };

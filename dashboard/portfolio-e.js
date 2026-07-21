@@ -1620,6 +1620,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,
-    "updated_at": "2026-07-20"
+    "updated_at": "2026-07-21"
   }
 };

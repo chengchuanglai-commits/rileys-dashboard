@@ -153,29 +153,72 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "CNMD",
-      "name": "康美公司",
+      "ticker": "TCBK",
+      "name": "TriCo Bancshares",
       "action": "BUY",
-      "signal_date": "2026-07-17",
-      "entry_price": 43.2,
+      "signal_date": "2026-07-21",
+      "entry_price": 59.61,
       "allocated_usd": 500,
-      "shares": 11.5741,
+      "shares": 8.3879,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 49.68,
-      "stop_loss": 42.34,
-      "max_hold_date": "2026-07-21",
-      "daily_prices": {
-        "2026-07-20": {
-          "open": 43.42,
-          "high": 43.9,
-          "low": 42.43,
-          "close": 43.45,
-          "pnl_pct": 0.58
-        }
-      },
-      "position_usd": 211.4,
-      "unrealized_pnl_usd": 1.23
+      "take_profit": 68.55,
+      "stop_loss": 58.42,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {},
+      "position_usd": 209.7,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "ACIW",
+      "name": "ACI Worldwide",
+      "action": "BUY",
+      "signal_date": "2026-07-21",
+      "entry_price": 55.9,
+      "allocated_usd": 500,
+      "shares": 8.9445,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 64.28,
+      "stop_loss": 54.78,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {},
+      "position_usd": 209.7,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SNDR",
+      "name": "Schneider National",
+      "action": "BUY",
+      "signal_date": "2026-07-21",
+      "entry_price": 37.59,
+      "allocated_usd": 500,
+      "shares": 13.3014,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 43.23,
+      "stop_loss": 36.84,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {},
+      "position_usd": 209.7,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "FBNC",
+      "name": "First Bancorp",
+      "action": "BUY",
+      "signal_date": "2026-07-21",
+      "entry_price": 63.5,
+      "allocated_usd": 500,
+      "shares": 7.874,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 73.02,
+      "stop_loss": 62.23,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {},
+      "position_usd": 209.7,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -3057,7 +3100,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-20": {
-          "open": 57.7,
+          "open": 57.52,
           "high": 57.94,
           "low": 56.09,
           "close": 57.11,
@@ -3072,20 +3115,58 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.25,
       "position_usd": 211.4
+    },
+    {
+      "ticker": "CNMD",
+      "name": "康美公司",
+      "action": "BUY",
+      "signal_date": "2026-07-17",
+      "entry_price": 43.2,
+      "allocated_usd": 500,
+      "shares": 11.5741,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 49.68,
+      "stop_loss": 42.34,
+      "max_hold_date": "2026-07-21",
+      "daily_prices": {
+        "2026-07-20": {
+          "open": 43.42,
+          "high": 43.92,
+          "low": 42.43,
+          "close": 43.45,
+          "pnl_pct": 0.58
+        },
+        "2026-07-21": {
+          "open": 42.62,
+          "high": 44.06,
+          "low": 42.16,
+          "close": 42.53,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-07-21",
+      "close_price": 42.34,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.21,
+      "position_usd": 211.4
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 85,
+    "total_trades": 86,
     "win_trades": 26,
-    "win_rate": 30.6,
-    "total_realized_pnl_usd": 101.24,
-    "open_unrealized_pnl_usd": 25.86,
-    "portfolio_value": 2127.1,
-    "total_commission_usd": 170.0,
+    "win_rate": 30.2,
+    "total_realized_pnl_usd": 97.03,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2121.67,
+    "total_commission_usd": 172.0,
     "skipped_gap": 45,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 111,
-    "updated_at": "2026-07-20"
+    "skipped_no_cash": 113,
+    "updated_at": "2026-07-21"
   }
 };

@@ -28,7 +28,7 @@ window.PORTFOLIO_CTR = {
       "shares": 40,
       "actual_position_usd": 494.0,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-20",
+      "max_hold_date": "2026-07-21",
       "day1_open": 12.19,
       "daily_prices": {
         "2026-07-16": {
@@ -49,6 +49,13 @@ window.PORTFOLIO_CTR = {
           "open": 11.02,
           "high": 11.29,
           "low": 10.74,
+          "close": 10.92,
+          "pnl_pct": 11.58
+        },
+        "2026-07-21": {
+          "open": 10.77,
+          "high": 11.02,
+          "low": 10.71,
           "close": 10.92,
           "pnl_pct": 11.58
         }
@@ -1768,6 +1775,6 @@ window.PORTFOLIO_CTR = {
     "total_commission_usd": 74.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-20"
+    "updated_at": "2026-07-21"
   }
 };
