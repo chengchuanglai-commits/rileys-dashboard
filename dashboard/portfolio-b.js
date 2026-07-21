@@ -2168,19 +2168,19 @@ window.PORTFOLIO_B = {
         },
         "2026-07-21": {
           "open": 59.59,
-          "high": 59.87,
+          "high": 59.88,
           "low": 59.38,
-          "close": 59.82,
-          "pnl_pct": 0.42
+          "close": 59.77,
+          "pnl_pct": 0.5
         }
       },
       "close_date": "2026-07-21",
-      "close_price": 59.82,
-      "final_pnl_pct": 0.42,
+      "close_price": 59.77,
+      "final_pnl_pct": 0.5,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 0.02
+      "realized_pnl_usd": 0.4
     },
     {
       "ticker": "STRS",
@@ -2228,17 +2228,17 @@ window.PORTFOLIO_B = {
           "open": 20.36,
           "high": 20.89,
           "low": 20.2,
-          "close": 20.49,
-          "pnl_pct": 2.1
+          "close": 20.59,
+          "pnl_pct": 1.62
         }
       },
       "close_date": "2026-07-21",
-      "close_price": 20.49,
-      "final_pnl_pct": 2.1,
+      "close_price": 20.59,
+      "final_pnl_pct": 1.62,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.11
+      "realized_pnl_usd": 5.8
     },
     {
       "ticker": "SMPL",
@@ -2308,9 +2308,9 @@ window.PORTFOLIO_B = {
     "total_trades": 53,
     "win_trades": 27,
     "win_rate": 50.9,
-    "total_realized_pnl_usd": 226.73,
+    "total_realized_pnl_usd": 224.8,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2226.73,
+    "portfolio_value": 2224.8,
     "updated_at": "2026-07-22"
   }
 };
