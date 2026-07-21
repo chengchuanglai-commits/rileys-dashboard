@@ -56,12 +56,12 @@ window.PORTFOLIO_CTR = {
           "open": 10.77,
           "high": 11.12,
           "low": 10.71,
-          "close": 10.85,
-          "pnl_pct": 12.15
+          "close": 11.04,
+          "pnl_pct": 10.61
         }
       },
       "position_usd": 212.37,
-      "unrealized_pnl_usd": 25.8
+      "unrealized_pnl_usd": 22.53
     }
   ],
   "closed_positions": [
@@ -1770,8 +1770,8 @@ window.PORTFOLIO_CTR = {
     "win_trades": 18,
     "win_rate": 48.6,
     "total_realized_pnl_usd": 122.4,
-    "open_unrealized_pnl_usd": 25.8,
-    "portfolio_value": 2148.2,
+    "open_unrealized_pnl_usd": 22.53,
+    "portfolio_value": 2144.93,
     "total_commission_usd": 74.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
