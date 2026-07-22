@@ -9,20 +9,27 @@ window.QQQ_REALMONEY = {
       "price_usd": 721.24,
       "cost_usd": 360.62,
       "note": "第一批DCA(券商截图:均价721.24/成本360.62)"
+    },
+    {
+      "date": "2026-07-14",
+      "shares": 0.5,
+      "price_usd": 721.67,
+      "cost_usd": 360.84,
+      "note": "第二批DCA(收复$722入场信号,飞书23:30,限价721.77成交721.67)"
     }
   ],
   "stats": {
-    "shares": 0.5,
-    "avg_price_usd": 721.24,
-    "cost_usd": 360.62,
+    "shares": 1.0,
+    "avg_price_usd": 721.46,
+    "cost_usd": 721.46,
     "qqq_now_usd": 708.97,
-    "value_usd": 354.49,
-    "pnl_usd": -6.13,
-    "pnl_pct": -1.7,
-    "usdcad": 1.4105,
-    "cost_cad_approx": 508.65,
-    "value_cad_approx": 500.01,
-    "pnl_cad_approx": -8.65,
-    "updated_at": "2026-07-21 21:41"
+    "value_usd": 708.97,
+    "pnl_usd": -12.49,
+    "pnl_pct": -1.73,
+    "usdcad": 1.4106,
+    "cost_cad_approx": 1017.69,
+    "value_cad_approx": 1000.07,
+    "pnl_cad_approx": -17.62,
+    "updated_at": "2026-07-22 11:51"
   }
 };

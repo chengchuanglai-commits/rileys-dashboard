@@ -2,7 +2,8 @@
   "bear": false,
   "breakout": false,
   "reclaim": false,
-  "last_px": 710.48,
-  "last_check": "2026-07-09 03:30:07",
-  "breakdown": false
+  "last_px": 695.33,
+  "last_check": "2026-07-19 00:00:05",
+  "breakdown": true,
+  "lev_state": "1.5x"
 }
