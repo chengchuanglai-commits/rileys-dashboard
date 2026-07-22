@@ -17,51 +17,6 @@ window.PORTFOLIO_CTR = {
       "daily_prices": {},
       "position_usd": 206.23,
       "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "SMPL",
-      "name": "SMPL",
-      "action": "SELL",
-      "signal_date": "2026-07-15",
-      "entry_price": 12.35,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.0,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-21",
-      "day1_open": 12.19,
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 12.19,
-          "high": 12.37,
-          "low": 11.94,
-          "close": 12.07,
-          "pnl_pct": 2.27
-        },
-        "2026-07-17": {
-          "open": 12.04,
-          "high": 12.36,
-          "low": 11.03,
-          "close": 11.08,
-          "pnl_pct": 10.28
-        },
-        "2026-07-20": {
-          "open": 11.02,
-          "high": 11.29,
-          "low": 10.74,
-          "close": 10.92,
-          "pnl_pct": 11.58
-        },
-        "2026-07-21": {
-          "open": 10.77,
-          "high": 11.12,
-          "low": 10.71,
-          "close": 11.04,
-          "pnl_pct": 10.61
-        }
-      },
-      "position_usd": 212.37,
-      "unrealized_pnl_usd": 22.53
     }
   ],
   "closed_positions": [
@@ -1762,19 +1717,77 @@ window.PORTFOLIO_CTR = {
       "commission_total": 2.0,
       "realized_pnl_usd": -0.3,
       "position_usd": 213.22
+    },
+    {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-22",
+      "day1_open": 12.19,
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.07,
+          "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.36,
+          "low": 11.03,
+          "close": 11.08,
+          "pnl_pct": 10.28
+        },
+        "2026-07-20": {
+          "open": 11.02,
+          "high": 11.29,
+          "low": 10.74,
+          "close": 10.92,
+          "pnl_pct": 11.58
+        },
+        "2026-07-21": {
+          "open": 10.71,
+          "high": 11.12,
+          "low": 10.71,
+          "close": 11.04,
+          "pnl_pct": 10.61
+        },
+        "2026-07-22": {
+          "open": 11.2,
+          "high": 11.22,
+          "low": 10.94,
+          "close": 10.95,
+          "pnl_pct": 9.8
+        }
+      },
+      "close_date": "2026-07-22",
+      "close_price": 11.14,
+      "final_pnl_pct": 9.8,
+      "close_reason": "trail_stop",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 20.81,
+      "position_usd": 212.37
     }
   ],
   "_note": "c-trail 变体:移动止损(初始-4%/棘轮4%/最多10天)+ 跳空过滤 1.5%(信号同 c)",
   "stats": {
-    "total_trades": 37,
-    "win_trades": 18,
-    "win_rate": 48.6,
-    "total_realized_pnl_usd": 122.4,
-    "open_unrealized_pnl_usd": 22.53,
-    "portfolio_value": 2144.93,
-    "total_commission_usd": 74.0,
+    "total_trades": 38,
+    "win_trades": 19,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 143.21,
+    "open_unrealized_pnl_usd": 0.0,
+    "portfolio_value": 2143.21,
+    "total_commission_usd": 76.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-21"
+    "updated_at": "2026-07-22"
   }
 };

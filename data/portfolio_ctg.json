@@ -1627,7 +1627,7 @@
           "pnl_pct": 3.11
         },
         "2026-07-21": {
-          "open": 20.36,
+          "open": 20.28,
           "high": 20.89,
           "low": 20.2,
           "close": 20.43,
@@ -1692,6 +1692,6 @@
     "total_commission_usd": 72.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-21"
+    "updated_at": "2026-07-22"
   }
 }
