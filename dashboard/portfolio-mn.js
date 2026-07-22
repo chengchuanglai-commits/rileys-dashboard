@@ -169,26 +169,26 @@ window.PORTFOLIO_MN = {
         "2026-07-22": {
           "open": 59.83,
           "high": 60.04,
-          "low": 59.29,
-          "close": 59.42,
-          "pnl_pct": -1.03
+          "low": 59.24,
+          "close": 59.7,
+          "pnl_pct": -0.57
         }
       },
       "position_usd": 209.7,
-      "unrealized_pnl_usd": -2.16
+      "unrealized_pnl_usd": -1.2
     },
     {
       "ticker": "LCNB",
       "name": "LCNB公司",
       "action": "BUY",
       "signal_date": "2026-07-22",
-      "entry_price": 19.43,
+      "entry_price": 19.56,
       "allocated_usd": 500,
-      "shares": 25.7334,
+      "shares": 25.5624,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 22.34,
-      "stop_loss": 19.04,
+      "take_profit": 22.49,
+      "stop_loss": 19.17,
       "max_hold_date": "2026-07-24",
       "daily_prices": {},
       "position_usd": 208.45,
@@ -199,13 +199,13 @@ window.PORTFOLIO_MN = {
       "name": "The Chefs' Warehouse",
       "action": "BUY",
       "signal_date": "2026-07-22",
-      "entry_price": 95.81,
+      "entry_price": 95.54,
       "allocated_usd": 500,
-      "shares": 5.2187,
+      "shares": 5.2334,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 110.18,
-      "stop_loss": 93.89,
+      "take_profit": 109.87,
+      "stop_loss": 93.63,
       "max_hold_date": "2026-07-24",
       "daily_prices": {},
       "position_usd": 208.45,
@@ -216,13 +216,13 @@ window.PORTFOLIO_MN = {
       "name": "ACI Worldwide",
       "action": "BUY",
       "signal_date": "2026-07-22",
-      "entry_price": 54.92,
+      "entry_price": 54.68,
       "allocated_usd": 500,
-      "shares": 9.1042,
+      "shares": 9.1441,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 63.16,
-      "stop_loss": 53.82,
+      "take_profit": 62.88,
+      "stop_loss": 53.59,
       "max_hold_date": "2026-07-24",
       "daily_prices": {},
       "position_usd": 208.45,
@@ -3179,8 +3179,8 @@ window.PORTFOLIO_MN = {
         "2026-07-22": {
           "open": 56.36,
           "high": 56.45,
-          "low": 54.69,
-          "close": 54.92,
+          "low": 54.4,
+          "close": 54.68,
           "pnl_pct": -1.99
         }
       },
@@ -3210,8 +3210,8 @@ window.PORTFOLIO_MN = {
         "2026-07-22": {
           "open": 64.56,
           "high": 64.59,
-          "low": 62.83,
-          "close": 62.96,
+          "low": 62.63,
+          "close": 62.93,
           "pnl_pct": -2.0
         }
       },
@@ -3242,7 +3242,7 @@ window.PORTFOLIO_MN = {
           "open": 50.75,
           "high": 50.99,
           "low": 49.59,
-          "close": 50.55,
+          "close": 50.71,
           "pnl_pct": -2.0
         }
       },
@@ -3262,8 +3262,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 26,
     "win_rate": 29.2,
     "total_realized_pnl_usd": 84.47,
-    "open_unrealized_pnl_usd": 22.48,
-    "portfolio_value": 2106.95,
+    "open_unrealized_pnl_usd": 23.44,
+    "portfolio_value": 2107.91,
     "total_commission_usd": 178.0,
     "skipped_gap": 45,
     "skipped_zero_shares": 0,

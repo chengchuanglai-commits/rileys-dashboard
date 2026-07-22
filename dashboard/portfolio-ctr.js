@@ -1762,8 +1762,8 @@ window.PORTFOLIO_CTR = {
         "2026-07-22": {
           "open": 11.2,
           "high": 11.22,
-          "low": 10.94,
-          "close": 10.95,
+          "low": 10.88,
+          "close": 11.03,
           "pnl_pct": 9.8
         }
       },
