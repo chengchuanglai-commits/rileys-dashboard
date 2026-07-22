@@ -2256,7 +2256,7 @@ window.PORTFOLIO_HDS = {
         },
         "2026-07-21": {
           "open": 37.7,
-          "high": 39.2,
+          "high": 39.22,
           "low": 37.25,
           "close": 38.54,
           "pnl_pct": -1.99
@@ -2294,9 +2294,9 @@ window.PORTFOLIO_HDS = {
         },
         "2026-07-21": {
           "open": 15.86,
-          "high": 16.23,
+          "high": 16.26,
           "low": 15.82,
-          "close": 15.99,
+          "close": 16.0,
           "pnl_pct": -1.98
         }
       },
@@ -2321,7 +2321,7 @@ window.PORTFOLIO_HDS = {
     "total_commission_usd": 118.0,
     "skipped_gap": 30,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 15,
-    "updated_at": "2026-07-21"
+    "skipped_no_cash": 19,
+    "updated_at": "2026-07-22"
   }
 };

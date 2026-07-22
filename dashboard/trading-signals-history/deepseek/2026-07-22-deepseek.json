@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-22",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "CDNA",
+      "action": "SELL",
+      "current_price": 38.54,
+      "target_price": 42.39,
+      "stop_loss": 36.61
+    },
+    {
+      "ticker": "XNCR",
+      "action": "SELL",
+      "current_price": 20.45,
+      "target_price": 22.5,
+      "stop_loss": 19.43
+    },
+    {
+      "ticker": "LCNB",
+      "action": "BUY",
+      "current_price": 19.36,
+      "target_price": 21.3,
+      "stop_loss": 18.39
+    },
+    {
+      "ticker": "FEIM",
+      "action": "SELL",
+      "current_price": 79.85,
+      "target_price": 87.83,
+      "stop_loss": 75.86
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "CDNA",
+      "action": "SELL",
+      "current_price": 38.54,
+      "target_price": 42.39,
+      "stop_loss": 36.61
+    },
+    {
+      "ticker": "XNCR",
+      "action": "SELL",
+      "current_price": 20.45,
+      "target_price": 22.5,
+      "stop_loss": 19.43
+    },
+    {
+      "ticker": "LCNB",
+      "action": "BUY",
+      "current_price": 19.36,
+      "target_price": 21.3,
+      "stop_loss": 18.39
+    },
+    {
+      "ticker": "CHEF",
+      "action": "HOLD",
+      "current_price": 95.16,
+      "target_price": 104.68,
+      "stop_loss": 90.4
+    },
+    {
+      "ticker": "FEIM",
+      "action": "SELL",
+      "current_price": 79.85,
+      "target_price": 87.83,
+      "stop_loss": 75.86
+    },
+    {
+      "ticker": "TCBK",
+      "action": "SELL",
+      "current_price": 60.04,
+      "target_price": 66.04,
+      "stop_loss": 57.04
+    },
+    {
+      "ticker": "FFBC",
+      "action": "HOLD",
+      "current_price": 35.67,
+      "target_price": 39.24,
+      "stop_loss": 33.89
+    },
+    {
+      "ticker": "SFNC",
+      "action": "HOLD",
+      "current_price": 22.84,
+      "target_price": 25.12,
+      "stop_loss": 21.7
+    },
+    {
+      "ticker": "ACIW",
+      "action": "SELL",
+      "current_price": 56.69,
+      "target_price": 62.36,
+      "stop_loss": 53.86
+    },
+    {
+      "ticker": "HRMY",
+      "action": "HOLD",
+      "current_price": 36.84,
+      "target_price": 40.52,
+      "stop_loss": 35.0
+    },
+    {
+      "ticker": "SNDR",
+      "action": "SELL",
+      "current_price": 38.38,
+      "target_price": 42.22,
+      "stop_loss": 36.46
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 69.15,
+      "target_price": 76.07,
+      "stop_loss": 65.69
+    },
+    {
+      "ticker": "FBNC",
+      "action": "SELL",
+      "current_price": 64.49,
+      "target_price": 70.94,
+      "stop_loss": 61.27
+    },
+    {
+      "ticker": "HBCP",
+      "action": "BUY",
+      "current_price": 68.8,
+      "target_price": 75.68,
+      "stop_loss": 65.36
+    },
+    {
+      "ticker": "WERN",
+      "action": "HOLD",
+      "current_price": 47.29,
+      "target_price": 52.02,
+      "stop_loss": 44.93
+    },
+    {
+      "ticker": "HFWA",
+      "action": "BUY",
+      "current_price": 30.41,
+      "target_price": 33.45,
+      "stop_loss": 28.89
+    },
+    {
+      "ticker": "PRVA",
+      "action": "HOLD",
+      "current_price": 26.31,
+      "target_price": 28.94,
+      "stop_loss": 24.99
+    },
+    {
+      "ticker": "MBWM",
+      "action": "SELL",
+      "current_price": 59.68,
+      "target_price": 65.65,
+      "stop_loss": 56.7
+    },
+    {
+      "ticker": "RRBI",
+      "action": "HOLD",
+      "current_price": 97.98,
+      "target_price": 107.78,
+      "stop_loss": 93.08
+    },
+    {
+      "ticker": "TRVI",
+      "action": "HOLD",
+      "current_price": 18.18,
+      "target_price": 20.0,
+      "stop_loss": 17.27
+    }
+  ]
+}
