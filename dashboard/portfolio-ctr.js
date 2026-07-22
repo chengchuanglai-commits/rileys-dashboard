@@ -1763,7 +1763,7 @@ window.PORTFOLIO_CTR = {
           "open": 11.2,
           "high": 11.22,
           "low": 10.88,
-          "close": 11.03,
+          "close": 10.91,
           "pnl_pct": 9.8
         }
       },
