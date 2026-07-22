@@ -179,12 +179,12 @@ window.PORTFOLIO_HDS = {
           "open": 56.36,
           "high": 56.45,
           "low": 54.25,
-          "close": 54.35,
-          "pnl_pct": 4.43
+          "close": 54.47,
+          "pnl_pct": 4.22
         }
       },
       "position_usd": 224.28,
-      "unrealized_pnl_usd": 9.94
+      "unrealized_pnl_usd": 9.46
     },
     {
       "ticker": "CHEF",
@@ -203,13 +203,13 @@ window.PORTFOLIO_HDS = {
         "2026-07-22": {
           "open": 95.49,
           "high": 96.17,
-          "low": 94.78,
-          "close": 95.32,
-          "pnl_pct": 0.27
+          "low": 92.28,
+          "close": 93.52,
+          "pnl_pct": 2.16
         }
       },
       "position_usd": 224.28,
-      "unrealized_pnl_usd": 0.61
+      "unrealized_pnl_usd": 4.84
     },
     {
       "ticker": "CDNA",
@@ -2343,7 +2343,7 @@ window.PORTFOLIO_HDS = {
           "open": 19.68,
           "high": 20.24,
           "low": 19.35,
-          "close": 19.65,
+          "close": 19.48,
           "pnl_pct": -2.02
         }
       },
@@ -2363,8 +2363,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 36,
     "win_rate": 60.0,
     "total_realized_pnl_usd": 238.27,
-    "open_unrealized_pnl_usd": 44.45,
-    "portfolio_value": 2282.72,
+    "open_unrealized_pnl_usd": 48.22,
+    "portfolio_value": 2286.49,
     "total_commission_usd": 120.0,
     "skipped_gap": 30,
     "skipped_zero_shares": 0,
