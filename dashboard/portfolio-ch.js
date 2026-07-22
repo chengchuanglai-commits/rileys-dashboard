@@ -19,22 +19,6 @@ window.PORTFOLIO_CH = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 169.06,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 338.12,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-06-11",
-      "day1_open": null,
-      "daily_prices": {},
-      "position_usd": 208.8,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "SRRK",
       "name": "SRRK",
       "action": "SELL",
@@ -1341,7 +1325,7 @@ window.PORTFOLIO_CH = {
     "open_unrealized_pnl_usd": 0.46,
     "portfolio_value": 2134.51,
     "total_commission_usd": 74.0,
-    "skipped_gap": 13,
+    "skipped_gap": 14,
     "skipped_zero_shares": 1,
     "updated_at": "2026-07-22"
   }
