@@ -177,13 +177,13 @@
         "2026-07-23": {
           "open": 38.44,
           "high": 38.71,
-          "low": 37.51,
-          "close": 37.58,
-          "pnl_pct": 2.49
+          "low": 37.38,
+          "close": 37.56,
+          "pnl_pct": 2.54
         }
       },
       "position_usd": 226.89,
-      "unrealized_pnl_usd": 5.65
+      "unrealized_pnl_usd": 5.76
     },
     {
       "ticker": "CHEF",
@@ -199,7 +199,7 @@
       "stop_loss": 95.81,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
-      "position_usd": 228.25,
+      "position_usd": 228.17,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -216,7 +216,7 @@
       "stop_loss": 22.65,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
-      "position_usd": 228.25,
+      "position_usd": 228.17,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2365,17 +2365,17 @@
           "open": 54.64,
           "high": 55.28,
           "low": 53.98,
-          "close": 54.25,
-          "pnl_pct": 4.61
+          "close": 54.46,
+          "pnl_pct": 4.24
         }
       },
       "close_date": "2026-07-23",
-      "close_price": 54.25,
-      "final_pnl_pct": 4.61,
+      "close_price": 54.46,
+      "final_pnl_pct": 4.24,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 10.48,
+      "realized_pnl_usd": 9.64,
       "position_usd": 227.35
     },
     {
@@ -2403,17 +2403,17 @@
           "open": 92.48,
           "high": 95.4,
           "low": 91.75,
-          "close": 94.28,
-          "pnl_pct": 1.36
+          "close": 94.25,
+          "pnl_pct": 1.39
         }
       },
       "close_date": "2026-07-23",
-      "close_price": 94.28,
-      "final_pnl_pct": 1.36,
+      "close_price": 94.25,
+      "final_pnl_pct": 1.39,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.09,
+      "realized_pnl_usd": 3.16,
       "position_usd": 227.35
     }
   ],
@@ -2422,9 +2422,9 @@
     "total_trades": 62,
     "win_trades": 38,
     "win_rate": 61.3,
-    "total_realized_pnl_usd": 282.46,
-    "open_unrealized_pnl_usd": 39.82,
-    "portfolio_value": 2322.28,
+    "total_realized_pnl_usd": 281.69,
+    "open_unrealized_pnl_usd": 39.93,
+    "portfolio_value": 2321.62,
     "total_commission_usd": 124.0,
     "skipped_gap": 30,
     "skipped_zero_shares": 0,
