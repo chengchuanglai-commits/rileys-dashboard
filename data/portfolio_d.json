@@ -657,43 +657,6 @@
       "realized_pnl_usd": -13.44
     },
     {
-      "ticker": "SNEX",
-      "name": "SNEX",
-      "action": "BUY",
-      "signal_date": "2026-06-19",
-      "entry_price": 139.01,
-      "allocated_usd": 500,
-      "shares": 3,
-      "actual_position_usd": 417.03,
-      "entry_commission": 1.0,
-      "take_profit": 159.86,
-      "stop_loss": 134.84,
-      "max_hold_date": "2026-06-23",
-      "daily_prices": {
-        "2026-06-22": {
-          "open": 140.64,
-          "high": 141.99,
-          "low": 137.61,
-          "close": 138.79,
-          "pnl_pct": -0.16
-        },
-        "2026-06-23": {
-          "open": 135.42,
-          "high": 141.27,
-          "low": 134.75,
-          "close": 137.94,
-          "pnl_pct": -3.0
-        }
-      },
-      "close_date": "2026-06-23",
-      "close_price": 134.84,
-      "final_pnl_pct": -3.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -14.51
-    },
-    {
       "ticker": "WSBC",
       "name": "WSBC",
       "action": "SELL",
@@ -775,27 +738,20 @@
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-23": {
-          "open": 135.42,
-          "high": 141.27,
-          "low": 134.75,
-          "close": 137.94,
-          "pnl_pct": 0.77
-        },
-        "2026-06-24": {
-          "open": 138.0,
-          "high": 139.89,
-          "low": 133.74,
-          "close": 136.13,
-          "pnl_pct": 2.07
+          "open": 90.28,
+          "high": 94.18,
+          "low": 89.83,
+          "close": 91.96,
+          "pnl_pct": 15.0
         }
       },
-      "close_date": "2026-06-24",
-      "close_price": 136.13,
-      "final_pnl_pct": 2.07,
-      "close_reason": "max_hold",
+      "close_date": "2026-06-23",
+      "close_price": 118.16,
+      "final_pnl_pct": 15.0,
+      "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.63
+      "realized_pnl_usd": 60.55
     },
     {
       "ticker": "WSBC",
@@ -1410,30 +1366,30 @@
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-07-22": {
-          "close": 48.3,
-          "pnl_pct": 12.18
+        "2026-07-23": {
+          "close": 48.54,
+          "pnl_pct": 11.75
         }
       },
       "gap_checked": true,
-      "day1_open": 50.43,
-      "day1_gap_pct": -8.31,
-      "close_date": "2026-07-22",
-      "close_price": 48.3,
-      "final_pnl_pct": 12.18,
+      "day1_open": 47.43,
+      "day1_gap_pct": -13.76,
+      "close_date": "2026-07-23",
+      "close_price": 48.54,
+      "final_pnl_pct": 11.75,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 60.91
+      "realized_pnl_usd": 58.73
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 41,
+    "total_trades": 40,
     "win_trades": 25,
-    "win_rate": 61.0,
-    "total_realized_pnl_usd": 414.28,
+    "win_rate": 62.5,
+    "total_realized_pnl_usd": 480.53,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2414.28,
-    "skipped_gap": 12,
+    "portfolio_value": 2480.53,
+    "skipped_gap": 13,
     "updated_at": "2026-07-23"
   }
 }

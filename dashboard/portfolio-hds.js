@@ -162,56 +162,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.49
     },
     {
-      "ticker": "ACIW",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-21",
-      "entry_price": 56.87,
-      "allocated_usd": 500,
-      "shares": 8.792,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 48.34,
-      "stop_loss": 58.01,
-      "max_hold_date": "2026-07-23",
-      "daily_prices": {
-        "2026-07-22": {
-          "open": 56.36,
-          "high": 57.2,
-          "low": 54.25,
-          "close": 54.71,
-          "pnl_pct": 3.8
-        }
-      },
-      "position_usd": 227.35,
-      "unrealized_pnl_usd": 8.64
-    },
-    {
-      "ticker": "CHEF",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-21",
-      "entry_price": 95.58,
-      "allocated_usd": 500,
-      "shares": 5.2312,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 81.24,
-      "stop_loss": 97.49,
-      "max_hold_date": "2026-07-23",
-      "daily_prices": {
-        "2026-07-22": {
-          "open": 95.49,
-          "high": 96.17,
-          "low": 92.28,
-          "close": 93.93,
-          "pnl_pct": 1.73
-        }
-      },
-      "position_usd": 227.35,
-      "unrealized_pnl_usd": 3.93
-    },
-    {
       "ticker": "CDNA",
       "name": "",
       "action": "SELL",
@@ -224,8 +174,50 @@ window.PORTFOLIO_HDS = {
       "take_profit": 32.76,
       "stop_loss": 39.31,
       "max_hold_date": "2026-07-24",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-23": {
+          "open": 38.44,
+          "high": 38.71,
+          "low": 37.72,
+          "close": 38.47,
+          "pnl_pct": 0.18
+        }
+      },
       "position_usd": 226.89,
+      "unrealized_pnl_usd": 0.41
+    },
+    {
+      "ticker": "CHEF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-23",
+      "entry_price": 93.93,
+      "allocated_usd": 500,
+      "shares": 5.3231,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 79.84,
+      "stop_loss": 95.81,
+      "max_hold_date": "2026-07-27",
+      "daily_prices": {},
+      "position_usd": 228.15,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SFNC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-23",
+      "entry_price": 23.11,
+      "allocated_usd": 500,
+      "shares": 21.6357,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 26.58,
+      "stop_loss": 22.65,
+      "max_hold_date": "2026-07-27",
+      "daily_prices": {},
+      "position_usd": 228.15,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2348,20 +2340,96 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.59,
       "position_usd": 227.35
+    },
+    {
+      "ticker": "ACIW",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-21",
+      "entry_price": 56.87,
+      "allocated_usd": 500,
+      "shares": 8.792,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 48.34,
+      "stop_loss": 58.01,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {
+        "2026-07-22": {
+          "open": 56.36,
+          "high": 57.2,
+          "low": 54.25,
+          "close": 54.71,
+          "pnl_pct": 3.8
+        },
+        "2026-07-23": {
+          "open": 54.64,
+          "high": 55.28,
+          "low": 54.06,
+          "close": 54.32,
+          "pnl_pct": 4.48
+        }
+      },
+      "close_date": "2026-07-23",
+      "close_price": 54.32,
+      "final_pnl_pct": 4.48,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 10.19,
+      "position_usd": 227.35
+    },
+    {
+      "ticker": "CHEF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-21",
+      "entry_price": 95.58,
+      "allocated_usd": 500,
+      "shares": 5.2312,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 81.24,
+      "stop_loss": 97.49,
+      "max_hold_date": "2026-07-23",
+      "daily_prices": {
+        "2026-07-22": {
+          "open": 95.49,
+          "high": 96.17,
+          "low": 92.28,
+          "close": 93.93,
+          "pnl_pct": 1.73
+        },
+        "2026-07-23": {
+          "open": 92.48,
+          "high": 94.64,
+          "low": 91.75,
+          "close": 94.58,
+          "pnl_pct": 1.05
+        }
+      },
+      "close_date": "2026-07-23",
+      "close_price": 94.58,
+      "final_pnl_pct": 1.05,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.39,
+      "position_usd": 227.35
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 60,
-    "win_trades": 36,
-    "win_rate": 60.0,
-    "total_realized_pnl_usd": 268.89,
-    "open_unrealized_pnl_usd": 46.74,
-    "portfolio_value": 2315.63,
-    "total_commission_usd": 120.0,
+    "total_trades": 62,
+    "win_trades": 38,
+    "win_rate": 61.3,
+    "total_realized_pnl_usd": 281.46,
+    "open_unrealized_pnl_usd": 34.58,
+    "portfolio_value": 2316.04,
+    "total_commission_usd": 124.0,
     "skipped_gap": 30,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 22,
+    "skipped_no_cash": 20,
     "updated_at": "2026-07-23"
   }
 };
