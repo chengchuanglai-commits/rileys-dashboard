@@ -22,14 +22,14 @@ window.QQQ_REALMONEY = {
     "shares": 1.0,
     "avg_price_usd": 721.46,
     "cost_usd": 721.46,
-    "qqq_now_usd": 689.4401,
-    "value_usd": 689.44,
-    "pnl_usd": -32.02,
-    "pnl_pct": -4.44,
-    "usdcad": 1.4089,
-    "cost_cad_approx": 1016.46,
-    "value_cad_approx": 971.35,
-    "pnl_cad_approx": -45.11,
-    "updated_at": "2026-07-23 15:13"
+    "qqq_now_usd": 692.62,
+    "value_usd": 692.62,
+    "pnl_usd": -28.84,
+    "pnl_pct": -4.0,
+    "usdcad": 1.4077,
+    "cost_cad_approx": 1015.6,
+    "value_cad_approx": 975.0,
+    "pnl_cad_approx": -40.6,
+    "updated_at": "2026-07-23 17:00"
   }
 };

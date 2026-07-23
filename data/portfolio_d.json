@@ -1367,18 +1367,18 @@
           "pnl_pct": 0.22
         },
         "2026-07-23": {
-          "close": 48.54,
-          "pnl_pct": 11.75
+          "close": 49.08,
+          "pnl_pct": 10.76
         }
       },
       "gap_checked": true,
       "day1_open": 47.43,
       "day1_gap_pct": -13.76,
       "close_date": "2026-07-23",
-      "close_price": 48.54,
-      "final_pnl_pct": 11.75,
+      "close_price": 49.08,
+      "final_pnl_pct": 10.76,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 58.73
+      "realized_pnl_usd": 53.82
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1386,10 +1386,10 @@
     "total_trades": 40,
     "win_trades": 25,
     "win_rate": 62.5,
-    "total_realized_pnl_usd": 480.53,
+    "total_realized_pnl_usd": 475.62,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2480.53,
+    "portfolio_value": 2475.62,
     "skipped_gap": 13,
-    "updated_at": "2026-07-23"
+    "updated_at": "2026-07-24"
   }
 }

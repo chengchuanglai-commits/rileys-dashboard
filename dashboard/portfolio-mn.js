@@ -169,13 +169,13 @@ window.PORTFOLIO_MN = {
         "2026-07-23": {
           "open": 54.64,
           "high": 55.28,
-          "low": 54.06,
-          "close": 54.32,
-          "pnl_pct": -0.71
+          "low": 53.98,
+          "close": 54.13,
+          "pnl_pct": -1.06
         }
       },
       "position_usd": 208.45,
-      "unrealized_pnl_usd": -1.48
+      "unrealized_pnl_usd": -2.21
     },
     {
       "ticker": "SNDR",
@@ -195,25 +195,25 @@ window.PORTFOLIO_MN = {
           "open": 38.99,
           "high": 39.24,
           "low": 37.61,
-          "close": 37.71,
-          "pnl_pct": -1.46
+          "close": 37.75,
+          "pnl_pct": -1.36
         }
       },
       "position_usd": 208.45,
-      "unrealized_pnl_usd": -3.04
+      "unrealized_pnl_usd": -2.83
     },
     {
       "ticker": "LCNB",
       "name": "LCNB公司",
       "action": "BUY",
       "signal_date": "2026-07-23",
-      "entry_price": 19.46,
+      "entry_price": 19.41,
       "allocated_usd": 500,
-      "shares": 25.6937,
+      "shares": 25.7599,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 22.38,
-      "stop_loss": 19.07,
+      "take_profit": 22.32,
+      "stop_loss": 19.02,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
       "position_usd": 207.61,
@@ -224,13 +224,13 @@ window.PORTFOLIO_MN = {
       "name": "卡迪纳健康",
       "action": "BUY",
       "signal_date": "2026-07-23",
-      "entry_price": 38.47,
+      "entry_price": 37.69,
       "allocated_usd": 500,
-      "shares": 12.9971,
+      "shares": 13.2661,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 44.24,
-      "stop_loss": 37.7,
+      "take_profit": 43.34,
+      "stop_loss": 36.94,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
       "position_usd": 207.61,
@@ -3288,7 +3288,7 @@ window.PORTFOLIO_MN = {
           "open": 59.0,
           "high": 59.01,
           "low": 58.34,
-          "close": 58.62,
+          "close": 58.67,
           "pnl_pct": -2.0
         }
       },
@@ -3317,9 +3317,9 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-23": {
           "open": 62.04,
-          "high": 62.71,
+          "high": 62.82,
           "low": 60.52,
-          "close": 62.28,
+          "close": 62.71,
           "pnl_pct": -2.0
         }
       },
@@ -3339,8 +3339,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 26,
     "win_rate": 28.6,
     "total_realized_pnl_usd": 76.11,
-    "open_unrealized_pnl_usd": 20.11,
-    "portfolio_value": 2096.22,
+    "open_unrealized_pnl_usd": 19.59,
+    "portfolio_value": 2095.7,
     "total_commission_usd": 182.0,
     "skipped_gap": 48,
     "skipped_zero_shares": 0,
