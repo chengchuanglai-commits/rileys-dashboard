@@ -21,25 +21,6 @@ window.PORTFOLIO_E = {
       "gap_checked": true
     },
     {
-      "ticker": "ARCB",
-      "name": "ARCB",
-      "action": "SELL",
-      "signal_date": "2026-06-11",
-      "entry_price": 169.06,
-      "allocated_usd": 500,
-      "shares": 2,
-      "actual_position_usd": 338.12,
-      "entry_commission": 1.0,
-      "take_profit": 152.15,
-      "stop_loss": 174.13,
-      "max_hold_days": 3,
-      "max_hold_date": "2026-06-16",
-      "regime": "neutral",
-      "vix": 19.44,
-      "daily_prices": {},
-      "gap_checked": true
-    },
-    {
       "ticker": "AMRX",
       "name": "AMRX",
       "action": "SELL",
@@ -1624,7 +1605,7 @@ window.PORTFOLIO_E = {
     "total_commission_usd": 74.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
-    "skipped_gap": 8,
+    "skipped_gap": 9,
     "updated_at": "2026-07-23"
   }
 };

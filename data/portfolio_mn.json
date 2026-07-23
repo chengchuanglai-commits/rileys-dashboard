@@ -169,25 +169,25 @@
           "open": 54.64,
           "high": 55.28,
           "low": 53.98,
-          "close": 54.45,
-          "pnl_pct": -0.48
+          "close": 54.53,
+          "pnl_pct": -0.33
         }
       },
       "position_usd": 208.45,
-      "unrealized_pnl_usd": -1.0
+      "unrealized_pnl_usd": -0.69
     },
     {
       "ticker": "LCNB",
       "name": "LCNB公司",
       "action": "BUY",
       "signal_date": "2026-07-23",
-      "entry_price": 19.64,
+      "entry_price": 19.55,
       "allocated_usd": 500,
-      "shares": 25.4582,
+      "shares": 25.5754,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 22.59,
-      "stop_loss": 19.25,
+      "take_profit": 22.48,
+      "stop_loss": 19.16,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
       "position_usd": 207.19,
@@ -198,13 +198,13 @@
       "name": "卡迪纳健康",
       "action": "BUY",
       "signal_date": "2026-07-23",
-      "entry_price": 37.56,
+      "entry_price": 37.61,
       "allocated_usd": 500,
-      "shares": 13.312,
+      "shares": 13.2943,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 43.19,
-      "stop_loss": 36.81,
+      "take_profit": 43.25,
+      "stop_loss": 36.86,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
       "position_usd": 207.19,
@@ -215,13 +215,13 @@
       "name": "厨师仓储",
       "action": "BUY",
       "signal_date": "2026-07-23",
-      "entry_price": 94.25,
+      "entry_price": 94.48,
       "allocated_usd": 500,
-      "shares": 5.305,
+      "shares": 5.2921,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 108.39,
-      "stop_loss": 92.36,
+      "take_profit": 108.65,
+      "stop_loss": 92.59,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
       "position_usd": 207.19,
@@ -3277,9 +3277,9 @@
         },
         "2026-07-23": {
           "open": 59.0,
-          "high": 59.25,
+          "high": 59.28,
           "low": 58.34,
-          "close": 59.23,
+          "close": 59.28,
           "pnl_pct": -2.0
         }
       },
@@ -3310,7 +3310,7 @@
           "open": 38.99,
           "high": 39.24,
           "low": 37.38,
-          "close": 37.78,
+          "close": 37.75,
           "pnl_pct": -2.01
         }
       },
@@ -3339,9 +3339,9 @@
       "daily_prices": {
         "2026-07-23": {
           "open": 62.04,
-          "high": 63.25,
+          "high": 63.27,
           "low": 60.52,
-          "close": 63.18,
+          "close": 63.27,
           "pnl_pct": -2.0
         }
       },
@@ -3361,8 +3361,8 @@
     "win_trades": 26,
     "win_rate": 28.3,
     "total_realized_pnl_usd": 71.92,
-    "open_unrealized_pnl_usd": 23.64,
-    "portfolio_value": 2095.56,
+    "open_unrealized_pnl_usd": 23.95,
+    "portfolio_value": 2095.87,
     "total_commission_usd": 184.0,
     "skipped_gap": 48,
     "skipped_zero_shares": 0,

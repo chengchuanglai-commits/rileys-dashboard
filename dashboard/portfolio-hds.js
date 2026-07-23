@@ -179,12 +179,12 @@ window.PORTFOLIO_HDS = {
           "open": 38.44,
           "high": 38.71,
           "low": 37.38,
-          "close": 37.56,
-          "pnl_pct": 2.54
+          "close": 37.61,
+          "pnl_pct": 2.41
         }
       },
       "position_usd": 226.89,
-      "unrealized_pnl_usd": 5.76
+      "unrealized_pnl_usd": 5.47
     },
     {
       "ticker": "CHEF",
@@ -200,7 +200,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 95.81,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
-      "position_usd": 228.17,
+      "position_usd": 228.08,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -217,7 +217,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 22.65,
       "max_hold_date": "2026-07-27",
       "daily_prices": {},
-      "position_usd": 228.17,
+      "position_usd": 228.08,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2366,17 +2366,17 @@ window.PORTFOLIO_HDS = {
           "open": 54.64,
           "high": 55.28,
           "low": 53.98,
-          "close": 54.46,
-          "pnl_pct": 4.24
+          "close": 54.53,
+          "pnl_pct": 4.11
         }
       },
       "close_date": "2026-07-23",
-      "close_price": 54.46,
-      "final_pnl_pct": 4.24,
+      "close_price": 54.53,
+      "final_pnl_pct": 4.11,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 9.64,
+      "realized_pnl_usd": 9.34,
       "position_usd": 227.35
     },
     {
@@ -2404,17 +2404,17 @@ window.PORTFOLIO_HDS = {
           "open": 92.48,
           "high": 95.4,
           "low": 91.75,
-          "close": 94.25,
-          "pnl_pct": 1.39
+          "close": 94.48,
+          "pnl_pct": 1.15
         }
       },
       "close_date": "2026-07-23",
-      "close_price": 94.25,
-      "final_pnl_pct": 1.39,
+      "close_price": 94.48,
+      "final_pnl_pct": 1.15,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.16,
+      "realized_pnl_usd": 2.61,
       "position_usd": 227.35
     }
   ],
@@ -2423,9 +2423,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 62,
     "win_trades": 38,
     "win_rate": 61.3,
-    "total_realized_pnl_usd": 281.69,
-    "open_unrealized_pnl_usd": 39.93,
-    "portfolio_value": 2321.62,
+    "total_realized_pnl_usd": 280.85,
+    "open_unrealized_pnl_usd": 39.64,
+    "portfolio_value": 2320.49,
     "total_commission_usd": 124.0,
     "skipped_gap": 30,
     "skipped_zero_shares": 0,
