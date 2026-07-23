@@ -1,41 +1,41 @@
 {
-  "generated": "2026-07-22 14:36",
-  "spy_fwd_ret_pct": -0.05,
+  "generated": "2026-07-23 14:43",
+  "spy_fwd_ret_pct": -0.17,
   "max_conviction": 0.0,
   "active_pct": 0.5,
   "index_pct": 0.5,
   "legs": {
     "momma": {
       "name": "MOM-MA·动量+20MA",
-      "n": 32,
-      "alpha_pct": -7.31,
+      "n": 33,
+      "alpha_pct": -7.77,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -7.36,
+      "fwd_ret_pct": -7.93,
       "tradeable": true
     },
     "momh": {
       "name": "MOM-H·动量+H",
       "n": 50,
-      "alpha_pct": -2.77,
+      "alpha_pct": -2.95,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -2.82,
+      "fwd_ret_pct": -3.12,
       "tradeable": false
     },
     "bq": {
       "name": "B-quant·多因子",
-      "n": 30,
-      "alpha_pct": -12.24,
+      "n": 31,
+      "alpha_pct": -8.93,
       "robust": false,
       "conviction": 0.0,
-      "fwd_ret_pct": -12.29,
+      "fwd_ret_pct": -9.09,
       "tradeable": true
     },
     "bai": {
       "name": "B-AI·多因子+DS",
       "n": 15,
-      "alpha_pct": 1.72,
+      "alpha_pct": 1.84,
       "robust": false,
       "conviction": 0.0,
       "fwd_ret_pct": 1.67,
@@ -44,34 +44,34 @@
     "h": {
       "name": "H·小盘Haiku",
       "n": 34,
-      "alpha_pct": 3.37,
+      "alpha_pct": 3.49,
       "robust": true,
-      "conviction": 0.2867,
+      "conviction": 0.2965,
       "fwd_ret_pct": 3.32,
       "tradeable": false
     },
     "hds": {
       "name": "H-DS·小盘DS",
-      "n": 59,
-      "alpha_pct": 12.19,
+      "n": 60,
+      "alpha_pct": 13.61,
       "robust": true,
       "conviction": 1.0,
-      "fwd_ret_pct": 12.14,
+      "fwd_ret_pct": 13.44,
       "tradeable": false
     },
     "mn": {
       "name": "H-广池·晨报",
-      "n": 86,
-      "alpha_pct": 4.9,
+      "n": 89,
+      "alpha_pct": 4.39,
       "robust": true,
-      "conviction": 0.4903,
-      "fwd_ret_pct": 4.85,
+      "conviction": 0.439,
+      "fwd_ret_pct": 4.22,
       "tradeable": false
     },
     "c": {
       "name": "C·B+跳空",
       "n": 39,
-      "alpha_pct": 14.78,
+      "alpha_pct": 14.89,
       "robust": true,
       "conviction": 0.975,
       "fwd_ret_pct": 14.72,
@@ -79,14 +79,14 @@
     }
   },
   "weights": {
-    "momma": 0.0351,
+    "momma": 0.0356,
     "momh": 0.0,
     "bq": 0.0,
     "bai": 0.0,
-    "h": 0.1005,
-    "hds": 0.3506,
-    "mn": 0.1719,
-    "c": 0.3419
+    "h": 0.1055,
+    "hds": 0.3558,
+    "mn": 0.1562,
+    "c": 0.3469
   },
   "final_allocation": {
     "momma": 0.5,
