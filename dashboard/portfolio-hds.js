@@ -179,12 +179,12 @@ window.PORTFOLIO_HDS = {
           "open": 23.01,
           "high": 23.38,
           "low": 22.98,
-          "close": 23.35,
-          "pnl_pct": 1.04
+          "close": 23.18,
+          "pnl_pct": 0.3
         }
       },
       "position_usd": 228.08,
-      "unrealized_pnl_usd": 2.37
+      "unrealized_pnl_usd": 0.68
     },
     {
       "ticker": "HBCP",
@@ -200,7 +200,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 71.26,
       "max_hold_date": "2026-07-28",
       "daily_prices": {},
-      "position_usd": 228.28,
+      "position_usd": 228.44,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -217,7 +217,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 58.19,
       "max_hold_date": "2026-07-28",
       "daily_prices": {},
-      "position_usd": 228.28,
+      "position_usd": 228.44,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2442,17 +2442,17 @@ window.PORTFOLIO_HDS = {
           "open": 38.48,
           "high": 38.48,
           "low": 37.05,
-          "close": 37.43,
-          "pnl_pct": 2.88
+          "close": 37.16,
+          "pnl_pct": 3.58
         }
       },
       "close_date": "2026-07-24",
-      "close_price": 37.43,
-      "final_pnl_pct": 2.88,
+      "close_price": 37.16,
+      "final_pnl_pct": 3.58,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.53,
+      "realized_pnl_usd": 8.12,
       "position_usd": 226.89
     },
     {
@@ -2473,7 +2473,7 @@ window.PORTFOLIO_HDS = {
           "open": 19.61,
           "high": 20.28,
           "low": 19.18,
-          "close": 20.17,
+          "close": 19.99,
           "pnl_pct": -1.99
         }
       },
@@ -2492,9 +2492,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 64,
     "win_trades": 39,
     "win_rate": 60.9,
-    "total_realized_pnl_usd": 282.84,
-    "open_unrealized_pnl_usd": 36.54,
-    "portfolio_value": 2319.38,
+    "total_realized_pnl_usd": 284.43,
+    "open_unrealized_pnl_usd": 34.86,
+    "portfolio_value": 2319.29,
     "total_commission_usd": 128.0,
     "skipped_gap": 31,
     "skipped_zero_shares": 0,
