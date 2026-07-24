@@ -1751,6 +1751,6 @@ window.PORTFOLIO_CTR = {
     "total_commission_usd": 74.0,
     "skipped_gap": 15,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-07-23"
+    "updated_at": "2026-07-24"
   }
 };

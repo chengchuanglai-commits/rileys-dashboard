@@ -1,7 +1,23 @@
 // Plan D 模拟盘持仓 — 每日自动更新
 window.PORTFOLIO_D = {
   "capital_usd": 2000,
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 10.51,
+      "stop_loss": 12.73,
+      "max_hold_date": "2026-06-11",
+      "daily_prices": {}
+    }
+  ],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -1319,34 +1335,6 @@ window.PORTFOLIO_D = {
       "realized_pnl_usd": 48.78
     },
     {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 10.51,
-      "stop_loss": 12.73,
-      "max_hold_date": "2026-06-11",
-      "daily_prices": {
-        "2026-07-17": {
-          "close": 8.79,
-          "pnl_pct": 28.88
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 8.26,
-      "day1_gap_pct": -33.17,
-      "close_date": "2026-07-17",
-      "close_price": 8.79,
-      "final_pnl_pct": 28.88,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 144.42
-    },
-    {
       "ticker": "SRRK",
       "name": "SRRK",
       "action": "SELL",
@@ -1367,29 +1355,29 @@ window.PORTFOLIO_D = {
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-07-23": {
-          "close": 49.48,
-          "pnl_pct": 10.04
+        "2026-07-24": {
+          "close": 48.95,
+          "pnl_pct": 11.0
         }
       },
       "gap_checked": true,
-      "day1_open": 47.43,
-      "day1_gap_pct": -13.76,
-      "close_date": "2026-07-23",
-      "close_price": 49.48,
-      "final_pnl_pct": 10.04,
+      "day1_open": 49.71,
+      "day1_gap_pct": -9.62,
+      "close_date": "2026-07-24",
+      "close_price": 48.95,
+      "final_pnl_pct": 11.0,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 50.18
+      "realized_pnl_usd": 55.0
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 40,
-    "win_trades": 25,
-    "win_rate": 62.5,
-    "total_realized_pnl_usd": 471.98,
+    "total_trades": 39,
+    "win_trades": 24,
+    "win_rate": 61.5,
+    "total_realized_pnl_usd": 332.38,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2471.98,
+    "portfolio_value": 2332.38,
     "skipped_gap": 13,
     "updated_at": "2026-07-24"
   }

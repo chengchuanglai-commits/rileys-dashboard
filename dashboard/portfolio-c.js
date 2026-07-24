@@ -1,7 +1,26 @@
 // Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticker": "TCNNF",
+      "name": "TCNNF",
+      "action": "SELL",
+      "signal_date": "2026-06-09",
+      "entry_price": 12.36,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.4,
+      "entry_commission": 1.0,
+      "take_profit": 11.37,
+      "stop_loss": 12.85,
+      "max_hold_date": "2026-06-16",
+      "day1_open": null,
+      "daily_prices": {},
+      "position_usd": 206.85,
+      "unrealized_pnl_usd": 0.0
+    }
+  ],
   "closed_positions": [
     {
       "ticker": "UCTT",
@@ -1732,46 +1751,16 @@ window.PORTFOLIO_C = {
       "commission_total": 2.0,
       "realized_pnl_usd": 17.15,
       "position_usd": 213.82
-    },
-    {
-      "ticker": "TCNNF",
-      "name": "TCNNF",
-      "action": "SELL",
-      "signal_date": "2026-06-09",
-      "entry_price": 12.36,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.4,
-      "entry_commission": 1.0,
-      "take_profit": 11.37,
-      "stop_loss": 12.85,
-      "max_hold_date": "2026-06-16",
-      "day1_open": 8.26,
-      "daily_prices": {
-        "2026-07-17": {
-          "close": 8.79,
-          "pnl_pct": 28.88
-        }
-      },
-      "position_usd": 206.85,
-      "unrealized_pnl_usd": 0.0,
-      "gap_checked": true,
-      "day1_gap_pct": -33.17,
-      "close_date": "2026-07-17",
-      "close_price": 8.79,
-      "final_pnl_pct": 28.88,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 144.42
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 38,
-    "win_trades": 25,
-    "win_rate": 65.8,
-    "total_realized_pnl_usd": 303.1,
+    "total_trades": 37,
+    "win_trades": 24,
+    "win_rate": 64.9,
+    "total_realized_pnl_usd": 158.68,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2303.1,
+    "portfolio_value": 2158.68,
     "skipped_gap": 15,
     "updated_at": "2026-07-24"
   }

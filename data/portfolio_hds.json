@@ -178,12 +178,12 @@
           "open": 23.01,
           "high": 23.26,
           "low": 22.98,
-          "close": 23.11,
-          "pnl_pct": 0.0
+          "close": 23.0,
+          "pnl_pct": -0.48
         }
       },
       "position_usd": 228.08,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -1.09
     },
     {
       "ticker": "HBCP",
@@ -199,7 +199,7 @@
       "stop_loss": 71.26,
       "max_hold_date": "2026-07-28",
       "daily_prices": {},
-      "position_usd": 228.09,
+      "position_usd": 228.21,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -216,7 +216,7 @@
       "stop_loss": 58.19,
       "max_hold_date": "2026-07-28",
       "daily_prices": {},
-      "position_usd": 228.09,
+      "position_usd": 228.21,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2441,17 +2441,17 @@
           "open": 38.48,
           "high": 38.48,
           "low": 37.26,
-          "close": 37.76,
-          "pnl_pct": 2.02
+          "close": 37.55,
+          "pnl_pct": 2.57
         }
       },
       "close_date": "2026-07-24",
-      "close_price": 37.76,
-      "final_pnl_pct": 2.02,
+      "close_price": 37.55,
+      "final_pnl_pct": 2.57,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.58,
+      "realized_pnl_usd": 5.83,
       "position_usd": 226.89
     },
     {
@@ -2472,7 +2472,7 @@
           "open": 19.61,
           "high": 20.0,
           "low": 19.18,
-          "close": 20.0,
+          "close": 19.69,
           "pnl_pct": -1.99
         }
       },
@@ -2491,9 +2491,9 @@
     "total_trades": 64,
     "win_trades": 39,
     "win_rate": 60.9,
-    "total_realized_pnl_usd": 280.89,
-    "open_unrealized_pnl_usd": 34.17,
-    "portfolio_value": 2315.06,
+    "total_realized_pnl_usd": 282.14,
+    "open_unrealized_pnl_usd": 33.08,
+    "portfolio_value": 2315.22,
     "total_commission_usd": 128.0,
     "skipped_gap": 31,
     "skipped_zero_shares": 0,
