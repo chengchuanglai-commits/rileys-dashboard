@@ -2,8 +2,8 @@
   "date": "2026-07-24",
   "live": false,
   "connected": true,
-  "nav": 999379.67,
-  "cash": 970955.75,
+  "nav": 999330.39,
+  "cash": 970954.04,
   "positions": [
     {
       "sym": "TIGO",
@@ -218,5 +218,5 @@
   "note": "",
   "account": "DUQ627583",
   "total_unrealized_pnl": -173.5,
-  "updated_at": "2026-07-24 22:40"
+  "updated_at": "2026-07-24 22:45"
 }
