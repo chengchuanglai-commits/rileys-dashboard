@@ -2,8 +2,8 @@
   "date": "2026-07-24",
   "live": false,
   "connected": true,
-  "nav": 999410.43,
-  "cash": 970936.47,
+  "nav": 999455.01,
+  "cash": 970942.25,
   "positions": [
     {
       "sym": "TIGO",
@@ -139,11 +139,11 @@
       "sym": "SFNC",
       "shares": 21.0,
       "avg_fill": 23.08,
-      "cur_price": 23.014999389648438,
-      "change_pct": -0.28,
-      "pnl_usd": -1.37,
-      "today_price": 23.014999389648438,
-      "slippage_pct": 0.28,
+      "cur_price": 23.114999771118164,
+      "change_pct": 0.15,
+      "pnl_usd": 0.73,
+      "today_price": 23.114999771118164,
+      "slippage_pct": -0.15,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 17,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -160.67,
-  "updated_at": "2026-07-24 22:10"
+  "total_unrealized_pnl": -158.57,
+  "updated_at": "2026-07-24 22:15"
 }
