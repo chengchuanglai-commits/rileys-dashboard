@@ -167,14 +167,14 @@
       "daily_prices": {
         "2026-07-24": {
           "open": 19.61,
-          "high": 20.0,
+          "high": 20.28,
           "low": 19.18,
-          "close": 19.69,
-          "pnl_pct": 0.72
+          "close": 20.26,
+          "pnl_pct": 3.63
         }
       },
       "position_usd": 207.19,
-      "unrealized_pnl_usd": 1.49
+      "unrealized_pnl_usd": 7.52
     },
     {
       "ticker": "CDNA",
@@ -193,29 +193,29 @@
         "2026-07-24": {
           "open": 38.48,
           "high": 38.48,
-          "low": 37.26,
-          "close": 37.55,
-          "pnl_pct": -0.16
+          "low": 37.2,
+          "close": 37.38,
+          "pnl_pct": -0.61
         }
       },
       "position_usd": 207.19,
-      "unrealized_pnl_usd": -0.33
+      "unrealized_pnl_usd": -1.26
     },
     {
       "ticker": "LCNB",
       "name": "LCNB公司",
       "action": "BUY",
       "signal_date": "2026-07-24",
-      "entry_price": 19.69,
+      "entry_price": 20.26,
       "allocated_usd": 500,
-      "shares": 25.3936,
+      "shares": 24.6792,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 22.64,
-      "stop_loss": 19.3,
+      "take_profit": 23.3,
+      "stop_loss": 19.85,
       "max_hold_date": "2026-07-28",
       "daily_prices": {},
-      "position_usd": 207.4,
+      "position_usd": 207.34,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -223,16 +223,16 @@
       "name": "CHEF公司",
       "action": "BUY",
       "signal_date": "2026-07-24",
-      "entry_price": 94.43,
+      "entry_price": 94.07,
       "allocated_usd": 500,
-      "shares": 5.2949,
+      "shares": 5.3152,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 108.59,
-      "stop_loss": 92.54,
+      "take_profit": 108.18,
+      "stop_loss": 92.19,
       "max_hold_date": "2026-07-28",
       "daily_prices": {},
-      "position_usd": 207.4,
+      "position_usd": 207.34,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -3385,19 +3385,19 @@
         },
         "2026-07-24": {
           "open": 55.16,
-          "high": 56.49,
+          "high": 56.76,
           "low": 55.11,
-          "close": 56.34,
-          "pnl_pct": 2.98
+          "close": 56.19,
+          "pnl_pct": 2.71
         }
       },
       "close_date": "2026-07-24",
-      "close_price": 56.34,
-      "final_pnl_pct": 2.98,
+      "close_price": 56.19,
+      "final_pnl_pct": 2.71,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.21,
+      "realized_pnl_usd": 5.65,
       "position_usd": 208.45
     },
     {
@@ -3416,9 +3416,9 @@
       "daily_prices": {
         "2026-07-24": {
           "open": 37.63,
-          "high": 38.13,
+          "high": 38.29,
           "low": 36.9,
-          "close": 37.24,
+          "close": 38.18,
           "pnl_pct": -2.01
         }
       },
@@ -3437,9 +3437,9 @@
     "total_trades": 94,
     "win_trades": 27,
     "win_rate": 28.7,
-    "total_realized_pnl_usd": 73.97,
-    "open_unrealized_pnl_usd": 25.8,
-    "portfolio_value": 2099.77,
+    "total_realized_pnl_usd": 73.4,
+    "open_unrealized_pnl_usd": 30.89,
+    "portfolio_value": 2104.29,
     "total_commission_usd": 188.0,
     "skipped_gap": 48,
     "skipped_zero_shares": 0,
