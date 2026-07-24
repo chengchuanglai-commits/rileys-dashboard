@@ -2,18 +2,18 @@
   "date": "2026-07-24",
   "live": false,
   "connected": true,
-  "nav": 999407.27,
-  "cash": 970940.97,
+  "nav": 999433.46,
+  "cash": 970944.18,
   "positions": [
     {
       "sym": "TIGO",
       "shares": 35.0,
       "avg_fill": 99.36,
-      "cur_price": 96.45999908447266,
-      "change_pct": -2.92,
-      "pnl_usd": -101.5,
-      "today_price": 96.45999908447266,
-      "slippage_pct": 3.01,
+      "cur_price": 96.41500091552734,
+      "change_pct": -2.96,
+      "pnl_usd": -103.07,
+      "today_price": 96.41500091552734,
+      "slippage_pct": 3.05,
       "sim_price": 95.74,
       "delay_gap_pct": 3.78,
       "target_usd": 333.0
@@ -100,11 +100,11 @@
       "sym": "ONC",
       "shares": 1.0,
       "avg_fill": 280.32,
-      "cur_price": 325.7149963378906,
-      "change_pct": 16.19,
-      "pnl_usd": 45.39,
-      "today_price": 325.7149963378906,
-      "slippage_pct": -13.94,
+      "cur_price": 326.57501220703125,
+      "change_pct": 16.5,
+      "pnl_usd": 46.26,
+      "today_price": 326.57501220703125,
+      "slippage_pct": -14.16,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 17,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -157.87,
-  "updated_at": "2026-07-24 22:20"
+  "total_unrealized_pnl": -158.57,
+  "updated_at": "2026-07-24 22:25"
 }
