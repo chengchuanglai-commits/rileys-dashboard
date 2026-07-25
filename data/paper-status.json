@@ -191,11 +191,11 @@
       "sym": "PDD",
       "shares": 5.0,
       "avg_fill": 74.06,
-      "cur_price": 83.30000305175781,
-      "change_pct": 12.48,
-      "pnl_usd": 46.2,
-      "today_price": 83.30000305175781,
-      "slippage_pct": -11.09,
+      "cur_price": 82.66000366210938,
+      "change_pct": 11.61,
+      "pnl_usd": 43.0,
+      "today_price": 82.66000366210938,
+      "slippage_pct": -10.4,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 24,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -253.6,
-  "updated_at": "2026-07-25 22:50"
+  "total_unrealized_pnl": -256.8,
+  "updated_at": "2026-07-25 22:55"
 }
