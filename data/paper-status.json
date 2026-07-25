@@ -22,11 +22,11 @@
       "sym": "RPRX",
       "shares": 56.0,
       "avg_fill": 59.35,
-      "cur_price": 59.02000045776367,
-      "change_pct": -0.56,
-      "pnl_usd": -18.48,
-      "today_price": 59.02000045776367,
-      "slippage_pct": 0.56,
+      "cur_price": 58.83000183105469,
+      "change_pct": -0.88,
+      "pnl_usd": -29.12,
+      "today_price": 58.83000183105469,
+      "slippage_pct": 0.88,
       "sim_price": 57.29,
       "delay_gap_pct": 3.6,
       "target_usd": 500.0
@@ -61,11 +61,11 @@
       "sym": "AU",
       "shares": 5.0,
       "avg_fill": 80.49,
-      "cur_price": 78.41999816894531,
-      "change_pct": -2.57,
-      "pnl_usd": -10.35,
-      "today_price": 78.41999816894531,
-      "slippage_pct": 2.64,
+      "cur_price": 79.66999816894531,
+      "change_pct": -1.02,
+      "pnl_usd": -4.1,
+      "today_price": 79.66999816894531,
+      "slippage_pct": 1.03,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 24,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -259.48,
-  "updated_at": "2026-07-26 03:05"
+  "total_unrealized_pnl": -263.87,
+  "updated_at": "2026-07-26 03:10"
 }
