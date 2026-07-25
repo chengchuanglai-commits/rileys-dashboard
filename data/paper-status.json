@@ -2,8 +2,8 @@
   "date": "2026-07-25",
   "live": false,
   "connected": true,
-  "nav": 999254.67,
-  "cash": 970924.47,
+  "nav": 999299.55,
+  "cash": 970937.81,
   "positions": [
     {
       "sym": "TIGO",
@@ -14,9 +14,9 @@
       "pnl_usd": -168.7,
       "today_price": 94.54000091552734,
       "slippage_pct": 5.1,
-      "sim_price": 95.74,
-      "delay_gap_pct": 3.78,
-      "target_usd": 333.0
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
     },
     {
       "sym": "RPRX",
@@ -29,7 +29,7 @@
       "slippage_pct": 0.88,
       "sim_price": 57.29,
       "delay_gap_pct": 3.6,
-      "target_usd": 333.0
+      "target_usd": 500.0
     },
     {
       "sym": "JAZZ",
@@ -42,7 +42,7 @@
       "slippage_pct": -0.5,
       "sim_price": 243.47,
       "delay_gap_pct": 3.75,
-      "target_usd": 333.0
+      "target_usd": 500.0
     },
     {
       "sym": "NBIX",
@@ -61,11 +61,11 @@
       "sym": "AU",
       "shares": 5.0,
       "avg_fill": 80.49,
-      "cur_price": 79.6500015258789,
-      "change_pct": -1.04,
-      "pnl_usd": -4.2,
-      "today_price": 79.6500015258789,
-      "slippage_pct": 1.05,
+      "cur_price": 79.66999816894531,
+      "change_pct": -1.02,
+      "pnl_usd": -4.1,
+      "today_price": 79.66999816894531,
+      "slippage_pct": 1.03,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -87,11 +87,11 @@
       "sym": "AEM",
       "shares": 3.0,
       "avg_fill": 140.8,
-      "cur_price": 145.1699981689453,
-      "change_pct": 3.1,
-      "pnl_usd": 13.11,
-      "today_price": 145.1699981689453,
-      "slippage_pct": -3.01,
+      "cur_price": 145.1300048828125,
+      "change_pct": 3.08,
+      "pnl_usd": 12.99,
+      "today_price": 145.1300048828125,
+      "slippage_pct": -2.98,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -178,11 +178,11 @@
       "sym": "NU",
       "shares": 31.0,
       "avg_fill": 12.72,
-      "cur_price": 14.085000038146973,
-      "change_pct": 10.73,
-      "pnl_usd": 42.32,
-      "today_price": 14.085000038146973,
-      "slippage_pct": -9.69,
+      "cur_price": 14.09000015258789,
+      "change_pct": 10.77,
+      "pnl_usd": 42.47,
+      "today_price": 14.09000015258789,
+      "slippage_pct": -9.72,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 17,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -264.0,
-  "updated_at": "2026-07-25 04:05"
+  "total_unrealized_pnl": -263.87,
+  "updated_at": "2026-07-25 21:30"
 }
