@@ -165,11 +165,11 @@
       "sym": "FUTU",
       "shares": 4.0,
       "avg_fill": 94.45,
-      "cur_price": 98.95999908447266,
-      "change_pct": 4.78,
-      "pnl_usd": 18.04,
-      "today_price": 98.95999908447266,
-      "slippage_pct": -4.56,
+      "cur_price": 99.36000061035156,
+      "change_pct": 5.2,
+      "pnl_usd": 19.64,
+      "today_price": 99.36000061035156,
+      "slippage_pct": -4.94,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 24,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -265.47,
-  "updated_at": "2026-07-25 23:05"
+  "total_unrealized_pnl": -263.87,
+  "updated_at": "2026-07-25 23:10"
 }
