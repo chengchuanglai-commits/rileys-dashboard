@@ -126,11 +126,11 @@
       "sym": "CDNA",
       "shares": 13.0,
       "avg_fill": 38.52,
-      "cur_price": 37.13999938964844,
-      "change_pct": -3.58,
-      "pnl_usd": -17.94,
-      "today_price": 37.13999938964844,
-      "slippage_pct": 3.72,
+      "cur_price": 37.61000061035156,
+      "change_pct": -2.36,
+      "pnl_usd": -11.83,
+      "today_price": 37.61000061035156,
+      "slippage_pct": 2.42,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 24,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -263.87,
-  "updated_at": "2026-07-26 04:05"
+  "total_unrealized_pnl": -257.76,
+  "updated_at": "2026-07-26 21:30"
 }
