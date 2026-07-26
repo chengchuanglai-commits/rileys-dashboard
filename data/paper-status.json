@@ -9,11 +9,11 @@
       "sym": "TIGO",
       "shares": 35.0,
       "avg_fill": 99.36,
-      "cur_price": 94.54000091552734,
-      "change_pct": -4.85,
-      "pnl_usd": -168.7,
-      "today_price": 94.54000091552734,
-      "slippage_pct": 5.1,
+      "cur_price": 96.25,
+      "change_pct": -3.13,
+      "pnl_usd": -108.85,
+      "today_price": 96.25,
+      "slippage_pct": 3.23,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -35,11 +35,11 @@
       "sym": "JAZZ",
       "shares": 13.0,
       "avg_fill": 252.6,
-      "cur_price": 253.8699951171875,
-      "change_pct": 0.5,
-      "pnl_usd": 16.51,
-      "today_price": 253.8699951171875,
-      "slippage_pct": -0.5,
+      "cur_price": 254.8699951171875,
+      "change_pct": 0.9,
+      "pnl_usd": 29.51,
+      "today_price": 254.8699951171875,
+      "slippage_pct": -0.89,
       "sim_price": 243.47,
       "delay_gap_pct": 3.75,
       "target_usd": 500.0
@@ -217,6 +217,6 @@
   "open_orders": 26,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -263.87,
-  "updated_at": "2026-07-26 21:50"
+  "total_unrealized_pnl": -191.02,
+  "updated_at": "2026-07-26 21:55"
 }
