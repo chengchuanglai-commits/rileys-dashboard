@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-26",
+  "date": "2026-07-27",
   "live": false,
   "connected": true,
   "nav": 999299.55,
@@ -14,6 +14,19 @@
       "pnl_usd": -168.7,
       "today_price": 94.54000091552734,
       "slippage_pct": 5.1,
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
+    },
+    {
+      "sym": "SFNC",
+      "shares": 21.0,
+      "avg_fill": 23.08,
+      "cur_price": 23.18000030517578,
+      "change_pct": 0.43,
+      "pnl_usd": 2.1,
+      "today_price": 23.18000030517578,
+      "slippage_pct": -0.43,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -58,97 +71,6 @@
       "target_usd": 0
     },
     {
-      "sym": "AU",
-      "shares": 5.0,
-      "avg_fill": 80.49,
-      "cur_price": 79.66999816894531,
-      "change_pct": -1.02,
-      "pnl_usd": -4.1,
-      "today_price": 79.66999816894531,
-      "slippage_pct": 1.03,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
-      "sym": "CHEF",
-      "shares": -5.0,
-      "avg_fill": 94.17,
-      "cur_price": 94.86000061035156,
-      "change_pct": 0.73,
-      "pnl_usd": -3.45,
-      "today_price": 94.86000061035156,
-      "slippage_pct": -0.73,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
-      "sym": "AEM",
-      "shares": 3.0,
-      "avg_fill": 140.8,
-      "cur_price": 145.1300048828125,
-      "change_pct": 3.08,
-      "pnl_usd": 12.99,
-      "today_price": 145.1300048828125,
-      "slippage_pct": -2.98,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
-      "sym": "ONC",
-      "shares": 1.0,
-      "avg_fill": 280.32,
-      "cur_price": 325.8999938964844,
-      "change_pct": 16.26,
-      "pnl_usd": 45.58,
-      "today_price": 325.8999938964844,
-      "slippage_pct": -13.99,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
-      "sym": "QQQ",
-      "shares": 8.0,
-      "avg_fill": 715.58,
-      "cur_price": 684.22998046875,
-      "change_pct": -4.38,
-      "pnl_usd": -250.8,
-      "today_price": 684.22998046875,
-      "slippage_pct": 4.58,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 1000.0
-    },
-    {
-      "sym": "CDNA",
-      "shares": 13.0,
-      "avg_fill": 38.52,
-      "cur_price": 37.13999938964844,
-      "change_pct": -3.58,
-      "pnl_usd": -17.94,
-      "today_price": 37.13999938964844,
-      "slippage_pct": 3.72,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
-      "sym": "SFNC",
-      "shares": 21.0,
-      "avg_fill": 23.08,
-      "cur_price": 23.18000030517578,
-      "change_pct": 0.43,
-      "pnl_usd": 2.1,
-      "today_price": 23.18000030517578,
-      "slippage_pct": -0.43,
-      "sim_price": null,
-      "delay_gap_pct": null,
-      "target_usd": 0
-    },
-    {
       "sym": "KSPI",
       "shares": 5.0,
       "avg_fill": 88.36,
@@ -188,6 +110,45 @@
       "target_usd": 0
     },
     {
+      "sym": "AU",
+      "shares": 5.0,
+      "avg_fill": 80.49,
+      "cur_price": 79.66999816894531,
+      "change_pct": -1.02,
+      "pnl_usd": -4.1,
+      "today_price": 79.66999816894531,
+      "slippage_pct": 1.03,
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
+    },
+    {
+      "sym": "CHEF",
+      "shares": -5.0,
+      "avg_fill": 94.17,
+      "cur_price": 94.86000061035156,
+      "change_pct": 0.73,
+      "pnl_usd": -3.45,
+      "today_price": 94.86000061035156,
+      "slippage_pct": -0.73,
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
+    },
+    {
+      "sym": "AEM",
+      "shares": 3.0,
+      "avg_fill": 140.8,
+      "cur_price": 145.1300048828125,
+      "change_pct": 3.08,
+      "pnl_usd": 12.99,
+      "today_price": 145.1300048828125,
+      "slippage_pct": -2.98,
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
+    },
+    {
       "sym": "PDD",
       "shares": 5.0,
       "avg_fill": 74.06,
@@ -196,6 +157,19 @@
       "pnl_usd": 43.0,
       "today_price": 82.66000366210938,
       "slippage_pct": -10.4,
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
+    },
+    {
+      "sym": "ONC",
+      "shares": 1.0,
+      "avg_fill": 280.32,
+      "cur_price": 325.8999938964844,
+      "change_pct": 16.26,
+      "pnl_usd": 45.58,
+      "today_price": 325.8999938964844,
+      "slippage_pct": -13.99,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -212,11 +186,37 @@
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
+    },
+    {
+      "sym": "QQQ",
+      "shares": 8.0,
+      "avg_fill": 715.58,
+      "cur_price": 684.22998046875,
+      "change_pct": -4.38,
+      "pnl_usd": -250.8,
+      "today_price": 684.22998046875,
+      "slippage_pct": 4.58,
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 1000.0
+    },
+    {
+      "sym": "CDNA",
+      "shares": 13.0,
+      "avg_fill": 38.52,
+      "cur_price": 37.13999938964844,
+      "change_pct": -3.58,
+      "pnl_usd": -17.94,
+      "today_price": 37.13999938964844,
+      "slippage_pct": 3.72,
+      "sim_price": null,
+      "delay_gap_pct": null,
+      "target_usd": 0
     }
   ],
   "open_orders": 26,
   "note": "",
   "account": "DUQ627583",
   "total_unrealized_pnl": -263.87,
-  "updated_at": "2026-07-26 23:30"
+  "updated_at": "2026-07-27 00:02"
 }
