@@ -87,11 +87,11 @@
       "sym": "AEM",
       "shares": 3.0,
       "avg_fill": 140.8,
-      "cur_price": 144.50999450683594,
-      "change_pct": 2.63,
-      "pnl_usd": 11.13,
-      "today_price": 144.50999450683594,
-      "slippage_pct": -2.57,
+      "cur_price": 145.1300048828125,
+      "change_pct": 3.08,
+      "pnl_usd": 12.99,
+      "today_price": 145.1300048828125,
+      "slippage_pct": -2.98,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -178,11 +178,11 @@
       "sym": "NU",
       "shares": 31.0,
       "avg_fill": 12.72,
-      "cur_price": 14.1899995803833,
-      "change_pct": 11.56,
-      "pnl_usd": 45.57,
-      "today_price": 14.1899995803833,
-      "slippage_pct": -10.36,
+      "cur_price": 14.09000015258789,
+      "change_pct": 10.77,
+      "pnl_usd": 42.47,
+      "today_price": 14.09000015258789,
+      "slippage_pct": -9.72,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 26,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -262.63,
-  "updated_at": "2026-07-27 02:45"
+  "total_unrealized_pnl": -263.87,
+  "updated_at": "2026-07-27 02:50"
 }
