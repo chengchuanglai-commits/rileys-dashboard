@@ -165,11 +165,11 @@
       "sym": "FUTU",
       "shares": 4.0,
       "avg_fill": 94.45,
-      "cur_price": 99.36000061035156,
-      "change_pct": 5.2,
-      "pnl_usd": 19.64,
-      "today_price": 99.36000061035156,
-      "slippage_pct": -4.94,
+      "cur_price": 98.95999908447266,
+      "change_pct": 4.78,
+      "pnl_usd": 18.04,
+      "today_price": 98.95999908447266,
+      "slippage_pct": -4.56,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -191,11 +191,11 @@
       "sym": "PDD",
       "shares": 5.0,
       "avg_fill": 74.06,
-      "cur_price": 82.66000366210938,
-      "change_pct": 11.61,
-      "pnl_usd": 43.0,
-      "today_price": 82.66000366210938,
-      "slippage_pct": -10.4,
+      "cur_price": 83.30000305175781,
+      "change_pct": 12.48,
+      "pnl_usd": 46.2,
+      "today_price": 83.30000305175781,
+      "slippage_pct": -11.09,
       "sim_price": null,
       "delay_gap_pct": null,
       "target_usd": 0
@@ -217,6 +217,6 @@
   "open_orders": 26,
   "note": "",
   "account": "DUQ627583",
-  "total_unrealized_pnl": -263.87,
-  "updated_at": "2026-07-26 22:50"
+  "total_unrealized_pnl": -262.27,
+  "updated_at": "2026-07-26 22:55"
 }
