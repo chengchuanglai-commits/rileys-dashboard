@@ -3373,17 +3373,17 @@ window.PORTFOLIO_MN = {
           "open": 19.93,
           "high": 20.45,
           "low": 19.93,
-          "close": 20.33,
-          "pnl_pct": 3.99
+          "close": 20.36,
+          "pnl_pct": 4.14
         }
       },
       "close_date": "2026-07-27",
-      "close_price": 20.33,
-      "final_pnl_pct": 3.99,
+      "close_price": 20.36,
+      "final_pnl_pct": 4.14,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.27,
+      "realized_pnl_usd": 8.58,
       "position_usd": 207.19
     },
     {
@@ -3410,8 +3410,8 @@ window.PORTFOLIO_MN = {
         "2026-07-27": {
           "open": 37.21,
           "high": 37.74,
-          "low": 36.47,
-          "close": 36.66,
+          "low": 36.25,
+          "close": 36.36,
           "pnl_pct": -1.99
         }
       },
@@ -3429,25 +3429,25 @@ window.PORTFOLIO_MN = {
       "name": "CHEF公司",
       "action": "BUY",
       "signal_date": "2026-07-24",
-      "entry_price": 95.91,
+      "entry_price": 94.86,
       "allocated_usd": 500,
-      "shares": 5.2132,
+      "shares": 5.2709,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 110.3,
-      "stop_loss": 93.99,
+      "take_profit": 109.09,
+      "stop_loss": 92.96,
       "max_hold_date": "2026-07-28",
       "daily_prices": {
         "2026-07-27": {
           "open": 95.34,
           "high": 96.39,
           "low": 90.96,
-          "close": 95.91,
+          "close": 95.68,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-07-27",
-      "close_price": 93.99,
+      "close_price": 92.96,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -3473,7 +3473,7 @@ window.PORTFOLIO_MN = {
           "open": 42.43,
           "high": 42.63,
           "low": 39.91,
-          "close": 40.45,
+          "close": 40.43,
           "pnl_pct": -2.0
         }
       },
@@ -3492,13 +3492,13 @@ window.PORTFOLIO_MN = {
     "total_trades": 98,
     "win_trades": 28,
     "win_rate": 28.6,
-    "total_realized_pnl_usd": 69.69,
+    "total_realized_pnl_usd": 70.0,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2094.33,
+    "portfolio_value": 2094.64,
     "total_commission_usd": 196.0,
-    "skipped_gap": 50,
+    "skipped_gap": 48,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 119,
+    "skipped_no_cash": 121,
     "updated_at": "2026-07-27"
   }
 };
