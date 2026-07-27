@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-27",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "HFWA",
+      "action": "BUY",
+      "current_price": 30.16,
+      "target_price": 33.18,
+      "stop_loss": 28.65
+    },
+    {
+      "ticker": "BANR",
+      "action": "BUY",
+      "current_price": 70.29,
+      "target_price": 77.32,
+      "stop_loss": 66.78
+    },
+    {
+      "ticker": "LCNB",
+      "action": "SELL",
+      "current_price": 20.0,
+      "target_price": 22.0,
+      "stop_loss": 19.0
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 67.14,
+      "target_price": 73.85,
+      "stop_loss": 63.78
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "HFWA",
+      "action": "BUY",
+      "current_price": 30.16,
+      "target_price": 33.18,
+      "stop_loss": 28.65
+    },
+    {
+      "ticker": "BANR",
+      "action": "BUY",
+      "current_price": 70.29,
+      "target_price": 77.32,
+      "stop_loss": 66.78
+    },
+    {
+      "ticker": "HBCP",
+      "action": "HOLD",
+      "current_price": 70.21,
+      "target_price": 77.23,
+      "stop_loss": 66.7
+    },
+    {
+      "ticker": "LCNB",
+      "action": "SELL",
+      "current_price": 20.0,
+      "target_price": 22.0,
+      "stop_loss": 19.0
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 67.14,
+      "target_price": 73.85,
+      "stop_loss": 63.78
+    },
+    {
+      "ticker": "SLGN",
+      "action": "SELL",
+      "current_price": 46.43,
+      "target_price": 51.07,
+      "stop_loss": 44.11
+    },
+    {
+      "ticker": "ECPG",
+      "action": "HOLD",
+      "current_price": 90.16,
+      "target_price": 99.18,
+      "stop_loss": 85.65
+    },
+    {
+      "ticker": "TCBK",
+      "action": "HOLD",
+      "current_price": 58.12,
+      "target_price": 63.93,
+      "stop_loss": 55.21
+    },
+    {
+      "ticker": "CHCO",
+      "action": "BUY",
+      "current_price": 139.62,
+      "target_price": 153.58,
+      "stop_loss": 132.64
+    },
+    {
+      "ticker": "XNCR",
+      "action": "SELL",
+      "current_price": 19.44,
+      "target_price": 21.38,
+      "stop_loss": 18.47
+    },
+    {
+      "ticker": "WRLD",
+      "action": "SELL",
+      "current_price": 204.67,
+      "target_price": 225.14,
+      "stop_loss": 194.44
+    },
+    {
+      "ticker": "ACNB",
+      "action": "BUY",
+      "current_price": 62.1,
+      "target_price": 68.31,
+      "stop_loss": 58.99
+    },
+    {
+      "ticker": "FMBH",
+      "action": "BUY",
+      "current_price": 51.0,
+      "target_price": 56.1,
+      "stop_loss": 48.45
+    },
+    {
+      "ticker": "MBWM",
+      "action": "BUY",
+      "current_price": 58.5,
+      "target_price": 64.35,
+      "stop_loss": 55.57
+    },
+    {
+      "ticker": "HCSG",
+      "action": "HOLD",
+      "current_price": 22.74,
+      "target_price": 25.01,
+      "stop_loss": 21.6
+    },
+    {
+      "ticker": "FCFS",
+      "action": "SELL",
+      "current_price": 195.06,
+      "target_price": 214.57,
+      "stop_loss": 185.31
+    },
+    {
+      "ticker": "CALM",
+      "action": "BUY",
+      "current_price": 90.32,
+      "target_price": 99.35,
+      "stop_loss": 85.8
+    },
+    {
+      "ticker": "FRME",
+      "action": "SELL",
+      "current_price": 43.18,
+      "target_price": 47.5,
+      "stop_loss": 41.02
+    },
+    {
+      "ticker": "PFBC",
+      "action": "BUY",
+      "current_price": 102.96,
+      "target_price": 113.26,
+      "stop_loss": 97.81
+    },
+    {
+      "ticker": "WERN",
+      "action": "HOLD",
+      "current_price": 42.42,
+      "target_price": 46.66,
+      "stop_loss": 40.3
+    }
+  ]
+}
