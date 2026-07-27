@@ -153,88 +153,29 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "LCNB",
-      "name": "LCNB公司",
+      "ticker": "ACIW",
+      "name": "ACI Worldwide",
       "action": "BUY",
-      "signal_date": "2026-07-23",
-      "entry_price": 19.55,
+      "signal_date": "2026-07-22",
+      "entry_price": 54.71,
       "allocated_usd": 500,
-      "shares": 25.5754,
+      "shares": 9.1391,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 22.48,
-      "stop_loss": 19.16,
-      "max_hold_date": "2026-07-27",
+      "take_profit": 62.92,
+      "stop_loss": 53.62,
+      "max_hold_date": "2026-07-24",
       "daily_prices": {
-        "2026-07-24": {
-          "open": 19.61,
-          "high": 20.28,
-          "low": 19.18,
-          "close": 20.0,
-          "pnl_pct": 2.3
+        "2026-07-23": {
+          "open": 54.64,
+          "high": 55.28,
+          "low": 53.98,
+          "close": 54.53,
+          "pnl_pct": -0.33
         }
       },
-      "position_usd": 207.19,
-      "unrealized_pnl_usd": 4.77
-    },
-    {
-      "ticker": "CDNA",
-      "name": "卡迪纳健康",
-      "action": "BUY",
-      "signal_date": "2026-07-23",
-      "entry_price": 37.61,
-      "allocated_usd": 500,
-      "shares": 13.2943,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 43.25,
-      "stop_loss": 36.86,
-      "max_hold_date": "2026-07-27",
-      "daily_prices": {
-        "2026-07-24": {
-          "open": 38.48,
-          "high": 38.48,
-          "low": 37.05,
-          "close": 37.14,
-          "pnl_pct": -1.25
-        }
-      },
-      "position_usd": 207.19,
-      "unrealized_pnl_usd": -2.59
-    },
-    {
-      "ticker": "LCNB",
-      "name": "LCNB公司",
-      "action": "BUY",
-      "signal_date": "2026-07-24",
-      "entry_price": 20.0,
-      "allocated_usd": 500,
-      "shares": 25.0,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 23.0,
-      "stop_loss": 19.6,
-      "max_hold_date": "2026-07-28",
-      "daily_prices": {},
-      "position_usd": 207.38,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "CHEF",
-      "name": "CHEF公司",
-      "action": "BUY",
-      "signal_date": "2026-07-24",
-      "entry_price": 94.86,
-      "allocated_usd": 500,
-      "shares": 5.2709,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 109.09,
-      "stop_loss": 92.96,
-      "max_hold_date": "2026-07-28",
-      "daily_prices": {},
-      "position_usd": 207.38,
-      "unrealized_pnl_usd": 0.0
+      "position_usd": 208.45,
+      "unrealized_pnl_usd": -0.69
     }
   ],
   "closed_positions": [
@@ -3364,87 +3305,111 @@ window.PORTFOLIO_MN = {
       "position_usd": 208.45
     },
     {
-      "ticker": "ACIW",
-      "name": "ACI Worldwide",
+      "ticker": "LCNB",
+      "name": "LCNB公司",
       "action": "BUY",
-      "signal_date": "2026-07-22",
-      "entry_price": 54.71,
+      "signal_date": "2026-07-23",
+      "entry_price": 19.55,
       "allocated_usd": 500,
-      "shares": 9.1391,
+      "shares": 25.5754,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 62.92,
-      "stop_loss": 53.62,
-      "max_hold_date": "2026-07-24",
+      "take_profit": 22.48,
+      "stop_loss": 19.16,
+      "max_hold_date": "2026-07-27",
       "daily_prices": {
-        "2026-07-23": {
-          "open": 54.64,
-          "high": 55.28,
-          "low": 53.98,
-          "close": 54.53,
-          "pnl_pct": -0.33
-        },
-        "2026-07-24": {
-          "open": 55.16,
-          "high": 56.76,
-          "low": 55.11,
-          "close": 56.31,
-          "pnl_pct": 2.92
+        "2026-07-27": {
+          "open": 19.93,
+          "high": 20.45,
+          "low": 19.93,
+          "close": 20.32,
+          "pnl_pct": 3.94
         }
       },
-      "close_date": "2026-07-24",
-      "close_price": 56.31,
-      "final_pnl_pct": 2.92,
+      "close_date": "2026-07-27",
+      "close_price": 20.32,
+      "final_pnl_pct": 3.94,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.09,
-      "position_usd": 208.45
+      "realized_pnl_usd": 8.16,
+      "position_usd": 207.19
     },
     {
-      "ticker": "SNDR",
-      "name": "施耐德国家",
+      "ticker": "CDNA",
+      "name": "卡迪纳健康",
       "action": "BUY",
       "signal_date": "2026-07-23",
-      "entry_price": 37.75,
+      "entry_price": 37.61,
       "allocated_usd": 500,
-      "shares": 13.245,
+      "shares": 13.2943,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 43.41,
-      "stop_loss": 36.99,
+      "take_profit": 43.25,
+      "stop_loss": 36.86,
       "max_hold_date": "2026-07-27",
       "daily_prices": {
-        "2026-07-24": {
-          "open": 37.63,
-          "high": 38.29,
-          "low": 36.9,
-          "close": 37.61,
-          "pnl_pct": -2.01
+        "2026-07-27": {
+          "open": 37.21,
+          "high": 37.74,
+          "low": 36.47,
+          "close": 36.94,
+          "pnl_pct": -1.99
         }
       },
-      "close_date": "2026-07-24",
-      "close_price": 36.99,
-      "final_pnl_pct": -2.01,
+      "close_date": "2026-07-27",
+      "close_price": 36.86,
+      "final_pnl_pct": -1.99,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.16,
+      "realized_pnl_usd": -4.12,
+      "position_usd": 207.19
+    },
+    {
+      "ticker": "CHEF",
+      "name": "厨师仓储",
+      "action": "BUY",
+      "signal_date": "2026-07-23",
+      "entry_price": 94.48,
+      "allocated_usd": 500,
+      "shares": 5.2921,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 108.65,
+      "stop_loss": 92.59,
+      "max_hold_date": "2026-07-27",
+      "daily_prices": {
+        "2026-07-27": {
+          "open": 95.34,
+          "high": 95.76,
+          "low": 90.96,
+          "close": 93.55,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-27",
+      "close_price": 92.59,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.14,
       "position_usd": 207.19
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 94,
+    "total_trades": 95,
     "win_trades": 27,
-    "win_rate": 28.7,
-    "total_realized_pnl_usd": 73.84,
-    "open_unrealized_pnl_usd": 26.81,
-    "portfolio_value": 2100.65,
-    "total_commission_usd": 188.0,
-    "skipped_gap": 48,
+    "win_rate": 28.4,
+    "total_realized_pnl_usd": 71.82,
+    "open_unrealized_pnl_usd": 23.95,
+    "portfolio_value": 2095.77,
+    "total_commission_usd": 190.0,
+    "skipped_gap": 49,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 121,
-    "updated_at": "2026-07-24"
+    "skipped_no_cash": 122,
+    "updated_at": "2026-07-27"
   }
 };
