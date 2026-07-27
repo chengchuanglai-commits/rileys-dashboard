@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 30.21,
           "high": 30.73,
           "low": 29.82,
-          "close": 29.9,
-          "pnl_pct": 1.06
+          "close": 29.96,
+          "pnl_pct": 0.86
         }
       },
-      "position_usd": 226.05,
-      "unrealized_pnl_usd": 2.4
+      "position_usd": 226.35,
+      "unrealized_pnl_usd": 1.95
     },
     {
       "ticker": "HFWA",
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 29.56,
       "max_hold_date": "2026-07-29",
       "daily_prices": {},
-      "position_usd": 226.02,
+      "position_usd": 225.89,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 68.88,
       "max_hold_date": "2026-07-29",
       "daily_prices": {},
-      "position_usd": 226.02,
+      "position_usd": 225.89,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2181,41 +2181,41 @@ window.PORTFOLIO_HDS = {
       "position_usd": 224.96
     },
     {
-      "ticker": "CDNA",
+      "ticker": "XNCR",
       "name": "",
       "action": "SELL",
       "signal_date": "2026-07-22",
-      "entry_price": 38.54,
+      "entry_price": 20.45,
       "allocated_usd": 500,
-      "shares": 12.9735,
+      "shares": 24.4499,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 32.76,
-      "stop_loss": 39.31,
+      "take_profit": 17.38,
+      "stop_loss": 20.86,
       "max_hold_date": "2026-07-24",
       "daily_prices": {
         "2026-07-23": {
-          "open": 38.44,
-          "high": 38.72,
-          "low": 37.38,
-          "close": 37.61,
-          "pnl_pct": 2.41
+          "open": 19.18,
+          "high": 20.02,
+          "low": 18.83,
+          "close": 19.53,
+          "pnl_pct": 4.5
         },
         "2026-07-24": {
-          "open": 37.8,
-          "high": 38.48,
-          "low": 37.05,
-          "close": 37.14,
-          "pnl_pct": 3.63
+          "open": 19.53,
+          "high": 19.9,
+          "low": 18.94,
+          "close": 19.44,
+          "pnl_pct": 4.94
         }
       },
       "close_date": "2026-07-24",
-      "close_price": 37.14,
-      "final_pnl_pct": 3.63,
+      "close_price": 19.44,
+      "final_pnl_pct": 4.94,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.15,
+      "realized_pnl_usd": 11.09,
       "position_usd": 224.5
     },
     {
@@ -2250,41 +2250,34 @@ window.PORTFOLIO_HDS = {
       "position_usd": 225.69
     },
     {
-      "ticker": "SFNC",
+      "ticker": "CHEF",
       "name": "",
-      "action": "BUY",
+      "action": "SELL",
       "signal_date": "2026-07-23",
-      "entry_price": 23.11,
+      "entry_price": 93.93,
       "allocated_usd": 500,
-      "shares": 21.6357,
+      "shares": 5.3231,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 26.58,
-      "stop_loss": 22.65,
+      "take_profit": 79.84,
+      "stop_loss": 95.81,
       "max_hold_date": "2026-07-27",
       "daily_prices": {
-        "2026-07-24": {
-          "open": 23.01,
-          "high": 23.38,
-          "low": 22.98,
-          "close": 23.18,
-          "pnl_pct": 0.3
-        },
         "2026-07-27": {
-          "open": 23.33,
-          "high": 23.5,
-          "low": 23.05,
-          "close": 23.08,
-          "pnl_pct": -0.13
+          "open": 95.34,
+          "high": 96.39,
+          "low": 90.96,
+          "close": 95.99,
+          "pnl_pct": -2.0
         }
       },
       "close_date": "2026-07-27",
-      "close_price": 23.08,
-      "final_pnl_pct": -0.13,
-      "close_reason": "max_hold",
+      "close_price": 95.81,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.29,
+      "realized_pnl_usd": -4.51,
       "position_usd": 225.69
     }
   ],
@@ -2293,13 +2286,13 @@ window.PORTFOLIO_HDS = {
     "total_trades": 59,
     "win_trades": 34,
     "win_rate": 57.6,
-    "total_realized_pnl_usd": 260.23,
-    "open_unrealized_pnl_usd": 32.82,
-    "portfolio_value": 2293.05,
+    "total_realized_pnl_usd": 258.95,
+    "open_unrealized_pnl_usd": 32.37,
+    "portfolio_value": 2291.32,
     "total_commission_usd": 118.0,
-    "skipped_gap": 34,
+    "skipped_gap": 33,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 27,
+    "skipped_no_cash": 28,
     "updated_at": "2026-07-27"
   }
 };
