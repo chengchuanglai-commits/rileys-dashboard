@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 30.02,
           "high": 30.84,
           "low": 29.64,
-          "close": 29.97,
-          "pnl_pct": -0.63
+          "close": 29.89,
+          "pnl_pct": -0.9
         }
       },
       "position_usd": 225.46,
-      "unrealized_pnl_usd": -1.42
+      "unrealized_pnl_usd": -2.03
     },
     {
       "ticker": "BANR",
@@ -187,13 +187,13 @@ window.PORTFOLIO_HDS = {
         "2026-07-28": {
           "open": 70.83,
           "high": 71.02,
-          "low": 69.93,
-          "close": 70.2,
-          "pnl_pct": -0.13
+          "low": 69.82,
+          "close": 70.55,
+          "pnl_pct": 0.37
         }
       },
       "position_usd": 225.46,
-      "unrealized_pnl_usd": -0.29
+      "unrealized_pnl_usd": 0.83
     },
     {
       "ticker": "ACNB",
@@ -2351,7 +2351,7 @@ window.PORTFOLIO_HDS = {
           "open": 30.02,
           "high": 30.84,
           "low": 29.64,
-          "close": 29.97,
+          "close": 29.89,
           "pnl_pct": -1.99
         }
       },
@@ -2371,8 +2371,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 34,
     "win_rate": 55.7,
     "total_realized_pnl_usd": 250.12,
-    "open_unrealized_pnl_usd": 28.71,
-    "portfolio_value": 2278.83,
+    "open_unrealized_pnl_usd": 29.23,
+    "portfolio_value": 2279.35,
     "total_commission_usd": 122.0,
     "skipped_gap": 35,
     "skipped_zero_shares": 0,
