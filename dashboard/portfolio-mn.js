@@ -151,6 +151,74 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "ECPG",
+      "name": "安可资本",
+      "action": "BUY",
+      "signal_date": "2026-07-28",
+      "entry_price": 95.67,
+      "allocated_usd": 500,
+      "shares": 5.2263,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 110.02,
+      "stop_loss": 93.76,
+      "max_hold_date": "2026-07-30",
+      "daily_prices": {},
+      "position_usd": 207.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "XNCR",
+      "name": "Xencor",
+      "action": "BUY",
+      "signal_date": "2026-07-28",
+      "entry_price": 19.3,
+      "allocated_usd": 500,
+      "shares": 25.9067,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 22.2,
+      "stop_loss": 18.91,
+      "max_hold_date": "2026-07-30",
+      "daily_prices": {},
+      "position_usd": 207.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "HCSG",
+      "name": "Healthcare Services Group",
+      "action": "BUY",
+      "signal_date": "2026-07-28",
+      "entry_price": 23.05,
+      "allocated_usd": 500,
+      "shares": 21.692,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 26.51,
+      "stop_loss": 22.59,
+      "max_hold_date": "2026-07-30",
+      "daily_prices": {},
+      "position_usd": 207.0,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "FCFS",
+      "name": "FirstCash Holdings",
+      "action": "BUY",
+      "signal_date": "2026-07-28",
+      "entry_price": 207.93,
+      "allocated_usd": 500,
+      "shares": 2.4047,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 239.12,
+      "stop_loss": 203.77,
+      "max_hold_date": "2026-07-30",
+      "daily_prices": {},
+      "position_usd": 207.0,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -3371,7 +3439,7 @@ window.PORTFOLIO_MN = {
         },
         "2026-07-27": {
           "open": 19.93,
-          "high": 20.45,
+          "high": 20.46,
           "low": 19.93,
           "close": 20.36,
           "pnl_pct": 4.14
@@ -3439,9 +3507,9 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-07-28",
       "daily_prices": {
         "2026-07-27": {
-          "open": 95.34,
+          "open": 95.42,
           "high": 96.39,
-          "low": 90.96,
+          "low": 90.97,
           "close": 95.68,
           "pnl_pct": -2.0
         }
@@ -3470,7 +3538,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-07-28",
       "daily_prices": {
         "2026-07-27": {
-          "open": 42.43,
+          "open": 42.42,
           "high": 42.63,
           "low": 39.91,
           "close": 40.43,
@@ -3498,7 +3566,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 196.0,
     "skipped_gap": 48,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 121,
-    "updated_at": "2026-07-27"
+    "skipped_no_cash": 123,
+    "updated_at": "2026-07-28"
   }
 };
