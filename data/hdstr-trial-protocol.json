@@ -1,0 +1,19 @@
+{
+ "_note": "hdstr真钱试运行协议·预注册2026-07-22·Riley批(周一直接真钱+自动执行)",
+ "registered": "2026-07-22",
+ "start_real": "2026-07-27",
+ "weeks": 4,
+ "capital_usd": 2000,
+ "per_position_usd": 500,
+ "max_concurrent": 4,
+ "exit": "IBKR服务器端TRAIL 4% GTC + 10交易日超时平仓",
+ "filters": "OTC剔除/ADV>=5M/跳空>1%跳过",
+ "shakedown": "2026-07-22~24 paper账户执行体检(不占时间线,入金审批同步走)",
+ "success_criteria": "4周真实滑点gap<2pp 且 方向与paper一致",
+ "halt_conditions": [
+  "gate裁FAIL当日中止新仓",
+  "tripwire破线停新仓(kill-switch自动)",
+  "试运行账户回撤>15%全停"
+ ],
+ "positions_source": "data/hdstr-trial.json"
+}

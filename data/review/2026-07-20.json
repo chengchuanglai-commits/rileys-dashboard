@@ -1,0 +1,15 @@
+{
+  "date": "2026-07-20",
+  "anomalies": [
+    "缺仓 TIGO: 目标$5000 实际0",
+    "缺仓 OKTA: 目标$5000 实际0"
+  ],
+  "infos": [
+    "待出场 BMO $4916(sim已剔除,今晚开盘batch应卖出)",
+    "待出场 FTNT $5015(sim已剔除,今晚开盘batch应卖出)"
+  ],
+  "nav": 1000106.1,
+  "drawdown_pct": 0.0,
+  "actions": [],
+  "breaker": "normal"
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-07-17",
+  "anomalies": [
+    "该卖未卖 FFIV: 已持续2个复盘日,市值$4439",
+    "缺仓 BMO: 目标$5000 实际0"
+  ],
+  "infos": [
+    "待出场 RVMD $4838(sim已剔除,今晚开盘batch应卖出)"
+  ],
+  "nav": 1000390.2,
+  "drawdown_pct": 0.0,
+  "actions": [],
+  "breaker": "normal"
+}

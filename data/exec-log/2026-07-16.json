@@ -1,0 +1,78 @@
+{
+  "date": "2026-07-16",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "AEM",
+      "qty": 3,
+      "px": 139.8,
+      "usd": 419.40000000000003
+    },
+    {
+      "sym": "DELL",
+      "qty": 7.0,
+      "px": 403.94,
+      "usd": 2827.58
+    },
+    {
+      "sym": "FFIV",
+      "qty": -11.0,
+      "px": 411.94,
+      "usd": 4531.34
+    },
+    {
+      "sym": "FTNT",
+      "qty": 30,
+      "px": 164.77,
+      "usd": 4943.1
+    },
+    {
+      "sym": "NU",
+      "qty": 1.0,
+      "px": 13.78,
+      "usd": 13.78
+    },
+    {
+      "sym": "RVMD",
+      "qty": 10.0,
+      "px": 184.0,
+      "usd": 1840.0
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "AEM",
+      "qty": 3,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "DELL",
+      "qty": 7.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FFIV",
+      "qty": -11.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FTNT",
+      "qty": 30,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NU",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 10.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}

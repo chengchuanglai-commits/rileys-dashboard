@@ -1,0 +1,81 @@
+{
+ "2026-07-13": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "PBHC",
+    "action": "SELL",
+    "why": "ADV$0.4M<5M"
+   }
+  ]
+ },
+ "2026-07-17": {
+  "total": 4,
+  "flagged": []
+ },
+ "2026-07-22": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "LCNB",
+    "action": "BUY",
+    "why": "ADV$0.9M<5M"
+   }
+  ]
+ },
+ "2026-07-23": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "LCNB",
+    "action": "SELL",
+    "why": "ADV$1.0M<5M"
+   }
+  ]
+ },
+ "2026-07-24": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "UTMD",
+    "action": "SELL",
+    "why": "ADV$2.0M<5M"
+   }
+  ]
+ },
+ "2026-07-27": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "LCNB",
+    "action": "SELL",
+    "why": "ADV$0.7M<5M"
+   },
+   {
+    "ticker": "UTMD",
+    "action": "SELL",
+    "why": "ADV$2.0M<5M"
+   }
+  ]
+ },
+ "2026-07-28": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "ACNB",
+    "action": "BUY",
+    "why": "ADV$4.6M<5M"
+   },
+   {
+    "ticker": "LCNB",
+    "action": "SELL",
+    "why": "ADV$0.8M<5M"
+   },
+   {
+    "ticker": "IMMR",
+    "action": "SELL",
+    "why": "ADV$4.8M<5M"
+   }
+  ]
+ }
+}

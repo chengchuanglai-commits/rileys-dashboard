@@ -1,0 +1,14 @@
+{
+  "date": "2026-07-16",
+  "anomalies": [
+    "缺仓 FTNT: 目标$5000 实际0",
+    "缺仓 AEM: 目标$444 实际0"
+  ],
+  "infos": [
+    "待出场 FFIV $4638(sim已剔除,今晚开盘batch应卖出)"
+  ],
+  "nav": 1001121.87,
+  "drawdown_pct": 0.0,
+  "actions": [],
+  "breaker": "normal"
+}

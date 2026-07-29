@@ -1,0 +1,27 @@
+{
+  "_note": "hds真钱上车gate·预注册2026-07-14·标准见scripts/hds-gate.py,中途不许改",
+  "anchor_date": "2026-07-13",
+  "end": "2026-09-08",
+  "extended_end": "2026-10-06",
+  "extended": false,
+  "min_trades_total": 80,
+  "qqq_dd_required_pct": 3.0,
+  "baseline_pv": 2188.5,
+  "baseline_trades": 48,
+  "verdict": null,
+  "last_progress_push": "2026-07-24",
+  "amendments": [
+    {
+      "date": "2026-07-17",
+      "change": "min_trades_total 100→80",
+      "reason": "对齐系统既有edge体检毕业线80笔(analyze-leg-edge NEED=80);100是2026-07-14注册时Claude自拟数。Riley提出并批准。当前51笔,按~2.4笔/天到期约140笔,两个门槛均远超,不改变预期裁决。",
+      "approved_by": "Riley"
+    },
+    {
+      "date": "2026-07-18",
+      "change": "加早裁条款:三条标准同时满足即刻裁决,不等9/8日历",
+      "reason": "Riley不想干等日历。三条标准一字未降:①≥80笔仍差29笔(预计8月初)②已领先7pp③QQQ回撤3.4%已达标。去掉的只是标准全达成后的人为等待。",
+      "approved_by": "Riley"
+    }
+  ]
+}

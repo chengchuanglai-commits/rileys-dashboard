@@ -4,7 +4,7 @@ import os as _os
 LIVE = _os.environ.get("IBKR_LIVE", "0") == "1"     # 默认 False(安全);IBKR_LIVE=1 临时开
 FRACTIONAL = False        # True=小数股(cashQty);默认整数股(权限未开,见spec实测)
 NOTIONAL = float(_os.environ.get("IBKR_NOTIONAL", "2000"))   # 默认$2000;env可临时放大(paper验证规模)
-PORTS = [4002, 7497, 4001, 7496]   # 连接尝试顺序:Gateway paper 优先
+PORTS = [4002, 7497]   # 主系统只许paper端口!2026-07-27审计:4001真钱上线后,原列表含4001+LIVE=1会让主batch连上真钱账户按$20k账本乱下单(hdstr有自己的端口路由,不走这里)
 
 # 安全闸(随名义本金缩放:上限=名义本金×系数,防写死被放大规模击穿)
 MAX_ORDER_USD = NOTIONAL * 0.75    # 单笔上限(SPY 60%在内,留余量)

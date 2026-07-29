@@ -16,16 +16,18 @@ echo "[$(date '+%F %T')] === run $1 ===" >> data/exec-log/launchd.log
 # review batch(收盘后)前先回填模拟盘——这时当天日bar已出,各腿对照才是当天收盘最新值(否则慢一天)
 if [ "$1" = "review" ]; then
   export FMP_API_KEY="pOJlglH08lKz9RUmFeO5yYxOc87v5HzA"
-  for L in momma momh mn c ctg ctr hds hdstr; do   # h退役(2026-07-09);c/ctg/ctr=冻结实验(2026-07-17停Haiku信号;结论:移动止损赢固定TP);hdstr=hds移动止损影子(2026-07-17三重证据后上线,不参与gate)
+  # 信号归档同步(2026-07-22根治):云端workflow产信号提交在GitHub,本地从不pull→回填吃旧信号(7/18-21实炸4天)。
+  # 只精准checkout信号目录(本地从不写它,零冲突);全量rebase会撞双写生成物,别改成pull
+  git fetch -q origin main 2>/dev/null && git checkout -q origin/main -- \
+    dashboard/trading-signals-history data/screened-stocks-history 2>/dev/null || true
+  # 2026-07-29大清理:只留活腿hds(gate/tripwire数据源)+hdstr(真钱影子对照)。
+  # 退役冻结(账本保留在data/,结论在legs_tested_summary记忆):momma/momh(动量=幸存者偏差)、
+  # mn(80笔体检已裁)、c/ctg/ctr(7-17冻结,结论移动止损赢,已由hdstr继承)。复活=加回循环即可。
+  for L in hds hdstr; do
     /usr/bin/python3 scripts/backfill-portfolio-$L.py >> data/exec-log/legs-refill.log 2>&1 || true
   done
-  # momma回填后立刻重算三线统一目标(否则master-allocation停在旧日期→波动腿目标用已剔除的幽灵票)
-  /usr/bin/python3 scripts/master-allocator.py >> data/exec-log/launchd.log 2>&1 || true
-  # 腿edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书裁决(通用脚本)
-  # c=最强前向基线,ctg=c-tight,ctr=c-trail(方法B证移动止损最稳)→ 攒够80笔各自自动裁决
-  for L in mn hds c ctg ctr; do
-    LEG=$L /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
-  done
+  # hds edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书裁决
+  LEG=hds /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
   # 杠杆指数腿:每日重算净值曲线+回撤(paper跟踪,见 spec 2026-07-07)。FMP_API_KEY上面已export
   /usr/bin/python3 scripts/backfill-portfolio-lev.py >> data/exec-log/launchd.log 2>&1 || true
   # hds真钱上车gate(预注册2026-07-14):日常静默,周五推进度,达标/到期自动裁决→飞书
@@ -38,10 +40,37 @@ fi
 if [ "$1" = "preflight" ] && [ ! -f data/borrow-check-done ]; then
   /usr/bin/python3 scripts/check-borrow.py >> data/exec-log/launchd.log 2>&1 && touch data/borrow-check-done || true
 fi
-# caffeinate -i: 跑期间阻止系统空闲睡眠(合盖+插电也保持唤醒执行)
-/usr/bin/caffeinate -i /usr/bin/python3 -m scripts.ibkr.$1 >> data/exec-log/launchd.log 2>&1
+# paper动量系统退役(2026-07-29大清理):4002被真钱网关顶掉+幸存者偏差结论(指数才赢)→不再恢复。
+# scripts.ibkr.*模块只管paper统一组合($20k momma),真钱路径(hdstr/qqq-dca)在下方独立段不受影响。
+# 复活=删 data/paper-retired + 重登paper网关(独立~/Jts配置!别共用真钱的)。
+if [ ! -f data/paper-retired ]; then
+  # caffeinate -i: 跑期间阻止系统空闲睡眠(合盖+插电也保持唤醒执行)
+  # 20分钟超时强杀(2026-07-23:IBKR农场故障致batch卡死52分钟,无超时会挂到天亮;正常batch1-3分钟)
+  /usr/bin/caffeinate -i /usr/bin/python3 -m scripts.ibkr.$1 >> data/exec-log/launchd.log 2>&1 &
+  BPID=$!
+  ( sleep 1200; kill $BPID 2>/dev/null && echo "[$(date '+%F %T')] ⏱️ $1 batch超20分钟,已强杀(次日对账自动补齐)" >> data/exec-log/launchd.log ) &
+  TPID=$!
+  wait $BPID 2>/dev/null
+  kill $TPID 2>/dev/null; wait $TPID 2>/dev/null
+fi
+# hdstr试运行执行层:2026-07-27真钱ARMED(Riley批,协议data/hdstr-trial-protocol.json)。
+# 回paper体检=去掉三个HDSTR_env。真钱账户U20220368端口4001;账户不匹配执行器自拒(guard_account)
+if [ "$1" = "trade_open" ]; then
+  # 先同步当晚新信号(deepseek-broad 20:00提交云端;2026-07-27审计:原同步只在review段→hdstr会吃3天前旧信号)
+  git fetch -q origin main 2>/dev/null && git checkout -q origin/main -- \
+    dashboard/trading-signals-history data/screened-stocks-history 2>/dev/null || true
+  HDSTR_ARM=1 HDSTR_ACCOUNT=U20220368 HDSTR_PORT=4001 \
+    /usr/bin/python3 -m scripts.ibkr.hdstr_exec open >> data/exec-log/launchd.log 2>&1 || true
+  # QQQ指数核心托管(2026-07-29 Riley批"接管"):只买不卖,reclaim/深跌阶梯自动低吸,三重预算闸
+  QQQDCA_ARM=1 QQQDCA_ACCOUNT=U20220368 QQQDCA_PORT=4001 \
+    /usr/bin/python3 -m scripts.ibkr.qqq_dca_exec >> data/exec-log/launchd.log 2>&1 || true
+fi
+if [ "$1" = "trade_close" ]; then
+  HDSTR_ARM=1 HDSTR_ACCOUNT=U20220368 HDSTR_PORT=4001 \
+    /usr/bin/python3 -m scripts.ibkr.hdstr_exec close >> data/exec-log/launchd.log 2>&1 || true
+fi
 echo "[$(date '+%F %T')] === done $1 (exit $?) ===" >> data/exec-log/launchd.log
-# 复盘后追加前向验证账本(此刻NAV已结算、日bar已出,三线vs无脑QQQ的alpha才是当天收盘真值)
-if [ "$1" = "review" ]; then
+# 复盘后追加前向验证账本(三线vs无脑QQQ)——随paper系统一起退役,靠paper NAV没NAV就是废数
+if [ "$1" = "review" ] && [ ! -f data/paper-retired ]; then
   /usr/bin/caffeinate -i /usr/bin/python3 -m scripts.ibkr.forward_track >> data/exec-log/launchd.log 2>&1
 fi

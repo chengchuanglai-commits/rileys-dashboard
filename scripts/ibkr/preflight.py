@@ -17,7 +17,7 @@ def run():
         fails.append("净值读不到/为0 → 账户连接异常")
     # 区分止损单(STP/STP LMT,正常常驻保护) vs 非止损的真遗留挂单
     ib.reqAllOpenOrders(); ib.sleep(1)
-    nonstop = [t for t in ib.openTrades() if t.order.orderType not in ("STP", "STP LMT")]
+    nonstop = [t for t in ib.openTrades() if t.order.orderType not in ("STP", "STP LMT", "TRAIL", "TRAIL LIMIT")]  # TRAIL=hdstr移动止损保护单(2026-07-23误报修)
     stop_cnt = len(ib.openTrades()) - len(nonstop)
     # 三线目标新鲜度:检查 master-allocation.json(实际驱动下单的文件,由review批次每日重算)。
     # 旧的 allocation.json 是从不触发的fallback、且由独立的Cloudflare/GitHub管道更新常掉链子→曾反复误报,不再检查它。

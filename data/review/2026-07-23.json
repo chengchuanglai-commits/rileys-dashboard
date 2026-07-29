@@ -1,0 +1,14 @@
+{
+  "date": "2026-07-23",
+  "anomalies": [
+    "缺仓 JAZZ: 目标$3333 实际0",
+    "缺仓 RPRX: 目标$3333 实际0"
+  ],
+  "infos": [
+    "待出场 BMO $3223(sim已剔除,今晚开盘batch应卖出)"
+  ],
+  "nav": 999894.43,
+  "drawdown_pct": 0.0,
+  "actions": [],
+  "breaker": "normal"
+}

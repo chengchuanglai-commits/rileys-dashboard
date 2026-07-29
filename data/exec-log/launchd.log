@@ -3379,3 +3379,2049 @@ forward-track: 网关连不上,跳过
   ]
 }
 [2026-07-18 21:30:39] === done trade_open (exit 0) ===
+[2026-07-19 04:00:04] === run trade_close ===
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-19 04:04:54] === done trade_close (exit 0) ===
+[2026-07-19 04:30:00] === run review ===
+  ⚠️ 护栏触发:momma open_positions为空→保留上次波动腿持仓['FTNT'](防断网导致误清仓)
+
+================================================================
+  统一组合 2026-07-19 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前1只: FTNT
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 平仓0/80笔,未到线,静默
+[hds-edge] 平仓0/80笔,未到线,静默
+[c-edge] 平仓0/80笔,未到线,静默
+[ctg-edge] 平仓0/80笔,未到线,静默
+[ctr-edge] 平仓0/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起5日): 腿-3.51% vs 1xQQQ-2.31% α-1.20% | 当前1.519x | 回测参考(2020起):净值$8,280 CAGR+24.4% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+1 Failed download:
+['QQQ']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+[hds-gate] QQQ数据为空,跳过
+[tripwire] 平仓0<20,样本不足静默
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[tradability] 2026-07-17: 信号4个,真钱将剔除0个: 无
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-19 04:47:04] === done review (exit 0) ===
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+Error 326, reqId -1: \u5ba2\u6237\u53f7\u7801\u5df2\u88ab\u4f7f\u7528\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002\u8bf7\u7528\u672a\u88ab\u4f7f\u7528\u7684\u5ba2\u6237\u53f7\u7801\u91cd\u8bd5\u3002
+Peer closed connection. clientId 24 already in use?
+API connection failed: TimeoutError()
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+forward-track: 网关连不上,跳过
+[2026-07-19 21:10:04] === run preflight ===
+Traceback (most recent call last):
+  File "/Users/apple/claude-whatsapp/scripts/check-borrow.py", line 62, in <module>
+    main()
+  File "/Users/apple/claude-whatsapp/scripts/check-borrow.py", line 22, in main
+    from ibkr.client import connect
+  File "/Users/apple/claude-whatsapp/scripts/ibkr/client.py", line 4, in <module>
+    from scripts.ibkr.config import PORTS
+ModuleNotFoundError: No module named 'scripts'
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-19 21:12:30] === done preflight (exit 0) ===
+[2026-07-19 21:30:00] === run trade_open ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+[webhook] 发送失败(不影响主流程): <urlopen error [Errno 8] nodename nor servname provided, or not known>
+[2026-07-19 21:32:26] === done trade_open (exit 0) ===
+[2026-07-20 04:00:01] === run trade_close ===
+{
+  "date": "2026-07-20",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[2026-07-20 04:00:05] === done trade_close (exit 0) ===
+[2026-07-20 04:30:04] === run review ===
+
+================================================================
+  统一组合 2026-07-20 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前2只: OKTA, TIGO
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🎓 mn edge体检 · 82笔
+① 样本 82/80 ✅
+② alpha +0.62% CI[-0.38%,+1.73%] 下沿>0? ❌不显著
+③ 去最赚2笔 +0.25% ✅
+④ 扣0.5%滑点 -0.30% ❌
+⑤ 多82/空0笔
+⚠️ 未全过,继续攒/别上真钱
+（交易信号系统·leg edge体检）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[hds-edge] 平仓56/80笔,未到线,静默
+[c-edge] 平仓36/80笔,未到线,静默
+[ctg-edge] 平仓34/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起5日): 腿-3.51% vs 1xQQQ-2.31% α-1.20% | 当前1.519x | 回测参考(2020起):净值$8,280 CAGR+24.4% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓56/80 hds+4.2% QQQ-2.3% dd3.4% (静默)
+[tripwire] 正常: 滚动20笔 胜率60% 均笔+0.87%
+[tradability] 2026-07-17 已记录,跳过
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-20 04:36:00] === done review (exit 0) ===
+前向验证 2026-07-20 第17个交易日 | 三线组合 +0.24% | 无脑QQQ -1.76% | alpha +2.00% (book $20049, 持仓10只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-20 09:00:05] === run golive_check ===
+🚦 上真钱体检 07-20: 4/5 绿
+✅ 账户入金 >2500 CAD(或直接USD)
+✅ 佣金优化(加拿大无Lite→已切阶梯式Tiered)
+✅ paper 连续干净 16/12 交易日(自2026-06-27)
+⬜ 小数股 API 端到端确认
+✅ 前向账本 17/12日 · 最多腿 82/60笔
+还差 1 个。①②做完手动 touch data/golive/funded 或 lite;③④⑤系统自己会变绿。
+（交易信号系统·上真钱体检）
+[webhook] 已发送 HTTP 200: b'{"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}'
+[2026-07-20 09:00:10] === done golive_check (exit 0) ===
+[2026-07-20 21:10:05] === run preflight ===
+Traceback (most recent call last):
+  File "/Users/apple/claude-whatsapp/scripts/check-borrow.py", line 62, in <module>
+    main()
+  File "/Users/apple/claude-whatsapp/scripts/check-borrow.py", line 22, in main
+    from ibkr.client import connect
+  File "/Users/apple/claude-whatsapp/scripts/ibkr/client.py", line 4, in <module>
+    from scripts.ibkr.config import PORTS
+ModuleNotFoundError: No module named 'scripts'
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-20 21:10:37] === done preflight (exit 0) ===
+[2026-07-20 21:30:03] === run trade_open ===
+全局撤单后剩余挂单 0
+{
+  "date": "2026-07-20",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "BMO",
+      "qty": -27.0,
+      "px": 183.5,
+      "usd": 4954.5
+    },
+    {
+      "sym": "FTNT",
+      "qty": -62.0,
+      "px": 161.005,
+      "usd": 9982.31
+    },
+    {
+      "sym": "OKTA",
+      "qty": 33,
+      "px": 148.5,
+      "usd": 4900.5
+    },
+    {
+      "sym": "TIGO",
+      "qty": 50,
+      "px": 99.67,
+      "usd": 4983.5
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "BMO",
+      "qty": -27.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FTNT",
+      "qty": -62.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "OKTA",
+      "qty": 33,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": 50,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+[2026-07-20 21:31:13] === done trade_open (exit 0) ===
+[2026-07-20 22:00:05] === run fractional_probe ===
+Error 10243, reqId 1593: \u4e0d\u80fd\u901a\u8fc7API\u4e0b\u8fbe\u5c0f\u6570\u80a1\u59d4\u6258\u5355\u3002\u8bf7\u4f7f\u7528\u684c\u9762\u7248\u4e0b\u8fbe\u6b64\u7c7b\u59d4\u6258\u5355\u3002
+Canceled order: Trade(contract=Stock(conId=9599491, symbol='F', exchange='SMART', primaryExchange='NYSE', currency='USD', localSymbol='F', tradingClass='F'), order=LimitOrder(orderId=1593, clientId=28, action='BUY', totalQuantity=0.5, lmtPrice=1.0, tif='DAY'), orderStatus=OrderStatus(orderId=1593, status='Cancelled', filled=0.0, remaining=0.0, avgFillPrice=0.0, permId=0, parentId=0, lastFillPrice=0.0, clientId=0, whyHeld='', mktCapPrice=0.0), fills=[], log=[TradeLogEntry(time=datetime.datetime(2026, 7, 20, 14, 0, 13, 744597, tzinfo=datetime.timezone.utc), status='PendingSubmit', message='', errorCode=0), TradeLogEntry(time=datetime.datetime(2026, 7, 20, 14, 0, 13, 751255, tzinfo=datetime.timezone.utc), status='Cancelled', message='Error 10243, reqId 1593: \\u4e0d\\u80fd\\u901a\\u8fc7API\\u4e0b\\u8fbe\\u5c0f\\u6570\\u80a1\\u59d4\\u6258\\u5355\\u3002\\u8bf7\\u4f7f\\u7528\\u684c\\u9762\\u7248\\u4e0b\\u8fbe\\u6b64\\u7c7b\\u59d4\\u6258\\u5355\\u3002', errorCode=10243)], advancedError='')
+Error 10147, reqId 1593: \u672a\u627e\u5230\u9700\u8981\u53d6\u6d88\u7684OrderId 1593\u3002
+[probe] DUQ627583 小数股仍被挡(10243/10244),保持安静
+[2026-07-20 22:00:17] === done fractional_probe (exit 0) ===
+[2026-07-21 04:00:03] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-21",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[2026-07-21 04:00:10] === done trade_close (exit 0) ===
+[2026-07-21 04:30:00] === run review ===
+
+================================================================
+  统一组合 2026-07-21 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前2只: OKTA, TIGO
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓56/80笔,未到线,静默
+[c-edge] 平仓36/80笔,未到线,静默
+[ctg-edge] 平仓34/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起6日): 腿-3.36% vs 1xQQQ-2.20% α-1.16% | 当前1.518x | 回测参考(2020起):净值$8,293 CAGR+24.4% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓56/80 hds+4.3% QQQ-2.2% dd3.4% (静默)
+[tripwire] 正常: 滚动20笔 胜率60% 均笔+0.87%
+[tradability] 2026-07-17 已记录,跳过
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-21 04:37:03] === done review (exit 0) ===
+前向验证 2026-07-21 第18个交易日 | 三线组合 +0.46% | 无脑QQQ -1.51% | alpha +1.97% (book $20092, 持仓12只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-21 21:10:05] === run preflight ===
+Traceback (most recent call last):
+  File "/Users/apple/claude-whatsapp/scripts/check-borrow.py", line 62, in <module>
+    main()
+  File "/Users/apple/claude-whatsapp/scripts/check-borrow.py", line 22, in main
+    from ibkr.client import connect
+  File "/Users/apple/claude-whatsapp/scripts/ibkr/client.py", line 4, in <module>
+    from scripts.ibkr.config import PORTS
+ModuleNotFoundError: No module named 'scripts'
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-21 21:10:12] === done preflight (exit 0) ===
+[2026-07-21 21:30:05] === run trade_open ===
+Error 1100, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u4e2d\u65ad\u3002
+Error 1102, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u6062\u590d - \u6570\u636e\u5df2\u4fdd\u5b58\u3002: \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u5df2\u8fde\u63a5\uff1a usfarm; secdefil. \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u672a\u8fde\u63a5\uff1a ushmds.
+全局撤单后剩余挂单 0
+{
+  "date": "2026-07-21",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "NU",
+      "qty": -1.0,
+      "px": 14.08,
+      "usd": 14.08
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "NU",
+      "qty": -1.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+[2026-07-21 21:33:50] === done trade_open (exit 0) ===
+[2026-07-22 04:00:02] === run trade_close ===
+completed orders request timed out
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-22",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[2026-07-22 04:00:18] === done trade_close (exit 0) ===
+[2026-07-22 04:30:05] === run review ===
+
+================================================================
+  统一组合 2026-07-22 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前3只: BMO, TIGO, OKTA
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓59/80笔,未到线,静默
+[c-edge] 平仓38/80笔,未到线,静默
+[ctg-edge] 平仓36/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起7日): 腿-0.66% vs 1xQQQ-0.39% α-0.27% | 当前1.504x | 回测参考(2020起):净值$8,525 CAGR+24.9% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓59/80 hds+4.0% QQQ-0.4% dd3.4% (静默)
+[tripwire] 正常: 滚动20笔 胜率60% 均笔+0.95%
+[tradability] 2026-07-17 已记录,跳过
+completed orders request timed out
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-22 04:37:37] === done review (exit 0) ===
+completed orders request timed out
+前向验证 2026-07-22 第19个交易日 | 三线组合 +0.43% | 无脑QQQ +0.33% | alpha +0.10% (book $20086, 持仓12只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-22 21:10:04] === run preflight ===
+Error 200, reqId 28: \u672a\u627e\u5230\u8be5\u8bf7\u6c42\u7684\u8bc1\u5238\u5b9a\u4e49, contract: Stock(symbol='NUVL', exchange='SMART', currency='USD')
+Unknown contract: Stock(symbol='NUVL', exchange='SMART', currency='USD')
+Error 200, reqId 49: \u672a\u627e\u5230\u8be5\u8bf7\u6c42\u7684\u8bc1\u5238\u5b9a\u4e49, contract: Stock(symbol='TCNNF', exchange='SMART', currency='USD')
+Unknown contract: Stock(symbol='TCNNF', exchange='SMART', currency='USD')
+🔎 hds空头票借券体检(28只)
+✅ 可借充足(>10万股): 23 — ACIW,ADMA,ARCB,CHEF,FLR,HBNC,HOFT,ITIC,KLIC,MFIN,MVBF,OBT,PTGX,SKWD,SNEX,SPXC,SRRK,STRS,SWBI,TCBK,TRVI,TSBK,YORW
+⚠️ 可借紧张: 3 — LGND(58,490),PBHC(94,028),UTMD(36,276)
+❓ 无数据: 0 — 无
+🚫 无合约(OTC等,真钱做不了): 2 — NUVL,TCNNF
+→ 真钱试运行需过滤🚫,⚠️逐票看费率。(交易信号系统·借券体检)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-22 21:11:26] === done preflight (exit 0) ===
+[2026-07-22 21:30:05] === run trade_open ===
+全局撤单后剩余挂单 0
+{
+  "date": "2026-07-22",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "BMO",
+      "qty": 18,
+      "px": 179.3,
+      "usd": 3227.4
+    },
+    {
+      "sym": "NU",
+      "qty": -1.0,
+      "px": 14.41,
+      "usd": 14.41
+    },
+    {
+      "sym": "OKTA",
+      "qty": -10.0,
+      "px": 142.84,
+      "usd": 1428.4
+    },
+    {
+      "sym": "TIGO",
+      "qty": -16.0,
+      "px": 97.0,
+      "usd": 1552.0
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "BMO",
+      "qty": 18,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NU",
+      "qty": -1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "OKTA",
+      "qty": -10.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": -16.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🧪paper体检 hdstr开盘batch(DUQ627583)
+开仓1: ['SELL CHEF×5@~95.16']
+跳过: ['LCNB(ADV)', 'ACIW(gap+2.4%)', 'UTMD(ADV)']
+在手1/4
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-22 21:31:16] === done trade_open (exit 0) ===
+[2026-07-23 04:00:01] === run trade_close ===
+{
+  "date": "2026-07-23",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[hdstr close] 无变化
+[2026-07-23 04:00:10] === done trade_close (exit 0) ===
+[2026-07-23 04:30:02] === run review ===
+
+================================================================
+  统一组合 2026-07-23 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前3只: TIGO, JAZZ, RPRX
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓60/80笔,未到线,静默
+[c-edge] 平仓38/80笔,未到线,静默
+[ctg-edge] 平仓36/80笔,未到线,静默
+[ctr-edge] 平仓38/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起8日): 腿-1.43% vs 1xQQQ-0.90% α-0.53% | 当前1.508x | 回测参考(2020起):净值$8,459 CAGR+24.7% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓60/80 hds+4.4% QQQ-0.9% dd3.4% (静默)
+[tripwire] 正常: 滚动20笔 胜率60% 均笔+0.95%
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[tradability] 2026-07-22: 信号4个,真钱将剔除1个: ['LCNB(ADV$0.9M<5M)']
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-23 04:37:04] === done review (exit 0) ===
+前向验证 2026-07-23 第20个交易日 | 三线组合 +0.57% | 无脑QQQ +0.09% | alpha +0.48% (book $20115, 持仓11只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-23 21:10:05] === run preflight ===
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-23 21:10:16] === done preflight (exit 0) ===
+[2026-07-23 21:30:05] === run trade_open ===
+Error 1100, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u4e2d\u65ad\u3002
+Error 1100, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u4e2d\u65ad\u3002
+Error 1102, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u6062\u590d - \u6570\u636e\u5df2\u4fdd\u5b58\u3002: \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u5df2\u8fde\u63a5\uff1a usfarm; secdefil. \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u672a\u8fde\u63a5\uff1a ushmds.
+[2026-07-23 22:49:45] === run trade_open ===
+Error 1100, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u4e2d\u65ad\u3002
+Error 1100, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u4e2d\u65ad\u3002
+Error 1102, reqId -1: IBKR\u4e0eTrader Workstation\u7684\u8fde\u63a5\u6062\u590d - \u6570\u636e\u5df2\u4fdd\u5b58\u3002: \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u5df2\u8fde\u63a5\uff1a usfarm; secdefil. \u4ee5\u4e0b\u6570\u636e\u519c\u573a\u672a\u8fde\u63a5\uff1a ushmds.
+全局撤单后剩余挂单 0
+{
+  "date": "2026-07-23",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "BMO",
+      "qty": -18.0,
+      "px": 176.93,
+      "usd": 3184.7400000000002
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "px": 93.79,
+      "usd": 468.95000000000005
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 13,
+      "px": 250.7,
+      "usd": 3259.1
+    },
+    {
+      "sym": "RPRX",
+      "qty": 56,
+      "px": 59.115,
+      "usd": 3310.44
+    },
+    {
+      "sym": "TIGO",
+      "qty": -16.0,
+      "px": 97.23,
+      "usd": 1555.68
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "BMO",
+      "qty": -18.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 13,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RPRX",
+      "qty": 56,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": -16.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🧪paper体检 hdstr开盘batch(DUQ627583)
+开仓1: ['SELL CDNA×12@~38.4']
+跳过: ['XNCR(gap+2.1%)', 'LCNB(ADV)', 'FEIM(gap+7.4%)'] | 补挂TRAIL: ['CHEF']
+在手2/4
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-23 22:54:25] === done trade_open (exit 0) ===
+[2026-07-24 04:00:01] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-24",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+hdstr收盘对账: TRAIL已出['CHEF'] | 超时平仓单无
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-24 04:00:18] === done trade_close (exit 0) ===
+[2026-07-24 04:30:04] === run review ===
+
+================================================================
+  统一组合 2026-07-24 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前3只: TIGO, JAZZ, RPRX
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓62/80笔,未到线,静默
+[c-edge] 平仓37/80笔,未到线,静默
+[ctg-edge] 平仓35/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起9日): 腿-4.26% vs 1xQQQ-2.78% α-1.48% | 当前1.523x | 回测参考(2020起):净值$8,215 CAGR+24.1% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🚦 hds gate 进度(到期2026-09-08)
+① 平仓 62/80 ⏳
+② hds +6.0% vs QQQ -2.8% ✅领先
+③ QQQ窗口最大回撤 3.9%/3.0% ✅
+（交易信号系统·hds gate）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[tripwire] 正常: 滚动20笔 胜率60% 均笔+1.00%
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[tradability] 2026-07-23: 信号4个,真钱将剔除1个: ['LCNB(ADV$1.0M<5M)']
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-24 04:37:14] === done review (exit 0) ===
+前向验证 2026-07-24 第21个交易日 | 三线组合 -0.74% | 无脑QQQ -1.47% | alpha +0.73% (book $19853, 持仓13只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-24 21:10:04] === run preflight ===
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for DUQ627583 request timed out
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7496)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-24 21:14:56] === done preflight (exit 0) ===
+[2026-07-24 21:30:04] === run trade_open ===
+全局撤单后剩余挂单 2
+{
+  "date": "2026-07-24",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "CDNA",
+      "qty": 12.0,
+      "px": 37.876,
+      "usd": 454.51199999999994
+    },
+    {
+      "sym": "NU",
+      "qty": 1.0,
+      "px": 14.23,
+      "usd": 14.23
+    },
+    {
+      "sym": "TIGO",
+      "qty": 1.0,
+      "px": 95.01,
+      "usd": 95.01
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "CDNA",
+      "qty": 12.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "NU",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": 1.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🧪paper体检 hdstr开盘batch(DUQ627583)
+开仓3: ['SELL CHEF×5@~95.07', 'BUY SFNC×21@~22.92', 'BUY CDNA×13@~37.876']
+跳过: 无 | 补挂TRAIL: ['CDNA']
+在手4/4
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-24 21:31:25] === done trade_open (exit 0) ===
+[2026-07-25 04:00:01] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-25",
+  "type": "close",
+  "live": true,
+  "exits": [
+    {
+      "sym": "TIGO",
+      "qty": 35.0,
+      "close": 94.51000213623047,
+      "ma20": 94.58456573486328
+    }
+  ],
+  "placed": [
+    {
+      "sym": "TIGO",
+      "status": "PendingSubmit"
+    }
+  ]
+}
+hdstr收盘对账: TRAIL已出['CDNA'] | 超时平仓单无
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-25 04:00:19] === done trade_close (exit 0) ===
+[2026-07-25 04:30:01] === run review ===
+
+================================================================
+  统一组合 2026-07-25 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前2只: RPRX, JAZZ
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓64/80笔,未到线,静默
+[c-edge] 平仓37/80笔,未到线,静默
+[ctg-edge] 平仓35/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起10日): 腿-5.90% vs 1xQQQ-3.87% α-2.04% | 当前1.533x | 回测参考(2020起):净值$8,075 CAGR+23.8% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓64/80 hds+6.0% QQQ-3.9% dd4.9% (静默)
+[tripwire] 正常: 滚动20笔 胜率55% 均笔+0.56%
+[tradability] 2026-07-23 已记录,跳过
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-25 04:37:44] === done review (exit 0) ===
+前向验证 2026-07-25 第22个交易日 | 三线组合 -1.08% | 无脑QQQ -2.97% | alpha +1.88% (book $19783, 持仓12只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-25 21:10:04] === run preflight ===
+[webhook] 发送失败(不影响主流程): <urlopen error _ssl.c:1112: The handshake operation timed out>
+[2026-07-25 21:10:20] === done preflight (exit 0) ===
+[2026-07-25 21:30:05] === run trade_open ===
+全局撤单后剩余挂单 4
+{
+  "date": "2026-07-25",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "CDNA",
+      "qty": -13.0,
+      "px": 37.14,
+      "usd": 482.82
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "px": 94.86,
+      "usd": 474.3
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 6.0,
+      "px": 253.87,
+      "usd": 1523.22
+    },
+    {
+      "sym": "RPRX",
+      "qty": 27.0,
+      "px": 59.66,
+      "usd": 1610.82
+    },
+    {
+      "sym": "SFNC",
+      "qty": -21.0,
+      "px": 23.18,
+      "usd": 486.78
+    },
+    {
+      "sym": "TIGO",
+      "qty": -35.0,
+      "px": 94.5,
+      "usd": 3307.5
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "CDNA",
+      "qty": -13.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 6.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RPRX",
+      "qty": 27.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "SFNC",
+      "qty": -21.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": -35.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🧪paper体检 hdstr开盘batch(DUQ627583)
+开仓0: 无
+跳过: ['LCNB(ADV)'] | 补挂TRAIL: ['CHEF', 'SFNC', 'CDNA']
+在手3/4
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-25 21:31:21] === done trade_open (exit 0) ===
+[2026-07-26 04:00:04] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-26",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+[hdstr close] 无变化
+[2026-07-26 04:00:18] === done trade_close (exit 0) ===
+[2026-07-26 04:30:04] === run review ===
+
+================================================================
+  统一组合 2026-07-26 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前2只: JAZZ, RPRX
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓58/80笔,未到线,静默
+[c-edge] 平仓37/80笔,未到线,静默
+[ctg-edge] 平仓35/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起10日): 腿-5.90% vs 1xQQQ-3.87% α-2.04% | 当前1.533x | 回测参考(2020起):净值$8,075 CAGR+23.8% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓58/80 hds+4.7% QQQ-3.9% dd4.9% (静默)
+[tripwire] 正常: 滚动20笔 胜率55% 均笔+0.56%
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[tradability] 2026-07-24: 信号4个,真钱将剔除1个: ['UTMD(ADV$2.0M<5M)']
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-26 04:36:47] === done review (exit 0) ===
+前向验证 2026-07-26 第23个交易日 | 三线组合 -0.97% | 无脑QQQ -3.13% | alpha +2.16% (book $19806, 持仓12只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-26 21:10:04] === run preflight ===
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-26 21:10:12] === done preflight (exit 0) ===
+[2026-07-26 21:30:05] === run trade_open ===
+全局撤单后剩余挂单 3
+{
+  "date": "2026-07-26",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "CDNA",
+      "qty": -13.0,
+      "px": 37.14,
+      "usd": 482.82
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "px": 94.86,
+      "usd": 474.3
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 6.0,
+      "px": 253.87,
+      "usd": 1523.22
+    },
+    {
+      "sym": "RPRX",
+      "qty": 27.0,
+      "px": 59.66,
+      "usd": 1610.82
+    },
+    {
+      "sym": "SFNC",
+      "qty": -21.0,
+      "px": 23.18,
+      "usd": 486.78
+    },
+    {
+      "sym": "TIGO",
+      "qty": -35.0,
+      "px": 94.5,
+      "usd": 3307.5
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "CDNA",
+      "qty": -13.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 6.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RPRX",
+      "qty": 27.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "SFNC",
+      "qty": -21.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": -35.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🧪paper体检 hdstr开盘batch(DUQ627583)
+开仓1: ['SELL HBCP×7@~70.21']
+跳过: 无 | 补挂TRAIL: ['CHEF', 'SFNC', 'CDNA']
+在手4/4
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-26 21:32:21] === done trade_open (exit 0) ===
+[2026-07-27 04:00:04] === run trade_close ===
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "date": "2026-07-27",
+  "type": "close",
+  "live": true,
+  "exits": [],
+  "placed": []
+}
+hdstr收盘对账: TRAIL已出['HBCP'] | 超时平仓单无
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-27 04:00:17] === done trade_close (exit 0) ===
+[2026-07-27 04:30:05] === run review ===
+
+================================================================
+  统一组合 2026-07-27 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前2只: JAZZ, RPRX
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓57/80笔,未到线,静默
+[c-edge] 平仓37/80笔,未到线,静默
+[ctg-edge] 平仓35/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起10日): 腿-5.90% vs 1xQQQ-3.87% α-2.04% | 当前1.533x | 回测参考(2020起):净值$8,075 CAGR+23.8% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓57/80 hds+4.7% QQQ-3.9% dd4.9% (静默)
+[tripwire] 正常: 滚动20笔 胜率60% 均笔+0.86%
+[tradability] 2026-07-24 已记录,跳过
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-27 04:35:21] === done review (exit 0) ===
+前向验证 2026-07-27 第24个交易日 | 三线组合 -0.97% | 无脑QQQ -3.13% | alpha +2.16% (book $19806, 持仓12只)
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-27 09:00:03] === run golive_check ===
+🚦 上真钱体检 07-27: 4/5 绿
+✅ 账户入金 >2500 CAD(或直接USD)
+✅ 佣金优化(加拿大无Lite→已切阶梯式Tiered)
+✅ paper 连续干净 23/12 交易日(自2026-06-27)
+⬜ 小数股 API 端到端确认
+✅ 前向账本 24/12日 · 最多腿 93/60笔
+还差 1 个。①②做完手动 touch data/golive/funded 或 lite;③④⑤系统自己会变绿。
+（交易信号系统·上真钱体检）
+[webhook] 已发送 HTTP 200: b'{"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}'
+[2026-07-27 09:00:08] === done golive_check (exit 0) ===
+[2026-07-27 21:10:05] === run preflight ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-27 21:12:33] === done preflight (exit 0) ===
+[2026-07-27 21:30:04] === run trade_open ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+positions request timed out
+open orders request timed out
+completed orders request timed out
+account updates for U20220368 request timed out
+[hdstr] 连4001失败: 
+🛑 hdstr open:连不上网关
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-27 21:33:02] === done trade_open (exit 0) ===
+[2026-07-27 22:00:05] === run fractional_probe ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[probe] Gateway 离线,跳过
+[2026-07-27 22:02:30] === done fractional_probe (exit 0) ===
+[2026-07-28 04:00:01] === run trade_close ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4001)")
+Make sure API port on TWS/IBG is open
+[hdstr] 连4001失败: [Errno 61] Connect call failed ('127.0.0.1', 4001)
+🛑 hdstr close:连不上网关
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-28 04:02:31] === done trade_close (exit 0) ===
+[2026-07-28 04:30:02] === run review ===
+
+================================================================
+  统一组合 2026-07-28 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前2只: JAZZ, RPRX
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓59/80笔,未到线,静默
+[c-edge] 平仓37/80笔,未到线,静默
+[ctg-edge] 平仓35/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起11日): 腿-6.36% vs 1xQQQ-4.16% α-2.20% | 当前1.535x | 回测参考(2020起):净值$8,035 CAGR+23.7% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓59/80 hds+4.8% QQQ-4.2% dd5.2% (静默)
+[tripwire] 正常: 滚动20笔 胜率50% 均笔+0.29%
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[tradability] 2026-07-27: 信号4个,真钱将剔除2个: ['LCNB(ADV$0.7M<5M)', 'UTMD(ADV$2.0M<5M)']
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-28 04:38:33] === done review (exit 0) ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+forward-track: 网关连不上,跳过
+[2026-07-28 21:10:02] === run preflight ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-28 21:12:31] === done preflight (exit 0) ===
+[2026-07-28 21:30:00] === run trade_open ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+💰真钱 hdstr开盘batch(U20220368)
+开仓1: ['SELL ECPG×5@~94.45']
+跳过: ['ACNB(ADV)', 'LCNB(ADV)', 'IMMR(ADV)']
+在手3/4
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-28 21:32:46] === done trade_open (exit 0) ===
+[2026-07-29 04:00:04] === run trade_close ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+hdstr收盘对账: TRAIL已出['ECPG'] | 超时平仓单无
+（hdstr真钱试运行·自动）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-29 04:02:37] === done trade_close (exit 0) ===
+[2026-07-29 04:30:00] === run review ===
+
+================================================================
+  统一组合 2026-07-29 (总资金$20000)
+================================================================
+  ① 指数核心 30% ($6000): 持有QQQ
+  ② 长线持股 20% ($4000): 9只等权各$444
+       FUTU, PDD, AU, AEM, NU, KSPI, NVDA, ONC, NBIX
+  ③ 波动捕捉 50% ($10000): IBKR动量腿自动
+       当前2只: RPRX, JAZZ
+
+  ⚠️ 系统全自动决定;Riley只批准执行。指数+长线手动/半自动下单,波动腿IBKR全自动。
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[mn-edge] 已报过80笔体检,跳过
+[hds-edge] 平仓61/80笔,未到线,静默
+[c-edge] 平仓37/80笔,未到线,静默
+[ctg-edge] 平仓35/80笔,未到线,静默
+[ctr-edge] 平仓37/80笔,未到线,静默
+杠杆腿 前向(2026-07-13起12日): 腿-7.77% vs 1xQQQ-5.09% α-2.68% | 当前1.544x | 回测参考(2020起):净值$7,914 CAGR+23.4% 最大回撤39%
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[hds-gate] 进度: 平仓61/80 hds+4.2% QQQ-5.1% dd6.1% (静默)
+🚨 hds tripwire 破线 → 已自动处置,无需你操作
+滚动20笔: 胜率40%(线45%) 均笔-0.34%(线0)
+✅ 系统已做: kill-switch落盘,真钱端新开仓自动停(paper继续攒数据)
+你醒后可做: 看排查清单①DeepSeek模型版本②依赖③regime,再决定复活或退役
+（交易信号系统·hds tripwire·已自动处置）
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[tradability] 2026-07-28: 信号4个,真钱将剔除3个: ['ACNB(ADV$4.6M<5M)', 'LCNB(ADV$0.8M<5M)', 'IMMR(ADV$4.8M<5M)']
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-29 04:37:48] === done review (exit 0) ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+forward-track: 网关连不上,跳过
+[2026-07-29 21:17:00] === run preflight ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+[2026-07-29 21:19:28] === done preflight (exit 0) ===
+[2026-07-29 21:30:04] === run trade_open ===
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 4002)")
+Make sure API port on TWS/IBG is open
+API connection failed: ConnectionRefusedError(61, "Connect call failed ('127.0.0.1', 7497)")
+Make sure API port on TWS/IBG is open
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+⏸️ hdstr 新开仓已停(kill-switch: tripwire破线 胜率40%/均笔-0.34%),仅维护存量
+[webhook] 已发送 HTTP 200: b'{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}'
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[qqq-dca] 无触发(距高点-9.4%,本月已用$0)
+[2026-07-29 21:32:44] === done trade_open (exit 0) ===

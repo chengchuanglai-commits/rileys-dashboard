@@ -52,8 +52,10 @@ def run():
     if not ib:
         send("⚠️ 开盘batch:网关连不上,中止\n（交易信号系统）"); return
     h = health(ib)
-    if not h["is_paper"] and not LIVE:
-        send(f"⚠️ 开盘batch:账户{h['account']}非paper且LIVE=False,中止\n（交易信号系统）")
+    if not h["is_paper"]:
+        # 2026-07-27硬化:主batch永远只管paper账本,无论LIVE(原`and not LIVE`在LIVE=1时防护失效,
+        # 真钱4001上线当天差点被$20k账本轰击$2.5k真钱账户)。真钱交易只走hdstr_exec自己的守卫。
+        send(f"🛑 开盘batch:连到非paper账户{h['account']},硬中止(主batch只管paper)\n（交易信号系统）")
         ib.disconnect(); return
     # 开盘前全局撤单(仅LIVE):reqGlobalCancel跨session可靠,根治跨日/跨session遗留单+止损重复堆叠
     #(cancelOrder只能撤本session会报10147→旧止损撤不掉再重挂=越堆越多)。batch末尾按当前多头重挂唯一止损。

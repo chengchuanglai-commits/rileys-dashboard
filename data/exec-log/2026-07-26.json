@@ -1,0 +1,78 @@
+{
+  "date": "2026-07-26",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "CDNA",
+      "qty": -13.0,
+      "px": 37.14,
+      "usd": 482.82
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "px": 94.86,
+      "usd": 474.3
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 6.0,
+      "px": 253.87,
+      "usd": 1523.22
+    },
+    {
+      "sym": "RPRX",
+      "qty": 27.0,
+      "px": 59.66,
+      "usd": 1610.82
+    },
+    {
+      "sym": "SFNC",
+      "qty": -21.0,
+      "px": 23.18,
+      "usd": 486.78
+    },
+    {
+      "sym": "TIGO",
+      "qty": -35.0,
+      "px": 94.5,
+      "usd": 3307.5
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "CDNA",
+      "qty": -13.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 6.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RPRX",
+      "qty": 27.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "SFNC",
+      "qty": -21.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": -35.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}

@@ -18,6 +18,13 @@ def build_review(exec_log, actual_mv, target_usd, nav, peak):
     # 持仓 vs 三线目标(市值口径,容差要吃下"sim早盘换仓→IBKR当晚才执行"的一天滞后)
     try: pending = json.load(open(PENDING_EXIT))
     except Exception: pending = {}
+    # hdstr试运行豁免(2026-07-22):paper体检期其持仓混在同账户,不属主账本目标,对账跳过
+    try:
+        _tr = json.load(open("data/hdstr-trial.json"))
+        hdstr_syms = {p["ticker"] for p in _tr.get("positions", []) if p.get("status") in ("open", "closing_timeout")}
+    except Exception:
+        hdstr_syms = set()
+    actual_mv = {k: v for k, v in actual_mv.items() if k not in hdstr_syms}
     today = exec_log.get("date", time.strftime("%Y-%m-%d"))
     new_pending = {}
     for s in set(list(target_usd) + list(actual_mv)):

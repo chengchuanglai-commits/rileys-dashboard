@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-15",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "DELL",
+      "qty": -7.0,
+      "px": 462.27,
+      "usd": 3235.89
+    },
+    {
+      "sym": "FFIV",
+      "qty": 4.0,
+      "px": 432.0,
+      "usd": 1728.0
+    },
+    {
+      "sym": "RVMD",
+      "qty": 9.0,
+      "px": 186.83,
+      "usd": 1681.47
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "DELL",
+      "qty": -7.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "FFIV",
+      "qty": 4.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RVMD",
+      "qty": 9.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}

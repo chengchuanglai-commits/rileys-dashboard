@@ -1,0 +1,11 @@
+{
+  "date": "2026-07-19",
+  "anomalies": [
+    "IBKR未连接:持仓对账跳过(数据不可信,非无异常)"
+  ],
+  "infos": [],
+  "nav": 20000.0,
+  "drawdown_pct": 0.0,
+  "actions": [],
+  "breaker": "normal"
+}

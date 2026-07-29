@@ -1,0 +1,77 @@
+{
+ "positions": [
+  {
+   "ticker": "CHEF",
+   "action": "SELL",
+   "signal_date": "2026-07-21",
+   "entry_date": "2026-07-22",
+   "shares": 5,
+   "signal_price": 95.58,
+   "ref_price": 95.16,
+   "max_hold_date": "2026-08-05",
+   "status": "closed",
+   "close_date": "2026-07-24",
+   "close_via": "trail/manual"
+  },
+  {
+   "ticker": "CDNA",
+   "action": "SELL",
+   "signal_date": "2026-07-22",
+   "entry_date": "2026-07-23",
+   "shares": 12,
+   "signal_price": 38.54,
+   "ref_price": 38.4,
+   "max_hold_date": "2026-08-06",
+   "status": "closed",
+   "close_date": "2026-07-25",
+   "close_via": "trail/manual"
+  },
+  {
+   "ticker": "CHEF",
+   "action": "SELL",
+   "signal_date": "2026-07-23",
+   "entry_date": "2026-07-24",
+   "shares": 5,
+   "signal_price": 93.93,
+   "ref_price": 95.07,
+   "max_hold_date": "2026-08-07",
+   "status": "open"
+  },
+  {
+   "ticker": "SFNC",
+   "action": "BUY",
+   "signal_date": "2026-07-23",
+   "entry_date": "2026-07-24",
+   "shares": 21,
+   "signal_price": 23.11,
+   "ref_price": 22.92,
+   "max_hold_date": "2026-08-07",
+   "status": "open"
+  },
+  {
+   "ticker": "CDNA",
+   "action": "BUY",
+   "signal_date": "2026-07-23",
+   "entry_date": "2026-07-24",
+   "shares": 13,
+   "signal_price": 37.78,
+   "ref_price": 37.876,
+   "max_hold_date": "2026-08-07",
+   "status": "open"
+  },
+  {
+   "ticker": "HBCP",
+   "action": "SELL",
+   "signal_date": "2026-07-24",
+   "entry_date": "2026-07-26",
+   "shares": 7,
+   "signal_price": 69.86,
+   "ref_price": 70.21,
+   "max_hold_date": "2026-08-07",
+   "status": "closed",
+   "close_date": "2026-07-27",
+   "close_via": "trail/manual"
+  }
+ ],
+ "log": []
+}

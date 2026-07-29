@@ -42,4 +42,5 @@ if __name__ == "__main__":
         main()
     except Exception as e:
         print(f"[webhook] 整体失败: {e}")
-    sys.exit(0)
+    # 不许 sys.exit:各执行器经 runpy 内嵌调用本脚本,SystemExit 会穿透 except Exception
+    # 直接杀死调用方(2026-07-29实炸:tripwire破线后状态文件没落盘)。子进程方式跑到底本来就是退出码0。

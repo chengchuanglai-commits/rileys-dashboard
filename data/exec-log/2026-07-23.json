@@ -1,0 +1,67 @@
+{
+  "date": "2026-07-23",
+  "live": true,
+  "drawdown": 0.0,
+  "breaker": "normal",
+  "plan": [
+    {
+      "sym": "BMO",
+      "qty": -18.0,
+      "px": 176.93,
+      "usd": 3184.7400000000002
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "px": 93.79,
+      "usd": 468.95000000000005
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 13,
+      "px": 250.7,
+      "usd": 3259.1
+    },
+    {
+      "sym": "RPRX",
+      "qty": 56,
+      "px": 59.115,
+      "usd": 3310.44
+    },
+    {
+      "sym": "TIGO",
+      "qty": -16.0,
+      "px": 97.23,
+      "usd": 1555.68
+    }
+  ],
+  "gate_ok": true,
+  "gate_reason": "",
+  "placed": [
+    {
+      "sym": "BMO",
+      "qty": -18.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "CHEF",
+      "qty": 5.0,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "JAZZ",
+      "qty": 13,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "RPRX",
+      "qty": 56,
+      "status": "PendingSubmit"
+    },
+    {
+      "sym": "TIGO",
+      "qty": -16.0,
+      "status": "PendingSubmit"
+    }
+  ]
+}
