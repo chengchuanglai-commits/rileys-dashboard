@@ -146,6 +146,31 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 15.75
     },
     {
+      "ticker": "CDNA",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-22",
+      "entry_price": 38.54,
+      "allocated_usd": 500,
+      "shares": 12.9735,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 32.76,
+      "stop_loss": 39.31,
+      "max_hold_date": "2026-07-24",
+      "daily_prices": {
+        "2026-07-23": {
+          "open": 38.44,
+          "high": 38.72,
+          "low": 37.38,
+          "close": 37.61,
+          "pnl_pct": 2.41
+        }
+      },
+      "position_usd": 224.5,
+      "unrealized_pnl_usd": 5.41
+    },
+    {
       "ticker": "HFWA",
       "name": "",
       "action": "BUY",
@@ -158,17 +183,9 @@ window.PORTFOLIO_HDS = {
       "take_profit": 34.68,
       "stop_loss": 29.56,
       "max_hold_date": "2026-07-29",
-      "daily_prices": {
-        "2026-07-28": {
-          "open": 30.02,
-          "high": 30.84,
-          "low": 29.64,
-          "close": 29.89,
-          "pnl_pct": -0.9
-        }
-      },
-      "position_usd": 225.46,
-      "unrealized_pnl_usd": -2.03
+      "daily_prices": {},
+      "position_usd": 225.1,
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "BANR",
@@ -183,33 +200,8 @@ window.PORTFOLIO_HDS = {
       "take_profit": 80.83,
       "stop_loss": 68.88,
       "max_hold_date": "2026-07-29",
-      "daily_prices": {
-        "2026-07-28": {
-          "open": 70.83,
-          "high": 71.02,
-          "low": 69.82,
-          "close": 70.55,
-          "pnl_pct": 0.37
-        }
-      },
-      "position_usd": 225.46,
-      "unrealized_pnl_usd": 0.83
-    },
-    {
-      "ticker": "ACNB",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-28",
-      "entry_price": 64.0,
-      "allocated_usd": 500,
-      "shares": 7.8125,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 73.6,
-      "stop_loss": 62.72,
-      "max_hold_date": "2026-07-30",
       "daily_prices": {},
-      "position_usd": 225.01,
+      "position_usd": 225.1,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2189,72 +2181,34 @@ window.PORTFOLIO_HDS = {
       "position_usd": 224.96
     },
     {
-      "ticker": "CDNA",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-22",
-      "entry_price": 38.54,
-      "allocated_usd": 500,
-      "shares": 12.9735,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 32.76,
-      "stop_loss": 39.31,
-      "max_hold_date": "2026-07-24",
-      "daily_prices": {
-        "2026-07-23": {
-          "open": 38.44,
-          "high": 38.72,
-          "low": 37.38,
-          "close": 37.61,
-          "pnl_pct": 2.41
-        },
-        "2026-07-24": {
-          "open": 37.8,
-          "high": 38.48,
-          "low": 37.05,
-          "close": 37.14,
-          "pnl_pct": 3.63
-        }
-      },
-      "close_date": "2026-07-24",
-      "close_price": 37.14,
-      "final_pnl_pct": 3.63,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 8.15,
-      "position_usd": 224.5
-    },
-    {
-      "ticker": "LCNB",
+      "ticker": "CHEF",
       "name": "",
       "action": "SELL",
       "signal_date": "2026-07-23",
-      "entry_price": 19.57,
+      "entry_price": 93.93,
       "allocated_usd": 500,
-      "shares": 25.5493,
+      "shares": 5.3231,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 16.63,
-      "stop_loss": 19.96,
+      "take_profit": 79.84,
+      "stop_loss": 95.81,
       "max_hold_date": "2026-07-27",
       "daily_prices": {
-        "2026-07-24": {
-          "open": 19.61,
-          "high": 20.28,
-          "low": 19.18,
-          "close": 20.0,
-          "pnl_pct": -1.99
+        "2026-07-27": {
+          "open": 95.42,
+          "high": 96.39,
+          "low": 90.97,
+          "close": 95.68,
+          "pnl_pct": -2.0
         }
       },
-      "close_date": "2026-07-24",
-      "close_price": 19.96,
-      "final_pnl_pct": -1.99,
+      "close_date": "2026-07-27",
+      "close_price": 95.81,
+      "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.49,
+      "realized_pnl_usd": -4.51,
       "position_usd": 225.69
     },
     {
@@ -2271,13 +2225,6 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 22.65,
       "max_hold_date": "2026-07-27",
       "daily_prices": {
-        "2026-07-24": {
-          "open": 23.01,
-          "high": 23.38,
-          "low": 22.98,
-          "close": 23.18,
-          "pnl_pct": 0.3
-        },
         "2026-07-27": {
           "open": 23.33,
           "high": 23.5,
@@ -2294,89 +2241,20 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -1.38,
       "position_usd": 225.69
-    },
-    {
-      "ticker": "HBCP",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-24",
-      "entry_price": 69.86,
-      "allocated_usd": 500,
-      "shares": 7.1572,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 59.38,
-      "stop_loss": 71.26,
-      "max_hold_date": "2026-07-28",
-      "daily_prices": {
-        "2026-07-27": {
-          "open": 70.51,
-          "high": 71.38,
-          "low": 69.82,
-          "close": 70.28,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-07-27",
-      "close_price": 71.26,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.52,
-      "position_usd": 226.05
-    },
-    {
-      "ticker": "HFWA",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-24",
-      "entry_price": 30.22,
-      "allocated_usd": 500,
-      "shares": 16.5453,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 25.69,
-      "stop_loss": 30.82,
-      "max_hold_date": "2026-07-28",
-      "daily_prices": {
-        "2026-07-27": {
-          "open": 30.21,
-          "high": 30.73,
-          "low": 29.78,
-          "close": 29.8,
-          "pnl_pct": 1.39
-        },
-        "2026-07-28": {
-          "open": 30.02,
-          "high": 30.84,
-          "low": 29.64,
-          "close": 29.89,
-          "pnl_pct": -1.99
-        }
-      },
-      "close_date": "2026-07-28",
-      "close_price": 30.82,
-      "final_pnl_pct": -1.99,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.5,
-      "position_usd": 226.05
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 61,
-    "win_trades": 34,
-    "win_rate": 55.7,
-    "total_realized_pnl_usd": 250.12,
-    "open_unrealized_pnl_usd": 29.23,
-    "portfolio_value": 2279.35,
-    "total_commission_usd": 122.0,
-    "skipped_gap": 35,
+    "total_trades": 58,
+    "win_trades": 33,
+    "win_rate": 56.9,
+    "total_realized_pnl_usd": 250.97,
+    "open_unrealized_pnl_usd": 35.83,
+    "portfolio_value": 2286.8,
+    "total_commission_usd": 116.0,
+    "skipped_gap": 32,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 28,
-    "updated_at": "2026-07-28"
+    "skipped_no_cash": 34,
+    "updated_at": "2026-07-29"
   }
 };
