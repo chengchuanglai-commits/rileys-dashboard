@@ -1,4 +1,4 @@
-// Plan C 模拟盘持仓 — 历史回溯 + 实时更新（跳空过滤版）
+// Plan C 模拟盘持仓 — 每日自动更新（跳空过滤版）
 window.PORTFOLIO_C = {
   "capital_usd": 2000,
   "open_positions": [
@@ -1758,12 +1758,10 @@ window.PORTFOLIO_C = {
     "total_trades": 37,
     "win_trades": 24,
     "win_rate": 64.9,
-    "total_realized_pnl_usd": 158.71,
-    "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2158.71,
-    "total_commission_usd": 74.0,
+    "total_realized_pnl_usd": 158.68,
+    "open_unrealized_pnl_usd": 0,
+    "portfolio_value": 2158.68,
     "skipped_gap": 15,
-    "skipped_zero_shares": 1,
-    "updated_at": "2026-07-29"
+    "updated_at": "2026-07-30"
   }
 };

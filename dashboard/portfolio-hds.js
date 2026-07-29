@@ -146,56 +146,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 15.75
     },
     {
-      "ticker": "HFWA",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-27",
-      "entry_price": 30.16,
-      "allocated_usd": 500,
-      "shares": 16.5782,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 34.68,
-      "stop_loss": 29.56,
-      "max_hold_date": "2026-07-29",
-      "daily_prices": {
-        "2026-07-28": {
-          "open": 30.02,
-          "high": 30.84,
-          "low": 29.64,
-          "close": 29.89,
-          "pnl_pct": -0.9
-        }
-      },
-      "position_usd": 225.46,
-      "unrealized_pnl_usd": -2.03
-    },
-    {
-      "ticker": "BANR",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-27",
-      "entry_price": 70.29,
-      "allocated_usd": 500,
-      "shares": 7.1134,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 80.83,
-      "stop_loss": 68.88,
-      "max_hold_date": "2026-07-29",
-      "daily_prices": {
-        "2026-07-28": {
-          "open": 70.83,
-          "high": 71.02,
-          "low": 69.82,
-          "close": 70.55,
-          "pnl_pct": 0.37
-        }
-      },
-      "position_usd": 225.46,
-      "unrealized_pnl_usd": 0.83
-    },
-    {
       "ticker": "ACNB",
       "name": "",
       "action": "BUY",
@@ -208,8 +158,50 @@ window.PORTFOLIO_HDS = {
       "take_profit": 73.6,
       "stop_loss": 62.72,
       "max_hold_date": "2026-07-30",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-29": {
+          "open": 64.12,
+          "high": 64.59,
+          "low": 63.64,
+          "close": 64.16,
+          "pnl_pct": 0.25
+        }
+      },
       "position_usd": 225.01,
+      "unrealized_pnl_usd": 0.56
+    },
+    {
+      "ticker": "RGEN",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-29",
+      "entry_price": 146.3,
+      "allocated_usd": 500,
+      "shares": 3.4176,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 168.25,
+      "stop_loss": 143.37,
+      "max_hold_date": "2026-07-31",
+      "daily_prices": {},
+      "position_usd": 224.6,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "BANR",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-29",
+      "entry_price": 70.37,
+      "allocated_usd": 500,
+      "shares": 7.1053,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 80.93,
+      "stop_loss": 68.96,
+      "max_hold_date": "2026-07-31",
+      "daily_prices": {},
+      "position_usd": 224.6,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2349,8 +2341,8 @@ window.PORTFOLIO_HDS = {
         },
         "2026-07-28": {
           "open": 30.02,
-          "high": 30.84,
-          "low": 29.64,
+          "high": 30.85,
+          "low": 29.63,
           "close": 29.89,
           "pnl_pct": -1.99
         }
@@ -2363,18 +2355,94 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.5,
       "position_usd": 226.05
+    },
+    {
+      "ticker": "HFWA",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-27",
+      "entry_price": 30.16,
+      "allocated_usd": 500,
+      "shares": 16.5782,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 34.68,
+      "stop_loss": 29.56,
+      "max_hold_date": "2026-07-29",
+      "daily_prices": {
+        "2026-07-28": {
+          "open": 30.02,
+          "high": 30.85,
+          "low": 29.63,
+          "close": 29.89,
+          "pnl_pct": -0.9
+        },
+        "2026-07-29": {
+          "open": 29.71,
+          "high": 29.88,
+          "low": 29.58,
+          "close": 29.72,
+          "pnl_pct": -1.46
+        }
+      },
+      "close_date": "2026-07-29",
+      "close_price": 29.72,
+      "final_pnl_pct": -1.46,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.29,
+      "position_usd": 225.46
+    },
+    {
+      "ticker": "BANR",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-27",
+      "entry_price": 70.29,
+      "allocated_usd": 500,
+      "shares": 7.1134,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 80.83,
+      "stop_loss": 68.88,
+      "max_hold_date": "2026-07-29",
+      "daily_prices": {
+        "2026-07-28": {
+          "open": 70.83,
+          "high": 71.05,
+          "low": 69.82,
+          "close": 70.55,
+          "pnl_pct": 0.37
+        },
+        "2026-07-29": {
+          "open": 70.21,
+          "high": 70.68,
+          "low": 69.83,
+          "close": 70.03,
+          "pnl_pct": -0.37
+        }
+      },
+      "close_date": "2026-07-29",
+      "close_price": 70.03,
+      "final_pnl_pct": -0.37,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.83,
+      "position_usd": 225.46
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 61,
+    "total_trades": 63,
     "win_trades": 34,
-    "win_rate": 55.7,
-    "total_realized_pnl_usd": 250.12,
-    "open_unrealized_pnl_usd": 29.23,
-    "portfolio_value": 2279.35,
-    "total_commission_usd": 122.0,
-    "skipped_gap": 35,
+    "win_rate": 54.0,
+    "total_realized_pnl_usd": 246.0,
+    "open_unrealized_pnl_usd": 30.99,
+    "portfolio_value": 2276.99,
+    "total_commission_usd": 126.0,
+    "skipped_gap": 37,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 28,
     "updated_at": "2026-07-29"
