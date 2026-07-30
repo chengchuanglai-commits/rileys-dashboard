@@ -23,11 +23,13 @@ if [ "$1" = "review" ]; then
   # 2026-07-29大清理:只留活腿hds(gate/tripwire数据源)+hdstr(真钱影子对照)。
   # 退役冻结(账本保留在data/,结论在legs_tested_summary记忆):momma/momh(动量=幸存者偏差)、
   # mn(80笔体检已裁)、c/ctg/ctr(7-17冻结,结论移动止损赢,已由hdstr继承)。复活=加回循环即可。
-  for L in hds hdstr; do
+  for L in hds hdstr kimi; do   # kimi=信号引擎A/B影子(2026-07-30,Kimi K2.6 vs DeepSeek,同出场只换大脑)
     /usr/bin/python3 scripts/backfill-portfolio-$L.py >> data/exec-log/legs-refill.log 2>&1 || true
   done
-  # hds edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书裁决
-  LEG=hds /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
+  # edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书裁决
+  for L in hds kimi; do
+    LEG=$L /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
+  done
   # 杠杆指数腿:每日重算净值曲线+回撤(paper跟踪,见 spec 2026-07-07)。FMP_API_KEY上面已export
   /usr/bin/python3 scripts/backfill-portfolio-lev.py >> data/exec-log/launchd.log 2>&1 || true
   # hds真钱上车gate(预注册2026-07-14):日常静默,周五推进度,达标/到期自动裁决→飞书

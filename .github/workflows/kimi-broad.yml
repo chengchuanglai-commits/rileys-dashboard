@@ -1,0 +1,113 @@
+name: Kimi 广池 A/B 影子
+
+# 信号引擎 A/B:Kimi K2.6 vs DeepSeek(2026-07-30 立项)。严格配对——只分析 deepseek-broad
+# 当天已提交的同一批候选,同框架同出场,唯一变量=大脑。80笔平仓后 analyze-leg-edge 裁决。
+# 纯影子:只记录+模拟台账,绝不碰真钱。
+
+on:
+  schedule:
+    - cron: '45 12 * * 1-5'   # 12:45 UTC,等 deepseek-broad(12:00起,~30分钟)提交候选后
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '指定分析日期 YYYY-MM-DD(默认今天;测试/补跑用)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-pipeline    # 与主管线共用,防同时提交撞车
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.c.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - id: c
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%u)" -ge 6 ]; then
+            echo "周末跳过"; echo "run=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # 幂等:定时器迟到重复触发时,今日已有产出则跳过。手动 dispatch 始终放行。
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "dashboard/trading-signals-history/kimi/$(date -u +%F)-kimi.json" ]; then
+            echo "今日 kimi 影子已完成,跳过"; echo "run=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+  kimi:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install yfinance lxml "git+https://github.com/TauricResearch/TradingAgents.git@a33fd4c0f134485a43553a2c23a63cb14adbd88f"  # 与 deepseek-broad 同 SHA,控制变量
+
+      - name: Kimi 配对分析(读 deepseek 同批候选)
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          BACKFILL_DATE: ${{ inputs.date }}
+        run: python scripts/generate-kimi-shadow.py
+
+      - name: 飞书通知:结果
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, glob
+          files = sorted(glob.glob("dashboard/trading-signals-history/kimi/*-kimi.json"))
+          if not files:
+              print("无 kimi 文件(候选缺失被跳过?),不通知"); raise SystemExit(0)
+          d = json.load(open(files[-1], encoding="utf-8"))
+          sg = d.get("signals", []); av = d.get("all_verdicts", [])
+          lines = [f"🌙 Kimi A/B 影子完成 {d.get('date','')}",
+                   f"分析 {len(av)} 只(与 DeepSeek 同批) · 可操作 {len(sg)} 条\n"]
+          for s in sg:
+              icon = "🟢" if s.get("action") == "BUY" else "🔴"
+              lines.append(f"{icon} {s.get('action')} {s.get('ticker')} @ ${s.get('current_price')}")
+          if not sg:
+              lines.append("（今日无可操作信号）")
+          lines.append("\n（交易信号系统·Kimi影子·纯记录不交易）")
+          os.environ["NOTIFY_MESSAGE"] = "\n".join(lines)
+          import runpy
+          runpy.run_path("scripts/notify-webhook.py", run_name="__main__")
+          EOF
+
+      - name: 更新 kimi 影子台账
+        continue-on-error: true
+        run: python scripts/backfill-portfolio-kimi.py
+
+      - name: 提交
+        if: always()
+        run: |
+          git config user.name "kimi-broad-bot"
+          git config user.email "kimi-broad-bot@users.noreply.github.com"
+          git add dashboard/trading-signals-history/kimi/ 2>/dev/null || true
+          git add data/portfolio_kimi.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Kimi 广池 A/B 影子 $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done
+          exit 1
+
+      - name: 飞书通知:失败
+        if: failure()
+        continue-on-error: true
+        env:
+          NOTIFY_WEBHOOK: ${{ secrets.NOTIFY_WEBHOOK }}
+        run: |
+          NOTIFY_MESSAGE="$(printf '🚨 Kimi A/B 影子任务失败 %s\n请到 GitHub Actions 查看 kimi-broad 日志\n（交易信号系统）' "$(date -u +%F)")"
+          export NOTIFY_MESSAGE
+          python3 scripts/notify-webhook.py
