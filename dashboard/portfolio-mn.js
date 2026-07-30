@@ -165,9 +165,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 81.58,
       "stop_loss": 69.52,
       "max_hold_date": "2026-07-31",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-30": {
+          "open": 71.3,
+          "high": 72.04,
+          "low": 70.8,
+          "close": 71.04,
+          "pnl_pct": 0.14
+        }
+      },
       "position_usd": 205.34,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 0.29
     },
     {
       "ticker": "ECPG",
@@ -182,42 +190,50 @@ window.PORTFOLIO_MN = {
       "take_profit": 107.9,
       "stop_loss": 91.95,
       "max_hold_date": "2026-07-31",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-30": {
+          "open": 94.48,
+          "high": 96.38,
+          "low": 93.34,
+          "close": 94.81,
+          "pnl_pct": 1.04
+        }
+      },
       "position_usd": 205.34,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 2.14
     },
     {
-      "ticker": "SLGN",
-      "name": "西拉格包装",
+      "ticker": "UTMD",
+      "name": "犹他医疗产品",
       "action": "BUY",
-      "signal_date": "2026-07-29",
-      "entry_price": 42.65,
+      "signal_date": "2026-07-30",
+      "entry_price": 71.04,
       "allocated_usd": 500,
-      "shares": 11.7233,
+      "shares": 7.0383,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 49.05,
-      "stop_loss": 41.8,
-      "max_hold_date": "2026-07-31",
+      "take_profit": 81.7,
+      "stop_loss": 69.62,
+      "max_hold_date": "2026-08-03",
       "daily_prices": {},
-      "position_usd": 205.34,
+      "position_usd": 204.52,
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "FCFS",
-      "name": "第一现金金融服务",
+      "ticker": "IMMR",
+      "name": "Immersion公司",
       "action": "BUY",
-      "signal_date": "2026-07-29",
-      "entry_price": 202.22,
+      "signal_date": "2026-07-30",
+      "entry_price": 7.45,
       "allocated_usd": 500,
-      "shares": 2.4726,
-      "actual_position_usd": 500.01,
+      "shares": 67.1141,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 232.55,
-      "stop_loss": 198.18,
-      "max_hold_date": "2026-07-31",
+      "take_profit": 8.57,
+      "stop_loss": 7.3,
+      "max_hold_date": "2026-08-03",
       "daily_prices": {},
-      "position_usd": 205.34,
+      "position_usd": 204.52,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -3569,9 +3585,9 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-07-30",
       "daily_prices": {
         "2026-07-29": {
-          "open": 95.53,
+          "open": 95.16,
           "high": 97.8,
-          "low": 93.41,
+          "low": 93.4,
           "close": 93.83,
           "pnl_pct": -2.0
         }
@@ -3663,7 +3679,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-29": {
           "open": 188.21,
-          "high": 192.54,
+          "high": 193.39,
           "low": 184.32,
           "close": 185.56,
           "pnl_pct": -2.0
@@ -3677,20 +3693,82 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.14,
       "position_usd": 207.0
+    },
+    {
+      "ticker": "SLGN",
+      "name": "西拉格包装",
+      "action": "BUY",
+      "signal_date": "2026-07-29",
+      "entry_price": 42.65,
+      "allocated_usd": 500,
+      "shares": 11.7233,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 49.05,
+      "stop_loss": 41.8,
+      "max_hold_date": "2026-07-31",
+      "daily_prices": {
+        "2026-07-30": {
+          "open": 42.65,
+          "high": 42.83,
+          "low": 40.72,
+          "close": 40.88,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-07-30",
+      "close_price": 41.8,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.09,
+      "position_usd": 205.34
+    },
+    {
+      "ticker": "FCFS",
+      "name": "第一现金金融服务",
+      "action": "BUY",
+      "signal_date": "2026-07-29",
+      "entry_price": 202.22,
+      "allocated_usd": 500,
+      "shares": 2.4726,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 232.55,
+      "stop_loss": 198.18,
+      "max_hold_date": "2026-07-31",
+      "daily_prices": {
+        "2026-07-30": {
+          "open": 204.37,
+          "high": 204.99,
+          "low": 198.08,
+          "close": 200.22,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-30",
+      "close_price": 198.18,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 205.34
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 102,
+    "total_trades": 104,
     "win_trades": 28,
-    "win_rate": 27.5,
-    "total_realized_pnl_usd": 53.44,
-    "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2078.08,
-    "total_commission_usd": 204.0,
+    "win_rate": 26.9,
+    "total_realized_pnl_usd": 45.25,
+    "open_unrealized_pnl_usd": 27.06,
+    "portfolio_value": 2072.31,
+    "total_commission_usd": 208.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 125,
-    "updated_at": "2026-07-29"
+    "skipped_no_cash": 129,
+    "updated_at": "2026-07-30"
   }
 };
