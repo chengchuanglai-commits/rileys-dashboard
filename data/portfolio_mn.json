@@ -168,13 +168,13 @@
         "2026-07-30": {
           "open": 71.3,
           "high": 72.04,
-          "low": 70.8,
-          "close": 71.04,
-          "pnl_pct": 0.14
+          "low": 70.71,
+          "close": 70.71,
+          "pnl_pct": -0.32
         }
       },
       "position_usd": 205.34,
-      "unrealized_pnl_usd": 0.29
+      "unrealized_pnl_usd": -0.66
     },
     {
       "ticker": "ECPG",
@@ -194,25 +194,25 @@
           "open": 94.48,
           "high": 96.38,
           "low": 93.34,
-          "close": 94.81,
-          "pnl_pct": 1.04
+          "close": 94.67,
+          "pnl_pct": 0.9
         }
       },
       "position_usd": 205.34,
-      "unrealized_pnl_usd": 2.14
+      "unrealized_pnl_usd": 1.85
     },
     {
       "ticker": "UTMD",
       "name": "犹他医疗产品",
       "action": "BUY",
       "signal_date": "2026-07-30",
-      "entry_price": 71.04,
+      "entry_price": 70.71,
       "allocated_usd": 500,
-      "shares": 7.0383,
+      "shares": 7.0711,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 81.7,
-      "stop_loss": 69.62,
+      "take_profit": 81.32,
+      "stop_loss": 69.3,
       "max_hold_date": "2026-08-03",
       "daily_prices": {},
       "position_usd": 204.52,
@@ -223,13 +223,13 @@
       "name": "Immersion公司",
       "action": "BUY",
       "signal_date": "2026-07-30",
-      "entry_price": 7.45,
+      "entry_price": 7.48,
       "allocated_usd": 500,
-      "shares": 67.1141,
+      "shares": 66.8449,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 8.57,
-      "stop_loss": 7.3,
+      "take_profit": 8.6,
+      "stop_loss": 7.33,
       "max_hold_date": "2026-08-03",
       "daily_prices": {},
       "position_usd": 204.52,
@@ -3711,7 +3711,7 @@
           "open": 42.65,
           "high": 42.83,
           "low": 40.72,
-          "close": 40.88,
+          "close": 41.19,
           "pnl_pct": -1.99
         }
       },
@@ -3742,7 +3742,7 @@
           "open": 204.37,
           "high": 204.99,
           "low": 198.08,
-          "close": 200.22,
+          "close": 201.11,
           "pnl_pct": -2.0
         }
       },
@@ -3762,10 +3762,10 @@
     "win_trades": 28,
     "win_rate": 26.9,
     "total_realized_pnl_usd": 45.25,
-    "open_unrealized_pnl_usd": 27.06,
-    "portfolio_value": 2072.31,
+    "open_unrealized_pnl_usd": 25.83,
+    "portfolio_value": 2071.08,
     "total_commission_usd": 208.0,
-    "skipped_gap": 50,
+    "skipped_gap": 49,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 129,
     "updated_at": "2026-07-30"
