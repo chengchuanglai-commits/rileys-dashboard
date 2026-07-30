@@ -156,67 +156,17 @@ window.PORTFOLIO_MN = {
       "ticker": "UTMD",
       "name": "犹他医疗产品",
       "action": "BUY",
-      "signal_date": "2026-07-29",
-      "entry_price": 70.94,
-      "allocated_usd": 500,
-      "shares": 7.0482,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 81.58,
-      "stop_loss": 69.52,
-      "max_hold_date": "2026-07-31",
-      "daily_prices": {
-        "2026-07-30": {
-          "open": 71.3,
-          "high": 72.04,
-          "low": 70.71,
-          "close": 71.06,
-          "pnl_pct": 0.17
-        }
-      },
-      "position_usd": 205.34,
-      "unrealized_pnl_usd": 0.35
-    },
-    {
-      "ticker": "ECPG",
-      "name": "安可资本",
-      "action": "BUY",
-      "signal_date": "2026-07-29",
-      "entry_price": 93.83,
-      "allocated_usd": 500,
-      "shares": 5.3288,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 107.9,
-      "stop_loss": 91.95,
-      "max_hold_date": "2026-07-31",
-      "daily_prices": {
-        "2026-07-30": {
-          "open": 94.48,
-          "high": 96.38,
-          "low": 93.34,
-          "close": 94.72,
-          "pnl_pct": 0.95
-        }
-      },
-      "position_usd": 205.34,
-      "unrealized_pnl_usd": 1.95
-    },
-    {
-      "ticker": "UTMD",
-      "name": "犹他医疗产品",
-      "action": "BUY",
       "signal_date": "2026-07-30",
-      "entry_price": 71.06,
+      "entry_price": 69.57,
       "allocated_usd": 500,
-      "shares": 7.0363,
+      "shares": 7.187,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 81.72,
-      "stop_loss": 69.64,
+      "take_profit": 80.01,
+      "stop_loss": 68.18,
       "max_hold_date": "2026-08-03",
       "daily_prices": {},
-      "position_usd": 204.52,
+      "position_usd": 203.7,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -224,16 +174,50 @@ window.PORTFOLIO_MN = {
       "name": "Immersion公司",
       "action": "BUY",
       "signal_date": "2026-07-30",
-      "entry_price": 7.54,
+      "entry_price": 7.41,
       "allocated_usd": 500,
-      "shares": 66.313,
+      "shares": 67.4764,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 8.67,
-      "stop_loss": 7.39,
+      "take_profit": 8.52,
+      "stop_loss": 7.26,
       "max_hold_date": "2026-08-03",
       "daily_prices": {},
-      "position_usd": 204.52,
+      "position_usd": 203.7,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "HBCP",
+      "name": "Home Bancorp",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 70.86,
+      "allocated_usd": 500,
+      "shares": 7.0562,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 81.49,
+      "stop_loss": 69.44,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {},
+      "position_usd": 203.7,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "BANR",
+      "name": "Banner公司",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 69.84,
+      "allocated_usd": 500,
+      "shares": 7.1592,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 80.32,
+      "stop_loss": 68.44,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {},
+      "position_usd": 203.7,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -3695,6 +3679,37 @@ window.PORTFOLIO_MN = {
       "position_usd": 207.0
     },
     {
+      "ticker": "UTMD",
+      "name": "犹他医疗产品",
+      "action": "BUY",
+      "signal_date": "2026-07-29",
+      "entry_price": 70.94,
+      "allocated_usd": 500,
+      "shares": 7.0482,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 81.58,
+      "stop_loss": 69.52,
+      "max_hold_date": "2026-07-31",
+      "daily_prices": {
+        "2026-07-30": {
+          "open": 71.3,
+          "high": 72.04,
+          "low": 69.5,
+          "close": 69.57,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-30",
+      "close_price": 69.52,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 205.34
+    },
+    {
       "ticker": "SLGN",
       "name": "西拉格包装",
       "action": "BUY",
@@ -3711,8 +3726,8 @@ window.PORTFOLIO_MN = {
         "2026-07-30": {
           "open": 42.65,
           "high": 42.83,
-          "low": 40.72,
-          "close": 41.09,
+          "low": 40.65,
+          "close": 41.1,
           "pnl_pct": -1.99
         }
       },
@@ -3743,7 +3758,7 @@ window.PORTFOLIO_MN = {
           "open": 204.37,
           "high": 204.99,
           "low": 198.08,
-          "close": 201.77,
+          "close": 201.94,
           "pnl_pct": -2.0
         }
       },
@@ -3755,20 +3770,51 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.11,
       "position_usd": 205.34
+    },
+    {
+      "ticker": "WRLD",
+      "name": "世界验收公司",
+      "action": "BUY",
+      "signal_date": "2026-07-29",
+      "entry_price": 185.56,
+      "allocated_usd": 500,
+      "shares": 2.6945,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 213.39,
+      "stop_loss": 181.85,
+      "max_hold_date": "2026-07-31",
+      "daily_prices": {
+        "2026-07-30": {
+          "open": 187.42,
+          "high": 187.91,
+          "low": 180.68,
+          "close": 181.1,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-30",
+      "close_price": 181.85,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 205.34
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 104,
+    "total_trades": 106,
     "win_trades": 28,
-    "win_rate": 26.9,
-    "total_realized_pnl_usd": 45.25,
-    "open_unrealized_pnl_usd": 26.94,
-    "portfolio_value": 2072.19,
-    "total_commission_usd": 208.0,
+    "win_rate": 26.4,
+    "total_realized_pnl_usd": 37.03,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2061.67,
+    "total_commission_usd": 212.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 129,
+    "skipped_no_cash": 127,
     "updated_at": "2026-07-30"
   }
 };
