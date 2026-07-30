@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-30",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 70.94,
+      "target_price": 78.03,
+      "stop_loss": 67.39
+    },
+    {
+      "ticker": "RCKY",
+      "action": "BUY",
+      "current_price": 49.1,
+      "target_price": 54.01,
+      "stop_loss": 46.64
+    },
+    {
+      "ticker": "IMMR",
+      "action": "SELL",
+      "current_price": 7.33,
+      "target_price": 8.06,
+      "stop_loss": 6.96
+    },
+    {
+      "ticker": "ECPG",
+      "action": "BUY",
+      "current_price": 93.83,
+      "target_price": 103.21,
+      "stop_loss": 89.14
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 70.94,
+      "target_price": 78.03,
+      "stop_loss": 67.39
+    },
+    {
+      "ticker": "RCKY",
+      "action": "BUY",
+      "current_price": 49.1,
+      "target_price": 54.01,
+      "stop_loss": 46.64
+    },
+    {
+      "ticker": "IMMR",
+      "action": "SELL",
+      "current_price": 7.33,
+      "target_price": 8.06,
+      "stop_loss": 6.96
+    },
+    {
+      "ticker": "ECPG",
+      "action": "BUY",
+      "current_price": 93.83,
+      "target_price": 103.21,
+      "stop_loss": 89.14
+    },
+    {
+      "ticker": "CHEF",
+      "action": "BUY",
+      "current_price": 105.63,
+      "target_price": 116.19,
+      "stop_loss": 100.35
+    },
+    {
+      "ticker": "LCNB",
+      "action": "BUY",
+      "current_price": 20.3,
+      "target_price": 22.33,
+      "stop_loss": 19.29
+    },
+    {
+      "ticker": "ACNB",
+      "action": "BUY",
+      "current_price": 63.53,
+      "target_price": 69.88,
+      "stop_loss": 60.35
+    },
+    {
+      "ticker": "PNFP",
+      "action": "BUY",
+      "current_price": 104.74,
+      "target_price": 115.21,
+      "stop_loss": 99.5
+    },
+    {
+      "ticker": "MSBI",
+      "action": "BUY",
+      "current_price": 33.62,
+      "target_price": 36.98,
+      "stop_loss": 31.94
+    },
+    {
+      "ticker": "HBNC",
+      "action": "BUY",
+      "current_price": 20.67,
+      "target_price": 22.74,
+      "stop_loss": 19.64
+    },
+    {
+      "ticker": "ATRC",
+      "action": "SELL",
+      "current_price": 40.89,
+      "target_price": 44.98,
+      "stop_loss": 38.85
+    },
+    {
+      "ticker": "UVSP",
+      "action": "HOLD",
+      "current_price": 44.61,
+      "target_price": 49.07,
+      "stop_loss": 42.38
+    },
+    {
+      "ticker": "HFWA",
+      "action": "HOLD",
+      "current_price": 29.84,
+      "target_price": 32.82,
+      "stop_loss": 28.35
+    },
+    {
+      "ticker": "WERN",
+      "action": "SELL",
+      "current_price": 36.65,
+      "target_price": 40.32,
+      "stop_loss": 34.82
+    },
+    {
+      "ticker": "FCFS",
+      "action": "SELL",
+      "current_price": 202.22,
+      "target_price": 222.44,
+      "stop_loss": 192.11
+    },
+    {
+      "ticker": "STRA",
+      "action": "HOLD",
+      "current_price": 87.62,
+      "target_price": 96.38,
+      "stop_loss": 83.24
+    },
+    {
+      "ticker": "NBTB",
+      "action": "BUY",
+      "current_price": 54.26,
+      "target_price": 59.69,
+      "stop_loss": 51.55
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 17.64,
+      "target_price": 19.4,
+      "stop_loss": 16.76
+    },
+    {
+      "ticker": "SLGN",
+      "action": "HOLD",
+      "current_price": 42.65,
+      "target_price": 46.91,
+      "stop_loss": 40.52
+    },
+    {
+      "ticker": "HBCP",
+      "action": "HOLD",
+      "current_price": 70.93,
+      "target_price": 78.02,
+      "stop_loss": 67.38
+    }
+  ]
+}
