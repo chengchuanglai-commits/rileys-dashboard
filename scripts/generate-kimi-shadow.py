@@ -16,7 +16,9 @@ from datetime import date
 if not os.environ.get("KIMI_API_KEY"):
     print("[kimi] 无 KIMI_API_KEY，跳过影子分析")
     sys.exit(0)
-# TradingAgents 的客户端读 OPENAI_API_KEY；Moonshot 是 OpenAI 兼容接口
+# TradingAgents 的 deepseek provider 读 DEEPSEEK_API_KEY(实测2026-07-30:不设它20只全预检失败);
+# 请求实际发往 backend_url=Moonshot,这里只是变量名复用,不会碰真 DeepSeek
+os.environ["DEEPSEEK_API_KEY"] = os.environ["KIMI_API_KEY"]
 os.environ["OPENAI_API_KEY"] = os.environ["KIMI_API_KEY"]
 
 today = os.environ.get("BACKFILL_DATE") or date.today().isoformat()   # 支持指定日期(测试/补跑用)
