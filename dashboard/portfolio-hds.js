@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 70.17,
           "high": 70.36,
           "low": 69.41,
-          "close": 70.0,
-          "pnl_pct": -0.53
+          "close": 69.89,
+          "pnl_pct": -0.68
         }
       },
       "position_usd": 224.22,
-      "unrealized_pnl_usd": -1.19
+      "unrealized_pnl_usd": -1.52
     },
     {
       "ticker": "IMMR",
@@ -186,14 +186,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-07-30": {
           "open": 7.36,
-          "high": 7.51,
+          "high": 7.57,
           "low": 7.21,
-          "close": 7.48,
-          "pnl_pct": 1.84
+          "close": 7.54,
+          "pnl_pct": 1.05
         }
       },
       "position_usd": 224.22,
-      "unrealized_pnl_usd": 4.13
+      "unrealized_pnl_usd": 2.35
     },
     {
       "ticker": "UTMD",
@@ -2478,8 +2478,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 34,
     "win_rate": 53.1,
     "total_realized_pnl_usd": 242.17,
-    "open_unrealized_pnl_usd": 33.36,
-    "portfolio_value": 2275.53,
+    "open_unrealized_pnl_usd": 31.25,
+    "portfolio_value": 2273.42,
     "total_commission_usd": 128.0,
     "skipped_gap": 38,
     "skipped_zero_shares": 0,
