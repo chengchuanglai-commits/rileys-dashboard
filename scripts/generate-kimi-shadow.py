@@ -16,10 +16,8 @@ from datetime import date
 if not os.environ.get("KIMI_API_KEY"):
     print("[kimi] 无 KIMI_API_KEY，跳过影子分析")
     sys.exit(0)
-# TradingAgents 的 deepseek provider 读 DEEPSEEK_API_KEY(实测2026-07-30:不设它20只全预检失败);
-# 请求实际发往 backend_url=Moonshot,这里只是变量名复用,不会碰真 DeepSeek
-os.environ["DEEPSEEK_API_KEY"] = os.environ["KIMI_API_KEY"]
-os.environ["OPENAI_API_KEY"] = os.environ["KIMI_API_KEY"]
+# 锁定版 TradingAgents 原生支持 kimi provider,key 变量名=MOONSHOT_API_KEY(api_key_env.py)
+os.environ["MOONSHOT_API_KEY"] = os.environ["KIMI_API_KEY"]
 
 today = os.environ.get("BACKFILL_DATE") or date.today().isoformat()   # 支持指定日期(测试/补跑用)
 KIMI_DIR = "dashboard/trading-signals-history/kimi"   # 独立子目录,与 deepseek/ 平行
@@ -38,10 +36,10 @@ def run_kimi(ticker):
     from tradingagents.graph.trading_graph import TradingAgentsGraph
     from tradingagents.default_config import DEFAULT_CONFIG
     config = DEFAULT_CONFIG.copy()
-    config["llm_provider"] = "deepseek"               # 复用 Chat Completions 路径(Moonshot 兼容)
-    config["backend_url"] = "https://api.moonshot.cn/v1"
-    config["deep_think_llm"] = "kimi-k2.6"            # Moonshot 只有 k2.6(通用旗舰,自带推理)
-    config["quick_think_llm"] = "kimi-k2.6"           # 无 flash 档,轻分析也用 k2.6
+    config["llm_provider"] = "kimi"                   # 原生 provider(勿走deepseek壳:其key校验只认DEEPSEEK_API_KEY且实测env注入不生效)
+    config["backend_url"] = "https://api.moonshot.cn/v1"   # 必须覆盖:spec默认.ai国际版,Riley的key是.cn国内版,两边账户不通
+    config["deep_think_llm"] = "kimi-k3"              # Riley拍板方案B(2026-07-30):K3旗舰跑多空深度辩论
+    config["quick_think_llm"] = "kimi-k2.6"           # K2.6跑轻分析,镜像deepseek pro/flash分档,控成本~¥5-10/天
     config["max_debate_rounds"] = 2                   # 与 deepseek 影子完全一致
     config["online_tools"] = True
     # 不设 temperature——K2.6 是推理模型,与 R1 同理
@@ -93,10 +91,14 @@ def main():
             if r:
                 verdicts.append(r)
 
+    if verdicts and all(v.get("error") for v in verdicts):
+        print(f"[kimi] ❌ 全部{len(verdicts)}只分析失败,不写归档(防垃圾数据入台账);首个错误: {verdicts[0]['error'][:150]}")
+        return
+
     actionable = [v for v in verdicts if v.get("action") in ("BUY", "SELL")][:4]   # 与 H-DS 同帽
     out = {
         "date": today,
-        "model": "kimi-k2.6",
+        "model": "kimi-k3+k2.6",
         "signals": actionable,
         "all_verdicts": verdicts,
     }
