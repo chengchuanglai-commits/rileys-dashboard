@@ -34,9 +34,9 @@ def socks_country():
     except Exception: return ""
 
 def gateway_running():
-    """4002 API口在监听 = IB Gateway 开着(比匹配进程名可靠)。"""
+    """4001 API口在监听 = IB Gateway 开着(比匹配进程名可靠)。2026-07-30改:paper 4002已退役,真钱网关=4001。"""
     try:
-        r = subprocess.run(["lsof", "-nP", "-iTCP:4002", "-sTCP:LISTEN"], capture_output=True, text=True, timeout=6)
+        r = subprocess.run(["lsof", "-nP", "-iTCP:4001", "-sTCP:LISTEN"], capture_output=True, text=True, timeout=6)
         return bool(r.stdout.strip())
     except Exception: return False
 
