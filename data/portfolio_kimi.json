@@ -1,0 +1,17 @@
+{
+  "capital_usd": 2000.0,
+  "_note": "kimi 影子腿:Kimi K2.6 信号+移动止损(init-4%/trail4%/10d/gap1.0)。与 hdstr 同出场同资金,唯一变量=大脑;80笔平仓后配对裁决,纯影子不碰真钱。",
+  "open_positions": [],
+  "closed_positions": [],
+  "stats": {
+    "total_trades": 0,
+    "win_trades": 0,
+    "win_rate": 0,
+    "total_realized_pnl_usd": 0.0,
+    "open_unrealized_pnl_usd": 0.0,
+    "portfolio_value": 2000.0,
+    "skipped_gap": 0,
+    "skipped_no_cash": 0,
+    "updated_at": "2026-07-30"
+  }
+}
