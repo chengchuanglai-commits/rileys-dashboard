@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 70.02,
           "high": 70.5,
           "low": 69.41,
-          "close": 69.97,
-          "pnl_pct": 0.57
+          "close": 70.16,
+          "pnl_pct": 0.85
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 1.16
+      "unrealized_pnl_usd": 1.73
     },
     {
       "ticker": "IMMR",
@@ -195,12 +195,12 @@ window.PORTFOLIO_MN = {
           "open": 7.41,
           "high": 7.54,
           "low": 7.38,
-          "close": 7.46,
-          "pnl_pct": 0.67
+          "close": 7.51,
+          "pnl_pct": 1.35
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 1.36
+      "unrealized_pnl_usd": 2.75
     },
     {
       "ticker": "HBCP",
@@ -220,12 +220,12 @@ window.PORTFOLIO_MN = {
           "open": 70.97,
           "high": 71.86,
           "low": 70.24,
-          "close": 70.8,
-          "pnl_pct": -0.08
+          "close": 70.93,
+          "pnl_pct": 0.1
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": -0.16
+      "unrealized_pnl_usd": 0.2
     },
     {
       "ticker": "BANR",
@@ -245,12 +245,12 @@ window.PORTFOLIO_MN = {
           "open": 69.83,
           "high": 70.15,
           "low": 69.13,
-          "close": 69.66,
-          "pnl_pct": -0.26
+          "close": 69.99,
+          "pnl_pct": 0.21
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": -0.53
+      "unrealized_pnl_usd": 0.43
     }
   ],
   "closed_positions": [
@@ -3841,8 +3841,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 28,
     "win_rate": 26.4,
     "total_realized_pnl_usd": 37.03,
-    "open_unrealized_pnl_usd": 26.47,
-    "portfolio_value": 2063.5,
+    "open_unrealized_pnl_usd": 29.75,
+    "portfolio_value": 2066.78,
     "total_commission_usd": 212.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
