@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-31",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 111.15,
+      "target_price": 122.27,
+      "stop_loss": 105.59
+    },
+    {
+      "ticker": "SLGN",
+      "action": "SELL",
+      "current_price": 39.99,
+      "target_price": 43.99,
+      "stop_loss": 37.99
+    },
+    {
+      "ticker": "GKOS",
+      "action": "BUY",
+      "current_price": 167.87,
+      "target_price": 184.66,
+      "stop_loss": 159.48
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 70.22,
+      "target_price": 77.24,
+      "stop_loss": 66.71
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 111.15,
+      "target_price": 122.27,
+      "stop_loss": 105.59
+    },
+    {
+      "ticker": "SLGN",
+      "action": "SELL",
+      "current_price": 39.99,
+      "target_price": 43.99,
+      "stop_loss": 37.99
+    },
+    {
+      "ticker": "GKOS",
+      "action": "BUY",
+      "current_price": 167.87,
+      "target_price": 184.66,
+      "stop_loss": 159.48
+    },
+    {
+      "ticker": "IMMR",
+      "action": "HOLD",
+      "current_price": 7.4,
+      "target_price": 8.14,
+      "stop_loss": 7.03
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 70.22,
+      "target_price": 77.24,
+      "stop_loss": 66.71
+    },
+    {
+      "ticker": "RCKY",
+      "action": "SELL",
+      "current_price": 46.86,
+      "target_price": 51.55,
+      "stop_loss": 44.52
+    },
+    {
+      "ticker": "LCNB",
+      "action": "HOLD",
+      "current_price": 19.95,
+      "target_price": 21.95,
+      "stop_loss": 18.95
+    },
+    {
+      "ticker": "MMSI",
+      "action": "BUY",
+      "current_price": 83.6,
+      "target_price": 91.96,
+      "stop_loss": 79.42
+    },
+    {
+      "ticker": "MSBI",
+      "action": "HOLD",
+      "current_price": 32.84,
+      "target_price": 36.12,
+      "stop_loss": 31.2
+    },
+    {
+      "ticker": "WERN",
+      "action": "HOLD",
+      "current_price": 37.29,
+      "target_price": 41.02,
+      "stop_loss": 35.43
+    },
+    {
+      "ticker": "SYBT",
+      "action": "BUY",
+      "current_price": 86.59,
+      "target_price": 95.25,
+      "stop_loss": 82.26
+    },
+    {
+      "ticker": "STRA",
+      "action": "HOLD",
+      "current_price": 82.66,
+      "target_price": 90.93,
+      "stop_loss": 78.53
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 17.45,
+      "target_price": 19.2,
+      "stop_loss": 16.58
+    },
+    {
+      "ticker": "FELE",
+      "action": "BUY",
+      "current_price": 102.73,
+      "target_price": 113.0,
+      "stop_loss": 97.59
+    },
+    {
+      "ticker": "TDOC",
+      "action": "BUY",
+      "current_price": 6.64,
+      "target_price": 7.3,
+      "stop_loss": 6.31
+    },
+    {
+      "ticker": "CMCO",
+      "action": "BUY",
+      "current_price": 19.73,
+      "target_price": 21.7,
+      "stop_loss": 18.74
+    },
+    {
+      "ticker": "PLXS",
+      "action": "SELL",
+      "current_price": 246.33,
+      "target_price": 270.96,
+      "stop_loss": 234.01
+    },
+    {
+      "ticker": "SWKS",
+      "action": "SELL",
+      "current_price": 61.73,
+      "target_price": 67.9,
+      "stop_loss": 58.64
+    },
+    {
+      "ticker": "MDGL",
+      "action": "HOLD",
+      "current_price": 469.06,
+      "target_price": 515.97,
+      "stop_loss": 445.61
+    },
+    {
+      "ticker": "UVSP",
+      "action": "BUY",
+      "current_price": 44.12,
+      "target_price": 48.53,
+      "stop_loss": 41.91
+    }
+  ]
+}
