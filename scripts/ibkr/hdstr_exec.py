@@ -19,18 +19,24 @@ from scripts.ibkr.client import connect as _connect_any
 
 
 def connect(client_id):
-    """端口路由:HDSTR_PORT指定则只连它(真钱=4001第二网关,防撞进paper);未指定走默认(paper体检)。"""
+    """端口路由:HDSTR_PORT指定则只连它(真钱=4001第二网关,防撞进paper);未指定走默认(paper体检)。
+    真钱口重试3轮×等5分钟:网关每日自动重启~21:30正撞开盘批次(7/27/7/30/7/31三炸),
+    重启后端口几分钟内恢复,等一等就好;幂等安全(状态文件防重复开仓)。"""
     port = int(os.environ.get("HDSTR_PORT", "0"))
     if not port:
         return _connect_any(client_id=client_id, retries=2, retry_wait=6)
     from ib_insync import IB
-    ib = IB()
-    try:
-        ib.connect("127.0.0.1", port, clientId=client_id, timeout=10)
-        return ib, port
-    except Exception as e:
-        print(f"[hdstr] 连{port}失败: {e}")
-        return None, None
+    for attempt in range(3):
+        if attempt:
+            print(f"[hdstr] 第{attempt+1}次尝试连{port}(等300s后,网关可能在自动重启)")
+            time.sleep(300)
+        ib = IB()
+        try:
+            ib.connect("127.0.0.1", port, clientId=client_id, timeout=15)
+            return ib, port
+        except Exception as e:
+            print(f"[hdstr] 连{port}失败: {e}")
+    return None, None
 
 STATE = "data/hdstr-trial.json"
 KS = "data/kill-switches.json"

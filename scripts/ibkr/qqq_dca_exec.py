@@ -72,9 +72,13 @@ def main():
     reason_key, reason_txt = reasons[0]
     # 预算三闸
     ib = IB()
-    try: ib.connect("127.0.0.1", PORT, clientId=63, timeout=10)
-    except Exception as e:
-        notify(f"🛑 qqq-dca:连不上网关({e})"); return
+    for attempt in range(3):   # 网关每日自动重启~21:30撞批次(7/30/7/31实炸),重试3轮×等5分钟
+        if attempt: time.sleep(300)
+        try:
+            ib.connect("127.0.0.1", PORT, clientId=63, timeout=15); break
+        except Exception as e:
+            if attempt == 2:
+                notify(f"🛑 qqq-dca:连不上网关,3轮重试后放弃({e})"); return
     acct = (ib.managedAccounts() or [""])[0]
     if ARM and (not REAL_ACCOUNT or acct != REAL_ACCOUNT or acct.startswith("DU")):
         notify(f"🛑 qqq-dca拒跑:账户{acct}与配置不符"); ib.disconnect(); return
