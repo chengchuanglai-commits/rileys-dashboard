@@ -41,13 +41,13 @@ def gateway_running():
     except Exception: return False
 
 def ib_nav():
-    """连IB API取NAV;拿不到返回None(=跟IBKR断了)。"""
-    import sys, random
-    for _p in (REPO, os.path.join(REPO, "scripts")):   # 根目录(供import scripts.X)+ scripts(供from ibkr.X)
-        if _p not in sys.path: sys.path.insert(0, _p)
+    """连真钱网关4001取NAV;拿不到返回None(=跟IBKR断了)。
+    2026-08-01改:原走ibkr.client的PORTS=[4002,7497](paper已退役全死)→连续282次假阳性失败。"""
+    import random
     try:
-        from ibkr.client import connect
-        ib, port = connect(client_id=random.randint(200, 899), retries=4, retry_wait=6)  # 随机ID避开残连
+        from ib_insync import IB
+        ib = IB()
+        ib.connect("127.0.0.1", 4001, clientId=random.randint(200, 899), timeout=12)
         nav = float({v.tag: v.value for v in ib.accountSummary()}.get("NetLiquidation", 0) or 0)
         ib.disconnect()
         return nav if nav > 0 else None
