@@ -2484,6 +2484,6 @@ window.PORTFOLIO_HDS = {
     "skipped_gap": 38,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 30,
-    "updated_at": "2026-07-30"
+    "updated_at": "2026-07-31"
   }
 };

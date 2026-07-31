@@ -60,6 +60,7 @@ jobs:
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           BACKFILL_DATE: ${{ inputs.date }}
+          PYTHONUNBUFFERED: "1"   # 实时刷日志:被杀时进度可见可救(7/30缓冲陪葬教训)
         run: python scripts/generate-kimi-shadow.py
 
       - name: 立即提交信号(防长跑被取消时白烧钱——7/30实炸:跑数小时被取消,分析费打水漂)

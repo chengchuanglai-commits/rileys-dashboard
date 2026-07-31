@@ -92,5 +92,25 @@
     "why": "ADV$2.1M<5M"
    }
   ]
+ },
+ "2026-07-30": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "UTMD",
+    "action": "SELL",
+    "why": "ADV$2.2M<5M"
+   },
+   {
+    "ticker": "RCKY",
+    "action": "BUY",
+    "why": "ADV$2.8M<5M"
+   },
+   {
+    "ticker": "IMMR",
+    "action": "SELL",
+    "why": "ADV$4.8M<5M"
+   }
+  ]
  }
 }

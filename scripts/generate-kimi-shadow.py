@@ -83,29 +83,37 @@ def main():
             print(f"[kimi] {tk} 分析失败: {e}")
             return {"ticker": tk, "action": "HOLD", "current_price": price, "error": str(e)[:200]}
 
+    # 增量落盘(2026-07-31教训:7/30被120min超时掐死,结果全在内存里陪葬¥35)——
+    # 每完成一只就重写归档文件,超时/取消也能保住已完成部分;partial=True标记未跑完
+    os.makedirs(KIMI_DIR, exist_ok=True)
+    outpath = os.path.join(KIMI_DIR, f"{today}-kimi.json")
     verdicts = []
+
+    def flush(partial):
+        good = [v for v in verdicts if not v.get("error")]
+        if not good:
+            return   # 全错/空不落盘,防垃圾进台账
+        actionable = [v for v in good if v.get("action") in ("BUY", "SELL")][:4]   # 与 H-DS 同帽
+        out = {"date": today, "model": "kimi-k3+k2.6", "signals": actionable,
+               "all_verdicts": verdicts, "partial": partial,
+               "analyzed": len(verdicts), "planned": len(tickers)}
+        with open(outpath, "w", encoding="utf-8") as f:
+            json.dump(out, f, ensure_ascii=False, indent=2)
+
     with ThreadPoolExecutor(max_workers=min(len(tickers), 3)) as ex:   # 并发≤3:Moonshot 新账户 RPM/TPM 比 DeepSeek 紧
         futs = {ex.submit(analyze, tk): tk for tk in tickers}
         for f in as_completed(futs):
             r = f.result()
             if r:
                 verdicts.append(r)
+                flush(partial=len(verdicts) < len(tickers))
 
     if verdicts and all(v.get("error") for v in verdicts):
-        print(f"[kimi] ❌ 全部{len(verdicts)}只分析失败,不写归档(防垃圾数据入台账);首个错误: {verdicts[0]['error'][:150]}")
+        print(f"[kimi] ❌ 全部{len(verdicts)}只分析失败,未写归档;首个错误: {verdicts[0]['error'][:150]}")
         return
-
-    actionable = [v for v in verdicts if v.get("action") in ("BUY", "SELL")][:4]   # 与 H-DS 同帽
-    out = {
-        "date": today,
-        "model": "kimi-k3+k2.6",
-        "signals": actionable,
-        "all_verdicts": verdicts,
-    }
-    os.makedirs(KIMI_DIR, exist_ok=True)
-    with open(os.path.join(KIMI_DIR, f"{today}-kimi.json"), "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=2)
-    print(f"[kimi] ✅ 影子分析完成: {len(actionable)} 条可操作 / {len(verdicts)} 总判断 → {today}-kimi.json")
+    n_ok = len([v for v in verdicts if not v.get('error')])
+    n_sig = len([v for v in verdicts if v.get('action') in ('BUY','SELL')][:4])
+    print(f"[kimi] ✅ 影子分析完成: {n_sig} 条可操作 / {n_ok} 有效 / {len(verdicts)} 总判断 → {today}-kimi.json")
 
 
 if __name__ == "__main__":
