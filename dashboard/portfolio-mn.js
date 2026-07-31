@@ -168,14 +168,14 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-31": {
           "open": 70.02,
-          "high": 70.5,
+          "high": 70.76,
           "low": 69.41,
-          "close": 70.0,
-          "pnl_pct": 0.62
+          "close": 70.52,
+          "pnl_pct": 1.37
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 1.26
+      "unrealized_pnl_usd": 2.79
     },
     {
       "ticker": "IMMR",
@@ -195,12 +195,12 @@ window.PORTFOLIO_MN = {
           "open": 7.41,
           "high": 7.6,
           "low": 7.38,
-          "close": 7.59,
-          "pnl_pct": 2.43
+          "close": 7.56,
+          "pnl_pct": 2.02
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 4.95
+      "unrealized_pnl_usd": 4.11
     },
     {
       "ticker": "HBCP",
@@ -220,12 +220,12 @@ window.PORTFOLIO_MN = {
           "open": 70.97,
           "high": 71.86,
           "low": 70.24,
-          "close": 71.09,
-          "pnl_pct": 0.32
+          "close": 71.34,
+          "pnl_pct": 0.68
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 0.65
+      "unrealized_pnl_usd": 1.39
     },
     {
       "ticker": "BANR",
@@ -242,15 +242,15 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-08-03",
       "daily_prices": {
         "2026-07-31": {
-          "open": 69.83,
-          "high": 70.15,
+          "open": 69.8,
+          "high": 70.61,
           "low": 69.13,
-          "close": 70.09,
-          "pnl_pct": 0.36
+          "close": 70.41,
+          "pnl_pct": 0.82
         }
       },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 0.73
+      "unrealized_pnl_usd": 1.67
     }
   ],
   "closed_positions": [
@@ -3841,8 +3841,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 28,
     "win_rate": 26.4,
     "total_realized_pnl_usd": 37.03,
-    "open_unrealized_pnl_usd": 32.24,
-    "portfolio_value": 2069.27,
+    "open_unrealized_pnl_usd": 34.6,
+    "portfolio_value": 2071.63,
     "total_commission_usd": 212.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
