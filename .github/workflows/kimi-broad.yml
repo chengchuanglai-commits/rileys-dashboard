@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: trading-pipeline    # 与主管线共用,防同时提交撞车
+  group: kimi-pipeline       # 独立组!7/30两次被主管线在队列里顶掉取消(一次烧¥35无产出),提交撞车由push重试环兜底
   cancel-in-progress: false
 
 jobs:
@@ -61,6 +61,15 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           BACKFILL_DATE: ${{ inputs.date }}
         run: python scripts/generate-kimi-shadow.py
+
+      - name: 立即提交信号(防长跑被取消时白烧钱——7/30实炸:跑数小时被取消,分析费打水漂)
+        continue-on-error: true
+        run: |
+          git config user.name "kimi-broad-bot"
+          git config user.email "kimi-broad-bot@users.noreply.github.com"
+          git add dashboard/trading-signals-history/kimi/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Kimi 信号先行落库 $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin main && break; sleep 5; done
 
       - name: 飞书通知:结果
         continue-on-error: true

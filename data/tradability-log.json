@@ -77,5 +77,20 @@
     "why": "ADV$4.8M<5M"
    }
   ]
+ },
+ "2026-07-29": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "IMMR",
+    "action": "SELL",
+    "why": "ADV$4.8M<5M"
+   },
+   {
+    "ticker": "UTMD",
+    "action": "SELL",
+    "why": "ADV$2.1M<5M"
+   }
+  ]
  }
 }
