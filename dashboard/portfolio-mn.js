@@ -165,9 +165,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 80.01,
       "stop_loss": 68.18,
       "max_hold_date": "2026-08-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 70.02,
+          "high": 70.5,
+          "low": 69.41,
+          "close": 69.97,
+          "pnl_pct": 0.57
+        }
+      },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 1.16
     },
     {
       "ticker": "IMMR",
@@ -182,9 +190,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 8.52,
       "stop_loss": 7.26,
       "max_hold_date": "2026-08-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 7.41,
+          "high": 7.54,
+          "low": 7.38,
+          "close": 7.46,
+          "pnl_pct": 0.67
+        }
+      },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 1.36
     },
     {
       "ticker": "HBCP",
@@ -199,9 +215,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 81.49,
       "stop_loss": 69.44,
       "max_hold_date": "2026-08-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 70.97,
+          "high": 71.86,
+          "low": 70.24,
+          "close": 70.8,
+          "pnl_pct": -0.08
+        }
+      },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -0.16
     },
     {
       "ticker": "BANR",
@@ -216,9 +240,17 @@ window.PORTFOLIO_MN = {
       "take_profit": 80.32,
       "stop_loss": 68.44,
       "max_hold_date": "2026-08-03",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 69.83,
+          "high": 70.15,
+          "low": 69.13,
+          "close": 69.66,
+          "pnl_pct": -0.26
+        }
+      },
       "position_usd": 203.7,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -0.53
     }
   ],
   "closed_positions": [
@@ -3695,7 +3727,7 @@ window.PORTFOLIO_MN = {
         "2026-07-30": {
           "open": 71.3,
           "high": 72.04,
-          "low": 69.5,
+          "low": 69.43,
           "close": 69.57,
           "pnl_pct": -2.0
         }
@@ -3725,7 +3757,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-30": {
           "open": 42.65,
-          "high": 42.83,
+          "high": 42.99,
           "low": 40.65,
           "close": 41.06,
           "pnl_pct": -1.99
@@ -3757,7 +3789,7 @@ window.PORTFOLIO_MN = {
         "2026-07-30": {
           "open": 204.37,
           "high": 204.99,
-          "low": 198.08,
+          "low": 197.95,
           "close": 201.94,
           "pnl_pct": -2.0
         }
@@ -3787,7 +3819,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-07-30": {
           "open": 187.42,
-          "high": 187.91,
+          "high": 189.1,
           "low": 180.68,
           "close": 181.1,
           "pnl_pct": -2.0
@@ -3809,12 +3841,12 @@ window.PORTFOLIO_MN = {
     "win_trades": 28,
     "win_rate": 26.4,
     "total_realized_pnl_usd": 37.03,
-    "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2061.67,
+    "open_unrealized_pnl_usd": 26.47,
+    "portfolio_value": 2063.5,
     "total_commission_usd": 212.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 127,
-    "updated_at": "2026-07-30"
+    "skipped_no_cash": 136,
+    "updated_at": "2026-07-31"
   }
 };
