@@ -26,10 +26,10 @@ window.QQQ_REALMONEY = {
     "value_usd": 687.99,
     "pnl_usd": -33.47,
     "pnl_pct": -4.64,
-    "usdcad": 1.4015,
-    "cost_cad_approx": 1011.13,
-    "value_cad_approx": 964.22,
+    "usdcad": 1.4017,
+    "cost_cad_approx": 1011.27,
+    "value_cad_approx": 964.36,
     "pnl_cad_approx": -46.91,
-    "updated_at": "2026-07-31 20:23"
+    "updated_at": "2026-07-31 21:40"
   }
 };

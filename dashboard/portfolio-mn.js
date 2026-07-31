@@ -242,7 +242,7 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-08-03",
       "daily_prices": {
         "2026-07-31": {
-          "open": 69.8,
+          "open": 69.83,
           "high": 70.61,
           "low": 69.13,
           "close": 70.41,

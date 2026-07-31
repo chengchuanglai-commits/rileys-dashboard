@@ -2477,7 +2477,7 @@ window.PORTFOLIO_HDS = {
           "pnl_pct": -0.75
         },
         "2026-07-31": {
-          "open": 69.8,
+          "open": 69.83,
           "high": 70.61,
           "low": 69.13,
           "close": 70.41,
