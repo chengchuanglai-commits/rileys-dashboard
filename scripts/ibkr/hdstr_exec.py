@@ -46,7 +46,8 @@ DS_DIR = "dashboard/trading-signals-history/deepseek"
 
 ARM = os.environ.get("HDSTR_ARM", "0") == "1"          # 1=允许真钱账户
 REAL_ACCOUNT = os.environ.get("HDSTR_ACCOUNT", "")      # 真钱账户号(arm时必须匹配)
-PER_POSITION_USD = 500.0
+POS_PCT = 0.25            # 单仓=试运行净值的25%(×4并发=满仓)。Riley铁律2026-08-01:真钱必须复利,绝不固定金额
+TRIAL_BASE_USD = 2000.0   # 复利净值算不出时的回退基准(=预注册本金)
 MAX_CONC = 4
 TRAIL_PCT = 4.0
 MAX_HOLD_TD = 10
@@ -124,6 +125,30 @@ def snap_price(ib, ct):
     return float(px) if px else None
 
 
+def trial_equity_usd(ib, acct):
+    """hdstr复利净值(USD)=账户NAV折美元-指数核心(QQQ/QQQM)市值。含已实现+未实现,天然复利。
+    任何环节算不出→回退预注册基准$2000(宁可保守也不停摆)。"""
+    try:
+        vals = {}
+        for v in ib.accountValues(acct):
+            if v.tag == "NetLiquidation" and v.currency == "CAD": vals["nav_cad"] = float(v.value)
+            if v.tag == "ExchangeRate" and v.currency == "USD": vals["usdcad"] = float(v.value)
+        nav_usd = vals["nav_cad"] / vals["usdcad"]
+        core = 0.0
+        for p in ib.positions(acct):
+            if p.contract.symbol in ("QQQ", "QQQM"):
+                ct = Stock(p.contract.symbol, "SMART", "USD")
+                px = snap_price(ib, ct) if ib.qualifyContracts(ct) else None
+                core += abs(p.position) * (px or p.avgCost)
+        eq = nav_usd - core
+        if not (500 <= eq <= 20000):   # 数据错乱护栏(FX缺失/NAV异常)
+            raise ValueError(f"equity异常{eq:.0f}")
+        return eq
+    except Exception as e:
+        print(f"[hdstr] 复利净值计算失败({e}),回退${TRIAL_BASE_USD:.0f}")
+        return TRIAL_BASE_USD
+
+
 def place_entry_with_trail(ib, ct, px, action, shares):
     """入场marketable limit(DAY) + 子单TRAIL 4% GTC(父单成交才激活)。px由调用方先取好(跳空过滤在下单前)。"""
     sym = ct.symbol
@@ -183,6 +208,8 @@ def open_batch():
         done_keys = {(p["ticker"], p["signal_date"]) for p in st["positions"]}
         untradable = set(load(UNTRADABLE, []))
         slots = MAX_CONC - len(open_pos)
+        per_usd = trial_equity_usd(ib, acct) * POS_PCT if (slots > 0 and sigs) else 0
+        if per_usd: print(f"[hdstr] 复利单仓额 ${per_usd:.0f} (净值×{POS_PCT:.0%})")
         for s in sigs:
             if slots <= 0: break
             tk, ac, sp = s.get("ticker"), s.get("action"), s.get("current_price")
@@ -190,7 +217,7 @@ def open_batch():
             if (tk, day) in done_keys: continue
             if tk in untradable: skipped.append(f"{tk}(OTC)"); continue
             if not adv_ok(tk): skipped.append(f"{tk}(ADV)"); continue
-            shares = int(PER_POSITION_USD / sp)
+            shares = int(per_usd / sp)
             if shares < 1: skipped.append(f"{tk}(价太高)"); continue
             ct = Stock(tk, "SMART", "USD")
             if not ib.qualifyContracts(ct): skipped.append(f"{tk}(无合约)"); continue
