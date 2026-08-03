@@ -35,8 +35,14 @@ def main():
     try: st = json.load(open(STATE))
     except Exception: st = {"breached": False}
     prev_breached = st.get("breached")
+    # 数据回退守卫(2026-08-03实炸:行情拉不到→27笔平仓被误标在手→窗口漂移→tripwire被假"恢复"骗开闸):
+    # 平仓总数只会单调增,变少=上游数据故障→本次不做任何判断/不写状态,保持现有闸位
+    if len(cl) < st.get("n_closed", 0):
+        print(f"[tripwire] ⚠️ 数据回退({len(cl)}<{st['n_closed']}笔),疑似行情缺失,跳过本次判断保持闸位"); return
+    st["n_closed"] = len(cl)
     # 状态先落盘再通知(2026-07-29实炸:notify曾被SystemExit穿透,状态没写→自动解除永不触发)
-    json.dump({"breached": breach, "last": {"win_rate": round(wr, 1), "mean_pct": round(mp, 2)}},
+    json.dump({"breached": breach, "n_closed": len(cl),
+               "last": {"win_rate": round(wr, 1), "mean_pct": round(mp, 2)}},
               open(STATE, "w"))
     # 执行器(sleep-safe原则2026-07-19):破线不等人,直接落kill-switch;真钱执行层开单前必读此开关
     KS = "data/kill-switches.json"
