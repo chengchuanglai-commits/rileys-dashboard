@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 168.66,
           "high": 173.98,
           "low": 169.02,
-          "close": 170.44,
-          "pnl_pct": 1.53
+          "close": 172.18,
+          "pnl_pct": 2.57
         }
       },
       "position_usd": 223.96,
-      "unrealized_pnl_usd": 3.43
+      "unrealized_pnl_usd": 5.76
     },
     {
       "ticker": "SLGN",
@@ -2577,8 +2577,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 36,
     "win_rate": 53.7,
     "total_realized_pnl_usd": 239.59,
-    "open_unrealized_pnl_usd": 33.85,
-    "portfolio_value": 2273.44,
+    "open_unrealized_pnl_usd": 36.18,
+    "portfolio_value": 2275.77,
     "total_commission_usd": 134.0,
     "skipped_gap": 41,
     "skipped_zero_shares": 0,

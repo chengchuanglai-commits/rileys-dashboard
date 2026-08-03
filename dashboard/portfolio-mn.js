@@ -151,106 +151,6 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
-    },
-    {
-      "ticker": "UTMD",
-      "name": "犹他医疗产品",
-      "action": "BUY",
-      "signal_date": "2026-07-30",
-      "entry_price": 69.57,
-      "allocated_usd": 500,
-      "shares": 7.187,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 80.01,
-      "stop_loss": 68.18,
-      "max_hold_date": "2026-08-03",
-      "daily_prices": {
-        "2026-07-31": {
-          "open": 70.02,
-          "high": 70.76,
-          "low": 69.41,
-          "close": 70.52,
-          "pnl_pct": 1.37
-        }
-      },
-      "position_usd": 203.7,
-      "unrealized_pnl_usd": 2.79
-    },
-    {
-      "ticker": "IMMR",
-      "name": "Immersion公司",
-      "action": "BUY",
-      "signal_date": "2026-07-30",
-      "entry_price": 7.41,
-      "allocated_usd": 500,
-      "shares": 67.4764,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 8.52,
-      "stop_loss": 7.26,
-      "max_hold_date": "2026-08-03",
-      "daily_prices": {
-        "2026-07-31": {
-          "open": 7.41,
-          "high": 7.6,
-          "low": 7.38,
-          "close": 7.56,
-          "pnl_pct": 2.02
-        }
-      },
-      "position_usd": 203.7,
-      "unrealized_pnl_usd": 4.11
-    },
-    {
-      "ticker": "HBCP",
-      "name": "Home Bancorp",
-      "action": "BUY",
-      "signal_date": "2026-07-30",
-      "entry_price": 70.86,
-      "allocated_usd": 500,
-      "shares": 7.0562,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 81.49,
-      "stop_loss": 69.44,
-      "max_hold_date": "2026-08-03",
-      "daily_prices": {
-        "2026-07-31": {
-          "open": 70.97,
-          "high": 71.86,
-          "low": 70.24,
-          "close": 71.34,
-          "pnl_pct": 0.68
-        }
-      },
-      "position_usd": 203.7,
-      "unrealized_pnl_usd": 1.39
-    },
-    {
-      "ticker": "BANR",
-      "name": "Banner公司",
-      "action": "BUY",
-      "signal_date": "2026-07-30",
-      "entry_price": 69.84,
-      "allocated_usd": 500,
-      "shares": 7.1592,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 80.32,
-      "stop_loss": 68.44,
-      "max_hold_date": "2026-08-03",
-      "daily_prices": {
-        "2026-07-31": {
-          "open": 69.83,
-          "high": 70.61,
-          "low": 69.13,
-          "close": 70.41,
-          "pnl_pct": 0.82
-        }
-      },
-      "position_usd": 203.7,
-      "unrealized_pnl_usd": 1.67
     }
   ],
   "closed_positions": [
@@ -3833,20 +3733,172 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.11,
       "position_usd": 205.34
+    },
+    {
+      "ticker": "UTMD",
+      "name": "犹他医疗产品",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 69.57,
+      "allocated_usd": 500,
+      "shares": 7.187,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 80.01,
+      "stop_loss": 68.18,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 70.02,
+          "high": 70.76,
+          "low": 69.41,
+          "close": 70.52,
+          "pnl_pct": 1.37
+        },
+        "2026-08-03": {
+          "open": 72.01,
+          "high": 75.01,
+          "low": 71.03,
+          "close": 72.88,
+          "pnl_pct": 4.76
+        }
+      },
+      "close_date": "2026-08-03",
+      "close_price": 72.88,
+      "final_pnl_pct": 4.76,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 9.7,
+      "position_usd": 203.7
+    },
+    {
+      "ticker": "IMMR",
+      "name": "Immersion公司",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 7.41,
+      "allocated_usd": 500,
+      "shares": 67.4764,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 8.52,
+      "stop_loss": 7.26,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 7.38,
+          "high": 7.6,
+          "low": 7.38,
+          "close": 7.56,
+          "pnl_pct": 2.02
+        },
+        "2026-08-03": {
+          "open": 7.57,
+          "high": 7.65,
+          "low": 7.4,
+          "close": 7.41,
+          "pnl_pct": 0.0
+        }
+      },
+      "close_date": "2026-08-03",
+      "close_price": 7.41,
+      "final_pnl_pct": 0.0,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 0.0,
+      "position_usd": 203.7
+    },
+    {
+      "ticker": "HBCP",
+      "name": "Home Bancorp",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 70.86,
+      "allocated_usd": 500,
+      "shares": 7.0562,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 81.49,
+      "stop_loss": 69.44,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 70.63,
+          "high": 72.44,
+          "low": 70.24,
+          "close": 71.34,
+          "pnl_pct": 0.68
+        },
+        "2026-08-03": {
+          "open": 71.59,
+          "high": 72.7,
+          "low": 71.07,
+          "close": 71.62,
+          "pnl_pct": 1.07
+        }
+      },
+      "close_date": "2026-08-03",
+      "close_price": 71.62,
+      "final_pnl_pct": 1.07,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.18,
+      "position_usd": 203.7
+    },
+    {
+      "ticker": "BANR",
+      "name": "Banner公司",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 69.84,
+      "allocated_usd": 500,
+      "shares": 7.1592,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 80.32,
+      "stop_loss": 68.44,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 69.8,
+          "high": 70.61,
+          "low": 69.13,
+          "close": 70.41,
+          "pnl_pct": 0.82
+        },
+        "2026-08-03": {
+          "open": 71.09,
+          "high": 71.81,
+          "low": 70.75,
+          "close": 70.86,
+          "pnl_pct": 1.46
+        }
+      },
+      "close_date": "2026-08-03",
+      "close_price": 70.86,
+      "final_pnl_pct": 1.46,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.97,
+      "position_usd": 203.7
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 106,
-    "win_trades": 28,
-    "win_rate": 26.4,
-    "total_realized_pnl_usd": 37.03,
-    "open_unrealized_pnl_usd": 34.6,
-    "portfolio_value": 2071.63,
-    "total_commission_usd": 212.0,
-    "skipped_gap": 50,
+    "total_trades": 110,
+    "win_trades": 31,
+    "win_rate": 28.2,
+    "total_realized_pnl_usd": 51.88,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2076.52,
+    "total_commission_usd": 220.0,
+    "skipped_gap": 53,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 136,
-    "updated_at": "2026-07-31"
+    "skipped_no_cash": 139,
+    "updated_at": "2026-08-03"
   }
 };
