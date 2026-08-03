@@ -61,15 +61,22 @@ if [ "$1" = "trade_open" ]; then
   # 先同步当晚新信号(deepseek-broad 20:00提交云端;2026-07-27审计:原同步只在review段→hdstr会吃3天前旧信号)
   git fetch -q origin main 2>/dev/null && git checkout -q origin/main -- \
     dashboard/trading-signals-history data/screened-stocks-history 2>/dev/null || true
+  # 25分钟超时强杀(2026-08-03实炸:网关连接抖动后API半死,hdstr卡select挂1小时;25min容纳3×5min连接重试)
   HDSTR_ARM=1 HDSTR_ACCOUNT=U20220368 HDSTR_PORT=4001 \
-    /usr/bin/python3 -m scripts.ibkr.hdstr_exec open >> data/exec-log/launchd.log 2>&1 || true
+    /usr/bin/python3 -m scripts.ibkr.hdstr_exec open >> data/exec-log/launchd.log 2>&1 &
+  HP=$!; ( sleep 1500; kill $HP 2>/dev/null && echo "[$(date '+%F %T')] ⏱️ hdstr open超25分钟,已强杀(账户与台账次日对账)" >> data/exec-log/launchd.log ) &
+  HT=$!; wait $HP 2>/dev/null; kill $HT 2>/dev/null; wait $HT 2>/dev/null
   # QQQ指数核心托管(2026-07-29 Riley批"接管"):只买不卖,reclaim/深跌阶梯自动低吸,三重预算闸
   QQQDCA_ARM=1 QQQDCA_ACCOUNT=U20220368 QQQDCA_PORT=4001 \
-    /usr/bin/python3 -m scripts.ibkr.qqq_dca_exec >> data/exec-log/launchd.log 2>&1 || true
+    /usr/bin/python3 -m scripts.ibkr.qqq_dca_exec >> data/exec-log/launchd.log 2>&1 &
+  QP=$!; ( sleep 1500; kill $QP 2>/dev/null && echo "[$(date '+%F %T')] ⏱️ qqq-dca超25分钟,已强杀" >> data/exec-log/launchd.log ) &
+  QT=$!; wait $QP 2>/dev/null; kill $QT 2>/dev/null; wait $QT 2>/dev/null
 fi
 if [ "$1" = "trade_close" ]; then
   HDSTR_ARM=1 HDSTR_ACCOUNT=U20220368 HDSTR_PORT=4001 \
-    /usr/bin/python3 -m scripts.ibkr.hdstr_exec close >> data/exec-log/launchd.log 2>&1 || true
+    /usr/bin/python3 -m scripts.ibkr.hdstr_exec close >> data/exec-log/launchd.log 2>&1 &
+  HP=$!; ( sleep 1500; kill $HP 2>/dev/null && echo "[$(date '+%F %T')] ⏱️ hdstr close超25分钟,已强杀" >> data/exec-log/launchd.log ) &
+  HT=$!; wait $HP 2>/dev/null; kill $HT 2>/dev/null; wait $HT 2>/dev/null
 fi
 echo "[$(date '+%F %T')] === done $1 (exit $?) ===" >> data/exec-log/launchd.log
 # 复盘后追加前向验证账本(三线vs无脑QQQ)——随paper系统一起退役,靠paper NAV没NAV就是废数

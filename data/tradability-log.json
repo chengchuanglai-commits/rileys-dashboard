@@ -112,5 +112,15 @@
     "why": "ADV$4.8M<5M"
    }
   ]
+ },
+ "2026-07-31": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "UTMD",
+    "action": "SELL",
+    "why": "ADV$2.2M<5M"
+   }
+  ]
  }
 }

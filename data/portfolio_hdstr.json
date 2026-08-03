@@ -85,10 +85,17 @@
           "low": 23.29,
           "close": 23.41,
           "pnl_pct": 1.3
+        },
+        "2026-07-31": {
+          "open": 23.41,
+          "high": 23.65,
+          "low": 23.32,
+          "close": 23.59,
+          "pnl_pct": 2.08
         }
       },
       "position_usd": 242.83,
-      "unrealized_pnl_usd": 3.16
+      "unrealized_pnl_usd": 5.05
     },
     {
       "ticker": "HBCP",
@@ -124,13 +131,20 @@
         "2026-07-30": {
           "open": 71.19,
           "high": 72.11,
-          "low": 70.79,
+          "low": 70.71,
           "close": 70.86,
           "pnl_pct": -1.43
+        },
+        "2026-07-31": {
+          "open": 70.97,
+          "high": 71.86,
+          "low": 70.24,
+          "close": 71.34,
+          "pnl_pct": -2.12
         }
       },
       "position_usd": 245.6,
-      "unrealized_pnl_usd": -3.51
+      "unrealized_pnl_usd": -5.21
     },
     {
       "ticker": "HFWA",
@@ -169,10 +183,17 @@
           "low": 29.52,
           "close": 29.55,
           "pnl_pct": 2.22
+        },
+        "2026-07-31": {
+          "open": 29.5,
+          "high": 29.8,
+          "low": 29.0,
+          "close": 29.73,
+          "pnl_pct": 1.62
         }
       },
       "position_usd": 245.6,
-      "unrealized_pnl_usd": 5.45
+      "unrealized_pnl_usd": 3.98
     },
     {
       "ticker": "BANR",
@@ -204,10 +225,17 @@
           "low": 69.41,
           "close": 69.84,
           "pnl_pct": -0.64
+        },
+        "2026-07-31": {
+          "open": 69.83,
+          "high": 70.61,
+          "low": 69.13,
+          "close": 70.41,
+          "pnl_pct": 0.17
         }
       },
       "position_usd": 244.59,
-      "unrealized_pnl_usd": -1.57
+      "unrealized_pnl_usd": 0.42
     },
     {
       "ticker": "BANR",
@@ -225,43 +253,42 @@
           "low": 69.41,
           "close": 69.84,
           "pnl_pct": -0.75
+        },
+        "2026-07-31": {
+          "open": 69.83,
+          "high": 70.61,
+          "low": 69.13,
+          "close": 70.41,
+          "pnl_pct": 0.06
         }
       },
       "position_usd": 246.84,
-      "unrealized_pnl_usd": -1.85
+      "unrealized_pnl_usd": 0.15
     },
     {
-      "ticker": "IMMR",
+      "ticker": "CHEF",
       "action": "SELL",
-      "signal_date": "2026-07-29",
-      "entry_price": 7.62,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {
-        "2026-07-30": {
-          "open": 7.36,
-          "high": 7.57,
-          "low": 7.21,
-          "close": 7.41,
-          "pnl_pct": 2.76
-        }
-      },
-      "position_usd": 246.84,
-      "unrealized_pnl_usd": 6.81
-    },
-    {
-      "ticker": "UTMD",
-      "action": "SELL",
-      "signal_date": "2026-07-30",
-      "entry_price": 70.94,
+      "signal_date": "2026-07-31",
+      "entry_price": 111.15,
       "close_date": null,
       "close_price": null,
       "close_reason": "open",
       "final_pnl_pct": null,
       "daily_prices": {},
-      "position_usd": 246.84,
+      "position_usd": 246.24,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SLGN",
+      "action": "SELL",
+      "signal_date": "2026-07-31",
+      "entry_price": 39.99,
+      "close_date": null,
+      "close_price": null,
+      "close_reason": "open",
+      "final_pnl_pct": null,
+      "daily_prices": {},
+      "position_usd": 246.24,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2624,17 +2651,66 @@
       },
       "position_usd": 244.59,
       "realized_pnl_usd": -4.38
+    },
+    {
+      "ticker": "IMMR",
+      "action": "SELL",
+      "signal_date": "2026-07-29",
+      "entry_price": 7.62,
+      "close_date": "2026-07-31",
+      "close_price": 7.5,
+      "close_reason": "trail_stop",
+      "final_pnl_pct": 1.57,
+      "daily_prices": {
+        "2026-07-30": {
+          "open": 7.36,
+          "high": 7.57,
+          "low": 7.21,
+          "close": 7.41,
+          "pnl_pct": 2.76
+        },
+        "2026-07-31": {
+          "open": 7.41,
+          "high": 7.6,
+          "low": 7.38,
+          "close": 7.56,
+          "pnl_pct": 1.57
+        }
+      },
+      "position_usd": 246.84,
+      "realized_pnl_usd": 3.88
+    },
+    {
+      "ticker": "RCKY",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 49.1,
+      "close_date": "2026-07-31",
+      "close_price": 47.14,
+      "close_reason": "stop_loss",
+      "final_pnl_pct": -3.99,
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 48.84,
+          "high": 49.15,
+          "low": 46.15,
+          "close": 48.84,
+          "pnl_pct": -3.99
+        }
+      },
+      "position_usd": 246.84,
+      "realized_pnl_usd": -9.85
     }
   ],
   "stats": {
-    "total_trades": 64,
-    "win_trades": 38,
-    "win_rate": 59.4,
-    "total_realized_pnl_usd": 468.37,
-    "open_unrealized_pnl_usd": 8.49,
-    "portfolio_value": 2476.86,
-    "skipped_gap": 39,
-    "skipped_no_cash": 29,
-    "updated_at": "2026-07-31"
+    "total_trades": 66,
+    "win_trades": 39,
+    "win_rate": 59.1,
+    "total_realized_pnl_usd": 462.39,
+    "open_unrealized_pnl_usd": 4.39,
+    "portfolio_value": 2466.78,
+    "skipped_gap": 40,
+    "skipped_no_cash": 30,
+    "updated_at": "2026-08-01"
   }
 }
