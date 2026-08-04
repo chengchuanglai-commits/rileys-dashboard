@@ -48,6 +48,9 @@ ARM = os.environ.get("HDSTR_ARM", "0") == "1"          # 1=允许真钱账户
 REAL_ACCOUNT = os.environ.get("HDSTR_ACCOUNT", "")      # 真钱账户号(arm时必须匹配)
 POS_PCT = 0.25            # 单仓=试运行净值的25%(×4并发=满仓)。Riley铁律2026-08-01:真钱必须复利,绝不固定金额
 TRIAL_BASE_USD = 2000.0   # 复利净值算不出时的回退基准(=预注册本金)
+SIZING_FREEZE_USD = 1200.0  # gate裁决前仓位基准上限(2026-08-04 Riley批:入金先行至全仓$3000,
+                            # 但加码严格等gate PASS——先例2026-07-27"跳过预注册加码=四周后凭数据谈"。
+                            # verdict=PASS当天自动解冻按真实净值复利;FAIL则entries_halted已接管)
 MAX_CONC = 4
 TRAIL_PCT = 4.0
 MAX_HOLD_TD = 10
@@ -208,8 +211,14 @@ def open_batch():
         done_keys = {(p["ticker"], p["signal_date"]) for p in st["positions"]}
         untradable = set(load(UNTRADABLE, []))
         slots = MAX_CONC - len(open_pos)
-        per_usd = trial_equity_usd(ib, acct) * POS_PCT if (slots > 0 and sigs) else 0
-        if per_usd: print(f"[hdstr] 复利单仓额 ${per_usd:.0f} (净值×{POS_PCT:.0%})")
+        per_usd = 0
+        if slots > 0 and sigs:
+            eq = trial_equity_usd(ib, acct)
+            unlocked = load(GATE, {}).get("verdict") == "PASS"
+            base = eq if unlocked else min(eq, SIZING_FREEZE_USD)
+            per_usd = base * POS_PCT
+            print(f"[hdstr] 复利单仓额 ${per_usd:.0f} (基准${base:.0f}×{POS_PCT:.0%}"
+                  f"{',已解冻' if unlocked else f',gate前冻结帽${SIZING_FREEZE_USD:.0f}'};净值${eq:.0f})")
         for s in sigs:
             if slots <= 0: break
             tk, ac, sp = s.get("ticker"), s.get("action"), s.get("current_price")
