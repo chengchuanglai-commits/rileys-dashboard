@@ -88,112 +88,21 @@
         },
         "2026-07-31": {
           "open": 23.41,
-          "high": 23.65,
+          "high": 23.67,
           "low": 23.32,
           "close": 23.59,
           "pnl_pct": 2.08
+        },
+        "2026-08-03": {
+          "open": 23.63,
+          "high": 23.99,
+          "low": 23.51,
+          "close": 23.86,
+          "pnl_pct": 3.25
         }
       },
       "position_usd": 242.83,
-      "unrealized_pnl_usd": 5.05
-    },
-    {
-      "ticker": "HBCP",
-      "action": "SELL",
-      "signal_date": "2026-07-24",
-      "entry_price": 69.86,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {
-        "2026-07-27": {
-          "open": 70.51,
-          "high": 71.38,
-          "low": 69.82,
-          "close": 70.28,
-          "pnl_pct": -0.6
-        },
-        "2026-07-28": {
-          "open": 70.28,
-          "high": 72.03,
-          "low": 70.28,
-          "close": 71.6,
-          "pnl_pct": -2.49
-        },
-        "2026-07-29": {
-          "open": 71.2,
-          "high": 71.8,
-          "low": 70.49,
-          "close": 70.93,
-          "pnl_pct": -1.53
-        },
-        "2026-07-30": {
-          "open": 71.19,
-          "high": 72.11,
-          "low": 70.71,
-          "close": 70.86,
-          "pnl_pct": -1.43
-        },
-        "2026-07-31": {
-          "open": 70.97,
-          "high": 71.86,
-          "low": 70.24,
-          "close": 71.34,
-          "pnl_pct": -2.12
-        }
-      },
-      "position_usd": 245.6,
-      "unrealized_pnl_usd": -5.21
-    },
-    {
-      "ticker": "HFWA",
-      "action": "SELL",
-      "signal_date": "2026-07-24",
-      "entry_price": 30.22,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {
-        "2026-07-27": {
-          "open": 30.21,
-          "high": 30.73,
-          "low": 29.78,
-          "close": 29.8,
-          "pnl_pct": 1.39
-        },
-        "2026-07-28": {
-          "open": 30.02,
-          "high": 30.85,
-          "low": 29.63,
-          "close": 29.89,
-          "pnl_pct": 1.09
-        },
-        "2026-07-29": {
-          "open": 29.71,
-          "high": 29.9,
-          "low": 29.58,
-          "close": 29.84,
-          "pnl_pct": 1.26
-        },
-        "2026-07-30": {
-          "open": 29.91,
-          "high": 29.95,
-          "low": 29.52,
-          "close": 29.55,
-          "pnl_pct": 2.22
-        },
-        "2026-07-31": {
-          "open": 29.5,
-          "high": 29.8,
-          "low": 29.0,
-          "close": 29.73,
-          "pnl_pct": 1.62
-        }
-      },
-      "position_usd": 245.6,
-      "unrealized_pnl_usd": 3.98
+      "unrealized_pnl_usd": 7.89
     },
     {
       "ticker": "BANR",
@@ -227,15 +136,22 @@
           "pnl_pct": -0.64
         },
         "2026-07-31": {
-          "open": 69.83,
+          "open": 69.8,
           "high": 70.61,
           "low": 69.13,
           "close": 70.41,
           "pnl_pct": 0.17
+        },
+        "2026-08-03": {
+          "open": 71.09,
+          "high": 71.81,
+          "low": 70.36,
+          "close": 70.55,
+          "pnl_pct": 0.37
         }
       },
       "position_usd": 244.59,
-      "unrealized_pnl_usd": 0.42
+      "unrealized_pnl_usd": 0.9
     },
     {
       "ticker": "BANR",
@@ -255,40 +171,81 @@
           "pnl_pct": -0.75
         },
         "2026-07-31": {
-          "open": 69.83,
+          "open": 69.8,
           "high": 70.61,
           "low": 69.13,
           "close": 70.41,
           "pnl_pct": 0.06
+        },
+        "2026-08-03": {
+          "open": 71.09,
+          "high": 71.81,
+          "low": 70.36,
+          "close": 70.55,
+          "pnl_pct": 0.26
         }
       },
       "position_usd": 246.84,
-      "unrealized_pnl_usd": 0.15
+      "unrealized_pnl_usd": 0.64
     },
     {
-      "ticker": "CHEF",
-      "action": "SELL",
+      "ticker": "GKOS",
+      "action": "BUY",
       "signal_date": "2026-07-31",
-      "entry_price": 111.15,
+      "entry_price": 167.87,
       "close_date": null,
       "close_price": null,
       "close_reason": "open",
       "final_pnl_pct": null,
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-08-03": {
+          "open": 168.66,
+          "high": 173.98,
+          "low": 169.02,
+          "close": 170.87,
+          "pnl_pct": 1.79
+        }
+      },
       "position_usd": 246.24,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 4.41
     },
     {
       "ticker": "SLGN",
       "action": "SELL",
-      "signal_date": "2026-07-31",
-      "entry_price": 39.99,
+      "signal_date": "2026-08-03",
+      "entry_price": 39.98,
       "close_date": null,
       "close_price": null,
       "close_reason": "open",
       "final_pnl_pct": null,
       "daily_prices": {},
-      "position_usd": 246.24,
+      "position_usd": 245.32,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CHEF",
+      "action": "BUY",
+      "signal_date": "2026-08-03",
+      "entry_price": 115.35,
+      "close_date": null,
+      "close_price": null,
+      "close_reason": "open",
+      "final_pnl_pct": null,
+      "daily_prices": {},
+      "position_usd": 245.32,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "GKOS",
+      "action": "BUY",
+      "signal_date": "2026-08-03",
+      "entry_price": 166.72,
+      "close_date": null,
+      "close_price": null,
+      "close_reason": "open",
+      "final_pnl_pct": null,
+      "daily_prices": {},
+      "position_usd": 245.32,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2625,6 +2582,118 @@
       "realized_pnl_usd": -4.71
     },
     {
+      "ticker": "HBCP",
+      "action": "SELL",
+      "signal_date": "2026-07-24",
+      "entry_price": 69.86,
+      "close_date": "2026-08-03",
+      "close_price": 72.61,
+      "close_reason": "trail_stop",
+      "final_pnl_pct": -3.94,
+      "daily_prices": {
+        "2026-07-27": {
+          "open": 70.51,
+          "high": 71.38,
+          "low": 69.82,
+          "close": 70.28,
+          "pnl_pct": -0.6
+        },
+        "2026-07-28": {
+          "open": 70.28,
+          "high": 72.03,
+          "low": 70.28,
+          "close": 71.6,
+          "pnl_pct": -2.49
+        },
+        "2026-07-29": {
+          "open": 71.2,
+          "high": 71.8,
+          "low": 70.49,
+          "close": 70.93,
+          "pnl_pct": -1.53
+        },
+        "2026-07-30": {
+          "open": 71.19,
+          "high": 72.11,
+          "low": 70.71,
+          "close": 70.86,
+          "pnl_pct": -1.43
+        },
+        "2026-07-31": {
+          "open": 70.63,
+          "high": 72.44,
+          "low": 70.24,
+          "close": 71.34,
+          "pnl_pct": -2.12
+        },
+        "2026-08-03": {
+          "open": 71.59,
+          "high": 72.7,
+          "low": 71.07,
+          "close": 72.11,
+          "pnl_pct": -3.94
+        }
+      },
+      "position_usd": 245.6,
+      "realized_pnl_usd": -9.68
+    },
+    {
+      "ticker": "HFWA",
+      "action": "SELL",
+      "signal_date": "2026-07-24",
+      "entry_price": 30.22,
+      "close_date": "2026-08-03",
+      "close_price": 30.16,
+      "close_reason": "trail_stop",
+      "final_pnl_pct": 0.2,
+      "daily_prices": {
+        "2026-07-27": {
+          "open": 30.21,
+          "high": 30.73,
+          "low": 29.78,
+          "close": 29.8,
+          "pnl_pct": 1.39
+        },
+        "2026-07-28": {
+          "open": 30.02,
+          "high": 30.85,
+          "low": 29.63,
+          "close": 29.89,
+          "pnl_pct": 1.09
+        },
+        "2026-07-29": {
+          "open": 29.71,
+          "high": 29.9,
+          "low": 29.58,
+          "close": 29.84,
+          "pnl_pct": 1.26
+        },
+        "2026-07-30": {
+          "open": 29.91,
+          "high": 29.95,
+          "low": 29.52,
+          "close": 29.55,
+          "pnl_pct": 2.22
+        },
+        "2026-07-31": {
+          "open": 29.5,
+          "high": 29.82,
+          "low": 29.0,
+          "close": 29.73,
+          "pnl_pct": 1.62
+        },
+        "2026-08-03": {
+          "open": 30.16,
+          "high": 30.23,
+          "low": 29.82,
+          "close": 30.01,
+          "pnl_pct": 0.2
+        }
+      },
+      "position_usd": 245.6,
+      "realized_pnl_usd": 0.49
+    },
+    {
       "ticker": "HFWA",
       "action": "BUY",
       "signal_date": "2026-07-27",
@@ -2670,7 +2739,7 @@
           "pnl_pct": 2.76
         },
         "2026-07-31": {
-          "open": 7.41,
+          "open": 7.38,
           "high": 7.6,
           "low": 7.38,
           "close": 7.56,
@@ -2692,8 +2761,8 @@
       "daily_prices": {
         "2026-07-31": {
           "open": 48.84,
-          "high": 49.15,
-          "low": 46.15,
+          "high": 49.49,
+          "low": 46.16,
           "close": 48.84,
           "pnl_pct": -3.99
         }
@@ -2703,14 +2772,14 @@
     }
   ],
   "stats": {
-    "total_trades": 66,
-    "win_trades": 39,
-    "win_rate": 59.1,
-    "total_realized_pnl_usd": 462.39,
-    "open_unrealized_pnl_usd": 4.39,
-    "portfolio_value": 2466.78,
-    "skipped_gap": 40,
+    "total_trades": 68,
+    "win_trades": 40,
+    "win_rate": 58.8,
+    "total_realized_pnl_usd": 453.21,
+    "open_unrealized_pnl_usd": 13.85,
+    "portfolio_value": 2467.06,
+    "skipped_gap": 42,
     "skipped_no_cash": 30,
-    "updated_at": "2026-08-01"
+    "updated_at": "2026-08-04"
   }
 }

@@ -122,5 +122,15 @@
     "why": "ADV$2.2M<5M"
    }
   ]
+ },
+ "2026-08-03": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "IMMR",
+    "action": "SELL",
+    "why": "ADV$5.0M<5M"
+   }
+  ]
  }
 }

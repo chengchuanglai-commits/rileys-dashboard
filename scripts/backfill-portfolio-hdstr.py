@@ -62,7 +62,8 @@ def main():
             "updated_at": time.strftime("%Y-%m-%d"),
         },
     }
-    json.dump(out, open(PORTFOLIO_PATH, "w"), ensure_ascii=False, indent=2)
+    from ledger_guard import safe_write_ledger
+    if not safe_write_ledger(PORTFOLIO_PATH, out): return
     s = out["stats"]
     print(f"hds-tr 净值${s['portfolio_value']:,.2f} ({(s['portfolio_value']/INIT-1)*100:+.2f}%) "
           f"平仓{n}笔 胜率{s['win_rate']}% 持仓{len(fo)} gap{gap_n} 无现金跳过{skipped}")

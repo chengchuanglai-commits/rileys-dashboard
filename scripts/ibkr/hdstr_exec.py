@@ -39,6 +39,7 @@ def connect(client_id):
     return None, None
 
 STATE = "data/hdstr-trial.json"
+FILLS = "data/hdstr-fills.json"
 KS = "data/kill-switches.json"
 GATE = "data/hds-gate.json"
 UNTRADABLE = "data/borrow-untradable.json"
@@ -128,6 +129,33 @@ def snap_price(ib, ct):
     return float(px) if px else None
 
 
+def harvest_fills(ib, acct):
+    """抓当日真实成交进独立台账(2026-08-04 优化#1:执行质量度量闭环,8/24滑点评估的数据源)。
+    execId去重可重复调用;有参照价时附滑点(正数=不利成本,BUY付贵/SELL卖贱都记正)。围栏:失败不影响主流程。"""
+    try:
+        from ib_insync import ExecutionFilter
+        led = load(FILLS, {"fills": []})
+        seen = {f["exec_id"] for f in led["fills"]}
+        ref = {p["ticker"]: p for p in load(STATE, {"positions": []})["positions"]}
+        new = 0
+        for tr in ib.reqExecutions(ExecutionFilter(acctCode=acct)):
+            e = tr.execution
+            if e.execId in seen: continue
+            row = {"exec_id": e.execId, "time": str(e.time), "sym": tr.contract.symbol,
+                   "side": e.side, "shares": e.shares, "price": e.price}
+            p = ref.get(tr.contract.symbol)
+            rp = (p or {}).get("ref_price") or (p or {}).get("signal_price")
+            if rp:
+                sgn = 1 if e.side == "BOT" else -1
+                row["slip_vs_ref_pct"] = round((e.price - rp) / rp * 100 * sgn, 3)
+            led["fills"].append(row); new += 1
+        if new:
+            json.dump(led, open(FILLS, "w"), ensure_ascii=False, indent=1)
+            print(f"[hdstr fills] 新记{new}笔真实成交(累计{len(led['fills'])})")
+    except Exception as ex:
+        print(f"[hdstr fills] 抓取失败(不影响主流程): {ex}")
+
+
 def trial_equity_usd(ib, acct):
     """hdstr复利净值(USD)=账户NAV折美元-指数核心(QQQ/QQQM)市值。含已实现+未实现,天然复利。
     任何环节算不出→回退预注册基准$2000(宁可保守也不停摆)。"""
@@ -184,6 +212,7 @@ def open_batch():
     if not ib: notify("🛑 hdstr open:连不上网关"); return
     acct = guard_account(ib)
     if not acct: ib.disconnect(); return
+    harvest_fills(ib, acct)   # 开盘批先收割隔夜/当日成交(TRAIL夜里触发的在这里入账)
 
     # ①自愈:先审计存量仓的TRAIL保护(主batch全局撤单会扫掉GTC;每晚必查必补)
     open_pos = [p for p in st["positions"] if p["status"] == "open"]
@@ -270,6 +299,7 @@ def close_batch():
     if not ib: notify("🛑 hdstr close:连不上网关"); return
     acct = guard_account(ib)
     if not acct: ib.disconnect(); return
+    harvest_fills(ib, acct)   # 收盘批收割当日全部成交(入场/超时平仓/日内TRAIL)
     real = {}
     for p in ib.positions(acct):
         real[p.contract.symbol] = real.get(p.contract.symbol, 0) + p.position

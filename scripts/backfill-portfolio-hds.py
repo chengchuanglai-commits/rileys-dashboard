@@ -218,8 +218,9 @@ portfolio["stats"] = {
     "updated_at": datetime.now().strftime("%Y-%m-%d"),
 }
 
-with open(PORTFOLIO_PATH, "w") as f:
-    json.dump(portfolio, f, ensure_ascii=False, indent=2)
+from ledger_guard import safe_write_ledger
+if not safe_write_ledger(PORTFOLIO_PATH, portfolio):
+    raise SystemExit(0)   # 数据回退拒写:dashboard js 也不更新,保留旧版一致性
 
 with open("dashboard/portfolio-hds.js", "w", encoding="utf-8") as f:
     f.write("// Plan H-DS 模拟盘持仓 — 历史最优参数(TP15/SL2/2日) 回溯 + 实时更新\n")
