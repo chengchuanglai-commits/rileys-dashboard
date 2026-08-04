@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 171.75,
           "high": 172.82,
           "low": 167.64,
-          "close": 169.65,
-          "pnl_pct": 1.76
+          "close": 170.53,
+          "pnl_pct": 2.29
         }
       },
       "position_usd": 224.0,
-      "unrealized_pnl_usd": 3.94
+      "unrealized_pnl_usd": 5.13
     },
     {
       "ticker": "CMCO",
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 21.34,
       "max_hold_date": "2026-08-06",
       "daily_prices": {},
-      "position_usd": 223.8,
+      "position_usd": 223.91,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 50.64,
       "max_hold_date": "2026-08-06",
       "daily_prices": {},
-      "position_usd": 223.8,
+      "position_usd": 223.91,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2602,17 +2602,17 @@ window.PORTFOLIO_HDS = {
           "open": 171.75,
           "high": 172.82,
           "low": 167.64,
-          "close": 169.65,
-          "pnl_pct": 1.06
+          "close": 170.53,
+          "pnl_pct": 1.58
         }
       },
       "close_date": "2026-08-04",
-      "close_price": 169.65,
-      "final_pnl_pct": 1.06,
+      "close_price": 170.53,
+      "final_pnl_pct": 1.58,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.37,
+      "realized_pnl_usd": 3.54,
       "position_usd": 224.0
     },
     {
@@ -2631,9 +2631,9 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-04": {
           "open": 7.58,
-          "high": 7.74,
+          "high": 7.78,
           "low": 7.58,
-          "close": 7.64,
+          "close": 7.73,
           "pnl_pct": -1.98
         }
       },
@@ -2652,9 +2652,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 69,
     "win_trades": 37,
     "win_rate": 53.6,
-    "total_realized_pnl_usd": 237.98,
-    "open_unrealized_pnl_usd": 34.37,
-    "portfolio_value": 2272.35,
+    "total_realized_pnl_usd": 239.15,
+    "open_unrealized_pnl_usd": 35.55,
+    "portfolio_value": 2274.7,
     "total_commission_usd": 138.0,
     "skipped_gap": 43,
     "skipped_zero_shares": 0,
