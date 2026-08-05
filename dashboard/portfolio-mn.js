@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 34.62,
           "high": 35.1,
           "low": 33.88,
-          "close": 34.5,
-          "pnl_pct": -0.09
+          "close": 34.49,
+          "pnl_pct": -0.12
         }
       },
       "position_usd": 205.49,
-      "unrealized_pnl_usd": -0.18
+      "unrealized_pnl_usd": -0.25
     },
     {
       "ticker": "CHEF",
@@ -195,12 +195,12 @@ window.PORTFOLIO_MN = {
           "open": 111.06,
           "high": 111.62,
           "low": 110.11,
-          "close": 110.62,
-          "pnl_pct": 0.55
+          "close": 111.19,
+          "pnl_pct": 1.06
         }
       },
       "position_usd": 205.49,
-      "unrealized_pnl_usd": 1.13
+      "unrealized_pnl_usd": 2.18
     },
     {
       "ticker": "GKOS",
@@ -219,26 +219,26 @@ window.PORTFOLIO_MN = {
         "2026-08-05": {
           "open": 172.01,
           "high": 171.76,
-          "low": 168.34,
-          "close": 169.17,
-          "pnl_pct": -0.8
+          "low": 167.81,
+          "close": 169.29,
+          "pnl_pct": -0.73
         }
       },
       "position_usd": 205.49,
-      "unrealized_pnl_usd": -1.64
+      "unrealized_pnl_usd": -1.5
     },
     {
       "ticker": "RCKY",
       "name": "Rocky Brands",
       "action": "BUY",
       "signal_date": "2026-08-05",
-      "entry_price": 49.56,
+      "entry_price": 49.92,
       "allocated_usd": 500,
-      "shares": 10.0888,
+      "shares": 10.016,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 56.99,
-      "stop_loss": 48.57,
+      "take_profit": 57.41,
+      "stop_loss": 48.92,
       "max_hold_date": "2026-08-07",
       "daily_prices": {},
       "position_usd": 205.07,
@@ -3996,7 +3996,7 @@ window.PORTFOLIO_MN = {
           "open": 47.0,
           "high": 47.08,
           "low": 45.88,
-          "close": 46.6,
+          "close": 46.4,
           "pnl_pct": -2.0
         }
       },
@@ -4016,8 +4016,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 32,
     "win_rate": 28.8,
     "total_realized_pnl_usd": 50.75,
-    "open_unrealized_pnl_usd": 23.94,
-    "portfolio_value": 2074.69,
+    "open_unrealized_pnl_usd": 25.07,
+    "portfolio_value": 2075.82,
     "total_commission_usd": 222.0,
     "skipped_gap": 54,
     "skipped_zero_shares": 0,
