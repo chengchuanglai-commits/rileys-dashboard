@@ -1,0 +1,14 @@
+{
+ "buys": [
+  {
+   "date": "2026-08-05",
+   "sym": "QQQM",
+   "shares": 1,
+   "usd": 298.51,
+   "reason": "收复$722趋势修复",
+   "limit": 298.96
+  }
+ ],
+ "fired_tiers": {},
+ "reclaim_bought_epoch": "745"
+}
