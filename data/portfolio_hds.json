@@ -145,62 +145,62 @@
       "unrealized_pnl_usd": 15.75
     },
     {
-      "ticker": "GKOS",
+      "ticker": "STRA",
       "name": "",
       "action": "BUY",
-      "signal_date": "2026-08-03",
-      "entry_price": 166.72,
-      "allocated_usd": 500,
-      "shares": 2.999,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 191.73,
-      "stop_loss": 163.39,
-      "max_hold_date": "2026-08-05",
-      "daily_prices": {
-        "2026-08-04": {
-          "open": 171.75,
-          "high": 172.91,
-          "low": 167.64,
-          "close": 170.53,
-          "pnl_pct": 2.29
-        }
-      },
-      "position_usd": 223.53,
-      "unrealized_pnl_usd": 5.12
-    },
-    {
-      "ticker": "CMCO",
-      "name": "",
-      "action": "SELL",
       "signal_date": "2026-08-04",
-      "entry_price": 20.92,
+      "entry_price": 83.43,
       "allocated_usd": 500,
-      "shares": 23.9006,
+      "shares": 5.993,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 17.78,
-      "stop_loss": 21.34,
+      "take_profit": 95.94,
+      "stop_loss": 81.76,
       "max_hold_date": "2026-08-06",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-08-05": {
+          "open": 84.59,
+          "high": 84.94,
+          "low": 84.12,
+          "close": 84.28,
+          "pnl_pct": 1.02
+        }
+      },
       "position_usd": 223.44,
+      "unrealized_pnl_usd": 2.28
+    },
+    {
+      "ticker": "CDNA",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-05",
+      "entry_price": 47.09,
+      "allocated_usd": 500,
+      "shares": 10.618,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 54.15,
+      "stop_loss": 46.15,
+      "max_hold_date": "2026-08-07",
+      "daily_prices": {},
+      "position_usd": 223.23,
       "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "RCKY",
       "name": "",
       "action": "BUY",
-      "signal_date": "2026-08-04",
-      "entry_price": 51.67,
+      "signal_date": "2026-08-05",
+      "entry_price": 50.47,
       "allocated_usd": 500,
-      "shares": 9.6768,
+      "shares": 9.9069,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 59.42,
-      "stop_loss": 50.64,
-      "max_hold_date": "2026-08-06",
+      "take_profit": 58.04,
+      "stop_loss": 49.46,
+      "max_hold_date": "2026-08-07",
       "daily_prices": {},
-      "position_usd": 223.44,
+      "position_usd": 223.23,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2637,20 +2637,89 @@
       "commission_total": 2.0,
       "realized_pnl_usd": -4.43,
       "position_usd": 223.53
+    },
+    {
+      "ticker": "GKOS",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-03",
+      "entry_price": 166.72,
+      "allocated_usd": 500,
+      "shares": 2.999,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 191.73,
+      "stop_loss": 163.39,
+      "max_hold_date": "2026-08-05",
+      "daily_prices": {
+        "2026-08-04": {
+          "open": 171.75,
+          "high": 172.91,
+          "low": 167.64,
+          "close": 170.53,
+          "pnl_pct": 2.29
+        },
+        "2026-08-05": {
+          "open": 172.01,
+          "high": 171.76,
+          "low": 168.34,
+          "close": 168.49,
+          "pnl_pct": 1.06
+        }
+      },
+      "close_date": "2026-08-05",
+      "close_price": 168.49,
+      "final_pnl_pct": 1.06,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.37,
+      "position_usd": 223.53
+    },
+    {
+      "ticker": "CDNA",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-04",
+      "entry_price": 47.03,
+      "allocated_usd": 500,
+      "shares": 10.6315,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 54.08,
+      "stop_loss": 46.09,
+      "max_hold_date": "2026-08-06",
+      "daily_prices": {
+        "2026-08-05": {
+          "open": 47.0,
+          "high": 47.08,
+          "low": 45.88,
+          "close": 46.6,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-05",
+      "close_price": 46.09,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.47,
+      "position_usd": 223.44
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 69,
-    "win_trades": 36,
-    "win_rate": 52.2,
-    "total_realized_pnl_usd": 234.42,
-    "open_unrealized_pnl_usd": 35.54,
-    "portfolio_value": 2269.96,
-    "total_commission_usd": 138.0,
-    "skipped_gap": 44,
+    "total_trades": 71,
+    "win_trades": 37,
+    "win_rate": 52.1,
+    "total_realized_pnl_usd": 232.32,
+    "open_unrealized_pnl_usd": 32.7,
+    "portfolio_value": 2265.02,
+    "total_commission_usd": 142.0,
+    "skipped_gap": 46,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 35,
+    "skipped_no_cash": 31,
     "updated_at": "2026-08-05"
   }
 }
