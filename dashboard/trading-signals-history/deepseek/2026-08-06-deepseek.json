@@ -1,0 +1,174 @@
+{
+  "date": "2026-08-06",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "ESCA",
+      "action": "BUY",
+      "current_price": 22.33,
+      "target_price": 24.56,
+      "stop_loss": 21.21
+    },
+    {
+      "ticker": "INBK",
+      "action": "BUY",
+      "current_price": 29.34,
+      "target_price": 32.27,
+      "stop_loss": 27.87
+    },
+    {
+      "ticker": "MMSI",
+      "action": "BUY",
+      "current_price": 87.18,
+      "target_price": 95.9,
+      "stop_loss": 82.82
+    },
+    {
+      "ticker": "CDNA",
+      "action": "SELL",
+      "current_price": 45.5,
+      "target_price": 50.05,
+      "stop_loss": 43.23
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "ESCA",
+      "action": "BUY",
+      "current_price": 22.33,
+      "target_price": 24.56,
+      "stop_loss": 21.21
+    },
+    {
+      "ticker": "INBK",
+      "action": "BUY",
+      "current_price": 29.34,
+      "target_price": 32.27,
+      "stop_loss": 27.87
+    },
+    {
+      "ticker": "RCKY",
+      "action": "HOLD",
+      "current_price": 49.95,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "MMSI",
+      "action": "BUY",
+      "current_price": 87.18,
+      "target_price": 95.9,
+      "stop_loss": 82.82
+    },
+    {
+      "ticker": "CDNA",
+      "action": "SELL",
+      "current_price": 45.5,
+      "target_price": 50.05,
+      "stop_loss": 43.23
+    },
+    {
+      "ticker": "CMCO",
+      "action": "BUY",
+      "current_price": 21.5,
+      "target_price": 23.65,
+      "stop_loss": 20.43
+    },
+    {
+      "ticker": "SFBC",
+      "action": "HOLD",
+      "current_price": 46.98,
+      "target_price": 51.68,
+      "stop_loss": 44.63
+    },
+    {
+      "ticker": "BLMN",
+      "action": "BUY",
+      "current_price": 11.85,
+      "target_price": 13.04,
+      "stop_loss": 11.26
+    },
+    {
+      "ticker": "WTTR",
+      "action": "HOLD",
+      "current_price": 22.26,
+      "target_price": 24.49,
+      "stop_loss": 21.15
+    },
+    {
+      "ticker": "PCRX",
+      "action": "HOLD",
+      "current_price": 24.87,
+      "target_price": 27.36,
+      "stop_loss": 23.63
+    },
+    {
+      "ticker": "VRTS",
+      "action": "HOLD",
+      "current_price": 161.81,
+      "target_price": 177.99,
+      "stop_loss": 153.72
+    },
+    {
+      "ticker": "NSIT",
+      "action": "HOLD",
+      "current_price": 140.28,
+      "target_price": 154.31,
+      "stop_loss": 133.27
+    },
+    {
+      "ticker": "PLUS",
+      "action": "HOLD",
+      "current_price": 94.56,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "PGEN",
+      "action": "SELL",
+      "current_price": 6.89,
+      "target_price": 7.58,
+      "stop_loss": 6.55
+    },
+    {
+      "ticker": "INFU",
+      "action": "BUY",
+      "current_price": 12.15,
+      "target_price": 13.37,
+      "stop_loss": 11.54
+    },
+    {
+      "ticker": "DXCM",
+      "action": "HOLD",
+      "current_price": 82.66,
+      "target_price": 90.93,
+      "stop_loss": 78.53
+    },
+    {
+      "ticker": "CROX",
+      "action": "BUY",
+      "current_price": 137.32,
+      "target_price": 151.05,
+      "stop_loss": 130.45
+    },
+    {
+      "ticker": "LCNB",
+      "action": "BUY",
+      "current_price": 19.68,
+      "target_price": 21.65,
+      "stop_loss": 18.7
+    },
+    {
+      "ticker": "WEYS",
+      "action": "BUY",
+      "current_price": 43.9,
+      "target_price": 48.29,
+      "stop_loss": 41.7
+    },
+    {
+      "ticker": "UFPT",
+      "action": "BUY",
+      "current_price": 322.06,
+      "target_price": 354.27,
+      "stop_loss": 305.96
+    }
+  ]
+}

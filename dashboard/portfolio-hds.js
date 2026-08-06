@@ -161,13 +161,13 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-05": {
           "open": 84.59,
-          "high": 84.94,
-          "low": 83.22,
+          "high": 84.95,
+          "low": 83.19,
           "close": 83.56,
           "pnl_pct": 0.16
         }
       },
-      "position_usd": 223.44,
+      "position_usd": 224.28,
       "unrealized_pnl_usd": 0.36
     },
     {
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 46.15,
       "max_hold_date": "2026-08-07",
       "daily_prices": {},
-      "position_usd": 223.56,
+      "position_usd": 224.4,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 49.46,
       "max_hold_date": "2026-08-07",
       "daily_prices": {},
-      "position_usd": 223.56,
+      "position_usd": 224.4,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2340,65 +2340,65 @@ window.PORTFOLIO_HDS = {
       "max_hold_date": "2026-07-28",
       "daily_prices": {
         "2026-07-27": {
-          "open": 30.21,
-          "high": 30.73,
-          "low": 29.78,
-          "close": 29.8,
-          "pnl_pct": 1.39
+          "open": 29.96,
+          "high": 30.48,
+          "low": 29.54,
+          "close": 29.56,
+          "pnl_pct": 2.18
         },
         "2026-07-28": {
-          "open": 30.02,
-          "high": 30.85,
-          "low": 29.63,
-          "close": 29.89,
-          "pnl_pct": -1.99
+          "open": 29.77,
+          "high": 30.6,
+          "low": 29.39,
+          "close": 29.65,
+          "pnl_pct": 1.89
         }
       },
       "close_date": "2026-07-28",
-      "close_price": 30.82,
-      "final_pnl_pct": -1.99,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.5,
-      "position_usd": 226.05
-    },
-    {
-      "ticker": "HFWA",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-27",
-      "entry_price": 30.16,
-      "allocated_usd": 500,
-      "shares": 16.5782,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 34.68,
-      "stop_loss": 29.56,
-      "max_hold_date": "2026-07-29",
-      "daily_prices": {
-        "2026-07-28": {
-          "open": 30.02,
-          "high": 30.85,
-          "low": 29.63,
-          "close": 29.89,
-          "pnl_pct": -0.9
-        },
-        "2026-07-29": {
-          "open": 29.71,
-          "high": 29.9,
-          "low": 29.58,
-          "close": 29.84,
-          "pnl_pct": -1.06
-        }
-      },
-      "close_date": "2026-07-29",
-      "close_price": 29.84,
-      "final_pnl_pct": -1.06,
+      "close_price": 29.65,
+      "final_pnl_pct": 1.89,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.39,
+      "realized_pnl_usd": 4.27,
+      "position_usd": 226.05
+    },
+    {
+      "ticker": "BANR",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-27",
+      "entry_price": 70.29,
+      "allocated_usd": 500,
+      "shares": 7.1134,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 80.83,
+      "stop_loss": 68.88,
+      "max_hold_date": "2026-07-29",
+      "daily_prices": {
+        "2026-07-28": {
+          "open": 70.31,
+          "high": 70.53,
+          "low": 69.31,
+          "close": 70.03,
+          "pnl_pct": -0.37
+        },
+        "2026-07-29": {
+          "open": 69.69,
+          "high": 70.17,
+          "low": 68.93,
+          "close": 69.44,
+          "pnl_pct": -1.21
+        }
+      },
+      "close_date": "2026-07-29",
+      "close_price": 69.44,
+      "final_pnl_pct": -1.21,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -2.73,
       "position_usd": 225.91
     },
     {
@@ -2429,8 +2429,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.5,
-      "position_usd": 225.01
+      "realized_pnl_usd": -4.52,
+      "position_usd": 225.89
     },
     {
       "ticker": "ACNB",
@@ -2468,7 +2468,7 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -0.61,
-      "position_usd": 225.01
+      "position_usd": 225.89
     },
     {
       "ticker": "IMMR",
@@ -2505,8 +2505,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.77,
-      "position_usd": 224.32
+      "realized_pnl_usd": 1.78,
+      "position_usd": 225.16
     },
     {
       "ticker": "RCKY",
@@ -2536,8 +2536,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.49,
-      "position_usd": 224.26
+      "realized_pnl_usd": -4.5,
+      "position_usd": 225.1
     },
     {
       "ticker": "IMMR",
@@ -2567,8 +2567,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.6,
-      "position_usd": 224.26
+      "realized_pnl_usd": -4.61,
+      "position_usd": 225.1
     },
     {
       "ticker": "GKOS",
@@ -2605,8 +2605,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.53,
-      "position_usd": 223.53
+      "realized_pnl_usd": 3.55,
+      "position_usd": 224.37
     },
     {
       "ticker": "IMMR",
@@ -2636,8 +2636,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.43,
-      "position_usd": 223.53
+      "realized_pnl_usd": -4.44,
+      "position_usd": 224.37
     },
     {
       "ticker": "GKOS",
@@ -2662,7 +2662,7 @@ window.PORTFOLIO_HDS = {
         },
         "2026-08-05": {
           "open": 172.01,
-          "high": 171.76,
+          "high": 172.01,
           "low": 167.81,
           "close": 170.93,
           "pnl_pct": 2.53
@@ -2674,8 +2674,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.66,
-      "position_usd": 223.53
+      "realized_pnl_usd": 5.68,
+      "position_usd": 224.37
     },
     {
       "ticker": "CDNA",
@@ -2705,22 +2705,22 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.47,
-      "position_usd": 223.44
+      "realized_pnl_usd": -4.49,
+      "position_usd": 224.28
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 71,
-    "win_trades": 37,
-    "win_rate": 52.1,
-    "total_realized_pnl_usd": 235.6,
+    "win_trades": 38,
+    "win_rate": 53.5,
+    "total_realized_pnl_usd": 243.99,
     "open_unrealized_pnl_usd": 30.78,
-    "portfolio_value": 2266.38,
+    "portfolio_value": 2274.77,
     "total_commission_usd": 142.0,
-    "skipped_gap": 46,
+    "skipped_gap": 47,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 31,
-    "updated_at": "2026-08-05"
+    "skipped_no_cash": 34,
+    "updated_at": "2026-08-06"
   }
 };
