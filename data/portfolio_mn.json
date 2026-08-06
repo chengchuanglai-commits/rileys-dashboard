@@ -152,81 +152,6 @@
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "MSBI",
-      "name": "Midland States Bancorp",
-      "action": "BUY",
-      "signal_date": "2026-08-04",
-      "entry_price": 34.53,
-      "allocated_usd": 500,
-      "shares": 14.4802,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 39.71,
-      "stop_loss": 33.84,
-      "max_hold_date": "2026-08-06",
-      "daily_prices": {
-        "2026-08-05": {
-          "open": 34.62,
-          "high": 35.1,
-          "low": 33.88,
-          "close": 34.24,
-          "pnl_pct": -0.84
-        }
-      },
-      "position_usd": 205.49,
-      "unrealized_pnl_usd": -1.73
-    },
-    {
-      "ticker": "CHEF",
-      "name": "The Chefs' Warehouse",
-      "action": "BUY",
-      "signal_date": "2026-08-04",
-      "entry_price": 110.02,
-      "allocated_usd": 500,
-      "shares": 4.5446,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 126.52,
-      "stop_loss": 107.82,
-      "max_hold_date": "2026-08-06",
-      "daily_prices": {
-        "2026-08-05": {
-          "open": 111.06,
-          "high": 111.62,
-          "low": 108.2,
-          "close": 108.54,
-          "pnl_pct": -1.35
-        }
-      },
-      "position_usd": 205.49,
-      "unrealized_pnl_usd": -2.77
-    },
-    {
-      "ticker": "GKOS",
-      "name": "Glaukos",
-      "action": "BUY",
-      "signal_date": "2026-08-04",
-      "entry_price": 170.53,
-      "allocated_usd": 500,
-      "shares": 2.932,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 196.11,
-      "stop_loss": 167.12,
-      "max_hold_date": "2026-08-06",
-      "daily_prices": {
-        "2026-08-05": {
-          "open": 172.01,
-          "high": 171.76,
-          "low": 167.81,
-          "close": 170.93,
-          "pnl_pct": 0.23
-        }
-      },
-      "position_usd": 205.49,
-      "unrealized_pnl_usd": 0.47
-    },
-    {
       "ticker": "RCKY",
       "name": "Rocky Brands",
       "action": "BUY",
@@ -239,8 +164,75 @@
       "take_profit": 57.44,
       "stop_loss": 48.95,
       "max_hold_date": "2026-08-07",
+      "daily_prices": {
+        "2026-08-06": {
+          "open": 49.89,
+          "high": 50.47,
+          "low": 49.82,
+          "close": 50.14,
+          "pnl_pct": 0.38
+        }
+      },
+      "position_usd": 204.66,
+      "unrealized_pnl_usd": 0.78
+    },
+    {
+      "ticker": "GKOS",
+      "name": "Glaukos Corporation",
+      "action": "BUY",
+      "signal_date": "2026-08-05",
+      "entry_price": 170.93,
+      "allocated_usd": 500,
+      "shares": 2.9252,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 196.57,
+      "stop_loss": 167.51,
+      "max_hold_date": "2026-08-07",
+      "daily_prices": {
+        "2026-08-06": {
+          "open": 171.17,
+          "high": 171.3,
+          "low": 168.39,
+          "close": 170.01,
+          "pnl_pct": -0.54
+        }
+      },
+      "position_usd": 204.66,
+      "unrealized_pnl_usd": -1.11
+    },
+    {
+      "ticker": "RCKY",
+      "name": "Rocky Brands",
+      "action": "BUY",
+      "signal_date": "2026-08-06",
+      "entry_price": 50.14,
+      "allocated_usd": 500,
+      "shares": 9.9721,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 57.66,
+      "stop_loss": 49.14,
+      "max_hold_date": "2026-08-10",
       "daily_prices": {},
-      "position_usd": 205.07,
+      "position_usd": 204.76,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CDNA",
+      "name": "CareDx",
+      "action": "BUY",
+      "signal_date": "2026-08-06",
+      "entry_price": 45.81,
+      "allocated_usd": 500,
+      "shares": 10.9146,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 52.68,
+      "stop_loss": 44.89,
+      "max_hold_date": "2026-08-10",
+      "daily_prices": {},
+      "position_usd": 204.76,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4007,20 +3999,127 @@
       "commission_total": 2.0,
       "realized_pnl_usd": -4.11,
       "position_usd": 205.49
+    },
+    {
+      "ticker": "RCKY",
+      "name": "Rocky Brands",
+      "action": "BUY",
+      "signal_date": "2026-08-04",
+      "entry_price": 50.47,
+      "allocated_usd": 500,
+      "shares": 9.9069,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 58.04,
+      "stop_loss": 49.46,
+      "max_hold_date": "2026-08-06",
+      "daily_prices": {
+        "2026-08-05": {
+          "open": 50.11,
+          "high": 50.18,
+          "low": 49.22,
+          "close": 49.95,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-05",
+      "close_price": 49.46,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.11,
+      "position_usd": 205.49
+    },
+    {
+      "ticker": "MSBI",
+      "name": "Midland States Bancorp",
+      "action": "BUY",
+      "signal_date": "2026-08-04",
+      "entry_price": 34.53,
+      "allocated_usd": 500,
+      "shares": 14.4802,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 39.71,
+      "stop_loss": 33.84,
+      "max_hold_date": "2026-08-06",
+      "daily_prices": {
+        "2026-08-05": {
+          "open": 35.1,
+          "high": 35.1,
+          "low": 33.88,
+          "close": 34.24,
+          "pnl_pct": -0.84
+        },
+        "2026-08-06": {
+          "open": 34.54,
+          "high": 34.72,
+          "low": 33.99,
+          "close": 34.41,
+          "pnl_pct": -0.35
+        }
+      },
+      "close_date": "2026-08-06",
+      "close_price": 34.41,
+      "final_pnl_pct": -0.35,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.72,
+      "position_usd": 205.49
+    },
+    {
+      "ticker": "CHEF",
+      "name": "The Chefs' Warehouse",
+      "action": "BUY",
+      "signal_date": "2026-08-04",
+      "entry_price": 110.02,
+      "allocated_usd": 500,
+      "shares": 4.5446,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 126.52,
+      "stop_loss": 107.82,
+      "max_hold_date": "2026-08-06",
+      "daily_prices": {
+        "2026-08-05": {
+          "open": 111.06,
+          "high": 112.0,
+          "low": 108.2,
+          "close": 108.54,
+          "pnl_pct": -1.35
+        },
+        "2026-08-06": {
+          "open": 109.59,
+          "high": 111.75,
+          "low": 109.48,
+          "close": 110.92,
+          "pnl_pct": 0.82
+        }
+      },
+      "close_date": "2026-08-06",
+      "close_price": 110.92,
+      "final_pnl_pct": 0.82,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 1.68,
+      "position_usd": 205.49
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 111,
-    "win_trades": 32,
-    "win_rate": 28.8,
-    "total_realized_pnl_usd": 50.75,
-    "open_unrealized_pnl_usd": 20.61,
-    "portfolio_value": 2071.36,
-    "total_commission_usd": 222.0,
-    "skipped_gap": 54,
+    "total_trades": 114,
+    "win_trades": 33,
+    "win_rate": 28.9,
+    "total_realized_pnl_usd": 47.6,
+    "open_unrealized_pnl_usd": 24.31,
+    "portfolio_value": 2071.91,
+    "total_commission_usd": 228.0,
+    "skipped_gap": 53,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 145,
-    "updated_at": "2026-08-05"
+    "skipped_no_cash": 149,
+    "updated_at": "2026-08-06"
   }
 }
