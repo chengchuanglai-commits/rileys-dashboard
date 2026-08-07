@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 49.86,
           "high": 50.28,
           "low": 49.04,
-          "close": 49.76,
-          "pnl_pct": 0.1
+          "close": 49.23,
+          "pnl_pct": -0.97
         }
       },
       "position_usd": 203.27,
-      "unrealized_pnl_usd": 0.2
+      "unrealized_pnl_usd": -1.97
     },
     {
       "ticker": "CDNA",
@@ -193,27 +193,27 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-07": {
           "open": 44.89,
-          "high": 46.55,
+          "high": 46.74,
           "low": 44.57,
-          "close": 46.26,
-          "pnl_pct": 3.24
+          "close": 46.69,
+          "pnl_pct": 4.2
         }
       },
       "position_usd": 203.27,
-      "unrealized_pnl_usd": 6.59
+      "unrealized_pnl_usd": 8.54
     },
     {
       "ticker": "INBK",
       "name": "第一网络银行",
       "action": "BUY",
       "signal_date": "2026-08-07",
-      "entry_price": 29.08,
+      "entry_price": 29.21,
       "allocated_usd": 500,
-      "shares": 17.1939,
+      "shares": 17.1174,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 33.44,
-      "stop_loss": 28.5,
+      "take_profit": 33.59,
+      "stop_loss": 28.63,
       "max_hold_date": "2026-08-11",
       "daily_prices": {},
       "position_usd": 202.45,
@@ -224,13 +224,13 @@ window.PORTFOLIO_MN = {
       "name": "梅里特医疗系统",
       "action": "BUY",
       "signal_date": "2026-08-07",
-      "entry_price": 88.7,
+      "entry_price": 89.04,
       "allocated_usd": 500,
-      "shares": 5.637,
+      "shares": 5.6155,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 102.0,
-      "stop_loss": 86.93,
+      "take_profit": 102.4,
+      "stop_loss": 87.26,
       "max_hold_date": "2026-08-11",
       "daily_prices": {},
       "position_usd": 202.45,
@@ -4186,9 +4186,9 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-07": {
           "open": 11.82,
-          "high": 12.29,
+          "high": 12.49,
           "low": 11.59,
-          "close": 12.2,
+          "close": 12.45,
           "pnl_pct": -2.02
         }
       },
@@ -4219,7 +4219,7 @@ window.PORTFOLIO_MN = {
           "open": 53.8,
           "high": 54.67,
           "low": 52.89,
-          "close": 54.5,
+          "close": 54.25,
           "pnl_pct": -2.0
         }
       },
@@ -4239,8 +4239,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 32,
     "win_rate": 27.1,
     "total_realized_pnl_usd": 24.53,
-    "open_unrealized_pnl_usd": 31.43,
-    "portfolio_value": 2055.96,
+    "open_unrealized_pnl_usd": 31.2,
+    "portfolio_value": 2055.73,
     "total_commission_usd": 236.0,
     "skipped_gap": 53,
     "skipped_zero_shares": 0,

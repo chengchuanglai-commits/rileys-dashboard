@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 22.53,
           "high": 23.07,
           "low": 22.24,
-          "close": 22.8,
-          "pnl_pct": 2.1
+          "close": 22.6,
+          "pnl_pct": 1.21
         }
       },
       "position_usd": 223.5,
-      "unrealized_pnl_usd": 4.69
+      "unrealized_pnl_usd": 2.7
     },
     {
       "ticker": "INBK",
@@ -188,12 +188,12 @@ window.PORTFOLIO_HDS = {
           "open": 29.3,
           "high": 29.42,
           "low": 28.91,
-          "close": 29.08,
-          "pnl_pct": -0.89
+          "close": 29.21,
+          "pnl_pct": -0.44
         }
       },
       "position_usd": 223.5,
-      "unrealized_pnl_usd": -1.99
+      "unrealized_pnl_usd": -0.98
     },
     {
       "ticker": "PCRX",
@@ -2801,9 +2801,9 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-07": {
           "open": 44.89,
-          "high": 46.55,
+          "high": 46.74,
           "low": 44.57,
-          "close": 46.35,
+          "close": 46.69,
           "pnl_pct": -2.0
         }
       },
@@ -2823,8 +2823,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 38,
     "win_rate": 51.4,
     "total_realized_pnl_usd": 230.57,
-    "open_unrealized_pnl_usd": 33.13,
-    "portfolio_value": 2263.7,
+    "open_unrealized_pnl_usd": 32.14,
+    "portfolio_value": 2262.71,
     "total_commission_usd": 148.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
