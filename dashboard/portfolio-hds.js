@@ -158,9 +158,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 25.68,
       "stop_loss": 21.88,
       "max_hold_date": "2026-08-10",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-08-07": {
+          "open": 22.53,
+          "high": 23.07,
+          "low": 22.53,
+          "close": 22.69,
+          "pnl_pct": 1.61
+        }
+      },
       "position_usd": 223.5,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.6
     },
     {
       "ticker": "INBK",
@@ -180,20 +188,20 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "MMSI",
+      "ticker": "PCRX",
       "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-06",
-      "entry_price": 87.18,
+      "action": "SELL",
+      "signal_date": "2026-08-07",
+      "entry_price": 25.58,
       "allocated_usd": 500,
-      "shares": 5.7353,
+      "shares": 19.5465,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 100.26,
-      "stop_loss": 85.44,
-      "max_hold_date": "2026-08-10",
+      "take_profit": 21.74,
+      "stop_loss": 26.09,
+      "max_hold_date": "2026-08-11",
       "daily_prices": {},
-      "position_usd": 223.5,
+      "position_usd": 223.06,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2723,7 +2731,7 @@ window.PORTFOLIO_HDS = {
         },
         "2026-08-06": {
           "open": 83.56,
-          "high": 83.66,
+          "high": 83.8,
           "low": 77.81,
           "close": 82.46,
           "pnl_pct": -2.0
@@ -2753,8 +2761,8 @@ window.PORTFOLIO_HDS = {
       "max_hold_date": "2026-08-07",
       "daily_prices": {
         "2026-08-06": {
-          "open": 21.63,
-          "high": 22.28,
+          "open": 21.5,
+          "high": 22.29,
           "low": 20.52,
           "close": 20.76,
           "pnl_pct": -1.99
@@ -2768,20 +2776,51 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.47,
       "position_usd": 224.4
+    },
+    {
+      "ticker": "CDNA",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-06",
+      "entry_price": 45.5,
+      "allocated_usd": 500,
+      "shares": 10.989,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 38.67,
+      "stop_loss": 46.41,
+      "max_hold_date": "2026-08-10",
+      "daily_prices": {
+        "2026-08-07": {
+          "open": 44.89,
+          "high": 46.46,
+          "low": 44.57,
+          "close": 45.36,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-07",
+      "close_price": 46.41,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.47,
+      "position_usd": 223.5
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 73,
+    "total_trades": 74,
     "win_trades": 38,
-    "win_rate": 52.1,
-    "total_realized_pnl_usd": 235.04,
-    "open_unrealized_pnl_usd": 30.42,
-    "portfolio_value": 2265.46,
-    "total_commission_usd": 146.0,
+    "win_rate": 51.4,
+    "total_realized_pnl_usd": 230.57,
+    "open_unrealized_pnl_usd": 34.02,
+    "portfolio_value": 2264.59,
+    "total_commission_usd": 148.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 29,
+    "skipped_no_cash": 32,
     "updated_at": "2026-08-07"
   }
 };
