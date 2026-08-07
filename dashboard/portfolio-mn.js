@@ -193,27 +193,27 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-07": {
           "open": 44.89,
-          "high": 46.46,
+          "high": 46.55,
           "low": 44.57,
-          "close": 46.36,
-          "pnl_pct": 3.46
+          "close": 46.44,
+          "pnl_pct": 3.64
         }
       },
       "position_usd": 203.27,
-      "unrealized_pnl_usd": 7.03
+      "unrealized_pnl_usd": 7.4
     },
     {
       "ticker": "INBK",
       "name": "第一网络银行",
       "action": "BUY",
       "signal_date": "2026-08-07",
-      "entry_price": 29.22,
+      "entry_price": 29.42,
       "allocated_usd": 500,
-      "shares": 17.1116,
+      "shares": 16.9952,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 33.6,
-      "stop_loss": 28.64,
+      "take_profit": 33.83,
+      "stop_loss": 28.83,
       "max_hold_date": "2026-08-11",
       "daily_prices": {},
       "position_usd": 202.45,
@@ -224,13 +224,13 @@ window.PORTFOLIO_MN = {
       "name": "梅里特医疗系统",
       "action": "BUY",
       "signal_date": "2026-08-07",
-      "entry_price": 88.81,
+      "entry_price": 88.64,
       "allocated_usd": 500,
-      "shares": 5.63,
+      "shares": 5.6408,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 102.13,
-      "stop_loss": 87.03,
+      "take_profit": 101.94,
+      "stop_loss": 86.87,
       "max_hold_date": "2026-08-11",
       "daily_prices": {},
       "position_usd": 202.45,
@@ -4186,9 +4186,9 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-07": {
           "open": 11.82,
-          "high": 12.03,
+          "high": 12.09,
           "low": 11.59,
-          "close": 12.02,
+          "close": 12.05,
           "pnl_pct": -2.02
         }
       },
@@ -4219,7 +4219,7 @@ window.PORTFOLIO_MN = {
           "open": 53.8,
           "high": 54.61,
           "low": 52.89,
-          "close": 54.36,
+          "close": 54.34,
           "pnl_pct": -2.0
         }
       },
@@ -4239,8 +4239,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 32,
     "win_rate": 27.1,
     "total_realized_pnl_usd": 24.53,
-    "open_unrealized_pnl_usd": 30.17,
-    "portfolio_value": 2054.7,
+    "open_unrealized_pnl_usd": 30.53,
+    "portfolio_value": 2055.06,
     "total_commission_usd": 236.0,
     "skipped_gap": 53,
     "skipped_zero_shares": 0,
