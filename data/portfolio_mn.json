@@ -155,67 +155,17 @@
       "ticker": "RCKY",
       "name": "Rocky Brands",
       "action": "BUY",
-      "signal_date": "2026-08-05",
-      "entry_price": 49.95,
-      "allocated_usd": 500,
-      "shares": 10.01,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 57.44,
-      "stop_loss": 48.95,
-      "max_hold_date": "2026-08-07",
-      "daily_prices": {
-        "2026-08-06": {
-          "open": 49.89,
-          "high": 50.47,
-          "low": 49.82,
-          "close": 50.14,
-          "pnl_pct": 0.38
-        }
-      },
-      "position_usd": 204.66,
-      "unrealized_pnl_usd": 0.78
-    },
-    {
-      "ticker": "GKOS",
-      "name": "Glaukos Corporation",
-      "action": "BUY",
-      "signal_date": "2026-08-05",
-      "entry_price": 170.93,
-      "allocated_usd": 500,
-      "shares": 2.9252,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 196.57,
-      "stop_loss": 167.51,
-      "max_hold_date": "2026-08-07",
-      "daily_prices": {
-        "2026-08-06": {
-          "open": 171.17,
-          "high": 171.3,
-          "low": 168.39,
-          "close": 170.01,
-          "pnl_pct": -0.54
-        }
-      },
-      "position_usd": 204.66,
-      "unrealized_pnl_usd": -1.11
-    },
-    {
-      "ticker": "RCKY",
-      "name": "Rocky Brands",
-      "action": "BUY",
       "signal_date": "2026-08-06",
-      "entry_price": 50.14,
+      "entry_price": 49.71,
       "allocated_usd": 500,
-      "shares": 9.9721,
+      "shares": 10.0583,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 57.66,
-      "stop_loss": 49.14,
+      "take_profit": 57.17,
+      "stop_loss": 48.72,
       "max_hold_date": "2026-08-10",
       "daily_prices": {},
-      "position_usd": 204.76,
+      "position_usd": 203.27,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -223,16 +173,50 @@
       "name": "CareDx",
       "action": "BUY",
       "signal_date": "2026-08-06",
-      "entry_price": 45.81,
+      "entry_price": 44.81,
       "allocated_usd": 500,
-      "shares": 10.9146,
+      "shares": 11.1582,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 52.68,
-      "stop_loss": 44.89,
+      "take_profit": 51.53,
+      "stop_loss": 43.91,
       "max_hold_date": "2026-08-10",
       "daily_prices": {},
-      "position_usd": 204.76,
+      "position_usd": 203.27,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "GKOS",
+      "name": "Glaukos",
+      "action": "BUY",
+      "signal_date": "2026-08-06",
+      "entry_price": 170.99,
+      "allocated_usd": 500,
+      "shares": 2.9241,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 196.64,
+      "stop_loss": 167.57,
+      "max_hold_date": "2026-08-10",
+      "daily_prices": {},
+      "position_usd": 203.27,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CMPR",
+      "name": "Cimpress",
+      "action": "BUY",
+      "signal_date": "2026-08-06",
+      "entry_price": 96.51,
+      "allocated_usd": 500,
+      "shares": 5.1808,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 110.99,
+      "stop_loss": 94.58,
+      "max_hold_date": "2026-08-10",
+      "daily_prices": {},
+      "position_usd": 203.27,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4055,18 +4039,18 @@
         "2026-08-06": {
           "open": 34.54,
           "high": 34.72,
-          "low": 33.99,
-          "close": 34.41,
-          "pnl_pct": -0.35
+          "low": 33.74,
+          "close": 33.76,
+          "pnl_pct": -2.0
         }
       },
       "close_date": "2026-08-06",
-      "close_price": 34.41,
-      "final_pnl_pct": -0.35,
-      "close_reason": "max_hold",
+      "close_price": 33.84,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.72,
+      "realized_pnl_usd": -4.11,
       "position_usd": 205.49
     },
     {
@@ -4093,33 +4077,95 @@
         "2026-08-06": {
           "open": 109.59,
           "high": 111.75,
-          "low": 109.48,
-          "close": 110.92,
-          "pnl_pct": 0.82
+          "low": 108.88,
+          "close": 109.14,
+          "pnl_pct": -0.8
         }
       },
       "close_date": "2026-08-06",
-      "close_price": 110.92,
-      "final_pnl_pct": 0.82,
+      "close_price": 109.14,
+      "final_pnl_pct": -0.8,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.68,
+      "realized_pnl_usd": -1.64,
       "position_usd": 205.49
+    },
+    {
+      "ticker": "CDNA",
+      "name": "CareDx",
+      "action": "BUY",
+      "signal_date": "2026-08-05",
+      "entry_price": 45.5,
+      "allocated_usd": 500,
+      "shares": 10.989,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 52.32,
+      "stop_loss": 44.59,
+      "max_hold_date": "2026-08-07",
+      "daily_prices": {
+        "2026-08-06": {
+          "open": 46.0,
+          "high": 46.0,
+          "low": 44.58,
+          "close": 44.81,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-06",
+      "close_price": 44.59,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.09,
+      "position_usd": 204.66
+    },
+    {
+      "ticker": "CROX",
+      "name": "Crocs",
+      "action": "BUY",
+      "signal_date": "2026-08-05",
+      "entry_price": 137.32,
+      "allocated_usd": 500,
+      "shares": 3.6411,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 157.92,
+      "stop_loss": 134.57,
+      "max_hold_date": "2026-08-07",
+      "daily_prices": {
+        "2026-08-06": {
+          "open": 136.77,
+          "high": 138.62,
+          "low": 133.77,
+          "close": 134.18,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-06",
+      "close_price": 134.57,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.09,
+      "position_usd": 204.66
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 114,
-    "win_trades": 33,
-    "win_rate": 28.9,
-    "total_realized_pnl_usd": 47.6,
-    "open_unrealized_pnl_usd": 24.31,
-    "portfolio_value": 2071.91,
-    "total_commission_usd": 228.0,
+    "total_trades": 116,
+    "win_trades": 32,
+    "win_rate": 27.6,
+    "total_realized_pnl_usd": 32.7,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2057.34,
+    "total_commission_usd": 232.0,
     "skipped_gap": 53,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 149,
-    "updated_at": "2026-08-06"
+    "skipped_no_cash": 147,
+    "updated_at": "2026-08-07"
   }
 }
