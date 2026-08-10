@@ -215,7 +215,8 @@ def open_batch():
     harvest_fills(ib, acct)   # 开盘批先收割隔夜/当日成交(TRAIL夜里触发的在这里入账)
 
     # ①自愈:先审计存量仓的TRAIL保护(主batch全局撤单会扫掉GTC;每晚必查必补)
-    open_pos = [p for p in st["positions"] if p["status"] == "open"]
+    # closing_timeout(超时单已挂待成交)期间实股仍在手:占槽+享受TRAIL自愈,直到对账确认清仓
+    open_pos = [p for p in st["positions"] if p["status"] in ("open", "closing_timeout")]
     live_trails = {o.contract.symbol for o in ib.reqAllOpenOrders() if o.order.orderType == "TRAIL"} if open_pos else set()
     healed = []
     for p in open_pos:
@@ -303,15 +304,22 @@ def close_batch():
     real = {}
     for p in ib.positions(acct):
         real[p.contract.symbol] = real.get(p.contract.symbol, 0) + p.position
+    # 已挂未成交的非TRAIL出场单(防closing_timeout重复挂:04:00下的DAY单排到下一交易日,重跑会叠单)
+    working_exits = {o.contract.symbol for o in ib.reqAllOpenOrders()
+                    if o.order.orderType != "TRAIL" and o.orderStatus.status in ("PreSubmitted", "Submitted")}
     closed_now, timeout_closed = [], []
     for p in st["positions"]:
-        if p["status"] != "open": continue
+        # closing_timeout也要继续跟踪(2026-08-10修:原来标记后就无人管,成交与否台账永不闭环)
+        if p["status"] not in ("open", "closing_timeout"): continue
         held = real.get(p["ticker"], 0)
         expect = p["shares"] if p["action"] == "BUY" else -p["shares"]
         if held == 0 or (expect > 0) != (held > 0):
-            p["status"] = "closed"; p["close_date"] = today; p["close_via"] = "trail/manual"
+            p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
+            p["status"] = "closed"; p["close_date"] = today
             closed_now.append(p["ticker"]); continue
         if today >= p["max_hold_date"]:
+            if p["ticker"] in working_exits:
+                continue   # 上次的超时单还在排队(如04:00下的DAY单等下一时段),别叠
             ct = Stock(p["ticker"], "SMART", "USD")
             if ib.qualifyContracts(ct):
                 px = snap_price(ib, ct)

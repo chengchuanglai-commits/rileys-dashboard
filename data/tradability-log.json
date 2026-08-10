@@ -132,5 +132,15 @@
     "why": "ADV$5.0M<5M"
    }
   ]
+ },
+ "2026-08-04": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "RCKY",
+    "action": "BUY",
+    "why": "ADV$3.2M<5M"
+   }
+  ]
  }
 }

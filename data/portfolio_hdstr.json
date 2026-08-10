@@ -96,13 +96,20 @@
         "2026-08-03": {
           "open": 23.63,
           "high": 23.99,
-          "low": 23.51,
+          "low": 23.52,
           "close": 23.86,
           "pnl_pct": 3.25
+        },
+        "2026-08-04": {
+          "open": 23.9,
+          "high": 24.25,
+          "low": 23.78,
+          "close": 24.12,
+          "pnl_pct": 4.37
         }
       },
       "position_usd": 242.83,
-      "unrealized_pnl_usd": 7.89
+      "unrealized_pnl_usd": 10.61
     },
     {
       "ticker": "BANR",
@@ -148,10 +155,17 @@
           "low": 70.36,
           "close": 70.55,
           "pnl_pct": 0.37
+        },
+        "2026-08-04": {
+          "open": 70.9,
+          "high": 72.54,
+          "low": 70.62,
+          "close": 71.81,
+          "pnl_pct": 2.16
         }
       },
       "position_usd": 244.59,
-      "unrealized_pnl_usd": 0.9
+      "unrealized_pnl_usd": 5.28
     },
     {
       "ticker": "BANR",
@@ -183,10 +197,17 @@
           "low": 70.36,
           "close": 70.55,
           "pnl_pct": 0.26
+        },
+        "2026-08-04": {
+          "open": 70.9,
+          "high": 72.54,
+          "low": 70.62,
+          "close": 71.81,
+          "pnl_pct": 2.05
         }
       },
       "position_usd": 246.84,
-      "unrealized_pnl_usd": 0.64
+      "unrealized_pnl_usd": 5.06
     },
     {
       "ticker": "GKOS",
@@ -201,39 +222,20 @@
         "2026-08-03": {
           "open": 168.66,
           "high": 173.98,
-          "low": 169.02,
+          "low": 168.6,
           "close": 170.87,
           "pnl_pct": 1.79
+        },
+        "2026-08-04": {
+          "open": 171.75,
+          "high": 172.82,
+          "low": 167.64,
+          "close": 170.53,
+          "pnl_pct": 1.58
         }
       },
       "position_usd": 246.24,
-      "unrealized_pnl_usd": 4.41
-    },
-    {
-      "ticker": "SLGN",
-      "action": "SELL",
-      "signal_date": "2026-08-03",
-      "entry_price": 39.98,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {},
-      "position_usd": 245.32,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "CHEF",
-      "action": "BUY",
-      "signal_date": "2026-08-03",
-      "entry_price": 115.35,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {},
-      "position_usd": 245.32,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 3.89
     },
     {
       "ticker": "GKOS",
@@ -244,8 +246,50 @@
       "close_price": null,
       "close_reason": "open",
       "final_pnl_pct": null,
+      "daily_prices": {
+        "2026-08-04": {
+          "open": 171.75,
+          "high": 172.82,
+          "low": 167.64,
+          "close": 170.53,
+          "pnl_pct": 2.29
+        }
+      },
+      "position_usd": 245.43,
+      "unrealized_pnl_usd": 5.62
+    },
+    {
+      "ticker": "IMMR",
+      "action": "SELL",
+      "signal_date": "2026-08-03",
+      "entry_price": 7.56,
+      "close_date": null,
+      "close_price": null,
+      "close_reason": "open",
+      "final_pnl_pct": null,
+      "daily_prices": {
+        "2026-08-04": {
+          "open": 7.58,
+          "high": 7.78,
+          "low": 7.58,
+          "close": 7.73,
+          "pnl_pct": -2.25
+        }
+      },
+      "position_usd": 245.43,
+      "unrealized_pnl_usd": -5.52
+    },
+    {
+      "ticker": "CMCO",
+      "action": "SELL",
+      "signal_date": "2026-08-04",
+      "entry_price": 20.92,
+      "close_date": null,
+      "close_price": null,
+      "close_reason": "open",
+      "final_pnl_pct": null,
       "daily_prices": {},
-      "position_usd": 245.32,
+      "position_usd": 245.43,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2587,55 +2631,55 @@
       "signal_date": "2026-07-24",
       "entry_price": 69.86,
       "close_date": "2026-08-03",
-      "close_price": 72.61,
+      "close_price": 72.29,
       "close_reason": "trail_stop",
-      "final_pnl_pct": -3.94,
+      "final_pnl_pct": -3.48,
       "daily_prices": {
         "2026-07-27": {
-          "open": 70.51,
-          "high": 71.38,
-          "low": 69.82,
-          "close": 70.28,
-          "pnl_pct": -0.6
+          "open": 70.19,
+          "high": 71.06,
+          "low": 69.51,
+          "close": 69.96,
+          "pnl_pct": -0.14
         },
         "2026-07-28": {
-          "open": 70.28,
-          "high": 72.03,
-          "low": 70.28,
-          "close": 71.6,
-          "pnl_pct": -2.49
+          "open": 69.96,
+          "high": 71.71,
+          "low": 69.96,
+          "close": 71.28,
+          "pnl_pct": -2.03
         },
         "2026-07-29": {
-          "open": 71.2,
-          "high": 71.8,
-          "low": 70.49,
-          "close": 70.93,
-          "pnl_pct": -1.53
+          "open": 70.88,
+          "high": 71.48,
+          "low": 70.17,
+          "close": 70.61,
+          "pnl_pct": -1.07
         },
         "2026-07-30": {
-          "open": 71.19,
-          "high": 72.11,
-          "low": 70.71,
-          "close": 70.86,
-          "pnl_pct": -1.43
+          "open": 70.87,
+          "high": 71.79,
+          "low": 70.39,
+          "close": 70.54,
+          "pnl_pct": -0.97
         },
         "2026-07-31": {
-          "open": 70.63,
-          "high": 72.44,
-          "low": 70.24,
-          "close": 71.34,
-          "pnl_pct": -2.12
+          "open": 70.31,
+          "high": 72.12,
+          "low": 69.92,
+          "close": 71.02,
+          "pnl_pct": -1.66
         },
         "2026-08-03": {
           "open": 71.59,
           "high": 72.7,
           "low": 71.07,
           "close": 72.11,
-          "pnl_pct": -3.94
+          "pnl_pct": -3.48
         }
       },
       "position_usd": 245.6,
-      "realized_pnl_usd": -9.68
+      "realized_pnl_usd": -8.55
     },
     {
       "ticker": "HFWA",
@@ -2775,11 +2819,11 @@
     "total_trades": 68,
     "win_trades": 40,
     "win_rate": 58.8,
-    "total_realized_pnl_usd": 453.21,
-    "open_unrealized_pnl_usd": 13.85,
-    "portfolio_value": 2467.06,
-    "skipped_gap": 42,
-    "skipped_no_cash": 30,
-    "updated_at": "2026-08-04"
+    "total_realized_pnl_usd": 454.34,
+    "open_unrealized_pnl_usd": 24.94,
+    "portfolio_value": 2479.28,
+    "skipped_gap": 44,
+    "skipped_no_cash": 32,
+    "updated_at": "2026-08-05"
   }
 }
