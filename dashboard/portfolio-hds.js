@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 24.74,
           "high": 25.25,
           "low": 24.24,
-          "close": 24.37,
-          "pnl_pct": 4.73
+          "close": 24.31,
+          "pnl_pct": 4.96
         }
       },
       "position_usd": 223.07,
-      "unrealized_pnl_usd": 10.55
+      "unrealized_pnl_usd": 11.06
     },
     {
       "ticker": "FLR",
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 55.86,
       "max_hold_date": "2026-08-12",
       "daily_prices": {},
-      "position_usd": 222.78,
+      "position_usd": 222.62,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 146.33,
       "max_hold_date": "2026-08-12",
       "daily_prices": {},
-      "position_usd": 222.78,
+      "position_usd": 222.62,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2833,7 +2833,7 @@ window.PORTFOLIO_HDS = {
           "open": 22.6,
           "high": 22.6,
           "low": 21.21,
-          "close": 21.26,
+          "close": 21.44,
           "pnl_pct": -2.02
         }
       },
@@ -2871,28 +2871,28 @@ window.PORTFOLIO_HDS = {
           "open": 29.31,
           "high": 29.86,
           "low": 28.93,
-          "close": 29.54,
-          "pnl_pct": 0.68
+          "close": 29.34,
+          "pnl_pct": 0.0
         }
       },
       "close_date": "2026-08-10",
-      "close_price": 29.54,
-      "final_pnl_pct": 0.68,
+      "close_price": 29.34,
+      "final_pnl_pct": 0.0,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.52,
+      "realized_pnl_usd": 0.0,
       "position_usd": 223.52
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 76,
-    "win_trades": 39,
-    "win_rate": 51.3,
-    "total_realized_pnl_usd": 227.75,
-    "open_unrealized_pnl_usd": 40.98,
-    "portfolio_value": 2268.73,
+    "win_trades": 38,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 226.23,
+    "open_unrealized_pnl_usd": 41.49,
+    "portfolio_value": 2267.72,
     "total_commission_usd": 152.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
