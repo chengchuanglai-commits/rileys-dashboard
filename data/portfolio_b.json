@@ -70,48 +70,27 @@
       "max_hold_date": "2026-06-03",
       "daily_prices": {
         "2026-05-28": {
-          "open": 18.78,
-          "high": 18.88,
-          "low": 18.08,
-          "close": 18.14,
-          "pnl_pct": 6.25
+          "open": 18.72,
+          "high": 18.81,
+          "low": 18.02,
+          "close": 18.08,
+          "pnl_pct": 6.56
         },
         "2026-05-29": {
-          "open": 18.19,
-          "high": 18.36,
-          "low": 17.82,
-          "close": 17.93,
-          "pnl_pct": 7.34
-        },
-        "2026-06-01": {
-          "open": 18.14,
-          "high": 18.44,
-          "low": 17.86,
-          "close": 18.38,
-          "pnl_pct": 5.01
-        },
-        "2026-06-02": {
-          "open": 18.51,
-          "high": 19.02,
-          "low": 18.45,
-          "close": 18.86,
-          "pnl_pct": 2.53
-        },
-        "2026-06-03": {
-          "open": 18.99,
-          "high": 19.12,
-          "low": 18.79,
-          "close": 18.98,
-          "pnl_pct": 1.91
+          "open": 18.13,
+          "high": 18.3,
+          "low": 17.75,
+          "close": 17.87,
+          "pnl_pct": 8.01
         }
       },
-      "close_date": "2026-06-03",
-      "close_price": 18.98,
-      "final_pnl_pct": 1.91,
-      "close_reason": "max_hold",
+      "close_date": "2026-05-29",
+      "close_price": 17.8,
+      "final_pnl_pct": 8.01,
+      "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.24
+      "realized_pnl_usd": 36.75
     },
     {
       "ticker": "MXL",
@@ -572,10 +551,10 @@
       "max_hold_date": "2026-06-18",
       "daily_prices": {
         "2026-06-12": {
-          "open": 174.61,
-          "high": 176.69,
-          "low": 171.75,
-          "close": 173.04,
+          "open": 174.46,
+          "high": 176.53,
+          "low": 171.6,
+          "close": 172.89,
           "pnl_pct": -4.0
         }
       },
@@ -632,17 +611,17 @@
       "max_hold_date": "2026-06-19",
       "daily_prices": {
         "2026-06-15": {
-          "open": 172.51,
-          "high": 172.79,
-          "low": 162.32,
-          "close": 164.1,
-          "pnl_pct": 5.47
+          "open": 172.36,
+          "high": 172.64,
+          "low": 162.18,
+          "close": 163.95,
+          "pnl_pct": 5.56
         },
         "2026-06-16": {
-          "open": 165.18,
-          "high": 166.94,
-          "low": 159.22,
-          "close": 159.8,
+          "open": 165.03,
+          "high": 166.79,
+          "low": 159.08,
+          "close": 159.66,
           "pnl_pct": 8.0
         }
       },
@@ -2242,9 +2221,9 @@
     "total_trades": 52,
     "win_trades": 26,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 81.93,
+    "total_realized_pnl_usd": 111.44,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2081.93,
-    "updated_at": "2026-08-08"
+    "portfolio_value": 2111.44,
+    "updated_at": "2026-08-10"
   }
 }

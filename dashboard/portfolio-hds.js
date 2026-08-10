@@ -146,56 +146,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 15.75
     },
     {
-      "ticker": "ESCA",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-06",
-      "entry_price": 22.33,
-      "allocated_usd": 500,
-      "shares": 22.3914,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 25.68,
-      "stop_loss": 21.88,
-      "max_hold_date": "2026-08-10",
-      "daily_prices": {
-        "2026-08-07": {
-          "open": 22.53,
-          "high": 23.07,
-          "low": 22.24,
-          "close": 22.6,
-          "pnl_pct": 1.21
-        }
-      },
-      "position_usd": 223.52,
-      "unrealized_pnl_usd": 2.7
-    },
-    {
-      "ticker": "INBK",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-06",
-      "entry_price": 29.34,
-      "allocated_usd": 500,
-      "shares": 17.0416,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 33.74,
-      "stop_loss": 28.75,
-      "max_hold_date": "2026-08-10",
-      "daily_prices": {
-        "2026-08-07": {
-          "open": 29.3,
-          "high": 29.43,
-          "low": 28.91,
-          "close": 29.21,
-          "pnl_pct": -0.44
-        }
-      },
-      "position_usd": 223.52,
-      "unrealized_pnl_usd": -0.98
-    },
-    {
       "ticker": "PCRX",
       "name": "",
       "action": "SELL",
@@ -208,8 +158,50 @@ window.PORTFOLIO_HDS = {
       "take_profit": 21.74,
       "stop_loss": 26.09,
       "max_hold_date": "2026-08-11",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-08-10": {
+          "open": 24.74,
+          "high": 25.25,
+          "low": 24.63,
+          "close": 24.77,
+          "pnl_pct": 3.17
+        }
+      },
       "position_usd": 223.07,
+      "unrealized_pnl_usd": 7.07
+    },
+    {
+      "ticker": "FLR",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-10",
+      "entry_price": 57.0,
+      "allocated_usd": 500,
+      "shares": 8.7719,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 65.55,
+      "stop_loss": 55.86,
+      "max_hold_date": "2026-08-12",
+      "daily_prices": {},
+      "position_usd": 222.52,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "NSIT",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-10",
+      "entry_price": 149.32,
+      "allocated_usd": 500,
+      "shares": 3.3485,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 171.72,
+      "stop_loss": 146.33,
+      "max_hold_date": "2026-08-12",
+      "daily_prices": {},
+      "position_usd": 222.52,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2815,20 +2807,96 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.47,
       "position_usd": 223.52
+    },
+    {
+      "ticker": "ESCA",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-06",
+      "entry_price": 22.33,
+      "allocated_usd": 500,
+      "shares": 22.3914,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 25.68,
+      "stop_loss": 21.88,
+      "max_hold_date": "2026-08-10",
+      "daily_prices": {
+        "2026-08-07": {
+          "open": 22.53,
+          "high": 23.07,
+          "low": 22.24,
+          "close": 22.6,
+          "pnl_pct": 1.21
+        },
+        "2026-08-10": {
+          "open": 22.6,
+          "high": 22.6,
+          "low": 21.49,
+          "close": 21.7,
+          "pnl_pct": -2.02
+        }
+      },
+      "close_date": "2026-08-10",
+      "close_price": 21.88,
+      "final_pnl_pct": -2.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.52,
+      "position_usd": 223.52
+    },
+    {
+      "ticker": "INBK",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-06",
+      "entry_price": 29.34,
+      "allocated_usd": 500,
+      "shares": 17.0416,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 33.74,
+      "stop_loss": 28.75,
+      "max_hold_date": "2026-08-10",
+      "daily_prices": {
+        "2026-08-07": {
+          "open": 29.3,
+          "high": 29.43,
+          "low": 28.91,
+          "close": 29.21,
+          "pnl_pct": -0.44
+        },
+        "2026-08-10": {
+          "open": 29.31,
+          "high": 29.47,
+          "low": 28.93,
+          "close": 29.21,
+          "pnl_pct": -0.44
+        }
+      },
+      "close_date": "2026-08-10",
+      "close_price": 29.21,
+      "final_pnl_pct": -0.44,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.98,
+      "position_usd": 223.52
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 74,
+    "total_trades": 76,
     "win_trades": 38,
-    "win_rate": 51.4,
-    "total_realized_pnl_usd": 230.75,
-    "open_unrealized_pnl_usd": 32.15,
-    "portfolio_value": 2262.9,
-    "total_commission_usd": 148.0,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 225.25,
+    "open_unrealized_pnl_usd": 37.5,
+    "portfolio_value": 2262.75,
+    "total_commission_usd": 152.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 36,
+    "skipped_no_cash": 34,
     "updated_at": "2026-08-10"
   }
 };
