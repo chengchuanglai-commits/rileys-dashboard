@@ -4171,9 +4171,9 @@ window.PORTFOLIO_MN = {
         },
         "2026-08-10": {
           "open": 49.23,
-          "high": 49.49,
+          "high": 49.8,
           "low": 47.89,
-          "close": 49.33,
+          "close": 49.42,
           "pnl_pct": -1.99
         }
       },
@@ -4241,8 +4241,8 @@ window.PORTFOLIO_MN = {
         "2026-08-10": {
           "open": 20.15,
           "high": 20.25,
-          "low": 19.33,
-          "close": 19.66,
+          "low": 19.32,
+          "close": 19.34,
           "pnl_pct": -1.98
         }
       },
@@ -4271,9 +4271,9 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-10": {
           "open": 49.23,
-          "high": 49.49,
+          "high": 49.8,
           "low": 47.89,
-          "close": 49.33,
+          "close": 49.42,
           "pnl_pct": -1.99
         }
       },

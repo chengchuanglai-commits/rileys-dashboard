@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 24.74,
           "high": 25.25,
           "low": 24.24,
-          "close": 24.44,
-          "pnl_pct": 4.46
+          "close": 24.37,
+          "pnl_pct": 4.73
         }
       },
       "position_usd": 223.07,
-      "unrealized_pnl_usd": 9.95
+      "unrealized_pnl_usd": 10.55
     },
     {
       "ticker": "FLR",
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 55.86,
       "max_hold_date": "2026-08-12",
       "daily_prices": {},
-      "position_usd": 222.89,
+      "position_usd": 222.78,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 146.33,
       "max_hold_date": "2026-08-12",
       "daily_prices": {},
-      "position_usd": 222.89,
+      "position_usd": 222.78,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2832,8 +2832,8 @@ window.PORTFOLIO_HDS = {
         "2026-08-10": {
           "open": 22.6,
           "high": 22.6,
-          "low": 21.34,
-          "close": 21.52,
+          "low": 21.21,
+          "close": 21.26,
           "pnl_pct": -2.02
         }
       },
@@ -2871,17 +2871,17 @@ window.PORTFOLIO_HDS = {
           "open": 29.31,
           "high": 29.86,
           "low": 28.93,
-          "close": 29.69,
-          "pnl_pct": 1.19
+          "close": 29.54,
+          "pnl_pct": 0.68
         }
       },
       "close_date": "2026-08-10",
-      "close_price": 29.69,
-      "final_pnl_pct": 1.19,
+      "close_price": 29.54,
+      "final_pnl_pct": 0.68,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.66,
+      "realized_pnl_usd": 1.52,
       "position_usd": 223.52
     }
   ],
@@ -2890,9 +2890,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 76,
     "win_trades": 39,
     "win_rate": 51.3,
-    "total_realized_pnl_usd": 228.89,
-    "open_unrealized_pnl_usd": 40.37,
-    "portfolio_value": 2269.26,
+    "total_realized_pnl_usd": 227.75,
+    "open_unrealized_pnl_usd": 40.98,
+    "portfolio_value": 2268.73,
     "total_commission_usd": 152.0,
     "skipped_gap": 50,
     "skipped_zero_shares": 0,
