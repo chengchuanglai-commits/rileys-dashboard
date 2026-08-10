@@ -1,0 +1,176 @@
+{
+  "date": "2026-08-10",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "FLR",
+      "action": "BUY",
+      "current_price": 57.0,
+      "target_price": 62.7,
+      "stop_loss": 54.15
+    },
+    {
+      "ticker": "NSIT",
+      "action": "BUY",
+      "current_price": 149.32,
+      "target_price": 164.25,
+      "stop_loss": 141.85
+    },
+    {
+      "ticker": "BLMN",
+      "action": "BUY",
+      "current_price": 10.95,
+      "target_price": 12.04,
+      "stop_loss": 10.4
+    },
+    {
+      "ticker": "PGEN",
+      "action": "SELL",
+      "current_price": 7.23,
+      "target_price": 7.95,
+      "stop_loss": 6.87
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "ITIC",
+      "action": "HOLD",
+      "current_price": 289.84,
+      "target_price": 318.82,
+      "stop_loss": 275.35
+    },
+    {
+      "ticker": "WEYS",
+      "action": "HOLD",
+      "current_price": 46.17,
+      "target_price": 50.79,
+      "stop_loss": 43.86
+    },
+    {
+      "ticker": "FLR",
+      "action": "BUY",
+      "current_price": 57.0,
+      "target_price": 62.7,
+      "stop_loss": 54.15
+    },
+    {
+      "ticker": "NSIT",
+      "action": "BUY",
+      "current_price": 149.32,
+      "target_price": 164.25,
+      "stop_loss": 141.85
+    },
+    {
+      "ticker": "SFBC",
+      "action": "HOLD",
+      "current_price": 46.5,
+      "target_price": 51.15,
+      "stop_loss": 44.17
+    },
+    {
+      "ticker": "ESCA",
+      "action": "HOLD",
+      "current_price": 22.6,
+      "target_price": 24.86,
+      "stop_loss": 21.47
+    },
+    {
+      "ticker": "BLMN",
+      "action": "BUY",
+      "current_price": 10.95,
+      "target_price": 12.04,
+      "stop_loss": 10.4
+    },
+    {
+      "ticker": "PGEN",
+      "action": "SELL",
+      "current_price": 7.23,
+      "target_price": 7.95,
+      "stop_loss": 6.87
+    },
+    {
+      "ticker": "LQDT",
+      "action": "BUY",
+      "current_price": 42.06,
+      "target_price": 46.27,
+      "stop_loss": 39.96
+    },
+    {
+      "ticker": "PCRX",
+      "action": "BUY",
+      "current_price": 25.02,
+      "target_price": 27.52,
+      "stop_loss": 23.77
+    },
+    {
+      "ticker": "INFU",
+      "action": "SELL",
+      "current_price": 12.49,
+      "target_price": 13.74,
+      "stop_loss": 11.87
+    },
+    {
+      "ticker": "MMSI",
+      "action": "BUY",
+      "current_price": 89.04,
+      "target_price": 97.94,
+      "stop_loss": 84.59
+    },
+    {
+      "ticker": "ACIW",
+      "action": "BUY",
+      "current_price": 53.67,
+      "target_price": 59.04,
+      "stop_loss": 50.99
+    },
+    {
+      "ticker": "CENT",
+      "action": "HOLD",
+      "current_price": 44.74,
+      "target_price": 49.21,
+      "stop_loss": 42.5
+    },
+    {
+      "ticker": "XPEL",
+      "action": "HOLD",
+      "current_price": 50.07,
+      "target_price": 55.08,
+      "stop_loss": 47.57
+    },
+    {
+      "ticker": "GFF",
+      "action": "HOLD",
+      "current_price": 107.22,
+      "target_price": 117.94,
+      "stop_loss": 101.86
+    },
+    {
+      "ticker": "WTTR",
+      "action": "BUY",
+      "current_price": 20.23,
+      "target_price": 22.25,
+      "stop_loss": 19.22
+    },
+    {
+      "ticker": "CDNA",
+      "action": "SELL",
+      "current_price": 46.69,
+      "target_price": 51.36,
+      "stop_loss": 44.36
+    },
+    {
+      "ticker": "LCNB",
+      "action": "HOLD",
+      "current_price": 19.87,
+      "target_price": 21.86,
+      "stop_loss": 18.88
+    },
+    {
+      "ticker": "LMAT",
+      "action": "SELL",
+      "current_price": 81.45,
+      "target_price": 89.6,
+      "stop_loss": 77.38
+    }
+  ]
+}
