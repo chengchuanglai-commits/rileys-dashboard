@@ -228,6 +228,29 @@ def open_batch():
                            trailingPercent=TRAIL_PCT, tif="GTC")
                 tr.ocaGroup = f"hdstr_{p['ticker']}"; tr.ocaType = 2
                 ib.placeOrder(ct, tr); healed.append(p["ticker"])
+    # ①b 超时平仓(2026-08-11移入开盘批:04:00收盘批下单必被Error 201"已收盘"拒绝,只有开盘时段能成交)
+    # 不受halted影响——这是出场不是进场
+    working = {o.contract.symbol for o in ib.reqAllOpenOrders()
+               if o.order.orderType != "TRAIL" and o.orderStatus.status in ("PreSubmitted", "Submitted")}
+    timeout_placed = []
+    for p in open_pos:
+        if today < p["max_hold_date"] or p["ticker"] in working: continue
+        ct = Stock(p["ticker"], "SMART", "USD")
+        if not ib.qualifyContracts(ct): continue
+        px = snap_price(ib, ct)
+        side = "SELL" if p["action"] == "BUY" else "BUY"
+        lmt = round((px or p["ref_price"]) * (1 - LIMIT_BUFFER if side == "SELL" else 1 + LIMIT_BUFFER), 2)
+        o = LimitOrder(side, p["shares"], lmt); o.tif = "DAY"
+        o.ocaGroup = f"hdstr_{p['ticker']}"; o.ocaType = 2   # 与TRAIL互斥防双出
+        tr_ = ib.placeOrder(ct, o); ib.sleep(3)
+        if tr_.orderStatus.status in ("Cancelled", "ApiCancelled", "Inactive"):
+            why = next((l.message[:40] for l in tr_.log if l.errorCode), tr_.orderStatus.status)
+            print(f"[hdstr] {p['ticker']}超时平仓被拒:{why}")
+        else:
+            p["status"] = "closing_timeout"; timeout_placed.append(p["ticker"])
+    if timeout_placed:
+        notify(f"⏰ hdstr超时平仓单已挂(开盘时段): {timeout_placed}\n（hdstr真钱试运行·自动）")
+
     # ②新开仓
     placed, skipped, pending = [], [], []
     if halted:
@@ -304,9 +327,6 @@ def close_batch():
     real = {}
     for p in ib.positions(acct):
         real[p.contract.symbol] = real.get(p.contract.symbol, 0) + p.position
-    # 已挂未成交的非TRAIL出场单(防closing_timeout重复挂:04:00下的DAY单排到下一交易日,重跑会叠单)
-    working_exits = {o.contract.symbol for o in ib.reqAllOpenOrders()
-                    if o.order.orderType != "TRAIL" and o.orderStatus.status in ("PreSubmitted", "Submitted")}
     closed_now, timeout_closed = [], []
     for p in st["positions"]:
         # closing_timeout也要继续跟踪(2026-08-10修:原来标记后就无人管,成交与否台账永不闭环)
@@ -317,18 +337,8 @@ def close_batch():
             p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
             p["status"] = "closed"; p["close_date"] = today
             closed_now.append(p["ticker"]); continue
-        if today >= p["max_hold_date"]:
-            if p["ticker"] in working_exits:
-                continue   # 上次的超时单还在排队(如04:00下的DAY单等下一时段),别叠
-            ct = Stock(p["ticker"], "SMART", "USD")
-            if ib.qualifyContracts(ct):
-                px = snap_price(ib, ct)
-                side = "SELL" if p["action"] == "BUY" else "BUY"
-                lmt = round((px or p["ref_price"]) * (1 - LIMIT_BUFFER if side == "SELL" else 1 + LIMIT_BUFFER), 2)
-                o = LimitOrder(side, abs(int(held)), lmt); o.tif = "DAY"
-                o.ocaGroup = f"hdstr_{p['ticker']}"; o.ocaType = 2   # 与TRAIL互斥,防双出
-                ib.placeOrder(ct, o)
-                p["status"] = "closing_timeout"; timeout_closed.append(p["ticker"])
+        # 超时平仓下单已移至开盘批(2026-08-11:04:00=美东刚收盘,此处下单必被Error 201拒;
+        # 收盘批只做对账,到期仓由下一个开盘批在交易时段内平)
     ib.sleep(3); ib.disconnect()
     save_state(st)
     if closed_now or timeout_closed:
