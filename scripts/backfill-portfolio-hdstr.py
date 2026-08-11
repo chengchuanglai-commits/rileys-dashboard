@@ -13,7 +13,8 @@ DS_DIR = "dashboard/trading-signals-history/deepseek"
 PORTFOLIO_PATH = "data/portfolio_hdstr.json"
 GAP = 1.0
 INIT = 2000.0
-NOTE = ("hds-tr 影子腿:DeepSeek信号+移动止损(init-4%/trail4%/10d/gap1.0)。与hds同信号只换出场。"
+NOTE = ("hds-tr 影子腿【理想化上界:信号价零滑点成交/碎股/无借券约束/10并发,真钱只有4并发+整股+滑点,"
+        "两者数字不可直接比较】:DeepSeek信号+移动止损(init-4%/trail4%/10d/gap1.0)。与hds同信号只换出场。"
         "2026-07-17方法B配对+组合回测双确认后开跑;影子不参与gate,gate裁hds本体。")
 
 

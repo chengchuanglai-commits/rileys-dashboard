@@ -120,8 +120,10 @@ def run():
                       "qqq_ret_pct": round(qqq_ret, 2), "qqq_maxdd_pct": round(qdd, 2)}
         json.dump(g, open(GATE, "w"), ensure_ascii=False, indent=2)
         icon = "🟢" if verdict == "PASS" else "🔴"
-        act = ("→ 可从波动腿$10000切20%($2000)真钱试运行4周(需Riley批准执行)"
-               if verdict == "PASS" else "→ 不上真钱。继续paper或退役,另议")
+        margin = hds_ret - qqq_ret
+        act = ((f"→ 通过预注册决策规则(80笔样本无统计学证明力,只代表'允许继续小额实验')。\n"
+                f"→ 仓位解冻:领先{margin:+.1f}pp{'≥2pp,按净值全解冻' if margin >= 2 else '<2pp属边缘PASS,半解冻帽$2100(协议修订#3)'}")
+               if verdict == "PASS" else "→ 不上真钱。按预注册纪律退役,证据归档,不讨价还价")
         notify(f"{icon} hds 真钱gate 裁决: {verdict}\n"
                f"① 平仓 {trades}/{g['min_trades_total']} {'✅' if c1 else '❌'}\n"
                f"② hds {hds_ret:+.1f}% vs QQQ {qqq_ret:+.1f}% {'✅' if c2 else '❌'}\n"

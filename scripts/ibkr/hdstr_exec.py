@@ -52,6 +52,8 @@ TRIAL_BASE_USD = 2000.0   # 复利净值算不出时的回退基准(=预注册�
 SIZING_FREEZE_USD = 1200.0  # gate裁决前仓位基准上限(2026-08-04 Riley批:入金先行至全仓$3000,
                             # 但加码严格等gate PASS——先例2026-07-27"跳过预注册加码=四周后凭数据谈"。
                             # verdict=PASS当天自动解冻按真实净值复利;FAIL则entries_halted已接管)
+MARGINAL_PASS_CAP = 2100.0  # 边缘PASS条款(2026-08-11审查后Riley批,协议修订#3):PASS但领先<2pp=
+                            # 可能是噪音上的胜利,只解冻到中位帽$2100;领先≥2pp才全解冻。8/24评估时复核
 MAX_CONC = 4
 TRAIL_PCT = 4.0
 MAX_HOLD_TD = 10
@@ -267,11 +269,18 @@ def open_batch():
         per_usd = 0
         if slots > 0 and sigs:
             eq = trial_equity_usd(ib, acct)
-            unlocked = load(GATE, {}).get("verdict") == "PASS"
-            base = eq if unlocked else min(eq, SIZING_FREEZE_USD)
+            g = load(GATE, {})
+            if g.get("verdict") == "PASS":
+                fin = g.get("final", {})
+                margin = fin.get("hds_ret_pct", 0) - fin.get("qqq_ret_pct", 0)
+                if margin >= 2.0:
+                    base, tag = eq, f"PASS(领先{margin:+.1f}pp)全解冻"
+                else:
+                    base, tag = min(eq, MARGINAL_PASS_CAP), f"边缘PASS(领先{margin:+.1f}pp<2pp)半解冻帽${MARGINAL_PASS_CAP:.0f}"
+            else:
+                base, tag = min(eq, SIZING_FREEZE_USD), f"gate前冻结帽${SIZING_FREEZE_USD:.0f}"
             per_usd = base * POS_PCT
-            print(f"[hdstr] 复利单仓额 ${per_usd:.0f} (基准${base:.0f}×{POS_PCT:.0%}"
-                  f"{',已解冻' if unlocked else f',gate前冻结帽${SIZING_FREEZE_USD:.0f}'};净值${eq:.0f})")
+            print(f"[hdstr] 复利单仓额 ${per_usd:.0f} (基准${base:.0f}×{POS_PCT:.0%},{tag};净值${eq:.0f})")
         for s in sigs:
             if slots <= 0: break
             tk, ac, sp = s.get("ticker"), s.get("action"), s.get("current_price")
