@@ -146,48 +146,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 15.76
     },
     {
-      "ticker": "PCRX",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-07",
-      "entry_price": 25.58,
-      "allocated_usd": 500,
-      "shares": 19.5465,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 21.74,
-      "stop_loss": 26.09,
-      "max_hold_date": "2026-08-11",
-      "daily_prices": {
-        "2026-08-10": {
-          "open": 24.74,
-          "high": 25.25,
-          "low": 24.24,
-          "close": 24.43,
-          "pnl_pct": 4.5
-        }
-      },
-      "position_usd": 223.22,
-      "unrealized_pnl_usd": 10.04
-    },
-    {
-      "ticker": "FLR",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-10",
-      "entry_price": 57.0,
-      "allocated_usd": 500,
-      "shares": 8.7719,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 65.55,
-      "stop_loss": 55.86,
-      "max_hold_date": "2026-08-12",
-      "daily_prices": {},
-      "position_usd": 222.75,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "NSIT",
       "name": "",
       "action": "BUY",
@@ -200,8 +158,58 @@ window.PORTFOLIO_HDS = {
       "take_profit": 171.72,
       "stop_loss": 146.33,
       "max_hold_date": "2026-08-12",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-08-11": {
+          "open": 153.39,
+          "high": 155.66,
+          "low": 152.53,
+          "close": 155.11,
+          "pnl_pct": 3.88
+        }
+      },
       "position_usd": 222.75,
+      "unrealized_pnl_usd": 8.64
+    },
+    {
+      "ticker": "BLMN",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-10",
+      "entry_price": 10.95,
+      "allocated_usd": 500,
+      "shares": 45.6621,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 12.59,
+      "stop_loss": 10.73,
+      "max_hold_date": "2026-08-12",
+      "daily_prices": {
+        "2026-08-11": {
+          "open": 10.87,
+          "high": 11.14,
+          "low": 10.82,
+          "close": 11.03,
+          "pnl_pct": 0.73
+        }
+      },
+      "position_usd": 222.75,
+      "unrealized_pnl_usd": 1.63
+    },
+    {
+      "ticker": "BLMN",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-11",
+      "entry_price": 11.02,
+      "allocated_usd": 500,
+      "shares": 45.3721,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 12.67,
+      "stop_loss": 10.8,
+      "max_hold_date": "2026-08-13",
+      "daily_prices": {},
+      "position_usd": 223.85,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2883,20 +2891,58 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -0.16,
       "position_usd": 223.67
+    },
+    {
+      "ticker": "PCRX",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-07",
+      "entry_price": 25.58,
+      "allocated_usd": 500,
+      "shares": 19.5465,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 21.74,
+      "stop_loss": 26.09,
+      "max_hold_date": "2026-08-11",
+      "daily_prices": {
+        "2026-08-10": {
+          "open": 24.74,
+          "high": 25.25,
+          "low": 24.24,
+          "close": 24.43,
+          "pnl_pct": 4.5
+        },
+        "2026-08-11": {
+          "open": 24.49,
+          "high": 24.72,
+          "low": 24.27,
+          "close": 24.32,
+          "pnl_pct": 4.93
+        }
+      },
+      "close_date": "2026-08-11",
+      "close_price": 24.32,
+      "final_pnl_pct": 4.93,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 11.0,
+      "position_usd": 223.22
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 76,
-    "win_trades": 38,
-    "win_rate": 50.0,
-    "total_realized_pnl_usd": 227.53,
-    "open_unrealized_pnl_usd": 40.48,
-    "portfolio_value": 2268.01,
-    "total_commission_usd": 152.0,
-    "skipped_gap": 50,
+    "total_trades": 77,
+    "win_trades": 39,
+    "win_rate": 50.6,
+    "total_realized_pnl_usd": 238.54,
+    "open_unrealized_pnl_usd": 40.7,
+    "portfolio_value": 2279.24,
+    "total_commission_usd": 154.0,
+    "skipped_gap": 51,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 38,
+    "skipped_no_cash": 36,
     "updated_at": "2026-08-11"
   }
 };

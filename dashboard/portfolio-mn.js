@@ -151,6 +151,74 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.89,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "ESCA",
+      "name": "埃斯卡隆",
+      "action": "BUY",
+      "signal_date": "2026-08-11",
+      "entry_price": 21.21,
+      "allocated_usd": 500,
+      "shares": 23.5738,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 24.39,
+      "stop_loss": 20.79,
+      "max_hold_date": "2026-08-13",
+      "daily_prices": {},
+      "position_usd": 202.27,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "PGEN",
+      "name": "精密基因组",
+      "action": "BUY",
+      "signal_date": "2026-08-11",
+      "entry_price": 6.87,
+      "allocated_usd": 500,
+      "shares": 72.7802,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 7.9,
+      "stop_loss": 6.73,
+      "max_hold_date": "2026-08-13",
+      "daily_prices": {},
+      "position_usd": 202.27,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CDNA",
+      "name": "CareDx",
+      "action": "BUY",
+      "signal_date": "2026-08-11",
+      "entry_price": 47.18,
+      "allocated_usd": 500,
+      "shares": 10.5977,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 54.26,
+      "stop_loss": 46.24,
+      "max_hold_date": "2026-08-13",
+      "daily_prices": {},
+      "position_usd": 202.27,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "INFU",
+      "name": "InfuSystem",
+      "action": "BUY",
+      "signal_date": "2026-08-11",
+      "entry_price": 12.41,
+      "allocated_usd": 500,
+      "shares": 40.2901,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 14.27,
+      "stop_loss": 12.16,
+      "max_hold_date": "2026-08-13",
+      "daily_prices": {},
+      "position_usd": 202.27,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -4208,7 +4276,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 4.2
         },
         "2026-08-10": {
-          "open": 46.57,
+          "open": 46.58,
           "high": 48.29,
           "low": 46.09,
           "close": 47.07,
@@ -4239,8 +4307,8 @@ window.PORTFOLIO_MN = {
       "max_hold_date": "2026-08-11",
       "daily_prices": {
         "2026-08-10": {
-          "open": 20.15,
-          "high": 20.25,
+          "open": 20.57,
+          "high": 20.57,
           "low": 19.08,
           "close": 19.31,
           "pnl_pct": -1.98
@@ -4298,7 +4366,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 244.0,
     "skipped_gap": 55,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 155,
-    "updated_at": "2026-08-10"
+    "skipped_no_cash": 158,
+    "updated_at": "2026-08-11"
   }
 };
