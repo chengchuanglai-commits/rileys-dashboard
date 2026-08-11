@@ -161,13 +161,13 @@
         "2026-08-11": {
           "open": 153.39,
           "high": 155.98,
-          "low": 151.65,
-          "close": 152.43,
-          "pnl_pct": 2.08
+          "low": 150.76,
+          "close": 150.95,
+          "pnl_pct": 1.09
         }
       },
       "position_usd": 222.75,
-      "unrealized_pnl_usd": 4.63
+      "unrealized_pnl_usd": 2.43
     },
     {
       "ticker": "BLMN",
@@ -187,12 +187,12 @@
           "open": 10.87,
           "high": 11.27,
           "low": 10.82,
-          "close": 11.06,
-          "pnl_pct": 1.0
+          "close": 11.12,
+          "pnl_pct": 1.55
         }
       },
       "position_usd": 222.75,
-      "unrealized_pnl_usd": 2.23
+      "unrealized_pnl_usd": 3.45
     },
     {
       "ticker": "BLMN",
@@ -208,7 +208,7 @@
       "stop_loss": 10.8,
       "max_hold_date": "2026-08-13",
       "daily_prices": {},
-      "position_usd": 223.82,
+      "position_usd": 223.8,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2916,17 +2916,17 @@
           "open": 24.49,
           "high": 24.72,
           "low": 24.26,
-          "close": 24.36,
-          "pnl_pct": 4.77
+          "close": 24.38,
+          "pnl_pct": 4.69
         }
       },
       "close_date": "2026-08-11",
-      "close_price": 24.36,
-      "final_pnl_pct": 4.77,
+      "close_price": 24.38,
+      "final_pnl_pct": 4.69,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 10.65,
+      "realized_pnl_usd": 10.47,
       "position_usd": 223.22
     }
   ],
@@ -2935,9 +2935,9 @@
     "total_trades": 77,
     "win_trades": 39,
     "win_rate": 50.6,
-    "total_realized_pnl_usd": 238.18,
-    "open_unrealized_pnl_usd": 37.3,
-    "portfolio_value": 2275.48,
+    "total_realized_pnl_usd": 238.0,
+    "open_unrealized_pnl_usd": 36.32,
+    "portfolio_value": 2274.32,
     "total_commission_usd": 154.0,
     "skipped_gap": 51,
     "skipped_zero_shares": 0,
