@@ -161,7 +161,7 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-11": {
           "open": 153.39,
-          "high": 155.98,
+          "high": 155.99,
           "low": 150.76,
           "close": 150.95,
           "pnl_pct": 1.09
@@ -183,17 +183,9 @@ window.PORTFOLIO_HDS = {
       "take_profit": 12.59,
       "stop_loss": 10.73,
       "max_hold_date": "2026-08-12",
-      "daily_prices": {
-        "2026-08-11": {
-          "open": 10.87,
-          "high": 11.27,
-          "low": 10.82,
-          "close": 11.12,
-          "pnl_pct": 1.55
-        }
-      },
+      "daily_prices": {},
       "position_usd": 222.75,
-      "unrealized_pnl_usd": 3.45
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "BLMN",
@@ -2915,7 +2907,7 @@ window.PORTFOLIO_HDS = {
         },
         "2026-08-11": {
           "open": 24.49,
-          "high": 24.72,
+          "high": 24.78,
           "low": 24.26,
           "close": 24.38,
           "pnl_pct": 4.69
@@ -2937,12 +2929,12 @@ window.PORTFOLIO_HDS = {
     "win_trades": 39,
     "win_rate": 50.6,
     "total_realized_pnl_usd": 238.0,
-    "open_unrealized_pnl_usd": 36.32,
-    "portfolio_value": 2274.32,
+    "open_unrealized_pnl_usd": 32.86,
+    "portfolio_value": 2270.86,
     "total_commission_usd": 154.0,
     "skipped_gap": 51,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 36,
-    "updated_at": "2026-08-11"
+    "skipped_no_cash": 40,
+    "updated_at": "2026-08-12"
   }
 };

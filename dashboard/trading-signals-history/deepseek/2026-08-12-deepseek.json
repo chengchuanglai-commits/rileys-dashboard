@@ -1,0 +1,174 @@
+{
+  "date": "2026-08-12",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "ITIC",
+      "action": "BUY",
+      "current_price": 283.36,
+      "target_price": 311.7,
+      "stop_loss": 269.19
+    },
+    {
+      "ticker": "ESCA",
+      "action": "BUY",
+      "current_price": 20.76,
+      "target_price": 22.84,
+      "stop_loss": 19.72
+    },
+    {
+      "ticker": "ULBI",
+      "action": "BUY",
+      "current_price": 7.16,
+      "target_price": 7.88,
+      "stop_loss": 6.8
+    },
+    {
+      "ticker": "WEYS",
+      "action": "BUY",
+      "current_price": 46.88,
+      "target_price": 51.57,
+      "stop_loss": 44.54
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "ITIC",
+      "action": "BUY",
+      "current_price": 283.36,
+      "target_price": 311.7,
+      "stop_loss": 269.19
+    },
+    {
+      "ticker": "ESCA",
+      "action": "BUY",
+      "current_price": 20.76,
+      "target_price": 22.84,
+      "stop_loss": 19.72
+    },
+    {
+      "ticker": "ULBI",
+      "action": "BUY",
+      "current_price": 7.16,
+      "target_price": 7.88,
+      "stop_loss": 6.8
+    },
+    {
+      "ticker": "CENT",
+      "action": "HOLD",
+      "current_price": 44.14,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "WEYS",
+      "action": "BUY",
+      "current_price": 46.88,
+      "target_price": 51.57,
+      "stop_loss": 44.54
+    },
+    {
+      "ticker": "TISI",
+      "action": "HOLD",
+      "current_price": 22.71,
+      "target_price": 24.98,
+      "stop_loss": 21.57
+    },
+    {
+      "ticker": "SFBC",
+      "action": "HOLD",
+      "current_price": 46.43,
+      "target_price": 51.07,
+      "stop_loss": 44.11
+    },
+    {
+      "ticker": "MMSI",
+      "action": "BUY",
+      "current_price": 91.11,
+      "target_price": 100.22,
+      "stop_loss": 86.55
+    },
+    {
+      "ticker": "PODD",
+      "action": "HOLD",
+      "current_price": 144.7,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "LQDT",
+      "action": "BUY",
+      "current_price": 41.78,
+      "target_price": 45.96,
+      "stop_loss": 39.69
+    },
+    {
+      "ticker": "FLR",
+      "action": "BUY",
+      "current_price": 52.95,
+      "target_price": 58.25,
+      "stop_loss": 50.3
+    },
+    {
+      "ticker": "LMAT",
+      "action": "BUY",
+      "current_price": 82.84,
+      "target_price": 91.12,
+      "stop_loss": 78.7
+    },
+    {
+      "ticker": "GFF",
+      "action": "BUY",
+      "current_price": 106.75,
+      "target_price": 117.43,
+      "stop_loss": 101.41
+    },
+    {
+      "ticker": "NSIT",
+      "action": "HOLD",
+      "current_price": 150.95,
+      "target_price": 166.04,
+      "stop_loss": 143.4
+    },
+    {
+      "ticker": "DXPE",
+      "action": "BUY",
+      "current_price": 195.0,
+      "target_price": 214.5,
+      "stop_loss": 185.25
+    },
+    {
+      "ticker": "PCRX",
+      "action": "SELL",
+      "current_price": 24.38,
+      "target_price": 26.82,
+      "stop_loss": 23.16
+    },
+    {
+      "ticker": "ICFI",
+      "action": "SELL",
+      "current_price": 90.58,
+      "target_price": 99.64,
+      "stop_loss": 86.05
+    },
+    {
+      "ticker": "CHRD",
+      "action": "BUY",
+      "current_price": 139.23,
+      "target_price": 153.15,
+      "stop_loss": 132.27
+    },
+    {
+      "ticker": "JJSF",
+      "action": "BUY",
+      "current_price": 90.16,
+      "target_price": 99.18,
+      "stop_loss": 85.65
+    },
+    {
+      "ticker": "STRS",
+      "action": "HOLD",
+      "current_price": 18.81,
+      "target_price": 20.69,
+      "stop_loss": 17.87
+    }
+  ]
+}
