@@ -161,14 +161,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-12": {
           "open": 11.24,
-          "high": 11.35,
+          "high": 11.41,
           "low": 10.94,
-          "close": 11.34,
-          "pnl_pct": 2.9
+          "close": 11.35,
+          "pnl_pct": 2.99
         }
       },
       "position_usd": 223.8,
-      "unrealized_pnl_usd": 6.49
+      "unrealized_pnl_usd": 6.69
     },
     {
       "ticker": "ITIC",
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 277.69,
       "max_hold_date": "2026-08-14",
       "daily_prices": {},
-      "position_usd": 225.0,
+      "position_usd": 224.87,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 20.34,
       "max_hold_date": "2026-08-14",
       "daily_prices": {},
-      "position_usd": 225.0,
+      "position_usd": 224.87,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2118,6 +2118,13 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 58.01,
       "max_hold_date": "2026-07-23",
       "daily_prices": {
+        "2026-07-22": {
+          "open": 56.36,
+          "high": 57.2,
+          "low": 54.25,
+          "close": 54.71,
+          "pnl_pct": 3.8
+        },
         "2026-07-23": {
           "open": 54.64,
           "high": 55.28,
@@ -2502,6 +2509,37 @@ window.PORTFOLIO_HDS = {
       "position_usd": 225.33
     },
     {
+      "ticker": "RCKY",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-07-30",
+      "entry_price": 49.1,
+      "allocated_usd": 500,
+      "shares": 10.1833,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 56.46,
+      "stop_loss": 48.12,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 48.84,
+          "high": 49.49,
+          "low": 46.16,
+          "close": 48.84,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-07-31",
+      "close_price": 48.12,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.51,
+      "position_usd": 225.27
+    },
+    {
       "ticker": "IMMR",
       "name": "",
       "action": "SELL",
@@ -2530,44 +2568,6 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.62,
-      "position_usd": 225.27
-    },
-    {
-      "ticker": "UTMD",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-07-30",
-      "entry_price": 70.94,
-      "allocated_usd": 500,
-      "shares": 7.0482,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 60.3,
-      "stop_loss": 72.36,
-      "max_hold_date": "2026-08-03",
-      "daily_prices": {
-        "2026-07-31": {
-          "open": 70.02,
-          "high": 70.76,
-          "low": 69.41,
-          "close": 70.52,
-          "pnl_pct": 0.59
-        },
-        "2026-08-03": {
-          "open": 72.01,
-          "high": 75.01,
-          "low": 71.03,
-          "close": 72.75,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-08-03",
-      "close_price": 72.36,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.51,
       "position_usd": 225.27
     },
     {
@@ -2606,7 +2606,7 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 3.55,
-      "position_usd": 224.99
+      "position_usd": 224.53
     },
     {
       "ticker": "IMMR",
@@ -2706,7 +2706,7 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.49,
-      "position_usd": 224.45
+      "position_usd": 224.44
     },
     {
       "ticker": "STRA",
@@ -2744,7 +2744,7 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.49,
-      "position_usd": 224.45
+      "position_usd": 224.44
     },
     {
       "ticker": "CMCO",
@@ -2947,17 +2947,17 @@ window.PORTFOLIO_HDS = {
           "open": 151.17,
           "high": 154.01,
           "low": 149.69,
-          "close": 152.05,
-          "pnl_pct": 1.83
+          "close": 151.07,
+          "pnl_pct": 1.17
         }
       },
       "close_date": "2026-08-12",
-      "close_price": 152.05,
-      "final_pnl_pct": 1.83,
+      "close_price": 151.07,
+      "final_pnl_pct": 1.17,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.08,
+      "realized_pnl_usd": 2.61,
       "position_usd": 222.75
     },
     {
@@ -2974,28 +2974,21 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 10.73,
       "max_hold_date": "2026-08-12",
       "daily_prices": {
-        "2026-08-11": {
-          "open": 10.87,
-          "high": 11.27,
-          "low": 10.82,
-          "close": 11.12,
-          "pnl_pct": 1.55
-        },
         "2026-08-12": {
           "open": 11.24,
-          "high": 11.35,
+          "high": 11.41,
           "low": 10.94,
-          "close": 11.34,
-          "pnl_pct": 3.56
+          "close": 11.35,
+          "pnl_pct": 3.65
         }
       },
       "close_date": "2026-08-12",
-      "close_price": 11.34,
-      "final_pnl_pct": 3.56,
+      "close_price": 11.35,
+      "final_pnl_pct": 3.65,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.93,
+      "realized_pnl_usd": 8.13,
       "position_usd": 222.75
     }
   ],
@@ -3004,9 +2997,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 79,
     "win_trades": 41,
     "win_rate": 51.9,
-    "total_realized_pnl_usd": 250.02,
-    "open_unrealized_pnl_usd": 36.93,
-    "portfolio_value": 2286.95,
+    "total_realized_pnl_usd": 248.74,
+    "open_unrealized_pnl_usd": 37.13,
+    "portfolio_value": 2285.87,
     "total_commission_usd": 158.0,
     "skipped_gap": 51,
     "skipped_zero_shares": 0,

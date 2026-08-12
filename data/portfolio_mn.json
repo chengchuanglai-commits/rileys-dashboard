@@ -169,28 +169,53 @@
           "open": 20.71,
           "high": 21.0,
           "low": 20.51,
-          "close": 20.86,
-          "pnl_pct": 0.48
+          "close": 20.9,
+          "pnl_pct": 0.67
         }
       },
       "position_usd": 202.27,
-      "unrealized_pnl_usd": 0.97
+      "unrealized_pnl_usd": 1.36
+    },
+    {
+      "ticker": "PGEN",
+      "name": "精密基因组",
+      "action": "BUY",
+      "signal_date": "2026-08-11",
+      "entry_price": 6.78,
+      "allocated_usd": 500,
+      "shares": 73.7463,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 7.8,
+      "stop_loss": 6.64,
+      "max_hold_date": "2026-08-13",
+      "daily_prices": {
+        "2026-08-12": {
+          "open": 6.88,
+          "high": 6.95,
+          "low": 6.7,
+          "close": 6.78,
+          "pnl_pct": 0.0
+        }
+      },
+      "position_usd": 202.27,
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "WEYS",
       "name": "威科集团",
       "action": "BUY",
       "signal_date": "2026-08-12",
-      "entry_price": 45.27,
+      "entry_price": 45.72,
       "allocated_usd": 500,
-      "shares": 11.0448,
+      "shares": 10.9361,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 52.06,
-      "stop_loss": 44.36,
+      "take_profit": 52.58,
+      "stop_loss": 44.81,
       "max_hold_date": "2026-08-14",
       "daily_prices": {},
-      "position_usd": 201.04,
+      "position_usd": 201.46,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -198,33 +223,16 @@
       "name": "埃斯卡隆",
       "action": "BUY",
       "signal_date": "2026-08-12",
-      "entry_price": 20.86,
+      "entry_price": 20.9,
       "allocated_usd": 500,
-      "shares": 23.9693,
+      "shares": 23.9234,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 23.99,
-      "stop_loss": 20.44,
+      "take_profit": 24.03,
+      "stop_loss": 20.48,
       "max_hold_date": "2026-08-14",
       "daily_prices": {},
-      "position_usd": 201.04,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "LQDT",
-      "name": "流动性服务",
-      "action": "BUY",
-      "signal_date": "2026-08-12",
-      "entry_price": 42.49,
-      "allocated_usd": 500,
-      "shares": 11.7675,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 48.86,
-      "stop_loss": 41.64,
-      "max_hold_date": "2026-08-14",
-      "daily_prices": {},
-      "position_usd": 195.66,
+      "position_usd": 198.15,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4362,37 +4370,6 @@
       "position_usd": 202.45
     },
     {
-      "ticker": "PGEN",
-      "name": "精密基因组",
-      "action": "BUY",
-      "signal_date": "2026-08-11",
-      "entry_price": 6.86,
-      "allocated_usd": 500,
-      "shares": 72.8863,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 7.89,
-      "stop_loss": 6.72,
-      "max_hold_date": "2026-08-13",
-      "daily_prices": {
-        "2026-08-12": {
-          "open": 6.88,
-          "high": 6.95,
-          "low": 6.7,
-          "close": 6.76,
-          "pnl_pct": -2.04
-        }
-      },
-      "close_date": "2026-08-12",
-      "close_price": 6.72,
-      "final_pnl_pct": -2.04,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.13,
-      "position_usd": 202.27
-    },
-    {
       "ticker": "INFU",
       "name": "InfuSystem",
       "action": "BUY",
@@ -4409,8 +4386,8 @@
         "2026-08-12": {
           "open": 12.4,
           "high": 12.35,
-          "low": 12.06,
-          "close": 12.21,
+          "low": 12.02,
+          "close": 12.11,
           "pnl_pct": -2.01
         }
       },
@@ -4441,7 +4418,7 @@
           "open": 46.91,
           "high": 46.99,
           "low": 43.83,
-          "close": 45.27,
+          "close": 45.72,
           "pnl_pct": -2.01
         }
       },
@@ -4457,16 +4434,16 @@
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 125,
+    "total_trades": 124,
     "win_trades": 33,
-    "win_rate": 26.4,
-    "total_realized_pnl_usd": 10.45,
-    "open_unrealized_pnl_usd": 25.61,
-    "portfolio_value": 2036.06,
-    "total_commission_usd": 250.0,
+    "win_rate": 26.6,
+    "total_realized_pnl_usd": 14.58,
+    "open_unrealized_pnl_usd": 25.99,
+    "portfolio_value": 2040.57,
+    "total_commission_usd": 248.0,
     "skipped_gap": 55,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 162,
+    "skipped_no_cash": 163,
     "updated_at": "2026-08-12"
   }
 }
