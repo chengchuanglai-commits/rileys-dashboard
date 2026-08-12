@@ -140,7 +140,9 @@ def harvest_fills(ib, acct):
         seen = {f["exec_id"] for f in led["fills"]}
         ref = {p["ticker"]: p for p in load(STATE, {"positions": []})["positions"]}
         new = 0
-        for tr in ib.reqExecutions(ExecutionFilter(acctCode=acct)):
+        fills = ib.reqExecutions(ExecutionFilter(acctCode=acct))
+        print(f"[hdstr fills] 本session可见成交{len(fills)}笔")   # 仪表(2026-08-12:连续两次0捕获,先量化再诊断)
+        for tr in fills:
             e = tr.execution
             if e.execId in seen: continue
             row = {"exec_id": e.execId, "time": str(e.time), "sym": tr.contract.symbol,
@@ -345,13 +347,13 @@ def close_batch():
         if held == 0 or (expect > 0) != (held > 0):
             p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
             p["status"] = "closed"; p["close_date"] = today
-            closed_now.append(p["ticker"]); continue
+            closed_now.append(f"{p['ticker']}({p['close_via']})"); continue
         # 超时平仓下单已移至开盘批(2026-08-11:04:00=美东刚收盘,此处下单必被Error 201拒;
         # 收盘批只做对账,到期仓由下一个开盘批在交易时段内平)
     ib.sleep(3); ib.disconnect()
     save_state(st)
     if closed_now or timeout_closed:
-        notify(f"hdstr收盘对账: TRAIL已出{closed_now or '无'} | 超时平仓单{timeout_closed or '无'}\n（hdstr真钱试运行·自动）")
+        notify(f"hdstr收盘对账: 已出场{closed_now or '无'} | 超时平仓单{timeout_closed or '无'}\n（hdstr真钱试运行·自动）")
     else:
         print("[hdstr close] 无变化")
 
