@@ -1741,6 +1741,6 @@ window.PORTFOLIO_C = {
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2171.72,
     "skipped_gap": 15,
-    "updated_at": "2026-08-12"
+    "updated_at": "2026-08-13"
   }
 };

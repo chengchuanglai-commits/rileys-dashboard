@@ -160,14 +160,14 @@
       "daily_prices": {
         "2026-08-12": {
           "open": 11.24,
-          "high": 11.29,
+          "high": 11.35,
           "low": 10.94,
-          "close": 11.28,
-          "pnl_pct": 2.36
+          "close": 11.34,
+          "pnl_pct": 2.9
         }
       },
       "position_usd": 223.8,
-      "unrealized_pnl_usd": 5.28
+      "unrealized_pnl_usd": 6.49
     },
     {
       "ticker": "ITIC",
@@ -183,7 +183,7 @@
       "stop_loss": 277.69,
       "max_hold_date": "2026-08-14",
       "daily_prices": {},
-      "position_usd": 224.76,
+      "position_usd": 225.0,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -200,7 +200,7 @@
       "stop_loss": 20.34,
       "max_hold_date": "2026-08-14",
       "daily_prices": {},
-      "position_usd": 224.76,
+      "position_usd": 225.0,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -2501,37 +2501,6 @@
       "position_usd": 225.33
     },
     {
-      "ticker": "RCKY",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-07-30",
-      "entry_price": 49.1,
-      "allocated_usd": 500,
-      "shares": 10.1833,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 56.46,
-      "stop_loss": 48.12,
-      "max_hold_date": "2026-08-03",
-      "daily_prices": {
-        "2026-07-31": {
-          "open": 48.84,
-          "high": 49.49,
-          "low": 46.16,
-          "close": 48.84,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-07-31",
-      "close_price": 48.12,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.51,
-      "position_usd": 225.27
-    },
-    {
       "ticker": "IMMR",
       "name": "",
       "action": "SELL",
@@ -2560,6 +2529,44 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.62,
+      "position_usd": 225.27
+    },
+    {
+      "ticker": "UTMD",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-07-30",
+      "entry_price": 70.94,
+      "allocated_usd": 500,
+      "shares": 7.0482,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 60.3,
+      "stop_loss": 72.36,
+      "max_hold_date": "2026-08-03",
+      "daily_prices": {
+        "2026-07-31": {
+          "open": 70.02,
+          "high": 70.76,
+          "low": 69.41,
+          "close": 70.52,
+          "pnl_pct": 0.59
+        },
+        "2026-08-03": {
+          "open": 72.01,
+          "high": 75.01,
+          "low": 71.03,
+          "close": 72.75,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-03",
+      "close_price": 72.36,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.51,
       "position_usd": 225.27
     },
     {
@@ -2598,7 +2605,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 3.55,
-      "position_usd": 224.53
+      "position_usd": 224.99
     },
     {
       "ticker": "IMMR",
@@ -2698,7 +2705,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.49,
-      "position_usd": 224.44
+      "position_usd": 224.45
     },
     {
       "ticker": "STRA",
@@ -2736,7 +2743,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.49,
-      "position_usd": 224.44
+      "position_usd": 224.45
     },
     {
       "ticker": "CMCO",
@@ -2939,17 +2946,17 @@
           "open": 151.17,
           "high": 154.01,
           "low": 149.69,
-          "close": 151.26,
-          "pnl_pct": 1.3
+          "close": 152.05,
+          "pnl_pct": 1.83
         }
       },
       "close_date": "2026-08-12",
-      "close_price": 151.26,
-      "final_pnl_pct": 1.3,
+      "close_price": 152.05,
+      "final_pnl_pct": 1.83,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.9,
+      "realized_pnl_usd": 4.08,
       "position_usd": 222.75
     },
     {
@@ -2975,19 +2982,19 @@
         },
         "2026-08-12": {
           "open": 11.24,
-          "high": 11.29,
+          "high": 11.35,
           "low": 10.94,
-          "close": 11.28,
-          "pnl_pct": 3.01
+          "close": 11.34,
+          "pnl_pct": 3.56
         }
       },
       "close_date": "2026-08-12",
-      "close_price": 11.28,
-      "final_pnl_pct": 3.01,
+      "close_price": 11.34,
+      "final_pnl_pct": 3.56,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.7,
+      "realized_pnl_usd": 7.93,
       "position_usd": 222.75
     }
   ],
@@ -2996,9 +3003,9 @@
     "total_trades": 79,
     "win_trades": 41,
     "win_rate": 51.9,
-    "total_realized_pnl_usd": 247.6,
-    "open_unrealized_pnl_usd": 35.72,
-    "portfolio_value": 2283.32,
+    "total_realized_pnl_usd": 250.02,
+    "open_unrealized_pnl_usd": 36.93,
+    "portfolio_value": 2286.95,
     "total_commission_usd": 158.0,
     "skipped_gap": 51,
     "skipped_zero_shares": 0,
