@@ -166,7 +166,7 @@ window.PORTFOLIO_MN = {
       "stop_loss": 21.75,
       "max_hold_date": "2026-08-17",
       "daily_prices": {},
-      "position_usd": 199.87,
+      "position_usd": 199.79,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -174,16 +174,16 @@ window.PORTFOLIO_MN = {
       "name": "Weyco Group",
       "action": "BUY",
       "signal_date": "2026-08-13",
-      "entry_price": 46.88,
+      "entry_price": 45.4,
       "allocated_usd": 500,
-      "shares": 10.6655,
+      "shares": 11.0132,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 53.91,
-      "stop_loss": 45.94,
+      "take_profit": 52.21,
+      "stop_loss": 44.49,
       "max_hold_date": "2026-08-17",
       "daily_prices": {},
-      "position_usd": 199.87,
+      "position_usd": 199.79,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -191,16 +191,16 @@ window.PORTFOLIO_MN = {
       "name": "Liquidity Services",
       "action": "BUY",
       "signal_date": "2026-08-13",
-      "entry_price": 42.22,
+      "entry_price": 42.14,
       "allocated_usd": 500,
-      "shares": 11.8427,
+      "shares": 11.8652,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 48.55,
-      "stop_loss": 41.38,
+      "take_profit": 48.46,
+      "stop_loss": 41.3,
       "max_hold_date": "2026-08-17",
       "daily_prices": {},
-      "position_usd": 199.87,
+      "position_usd": 199.79,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -208,16 +208,16 @@ window.PORTFOLIO_MN = {
       "name": "DXP Enterprises",
       "action": "BUY",
       "signal_date": "2026-08-13",
-      "entry_price": 195.29,
+      "entry_price": 195.13,
       "allocated_usd": 500,
-      "shares": 2.5603,
+      "shares": 2.5624,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 224.58,
-      "stop_loss": 191.38,
+      "take_profit": 224.4,
+      "stop_loss": 191.23,
       "max_hold_date": "2026-08-17",
       "daily_prices": {},
-      "position_usd": 188.65,
+      "position_usd": 188.09,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4472,18 +4472,49 @@ window.PORTFOLIO_MN = {
           "open": 21.04,
           "high": 21.36,
           "low": 20.57,
-          "close": 20.78,
-          "pnl_pct": 0.1
+          "close": 20.69,
+          "pnl_pct": -0.34
         }
       },
       "close_date": "2026-08-13",
-      "close_price": 20.78,
-      "final_pnl_pct": 0.1,
+      "close_price": 20.69,
+      "final_pnl_pct": -0.34,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 0.2,
+      "realized_pnl_usd": -0.69,
       "position_usd": 202.27
+    },
+    {
+      "ticker": "WEYS",
+      "name": "威科集团",
+      "action": "BUY",
+      "signal_date": "2026-08-12",
+      "entry_price": 46.73,
+      "allocated_usd": 500,
+      "shares": 10.6998,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 53.74,
+      "stop_loss": 45.8,
+      "max_hold_date": "2026-08-14",
+      "daily_prices": {
+        "2026-08-13": {
+          "open": 46.43,
+          "high": 46.88,
+          "low": 45.13,
+          "close": 45.4,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-08-13",
+      "close_price": 45.8,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.0,
+      "position_usd": 201.04
     },
     {
       "ticker": "LQDT",
@@ -4502,8 +4533,8 @@ window.PORTFOLIO_MN = {
         "2026-08-13": {
           "open": 43.22,
           "high": 43.38,
-          "low": 42.22,
-          "close": 42.22,
+          "low": 42.03,
+          "close": 42.14,
           "pnl_pct": -1.99
         }
       },
@@ -4534,7 +4565,7 @@ window.PORTFOLIO_MN = {
           "open": 21.07,
           "high": 21.27,
           "low": 20.75,
-          "close": 21.12,
+          "close": 20.82,
           "pnl_pct": -1.98
         }
       },
@@ -4544,49 +4575,18 @@ window.PORTFOLIO_MN = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.98,
-      "position_usd": 201.04
-    },
-    {
-      "ticker": "PGEN",
-      "name": "精密基因组",
-      "action": "BUY",
-      "signal_date": "2026-08-12",
-      "entry_price": 6.85,
-      "allocated_usd": 500,
-      "shares": 72.9927,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 7.88,
-      "stop_loss": 6.71,
-      "max_hold_date": "2026-08-14",
-      "daily_prices": {
-        "2026-08-13": {
-          "open": 6.91,
-          "high": 6.97,
-          "low": 6.61,
-          "close": 6.63,
-          "pnl_pct": -2.04
-        }
-      },
-      "close_date": "2026-08-13",
-      "close_price": 6.71,
-      "final_pnl_pct": -2.04,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -3.99,
+      "realized_pnl_usd": -3.87,
       "position_usd": 195.66
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
     "total_trades": 129,
-    "win_trades": 34,
-    "win_rate": 26.4,
-    "total_realized_pnl_usd": -1.32,
+    "win_trades": 33,
+    "win_rate": 25.6,
+    "total_realized_pnl_usd": -2.11,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 2023.32,
+    "portfolio_value": 2022.53,
     "total_commission_usd": 258.0,
     "skipped_gap": 55,
     "skipped_zero_shares": 0,
