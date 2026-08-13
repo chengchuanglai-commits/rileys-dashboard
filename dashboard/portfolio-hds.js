@@ -146,31 +146,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 15.76
     },
     {
-      "ticker": "ITIC",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-12",
-      "entry_price": 283.36,
-      "allocated_usd": 500,
-      "shares": 1.7645,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 325.86,
-      "stop_loss": 277.69,
-      "max_hold_date": "2026-08-14",
-      "daily_prices": {
-        "2026-08-13": {
-          "open": 282.98,
-          "high": 282.98,
-          "low": 282.98,
-          "close": 282.98,
-          "pnl_pct": -0.13
-        }
-      },
-      "position_usd": 225.49,
-      "unrealized_pnl_usd": -0.29
-    },
-    {
       "ticker": "ULBI",
       "name": "",
       "action": "BUY",
@@ -184,7 +159,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 7.08,
       "max_hold_date": "2026-08-17",
       "daily_prices": {},
-      "position_usd": 225.77,
+      "position_usd": 224.61,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +176,24 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 42.25,
       "max_hold_date": "2026-08-17",
       "daily_prices": {},
-      "position_usd": 225.77,
+      "position_usd": 224.61,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "TISI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-13",
+      "entry_price": 22.0,
+      "allocated_usd": 500,
+      "shares": 22.7273,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 18.7,
+      "stop_loss": 22.44,
+      "max_hold_date": "2026-08-17",
+      "daily_prices": {},
+      "position_usd": 224.61,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -3015,19 +3007,50 @@ window.PORTFOLIO_HDS = {
         "2026-08-13": {
           "open": 11.41,
           "high": 11.63,
-          "low": 11.37,
-          "close": 11.38,
-          "pnl_pct": 3.27
+          "low": 10.99,
+          "close": 11.03,
+          "pnl_pct": 0.09
         }
       },
       "close_date": "2026-08-13",
-      "close_price": 11.38,
-      "final_pnl_pct": 3.27,
+      "close_price": 11.03,
+      "final_pnl_pct": 0.09,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.32,
+      "realized_pnl_usd": 0.2,
       "position_usd": 223.8
+    },
+    {
+      "ticker": "ITIC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-12",
+      "entry_price": 283.36,
+      "allocated_usd": 500,
+      "shares": 1.7645,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 325.86,
+      "stop_loss": 277.69,
+      "max_hold_date": "2026-08-14",
+      "daily_prices": {
+        "2026-08-13": {
+          "open": 282.98,
+          "high": 282.98,
+          "low": 277.61,
+          "close": 278.65,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-13",
+      "close_price": 277.69,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.51,
+      "position_usd": 225.49
     },
     {
       "ticker": "WEYS",
@@ -3063,16 +3086,16 @@ window.PORTFOLIO_HDS = {
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 81,
+    "total_trades": 82,
     "win_trades": 42,
-    "win_rate": 51.9,
-    "total_realized_pnl_usd": 257.72,
-    "open_unrealized_pnl_usd": 30.14,
-    "portfolio_value": 2287.86,
-    "total_commission_usd": 162.0,
+    "win_rate": 51.2,
+    "total_realized_pnl_usd": 246.09,
+    "open_unrealized_pnl_usd": 30.44,
+    "portfolio_value": 2276.53,
+    "total_commission_usd": 164.0,
     "skipped_gap": 51,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 40,
+    "skipped_no_cash": 39,
     "updated_at": "2026-08-13"
   }
 };
