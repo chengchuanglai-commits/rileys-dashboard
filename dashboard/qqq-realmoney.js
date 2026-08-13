@@ -34,27 +34,27 @@ window.QQQ_REALMONEY = {
         "shares": 1.0,
         "avg_price_usd": 721.46,
         "cost_usd": 721.46,
-        "now_usd": 731.85,
-        "value_usd": 731.85,
-        "pnl_usd": 10.39
+        "now_usd": 732.4099,
+        "value_usd": 732.41,
+        "pnl_usd": 10.95
       },
       "QQQM": {
         "shares": 1,
         "avg_price_usd": 298.51,
         "cost_usd": 298.51,
-        "now_usd": 301.34,
-        "value_usd": 301.34,
-        "pnl_usd": 2.83
+        "now_usd": 301.54,
+        "value_usd": 301.54,
+        "pnl_usd": 3.03
       }
     },
     "cost_usd": 1019.97,
-    "value_usd": 1033.19,
-    "pnl_usd": 13.22,
-    "pnl_pct": 1.3,
-    "usdcad": 1.3932,
-    "cost_cad_approx": 1421.02,
-    "value_cad_approx": 1439.44,
-    "pnl_cad_approx": 18.42,
-    "updated_at": "2026-08-13 16:58"
+    "value_usd": 1033.95,
+    "pnl_usd": 13.98,
+    "pnl_pct": 1.37,
+    "usdcad": 1.3937,
+    "cost_cad_approx": 1421.53,
+    "value_cad_approx": 1441.02,
+    "pnl_cad_approx": 19.48,
+    "updated_at": "2026-08-13 18:02"
   }
 };
