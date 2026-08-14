@@ -1573,126 +1573,6 @@ window.PORTFOLIO_C = {
       "position_usd": 215.97
     },
     {
-      "ticker": "TCBK",
-      "name": "TCBK",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 60.07,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 480.56,
-      "entry_commission": 1.0,
-      "take_profit": 55.26,
-      "stop_loss": 62.47,
-      "max_hold_date": "2026-07-21",
-      "day1_open": 59.43,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 59.43,
-          "high": 59.93,
-          "low": 58.59,
-          "close": 59.43,
-          "pnl_pct": 1.07
-        },
-        "2026-07-16": {
-          "open": 59.52,
-          "high": 61.71,
-          "low": 59.31,
-          "close": 61.62,
-          "pnl_pct": -2.58
-        },
-        "2026-07-17": {
-          "open": 61.2,
-          "high": 61.5,
-          "low": 60.25,
-          "close": 60.52,
-          "pnl_pct": -0.75
-        },
-        "2026-07-20": {
-          "open": 60.61,
-          "high": 60.61,
-          "low": 59.61,
-          "close": 59.8,
-          "pnl_pct": 0.45
-        },
-        "2026-07-21": {
-          "open": 59.59,
-          "high": 60.07,
-          "low": 59.38,
-          "close": 60.04,
-          "pnl_pct": 0.05
-        }
-      },
-      "close_date": "2026-07-21",
-      "close_price": 60.04,
-      "final_pnl_pct": 0.05,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 0.11,
-      "position_usd": 215.97
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 20.93,
-      "allocated_usd": 500,
-      "shares": 23,
-      "actual_position_usd": 481.39,
-      "entry_commission": 1.0,
-      "take_profit": 19.26,
-      "stop_loss": 21.77,
-      "max_hold_date": "2026-07-21",
-      "day1_open": 20.66,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 20.66,
-          "high": 21.29,
-          "low": 20.15,
-          "close": 20.7,
-          "pnl_pct": 1.1
-        },
-        "2026-07-16": {
-          "open": 20.79,
-          "high": 21.0,
-          "low": 20.21,
-          "close": 20.67,
-          "pnl_pct": 1.24
-        },
-        "2026-07-17": {
-          "open": 20.82,
-          "high": 21.05,
-          "low": 20.23,
-          "close": 20.72,
-          "pnl_pct": 1.0
-        },
-        "2026-07-20": {
-          "open": 20.64,
-          "high": 20.73,
-          "low": 20.01,
-          "close": 20.28,
-          "pnl_pct": 3.11
-        },
-        "2026-07-21": {
-          "open": 20.28,
-          "high": 20.89,
-          "low": 20.2,
-          "close": 20.43,
-          "pnl_pct": 2.39
-        }
-      },
-      "close_date": "2026-07-21",
-      "close_price": 20.43,
-      "final_pnl_pct": 2.39,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 5.16,
-      "position_usd": 215.97
-    },
-    {
       "ticker": "SMPL",
       "name": "SMPL",
       "action": "SELL",
@@ -1730,6 +1610,122 @@ window.PORTFOLIO_C = {
       "commission_total": 2.0,
       "realized_pnl_usd": 17.25,
       "position_usd": 215.11
+    },
+    {
+      "ticker": "TCBK",
+      "name": "TCBK",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 60.07,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 480.56,
+      "entry_commission": 1.0,
+      "take_profit": 55.26,
+      "stop_loss": 62.47,
+      "max_hold_date": "2026-07-21",
+      "day1_open": 58.09,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 59.43,
+          "high": 59.93,
+          "low": 58.59,
+          "close": 59.43,
+          "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.71,
+          "low": 59.31,
+          "close": 61.62,
+          "pnl_pct": -2.58
+        },
+        "2026-07-17": {
+          "open": 61.2,
+          "high": 61.5,
+          "low": 60.25,
+          "close": 60.52,
+          "pnl_pct": -0.75
+        },
+        "2026-07-20": {
+          "open": 60.61,
+          "high": 60.61,
+          "low": 59.61,
+          "close": 59.8,
+          "pnl_pct": 0.45
+        },
+        "2026-08-14": {
+          "close": 57.64,
+          "pnl_pct": 4.05
+        }
+      },
+      "position_usd": 215.97,
+      "unrealized_pnl_usd": 0.97,
+      "gap_checked": true,
+      "day1_gap_pct": -3.3,
+      "close_date": "2026-08-14",
+      "close_price": 57.64,
+      "final_pnl_pct": 4.05,
+      "close_reason": "max_hold",
+      "realized_pnl_usd": 20.23
+    },
+    {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.93,
+      "allocated_usd": 500,
+      "shares": 23,
+      "actual_position_usd": 481.39,
+      "entry_commission": 1.0,
+      "take_profit": 19.26,
+      "stop_loss": 21.77,
+      "max_hold_date": "2026-07-21",
+      "day1_open": 18.82,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 21.29,
+          "low": 20.15,
+          "close": 20.7,
+          "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "open": 20.79,
+          "high": 21.0,
+          "low": 20.21,
+          "close": 20.67,
+          "pnl_pct": 1.24
+        },
+        "2026-07-17": {
+          "open": 20.82,
+          "high": 21.05,
+          "low": 20.23,
+          "close": 20.72,
+          "pnl_pct": 1.0
+        },
+        "2026-07-20": {
+          "open": 20.64,
+          "high": 20.73,
+          "low": 20.01,
+          "close": 20.28,
+          "pnl_pct": 3.11
+        },
+        "2026-08-13": {
+          "close": 18.93,
+          "pnl_pct": 9.56
+        }
+      },
+      "position_usd": 215.97,
+      "unrealized_pnl_usd": 6.72,
+      "gap_checked": true,
+      "day1_gap_pct": -10.08,
+      "close_date": "2026-08-13",
+      "close_price": 18.93,
+      "final_pnl_pct": 9.56,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 47.78
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -1737,9 +1733,9 @@ window.PORTFOLIO_C = {
     "total_trades": 37,
     "win_trades": 24,
     "win_rate": 64.9,
-    "total_realized_pnl_usd": 171.72,
+    "total_realized_pnl_usd": 234.46,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2171.72,
+    "portfolio_value": 2234.46,
     "skipped_gap": 15,
     "updated_at": "2026-08-15"
   }
