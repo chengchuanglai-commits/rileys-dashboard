@@ -161,14 +161,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-14": {
           "open": 43.04,
-          "high": 43.43,
+          "high": 43.44,
           "low": 42.93,
-          "close": 43.3,
-          "pnl_pct": 0.44
+          "close": 43.42,
+          "pnl_pct": 0.72
         }
       },
       "position_usd": 224.14,
-      "unrealized_pnl_usd": 0.99
+      "unrealized_pnl_usd": 1.61
     },
     {
       "ticker": "ITIC",
@@ -186,14 +186,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-14": {
           "open": 283.93,
-          "high": 284.7,
+          "high": 287.4,
           "low": 283.01,
-          "close": 284.1,
-          "pnl_pct": 1.14
+          "close": 286.39,
+          "pnl_pct": 1.96
         }
       },
       "position_usd": 224.14,
-      "unrealized_pnl_usd": 2.56
+      "unrealized_pnl_usd": 4.39
     },
     {
       "ticker": "LQDT",
@@ -2982,6 +2982,13 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 10.73,
       "max_hold_date": "2026-08-12",
       "daily_prices": {
+        "2026-08-11": {
+          "open": 10.87,
+          "high": 11.27,
+          "low": 10.82,
+          "close": 11.12,
+          "pnl_pct": 1.55
+        },
         "2026-08-12": {
           "open": 11.24,
           "high": 11.43,
@@ -3106,8 +3113,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 41,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 241.41,
-    "open_unrealized_pnl_usd": 33.98,
-    "portfolio_value": 2275.39,
+    "open_unrealized_pnl_usd": 36.44,
+    "portfolio_value": 2277.85,
     "total_commission_usd": 164.0,
     "skipped_gap": 53,
     "skipped_zero_shares": 0,
