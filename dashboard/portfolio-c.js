@@ -1573,6 +1573,66 @@ window.PORTFOLIO_C = {
       "position_usd": 215.97
     },
     {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.93,
+      "allocated_usd": 500,
+      "shares": 23,
+      "actual_position_usd": 481.39,
+      "entry_commission": 1.0,
+      "take_profit": 19.26,
+      "stop_loss": 21.77,
+      "max_hold_date": "2026-07-21",
+      "day1_open": 20.66,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 21.29,
+          "low": 20.15,
+          "close": 20.7,
+          "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "open": 20.79,
+          "high": 21.0,
+          "low": 20.21,
+          "close": 20.67,
+          "pnl_pct": 1.24
+        },
+        "2026-07-17": {
+          "open": 20.82,
+          "high": 21.05,
+          "low": 20.23,
+          "close": 20.72,
+          "pnl_pct": 1.0
+        },
+        "2026-07-20": {
+          "open": 20.64,
+          "high": 20.73,
+          "low": 20.01,
+          "close": 20.28,
+          "pnl_pct": 3.11
+        },
+        "2026-07-21": {
+          "open": 20.28,
+          "high": 20.89,
+          "low": 20.2,
+          "close": 20.43,
+          "pnl_pct": 2.39
+        }
+      },
+      "close_date": "2026-07-21",
+      "close_price": 20.43,
+      "final_pnl_pct": 2.39,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 5.16,
+      "position_usd": 215.97
+    },
+    {
       "ticker": "SMPL",
       "name": "SMPL",
       "action": "SELL",
@@ -1655,8 +1715,8 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.45
         },
         "2026-08-14": {
-          "close": 58.14,
-          "pnl_pct": 3.21
+          "close": 58.06,
+          "pnl_pct": 3.35
         }
       },
       "position_usd": 215.97,
@@ -1664,68 +1724,10 @@ window.PORTFOLIO_C = {
       "gap_checked": true,
       "day1_gap_pct": -3.3,
       "close_date": "2026-08-14",
-      "close_price": 58.14,
-      "final_pnl_pct": 3.21,
+      "close_price": 58.06,
+      "final_pnl_pct": 3.35,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 16.06
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 20.93,
-      "allocated_usd": 500,
-      "shares": 23,
-      "actual_position_usd": 481.39,
-      "entry_commission": 1.0,
-      "take_profit": 19.26,
-      "stop_loss": 21.77,
-      "max_hold_date": "2026-07-21",
-      "day1_open": 18.82,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 20.66,
-          "high": 21.29,
-          "low": 20.15,
-          "close": 20.7,
-          "pnl_pct": 1.1
-        },
-        "2026-07-16": {
-          "open": 20.79,
-          "high": 21.0,
-          "low": 20.21,
-          "close": 20.67,
-          "pnl_pct": 1.24
-        },
-        "2026-07-17": {
-          "open": 20.82,
-          "high": 21.05,
-          "low": 20.23,
-          "close": 20.72,
-          "pnl_pct": 1.0
-        },
-        "2026-07-20": {
-          "open": 20.64,
-          "high": 20.73,
-          "low": 20.01,
-          "close": 20.28,
-          "pnl_pct": 3.11
-        },
-        "2026-08-13": {
-          "close": 18.93,
-          "pnl_pct": 9.56
-        }
-      },
-      "position_usd": 215.97,
-      "unrealized_pnl_usd": 6.72,
-      "gap_checked": true,
-      "day1_gap_pct": -10.08,
-      "close_date": "2026-08-13",
-      "close_price": 18.93,
-      "final_pnl_pct": 9.56,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 47.78
+      "realized_pnl_usd": 16.73
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -1733,9 +1735,9 @@ window.PORTFOLIO_C = {
     "total_trades": 37,
     "win_trades": 24,
     "win_rate": 64.9,
-    "total_realized_pnl_usd": 230.29,
+    "total_realized_pnl_usd": 188.34,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2230.29,
+    "portfolio_value": 2188.34,
     "skipped_gap": 15,
     "updated_at": "2026-08-14"
   }
