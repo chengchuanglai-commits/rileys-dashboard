@@ -1,0 +1,175 @@
+{
+  "date": "2026-08-14",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "LQDT",
+      "action": "BUY",
+      "current_price": 42.94,
+      "target_price": 47.23,
+      "stop_loss": 40.79
+    },
+    {
+      "ticker": "ULBI",
+      "action": "SELL",
+      "current_price": 7.44,
+      "target_price": 8.18,
+      "stop_loss": 7.07
+    },
+    {
+      "ticker": "RRGB",
+      "action": "SELL",
+      "current_price": 9.9,
+      "target_price": 10.89,
+      "stop_loss": 9.4
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 22.16,
+      "target_price": 24.38,
+      "stop_loss": 21.05
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "LQDT",
+      "action": "BUY",
+      "current_price": 42.94,
+      "target_price": 47.23,
+      "stop_loss": 40.79
+    },
+    {
+      "ticker": "ULBI",
+      "action": "SELL",
+      "current_price": 7.44,
+      "target_price": 8.18,
+      "stop_loss": 7.07
+    },
+    {
+      "ticker": "RRGB",
+      "action": "SELL",
+      "current_price": 9.9,
+      "target_price": 10.89,
+      "stop_loss": 9.4
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 22.16,
+      "target_price": 24.38,
+      "stop_loss": 21.05
+    },
+    {
+      "ticker": "WEYS",
+      "action": "BUY",
+      "current_price": 45.8,
+      "target_price": 50.38,
+      "stop_loss": 43.51
+    },
+    {
+      "ticker": "EAT",
+      "action": "HOLD",
+      "current_price": 238.61,
+      "target_price": 262.47,
+      "stop_loss": 226.68
+    },
+    {
+      "ticker": "TILE",
+      "action": "BUY",
+      "current_price": 38.73,
+      "target_price": 42.6,
+      "stop_loss": 36.79
+    },
+    {
+      "ticker": "TCMD",
+      "action": "HOLD",
+      "current_price": 23.71,
+      "target_price": 26.08,
+      "stop_loss": 22.52
+    },
+    {
+      "ticker": "ESCA",
+      "action": "HOLD",
+      "current_price": 20.82,
+      "target_price": 22.9,
+      "stop_loss": 19.78
+    },
+    {
+      "ticker": "ICFI",
+      "action": "BUY",
+      "current_price": 89.28,
+      "target_price": 98.21,
+      "stop_loss": 84.82
+    },
+    {
+      "ticker": "CENT",
+      "action": "HOLD",
+      "current_price": 44.44,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "FLR",
+      "action": "BUY",
+      "current_price": 52.33,
+      "target_price": 57.56,
+      "stop_loss": 49.71
+    },
+    {
+      "ticker": "HUBG",
+      "action": "HOLD",
+      "current_price": 41.65,
+      "target_price": 45.82,
+      "stop_loss": 39.57
+    },
+    {
+      "ticker": "XNCR",
+      "action": "BUY",
+      "current_price": 22.99,
+      "target_price": 25.29,
+      "stop_loss": 21.84
+    },
+    {
+      "ticker": "RICK",
+      "action": "SELL",
+      "current_price": 30.07,
+      "target_price": 33.08,
+      "stop_loss": 28.57
+    },
+    {
+      "ticker": "ARLO",
+      "action": "HOLD",
+      "current_price": 14.35,
+      "target_price": 15.79,
+      "stop_loss": 13.63
+    },
+    {
+      "ticker": "STRS",
+      "action": "HOLD",
+      "current_price": 18.93,
+      "target_price": 20.82,
+      "stop_loss": 17.98
+    },
+    {
+      "ticker": "GMED",
+      "action": "BUY",
+      "current_price": 85.94,
+      "target_price": 94.53,
+      "stop_loss": 81.64
+    },
+    {
+      "ticker": "JBSS",
+      "action": "SELL",
+      "current_price": 86.69,
+      "target_price": 95.36,
+      "stop_loss": 82.36
+    },
+    {
+      "ticker": "PCRX",
+      "action": "SELL",
+      "current_price": 23.18,
+      "target_price": 25.5,
+      "stop_loss": 22.02
+    }
+  ]
+}
