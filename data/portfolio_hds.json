@@ -160,14 +160,14 @@
       "daily_prices": {
         "2026-08-14": {
           "open": 43.04,
-          "high": 43.44,
+          "high": 43.53,
           "low": 42.93,
-          "close": 43.42,
-          "pnl_pct": 0.72
+          "close": 43.47,
+          "pnl_pct": 0.84
         }
       },
       "position_usd": 224.14,
-      "unrealized_pnl_usd": 1.61
+      "unrealized_pnl_usd": 1.88
     },
     {
       "ticker": "ITIC",
@@ -185,14 +185,14 @@
       "daily_prices": {
         "2026-08-14": {
           "open": 283.93,
-          "high": 287.4,
+          "high": 287.71,
           "low": 283.01,
-          "close": 286.39,
-          "pnl_pct": 1.96
+          "close": 287.71,
+          "pnl_pct": 2.43
         }
       },
       "position_usd": 224.14,
-      "unrealized_pnl_usd": 4.39
+      "unrealized_pnl_usd": 5.45
     },
     {
       "ticker": "LQDT",
@@ -3112,8 +3112,8 @@
     "win_trades": 41,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 241.41,
-    "open_unrealized_pnl_usd": 36.44,
-    "portfolio_value": 2277.85,
+    "open_unrealized_pnl_usd": 37.77,
+    "portfolio_value": 2279.18,
     "total_commission_usd": 164.0,
     "skipped_gap": 53,
     "skipped_zero_shares": 0,
