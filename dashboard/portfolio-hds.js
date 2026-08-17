@@ -137,13 +137,13 @@ window.PORTFOLIO_HDS = {
         "2026-08-17": {
           "open": 43.19,
           "high": 43.59,
-          "low": 43.08,
-          "close": 43.4,
-          "pnl_pct": 1.07
+          "low": 42.94,
+          "close": 42.96,
+          "pnl_pct": 0.05
         }
       },
       "position_usd": 227.37,
-      "unrealized_pnl_usd": 2.43
+      "unrealized_pnl_usd": 0.11
     },
     {
       "ticker": "CHEF",
@@ -159,7 +159,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 106.9,
       "max_hold_date": "2026-08-19",
       "daily_prices": {},
-      "position_usd": 228.22,
+      "position_usd": 227.92,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -176,7 +176,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 232.41,
       "max_hold_date": "2026-08-19",
       "daily_prices": {},
-      "position_usd": 228.22,
+      "position_usd": 227.92,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -193,7 +193,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 22.56,
       "max_hold_date": "2026-08-19",
       "daily_prices": {},
-      "position_usd": 228.22,
+      "position_usd": 227.92,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -3370,6 +3370,13 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 10.73,
       "max_hold_date": "2026-08-12",
       "daily_prices": {
+        "2026-08-11": {
+          "open": 10.87,
+          "high": 11.27,
+          "low": 10.82,
+          "close": 11.12,
+          "pnl_pct": 1.55
+        },
         "2026-08-12": {
           "open": 11.24,
           "high": 11.43,
@@ -3618,18 +3625,18 @@ window.PORTFOLIO_HDS = {
         "2026-08-17": {
           "open": 43.19,
           "high": 43.59,
-          "low": 43.08,
-          "close": 43.4,
-          "pnl_pct": 0.67
+          "low": 42.94,
+          "close": 42.96,
+          "pnl_pct": -0.35
         }
       },
       "close_date": "2026-08-17",
-      "close_price": 43.4,
-      "final_pnl_pct": 0.67,
+      "close_price": 42.96,
+      "final_pnl_pct": -0.35,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.53,
+      "realized_pnl_usd": -0.8,
       "position_usd": 228.28
     },
     {
@@ -3657,28 +3664,28 @@ window.PORTFOLIO_HDS = {
           "open": 286.3,
           "high": 292.7,
           "low": 285.96,
-          "close": 289.39,
-          "pnl_pct": 3.03
+          "close": 288.65,
+          "pnl_pct": 2.76
         }
       },
       "close_date": "2026-08-17",
-      "close_price": 289.39,
-      "final_pnl_pct": 3.03,
+      "close_price": 288.65,
+      "final_pnl_pct": 2.76,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.92,
+      "realized_pnl_usd": 6.3,
       "position_usd": 228.28
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 98,
-    "win_trades": 50,
-    "win_rate": 51.0,
-    "total_realized_pnl_usd": 282.19,
-    "open_unrealized_pnl_usd": 15.85,
-    "portfolio_value": 2298.04,
+    "win_trades": 49,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 279.24,
+    "open_unrealized_pnl_usd": 13.54,
+    "portfolio_value": 2292.78,
     "total_commission_usd": 196.0,
     "skipped_gap": 55,
     "skipped_zero_shares": 0,
