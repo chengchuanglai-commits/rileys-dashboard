@@ -60,6 +60,12 @@ def run_deepseek(ticker):
 
 
 def main():
+    # 幂等护栏(2026-08-17实炸:cron双触发→两任务并行各跑全量分析,白烧一倍token+提交撞车):
+    # 当日产出已存在且非FORCE→直接跳过。gate job的文件检查有竞态窗口,这里是最后防线
+    if os.path.exists(os.path.join(DEEPSEEK_DIR, f"{today}-deepseek.json")) and not os.environ.get("FORCE"):
+        print(f"[deepseek] {today} 已有产出,跳过(FORCE=1可强制重跑)")
+        return
+
     # 广撒：读选股器当天「全部」候选(~18-20只)，不再依赖 Haiku 报告(解耦+扩样本)。
     screened = f"data/screened-stocks-history/{today}.json"
     if not os.path.exists(screened):

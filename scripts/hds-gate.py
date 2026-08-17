@@ -20,10 +20,26 @@ PORT = "data/portfolio_hds.json"
 
 
 def qqq_closes(start):
-    import yfinance as yf
-    px = yf.download("QQQ", start=start, end="2027-01-01", progress=False)["Close"]
-    px = (px["QQQ"] if hasattr(px, "columns") else px).dropna()
-    return [(str(k.date()), float(v)) for k, v in px.items()]
+    try:
+        import yfinance as yf
+        px = yf.download("QQQ", start=start, end="2027-01-01", progress=False)["Close"]
+        px = (px["QQQ"] if hasattr(px, "columns") else px).dropna()
+        out = [(str(k.date()), float(v)) for k, v in px.items()]
+        if out: return out
+    except Exception:
+        pass
+    # FMP兜底(2026-08-17:yfinance连续多日拉空致gate冻结;FMP付费档=可靠长历史,杠杆腿同源)
+    try:
+        import os, json, urllib.request
+        key = os.environ.get("FMP_API_KEY", "")
+        url = f"https://financialmodelingprep.com/stable/historical-price-eod/full?symbol=QQQ&from={start}&apikey={key}"
+        rows = json.load(urllib.request.urlopen(url, timeout=30))
+        rows = sorted(rows, key=lambda r: r["date"])
+        print("[hds-gate] yfinance空,已用FMP兜底")
+        return [(r["date"], float(r["close"])) for r in rows]
+    except Exception as e:
+        print(f"[hds-gate] FMP兜底也失败:{e}")
+        return []
 
 
 def max_dd_pct(vals):

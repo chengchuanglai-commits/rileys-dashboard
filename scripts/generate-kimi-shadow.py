@@ -49,6 +49,12 @@ def run_kimi(ticker):
 
 
 def main():
+    # 幂等护栏(2026-08-17:cron双触发白烧双倍token的教训,deepseek侧同日双跑实炸):
+    # 当日产出已存在且非FORCE→直接跳过
+    if os.path.exists(os.path.join(KIMI_DIR, f"{today}-kimi.json")) and not os.environ.get("FORCE"):
+        print(f"[kimi] {today} 已有产出,跳过(FORCE=1可强制重跑)")
+        return
+
     # 严格配对:只认 deepseek-broad 当天提交的定日期候选文件,没有=不跑(保配对有效性)
     screened = f"data/screened-stocks-history/{today}.json"
     if not os.path.exists(screened):
