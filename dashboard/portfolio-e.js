@@ -656,27 +656,27 @@ window.PORTFOLIO_E = {
       "vix": 16.4,
       "daily_prices": {
         "2026-06-22": {
-          "open": 23.01,
-          "high": 23.08,
-          "low": 22.54,
-          "close": 23.03,
-          "pnl_pct": -2.31
+          "open": 22.88,
+          "high": 22.94,
+          "low": 22.41,
+          "close": 22.9,
+          "pnl_pct": -1.73
         },
         "2026-06-23": {
-          "open": 22.93,
-          "high": 23.29,
-          "low": 22.8,
-          "close": 23.15,
-          "pnl_pct": -3.02
+          "open": 22.8,
+          "high": 23.15,
+          "low": 22.67,
+          "close": 23.01,
+          "pnl_pct": -2.22
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 23.19,
-      "final_pnl_pct": -3.02,
-      "close_reason": "stop_loss",
+      "close_price": 23.01,
+      "final_pnl_pct": -2.22,
+      "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -16.96
+      "realized_pnl_usd": -12.99
     },
     {
       "ticker": "WSBC",
@@ -1599,13 +1599,13 @@ window.PORTFOLIO_E = {
     "total_trades": 37,
     "win_trades": 19,
     "win_rate": 51.4,
-    "total_realized_pnl_usd": 301.28,
+    "total_realized_pnl_usd": 305.25,
     "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2304.59,
+    "portfolio_value": 2308.56,
     "total_commission_usd": 74.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 9,
-    "updated_at": "2026-08-14"
+    "updated_at": "2026-08-17"
   }
 };

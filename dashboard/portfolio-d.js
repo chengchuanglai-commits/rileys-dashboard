@@ -658,20 +658,20 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-22",
       "daily_prices": {
         "2026-06-22": {
-          "open": 23.01,
-          "high": 23.08,
-          "low": 22.54,
-          "close": 23.03,
-          "pnl_pct": -2.31
+          "open": 22.88,
+          "high": 22.94,
+          "low": 22.41,
+          "close": 22.9,
+          "pnl_pct": -1.73
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 23.03,
-      "final_pnl_pct": -2.31,
+      "close_price": 22.9,
+      "final_pnl_pct": -1.73,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -13.44
+      "realized_pnl_usd": -10.57
     },
     {
       "ticker": "WSBC",
@@ -1355,19 +1355,19 @@ window.PORTFOLIO_D = {
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-08-14": {
-          "close": 52.52,
-          "pnl_pct": 4.51
+        "2026-08-17": {
+          "close": 52.53,
+          "pnl_pct": 4.49
         }
       },
       "gap_checked": true,
-      "day1_open": 52.94,
-      "day1_gap_pct": -3.75,
-      "close_date": "2026-08-14",
-      "close_price": 52.52,
-      "final_pnl_pct": 4.51,
+      "day1_open": 52.0,
+      "day1_gap_pct": -5.45,
+      "close_date": "2026-08-17",
+      "close_price": 52.53,
+      "final_pnl_pct": 4.49,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 22.55
+      "realized_pnl_usd": 22.45
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1375,10 +1375,10 @@ window.PORTFOLIO_D = {
     "total_trades": 39,
     "win_trades": 24,
     "win_rate": 61.5,
-    "total_realized_pnl_usd": 301.71,
+    "total_realized_pnl_usd": 304.48,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2301.71,
+    "portfolio_value": 2304.48,
     "skipped_gap": 13,
-    "updated_at": "2026-08-15"
+    "updated_at": "2026-08-17"
   }
 };

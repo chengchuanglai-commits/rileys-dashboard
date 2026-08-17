@@ -869,24 +869,24 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-25",
       "daily_prices": {
         "2026-06-22": {
-          "open": 23.01,
-          "high": 23.08,
-          "low": 22.54,
-          "close": 23.03,
-          "pnl_pct": -2.31
+          "open": 22.88,
+          "high": 22.94,
+          "low": 22.41,
+          "close": 22.9,
+          "pnl_pct": -1.73
         },
         "2026-06-23": {
-          "open": 22.93,
-          "high": 23.29,
-          "low": 22.8,
-          "close": 23.15,
-          "pnl_pct": -2.84
+          "open": 22.8,
+          "high": 23.15,
+          "low": 22.67,
+          "close": 23.01,
+          "pnl_pct": -2.22
         },
         "2026-06-24": {
-          "open": 23.25,
-          "high": 24.05,
-          "low": 22.85,
-          "close": 23.81,
+          "open": 23.11,
+          "high": 23.91,
+          "low": 22.72,
+          "close": 23.67,
           "pnl_pct": -4.0
         }
       },
@@ -1260,10 +1260,10 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-03",
       "daily_prices": {
         "2026-06-29": {
-          "open": 24.71,
-          "high": 24.91,
-          "low": 23.62,
-          "close": 24.46,
+          "open": 24.57,
+          "high": 24.76,
+          "low": 23.48,
+          "close": 24.32,
           "pnl_pct": -3.98
         }
       },
@@ -2225,6 +2225,6 @@ window.PORTFOLIO_B = {
     "total_realized_pnl_usd": 111.44,
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2111.44,
-    "updated_at": "2026-08-15"
+    "updated_at": "2026-08-17"
   }
 };

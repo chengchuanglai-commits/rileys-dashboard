@@ -824,34 +824,34 @@ window.PORTFOLIO_F = {
       "day1_open": null,
       "daily_prices": {
         "2026-06-22": {
-          "open": 23.01,
-          "high": 23.08,
-          "low": 22.54,
-          "close": 23.03,
-          "pnl_pct": -2.31
+          "open": 22.88,
+          "high": 22.94,
+          "low": 22.41,
+          "close": 22.9,
+          "pnl_pct": -1.73
         },
         "2026-06-23": {
-          "open": 22.93,
-          "high": 23.29,
-          "low": 22.8,
-          "close": 23.15,
-          "pnl_pct": -2.84
+          "open": 22.8,
+          "high": 23.15,
+          "low": 22.67,
+          "close": 23.01,
+          "pnl_pct": -2.22
         }
       },
       "t1_exit_date": "2026-06-23",
-      "t1_exit_price": 23.19,
-      "t1_exit_reason": "stop_loss",
+      "t1_exit_price": 23.01,
+      "t1_exit_reason": "max_hold",
       "t2_exit_date": "2026-06-23",
-      "t2_exit_price": 23.19,
-      "t2_exit_reason": "stop_loss",
-      "t1_gross_pnl": -7.48,
-      "t2_gross_pnl": -7.48,
+      "t2_exit_price": 23.01,
+      "t2_exit_reason": "max_hold",
+      "t1_gross_pnl": -5.5,
+      "t2_gross_pnl": -5.5,
       "close_date": "2026-06-23",
-      "close_reason": "stop_loss+stop_loss",
-      "final_pnl_pct": -3.02,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -16.96,
-      "sl_unified": true
+      "close_reason": "max_hold+max_hold",
+      "final_pnl_pct": -2.22,
+      "commission_total": 3.0,
+      "realized_pnl_usd": -14.0,
+      "sl_unified": false
     },
     {
       "ticker": "WSBC",
@@ -1662,12 +1662,12 @@ window.PORTFOLIO_F = {
     "total_trades": 32,
     "win_trades": 18,
     "win_rate": 56.2,
-    "total_realized_pnl_usd": 267.9,
+    "total_realized_pnl_usd": 270.86,
     "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2271.21,
-    "total_commission_usd": 85.0,
+    "portfolio_value": 2274.17,
+    "total_commission_usd": 86.0,
     "skipped_gap": 12,
     "skipped_zero_shares": 7,
-    "updated_at": "2026-08-14"
+    "updated_at": "2026-08-17"
   }
 };
