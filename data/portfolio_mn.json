@@ -168,13 +168,13 @@
         "2026-08-17": {
           "open": 43.19,
           "high": 43.59,
-          "low": 43.19,
-          "close": 43.26,
-          "pnl_pct": -0.48
+          "low": 43.08,
+          "close": 43.16,
+          "pnl_pct": -0.71
         }
       },
       "position_usd": 192.72,
-      "unrealized_pnl_usd": -0.93
+      "unrealized_pnl_usd": -1.37
     }
   ],
   "closed_positions": [
@@ -4620,18 +4620,18 @@
         "2026-08-17": {
           "open": 43.19,
           "high": 43.59,
-          "low": 43.19,
-          "close": 43.26,
-          "pnl_pct": 0.75
+          "low": 43.08,
+          "close": 43.16,
+          "pnl_pct": 0.51
         }
       },
       "close_date": "2026-08-17",
-      "close_price": 43.26,
-      "final_pnl_pct": 0.75,
+      "close_price": 43.16,
+      "final_pnl_pct": 0.51,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.5,
+      "realized_pnl_usd": 1.02,
       "position_usd": 199.91
     },
     {
@@ -4657,19 +4657,19 @@
         },
         "2026-08-17": {
           "open": 199.03,
-          "high": 203.07,
+          "high": 203.62,
           "low": 197.62,
-          "close": 203.07,
-          "pnl_pct": 5.16
+          "close": 203.62,
+          "pnl_pct": 5.45
         }
       },
       "close_date": "2026-08-17",
-      "close_price": 203.07,
-      "final_pnl_pct": 5.16,
+      "close_price": 203.62,
+      "final_pnl_pct": 5.45,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 9.75,
+      "realized_pnl_usd": 10.3,
       "position_usd": 188.98
     },
     {
@@ -4689,8 +4689,8 @@
         "2026-08-17": {
           "open": 24.04,
           "high": 24.2,
-          "low": 23.58,
-          "close": 23.66,
+          "low": 23.4,
+          "close": 23.45,
           "pnl_pct": -1.98
         }
       },
@@ -4709,9 +4709,9 @@
     "total_trades": 134,
     "win_trades": 36,
     "win_rate": 26.9,
-    "total_realized_pnl_usd": -1.55,
-    "open_unrealized_pnl_usd": 23.71,
-    "portfolio_value": 2022.16,
+    "total_realized_pnl_usd": -1.48,
+    "open_unrealized_pnl_usd": 23.27,
+    "portfolio_value": 2021.79,
     "total_commission_usd": 268.0,
     "skipped_gap": 57,
     "skipped_zero_shares": 0,
