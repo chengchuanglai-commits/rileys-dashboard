@@ -8,8 +8,8 @@
   "qqq_dd_required_pct": 3.0,
   "baseline_pv": 2188.5,
   "baseline_trades": 48,
-  "verdict": null,
-  "last_progress_push": "2026-07-31",
+  "verdict": "PASS",
+  "last_progress_push": "2026-08-14",
   "amendments": [
     {
       "date": "2026-07-17",
@@ -23,5 +23,13 @@
       "reason": "Riley不想干等日历。三条标准一字未降:①≥80笔仍差29笔(预计8月初)②已领先7pp③QQQ回撤3.4%已达标。去掉的只是标准全达成后的人为等待。",
       "approved_by": "Riley"
     }
-  ]
+  ],
+  "verdict_date": "2026-08-13",
+  "final": {
+    "trades": 82,
+    "hds_ret_pct": 4.02,
+    "qqq_ret_pct": 2.86,
+    "qqq_maxdd_pct": 8.1,
+    "adjudication_note": "回溯裁决(2026-08-17执行):第80笔平仓发生于8/13,当日应自动裁决;因本地行情断供致台账冻结在78笔+QQQ数据拉空,机械裁决延误4天。按预注册'攒满80当日裁决'条款,以8/13日终快照(云端git历史,台账PV2276.53/82笔;QQQ收盘FMP)回溯执行,不采用延误期间任何后续数据。领先+1.17pp<2pp→边缘PASS,适用协议修订#3半解冻帽$2100。"
+  }
 }

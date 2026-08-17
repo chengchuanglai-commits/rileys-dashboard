@@ -142,5 +142,79 @@
     "why": "ADV$3.2M<5M"
    }
   ]
+ },
+ "2026-08-10": {
+  "total": 4,
+  "flagged": []
+ },
+ "2026-08-11": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "SFBC",
+    "action": "BUY",
+    "why": "ADV$0.9M<5M"
+   },
+   {
+    "ticker": "ULBI",
+    "action": "BUY",
+    "why": "ADV$0.2M<5M"
+   }
+  ]
+ },
+ "2026-08-12": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "ESCA",
+    "action": "BUY",
+    "why": "ADV$1.0M<5M"
+   },
+   {
+    "ticker": "ULBI",
+    "action": "BUY",
+    "why": "ADV$0.3M<5M"
+   },
+   {
+    "ticker": "WEYS",
+    "action": "BUY",
+    "why": "ADV$1.0M<5M"
+   }
+  ]
+ },
+ "2026-08-13": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "ULBI",
+    "action": "BUY",
+    "why": "ADV$0.3M<5M"
+   },
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.5M<5M"
+   }
+  ]
+ },
+ "2026-08-14": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "ULBI",
+    "action": "SELL",
+    "why": "ADV$0.3M<5M"
+   },
+   {
+    "ticker": "RRGB",
+    "action": "SELL",
+    "why": "ADV$3.1M<5M"
+   },
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.5M<5M"
+   }
+  ]
  }
 }
