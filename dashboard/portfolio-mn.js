@@ -170,37 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 43.19,
           "high": 43.55,
           "low": 43.19,
-          "close": 43.37,
-          "pnl_pct": -0.23
-        }
-      },
-      "position_usd": 199.11,
-      "unrealized_pnl_usd": -0.46
-    },
-    {
-      "ticker": "WEYS",
-      "name": "Weyco Group",
-      "action": "BUY",
-      "signal_date": "2026-08-14",
-      "entry_price": 45.26,
-      "allocated_usd": 500,
-      "shares": 11.0473,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 52.05,
-      "stop_loss": 44.35,
-      "max_hold_date": "2026-08-18",
-      "daily_prices": {
-        "2026-08-17": {
-          "open": 45.49,
-          "high": 46.0,
-          "low": 45.49,
-          "close": 46.0,
-          "pnl_pct": 1.63
+          "close": 43.42,
+          "pnl_pct": -0.12
         }
       },
       "position_usd": 192.72,
-      "unrealized_pnl_usd": 3.14
+      "unrealized_pnl_usd": -0.23
     }
   ],
   "closed_positions": [
@@ -4647,17 +4622,17 @@ window.PORTFOLIO_MN = {
           "open": 43.19,
           "high": 43.55,
           "low": 43.19,
-          "close": 43.37,
-          "pnl_pct": 1.0
+          "close": 43.42,
+          "pnl_pct": 1.12
         }
       },
       "close_date": "2026-08-17",
-      "close_price": 43.37,
-      "final_pnl_pct": 1.0,
+      "close_price": 43.42,
+      "final_pnl_pct": 1.12,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.0,
+      "realized_pnl_usd": 2.24,
       "position_usd": 199.91
     },
     {
@@ -4683,34 +4658,65 @@ window.PORTFOLIO_MN = {
         },
         "2026-08-17": {
           "open": 199.03,
-          "high": 200.0,
+          "high": 202.22,
           "low": 197.62,
-          "close": 200.0,
-          "pnl_pct": 3.57
+          "close": 202.22,
+          "pnl_pct": 4.72
         }
       },
       "close_date": "2026-08-17",
-      "close_price": 200.0,
-      "final_pnl_pct": 3.57,
+      "close_price": 202.22,
+      "final_pnl_pct": 4.72,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.75,
+      "realized_pnl_usd": 8.92,
       "position_usd": 188.98
+    },
+    {
+      "ticker": "TCMD",
+      "name": "Tactile Systems Technology",
+      "action": "BUY",
+      "signal_date": "2026-08-14",
+      "entry_price": 24.2,
+      "allocated_usd": 500,
+      "shares": 20.6612,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 27.83,
+      "stop_loss": 23.72,
+      "max_hold_date": "2026-08-18",
+      "daily_prices": {
+        "2026-08-17": {
+          "open": 24.04,
+          "high": 24.2,
+          "low": 23.6,
+          "close": 23.69,
+          "pnl_pct": -1.98
+        }
+      },
+      "close_date": "2026-08-17",
+      "close_price": 23.72,
+      "final_pnl_pct": -1.98,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.94,
+      "position_usd": 199.11
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 133,
+    "total_trades": 134,
     "win_trades": 36,
-    "win_rate": 27.1,
-    "total_realized_pnl_usd": -0.11,
-    "open_unrealized_pnl_usd": 27.32,
-    "portfolio_value": 2027.21,
-    "total_commission_usd": 266.0,
-    "skipped_gap": 57,
+    "win_rate": 26.9,
+    "total_realized_pnl_usd": -1.64,
+    "open_unrealized_pnl_usd": 24.41,
+    "portfolio_value": 2022.77,
+    "total_commission_usd": 268.0,
+    "skipped_gap": 58,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 170,
+    "skipped_no_cash": 169,
     "updated_at": "2026-08-17"
   }
 };
