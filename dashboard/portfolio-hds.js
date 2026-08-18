@@ -137,13 +137,13 @@ window.PORTFOLIO_HDS = {
         "2026-08-18": {
           "open": 110.91,
           "high": 111.55,
-          "low": 110.17,
-          "close": 110.17,
-          "pnl_pct": 1.0
+          "low": 108.35,
+          "close": 108.84,
+          "pnl_pct": -0.22
         }
       },
       "position_usd": 229.18,
-      "unrealized_pnl_usd": 2.29
+      "unrealized_pnl_usd": -0.5
     },
     {
       "ticker": "EAT",
@@ -162,13 +162,13 @@ window.PORTFOLIO_HDS = {
         "2026-08-18": {
           "open": 239.92,
           "high": 242.95,
-          "low": 238.98,
-          "close": 238.98,
-          "pnl_pct": 0.77
+          "low": 235.89,
+          "close": 236.55,
+          "pnl_pct": -0.25
         }
       },
       "position_usd": 229.18,
-      "unrealized_pnl_usd": 1.76
+      "unrealized_pnl_usd": -0.57
     },
     {
       "ticker": "WEYS",
@@ -188,12 +188,12 @@ window.PORTFOLIO_HDS = {
           "open": 45.99,
           "high": 46.06,
           "low": 44.54,
-          "close": 44.69,
-          "pnl_pct": -1.26
+          "close": 44.73,
+          "pnl_pct": -1.17
         }
       },
       "position_usd": 229.18,
-      "unrealized_pnl_usd": -2.89
+      "unrealized_pnl_usd": -2.68
     }
   ],
   "closed_positions": [
@@ -3699,30 +3699,30 @@ window.PORTFOLIO_HDS = {
         },
         "2026-08-18": {
           "open": 42.98,
-          "high": 43.2,
-          "low": 42.49,
-          "close": 42.88,
-          "pnl_pct": -0.14
+          "high": 43.32,
+          "low": 42.38,
+          "close": 43.24,
+          "pnl_pct": 0.7
         }
       },
       "close_date": "2026-08-18",
-      "close_price": 42.88,
-      "final_pnl_pct": -0.14,
+      "close_price": 43.24,
+      "final_pnl_pct": 0.7,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.32,
+      "realized_pnl_usd": 1.6,
       "position_usd": 228.78
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 99,
-    "win_trades": 50,
-    "win_rate": 50.5,
-    "total_realized_pnl_usd": 291.47,
-    "open_unrealized_pnl_usd": 14.67,
-    "portfolio_value": 2306.14,
+    "win_trades": 51,
+    "win_rate": 51.5,
+    "total_realized_pnl_usd": 293.4,
+    "open_unrealized_pnl_usd": 9.75,
+    "portfolio_value": 2303.15,
     "total_commission_usd": 198.0,
     "skipped_gap": 56,
     "skipped_zero_shares": 0,
