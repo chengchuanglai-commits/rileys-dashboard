@@ -156,26 +156,85 @@ window.PORTFOLIO_MN = {
       "ticker": "LQDT",
       "name": "Liquidity Services",
       "action": "BUY",
-      "signal_date": "2026-08-14",
-      "entry_price": 43.47,
+      "signal_date": "2026-08-13",
+      "entry_price": 42.94,
       "allocated_usd": 500,
-      "shares": 11.5022,
+      "shares": 11.6442,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 49.99,
-      "stop_loss": 42.6,
-      "max_hold_date": "2026-08-18",
+      "take_profit": 49.38,
+      "stop_loss": 42.08,
+      "max_hold_date": "2026-08-17",
       "daily_prices": {
-        "2026-08-17": {
-          "open": 43.19,
-          "high": 43.59,
-          "low": 42.65,
-          "close": 42.71,
-          "pnl_pct": -1.75
+        "2026-08-14": {
+          "open": 43.04,
+          "high": 43.53,
+          "low": 42.93,
+          "close": 43.47,
+          "pnl_pct": 1.23
         }
       },
-      "position_usd": 192.72,
-      "unrealized_pnl_usd": -3.37
+      "position_usd": 199.91,
+      "unrealized_pnl_usd": 2.46
+    },
+    {
+      "ticker": "DXPE",
+      "name": "DXP Enterprises",
+      "action": "BUY",
+      "signal_date": "2026-08-13",
+      "entry_price": 193.1,
+      "allocated_usd": 500,
+      "shares": 2.5893,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 222.06,
+      "stop_loss": 189.24,
+      "max_hold_date": "2026-08-17",
+      "daily_prices": {
+        "2026-08-14": {
+          "open": 193.13,
+          "high": 203.3,
+          "low": 191.12,
+          "close": 200.84,
+          "pnl_pct": 4.01
+        }
+      },
+      "position_usd": 188.98,
+      "unrealized_pnl_usd": 7.58
+    },
+    {
+      "ticker": "RRGB",
+      "name": "Red Robin Gourmet Burgers",
+      "action": "BUY",
+      "signal_date": "2026-08-18",
+      "entry_price": 10.4,
+      "allocated_usd": 500,
+      "shares": 48.0769,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.96,
+      "stop_loss": 10.19,
+      "max_hold_date": "2026-08-20",
+      "daily_prices": {},
+      "position_usd": 198.58,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "CHEF",
+      "name": "The Chefs' Warehouse",
+      "action": "BUY",
+      "signal_date": "2026-08-18",
+      "entry_price": 111.55,
+      "allocated_usd": 500,
+      "shares": 4.4823,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 128.28,
+      "stop_loss": 109.32,
+      "max_hold_date": "2026-08-20",
+      "daily_prices": {},
+      "position_usd": 187.92,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -2916,32 +2975,32 @@ window.PORTFOLIO_MN = {
       "name": "普尔斯马特",
       "action": "BUY",
       "signal_date": "2026-07-15",
-      "entry_price": 188.58,
+      "entry_price": 187.85,
       "allocated_usd": 500,
-      "shares": 2.6514,
+      "shares": 2.6617,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 216.87,
-      "stop_loss": 184.81,
+      "take_profit": 216.03,
+      "stop_loss": 184.09,
       "max_hold_date": "2026-07-17",
       "daily_prices": {
         "2026-07-16": {
-          "open": 188.41,
-          "high": 192.96,
-          "low": 186.48,
-          "close": 189.05,
+          "open": 187.68,
+          "high": 192.21,
+          "low": 185.76,
+          "close": 188.32,
           "pnl_pct": 0.25
         },
         "2026-07-17": {
-          "open": 188.81,
-          "high": 191.94,
-          "low": 185.64,
-          "close": 186.0,
+          "open": 188.08,
+          "high": 191.19,
+          "low": 184.92,
+          "close": 185.28,
           "pnl_pct": -1.37
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 186.0,
+      "close_price": 185.28,
       "final_pnl_pct": -1.37,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
@@ -4601,122 +4660,77 @@ window.PORTFOLIO_MN = {
       "ticker": "LQDT",
       "name": "Liquidity Services",
       "action": "BUY",
-      "signal_date": "2026-08-13",
-      "entry_price": 42.94,
-      "allocated_usd": 500,
-      "shares": 11.6442,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 49.38,
-      "stop_loss": 42.08,
-      "max_hold_date": "2026-08-17",
-      "daily_prices": {
-        "2026-08-14": {
-          "open": 43.04,
-          "high": 43.53,
-          "low": 42.93,
-          "close": 43.47,
-          "pnl_pct": 1.23
-        },
-        "2026-08-17": {
-          "open": 43.19,
-          "high": 43.59,
-          "low": 42.65,
-          "close": 42.71,
-          "pnl_pct": -0.54
-        }
-      },
-      "close_date": "2026-08-17",
-      "close_price": 42.71,
-      "final_pnl_pct": -0.54,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -1.08,
-      "position_usd": 199.91
-    },
-    {
-      "ticker": "DXPE",
-      "name": "DXP Enterprises",
-      "action": "BUY",
-      "signal_date": "2026-08-13",
-      "entry_price": 193.1,
-      "allocated_usd": 500,
-      "shares": 2.5893,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 222.06,
-      "stop_loss": 189.24,
-      "max_hold_date": "2026-08-17",
-      "daily_prices": {
-        "2026-08-14": {
-          "open": 193.13,
-          "high": 203.3,
-          "low": 191.12,
-          "close": 200.84,
-          "pnl_pct": 4.01
-        },
-        "2026-08-17": {
-          "open": 199.03,
-          "high": 205.78,
-          "low": 197.62,
-          "close": 199.91,
-          "pnl_pct": 3.53
-        }
-      },
-      "close_date": "2026-08-17",
-      "close_price": 199.91,
-      "final_pnl_pct": 3.53,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 6.67,
-      "position_usd": 188.98
-    },
-    {
-      "ticker": "TCMD",
-      "name": "Tactile Systems Technology",
-      "action": "BUY",
       "signal_date": "2026-08-14",
-      "entry_price": 24.2,
+      "entry_price": 43.47,
       "allocated_usd": 500,
-      "shares": 20.6612,
+      "shares": 11.5022,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 27.83,
-      "stop_loss": 23.72,
+      "take_profit": 49.99,
+      "stop_loss": 42.6,
       "max_hold_date": "2026-08-18",
       "daily_prices": {
-        "2026-08-17": {
-          "open": 24.04,
-          "high": 24.64,
-          "low": 23.34,
-          "close": 24.59,
-          "pnl_pct": -1.98
+        "2026-08-18": {
+          "open": 42.98,
+          "high": 43.13,
+          "low": 42.55,
+          "close": 42.55,
+          "pnl_pct": -2.0
         }
       },
-      "close_date": "2026-08-17",
-      "close_price": 23.72,
-      "final_pnl_pct": -1.98,
+      "close_date": "2026-08-18",
+      "close_price": 42.6,
+      "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.94,
+      "realized_pnl_usd": -3.98,
       "position_usd": 199.11
+    },
+    {
+      "ticker": "ESCA",
+      "name": "Escalade",
+      "action": "BUY",
+      "signal_date": "2026-08-14",
+      "entry_price": 20.07,
+      "allocated_usd": 500,
+      "shares": 24.9128,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 23.08,
+      "stop_loss": 19.67,
+      "max_hold_date": "2026-08-18",
+      "daily_prices": {
+        "2026-08-18": {
+          "open": 20.26,
+          "high": 20.26,
+          "low": 19.93,
+          "close": 19.93,
+          "pnl_pct": -0.7
+        }
+      },
+      "close_date": "2026-08-18",
+      "close_price": 19.93,
+      "final_pnl_pct": -0.7,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -1.35,
+      "position_usd": 192.72
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 134,
-    "win_trades": 35,
-    "win_rate": 26.1,
-    "total_realized_pnl_usd": -7.21,
-    "open_unrealized_pnl_usd": 21.26,
-    "portfolio_value": 2014.05,
-    "total_commission_usd": 268.0,
-    "skipped_gap": 56,
+    "total_trades": 133,
+    "win_trades": 34,
+    "win_rate": 25.6,
+    "total_realized_pnl_usd": -14.19,
+    "open_unrealized_pnl_usd": 34.67,
+    "portfolio_value": 2020.48,
+    "total_commission_usd": 266.0,
+    "skipped_gap": 55,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 171,
-    "updated_at": "2026-08-17"
+    "skipped_no_cash": 176,
+    "updated_at": "2026-08-18"
   }
 };
