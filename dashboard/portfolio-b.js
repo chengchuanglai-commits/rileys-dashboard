@@ -2143,15 +2143,15 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.45
         },
         "2026-08-18": {
-          "close": 56.76,
-          "pnl_pct": 5.51
+          "close": 56.87,
+          "pnl_pct": 5.33
         }
       },
       "close_date": "2026-08-18",
-      "close_price": 56.76,
-      "final_pnl_pct": 5.51,
+      "close_price": 56.87,
+      "final_pnl_pct": 5.33,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 27.55
+      "realized_pnl_usd": 26.64
     },
     {
       "ticker": "STRS",
@@ -2212,9 +2212,9 @@ window.PORTFOLIO_B = {
     "total_trades": 52,
     "win_trades": 26,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 178.08,
+    "total_realized_pnl_usd": 177.17,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2178.08,
+    "portfolio_value": 2177.17,
     "updated_at": "2026-08-19"
   }
 };
