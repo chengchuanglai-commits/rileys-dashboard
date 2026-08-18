@@ -1572,6 +1572,66 @@
       "position_usd": 216.46
     },
     {
+      "ticker": "TCBK",
+      "name": "TCBK",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 60.07,
+      "allocated_usd": 500,
+      "shares": 8,
+      "actual_position_usd": 480.56,
+      "entry_commission": 1.0,
+      "take_profit": 55.26,
+      "stop_loss": 62.47,
+      "max_hold_date": "2026-07-21",
+      "day1_open": 59.43,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 59.43,
+          "high": 59.93,
+          "low": 58.59,
+          "close": 59.43,
+          "pnl_pct": 1.07
+        },
+        "2026-07-16": {
+          "open": 59.52,
+          "high": 61.71,
+          "low": 59.31,
+          "close": 61.62,
+          "pnl_pct": -2.58
+        },
+        "2026-07-17": {
+          "open": 61.2,
+          "high": 61.5,
+          "low": 60.25,
+          "close": 60.52,
+          "pnl_pct": -0.75
+        },
+        "2026-07-20": {
+          "open": 60.61,
+          "high": 60.61,
+          "low": 59.61,
+          "close": 59.8,
+          "pnl_pct": 0.45
+        },
+        "2026-07-21": {
+          "open": 59.59,
+          "high": 60.07,
+          "low": 59.38,
+          "close": 60.04,
+          "pnl_pct": 0.05
+        }
+      },
+      "close_date": "2026-07-21",
+      "close_price": 60.04,
+      "final_pnl_pct": 0.05,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 0.11,
+      "position_usd": 216.46
+    },
+    {
       "ticker": "SMPL",
       "name": "SMPL",
       "action": "SELL",
@@ -1609,64 +1669,6 @@
       "commission_total": 2.0,
       "realized_pnl_usd": 17.29,
       "position_usd": 215.61
-    },
-    {
-      "ticker": "TCBK",
-      "name": "TCBK",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 60.07,
-      "allocated_usd": 500,
-      "shares": 8,
-      "actual_position_usd": 480.56,
-      "entry_commission": 1.0,
-      "take_profit": 55.26,
-      "stop_loss": 62.47,
-      "max_hold_date": "2026-07-21",
-      "day1_open": 57.65,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 59.43,
-          "high": 59.93,
-          "low": 58.59,
-          "close": 59.43,
-          "pnl_pct": 1.07
-        },
-        "2026-07-16": {
-          "open": 59.52,
-          "high": 61.71,
-          "low": 59.31,
-          "close": 61.62,
-          "pnl_pct": -2.58
-        },
-        "2026-07-17": {
-          "open": 61.2,
-          "high": 61.5,
-          "low": 60.25,
-          "close": 60.52,
-          "pnl_pct": -0.75
-        },
-        "2026-07-20": {
-          "open": 60.61,
-          "high": 60.61,
-          "low": 59.61,
-          "close": 59.8,
-          "pnl_pct": 0.45
-        },
-        "2026-08-18": {
-          "close": 56.74,
-          "pnl_pct": 5.54
-        }
-      },
-      "position_usd": 216.46,
-      "unrealized_pnl_usd": 0.97,
-      "gap_checked": true,
-      "day1_gap_pct": -4.03,
-      "close_date": "2026-08-18",
-      "close_price": 56.74,
-      "final_pnl_pct": 5.54,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": 27.72
     },
     {
       "ticker": "STRS",
@@ -1712,8 +1714,8 @@
           "pnl_pct": 3.11
         },
         "2026-08-18": {
-          "close": 19.25,
-          "pnl_pct": 8.03
+          "close": 19.4,
+          "pnl_pct": 7.31
         }
       },
       "position_usd": 216.46,
@@ -1721,10 +1723,10 @@
       "gap_checked": true,
       "day1_gap_pct": -8.5,
       "close_date": "2026-08-18",
-      "close_price": 19.25,
-      "final_pnl_pct": 8.03,
-      "close_reason": "take_profit",
-      "realized_pnl_usd": 40.13
+      "close_price": 19.4,
+      "final_pnl_pct": 7.31,
+      "close_reason": "max_hold",
+      "realized_pnl_usd": 36.55
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -1732,9 +1734,9 @@
     "total_trades": 37,
     "win_trades": 24,
     "win_rate": 64.9,
-    "total_realized_pnl_usd": 239.29,
+    "total_realized_pnl_usd": 208.1,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2239.29,
+    "portfolio_value": 2208.1,
     "skipped_gap": 15,
     "updated_at": "2026-08-19"
   }
