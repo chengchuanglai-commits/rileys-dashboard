@@ -27,7 +27,7 @@ if [ "$1" = "review" ]; then
     /usr/bin/python3 scripts/backfill-portfolio-$L.py >> data/exec-log/legs-refill.log 2>&1 || true
   done
   # edge体检:自门控,平仓<80笔静默;跨到80笔自动跑一次+飞书裁决
-  for L in hds kimi; do
+  for L in hds hdstr kimi; do   # hdstr=真钱在跑的变体,2026-08-18 Riley指出它没有自己的CI,补上
     LEG=$L /usr/bin/python3 scripts/analyze-leg-edge.py >> data/exec-log/launchd.log 2>&1 || true
   done
   # 杠杆指数腿:每日重算净值曲线+回撤(paper跟踪,见 spec 2026-07-07)。FMP_API_KEY上面已export
