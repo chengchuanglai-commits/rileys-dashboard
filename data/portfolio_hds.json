@@ -120,54 +120,79 @@
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "LQDT",
+      "ticker": "CHEF",
       "name": "",
       "action": "BUY",
-      "signal_date": "2026-08-13",
-      "entry_price": 43.11,
+      "signal_date": "2026-08-17",
+      "entry_price": 109.08,
       "allocated_usd": 500,
-      "shares": 11.5982,
+      "shares": 4.5838,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 49.58,
-      "stop_loss": 42.25,
-      "max_hold_date": "2026-08-17",
+      "take_profit": 125.44,
+      "stop_loss": 106.9,
+      "max_hold_date": "2026-08-19",
       "daily_prices": {
-        "2026-08-14": {
-          "open": 43.04,
-          "high": 43.53,
-          "low": 42.93,
-          "close": 43.47,
-          "pnl_pct": 0.84
+        "2026-08-18": {
+          "open": 110.91,
+          "high": 111.55,
+          "low": 110.17,
+          "close": 110.17,
+          "pnl_pct": 1.0
         }
       },
-      "position_usd": 229.69,
-      "unrealized_pnl_usd": 1.93
+      "position_usd": 229.18,
+      "unrealized_pnl_usd": 2.29
     },
     {
-      "ticker": "ITIC",
+      "ticker": "EAT",
       "name": "",
       "action": "BUY",
-      "signal_date": "2026-08-13",
-      "entry_price": 280.89,
+      "signal_date": "2026-08-17",
+      "entry_price": 237.15,
       "allocated_usd": 500,
-      "shares": 1.7801,
+      "shares": 2.1084,
       "actual_position_usd": 500.01,
       "entry_commission": 1.0,
-      "take_profit": 323.02,
-      "stop_loss": 275.27,
-      "max_hold_date": "2026-08-17",
+      "take_profit": 272.72,
+      "stop_loss": 232.41,
+      "max_hold_date": "2026-08-19",
       "daily_prices": {
-        "2026-08-14": {
-          "open": 283.96,
-          "high": 287.71,
-          "low": 282.43,
-          "close": 287.71,
-          "pnl_pct": 2.43
+        "2026-08-18": {
+          "open": 239.92,
+          "high": 242.95,
+          "low": 238.98,
+          "close": 238.98,
+          "pnl_pct": 0.77
         }
       },
-      "position_usd": 229.69,
-      "unrealized_pnl_usd": 5.58
+      "position_usd": 229.18,
+      "unrealized_pnl_usd": 1.76
+    },
+    {
+      "ticker": "WEYS",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-17",
+      "entry_price": 45.26,
+      "allocated_usd": 500,
+      "shares": 11.0473,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 52.05,
+      "stop_loss": 44.35,
+      "max_hold_date": "2026-08-19",
+      "daily_prices": {
+        "2026-08-18": {
+          "open": 45.99,
+          "high": 46.06,
+          "low": 44.54,
+          "close": 44.69,
+          "pnl_pct": -1.26
+        }
+      },
+      "position_usd": 229.18,
+      "unrealized_pnl_usd": -2.89
     }
   ],
   "closed_positions": [
@@ -3578,6 +3603,82 @@
       "ticker": "LQDT",
       "name": "",
       "action": "BUY",
+      "signal_date": "2026-08-13",
+      "entry_price": 43.11,
+      "allocated_usd": 500,
+      "shares": 11.5982,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 49.58,
+      "stop_loss": 42.25,
+      "max_hold_date": "2026-08-17",
+      "daily_prices": {
+        "2026-08-14": {
+          "open": 43.04,
+          "high": 43.53,
+          "low": 42.93,
+          "close": 43.47,
+          "pnl_pct": 0.84
+        },
+        "2026-08-17": {
+          "open": 43.19,
+          "high": 43.65,
+          "low": 42.65,
+          "close": 42.71,
+          "pnl_pct": -0.93
+        }
+      },
+      "close_date": "2026-08-17",
+      "close_price": 42.71,
+      "final_pnl_pct": -0.93,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -2.14,
+      "position_usd": 229.69
+    },
+    {
+      "ticker": "ITIC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-13",
+      "entry_price": 280.89,
+      "allocated_usd": 500,
+      "shares": 1.7801,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 323.02,
+      "stop_loss": 275.27,
+      "max_hold_date": "2026-08-17",
+      "daily_prices": {
+        "2026-08-14": {
+          "open": 283.96,
+          "high": 287.71,
+          "low": 282.43,
+          "close": 287.71,
+          "pnl_pct": 2.43
+        },
+        "2026-08-17": {
+          "open": 286.28,
+          "high": 292.7,
+          "low": 285.96,
+          "close": 288.35,
+          "pnl_pct": 2.66
+        }
+      },
+      "close_date": "2026-08-17",
+      "close_price": 288.35,
+      "final_pnl_pct": 2.66,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 6.11,
+      "position_usd": 229.69
+    },
+    {
+      "ticker": "LQDT",
+      "name": "",
+      "action": "BUY",
       "signal_date": "2026-08-14",
       "entry_price": 42.94,
       "allocated_usd": 500,
@@ -3588,67 +3689,43 @@
       "stop_loss": 42.08,
       "max_hold_date": "2026-08-18",
       "daily_prices": {
+        "2026-08-17": {
+          "open": 43.19,
+          "high": 43.65,
+          "low": 42.65,
+          "close": 42.71,
+          "pnl_pct": -0.54
+        },
         "2026-08-18": {
           "open": 42.98,
-          "high": 43.13,
-          "low": 42.55,
-          "close": 42.55,
-          "pnl_pct": -0.91
+          "high": 43.2,
+          "low": 42.49,
+          "close": 42.88,
+          "pnl_pct": -0.14
         }
       },
       "close_date": "2026-08-18",
-      "close_price": 42.55,
-      "final_pnl_pct": -0.91,
+      "close_price": 42.88,
+      "final_pnl_pct": -0.14,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.08,
-      "position_usd": 228.78
-    },
-    {
-      "ticker": "ULBI",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-14",
-      "entry_price": 7.44,
-      "allocated_usd": 500,
-      "shares": 67.2043,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 6.32,
-      "stop_loss": 7.59,
-      "max_hold_date": "2026-08-18",
-      "daily_prices": {
-        "2026-08-18": {
-          "open": 6.92,
-          "high": 7.09,
-          "low": 6.92,
-          "close": 7.09,
-          "pnl_pct": 4.7
-        }
-      },
-      "close_date": "2026-08-18",
-      "close_price": 7.09,
-      "final_pnl_pct": 4.7,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 10.75,
+      "realized_pnl_usd": -0.32,
       "position_usd": 228.78
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 98,
+    "total_trades": 99,
     "win_trades": 50,
-    "win_rate": 51.0,
-    "total_realized_pnl_usd": 296.49,
-    "open_unrealized_pnl_usd": 21.02,
-    "portfolio_value": 2317.51,
-    "total_commission_usd": 196.0,
-    "skipped_gap": 52,
+    "win_rate": 50.5,
+    "total_realized_pnl_usd": 291.47,
+    "open_unrealized_pnl_usd": 14.67,
+    "portfolio_value": 2306.14,
+    "total_commission_usd": 198.0,
+    "skipped_gap": 56,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 32,
+    "skipped_no_cash": 26,
     "updated_at": "2026-08-18"
   }
 }
