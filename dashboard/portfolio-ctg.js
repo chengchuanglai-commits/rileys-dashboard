@@ -62,51 +62,6 @@ window.PORTFOLIO_CTG = {
       },
       "position_usd": 217.34,
       "unrealized_pnl_usd": 0.98
-    },
-    {
-      "ticker": "STRS",
-      "name": "STRS",
-      "action": "SELL",
-      "signal_date": "2026-07-14",
-      "entry_price": 20.93,
-      "allocated_usd": 500,
-      "shares": 23,
-      "actual_position_usd": 481.39,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-20",
-      "day1_open": 20.66,
-      "daily_prices": {
-        "2026-07-15": {
-          "open": 20.66,
-          "high": 21.29,
-          "low": 20.15,
-          "close": 20.7,
-          "pnl_pct": 1.1
-        },
-        "2026-07-16": {
-          "open": 20.79,
-          "high": 21.0,
-          "low": 20.21,
-          "close": 20.67,
-          "pnl_pct": 1.24
-        },
-        "2026-07-17": {
-          "open": 20.82,
-          "high": 21.05,
-          "low": 20.23,
-          "close": 20.72,
-          "pnl_pct": 1.0
-        },
-        "2026-07-20": {
-          "open": 20.64,
-          "high": 20.73,
-          "low": 20.01,
-          "close": 20.28,
-          "pnl_pct": 3.11
-        }
-      },
-      "position_usd": 217.34,
-      "unrealized_pnl_usd": 6.76
     }
   ],
   "closed_positions": [
@@ -1512,6 +1467,64 @@ window.PORTFOLIO_CTG = {
       "position_usd": 217.34
     },
     {
+      "ticker": "STRS",
+      "name": "STRS",
+      "action": "SELL",
+      "signal_date": "2026-07-14",
+      "entry_price": 20.93,
+      "allocated_usd": 500,
+      "shares": 23,
+      "actual_position_usd": 481.39,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-21",
+      "day1_open": 20.66,
+      "daily_prices": {
+        "2026-07-15": {
+          "open": 20.66,
+          "high": 21.29,
+          "low": 20.15,
+          "close": 20.7,
+          "pnl_pct": 1.1
+        },
+        "2026-07-16": {
+          "open": 20.79,
+          "high": 21.0,
+          "low": 20.21,
+          "close": 20.67,
+          "pnl_pct": 1.24
+        },
+        "2026-07-17": {
+          "open": 20.82,
+          "high": 21.05,
+          "low": 20.23,
+          "close": 20.72,
+          "pnl_pct": 1.0
+        },
+        "2026-07-20": {
+          "open": 20.64,
+          "high": 20.73,
+          "low": 20.01,
+          "close": 20.28,
+          "pnl_pct": 3.11
+        },
+        "2026-07-21": {
+          "open": 20.28,
+          "high": 20.89,
+          "low": 20.2,
+          "close": 20.43,
+          "pnl_pct": 2.39
+        }
+      },
+      "close_date": "2026-07-21",
+      "close_price": 20.43,
+      "final_pnl_pct": 2.39,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 5.19,
+      "position_usd": 217.34
+    },
+    {
       "ticker": "SMPL",
       "name": "SMPL",
       "action": "SELL",
@@ -1551,13 +1564,13 @@ window.PORTFOLIO_CTG = {
   ],
   "_note": "c-tight 变体:Plan C 出场(TP8/SL4/5天)+ 跳空过滤 >1.0% 跳过(比 c 更紧)",
   "stats": {
-    "total_trades": 33,
-    "win_trades": 22,
-    "win_rate": 66.7,
-    "total_realized_pnl_usd": 188.94,
-    "open_unrealized_pnl_usd": 7.74,
-    "portfolio_value": 2196.68,
-    "total_commission_usd": 66.0,
+    "total_trades": 34,
+    "win_trades": 23,
+    "win_rate": 67.6,
+    "total_realized_pnl_usd": 194.13,
+    "open_unrealized_pnl_usd": 0.98,
+    "portfolio_value": 2195.11,
+    "total_commission_usd": 68.0,
     "skipped_gap": 17,
     "skipped_zero_shares": 1,
     "updated_at": "2026-08-19"
