@@ -2142,15 +2142,15 @@
           "pnl_pct": 0.45
         },
         "2026-08-19": {
-          "close": 55.87,
-          "pnl_pct": 6.99
+          "close": 55.79,
+          "pnl_pct": 7.13
         }
       },
       "close_date": "2026-08-19",
-      "close_price": 55.87,
-      "final_pnl_pct": 6.99,
+      "close_price": 55.79,
+      "final_pnl_pct": 7.13,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 34.96
+      "realized_pnl_usd": 35.63
     },
     {
       "ticker": "STRS",
@@ -2211,9 +2211,9 @@
     "total_trades": 52,
     "win_trades": 26,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 180.71,
+    "total_realized_pnl_usd": 181.38,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2180.71,
+    "portfolio_value": 2181.38,
     "updated_at": "2026-08-20"
   }
 }
