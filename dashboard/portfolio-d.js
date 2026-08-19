@@ -1333,52 +1333,17 @@ window.PORTFOLIO_D = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 48.78
-    },
-    {
-      "ticker": "SRRK",
-      "name": "SRRK",
-      "action": "SELL",
-      "signal_date": "2026-07-01",
-      "entry_price": 55.0,
-      "allocated_usd": 500,
-      "shares": 9,
-      "actual_position_usd": 495.0,
-      "entry_commission": 1.0,
-      "take_profit": 46.75,
-      "stop_loss": 56.65,
-      "max_hold_date": "2026-07-03",
-      "daily_prices": {
-        "2026-07-02": {
-          "open": 52.8,
-          "high": 54.94,
-          "low": 51.32,
-          "close": 54.88,
-          "pnl_pct": 0.22
-        },
-        "2026-08-18": {
-          "close": 54.72,
-          "pnl_pct": 0.51
-        }
-      },
-      "gap_checked": true,
-      "day1_open": 51.91,
-      "day1_gap_pct": -5.62,
-      "close_date": "2026-08-18",
-      "close_price": 54.72,
-      "final_pnl_pct": 0.51,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": 2.55
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 39,
-    "win_trades": 24,
-    "win_rate": 61.5,
-    "total_realized_pnl_usd": 296.59,
+    "total_trades": 38,
+    "win_trades": 23,
+    "win_rate": 60.5,
+    "total_realized_pnl_usd": 294.04,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2296.59,
-    "skipped_gap": 13,
+    "portfolio_value": 2294.04,
+    "skipped_gap": 14,
     "updated_at": "2026-08-19"
   }
 };

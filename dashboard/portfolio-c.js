@@ -1624,7 +1624,7 @@ window.PORTFOLIO_C = {
       "take_profit": 55.26,
       "stop_loss": 62.47,
       "max_hold_date": "2026-07-21",
-      "day1_open": 57.65,
+      "day1_open": 56.96,
       "daily_prices": {
         "2026-07-15": {
           "open": 59.43,
@@ -1654,20 +1654,20 @@ window.PORTFOLIO_C = {
           "close": 59.8,
           "pnl_pct": 0.45
         },
-        "2026-08-18": {
-          "close": 56.7,
-          "pnl_pct": 5.61
+        "2026-08-19": {
+          "close": 56.48,
+          "pnl_pct": 5.98
         }
       },
       "position_usd": 216.46,
       "unrealized_pnl_usd": 0.97,
       "gap_checked": true,
-      "day1_gap_pct": -4.03,
-      "close_date": "2026-08-18",
-      "close_price": 56.7,
-      "final_pnl_pct": 5.61,
+      "day1_gap_pct": -5.18,
+      "close_date": "2026-08-19",
+      "close_price": 56.48,
+      "final_pnl_pct": 5.98,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 28.05
+      "realized_pnl_usd": 29.88
     },
     {
       "ticker": "STRS",
@@ -1682,7 +1682,7 @@ window.PORTFOLIO_C = {
       "take_profit": 19.26,
       "stop_loss": 21.77,
       "max_hold_date": "2026-07-21",
-      "day1_open": 19.15,
+      "day1_open": 19.75,
       "daily_prices": {
         "2026-07-15": {
           "open": 20.66,
@@ -1712,20 +1712,20 @@ window.PORTFOLIO_C = {
           "close": 20.28,
           "pnl_pct": 3.11
         },
-        "2026-08-18": {
-          "close": 19.35,
-          "pnl_pct": 7.55
+        "2026-08-19": {
+          "close": 19.75,
+          "pnl_pct": 5.64
         }
       },
       "position_usd": 216.46,
       "unrealized_pnl_usd": 6.73,
       "gap_checked": true,
-      "day1_gap_pct": -8.5,
-      "close_date": "2026-08-18",
-      "close_price": 19.35,
-      "final_pnl_pct": 7.55,
+      "day1_gap_pct": -5.64,
+      "close_date": "2026-08-19",
+      "close_price": 19.75,
+      "final_pnl_pct": 5.64,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 37.74
+      "realized_pnl_usd": 28.19
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -1733,9 +1733,9 @@ window.PORTFOLIO_C = {
     "total_trades": 37,
     "win_trades": 24,
     "win_rate": 64.9,
-    "total_realized_pnl_usd": 237.23,
+    "total_realized_pnl_usd": 229.51,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2237.23,
+    "portfolio_value": 2229.51,
     "skipped_gap": 15,
     "updated_at": "2026-08-19"
   }
