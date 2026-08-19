@@ -1655,8 +1655,8 @@ window.PORTFOLIO_C = {
           "pnl_pct": 0.45
         },
         "2026-08-19": {
-          "close": 56.12,
-          "pnl_pct": 6.58
+          "close": 55.9,
+          "pnl_pct": 6.94
         }
       },
       "position_usd": 216.46,
@@ -1664,10 +1664,10 @@ window.PORTFOLIO_C = {
       "gap_checked": true,
       "day1_gap_pct": -5.18,
       "close_date": "2026-08-19",
-      "close_price": 56.12,
-      "final_pnl_pct": 6.58,
+      "close_price": 55.9,
+      "final_pnl_pct": 6.94,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 32.88
+      "realized_pnl_usd": 34.71
     },
     {
       "ticker": "STRS",
@@ -1713,8 +1713,8 @@ window.PORTFOLIO_C = {
           "pnl_pct": 3.11
         },
         "2026-08-19": {
-          "close": 19.57,
-          "pnl_pct": 6.5
+          "close": 19.3,
+          "pnl_pct": 7.79
         }
       },
       "position_usd": 216.46,
@@ -1722,10 +1722,10 @@ window.PORTFOLIO_C = {
       "gap_checked": true,
       "day1_gap_pct": -5.64,
       "close_date": "2026-08-19",
-      "close_price": 19.57,
-      "final_pnl_pct": 6.5,
+      "close_price": 19.3,
+      "final_pnl_pct": 7.79,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 32.49
+      "realized_pnl_usd": 38.94
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -1733,9 +1733,9 @@ window.PORTFOLIO_C = {
     "total_trades": 37,
     "win_trades": 24,
     "win_rate": 64.9,
-    "total_realized_pnl_usd": 236.81,
+    "total_realized_pnl_usd": 245.09,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2236.81,
+    "portfolio_value": 2245.09,
     "skipped_gap": 15,
     "updated_at": "2026-08-20"
   }
