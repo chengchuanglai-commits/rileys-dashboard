@@ -2143,15 +2143,15 @@ window.PORTFOLIO_B = {
           "pnl_pct": 0.45
         },
         "2026-08-19": {
-          "close": 55.9,
-          "pnl_pct": 6.94
+          "close": 55.87,
+          "pnl_pct": 6.99
         }
       },
       "close_date": "2026-08-19",
-      "close_price": 55.9,
-      "final_pnl_pct": 6.94,
+      "close_price": 55.87,
+      "final_pnl_pct": 6.99,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 34.71
+      "realized_pnl_usd": 34.96
     },
     {
       "ticker": "STRS",
@@ -2196,15 +2196,15 @@ window.PORTFOLIO_B = {
           "pnl_pct": 3.11
         },
         "2026-08-19": {
-          "close": 19.3,
-          "pnl_pct": 7.79
+          "close": 19.65,
+          "pnl_pct": 6.12
         }
       },
       "close_date": "2026-08-19",
-      "close_price": 19.3,
-      "final_pnl_pct": 7.79,
+      "close_price": 19.65,
+      "final_pnl_pct": 6.12,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 38.94
+      "realized_pnl_usd": 30.58
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
@@ -2212,9 +2212,9 @@ window.PORTFOLIO_B = {
     "total_trades": 52,
     "win_trades": 26,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 188.82,
+    "total_realized_pnl_usd": 180.71,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2188.82,
+    "portfolio_value": 2180.71,
     "updated_at": "2026-08-20"
   }
 };
