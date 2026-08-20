@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 175.89,
           "high": 176.46,
           "low": 172.03,
-          "close": 175.49,
-          "pnl_pct": 0.17
+          "close": 174.27,
+          "pnl_pct": -0.53
         }
       },
       "position_usd": 197.34,
-      "unrealized_pnl_usd": 0.34
+      "unrealized_pnl_usd": -1.05
     },
     {
       "ticker": "MARA",
@@ -195,25 +195,25 @@ window.PORTFOLIO_MN = {
           "open": 10.22,
           "high": 10.9,
           "low": 9.96,
-          "close": 10.62,
-          "pnl_pct": 10.05
+          "close": 10.84,
+          "pnl_pct": 12.33
         }
       },
       "position_usd": 170.98,
-      "unrealized_pnl_usd": 17.18
+      "unrealized_pnl_usd": 21.08
     },
     {
       "ticker": "TCMD",
       "name": "Tactile Systems Technology",
       "action": "BUY",
       "signal_date": "2026-08-20",
-      "entry_price": 23.15,
+      "entry_price": 23.24,
       "allocated_usd": 500,
-      "shares": 21.5983,
+      "shares": 21.5146,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 26.62,
-      "stop_loss": 22.69,
+      "take_profit": 26.73,
+      "stop_loss": 22.78,
       "max_hold_date": "2026-08-24",
       "daily_prices": {},
       "position_usd": 196.55,
@@ -224,13 +224,13 @@ window.PORTFOLIO_MN = {
       "name": "Red Robin Gourmet Burgers",
       "action": "BUY",
       "signal_date": "2026-08-20",
-      "entry_price": 9.39,
+      "entry_price": 9.32,
       "allocated_usd": 500,
-      "shares": 53.2481,
+      "shares": 53.6481,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 10.8,
-      "stop_loss": 9.2,
+      "take_profit": 10.72,
+      "stop_loss": 9.13,
       "max_hold_date": "2026-08-24",
       "daily_prices": {},
       "position_usd": 190.2,
@@ -4943,7 +4943,7 @@ window.PORTFOLIO_MN = {
           "open": 36.88,
           "high": 38.74,
           "low": 35.58,
-          "close": 36.01,
+          "close": 36.1,
           "pnl_pct": -2.0
         }
       },
@@ -4974,7 +4974,7 @@ window.PORTFOLIO_MN = {
           "open": 25.31,
           "high": 26.13,
           "low": 24.61,
-          "close": 24.7,
+          "close": 24.84,
           "pnl_pct": -2.02
         }
       },
@@ -4994,8 +4994,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 35,
     "win_rate": 24.8,
     "total_realized_pnl_usd": -34.51,
-    "open_unrealized_pnl_usd": 42.16,
-    "portfolio_value": 2007.65,
+    "open_unrealized_pnl_usd": 44.67,
+    "portfolio_value": 2010.16,
     "total_commission_usd": 282.0,
     "skipped_gap": 57,
     "skipped_zero_shares": 0,

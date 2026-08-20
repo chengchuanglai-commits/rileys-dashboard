@@ -138,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 9.33,
           "high": 9.65,
           "low": 9.28,
-          "close": 9.39,
-          "pnl_pct": 8.03
+          "close": 9.32,
+          "pnl_pct": 8.72
         }
       },
       "position_usd": 228.11,
-      "unrealized_pnl_usd": 18.32
+      "unrealized_pnl_usd": 19.89
     },
     {
       "ticker": "TCMD",
@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 23.43,
           "high": 23.9,
           "low": 23.03,
-          "close": 23.15,
-          "pnl_pct": 2.94
+          "close": 23.24,
+          "pnl_pct": 2.56
         }
       },
       "position_usd": 228.11,
-      "unrealized_pnl_usd": 6.71
+      "unrealized_pnl_usd": 5.84
     },
     {
       "ticker": "TISI",
@@ -188,12 +188,12 @@ window.PORTFOLIO_HDS = {
           "open": 22.5,
           "high": 22.91,
           "low": 22.58,
-          "close": 22.75,
-          "pnl_pct": 2.44
+          "close": 22.82,
+          "pnl_pct": 2.14
         }
       },
       "position_usd": 228.11,
-      "unrealized_pnl_usd": 5.57
+      "unrealized_pnl_usd": 4.88
     },
     {
       "ticker": "CHEF",
@@ -3821,8 +3821,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 51,
     "win_rate": 50.5,
     "total_realized_pnl_usd": 281.08,
-    "open_unrealized_pnl_usd": 44.09,
-    "portfolio_value": 2325.17,
+    "open_unrealized_pnl_usd": 44.12,
+    "portfolio_value": 2325.2,
     "total_commission_usd": 202.0,
     "skipped_gap": 58,
     "skipped_zero_shares": 0,
