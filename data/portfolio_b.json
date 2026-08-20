@@ -2121,6 +2121,43 @@
       "realized_pnl_usd": -1.76
     },
     {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.36,
+      "stop_loss": 12.84,
+      "max_hold_date": "2026-07-22",
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.07,
+          "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.36,
+          "low": 11.03,
+          "close": 11.08,
+          "pnl_pct": 8.02
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 11.36,
+      "final_pnl_pct": 8.02,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 37.62
+    },
+    {
       "ticker": "STRS",
       "name": "STRS",
       "action": "SELL",
@@ -2162,58 +2199,16 @@
           "close": 20.28,
           "pnl_pct": 3.11
         },
-        "2026-07-21": {
-          "open": 20.28,
-          "high": 20.89,
-          "low": 20.2,
-          "close": 20.43,
-          "pnl_pct": 2.39
+        "2026-08-20": {
+          "close": 19.65,
+          "pnl_pct": 6.12
         }
       },
-      "close_date": "2026-07-21",
-      "close_price": 20.43,
-      "final_pnl_pct": 2.39,
+      "close_date": "2026-08-20",
+      "close_price": 19.65,
+      "final_pnl_pct": 6.12,
       "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 9.51
-    },
-    {
-      "ticker": "SMPL",
-      "name": "SMPL",
-      "action": "SELL",
-      "signal_date": "2026-07-15",
-      "entry_price": 12.35,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.0,
-      "entry_commission": 1.0,
-      "take_profit": 11.36,
-      "stop_loss": 12.84,
-      "max_hold_date": "2026-07-22",
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 12.19,
-          "high": 12.37,
-          "low": 11.94,
-          "close": 12.07,
-          "pnl_pct": 2.27
-        },
-        "2026-07-17": {
-          "open": 12.04,
-          "high": 12.36,
-          "low": 11.03,
-          "close": 11.08,
-          "pnl_pct": 8.02
-        }
-      },
-      "close_date": "2026-07-17",
-      "close_price": 11.36,
-      "final_pnl_pct": 8.02,
-      "close_reason": "take_profit",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 37.62
+      "realized_pnl_usd": 30.58
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
@@ -2221,9 +2216,9 @@
     "total_trades": 52,
     "win_trades": 26,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 122.92,
+    "total_realized_pnl_usd": 143.99,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2122.92,
+    "portfolio_value": 2143.99,
     "updated_at": "2026-08-20"
   }
 }
