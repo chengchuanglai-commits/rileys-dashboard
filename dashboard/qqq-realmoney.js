@@ -55,6 +55,6 @@ window.QQQ_REALMONEY = {
     "cost_cad_approx": 1406.33,
     "value_cad_approx": 1383.93,
     "pnl_cad_approx": -22.41,
-    "updated_at": "2026-08-20 20:32"
+    "updated_at": "2026-08-20 21:00"
   }
 };
