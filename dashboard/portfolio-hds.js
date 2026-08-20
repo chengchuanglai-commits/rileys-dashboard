@@ -137,7 +137,7 @@ window.PORTFOLIO_HDS = {
         "2026-08-20": {
           "open": 9.33,
           "high": 9.65,
-          "low": 9.28,
+          "low": 9.19,
           "close": 9.32,
           "pnl_pct": 8.72
         }
@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 23.43,
           "high": 23.9,
           "low": 23.03,
-          "close": 23.24,
-          "pnl_pct": 2.56
+          "close": 23.2,
+          "pnl_pct": 2.73
         }
       },
       "position_usd": 228.11,
-      "unrealized_pnl_usd": 5.84
+      "unrealized_pnl_usd": 6.23
     },
     {
       "ticker": "TISI",
@@ -3821,8 +3821,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 51,
     "win_rate": 50.5,
     "total_realized_pnl_usd": 281.08,
-    "open_unrealized_pnl_usd": 44.12,
-    "portfolio_value": 2325.2,
+    "open_unrealized_pnl_usd": 44.51,
+    "portfolio_value": 2325.59,
     "total_commission_usd": 202.0,
     "skipped_gap": 58,
     "skipped_zero_shares": 0,
