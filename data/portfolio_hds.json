@@ -137,12 +137,12 @@
           "open": 9.33,
           "high": 9.65,
           "low": 9.19,
-          "close": 9.32,
-          "pnl_pct": 8.72
+          "close": 9.42,
+          "pnl_pct": 7.74
         }
       },
       "position_usd": 228.11,
-      "unrealized_pnl_usd": 19.89
+      "unrealized_pnl_usd": 17.66
     },
     {
       "ticker": "TCMD",
@@ -162,12 +162,12 @@
           "open": 23.43,
           "high": 23.9,
           "low": 23.03,
-          "close": 23.2,
-          "pnl_pct": 2.73
+          "close": 23.43,
+          "pnl_pct": 1.76
         }
       },
       "position_usd": 228.11,
-      "unrealized_pnl_usd": 6.23
+      "unrealized_pnl_usd": 4.01
     },
     {
       "ticker": "TISI",
@@ -185,14 +185,14 @@
       "daily_prices": {
         "2026-08-20": {
           "open": 22.5,
-          "high": 22.91,
+          "high": 23.12,
           "low": 22.58,
-          "close": 22.82,
-          "pnl_pct": 2.14
+          "close": 22.8,
+          "pnl_pct": 2.23
         }
       },
       "position_usd": 228.11,
-      "unrealized_pnl_usd": 4.88
+      "unrealized_pnl_usd": 5.09
     },
     {
       "ticker": "CHEF",
@@ -3820,8 +3820,8 @@
     "win_trades": 51,
     "win_rate": 50.5,
     "total_realized_pnl_usd": 281.08,
-    "open_unrealized_pnl_usd": 44.51,
-    "portfolio_value": 2325.59,
+    "open_unrealized_pnl_usd": 40.26,
+    "portfolio_value": 2321.34,
     "total_commission_usd": 202.0,
     "skipped_gap": 58,
     "skipped_zero_shares": 0,

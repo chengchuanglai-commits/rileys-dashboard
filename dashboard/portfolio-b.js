@@ -2064,43 +2064,6 @@ window.PORTFOLIO_B = {
       "realized_pnl_usd": -13.04
     },
     {
-      "ticker": "SMPL",
-      "name": "SMPL",
-      "action": "SELL",
-      "signal_date": "2026-07-15",
-      "entry_price": 12.35,
-      "allocated_usd": 500,
-      "shares": 40,
-      "actual_position_usd": 494.0,
-      "entry_commission": 1.0,
-      "take_profit": 11.36,
-      "stop_loss": 12.84,
-      "max_hold_date": "2026-07-22",
-      "daily_prices": {
-        "2026-07-16": {
-          "open": 12.19,
-          "high": 12.37,
-          "low": 11.94,
-          "close": 12.07,
-          "pnl_pct": 2.27
-        },
-        "2026-07-17": {
-          "open": 12.04,
-          "high": 12.36,
-          "low": 11.03,
-          "close": 11.08,
-          "pnl_pct": 8.02
-        }
-      },
-      "close_date": "2026-07-17",
-      "close_price": 11.36,
-      "final_pnl_pct": 8.02,
-      "close_reason": "take_profit",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": 37.62
-    },
-    {
       "ticker": "TCBK",
       "name": "TCBK",
       "action": "SELL",
@@ -2142,16 +2105,21 @@ window.PORTFOLIO_B = {
           "close": 59.8,
           "pnl_pct": 0.45
         },
-        "2026-08-20": {
-          "close": 55.71,
-          "pnl_pct": 7.26
+        "2026-07-21": {
+          "open": 59.59,
+          "high": 60.07,
+          "low": 59.38,
+          "close": 60.04,
+          "pnl_pct": 0.05
         }
       },
-      "close_date": "2026-08-20",
-      "close_price": 55.71,
-      "final_pnl_pct": 7.26,
+      "close_date": "2026-07-21",
+      "close_price": 60.04,
+      "final_pnl_pct": 0.05,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 36.29
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -1.76
     },
     {
       "ticker": "STRS",
@@ -2195,16 +2163,58 @@ window.PORTFOLIO_B = {
           "close": 20.28,
           "pnl_pct": 3.11
         },
-        "2026-08-20": {
-          "close": 19.4,
-          "pnl_pct": 7.31
+        "2026-07-21": {
+          "open": 20.28,
+          "high": 20.89,
+          "low": 20.2,
+          "close": 20.43,
+          "pnl_pct": 2.39
         }
       },
-      "close_date": "2026-08-20",
-      "close_price": 19.4,
-      "final_pnl_pct": 7.31,
+      "close_date": "2026-07-21",
+      "close_price": 20.43,
+      "final_pnl_pct": 2.39,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 36.55
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 9.51
+    },
+    {
+      "ticker": "SMPL",
+      "name": "SMPL",
+      "action": "SELL",
+      "signal_date": "2026-07-15",
+      "entry_price": 12.35,
+      "allocated_usd": 500,
+      "shares": 40,
+      "actual_position_usd": 494.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.36,
+      "stop_loss": 12.84,
+      "max_hold_date": "2026-07-22",
+      "daily_prices": {
+        "2026-07-16": {
+          "open": 12.19,
+          "high": 12.37,
+          "low": 11.94,
+          "close": 12.07,
+          "pnl_pct": 2.27
+        },
+        "2026-07-17": {
+          "open": 12.04,
+          "high": 12.36,
+          "low": 11.03,
+          "close": 11.08,
+          "pnl_pct": 8.02
+        }
+      },
+      "close_date": "2026-07-17",
+      "close_price": 11.36,
+      "final_pnl_pct": 8.02,
+      "close_reason": "take_profit",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 37.62
     }
   ],
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
@@ -2212,9 +2222,9 @@ window.PORTFOLIO_B = {
     "total_trades": 52,
     "win_trades": 26,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 188.01,
+    "total_realized_pnl_usd": 122.92,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2188.01,
+    "portfolio_value": 2122.92,
     "updated_at": "2026-08-21"
   }
 };
