@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.riley.ibkr-trade-open-retry</string>
+  <!-- 二次开盘批(2026-08-20):网关每日自动重启时刻漂移(22:20/22:49...),21:30主批的15分钟
+       重试窗盖不住→洞夜漏开仓。23:05补一跑,run.sh trade_open幂等(done_keys防双开/epoch防双买)。
+       IBC上线固定重启时刻后可移除。 -->
+  <key>ProgramArguments</key><array>
+    <string>/bin/zsh</string><string>/Users/apple/claude-whatsapp/launchd/run.sh</string><string>trade_open</string>
+  </array>
+  <key>StartCalendarInterval</key><dict><key>Hour</key><integer>23</integer><key>Minute</key><integer>5</integer></dict>
+  <key>StandardErrorPath</key><string>/Users/apple/claude-whatsapp/data/exec-log/launchd-trade-open-retry.err</string>
+</dict></plist>
