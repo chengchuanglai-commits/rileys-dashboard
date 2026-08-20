@@ -1,0 +1,176 @@
+{
+  "date": "2026-08-20",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 107.36,
+      "target_price": 118.1,
+      "stop_loss": 101.99
+    },
+    {
+      "ticker": "TCMD",
+      "action": "SELL",
+      "current_price": 23.6,
+      "target_price": 25.96,
+      "stop_loss": 22.42
+    },
+    {
+      "ticker": "ITIC",
+      "action": "BUY",
+      "current_price": 292.39,
+      "target_price": 321.63,
+      "stop_loss": 277.77
+    },
+    {
+      "ticker": "RICK",
+      "action": "BUY",
+      "current_price": 31.34,
+      "target_price": 34.47,
+      "stop_loss": 29.77
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "CHEF",
+      "action": "SELL",
+      "current_price": 107.36,
+      "target_price": 118.1,
+      "stop_loss": 101.99
+    },
+    {
+      "ticker": "TCMD",
+      "action": "SELL",
+      "current_price": 23.6,
+      "target_price": 25.96,
+      "stop_loss": 22.42
+    },
+    {
+      "ticker": "ITIC",
+      "action": "BUY",
+      "current_price": 292.39,
+      "target_price": 321.63,
+      "stop_loss": 277.77
+    },
+    {
+      "ticker": "RICK",
+      "action": "BUY",
+      "current_price": 31.34,
+      "target_price": 34.47,
+      "stop_loss": 29.77
+    },
+    {
+      "ticker": "RRGB",
+      "action": "SELL",
+      "current_price": 9.51,
+      "target_price": 10.46,
+      "stop_loss": 9.03
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 22.46,
+      "target_price": 24.71,
+      "stop_loss": 21.34
+    },
+    {
+      "ticker": "SELF",
+      "action": "HOLD",
+      "current_price": 5.41,
+      "target_price": 5.95,
+      "stop_loss": 5.14
+    },
+    {
+      "ticker": "VIRT",
+      "action": "BUY",
+      "current_price": 59.98,
+      "target_price": 65.98,
+      "stop_loss": 56.98
+    },
+    {
+      "ticker": "CENT",
+      "action": "BUY",
+      "current_price": 44.37,
+      "target_price": 48.81,
+      "stop_loss": 42.15
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 72.12,
+      "target_price": 79.33,
+      "stop_loss": 68.51
+    },
+    {
+      "ticker": "MRCY",
+      "action": "SELL",
+      "current_price": 101.25,
+      "target_price": 111.38,
+      "stop_loss": 96.19
+    },
+    {
+      "ticker": "PGEN",
+      "action": "HOLD",
+      "current_price": 7.16,
+      "target_price": 7.88,
+      "stop_loss": 6.8
+    },
+    {
+      "ticker": "WTBA",
+      "action": "HOLD",
+      "current_price": 28.12,
+      "target_price": 30.93,
+      "stop_loss": 26.71
+    },
+    {
+      "ticker": "DIOD",
+      "action": "BUY",
+      "current_price": 94.32,
+      "target_price": 103.75,
+      "stop_loss": 89.6
+    },
+    {
+      "ticker": "WLFC",
+      "action": "HOLD",
+      "current_price": 55.09,
+      "target_price": 60.6,
+      "stop_loss": 52.34
+    },
+    {
+      "ticker": "STAA",
+      "action": "HOLD",
+      "current_price": 24.66,
+      "target_price": 27.13,
+      "stop_loss": 23.43
+    },
+    {
+      "ticker": "HUBG",
+      "action": "HOLD",
+      "current_price": 40.0,
+      "target_price": 44.0,
+      "stop_loss": 38.0
+    },
+    {
+      "ticker": "IPGP",
+      "action": "SELL",
+      "current_price": 76.57,
+      "target_price": 84.23,
+      "stop_loss": 72.74
+    },
+    {
+      "ticker": "SAMG",
+      "action": "SELL",
+      "current_price": 10.2,
+      "target_price": 11.22,
+      "stop_loss": 9.69
+    },
+    {
+      "ticker": "JACK",
+      "action": "SELL",
+      "current_price": 17.15,
+      "target_price": 18.86,
+      "stop_loss": 16.29
+    }
+  ]
+}
