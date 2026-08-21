@@ -151,31 +151,6 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.88,
       "unrealized_pnl_usd": 12.7
-    },
-    {
-      "ticker": "TCMD",
-      "name": "Tactile Systems Technology",
-      "action": "BUY",
-      "signal_date": "2026-08-20",
-      "entry_price": 23.43,
-      "allocated_usd": 500,
-      "shares": 21.3402,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 26.94,
-      "stop_loss": 22.96,
-      "max_hold_date": "2026-08-24",
-      "daily_prices": {
-        "2026-08-21": {
-          "open": 23.57,
-          "high": 23.89,
-          "low": 23.16,
-          "close": 23.37,
-          "pnl_pct": -0.26
-        }
-      },
-      "position_usd": 199.52,
-      "unrealized_pnl_usd": -0.52
     }
   ],
   "closed_positions": [
@@ -4982,19 +4957,19 @@ window.PORTFOLIO_MN = {
         },
         "2026-08-21": {
           "open": 173.98,
-          "high": 179.01,
+          "high": 182.44,
           "low": 172.55,
-          "close": 178.57,
-          "pnl_pct": 1.93
+          "close": 181.08,
+          "pnl_pct": 3.36
         }
       },
       "close_date": "2026-08-21",
-      "close_price": 178.57,
-      "final_pnl_pct": 1.93,
+      "close_price": 181.08,
+      "final_pnl_pct": 3.36,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 3.3,
+      "realized_pnl_usd": 5.74,
       "position_usd": 170.98
     },
     {
@@ -5013,9 +4988,9 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-21": {
           "open": 9.5,
-          "high": 9.61,
+          "high": 9.64,
           "low": 9.21,
-          "close": 9.6,
+          "close": 9.64,
           "pnl_pct": -2.02
         }
       },
@@ -5046,7 +5021,7 @@ window.PORTFOLIO_MN = {
           "open": 28.62,
           "high": 28.72,
           "low": 27.58,
-          "close": 28.23,
+          "close": 28.25,
           "pnl_pct": -2.0
         }
       },
@@ -5058,17 +5033,48 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.99,
       "position_usd": 199.52
+    },
+    {
+      "ticker": "JBSS",
+      "name": "John B. Sanfilippo & Son",
+      "action": "BUY",
+      "signal_date": "2026-08-20",
+      "entry_price": 75.76,
+      "allocated_usd": 500,
+      "shares": 6.5998,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 87.12,
+      "stop_loss": 74.24,
+      "max_hold_date": "2026-08-24",
+      "daily_prices": {
+        "2026-08-21": {
+          "open": 75.92,
+          "high": 76.69,
+          "low": 72.88,
+          "close": 73.68,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-08-21",
+      "close_price": 74.24,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.01,
+      "position_usd": 199.52
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 145,
+    "total_trades": 146,
     "win_trades": 37,
-    "win_rate": 25.5,
-    "total_realized_pnl_usd": -9.57,
-    "open_unrealized_pnl_usd": 24.12,
-    "portfolio_value": 2014.55,
-    "total_commission_usd": 290.0,
+    "win_rate": 25.3,
+    "total_realized_pnl_usd": -11.14,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2013.5,
+    "total_commission_usd": 292.0,
     "skipped_gap": 57,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 178,
