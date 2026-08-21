@@ -3751,19 +3751,19 @@
         },
         "2026-08-21": {
           "open": 9.5,
-          "high": 9.5,
-          "low": 9.28,
-          "close": 9.28,
-          "pnl_pct": 9.11
+          "high": 9.56,
+          "low": 9.21,
+          "close": 9.5,
+          "pnl_pct": 6.95
         }
       },
       "close_date": "2026-08-21",
-      "close_price": 9.28,
-      "final_pnl_pct": 9.11,
+      "close_price": 9.5,
+      "final_pnl_pct": 6.95,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 20.78,
+      "realized_pnl_usd": 15.85,
       "position_usd": 228.11
     },
     {
@@ -3790,7 +3790,7 @@
         "2026-08-21": {
           "open": 23.57,
           "high": 23.89,
-          "low": 23.24,
+          "low": 23.16,
           "close": 23.24,
           "pnl_pct": 2.56
         }
@@ -3827,19 +3827,19 @@
         },
         "2026-08-21": {
           "open": 22.72,
-          "high": 23.12,
-          "low": 22.58,
-          "close": 22.5,
-          "pnl_pct": 3.52
+          "high": 23.15,
+          "low": 22.44,
+          "close": 22.7,
+          "pnl_pct": 2.66
         }
       },
       "close_date": "2026-08-21",
-      "close_price": 22.5,
-      "final_pnl_pct": 3.52,
+      "close_price": 22.7,
+      "final_pnl_pct": 2.66,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.03,
+      "realized_pnl_usd": 6.07,
       "position_usd": 228.11
     },
     {
@@ -3859,8 +3859,8 @@
         "2026-08-21": {
           "open": 31.19,
           "high": 31.19,
-          "low": 30.64,
-          "close": 30.64,
+          "low": 30.44,
+          "close": 30.91,
           "pnl_pct": -2.01
         }
       },
@@ -3879,9 +3879,9 @@
     "total_trades": 105,
     "win_trades": 54,
     "win_rate": 51.4,
-    "total_realized_pnl_usd": 311.14,
+    "total_realized_pnl_usd": 304.26,
     "open_unrealized_pnl_usd": 13.51,
-    "portfolio_value": 2324.65,
+    "portfolio_value": 2317.77,
     "total_commission_usd": 210.0,
     "skipped_gap": 59,
     "skipped_zero_shares": 0,

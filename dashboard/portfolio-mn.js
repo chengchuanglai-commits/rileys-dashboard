@@ -169,38 +169,13 @@ window.PORTFOLIO_MN = {
         "2026-08-21": {
           "open": 23.57,
           "high": 23.89,
-          "low": 23.24,
-          "close": 23.24,
-          "pnl_pct": -0.81
+          "low": 23.16,
+          "close": 23.23,
+          "pnl_pct": -0.85
         }
       },
       "position_usd": 199.52,
-      "unrealized_pnl_usd": -1.62
-    },
-    {
-      "ticker": "RRGB",
-      "name": "Red Robin Gourmet Burgers",
-      "action": "BUY",
-      "signal_date": "2026-08-20",
-      "entry_price": 9.42,
-      "allocated_usd": 500,
-      "shares": 53.0786,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 10.83,
-      "stop_loss": 9.23,
-      "max_hold_date": "2026-08-24",
-      "daily_prices": {
-        "2026-08-21": {
-          "open": 9.5,
-          "high": 9.5,
-          "low": 9.28,
-          "close": 9.28,
-          "pnl_pct": -1.49
-        }
-      },
-      "position_usd": 199.52,
-      "unrealized_pnl_usd": -2.97
+      "unrealized_pnl_usd": -1.7
     }
   ],
   "closed_positions": [
@@ -5008,19 +4983,50 @@ window.PORTFOLIO_MN = {
         "2026-08-21": {
           "open": 173.98,
           "high": 175.15,
-          "low": 172.88,
-          "close": 173.13,
-          "pnl_pct": -1.18
+          "low": 172.55,
+          "close": 174.54,
+          "pnl_pct": -0.37
         }
       },
       "close_date": "2026-08-21",
-      "close_price": 173.13,
-      "final_pnl_pct": -1.18,
+      "close_price": 174.54,
+      "final_pnl_pct": -0.37,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.02,
+      "realized_pnl_usd": -0.63,
       "position_usd": 170.98
+    },
+    {
+      "ticker": "RRGB",
+      "name": "Red Robin Gourmet Burgers",
+      "action": "BUY",
+      "signal_date": "2026-08-20",
+      "entry_price": 9.42,
+      "allocated_usd": 500,
+      "shares": 53.0786,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 10.83,
+      "stop_loss": 9.23,
+      "max_hold_date": "2026-08-24",
+      "daily_prices": {
+        "2026-08-21": {
+          "open": 9.5,
+          "high": 9.56,
+          "low": 9.21,
+          "close": 9.5,
+          "pnl_pct": -2.02
+        }
+      },
+      "close_date": "2026-08-21",
+      "close_price": 9.23,
+      "final_pnl_pct": -2.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.03,
+      "position_usd": 199.52
     },
     {
       "ticker": "WTBA",
@@ -5040,7 +5046,7 @@ window.PORTFOLIO_MN = {
           "open": 28.62,
           "high": 28.72,
           "low": 27.58,
-          "close": 28.72,
+          "close": 28.25,
           "pnl_pct": -2.0
         }
       },
@@ -5056,13 +5062,13 @@ window.PORTFOLIO_MN = {
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 144,
+    "total_trades": 145,
     "win_trades": 36,
-    "win_rate": 25.0,
-    "total_realized_pnl_usd": -10.86,
-    "open_unrealized_pnl_usd": 20.05,
-    "portfolio_value": 2009.19,
-    "total_commission_usd": 288.0,
+    "win_rate": 24.8,
+    "total_realized_pnl_usd": -13.5,
+    "open_unrealized_pnl_usd": 22.94,
+    "portfolio_value": 2009.44,
+    "total_commission_usd": 290.0,
     "skipped_gap": 57,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 178,
