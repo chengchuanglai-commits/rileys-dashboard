@@ -186,8 +186,8 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-20": {
           "open": 22.5,
-          "high": 23.12,
-          "low": 22.58,
+          "high": 23.14,
+          "low": 22.5,
           "close": 22.8,
           "pnl_pct": 2.23
         }
@@ -3393,6 +3393,13 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 10.73,
       "max_hold_date": "2026-08-12",
       "daily_prices": {
+        "2026-08-11": {
+          "open": 10.87,
+          "high": 11.27,
+          "low": 10.82,
+          "close": 11.12,
+          "pnl_pct": 1.55
+        },
         "2026-08-12": {
           "open": 11.24,
           "high": 11.43,
@@ -3827,6 +3834,6 @@ window.PORTFOLIO_HDS = {
     "skipped_gap": 58,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 29,
-    "updated_at": "2026-08-20"
+    "updated_at": "2026-08-21"
   }
 };
