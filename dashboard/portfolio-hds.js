@@ -119,98 +119,6 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {},
       "position_usd": 212.59,
       "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "RRGB",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-19",
-      "entry_price": 10.21,
-      "allocated_usd": 500,
-      "shares": 48.9716,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 8.68,
-      "stop_loss": 10.41,
-      "max_hold_date": "2026-08-21",
-      "daily_prices": {
-        "2026-08-20": {
-          "open": 9.33,
-          "high": 9.65,
-          "low": 9.19,
-          "close": 9.42,
-          "pnl_pct": 7.74
-        }
-      },
-      "position_usd": 228.11,
-      "unrealized_pnl_usd": 17.66
-    },
-    {
-      "ticker": "TCMD",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-19",
-      "entry_price": 23.85,
-      "allocated_usd": 500,
-      "shares": 20.9644,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 20.27,
-      "stop_loss": 24.33,
-      "max_hold_date": "2026-08-21",
-      "daily_prices": {
-        "2026-08-20": {
-          "open": 23.43,
-          "high": 23.9,
-          "low": 23.03,
-          "close": 23.43,
-          "pnl_pct": 1.76
-        }
-      },
-      "position_usd": 228.11,
-      "unrealized_pnl_usd": 4.01
-    },
-    {
-      "ticker": "TISI",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-19",
-      "entry_price": 23.32,
-      "allocated_usd": 500,
-      "shares": 21.4408,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 19.82,
-      "stop_loss": 23.79,
-      "max_hold_date": "2026-08-21",
-      "daily_prices": {
-        "2026-08-20": {
-          "open": 22.5,
-          "high": 23.14,
-          "low": 22.5,
-          "close": 22.8,
-          "pnl_pct": 2.23
-        }
-      },
-      "position_usd": 228.11,
-      "unrealized_pnl_usd": 5.09
-    },
-    {
-      "ticker": "CHEF",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-20",
-      "entry_price": 107.36,
-      "allocated_usd": 500,
-      "shares": 4.6572,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 91.26,
-      "stop_loss": 109.51,
-      "max_hold_date": "2026-08-24",
-      "daily_prices": {},
-      "position_usd": 228.11,
-      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -3820,20 +3728,165 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": 2.72,
       "position_usd": 228.58
+    },
+    {
+      "ticker": "RRGB",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-19",
+      "entry_price": 10.21,
+      "allocated_usd": 500,
+      "shares": 48.9716,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 8.68,
+      "stop_loss": 10.41,
+      "max_hold_date": "2026-08-21",
+      "daily_prices": {
+        "2026-08-20": {
+          "open": 9.33,
+          "high": 9.65,
+          "low": 9.19,
+          "close": 9.42,
+          "pnl_pct": 7.74
+        },
+        "2026-08-21": {
+          "open": 9.5,
+          "high": 9.5,
+          "low": 9.28,
+          "close": 9.28,
+          "pnl_pct": 9.11
+        }
+      },
+      "close_date": "2026-08-21",
+      "close_price": 9.28,
+      "final_pnl_pct": 9.11,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 20.78,
+      "position_usd": 228.11
+    },
+    {
+      "ticker": "TCMD",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-19",
+      "entry_price": 23.85,
+      "allocated_usd": 500,
+      "shares": 20.9644,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 20.27,
+      "stop_loss": 24.33,
+      "max_hold_date": "2026-08-21",
+      "daily_prices": {
+        "2026-08-20": {
+          "open": 23.43,
+          "high": 23.9,
+          "low": 23.03,
+          "close": 23.43,
+          "pnl_pct": 1.76
+        },
+        "2026-08-21": {
+          "open": 23.57,
+          "high": 23.89,
+          "low": 23.24,
+          "close": 23.24,
+          "pnl_pct": 2.56
+        }
+      },
+      "close_date": "2026-08-21",
+      "close_price": 23.24,
+      "final_pnl_pct": 2.56,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 5.84,
+      "position_usd": 228.11
+    },
+    {
+      "ticker": "TISI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-19",
+      "entry_price": 23.32,
+      "allocated_usd": 500,
+      "shares": 21.4408,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 19.82,
+      "stop_loss": 23.79,
+      "max_hold_date": "2026-08-21",
+      "daily_prices": {
+        "2026-08-20": {
+          "open": 22.5,
+          "high": 23.14,
+          "low": 22.5,
+          "close": 22.8,
+          "pnl_pct": 2.23
+        },
+        "2026-08-21": {
+          "open": 22.72,
+          "high": 23.12,
+          "low": 22.58,
+          "close": 22.5,
+          "pnl_pct": 3.52
+        }
+      },
+      "close_date": "2026-08-21",
+      "close_price": 22.5,
+      "final_pnl_pct": 3.52,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 8.03,
+      "position_usd": 228.11
+    },
+    {
+      "ticker": "RICK",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-20",
+      "entry_price": 31.34,
+      "allocated_usd": 500,
+      "shares": 15.9541,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 36.04,
+      "stop_loss": 30.71,
+      "max_hold_date": "2026-08-24",
+      "daily_prices": {
+        "2026-08-21": {
+          "open": 31.19,
+          "high": 31.19,
+          "low": 30.64,
+          "close": 30.64,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-08-21",
+      "close_price": 30.71,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.58,
+      "position_usd": 228.11
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 101,
-    "win_trades": 51,
-    "win_rate": 50.5,
-    "total_realized_pnl_usd": 281.08,
-    "open_unrealized_pnl_usd": 40.26,
-    "portfolio_value": 2321.34,
-    "total_commission_usd": 202.0,
-    "skipped_gap": 58,
+    "total_trades": 105,
+    "win_trades": 54,
+    "win_rate": 51.4,
+    "total_realized_pnl_usd": 311.14,
+    "open_unrealized_pnl_usd": 13.51,
+    "portfolio_value": 2324.65,
+    "total_commission_usd": 210.0,
+    "skipped_gap": 59,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 29,
+    "skipped_no_cash": 28,
     "updated_at": "2026-08-21"
   }
 };
