@@ -42,139 +42,6 @@
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "GKOS",
-      "action": "BUY",
-      "signal_date": "2026-08-03",
-      "entry_price": 166.72,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {
-        "2026-08-04": {
-          "open": 171.75,
-          "high": 172.91,
-          "low": 167.64,
-          "close": 170.53,
-          "pnl_pct": 2.29
-        },
-        "2026-08-05": {
-          "open": 172.01,
-          "high": 172.01,
-          "low": 167.81,
-          "close": 170.93,
-          "pnl_pct": 2.53
-        },
-        "2026-08-06": {
-          "open": 171.17,
-          "high": 171.99,
-          "low": 168.39,
-          "close": 170.99,
-          "pnl_pct": 2.56
-        },
-        "2026-08-07": {
-          "open": 172.94,
-          "high": 180.62,
-          "low": 172.21,
-          "close": 180.02,
-          "pnl_pct": 7.98
-        },
-        "2026-08-10": {
-          "open": 180.0,
-          "high": 183.49,
-          "low": 178.78,
-          "close": 181.42,
-          "pnl_pct": 8.82
-        },
-        "2026-08-11": {
-          "open": 180.47,
-          "high": 183.91,
-          "low": 178.58,
-          "close": 182.0,
-          "pnl_pct": 9.17
-        },
-        "2026-08-12": {
-          "open": 179.8,
-          "high": 186.75,
-          "low": 177.57,
-          "close": 186.63,
-          "pnl_pct": 11.94
-        },
-        "2026-08-13": {
-          "open": 187.0,
-          "high": 189.69,
-          "low": 185.82,
-          "close": 189.45,
-          "pnl_pct": 13.63
-        },
-        "2026-08-14": {
-          "open": 189.89,
-          "high": 189.89,
-          "low": 184.22,
-          "close": 184.53,
-          "pnl_pct": 10.68
-        }
-      },
-      "position_usd": 245.73,
-      "unrealized_pnl_usd": 26.24
-    },
-    {
-      "ticker": "INBK",
-      "action": "BUY",
-      "signal_date": "2026-08-06",
-      "entry_price": 29.34,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {
-        "2026-08-07": {
-          "open": 29.3,
-          "high": 29.43,
-          "low": 28.91,
-          "close": 29.21,
-          "pnl_pct": -0.44
-        },
-        "2026-08-10": {
-          "open": 29.24,
-          "high": 29.87,
-          "low": 28.93,
-          "close": 29.32,
-          "pnl_pct": -0.07
-        },
-        "2026-08-11": {
-          "open": 29.34,
-          "high": 29.98,
-          "low": 29.28,
-          "close": 29.28,
-          "pnl_pct": -0.2
-        },
-        "2026-08-12": {
-          "open": 29.22,
-          "high": 29.76,
-          "low": 29.15,
-          "close": 29.2,
-          "pnl_pct": -0.48
-        },
-        "2026-08-13": {
-          "open": 29.49,
-          "high": 29.6,
-          "low": 29.0,
-          "close": 29.28,
-          "pnl_pct": -0.2
-        },
-        "2026-08-14": {
-          "open": 29.16,
-          "high": 29.36,
-          "low": 28.92,
-          "close": 29.06,
-          "pnl_pct": -0.95
-        }
-      },
-      "position_usd": 243.24,
-      "unrealized_pnl_usd": -2.31
-    },
-    {
       "ticker": "LQDT",
       "action": "BUY",
       "signal_date": "2026-08-13",
@@ -190,31 +57,17 @@
           "low": 42.93,
           "close": 43.47,
           "pnl_pct": 0.84
+        },
+        "2026-08-17": {
+          "open": 43.19,
+          "high": 43.59,
+          "low": 42.65,
+          "close": 42.71,
+          "pnl_pct": -0.93
         }
       },
-      "position_usd": 243.89,
-      "unrealized_pnl_usd": 2.05
-    },
-    {
-      "ticker": "ITIC",
-      "action": "BUY",
-      "signal_date": "2026-08-13",
-      "entry_price": 280.89,
-      "close_date": null,
-      "close_price": null,
-      "close_reason": "open",
-      "final_pnl_pct": null,
-      "daily_prices": {
-        "2026-08-14": {
-          "open": 283.93,
-          "high": 287.71,
-          "low": 283.01,
-          "close": 287.71,
-          "pnl_pct": 2.43
-        }
-      },
-      "position_usd": 243.89,
-      "unrealized_pnl_usd": 5.93
+      "position_usd": 246.58,
+      "unrealized_pnl_usd": -2.29
     },
     {
       "ticker": "LQDT",
@@ -225,34 +78,68 @@
       "close_price": null,
       "close_reason": "open",
       "final_pnl_pct": null,
-      "daily_prices": {},
-      "position_usd": 246.06,
-      "unrealized_pnl_usd": 0.0
+      "daily_prices": {
+        "2026-08-17": {
+          "open": 43.19,
+          "high": 43.59,
+          "low": 42.65,
+          "close": 42.71,
+          "pnl_pct": -0.54
+        }
+      },
+      "position_usd": 248.85,
+      "unrealized_pnl_usd": -1.34
     },
     {
-      "ticker": "ULBI",
-      "action": "SELL",
-      "signal_date": "2026-08-14",
-      "entry_price": 7.44,
+      "ticker": "CHEF",
+      "action": "BUY",
+      "signal_date": "2026-08-17",
+      "entry_price": 109.08,
       "close_date": null,
       "close_price": null,
       "close_reason": "open",
       "final_pnl_pct": null,
       "daily_prices": {},
-      "position_usd": 246.06,
+      "position_usd": 251.11,
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "RRGB",
-      "action": "SELL",
-      "signal_date": "2026-08-14",
-      "entry_price": 9.9,
+      "ticker": "EAT",
+      "action": "BUY",
+      "signal_date": "2026-08-17",
+      "entry_price": 237.15,
       "close_date": null,
       "close_price": null,
       "close_reason": "open",
       "final_pnl_pct": null,
       "daily_prices": {},
-      "position_usd": 246.06,
+      "position_usd": 251.11,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "signal_date": "2026-08-17",
+      "entry_price": 22.12,
+      "close_date": null,
+      "close_price": null,
+      "close_reason": "open",
+      "final_pnl_pct": null,
+      "daily_prices": {},
+      "position_usd": 251.11,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "WEYS",
+      "action": "BUY",
+      "signal_date": "2026-08-17",
+      "entry_price": 45.26,
+      "close_date": null,
+      "close_price": null,
+      "close_reason": "open",
+      "final_pnl_pct": null,
+      "daily_prices": {},
+      "position_usd": 251.11,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1425,27 +1312,27 @@
       "signal_date": "2026-07-02",
       "entry_price": 25.59,
       "close_date": "2026-07-07",
-      "close_price": 25.91,
+      "close_price": 25.75,
       "close_reason": "trail_stop",
-      "final_pnl_pct": -1.25,
+      "final_pnl_pct": -0.63,
       "daily_prices": {
         "2026-07-06": {
-          "open": 25.08,
-          "high": 25.99,
-          "low": 24.91,
-          "close": 25.99,
-          "pnl_pct": -1.56
+          "open": 24.93,
+          "high": 25.84,
+          "low": 24.76,
+          "close": 25.84,
+          "pnl_pct": -0.98
         },
         "2026-07-07": {
-          "open": 26.0,
-          "high": 26.8,
-          "low": 25.71,
-          "close": 26.13,
-          "pnl_pct": -1.25
+          "open": 25.85,
+          "high": 26.64,
+          "low": 25.56,
+          "close": 25.98,
+          "pnl_pct": -0.63
         }
       },
       "position_usd": 234.64,
-      "realized_pnl_usd": -2.93
+      "realized_pnl_usd": -1.48
     },
     {
       "ticker": "SKWD",
@@ -1633,7 +1520,7 @@
           "pnl_pct": 0.56
         }
       },
-      "position_usd": 238.21,
+      "position_usd": 238.36,
       "realized_pnl_usd": 1.33
     },
     {
@@ -1661,8 +1548,8 @@
           "pnl_pct": 5.16
         }
       },
-      "position_usd": 238.61,
-      "realized_pnl_usd": 12.31
+      "position_usd": 238.75,
+      "realized_pnl_usd": 12.32
     },
     {
       "ticker": "ITIC",
@@ -1703,7 +1590,7 @@
           "pnl_pct": -1.26
         }
       },
-      "position_usd": 238.61,
+      "position_usd": 238.75,
       "realized_pnl_usd": -3.01
     },
     {
@@ -1745,8 +1632,8 @@
           "pnl_pct": 12.82
         }
       },
-      "position_usd": 238.61,
-      "realized_pnl_usd": 30.59
+      "position_usd": 238.75,
+      "realized_pnl_usd": 30.61
     },
     {
       "ticker": "ITIC",
@@ -1780,7 +1667,7 @@
           "pnl_pct": -2.48
         }
       },
-      "position_usd": 238.74,
+      "position_usd": 238.89,
       "realized_pnl_usd": -5.92
     },
     {
@@ -1808,7 +1695,7 @@
           "pnl_pct": 1.12
         }
       },
-      "position_usd": 242.14,
+      "position_usd": 242.28,
       "realized_pnl_usd": 2.71
     },
     {
@@ -1857,8 +1744,8 @@
           "pnl_pct": -2.05
         }
       },
-      "position_usd": 242.14,
-      "realized_pnl_usd": -4.96
+      "position_usd": 242.28,
+      "realized_pnl_usd": -4.97
     },
     {
       "ticker": "PTGX",
@@ -1885,7 +1772,7 @@
           "pnl_pct": -1.83
         }
       },
-      "position_usd": 242.14,
+      "position_usd": 242.28,
       "realized_pnl_usd": -4.43
     },
     {
@@ -1920,7 +1807,7 @@
           "pnl_pct": -2.32
         }
       },
-      "position_usd": 242.14,
+      "position_usd": 242.28,
       "realized_pnl_usd": -5.62
     },
     {
@@ -1948,7 +1835,7 @@
           "pnl_pct": -0.14
         }
       },
-      "position_usd": 244.58,
+      "position_usd": 244.72,
       "realized_pnl_usd": -0.34
     },
     {
@@ -1976,7 +1863,7 @@
           "pnl_pct": -1.43
         }
       },
-      "position_usd": 244.58,
+      "position_usd": 244.72,
       "realized_pnl_usd": -3.5
     },
     {
@@ -2004,7 +1891,7 @@
           "pnl_pct": -1.56
         }
       },
-      "position_usd": 244.58,
+      "position_usd": 244.72,
       "realized_pnl_usd": -3.82
     },
     {
@@ -2032,7 +1919,7 @@
           "pnl_pct": 1.17
         }
       },
-      "position_usd": 244.13,
+      "position_usd": 244.28,
       "realized_pnl_usd": 2.86
     },
     {
@@ -2081,8 +1968,8 @@
           "pnl_pct": 9.8
         }
       },
-      "position_usd": 244.13,
-      "realized_pnl_usd": 23.93
+      "position_usd": 244.28,
+      "realized_pnl_usd": 23.94
     },
     {
       "ticker": "STRS",
@@ -2109,8 +1996,8 @@
           "pnl_pct": -2.37
         }
       },
-      "position_usd": 242.81,
-      "realized_pnl_usd": -5.75
+      "position_usd": 242.95,
+      "realized_pnl_usd": -5.76
     },
     {
       "ticker": "SFBC",
@@ -2137,8 +2024,8 @@
           "pnl_pct": -1.67
         }
       },
-      "position_usd": 242.81,
-      "realized_pnl_usd": -4.05
+      "position_usd": 242.95,
+      "realized_pnl_usd": -4.06
     },
     {
       "ticker": "UTMD",
@@ -2179,7 +2066,7 @@
           "pnl_pct": 0.55
         }
       },
-      "position_usd": 242.81,
+      "position_usd": 242.95,
       "realized_pnl_usd": 1.34
     },
     {
@@ -2221,8 +2108,8 @@
           "pnl_pct": -0.92
         }
       },
-      "position_usd": 242.81,
-      "realized_pnl_usd": -2.23
+      "position_usd": 242.95,
+      "realized_pnl_usd": -2.24
     },
     {
       "ticker": "CDNA",
@@ -2249,18 +2136,18 @@
           "pnl_pct": -1.09
         }
       },
-      "position_usd": 242.59,
-      "realized_pnl_usd": -2.64
+      "position_usd": 242.74,
+      "realized_pnl_usd": -2.65
     },
     {
       "ticker": "PBHC",
       "action": "BUY",
       "signal_date": "2026-07-17",
       "entry_price": 16.15,
-      "close_date": "2026-07-24",
-      "close_price": 15.97,
+      "close_date": "2026-07-23",
+      "close_price": 16.18,
       "close_reason": "trail_stop",
-      "final_pnl_pct": -1.11,
+      "final_pnl_pct": 0.19,
       "daily_prices": {
         "2026-07-20": {
           "open": 16.08,
@@ -2269,23 +2156,30 @@
           "close": 16.05,
           "pnl_pct": -0.62
         },
+        "2026-07-21": {
+          "open": 15.86,
+          "high": 16.26,
+          "low": 15.82,
+          "close": 16.0,
+          "pnl_pct": -0.93
+        },
+        "2026-07-22": {
+          "open": 16.51,
+          "high": 16.85,
+          "low": 15.76,
+          "close": 15.98,
+          "pnl_pct": -1.05
+        },
         "2026-07-23": {
           "open": 16.12,
           "high": 16.64,
           "low": 15.67,
           "close": 15.97,
-          "pnl_pct": -1.11
-        },
-        "2026-07-24": {
-          "open": 16.58,
-          "high": 16.58,
-          "low": 15.9,
-          "close": 15.9,
-          "pnl_pct": -1.11
+          "pnl_pct": 0.19
         }
       },
-      "position_usd": 242.59,
-      "realized_pnl_usd": -2.69
+      "position_usd": 242.74,
+      "realized_pnl_usd": 0.46
     },
     {
       "ticker": "UTMD",
@@ -2312,7 +2206,7 @@
           "pnl_pct": -0.33
         }
       },
-      "position_usd": 241.61,
+      "position_usd": 241.76,
       "realized_pnl_usd": -0.8
     },
     {
@@ -2340,8 +2234,8 @@
           "pnl_pct": -1.92
         }
       },
-      "position_usd": 241.35,
-      "realized_pnl_usd": -4.63
+      "position_usd": 241.5,
+      "realized_pnl_usd": -4.64
     },
     {
       "ticker": "UTMD",
@@ -2368,8 +2262,8 @@
           "pnl_pct": -1.82
         }
       },
-      "position_usd": 241.35,
-      "realized_pnl_usd": -4.39
+      "position_usd": 241.5,
+      "realized_pnl_usd": -4.4
     },
     {
       "ticker": "XNCR",
@@ -2396,8 +2290,8 @@
           "pnl_pct": 4.25
         }
       },
-      "position_usd": 243.57,
-      "realized_pnl_usd": 10.35
+      "position_usd": 243.72,
+      "realized_pnl_usd": 10.36
     },
     {
       "ticker": "FEIM",
@@ -2424,8 +2318,8 @@
           "pnl_pct": 7.15
         }
       },
-      "position_usd": 243.57,
-      "realized_pnl_usd": 17.42
+      "position_usd": 243.72,
+      "realized_pnl_usd": 17.43
     },
     {
       "ticker": "CDNA",
@@ -2473,7 +2367,7 @@
           "pnl_pct": 5.27
         }
       },
-      "position_usd": 243.57,
+      "position_usd": 243.72,
       "realized_pnl_usd": 12.84
     },
     {
@@ -2522,8 +2416,8 @@
           "pnl_pct": 5.73
         }
       },
-      "position_usd": 243.57,
-      "realized_pnl_usd": 13.96
+      "position_usd": 243.72,
+      "realized_pnl_usd": 13.97
     },
     {
       "ticker": "CDNA",
@@ -2550,7 +2444,7 @@
           "pnl_pct": -2.22
         }
       },
-      "position_usd": 242.67,
+      "position_usd": 242.86,
       "realized_pnl_usd": -5.39
     },
     {
@@ -2578,8 +2472,92 @@
           "pnl_pct": -1.94
         }
       },
-      "position_usd": 242.67,
+      "position_usd": 242.86,
       "realized_pnl_usd": -4.71
+    },
+    {
+      "ticker": "SFNC",
+      "action": "BUY",
+      "signal_date": "2026-07-23",
+      "entry_price": 23.11,
+      "close_date": "2026-08-06",
+      "close_price": 23.55,
+      "close_reason": "max_hold",
+      "final_pnl_pct": 1.9,
+      "daily_prices": {
+        "2026-07-24": {
+          "open": 23.01,
+          "high": 23.38,
+          "low": 22.98,
+          "close": 23.18,
+          "pnl_pct": 0.3
+        },
+        "2026-07-27": {
+          "open": 23.33,
+          "high": 23.5,
+          "low": 22.96,
+          "close": 22.97,
+          "pnl_pct": -0.61
+        },
+        "2026-07-28": {
+          "open": 23.15,
+          "high": 23.49,
+          "low": 23.03,
+          "close": 23.48,
+          "pnl_pct": 1.6
+        },
+        "2026-07-29": {
+          "open": 23.38,
+          "high": 23.58,
+          "low": 23.27,
+          "close": 23.46,
+          "pnl_pct": 1.51
+        },
+        "2026-07-30": {
+          "open": 23.56,
+          "high": 23.66,
+          "low": 23.29,
+          "close": 23.41,
+          "pnl_pct": 1.3
+        },
+        "2026-07-31": {
+          "open": 23.41,
+          "high": 23.67,
+          "low": 23.32,
+          "close": 23.59,
+          "pnl_pct": 2.08
+        },
+        "2026-08-03": {
+          "open": 23.63,
+          "high": 23.99,
+          "low": 23.52,
+          "close": 23.86,
+          "pnl_pct": 3.25
+        },
+        "2026-08-04": {
+          "open": 23.9,
+          "high": 24.25,
+          "low": 23.78,
+          "close": 24.12,
+          "pnl_pct": 4.37
+        },
+        "2026-08-05": {
+          "open": 24.24,
+          "high": 24.25,
+          "low": 24.01,
+          "close": 24.03,
+          "pnl_pct": 3.98
+        },
+        "2026-08-06": {
+          "open": 24.28,
+          "high": 24.32,
+          "low": 23.52,
+          "close": 23.55,
+          "pnl_pct": 1.9
+        }
+      },
+      "position_usd": 242.86,
+      "realized_pnl_usd": 4.61
     },
     {
       "ticker": "HBCP",
@@ -2634,8 +2612,8 @@
           "pnl_pct": -3.48
         }
       },
-      "position_usd": 245.18,
-      "realized_pnl_usd": -8.53
+      "position_usd": 245.64,
+      "realized_pnl_usd": -8.55
     },
     {
       "ticker": "HFWA",
@@ -2690,7 +2668,7 @@
           "pnl_pct": 1.03
         }
       },
-      "position_usd": 245.18,
+      "position_usd": 245.64,
       "realized_pnl_usd": 2.53
     },
     {
@@ -2723,6 +2701,13 @@
           "low": 68.9,
           "close": 69.33,
           "pnl_pct": -1.37
+        },
+        "2026-07-31": {
+          "open": 69.29,
+          "high": 70.09,
+          "low": 68.62,
+          "close": 69.89,
+          "pnl_pct": -0.57
         },
         "2026-08-03": {
           "open": 70.57,
@@ -2767,8 +2752,8 @@
           "pnl_pct": 1.59
         }
       },
-      "position_usd": 244.17,
-      "realized_pnl_usd": 3.88
+      "position_usd": 244.63,
+      "realized_pnl_usd": 3.89
     },
     {
       "ticker": "IMMR",
@@ -2802,43 +2787,8 @@
           "pnl_pct": 3.1
         }
       },
-      "position_usd": 244.17,
-      "realized_pnl_usd": 7.57
-    },
-    {
-      "ticker": "ECPG",
-      "action": "SELL",
-      "signal_date": "2026-07-28",
-      "entry_price": 94.45,
-      "close_date": "2026-08-03",
-      "close_price": 97.07,
-      "close_reason": "trail_stop",
-      "final_pnl_pct": -2.77,
-      "daily_prices": {
-        "2026-07-29": {
-          "open": 95.16,
-          "high": 97.8,
-          "low": 93.4,
-          "close": 93.83,
-          "pnl_pct": 0.66
-        },
-        "2026-07-30": {
-          "open": 94.48,
-          "high": 96.38,
-          "low": 93.34,
-          "close": 94.09,
-          "pnl_pct": 0.38
-        },
-        "2026-08-03": {
-          "open": 95.12,
-          "high": 98.15,
-          "low": 95.05,
-          "close": 96.28,
-          "pnl_pct": -2.77
-        }
-      },
-      "position_usd": 244.17,
-      "realized_pnl_usd": -6.76
+      "position_usd": 244.63,
+      "realized_pnl_usd": 7.58
     },
     {
       "ticker": "IMMR",
@@ -2865,7 +2815,7 @@
           "pnl_pct": 1.57
         }
       },
-      "position_usd": 246.85,
+      "position_usd": 247.31,
       "realized_pnl_usd": 3.88
     },
     {
@@ -2886,8 +2836,8 @@
           "pnl_pct": -3.99
         }
       },
-      "position_usd": 246.85,
-      "realized_pnl_usd": -9.85
+      "position_usd": 247.31,
+      "realized_pnl_usd": -9.87
     },
     {
       "ticker": "GKOS",
@@ -2964,14 +2914,14 @@
         },
         "2026-08-14": {
           "open": 189.89,
-          "high": 189.89,
+          "high": 190.0,
           "low": 184.22,
           "close": 184.53,
           "pnl_pct": 9.92
         }
       },
-      "position_usd": 247.01,
-      "realized_pnl_usd": 24.5
+      "position_usd": 247.47,
+      "realized_pnl_usd": 24.55
     },
     {
       "ticker": "IMMR",
@@ -3012,8 +2962,85 @@
           "pnl_pct": -0.93
         }
       },
-      "position_usd": 245.73,
-      "realized_pnl_usd": -2.29
+      "position_usd": 246.87,
+      "realized_pnl_usd": -2.3
+    },
+    {
+      "ticker": "GKOS",
+      "action": "BUY",
+      "signal_date": "2026-08-03",
+      "entry_price": 166.72,
+      "close_date": "2026-08-17",
+      "close_price": 182.4,
+      "close_reason": "trail_stop",
+      "final_pnl_pct": 9.4,
+      "daily_prices": {
+        "2026-08-04": {
+          "open": 171.75,
+          "high": 172.91,
+          "low": 167.64,
+          "close": 170.53,
+          "pnl_pct": 2.29
+        },
+        "2026-08-05": {
+          "open": 172.01,
+          "high": 172.01,
+          "low": 167.81,
+          "close": 170.93,
+          "pnl_pct": 2.53
+        },
+        "2026-08-06": {
+          "open": 171.17,
+          "high": 171.99,
+          "low": 168.39,
+          "close": 170.99,
+          "pnl_pct": 2.56
+        },
+        "2026-08-07": {
+          "open": 172.94,
+          "high": 180.62,
+          "low": 172.21,
+          "close": 180.02,
+          "pnl_pct": 7.98
+        },
+        "2026-08-10": {
+          "open": 180.0,
+          "high": 183.49,
+          "low": 178.78,
+          "close": 181.42,
+          "pnl_pct": 8.82
+        },
+        "2026-08-12": {
+          "open": 179.8,
+          "high": 186.75,
+          "low": 177.57,
+          "close": 186.63,
+          "pnl_pct": 11.94
+        },
+        "2026-08-13": {
+          "open": 187.0,
+          "high": 189.69,
+          "low": 185.82,
+          "close": 189.45,
+          "pnl_pct": 13.63
+        },
+        "2026-08-14": {
+          "open": 189.89,
+          "high": 190.0,
+          "low": 184.22,
+          "close": 184.53,
+          "pnl_pct": 10.68
+        },
+        "2026-08-17": {
+          "open": 183.55,
+          "high": 186.03,
+          "low": 181.84,
+          "close": 185.62,
+          "pnl_pct": 9.4
+        }
+      },
+      "position_usd": 246.87,
+      "realized_pnl_usd": 23.21
     },
     {
       "ticker": "CDNA",
@@ -3040,8 +3067,8 @@
           "pnl_pct": -3.89
         }
       },
-      "position_usd": 245.73,
-      "realized_pnl_usd": -9.56
+      "position_usd": 246.87,
+      "realized_pnl_usd": -9.6
     },
     {
       "ticker": "STRA",
@@ -3068,29 +3095,8 @@
           "pnl_pct": -2.25
         }
       },
-      "position_usd": 245.73,
-      "realized_pnl_usd": -5.53
-    },
-    {
-      "ticker": "CMCO",
-      "action": "BUY",
-      "signal_date": "2026-08-05",
-      "entry_price": 21.59,
-      "close_date": "2026-08-06",
-      "close_price": 20.73,
-      "close_reason": "stop_loss",
-      "final_pnl_pct": -3.98,
-      "daily_prices": {
-        "2026-08-06": {
-          "open": 21.43,
-          "high": 22.21,
-          "low": 20.45,
-          "close": 20.69,
-          "pnl_pct": -3.98
-        }
-      },
-      "position_usd": 245.73,
-      "realized_pnl_usd": -9.78
+      "position_usd": 246.87,
+      "realized_pnl_usd": -5.55
     },
     {
       "ticker": "ESCA",
@@ -3117,8 +3123,8 @@
           "pnl_pct": -0.81
         }
       },
-      "position_usd": 243.24,
-      "realized_pnl_usd": -1.97
+      "position_usd": 245.82,
+      "realized_pnl_usd": -1.99
     },
     {
       "ticker": "CDNA",
@@ -3145,36 +3151,106 @@
           "pnl_pct": -1.87
         }
       },
-      "position_usd": 243.24,
-      "realized_pnl_usd": -4.55
+      "position_usd": 245.82,
+      "realized_pnl_usd": -4.6
     },
     {
-      "ticker": "BLMN",
+      "ticker": "INBK",
       "action": "BUY",
-      "signal_date": "2026-08-07",
-      "entry_price": 10.88,
-      "close_date": "2026-08-11",
-      "close_price": 10.92,
+      "signal_date": "2026-08-06",
+      "entry_price": 29.34,
+      "close_date": "2026-08-17",
+      "close_price": 28.78,
       "close_reason": "trail_stop",
-      "final_pnl_pct": 0.37,
+      "final_pnl_pct": -1.91,
       "daily_prices": {
+        "2026-08-07": {
+          "open": 29.3,
+          "high": 29.43,
+          "low": 28.91,
+          "close": 29.21,
+          "pnl_pct": -0.44
+        },
         "2026-08-10": {
-          "open": 10.89,
-          "high": 11.37,
-          "low": 10.89,
-          "close": 11.02,
-          "pnl_pct": 1.29
+          "open": 29.24,
+          "high": 29.87,
+          "low": 28.93,
+          "close": 29.32,
+          "pnl_pct": -0.07
         },
         "2026-08-11": {
-          "open": 10.87,
-          "high": 11.27,
-          "low": 10.82,
-          "close": 11.12,
-          "pnl_pct": 0.37
+          "open": 29.34,
+          "high": 29.98,
+          "low": 29.28,
+          "close": 29.28,
+          "pnl_pct": -0.2
+        },
+        "2026-08-12": {
+          "open": 29.22,
+          "high": 29.76,
+          "low": 29.15,
+          "close": 29.2,
+          "pnl_pct": -0.48
+        },
+        "2026-08-13": {
+          "open": 29.49,
+          "high": 29.6,
+          "low": 29.0,
+          "close": 29.28,
+          "pnl_pct": -0.2
+        },
+        "2026-08-14": {
+          "open": 29.16,
+          "high": 29.36,
+          "low": 28.92,
+          "close": 29.06,
+          "pnl_pct": -0.95
+        },
+        "2026-08-17": {
+          "open": 29.48,
+          "high": 29.48,
+          "low": 28.67,
+          "close": 28.85,
+          "pnl_pct": -1.91
         }
       },
-      "position_usd": 243.01,
-      "realized_pnl_usd": 0.9
+      "position_usd": 245.82,
+      "realized_pnl_usd": -4.7
+    },
+    {
+      "ticker": "NSIT",
+      "action": "BUY",
+      "signal_date": "2026-08-07",
+      "entry_price": 149.19,
+      "close_date": "2026-08-12",
+      "close_price": 149.75,
+      "close_reason": "trail_stop",
+      "final_pnl_pct": 0.38,
+      "daily_prices": {
+        "2026-08-10": {
+          "open": 148.45,
+          "high": 155.1,
+          "low": 146.76,
+          "close": 154.74,
+          "pnl_pct": 3.72
+        },
+        "2026-08-11": {
+          "open": 153.39,
+          "high": 155.99,
+          "low": 150.76,
+          "close": 150.95,
+          "pnl_pct": 1.18
+        },
+        "2026-08-12": {
+          "open": 151.17,
+          "high": 155.74,
+          "low": 149.69,
+          "close": 154.67,
+          "pnl_pct": 0.38
+        }
+      },
+      "position_usd": 245.59,
+      "realized_pnl_usd": 0.93
     },
     {
       "ticker": "NSIT",
@@ -3201,8 +3277,8 @@
           "pnl_pct": 0.29
         }
       },
-      "position_usd": 242.75,
-      "realized_pnl_usd": 0.7
+      "position_usd": 245.32,
+      "realized_pnl_usd": 0.71
     },
     {
       "ticker": "BLMN",
@@ -3214,13 +3290,6 @@
       "close_reason": "trail_stop",
       "final_pnl_pct": 0.18,
       "daily_prices": {
-        "2026-08-11": {
-          "open": 10.87,
-          "high": 11.27,
-          "low": 10.82,
-          "close": 11.12,
-          "pnl_pct": 1.55
-        },
         "2026-08-12": {
           "open": 11.24,
           "high": 11.43,
@@ -3236,7 +3305,7 @@
           "pnl_pct": 0.18
         }
       },
-      "position_usd": 242.75,
+      "position_usd": 245.32,
       "realized_pnl_usd": 0.44
     },
     {
@@ -3271,36 +3340,8 @@
           "pnl_pct": 4.29
         }
       },
-      "position_usd": 242.75,
-      "realized_pnl_usd": 10.41
-    },
-    {
-      "ticker": "BLMN",
-      "action": "BUY",
-      "signal_date": "2026-08-11",
-      "entry_price": 11.02,
-      "close_date": "2026-08-13",
-      "close_price": 10.97,
-      "close_reason": "trail_stop",
-      "final_pnl_pct": -0.45,
-      "daily_prices": {
-        "2026-08-12": {
-          "open": 11.24,
-          "high": 11.43,
-          "low": 10.94,
-          "close": 11.39,
-          "pnl_pct": 3.36
-        },
-        "2026-08-13": {
-          "open": 11.41,
-          "high": 11.64,
-          "low": 10.76,
-          "close": 10.79,
-          "pnl_pct": -0.45
-        }
-      },
-      "position_usd": 242.84,
-      "realized_pnl_usd": -1.09
+      "position_usd": 245.32,
+      "realized_pnl_usd": 10.52
     },
     {
       "ticker": "ESCA",
@@ -3327,19 +3368,75 @@
           "pnl_pct": -1.16
         }
       },
-      "position_usd": 242.91,
-      "realized_pnl_usd": -2.82
+      "position_usd": 245.48,
+      "realized_pnl_usd": -2.85
+    },
+    {
+      "ticker": "ULBI",
+      "action": "BUY",
+      "signal_date": "2026-08-12",
+      "entry_price": 7.16,
+      "close_date": "2026-08-14",
+      "close_price": 7.19,
+      "close_reason": "trail_stop",
+      "final_pnl_pct": 0.42,
+      "daily_prices": {
+        "2026-08-13": {
+          "open": 7.26,
+          "high": 7.49,
+          "low": 7.2,
+          "close": 7.44,
+          "pnl_pct": 3.91
+        },
+        "2026-08-14": {
+          "open": 7.37,
+          "high": 7.65,
+          "low": 7.01,
+          "close": 7.51,
+          "pnl_pct": 0.42
+        }
+      },
+      "position_usd": 245.48,
+      "realized_pnl_usd": 1.03
+    },
+    {
+      "ticker": "ULBI",
+      "action": "BUY",
+      "signal_date": "2026-08-13",
+      "entry_price": 7.22,
+      "close_date": "2026-08-17",
+      "close_price": 7.34,
+      "close_reason": "trail_stop",
+      "final_pnl_pct": 1.66,
+      "daily_prices": {
+        "2026-08-14": {
+          "open": 7.37,
+          "high": 7.65,
+          "low": 7.01,
+          "close": 7.51,
+          "pnl_pct": 4.02
+        },
+        "2026-08-17": {
+          "open": 7.55,
+          "high": 7.66,
+          "low": 7.26,
+          "close": 7.27,
+          "pnl_pct": 1.66
+        }
+      },
+      "position_usd": 246.58,
+      "realized_pnl_usd": 4.09
     }
   ],
   "stats": {
-    "total_trades": 83,
-    "win_trades": 46,
-    "win_rate": 55.4,
-    "total_realized_pnl_usd": 460.55,
-    "open_unrealized_pnl_usd": 31.91,
-    "portfolio_value": 2492.46,
-    "skipped_gap": 54,
-    "skipped_no_cash": 39,
-    "updated_at": "2026-08-15"
+    "total_trades": 85,
+    "win_trades": 51,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 511.11,
+    "open_unrealized_pnl_usd": -3.64,
+    "portfolio_value": 2507.47,
+    "skipped_gap": 56,
+    "skipped_no_cash": 40,
+    "updated_at": "2026-08-18"
   }
 }

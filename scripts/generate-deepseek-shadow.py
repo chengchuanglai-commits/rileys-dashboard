@@ -112,6 +112,10 @@ def main():
             if r:
                 verdicts.append(r)
 
+    if verdicts and all(v.get("error") for v in verdicts):
+        print(f"[deepseek] ❌ 全部{len(verdicts)}只失败(如402余额不足),不写归档——防垃圾文件卡住幂等护栏(2026-08-21实炸)")
+        return
+
     # signals=进 H-DS 现实盘的(仍限4条,$2000账户realistic)；all_verdicts=全部(含HOLD)供 edge 统计
     actionable = [v for v in verdicts if v.get("action") in ("BUY", "SELL")][:4]
     out = {

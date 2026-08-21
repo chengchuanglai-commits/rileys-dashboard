@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: read    # gate查同日更早运行(双跑根治)用
 
 concurrency:
   group: trading-pipeline    # 与主管线共用,防同时提交撞车
@@ -34,7 +35,18 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f "dashboard/trading-signals-history/deepseek/$(date -u +%F)-deepseek.json" ]; then
             echo "今日广撒已完成,跳过迟到的重复定时触发"; echo "run=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
+          # 双跑根治(2026-08-21:文件检查有竞态,8/17-20每天双烧全量分析,¥50四天蒸发):
+          # 用API查今天是否已有更早的schedule运行(不论进行中/已完成)→我是迟到重复,退场
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            EARLIER=$(gh api "repos/${{ github.repository }}/actions/workflows/deepseek-broad.yml/runs?event=schedule&created=$(date -u +%F)" \
+              --jq "[.workflow_runs[] | select(.id != ${{ github.run_id }}) | select(.created_at < \"${{ github.run_started_at }}\")] | length" 2>/dev/null || echo 0)
+            if [ "${EARLIER:-0}" -gt 0 ]; then
+              echo "今日已有更早的定时运行($EARLIER个),本次是迟到重复,退场"; echo "run=false" >> "$GITHUB_OUTPUT"; exit 0
+            fi
+          fi
           echo "run=true" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deepseek:
     needs: gate

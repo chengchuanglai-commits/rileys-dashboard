@@ -216,5 +216,35 @@
     "why": "ADV$0.5M<5M"
    }
   ]
+ },
+ "2026-08-17": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.5M<5M"
+   },
+   {
+    "ticker": "WEYS",
+    "action": "BUY",
+    "why": "ADV$1.1M<5M"
+   }
+  ]
+ },
+ "2026-08-19": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "RRGB",
+    "action": "SELL",
+    "why": "ADV$3.7M<5M"
+   },
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.6M<5M"
+   }
+  ]
  }
 }
