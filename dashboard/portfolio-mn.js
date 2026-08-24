@@ -5019,7 +5019,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-21": {
           "open": 28.62,
-          "high": 28.72,
+          "high": 28.75,
           "low": 27.58,
           "close": 28.54,
           "pnl_pct": -2.0
@@ -5078,6 +5078,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 57,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 178,
-    "updated_at": "2026-08-21"
+    "updated_at": "2026-08-24"
   }
 };
