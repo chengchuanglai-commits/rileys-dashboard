@@ -221,6 +221,16 @@ def open_batch():
     # ①自愈:先审计存量仓的TRAIL保护(主batch全局撤单会扫掉GTC;每晚必查必补)
     # closing_timeout(超时单已挂待成交)期间实股仍在手:占槽+享受TRAIL自愈,直到对账确认清仓
     open_pos = [p for p in st["positions"] if p["status"] in ("open", "closing_timeout")]
+    # ①a 孤儿单清扫(2026-08-24 BANR裸空实炸:平仓后残留TRAIL未被OCA撤掉,数日后被触发→-7裸空
+    # 无人知晓躺了近两周,靠回补价恰等成本才零损失。本clientId=61与挂TRAIL同client,可撤自己的单):
+    # 凡挂单symbol不在在册持仓集合(含closing_timeout)且非指数核心 → 撤
+    known = {p["ticker"] for p in open_pos} | {"QQQ", "QQQM"}
+    for o in ib.reqAllOpenOrders():
+        if (o.contract.symbol not in known
+                and o.orderStatus.status in ("PreSubmitted", "Submitted")):
+            ib.cancelOrder(o.order)
+            print(f"[hdstr] 撤孤儿单: {o.contract.symbol} {o.order.action} {o.order.orderType}")
+    ib.sleep(2)
     live_trails = {o.contract.symbol for o in ib.reqAllOpenOrders() if o.order.orderType == "TRAIL"} if open_pos else set()
     healed = []
     for p in open_pos:
@@ -350,6 +360,12 @@ def close_batch():
             closed_now.append(f"{p['ticker']}({p['close_via']})"); continue
         # 超时平仓下单已移至开盘批(2026-08-11:04:00=美东刚收盘,此处下单必被Error 201拒;
         # 收盘批只做对账,到期仓由下一个开盘批在交易时段内平)
+    # 未知持仓警报(2026-08-24 BANR裸空实炸:孤儿单成交出的仓不在state里,对账循环只看在册→隐身12天):
+    # 真实持仓中凡非在册、非指数核心的 → 强警报,人工核查
+    known_now = {p["ticker"] for p in st["positions"] if p["status"] in ("open", "closing_timeout")} | {"QQQ", "QQQM"}
+    unknown = [(s, q) for s, q in real.items() if s not in known_now and q != 0]
+    if unknown:
+        notify(f"🚨 hdstr对账发现未知持仓 {unknown} ——疑孤儿单成交或人工操作,需核查!\n（hdstr真钱试运行·自动）")
     ib.sleep(3); ib.disconnect()
     save_state(st)
     if closed_now or timeout_closed:
