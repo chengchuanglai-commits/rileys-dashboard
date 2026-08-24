@@ -119,6 +119,74 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {},
       "position_usd": 212.59,
       "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SELF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-24",
+      "entry_price": 5.55,
+      "allocated_usd": 500,
+      "shares": 90.0901,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 4.72,
+      "stop_loss": 5.66,
+      "max_hold_date": "2026-08-26",
+      "daily_prices": {},
+      "position_usd": 228.76,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SCSC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-24",
+      "entry_price": 54.35,
+      "allocated_usd": 500,
+      "shares": 9.1996,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 62.5,
+      "stop_loss": 53.26,
+      "max_hold_date": "2026-08-26",
+      "daily_prices": {},
+      "position_usd": 228.76,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "VIRT",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-24",
+      "entry_price": 67.93,
+      "allocated_usd": 500,
+      "shares": 7.3605,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 57.74,
+      "stop_loss": 69.29,
+      "max_hold_date": "2026-08-26",
+      "daily_prices": {},
+      "position_usd": 228.76,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "UTMD",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-24",
+      "entry_price": 71.55,
+      "allocated_usd": 500,
+      "shares": 6.9881,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 60.82,
+      "stop_loss": 72.98,
+      "max_hold_date": "2026-08-26",
+      "daily_prices": {},
+      "position_usd": 228.76,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -3791,7 +3859,7 @@ window.PORTFOLIO_HDS = {
         "2026-08-21": {
           "open": 23.57,
           "high": 23.94,
-          "low": 23.16,
+          "low": 23.15,
           "close": 23.82,
           "pnl_pct": 0.13
         }
@@ -3829,7 +3897,7 @@ window.PORTFOLIO_HDS = {
         "2026-08-21": {
           "open": 22.72,
           "high": 23.15,
-          "low": 22.44,
+          "low": 22.45,
           "close": 22.72,
           "pnl_pct": 2.57
         }
@@ -3887,6 +3955,6 @@ window.PORTFOLIO_HDS = {
     "skipped_gap": 59,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 28,
-    "updated_at": "2026-08-21"
+    "updated_at": "2026-08-24"
   }
 };

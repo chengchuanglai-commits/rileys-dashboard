@@ -1,0 +1,175 @@
+{
+  "date": "2026-08-24",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "SELF",
+      "action": "SELL",
+      "current_price": 5.55,
+      "target_price": 6.11,
+      "stop_loss": 5.27
+    },
+    {
+      "ticker": "SCSC",
+      "action": "BUY",
+      "current_price": 54.35,
+      "target_price": 59.79,
+      "stop_loss": 51.63
+    },
+    {
+      "ticker": "VIRT",
+      "action": "SELL",
+      "current_price": 67.93,
+      "target_price": 74.72,
+      "stop_loss": 64.53
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 71.55,
+      "target_price": 78.7,
+      "stop_loss": 67.97
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "SELF",
+      "action": "SELL",
+      "current_price": 5.55,
+      "target_price": 6.11,
+      "stop_loss": 5.27
+    },
+    {
+      "ticker": "SCSC",
+      "action": "BUY",
+      "current_price": 54.35,
+      "target_price": 59.79,
+      "stop_loss": 51.63
+    },
+    {
+      "ticker": "VIRT",
+      "action": "SELL",
+      "current_price": 67.93,
+      "target_price": 74.72,
+      "stop_loss": 64.53
+    },
+    {
+      "ticker": "UTMD",
+      "action": "SELL",
+      "current_price": 71.55,
+      "target_price": 78.7,
+      "stop_loss": 67.97
+    },
+    {
+      "ticker": "OSIS",
+      "action": "HOLD",
+      "current_price": 206.73,
+      "target_price": 227.4,
+      "stop_loss": 196.39
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 22.72,
+      "target_price": 24.99,
+      "stop_loss": 21.58
+    },
+    {
+      "ticker": "ITIC",
+      "action": "HOLD",
+      "current_price": 289.26,
+      "target_price": 318.19,
+      "stop_loss": 274.8
+    },
+    {
+      "ticker": "XNCR",
+      "action": "HOLD",
+      "current_price": 27.8,
+      "target_price": 30.58,
+      "stop_loss": 26.41
+    },
+    {
+      "ticker": "TSBK",
+      "action": "BUY",
+      "current_price": 46.55,
+      "target_price": 51.2,
+      "stop_loss": 44.22
+    },
+    {
+      "ticker": "JBSS",
+      "action": "HOLD",
+      "current_price": 73.72,
+      "error": "No market data for 'JBSS': latest row is 2026-06-11, 74 days before the requested 2026-08-24 (stale) — refusing to use it"
+    },
+    {
+      "ticker": "VLGEA",
+      "action": "SELL",
+      "current_price": 44.1,
+      "target_price": 48.51,
+      "stop_loss": 41.89
+    },
+    {
+      "ticker": "CENT",
+      "action": "BUY",
+      "current_price": 44.4,
+      "target_price": 48.84,
+      "stop_loss": 42.18
+    },
+    {
+      "ticker": "RICK",
+      "action": "HOLD",
+      "current_price": 30.98,
+      "target_price": 34.08,
+      "stop_loss": 29.43
+    },
+    {
+      "ticker": "LYTS",
+      "action": "SELL",
+      "current_price": 20.34,
+      "target_price": 22.37,
+      "stop_loss": 19.32
+    },
+    {
+      "ticker": "MRCY",
+      "action": "SELL",
+      "current_price": 91.36,
+      "target_price": 100.5,
+      "stop_loss": 86.79
+    },
+    {
+      "ticker": "MVBF",
+      "action": "HOLD",
+      "current_price": 30.5,
+      "target_price": 33.55,
+      "stop_loss": 28.97
+    },
+    {
+      "ticker": "TCMD",
+      "action": "SELL",
+      "current_price": 23.82,
+      "target_price": 26.2,
+      "stop_loss": 22.63
+    },
+    {
+      "ticker": "IPGP",
+      "action": "HOLD",
+      "current_price": 73.26,
+      "target_price": 80.59,
+      "stop_loss": 69.6
+    },
+    {
+      "ticker": "HUBG",
+      "action": "SELL",
+      "current_price": 40.73,
+      "target_price": 44.8,
+      "stop_loss": 38.69
+    },
+    {
+      "ticker": "SPOK",
+      "action": "SELL",
+      "current_price": 10.31,
+      "target_price": 11.34,
+      "stop_loss": 9.79
+    }
+  ]
+}
