@@ -136,14 +136,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-25": {
           "open": 54.61,
-          "high": 54.68,
-          "low": 54.23,
-          "close": 54.68,
-          "pnl_pct": 0.61
+          "high": 55.57,
+          "low": 53.76,
+          "close": 54.33,
+          "pnl_pct": -0.04
         }
       },
       "position_usd": 228.76,
-      "unrealized_pnl_usd": 1.4
+      "unrealized_pnl_usd": -0.09
     },
     {
       "ticker": "VIRT",
@@ -162,13 +162,13 @@ window.PORTFOLIO_HDS = {
         "2026-08-25": {
           "open": 65.98,
           "high": 66.68,
-          "low": 65.71,
-          "close": 65.71,
-          "pnl_pct": 3.27
+          "low": 64.92,
+          "close": 64.98,
+          "pnl_pct": 4.34
         }
       },
       "position_usd": 228.76,
-      "unrealized_pnl_usd": 7.48
+      "unrealized_pnl_usd": 9.93
     },
     {
       "ticker": "UTMD",
@@ -3965,8 +3965,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 54,
     "win_rate": 51.4,
     "total_realized_pnl_usd": 287.58,
-    "open_unrealized_pnl_usd": 22.38,
-    "portfolio_value": 2309.96,
+    "open_unrealized_pnl_usd": 23.34,
+    "portfolio_value": 2310.92,
     "total_commission_usd": 210.0,
     "skipped_gap": 60,
     "skipped_zero_shares": 0,
