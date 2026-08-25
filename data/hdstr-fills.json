@@ -1,0 +1,63 @@
+{
+ "fills": [
+  {
+   "exec_id": "entry-HFWA-2026-07-27",
+   "time": "2026-07-27 21:31",
+   "sym": "HFWA",
+   "side": "BOT",
+   "shares": 16,
+   "price": 30.07,
+   "src": "ibkr_avgCost",
+   "slip_vs_ref_pct": 0.468
+  },
+  {
+   "exec_id": "entry-BANR-2026-07-27",
+   "time": "2026-07-27 21:31",
+   "sym": "BANR",
+   "side": "BOT",
+   "shares": 7,
+   "price": 70.51,
+   "src": "ibkr_avgCost",
+   "slip_vs_ref_pct": -0.367
+  },
+  {
+   "exec_id": "exit-HFWA-2026-08-08",
+   "time": "2026-08-08 (夜间TRAIL)",
+   "sym": "HFWA",
+   "side": "SLD",
+   "shares": 16,
+   "price": 29.31,
+   "src": "bars_estimate_未核实",
+   "note": "trail出场,成交记录被会话重启抹掉,峰值30.53×0.96推算"
+  },
+  {
+   "exec_id": "exit-BANR-2026-08-11",
+   "time": "2026-08-11 22:10",
+   "sym": "BANR",
+   "side": "SLD",
+   "shares": 7,
+   "price": 71.97,
+   "src": "reqExecutions_已核实"
+  },
+  {
+   "exec_id": "entry-VIRT-2026-08-24",
+   "time": "2026-08-24 22:05",
+   "sym": "VIRT",
+   "side": "SLD",
+   "shares": 3,
+   "price": 66.91,
+   "src": "reqExecutions_已核实",
+   "slip_vs_ref_pct": 1.502
+  },
+  {
+   "exec_id": "cover-BANR-orphan-2026-08-24",
+   "time": "2026-08-24 23:47",
+   "sym": "BANR",
+   "side": "BOT",
+   "shares": 7,
+   "price": 71.21,
+   "src": "order_status_已核实",
+   "note": "孤儿单裸空回补,事故处置"
+  }
+ ]
+}

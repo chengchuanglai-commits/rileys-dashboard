@@ -262,6 +262,14 @@ def open_batch():
             print(f"[hdstr] {p['ticker']}超时平仓被拒:{why}")
         else:
             p["status"] = "closing_timeout"; timeout_placed.append(p["ticker"])
+            fp = tr_.orderStatus.avgFillPrice
+            if fp and fp == fp and fp > 0:   # 出场成交现场入账(会话级成交查询靠不住)
+                led = load(FILLS, {"fills": []})
+                led["fills"].append({"exec_id": f"timeout-{p['ticker']}-{today}", "time": time.strftime("%F %T"),
+                                     "sym": p["ticker"], "side": "SLD" if side == "SELL" else "BOT",
+                                     "shares": p["shares"], "price": fp, "src": "order_status@timeout"})
+                json.dump(led, open(FILLS, "w"), ensure_ascii=False, indent=1)
+                print(f"[hdstr fills] 超时出场现场入账: {p['ticker']} @ {fp}")
     if timeout_placed:
         notify(f"⏰ hdstr超时平仓单已挂(开盘时段): {timeout_placed}\n（hdstr真钱试运行·自动）")
 
@@ -328,6 +336,18 @@ def open_batch():
         else:
             st["positions"].append(pos)
             placed.append(f"{pos['action']} {pos['ticker']}×{pos['shares']}@~{pos['ref_price']}")
+            # 成交价当场落台账(2026-08-25:reqExecutions是会话级,网关每日重启抹掉当日成交
+            # →收盘批永远捞0笔。下单现场的avgFillPrice是唯一可靠时点)
+            fp = et.orderStatus.avgFillPrice
+            if fp and fp == fp and fp > 0:
+                led = load(FILLS, {"fills": []})
+                sgn = 1 if pos["action"] == "BUY" else -1
+                led["fills"].append({"exec_id": f"entry-{pos['ticker']}-{today}", "time": time.strftime("%F %T"),
+                                     "sym": pos["ticker"], "side": "BOT" if pos["action"] == "BUY" else "SLD",
+                                     "shares": pos["shares"], "price": fp, "src": "order_status@place",
+                                     "slip_vs_ref_pct": round((fp - pos["ref_price"]) / pos["ref_price"] * 100 * sgn, 3)})
+                json.dump(led, open(FILLS, "w"), ensure_ascii=False, indent=1)
+                print(f"[hdstr fills] 入场成交现场入账: {pos['ticker']} @ {fp}")
     ib.disconnect()
     save_state(st)
     mode = "💰真钱" if ARM else "🧪paper体检"
