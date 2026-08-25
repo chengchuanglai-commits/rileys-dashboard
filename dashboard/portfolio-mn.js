@@ -151,6 +151,74 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.88,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "VIRT",
+      "name": "Virtu Financial",
+      "action": "BUY",
+      "signal_date": "2026-08-25",
+      "entry_price": 65.8,
+      "allocated_usd": 500,
+      "shares": 7.5988,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 75.67,
+      "stop_loss": 64.48,
+      "max_hold_date": "2026-08-27",
+      "daily_prices": {},
+      "position_usd": 198.78,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "XNCR",
+      "name": "Xencor",
+      "action": "BUY",
+      "signal_date": "2026-08-25",
+      "entry_price": 30.07,
+      "allocated_usd": 500,
+      "shares": 16.6279,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 34.58,
+      "stop_loss": 29.47,
+      "max_hold_date": "2026-08-27",
+      "daily_prices": {},
+      "position_usd": 198.78,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MRCY",
+      "name": "Mercury Systems",
+      "action": "BUY",
+      "signal_date": "2026-08-25",
+      "entry_price": 88.9,
+      "allocated_usd": 500,
+      "shares": 5.6243,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 102.23,
+      "stop_loss": 87.12,
+      "max_hold_date": "2026-08-27",
+      "daily_prices": {},
+      "position_usd": 198.78,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "TCMD",
+      "name": "Tactile Systems Technology",
+      "action": "BUY",
+      "signal_date": "2026-08-25",
+      "entry_price": 23.16,
+      "allocated_usd": 500,
+      "shares": 21.5889,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 26.63,
+      "stop_loss": 22.7,
+      "max_hold_date": "2026-08-27",
+      "daily_prices": {},
+      "position_usd": 181.01,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -5077,7 +5145,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 292.0,
     "skipped_gap": 57,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 178,
-    "updated_at": "2026-08-24"
+    "skipped_no_cash": 179,
+    "updated_at": "2026-08-25"
   }
 };

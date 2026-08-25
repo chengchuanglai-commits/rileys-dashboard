@@ -121,23 +121,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "SELF",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-24",
-      "entry_price": 5.55,
-      "allocated_usd": 500,
-      "shares": 90.0901,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 4.72,
-      "stop_loss": 5.66,
-      "max_hold_date": "2026-08-26",
-      "daily_prices": {},
-      "position_usd": 228.76,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "SCSC",
       "name": "",
       "action": "BUY",
@@ -150,9 +133,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 62.5,
       "stop_loss": 53.26,
       "max_hold_date": "2026-08-26",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-08-25": {
+          "open": 54.61,
+          "high": 54.68,
+          "low": 54.23,
+          "close": 54.68,
+          "pnl_pct": 0.61
+        }
+      },
       "position_usd": 228.76,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 1.4
     },
     {
       "ticker": "VIRT",
@@ -167,9 +158,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 57.74,
       "stop_loss": 69.29,
       "max_hold_date": "2026-08-26",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-08-25": {
+          "open": 65.98,
+          "high": 66.68,
+          "low": 65.71,
+          "close": 65.71,
+          "pnl_pct": 3.27
+        }
+      },
       "position_usd": 228.76,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 7.48
     },
     {
       "ticker": "UTMD",
@@ -184,6 +183,23 @@ window.PORTFOLIO_HDS = {
       "take_profit": 60.82,
       "stop_loss": 72.98,
       "max_hold_date": "2026-08-26",
+      "daily_prices": {},
+      "position_usd": 228.76,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "OSIS",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-25",
+      "entry_price": 204.05,
+      "allocated_usd": 500,
+      "shares": 2.4504,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 173.44,
+      "stop_loss": 208.13,
+      "max_hold_date": "2026-08-27",
       "daily_prices": {},
       "position_usd": 228.76,
       "unrealized_pnl_usd": 0.0
@@ -3949,12 +3965,12 @@ window.PORTFOLIO_HDS = {
     "win_trades": 54,
     "win_rate": 51.4,
     "total_realized_pnl_usd": 287.58,
-    "open_unrealized_pnl_usd": 13.51,
-    "portfolio_value": 2301.09,
+    "open_unrealized_pnl_usd": 22.38,
+    "portfolio_value": 2309.96,
     "total_commission_usd": 210.0,
-    "skipped_gap": 59,
+    "skipped_gap": 60,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 32,
+    "skipped_no_cash": 31,
     "updated_at": "2026-08-25"
   }
 };
