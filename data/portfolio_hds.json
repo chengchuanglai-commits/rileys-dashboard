@@ -137,12 +137,12 @@
           "open": 54.61,
           "high": 55.57,
           "low": 53.76,
-          "close": 55.13,
-          "pnl_pct": 1.44
+          "close": 55.49,
+          "pnl_pct": 2.1
         }
       },
       "position_usd": 228.76,
-      "unrealized_pnl_usd": 3.29
+      "unrealized_pnl_usd": 4.8
     },
     {
       "ticker": "VIRT",
@@ -162,12 +162,12 @@
           "open": 65.98,
           "high": 66.68,
           "low": 63.81,
-          "close": 64.11,
-          "pnl_pct": 5.62
+          "close": 65.65,
+          "pnl_pct": 3.36
         }
       },
       "position_usd": 228.76,
-      "unrealized_pnl_usd": 12.86
+      "unrealized_pnl_usd": 7.69
     },
     {
       "ticker": "UTMD",
@@ -186,13 +186,13 @@
         "2026-08-25": {
           "open": 71.9,
           "high": 71.9,
-          "low": 70.67,
-          "close": 70.67,
-          "pnl_pct": 1.23
+          "low": 70.54,
+          "close": 70.56,
+          "pnl_pct": 1.38
         }
       },
       "position_usd": 228.76,
-      "unrealized_pnl_usd": 2.81
+      "unrealized_pnl_usd": 3.16
     },
     {
       "ticker": "OSIS",
@@ -3972,8 +3972,8 @@
     "win_trades": 54,
     "win_rate": 51.4,
     "total_realized_pnl_usd": 287.58,
-    "open_unrealized_pnl_usd": 32.47,
-    "portfolio_value": 2320.05,
+    "open_unrealized_pnl_usd": 29.15,
+    "portfolio_value": 2316.73,
     "total_commission_usd": 210.0,
     "skipped_gap": 60,
     "skipped_zero_shares": 0,
