@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 64.92,
           "high": 66.19,
           "low": 64.75,
-          "close": 65.23,
-          "pnl_pct": 0.05
+          "close": 65.74,
+          "pnl_pct": 0.83
         }
       },
       "position_usd": 198.78,
-      "unrealized_pnl_usd": 0.1
+      "unrealized_pnl_usd": 1.65
     },
     {
       "ticker": "TSBK",
@@ -194,26 +194,26 @@ window.PORTFOLIO_MN = {
         "2026-08-26": {
           "open": 46.29,
           "high": 46.29,
-          "low": 46.0,
-          "close": 46.02,
-          "pnl_pct": -0.04
+          "low": 45.81,
+          "close": 46.17,
+          "pnl_pct": 0.28
         }
       },
       "position_usd": 181.01,
-      "unrealized_pnl_usd": -0.07
+      "unrealized_pnl_usd": 0.51
     },
     {
       "ticker": "VIRT",
       "name": "Virtu Financial",
       "action": "BUY",
       "signal_date": "2026-08-26",
-      "entry_price": 65.23,
+      "entry_price": 65.74,
       "allocated_usd": 500,
-      "shares": 7.6652,
+      "shares": 7.6057,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 75.01,
-      "stop_loss": 63.93,
+      "take_profit": 75.6,
+      "stop_loss": 64.43,
       "max_hold_date": "2026-08-28",
       "daily_prices": {},
       "position_usd": 197.98,
@@ -224,13 +224,13 @@ window.PORTFOLIO_MN = {
       "name": "EZCORP",
       "action": "BUY",
       "signal_date": "2026-08-26",
-      "entry_price": 34.21,
+      "entry_price": 33.9,
       "allocated_usd": 500,
-      "shares": 14.6156,
+      "shares": 14.7493,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 39.34,
-      "stop_loss": 33.53,
+      "take_profit": 38.98,
+      "stop_loss": 33.22,
       "max_hold_date": "2026-08-28",
       "daily_prices": {},
       "position_usd": 191.66,
@@ -5167,7 +5167,7 @@ window.PORTFOLIO_MN = {
           "open": 23.58,
           "high": 23.58,
           "low": 23.1,
-          "close": 23.35,
+          "close": 23.51,
           "pnl_pct": -1.99
         }
       },
@@ -5198,7 +5198,7 @@ window.PORTFOLIO_MN = {
           "open": 56.09,
           "high": 56.6,
           "low": 55.0,
-          "close": 56.05,
+          "close": 56.17,
           "pnl_pct": -1.99
         }
       },
@@ -5218,8 +5218,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 37,
     "win_rate": 25.0,
     "total_realized_pnl_usd": -20.16,
-    "open_unrealized_pnl_usd": 24.66,
-    "portfolio_value": 2004.5,
+    "open_unrealized_pnl_usd": 26.79,
+    "portfolio_value": 2006.63,
     "total_commission_usd": 296.0,
     "skipped_gap": 58,
     "skipped_zero_shares": 0,
