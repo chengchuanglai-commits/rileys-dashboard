@@ -63,6 +63,8 @@ def main():
     with open(screened, encoding="utf-8") as f:
         sd = json.load(f)
     cands = sd.get("candidates", [])
+    # 与deepseek同步取score前12(2026-08-26成本方案B),保持严格配对同菜单
+    cands = sorted(cands, key=lambda c: c.get("score", 0), reverse=True)[:12]
     price_map = {c["ticker"]: c.get("price") for c in cands if c.get("ticker")}
     tickers = list(price_map.keys())
     if not tickers:

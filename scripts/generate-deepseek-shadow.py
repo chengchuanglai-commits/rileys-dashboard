@@ -77,12 +77,15 @@ def main():
         print(f"[deepseek] 读不到选股器候选({screened}): {e}，跳过")
         return
     cands = sd.get("candidates", [])
+    # 成本方案B(2026-08-26 Riley批):按选股器score取前12只(真钱每晚最多取4条信号,
+    # 分析20只=付费筛掉16只;砍到12真钱几乎无损,成本-40%;代价=模拟腿攒证据变慢,已知情)
+    cands = sorted(cands, key=lambda c: c.get("score", 0), reverse=True)[:12]
     price_map = {c["ticker"]: c.get("price") for c in cands if c.get("ticker")}
     tickers = list(price_map.keys())
     if not tickers:
         print(f"[deepseek] {today} 选股器无候选，跳过")
         return
-    print(f"[deepseek] 广池影子分析 {len(tickers)} 只候选: {tickers}")
+    print(f"[deepseek] 广池影子分析 {len(tickers)} 只候选(score前12): {tickers}")
 
     from concurrent.futures import ThreadPoolExecutor, as_completed
 

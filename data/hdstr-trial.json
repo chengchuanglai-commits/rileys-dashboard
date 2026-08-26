@@ -41,6 +41,52 @@
    "status": "closed",
    "close_date": "2026-07-29",
    "close_via": "trail/manual"
+  },
+  {
+   "ticker": "VIRT",
+   "action": "SELL",
+   "signal_date": "2026-08-24",
+   "entry_date": "2026-08-24",
+   "shares": 3,
+   "signal_price": 67.93,
+   "ref_price": 67.93,
+   "max_hold_date": "2026-09-07",
+   "status": "open"
+  },
+  {
+   "ticker": "OSIS",
+   "action": "SELL",
+   "signal_date": "2026-08-25",
+   "entry_date": "2026-08-25",
+   "shares": 1,
+   "signal_price": 204.05,
+   "ref_price": 203.28,
+   "max_hold_date": "2026-09-08",
+   "status": "open"
+  },
+  {
+   "ticker": "SCSC",
+   "action": "SELL",
+   "signal_date": "2026-08-25",
+   "entry_date": "2026-08-25",
+   "shares": 3,
+   "signal_price": 54.13,
+   "ref_price": 54.26,
+   "max_hold_date": "2026-09-08",
+   "status": "closed",
+   "close_via": "trail/manual",
+   "close_date": "2026-08-26"
+  },
+  {
+   "ticker": "EZPW",
+   "action": "BUY",
+   "signal_date": "2026-08-25",
+   "entry_date": "2026-08-25",
+   "shares": 6,
+   "signal_price": 35.05,
+   "ref_price": 34.6,
+   "max_hold_date": "2026-09-08",
+   "status": "open"
   }
  ],
  "log": []

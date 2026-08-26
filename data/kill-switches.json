@@ -1,7 +1,6 @@
 {
  "hds_new_entries": {
-  "halted": true,
-  "reason": "tripwire破线 胜率30%/均笔-0.62%",
-  "since": "2026-08-03 22:41"
+  "halted": false,
+  "recovered": "2026-08-22 09:13"
  }
 }

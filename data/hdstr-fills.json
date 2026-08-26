@@ -58,6 +58,72 @@
    "price": 71.21,
    "src": "order_status_已核实",
    "note": "孤儿单裸空回补,事故处置"
+  },
+  {
+   "exec_id": "entry-OSIS-2026-08-25",
+   "time": "2026-08-25 22:23:39",
+   "sym": "OSIS",
+   "side": "SLD",
+   "shares": 1,
+   "price": 205.23,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": -0.959
+  },
+  {
+   "exec_id": "entry-SCSC-2026-08-25",
+   "time": "2026-08-25 22:23:39",
+   "sym": "SCSC",
+   "side": "SLD",
+   "shares": 3,
+   "price": 54.44,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": -0.332
+  },
+  {
+   "exec_id": "entry-EZPW-2026-08-25",
+   "time": "2026-08-25 22:23:39",
+   "sym": "EZPW",
+   "side": "BOT",
+   "shares": 6,
+   "price": 34.785,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": 0.535
+  },
+  {
+   "exec_id": "00030e5e.6e73dd44.01.01",
+   "time": "2026-08-25 14:23:21+00:00",
+   "sym": "OSIS",
+   "side": "SLD",
+   "shares": 1.0,
+   "price": 205.23,
+   "slip_vs_ref_pct": -0.959
+  },
+  {
+   "exec_id": "00030e5e.6e73ddb6.01.01",
+   "time": "2026-08-25 14:23:26+00:00",
+   "sym": "SCSC",
+   "side": "SLD",
+   "shares": 3.0,
+   "price": 54.44,
+   "slip_vs_ref_pct": -0.332
+  },
+  {
+   "exec_id": "0000d85a.6a8d8bab.01.01",
+   "time": "2026-08-25 14:23:35+00:00",
+   "sym": "EZPW",
+   "side": "BOT",
+   "shares": 6.0,
+   "price": 34.785,
+   "slip_vs_ref_pct": 0.535
+  },
+  {
+   "exec_id": "00030e5e.6e7663f4.01.01",
+   "time": "2026-08-25 19:57:01+00:00",
+   "sym": "SCSC",
+   "side": "BOT",
+   "shares": 3.0,
+   "price": 56.0995,
+   "slip_vs_ref_pct": 3.39
   }
  ]
 }

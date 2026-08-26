@@ -246,5 +246,28 @@
     "why": "ADV$0.6M<5M"
    }
   ]
+ },
+ "2026-08-21": {
+  "total": 0,
+  "flagged": []
+ },
+ "2026-08-24": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "SELF",
+    "action": "SELL",
+    "why": "ADV$0.2M<5M"
+   },
+   {
+    "ticker": "UTMD",
+    "action": "SELL",
+    "why": "ADV$2.4M<5M"
+   }
+  ]
+ },
+ "2026-08-25": {
+  "total": 4,
+  "flagged": []
  }
 }
