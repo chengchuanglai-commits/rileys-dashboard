@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 64.92,
           "high": 66.19,
           "low": 64.75,
-          "close": 65.48,
-          "pnl_pct": 0.43
+          "close": 65.05,
+          "pnl_pct": -0.23
         }
       },
       "position_usd": 198.78,
-      "unrealized_pnl_usd": 0.85
+      "unrealized_pnl_usd": -0.46
     },
     {
       "ticker": "TSBK",
@@ -220,25 +220,25 @@ window.PORTFOLIO_MN = {
           "open": 87.74,
           "high": 89.86,
           "low": 87.0,
-          "close": 88.81,
-          "pnl_pct": 1.22
+          "close": 88.5,
+          "pnl_pct": 0.87
         }
       },
       "position_usd": 181.01,
-      "unrealized_pnl_usd": 2.21
+      "unrealized_pnl_usd": 1.57
     },
     {
       "ticker": "VIRT",
       "name": "Virtu Financial",
       "action": "BUY",
       "signal_date": "2026-08-26",
-      "entry_price": 65.48,
+      "entry_price": 65.05,
       "allocated_usd": 500,
-      "shares": 7.6359,
+      "shares": 7.6864,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 75.3,
-      "stop_loss": 64.17,
+      "take_profit": 74.81,
+      "stop_loss": 63.75,
       "max_hold_date": "2026-08-28",
       "daily_prices": {},
       "position_usd": 194.82,
@@ -5175,7 +5175,7 @@ window.PORTFOLIO_MN = {
           "open": 23.58,
           "high": 23.58,
           "low": 23.1,
-          "close": 23.33,
+          "close": 23.31,
           "pnl_pct": -1.99
         }
       },
@@ -5195,8 +5195,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 37,
     "win_rate": 25.2,
     "total_realized_pnl_usd": -16.2,
-    "open_unrealized_pnl_usd": 28.77,
-    "portfolio_value": 2012.57,
+    "open_unrealized_pnl_usd": 26.83,
+    "portfolio_value": 2010.63,
     "total_commission_usd": 294.0,
     "skipped_gap": 58,
     "skipped_zero_shares": 0,

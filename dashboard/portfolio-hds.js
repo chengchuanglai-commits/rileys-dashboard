@@ -121,31 +121,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "UTMD",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-24",
-      "entry_price": 71.55,
-      "allocated_usd": 500,
-      "shares": 6.9881,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 60.82,
-      "stop_loss": 72.98,
-      "max_hold_date": "2026-08-26",
-      "daily_prices": {
-        "2026-08-25": {
-          "open": 71.9,
-          "high": 71.9,
-          "low": 70.35,
-          "close": 70.96,
-          "pnl_pct": 0.82
-        }
-      },
-      "position_usd": 228.76,
-      "unrealized_pnl_usd": 1.88
-    },
-    {
       "ticker": "EZPW",
       "name": "",
       "action": "BUY",
@@ -159,7 +134,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 34.53,
       "max_hold_date": "2026-08-28",
       "daily_prices": {},
-      "position_usd": 229.7,
+      "position_usd": 229.89,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -176,7 +151,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 55.07,
       "max_hold_date": "2026-08-28",
       "daily_prices": {},
-      "position_usd": 229.7,
+      "position_usd": 229.89,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -193,7 +168,24 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 66.5,
       "max_hold_date": "2026-08-28",
       "daily_prices": {},
-      "position_usd": 229.7,
+      "position_usd": 229.89,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SELF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-26",
+      "entry_price": 5.65,
+      "allocated_usd": 500,
+      "shares": 88.4956,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 4.8,
+      "stop_loss": 5.76,
+      "max_hold_date": "2026-08-28",
+      "daily_prices": {},
+      "position_usd": 229.89,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -3975,17 +3967,17 @@ window.PORTFOLIO_HDS = {
           "open": 56.09,
           "high": 56.6,
           "low": 55.17,
-          "close": 55.65,
-          "pnl_pct": 2.39
+          "close": 55.37,
+          "pnl_pct": 1.88
         }
       },
       "close_date": "2026-08-26",
-      "close_price": 55.65,
-      "final_pnl_pct": 2.39,
+      "close_price": 55.37,
+      "final_pnl_pct": 1.88,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.47,
+      "realized_pnl_usd": 4.3,
       "position_usd": 228.76
     },
     {
@@ -4013,17 +4005,55 @@ window.PORTFOLIO_HDS = {
           "open": 64.92,
           "high": 66.19,
           "low": 64.75,
-          "close": 65.4,
-          "pnl_pct": 3.72
+          "close": 65.05,
+          "pnl_pct": 4.24
         }
       },
       "close_date": "2026-08-26",
-      "close_price": 65.4,
-      "final_pnl_pct": 3.72,
+      "close_price": 65.05,
+      "final_pnl_pct": 4.24,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.51,
+      "realized_pnl_usd": 9.7,
+      "position_usd": 228.76
+    },
+    {
+      "ticker": "UTMD",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-24",
+      "entry_price": 71.55,
+      "allocated_usd": 500,
+      "shares": 6.9881,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 60.82,
+      "stop_loss": 72.98,
+      "max_hold_date": "2026-08-26",
+      "daily_prices": {
+        "2026-08-25": {
+          "open": 71.9,
+          "high": 71.9,
+          "low": 70.35,
+          "close": 70.96,
+          "pnl_pct": 0.82
+        },
+        "2026-08-26": {
+          "open": 70.95,
+          "high": 70.95,
+          "low": 70.95,
+          "close": 70.95,
+          "pnl_pct": 0.84
+        }
+      },
+      "close_date": "2026-08-26",
+      "close_price": 70.95,
+      "final_pnl_pct": 0.84,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 1.92,
       "position_usd": 228.76
     },
     {
@@ -4042,9 +4072,9 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-08-26": {
           "open": 203.92,
-          "high": 208.99,
+          "high": 209.88,
           "low": 203.67,
-          "close": 208.81,
+          "close": 207.76,
           "pnl_pct": -2.0
         }
       },
@@ -4060,16 +4090,16 @@ window.PORTFOLIO_HDS = {
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 108,
-    "win_trades": 56,
-    "win_rate": 51.9,
-    "total_realized_pnl_usd": 296.98,
-    "open_unrealized_pnl_usd": 15.38,
-    "portfolio_value": 2312.36,
-    "total_commission_usd": 216.0,
+    "total_trades": 109,
+    "win_trades": 57,
+    "win_rate": 52.3,
+    "total_realized_pnl_usd": 298.93,
+    "open_unrealized_pnl_usd": 13.51,
+    "portfolio_value": 2312.44,
+    "total_commission_usd": 218.0,
     "skipped_gap": 61,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 31,
+    "skipped_no_cash": 30,
     "updated_at": "2026-08-26"
   }
 };
