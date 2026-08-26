@@ -162,7 +162,7 @@ window.PORTFOLIO_HDS = {
         "2026-08-25": {
           "open": 65.98,
           "high": 66.68,
-          "low": 63.81,
+          "low": 63.8,
           "close": 65.2,
           "pnl_pct": 4.02
         }
@@ -3978,7 +3978,7 @@ window.PORTFOLIO_HDS = {
     "total_commission_usd": 210.0,
     "skipped_gap": 60,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 31,
-    "updated_at": "2026-08-25"
+    "skipped_no_cash": 35,
+    "updated_at": "2026-08-26"
   }
 };
