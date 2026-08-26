@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 64.92,
           "high": 66.19,
           "low": 64.75,
-          "close": 65.05,
-          "pnl_pct": -0.23
+          "close": 65.21,
+          "pnl_pct": 0.02
         }
       },
       "position_usd": 198.78,
-      "unrealized_pnl_usd": -0.46
+      "unrealized_pnl_usd": 0.04
     },
     {
       "ticker": "TSBK",
@@ -199,49 +199,41 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 0.54
         }
       },
-      "position_usd": 198.78,
-      "unrealized_pnl_usd": 1.07
-    },
-    {
-      "ticker": "MRCY",
-      "name": "Mercury Systems",
-      "action": "BUY",
-      "signal_date": "2026-08-25",
-      "entry_price": 87.74,
-      "allocated_usd": 500,
-      "shares": 5.6987,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 100.9,
-      "stop_loss": 85.99,
-      "max_hold_date": "2026-08-27",
-      "daily_prices": {
-        "2026-08-26": {
-          "open": 87.74,
-          "high": 89.86,
-          "low": 87.0,
-          "close": 88.5,
-          "pnl_pct": 0.87
-        }
-      },
       "position_usd": 181.01,
-      "unrealized_pnl_usd": 1.57
+      "unrealized_pnl_usd": 0.98
     },
     {
       "ticker": "VIRT",
       "name": "Virtu Financial",
       "action": "BUY",
       "signal_date": "2026-08-26",
-      "entry_price": 65.05,
+      "entry_price": 65.21,
       "allocated_usd": 500,
-      "shares": 7.6864,
+      "shares": 7.6675,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 74.81,
-      "stop_loss": 63.75,
+      "take_profit": 74.99,
+      "stop_loss": 63.91,
       "max_hold_date": "2026-08-28",
       "daily_prices": {},
-      "position_usd": 194.82,
+      "position_usd": 197.98,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "EZPW",
+      "name": "EZCORP",
+      "action": "BUY",
+      "signal_date": "2026-08-26",
+      "entry_price": 34.44,
+      "allocated_usd": 500,
+      "shares": 14.518,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 39.61,
+      "stop_loss": 33.75,
+      "max_hold_date": "2026-08-28",
+      "daily_prices": {},
+      "position_usd": 191.66,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -5175,7 +5167,7 @@ window.PORTFOLIO_MN = {
           "open": 23.58,
           "high": 23.58,
           "low": 23.1,
-          "close": 23.31,
+          "close": 23.25,
           "pnl_pct": -1.99
         }
       },
@@ -5187,20 +5179,51 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.96,
       "position_usd": 198.78
+    },
+    {
+      "ticker": "SCSC",
+      "name": "Scansource",
+      "action": "BUY",
+      "signal_date": "2026-08-25",
+      "entry_price": 56.19,
+      "allocated_usd": 500,
+      "shares": 8.8984,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 64.62,
+      "stop_loss": 55.07,
+      "max_hold_date": "2026-08-27",
+      "daily_prices": {
+        "2026-08-26": {
+          "open": 56.09,
+          "high": 56.6,
+          "low": 55.0,
+          "close": 55.28,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-08-26",
+      "close_price": 55.07,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.96,
+      "position_usd": 198.78
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 147,
+    "total_trades": 148,
     "win_trades": 37,
-    "win_rate": 25.2,
-    "total_realized_pnl_usd": -16.2,
-    "open_unrealized_pnl_usd": 26.83,
-    "portfolio_value": 2010.63,
-    "total_commission_usd": 294.0,
+    "win_rate": 25.0,
+    "total_realized_pnl_usd": -20.16,
+    "open_unrealized_pnl_usd": 25.65,
+    "portfolio_value": 2005.49,
+    "total_commission_usd": 296.0,
     "skipped_gap": 58,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 188,
+    "skipped_no_cash": 187,
     "updated_at": "2026-08-26"
   }
 };
