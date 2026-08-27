@@ -153,87 +153,71 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "VIRT",
-      "name": "Virtu Financial",
+      "ticker": "EZPW",
+      "name": "第一现金服务",
       "action": "BUY",
-      "signal_date": "2026-08-25",
-      "entry_price": 65.2,
+      "signal_date": "2026-08-27",
+      "entry_price": 34.41,
       "allocated_usd": 500,
-      "shares": 7.6687,
+      "shares": 14.5307,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 74.98,
-      "stop_loss": 63.9,
-      "max_hold_date": "2026-08-27",
-      "daily_prices": {
-        "2026-08-26": {
-          "open": 64.92,
-          "high": 66.19,
-          "low": 64.75,
-          "close": 65.74,
-          "pnl_pct": 0.83
-        }
-      },
-      "position_usd": 198.78,
-      "unrealized_pnl_usd": 1.65
-    },
-    {
-      "ticker": "TSBK",
-      "name": "Timberland Bancorp",
-      "action": "BUY",
-      "signal_date": "2026-08-25",
-      "entry_price": 46.04,
-      "allocated_usd": 500,
-      "shares": 10.8601,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 52.95,
-      "stop_loss": 45.12,
-      "max_hold_date": "2026-08-27",
-      "daily_prices": {
-        "2026-08-26": {
-          "open": 46.29,
-          "high": 46.29,
-          "low": 45.81,
-          "close": 46.17,
-          "pnl_pct": 0.28
-        }
-      },
-      "position_usd": 181.01,
-      "unrealized_pnl_usd": 0.51
-    },
-    {
-      "ticker": "VIRT",
-      "name": "Virtu Financial",
-      "action": "BUY",
-      "signal_date": "2026-08-26",
-      "entry_price": 65.74,
-      "allocated_usd": 500,
-      "shares": 7.6057,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 75.6,
-      "stop_loss": 64.43,
-      "max_hold_date": "2026-08-28",
+      "take_profit": 39.57,
+      "stop_loss": 33.72,
+      "max_hold_date": "2026-08-31",
       "daily_prices": {},
-      "position_usd": 197.98,
+      "position_usd": 197.84,
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "EZPW",
-      "name": "EZCORP",
+      "ticker": "XNCR",
+      "name": "Xencor",
       "action": "BUY",
-      "signal_date": "2026-08-26",
-      "entry_price": 33.9,
+      "signal_date": "2026-08-27",
+      "entry_price": 28.88,
       "allocated_usd": 500,
-      "shares": 14.7493,
+      "shares": 17.313,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 38.98,
-      "stop_loss": 33.22,
-      "max_hold_date": "2026-08-28",
+      "take_profit": 33.21,
+      "stop_loss": 28.3,
+      "max_hold_date": "2026-08-31",
       "daily_prices": {},
-      "position_usd": 191.66,
+      "position_usd": 197.84,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "TWST",
+      "name": " Twist Bioscience",
+      "action": "BUY",
+      "signal_date": "2026-08-27",
+      "entry_price": 153.1,
+      "allocated_usd": 500,
+      "shares": 3.2658,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 176.06,
+      "stop_loss": 150.04,
+      "max_hold_date": "2026-08-31",
+      "daily_prices": {},
+      "position_usd": 197.84,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "TISI",
+      "name": "Team",
+      "action": "BUY",
+      "signal_date": "2026-08-27",
+      "entry_price": 23.94,
+      "allocated_usd": 500,
+      "shares": 20.8855,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 27.53,
+      "stop_loss": 23.46,
+      "max_hold_date": "2026-08-31",
+      "daily_prices": {},
+      "position_usd": 174.48,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -5165,7 +5149,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-26": {
           "open": 23.58,
-          "high": 23.58,
+          "high": 23.6,
           "low": 23.1,
           "close": 23.51,
           "pnl_pct": -1.99
@@ -5210,20 +5194,158 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.96,
       "position_usd": 198.78
+    },
+    {
+      "ticker": "VIRT",
+      "name": "Virtu Financial",
+      "action": "BUY",
+      "signal_date": "2026-08-25",
+      "entry_price": 65.2,
+      "allocated_usd": 500,
+      "shares": 7.6687,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 74.98,
+      "stop_loss": 63.9,
+      "max_hold_date": "2026-08-27",
+      "daily_prices": {
+        "2026-08-26": {
+          "open": 64.92,
+          "high": 66.19,
+          "low": 64.75,
+          "close": 65.74,
+          "pnl_pct": 0.83
+        },
+        "2026-08-27": {
+          "open": 65.42,
+          "high": 67.06,
+          "low": 65.4,
+          "close": 67.04,
+          "pnl_pct": 2.82
+        }
+      },
+      "close_date": "2026-08-27",
+      "close_price": 67.04,
+      "final_pnl_pct": 2.82,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 5.61,
+      "position_usd": 198.78
+    },
+    {
+      "ticker": "TSBK",
+      "name": "Timberland Bancorp",
+      "action": "BUY",
+      "signal_date": "2026-08-25",
+      "entry_price": 46.04,
+      "allocated_usd": 500,
+      "shares": 10.8601,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 52.95,
+      "stop_loss": 45.12,
+      "max_hold_date": "2026-08-27",
+      "daily_prices": {
+        "2026-08-26": {
+          "open": 46.29,
+          "high": 46.29,
+          "low": 45.7,
+          "close": 46.17,
+          "pnl_pct": 0.28
+        },
+        "2026-08-27": {
+          "open": 46.14,
+          "high": 46.49,
+          "low": 45.72,
+          "close": 46.24,
+          "pnl_pct": 0.43
+        }
+      },
+      "close_date": "2026-08-27",
+      "close_price": 46.24,
+      "final_pnl_pct": 0.43,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 0.78,
+      "position_usd": 181.01
+    },
+    {
+      "ticker": "XNCR",
+      "name": "Xencor",
+      "action": "BUY",
+      "signal_date": "2026-08-26",
+      "entry_price": 28.44,
+      "allocated_usd": 500,
+      "shares": 17.5809,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 32.71,
+      "stop_loss": 27.87,
+      "max_hold_date": "2026-08-28",
+      "daily_prices": {
+        "2026-08-27": {
+          "open": 28.16,
+          "high": 28.94,
+          "low": 27.8,
+          "close": 28.88,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-27",
+      "close_price": 27.87,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.96,
+      "position_usd": 197.98
+    },
+    {
+      "ticker": "TCMD",
+      "name": "Tactile Systems",
+      "action": "BUY",
+      "signal_date": "2026-08-26",
+      "entry_price": 23.51,
+      "allocated_usd": 500,
+      "shares": 21.2675,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 27.04,
+      "stop_loss": 23.04,
+      "max_hold_date": "2026-08-28",
+      "daily_prices": {
+        "2026-08-27": {
+          "open": 23.3,
+          "high": 23.74,
+          "low": 23.01,
+          "close": 23.11,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-27",
+      "close_price": 23.04,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.83,
+      "position_usd": 191.66
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 148,
-    "win_trades": 37,
-    "win_rate": 25.0,
-    "total_realized_pnl_usd": -20.16,
-    "open_unrealized_pnl_usd": 26.79,
-    "portfolio_value": 2006.63,
-    "total_commission_usd": 296.0,
-    "skipped_gap": 58,
+    "total_trades": 152,
+    "win_trades": 39,
+    "win_rate": 25.7,
+    "total_realized_pnl_usd": -21.57,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2003.07,
+    "total_commission_usd": 304.0,
+    "skipped_gap": 61,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 187,
-    "updated_at": "2026-08-26"
+    "skipped_no_cash": 190,
+    "updated_at": "2026-08-27"
   }
 };
