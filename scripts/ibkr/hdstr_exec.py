@@ -369,15 +369,31 @@ def close_batch():
     for p in ib.positions(acct):
         real[p.contract.symbol] = real.get(p.contract.symbol, 0) + p.position
     closed_now, timeout_closed = [], []
+    # 同标的多笔支持(2026-08-27修:EZPW止损后当晚再入场,按symbol对账把新旧都当开着→幽灵仓):
+    # 按symbol汇总期望股数,与真实持仓比对;缺口按先进先出把最老的标记平仓
+    from collections import defaultdict
+    by_sym = defaultdict(list)
     for p in st["positions"]:
-        # closing_timeout也要继续跟踪(2026-08-10修:原来标记后就无人管,成交与否台账永不闭环)
+        if p["status"] in ("open", "closing_timeout"):
+            by_sym[p["ticker"]].append(p)
+    for sym, plist in by_sym.items():
+        plist.sort(key=lambda x: x["entry_date"], reverse=True)   # 新仓优先覆盖真实持仓→旧仓先关(幸存者的超时日期才正确)
+        held = real.get(sym, 0)
+        for p in plist:
+            expect = p["shares"] if p["action"] == "BUY" else -p["shares"]
+            # 方向不符或该笔股数已不被真实持仓覆盖 → 先进先出关最老的
+            if held == 0 or (expect > 0) != (held > 0):
+                covered = False
+            else:
+                covered = abs(held) >= abs(expect)
+            if not covered:
+                p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
+                p["status"] = "closed"; p["close_date"] = today
+                closed_now.append(f"{sym}({p['close_via']})")
+            else:
+                held -= expect
+    for p in st["positions"]:
         if p["status"] not in ("open", "closing_timeout"): continue
-        held = real.get(p["ticker"], 0)
-        expect = p["shares"] if p["action"] == "BUY" else -p["shares"]
-        if held == 0 or (expect > 0) != (held > 0):
-            p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
-            p["status"] = "closed"; p["close_date"] = today
-            closed_now.append(f"{p['ticker']}({p['close_via']})"); continue
         # 超时平仓下单已移至开盘批(2026-08-11:04:00=美东刚收盘,此处下单必被Error 201拒;
         # 收盘批只做对账,到期仓由下一个开盘批在交易时段内平)
     # 未知持仓警报(2026-08-24 BANR裸空实炸:孤儿单成交出的仓不在state里,对账循环只看在册→隐身12天):
