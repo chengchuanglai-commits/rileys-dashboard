@@ -101,7 +101,8 @@
    "signal_price": 35.23,
    "ref_price": 34.87,
    "max_hold_date": "2026-09-09",
-   "status": "open"
+   "status": "open",
+   "partial_fill_note": "8/26入场6股限价单部分成交5股,8/27核实修正"
   }
  ],
  "log": []

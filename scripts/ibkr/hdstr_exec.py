@@ -384,8 +384,16 @@ def close_batch():
             # 方向不符或该笔股数已不被真实持仓覆盖 → 先进先出关最老的
             if held == 0 or (expect > 0) != (held > 0):
                 covered = False
+            elif abs(held) >= abs(expect):
+                covered = True
             else:
-                covered = abs(held) >= abs(expect)
+                # 部分覆盖=部分成交/部分平仓(2026-08-27 EZPW限价单6股只成5股实炸):
+                # 台账缩到真实股数保留为存活仓,IB子单TRAIL会自动同步父单实成数
+                p["shares"] = abs(held)
+                p["partial_note"] = f"对账缩至实持{abs(held)}股({today})"
+                print(f"[hdstr] {sym} 部分覆盖,台账缩至{abs(held)}股")
+                held = 0
+                continue
             if not covered:
                 p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
                 p["status"] = "closed"; p["close_date"] = today
