@@ -1,0 +1,120 @@
+{
+  "date": "2026-08-27",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "URBN",
+      "action": "BUY",
+      "current_price": 82.95,
+      "target_price": 91.25,
+      "stop_loss": 78.8
+    },
+    {
+      "ticker": "EZPW",
+      "action": "BUY",
+      "current_price": 33.9,
+      "target_price": 37.29,
+      "stop_loss": 32.2
+    },
+    {
+      "ticker": "SELF",
+      "action": "SELL",
+      "current_price": 5.61,
+      "target_price": 6.17,
+      "stop_loss": 5.33
+    },
+    {
+      "ticker": "VIRT",
+      "action": "BUY",
+      "current_price": 65.74,
+      "target_price": 72.31,
+      "stop_loss": 62.45
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "URBN",
+      "action": "BUY",
+      "current_price": 82.95,
+      "target_price": 91.25,
+      "stop_loss": 78.8
+    },
+    {
+      "ticker": "SCSC",
+      "action": "HOLD",
+      "current_price": 56.17,
+      "target_price": 61.79,
+      "stop_loss": 53.36
+    },
+    {
+      "ticker": "EZPW",
+      "action": "BUY",
+      "current_price": 33.9,
+      "target_price": 37.29,
+      "stop_loss": 32.2
+    },
+    {
+      "ticker": "TISI",
+      "action": "HOLD",
+      "current_price": 23.01,
+      "target_price": 25.31,
+      "stop_loss": 21.86
+    },
+    {
+      "ticker": "SELF",
+      "action": "SELL",
+      "current_price": 5.61,
+      "target_price": 6.17,
+      "stop_loss": 5.33
+    },
+    {
+      "ticker": "VIRT",
+      "action": "BUY",
+      "current_price": 65.74,
+      "target_price": 72.31,
+      "stop_loss": 62.45
+    },
+    {
+      "ticker": "VLGEA",
+      "action": "HOLD",
+      "current_price": 43.65,
+      "target_price": 48.02,
+      "stop_loss": 41.47
+    },
+    {
+      "ticker": "JBSS",
+      "action": "SELL",
+      "current_price": 75.76,
+      "target_price": 83.34,
+      "stop_loss": 71.97
+    },
+    {
+      "ticker": "MVBF",
+      "action": "HOLD",
+      "current_price": 29.95,
+      "target_price": 32.95,
+      "stop_loss": 28.45
+    },
+    {
+      "ticker": "LYTS",
+      "action": "SELL",
+      "current_price": 20.27,
+      "target_price": 22.3,
+      "stop_loss": 19.26
+    },
+    {
+      "ticker": "XNCR",
+      "action": "HOLD",
+      "current_price": 28.44,
+      "target_price": 31.28,
+      "stop_loss": 27.02
+    },
+    {
+      "ticker": "RICK",
+      "action": "BUY",
+      "current_price": 29.68,
+      "target_price": 32.65,
+      "stop_loss": 28.2
+    }
+  ]
+}
