@@ -51,7 +51,10 @@
    "signal_price": 67.93,
    "ref_price": 67.93,
    "max_hold_date": "2026-09-07",
-   "status": "open"
+   "status": "closed",
+   "close_date": "2026-08-27",
+   "close_via": "trail/manual",
+   "note": "8/27盘中TRAIL止盈回补(实盘核实持仓已清,出场价66.35推算);04:00对账连不上网关,手术闭环防幻影trail"
   },
   {
    "ticker": "OSIS",
