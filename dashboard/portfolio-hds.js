@@ -121,87 +121,62 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "SCSC",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-26",
-      "entry_price": 56.19,
-      "allocated_usd": 500,
-      "shares": 8.8984,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 64.62,
-      "stop_loss": 55.07,
-      "max_hold_date": "2026-08-28",
-      "daily_prices": {
-        "2026-08-27": {
-          "open": 56.13,
-          "high": 58.15,
-          "low": 56.08,
-          "close": 58.1,
-          "pnl_pct": 3.4
-        }
-      },
-      "position_usd": 230.01,
-      "unrealized_pnl_usd": 7.82
-    },
-    {
       "ticker": "SELF",
       "name": "",
       "action": "SELL",
-      "signal_date": "2026-08-26",
-      "entry_price": 5.65,
+      "signal_date": "2026-08-27",
+      "entry_price": 5.61,
       "allocated_usd": 500,
-      "shares": 88.4956,
+      "shares": 89.1266,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 4.8,
-      "stop_loss": 5.76,
-      "max_hold_date": "2026-08-28",
+      "take_profit": 4.77,
+      "stop_loss": 5.72,
+      "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-27": {
-          "open": 5.69,
-          "high": 5.69,
-          "low": 5.42,
-          "close": 5.6,
-          "pnl_pct": 0.88
+        "2026-08-28": {
+          "open": 5.63,
+          "high": 5.7,
+          "low": 5.45,
+          "close": 5.49,
+          "pnl_pct": 2.14
         }
       },
-      "position_usd": 230.01,
-      "unrealized_pnl_usd": 2.02
+      "position_usd": 229.56,
+      "unrealized_pnl_usd": 4.91
     },
     {
       "ticker": "URBN",
       "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-27",
-      "entry_price": 82.95,
+      "action": "SELL",
+      "signal_date": "2026-08-28",
+      "entry_price": 81.09,
       "allocated_usd": 500,
-      "shares": 6.0277,
+      "shares": 6.166,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 95.39,
-      "stop_loss": 81.29,
-      "max_hold_date": "2026-08-31",
+      "take_profit": 68.93,
+      "stop_loss": 82.71,
+      "max_hold_date": "2026-09-01",
       "daily_prices": {},
-      "position_usd": 229.56,
+      "position_usd": 229.89,
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "EZPW",
+      "ticker": "ITIC",
       "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-27",
-      "entry_price": 33.9,
+      "action": "SELL",
+      "signal_date": "2026-08-28",
+      "entry_price": 299.34,
       "allocated_usd": 500,
-      "shares": 14.7493,
-      "actual_position_usd": 500.0,
+      "shares": 1.6703,
+      "actual_position_usd": 499.99,
       "entry_commission": 1.0,
-      "take_profit": 38.98,
-      "stop_loss": 33.22,
-      "max_hold_date": "2026-08-31",
+      "take_profit": 254.44,
+      "stop_loss": 305.33,
+      "max_hold_date": "2026-09-01",
       "daily_prices": {},
-      "position_usd": 229.56,
+      "position_usd": 229.89,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4133,20 +4108,127 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.58,
       "position_usd": 230.01
+    },
+    {
+      "ticker": "SCSC",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-26",
+      "entry_price": 56.19,
+      "allocated_usd": 500,
+      "shares": 8.8984,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 64.62,
+      "stop_loss": 55.07,
+      "max_hold_date": "2026-08-28",
+      "daily_prices": {
+        "2026-08-27": {
+          "open": 56.13,
+          "high": 58.17,
+          "low": 56.07,
+          "close": 58.1,
+          "pnl_pct": 3.4
+        },
+        "2026-08-28": {
+          "open": 58.15,
+          "high": 59.31,
+          "low": 56.32,
+          "close": 56.55,
+          "pnl_pct": 0.64
+        }
+      },
+      "close_date": "2026-08-28",
+      "close_price": 56.55,
+      "final_pnl_pct": 0.64,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 1.47,
+      "position_usd": 230.01
+    },
+    {
+      "ticker": "SELF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-26",
+      "entry_price": 5.65,
+      "allocated_usd": 500,
+      "shares": 88.4956,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 4.8,
+      "stop_loss": 5.76,
+      "max_hold_date": "2026-08-28",
+      "daily_prices": {
+        "2026-08-27": {
+          "open": 5.69,
+          "high": 5.69,
+          "low": 5.42,
+          "close": 5.6,
+          "pnl_pct": 0.88
+        },
+        "2026-08-28": {
+          "open": 5.63,
+          "high": 5.7,
+          "low": 5.45,
+          "close": 5.49,
+          "pnl_pct": 2.83
+        }
+      },
+      "close_date": "2026-08-28",
+      "close_price": 5.49,
+      "final_pnl_pct": 2.83,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 6.51,
+      "position_usd": 230.01
+    },
+    {
+      "ticker": "EZPW",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-27",
+      "entry_price": 33.9,
+      "allocated_usd": 500,
+      "shares": 14.7493,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 38.98,
+      "stop_loss": 33.22,
+      "max_hold_date": "2026-08-31",
+      "daily_prices": {
+        "2026-08-28": {
+          "open": 34.6,
+          "high": 34.87,
+          "low": 32.8,
+          "close": 33.0,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-08-28",
+      "close_price": 33.22,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.61,
+      "position_usd": 229.56
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 110,
-    "win_trades": 57,
-    "win_rate": 51.8,
-    "total_realized_pnl_usd": 295.56,
-    "open_unrealized_pnl_usd": 23.35,
-    "portfolio_value": 2318.91,
-    "total_commission_usd": 220.0,
-    "skipped_gap": 62,
+    "total_trades": 113,
+    "win_trades": 59,
+    "win_rate": 52.2,
+    "total_realized_pnl_usd": 298.93,
+    "open_unrealized_pnl_usd": 18.42,
+    "portfolio_value": 2317.35,
+    "total_commission_usd": 226.0,
+    "skipped_gap": 63,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 32,
-    "updated_at": "2026-08-27"
+    "skipped_no_cash": 31,
+    "updated_at": "2026-08-28"
   }
 };
