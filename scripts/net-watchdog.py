@@ -87,8 +87,18 @@ def main():
         if nav is None:
             st["ib_fail"] = st.get("ib_fail", 0) + 1; ib_state = f"fail×{st['ib_fail']}"
             if st["ib_fail"] >= FAILS_BEFORE_ALERT and not st.get("ib_alerted"):
-                feishu("🚨 IB Gateway 开着但跟 IBKR 断了(连续两次拿不到 NAV)。请完全退出、重新打开 IB Gateway 登录一次(它不会自愈)。放心:止损单在 IBKR 服务器端,持仓仍受保护。")
+                feishu("🚨 IB Gateway 开着但跟 IBKR 断了。看门狗将在持续失败30分钟后自动重踢网关(会话有效期内会自动重登)。止损单在 IBKR 服务器端,持仓仍受保护。")
                 st["ib_alerted"] = True
+            # ②b 自动重踢(2026-08-30,Riley定"确保老方法不出问题"):半死≥6次(~30min)自动杀掉重开,
+            # 会话有效期内网关会自动重登;失败也只是回到登录页(与不踢等价)。避开21:15-22:15自身重启窗防打架。
+            hhmm = time.strftime("%H%M")
+            if st["ib_fail"] >= 6 and not ("2115" <= hhmm <= "2215") and st.get("last_kick_day") != time.strftime("%F"):
+                subprocess.run(["pkill", "-f", "JavaApplicationStub"], capture_output=True)
+                time.sleep(8)
+                subprocess.run(["open", "-a",
+                    "/Users/apple/Applications/IB Gateway 10.45/IB Gateway 10.45-1.app"], capture_output=True)
+                st["last_kick_day"] = time.strftime("%F")   # 每天最多踢一次,防循环风暴
+                feishu("🔁 看门狗已自动重踢 IB Gateway(半死30分钟)。若15分钟后仍未恢复=需要人工登录。")
         else:
             if st.get("ib_alerted"):
                 feishu(f"✅ IB Gateway 已恢复连接(NAV ${nav:,.0f})。")
