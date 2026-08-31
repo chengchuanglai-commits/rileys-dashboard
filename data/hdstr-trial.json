@@ -104,8 +104,11 @@
    "signal_price": 35.23,
    "ref_price": 34.87,
    "max_hold_date": "2026-09-09",
-   "status": "open",
-   "partial_fill_note": "8/26入场6股限价单部分成交5股,8/27核实修正"
+   "status": "closed",
+   "partial_fill_note": "8/26入场6股限价单部分成交5股,8/27核实修正",
+   "close_date": "2026-08-28",
+   "close_via": "trail/manual",
+   "note": "8/28周五盘中TRAIL出场(服务器端,网关离线期);周末对账全missed,8/31手术闭环"
   }
  ],
  "log": []

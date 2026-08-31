@@ -208,6 +208,40 @@ def next_trading_days(start, n):
     return out
 
 
+def reconcile_positions(st, real, today):
+    """FIFO持仓对账(公共):按symbol汇总期望股数vs真实,缺口新仓优先覆盖旧仓先关,部分覆盖缩股数。
+    2026-08-31提炼:收盘批missed(网关离线)时state过期→开盘批自愈会给不存在的仓补挂幻影TRAIL(EZPW实炸),
+    故开盘批heal前也必须先对账。返回closed列表。"""
+    from collections import defaultdict
+    closed_now = []
+    by_sym = defaultdict(list)
+    for p in st["positions"]:
+        if p["status"] in ("open", "closing_timeout"):
+            by_sym[p["ticker"]].append(p)
+    for sym, plist in by_sym.items():
+        plist.sort(key=lambda x: x["entry_date"], reverse=True)
+        held = real.get(sym, 0)
+        for p in plist:
+            expect = p["shares"] if p["action"] == "BUY" else -p["shares"]
+            if held == 0 or (expect > 0) != (held > 0):
+                covered = False
+            elif abs(held) >= abs(expect):
+                covered = True
+            else:
+                p["shares"] = abs(held)
+                p["partial_note"] = f"对账缩至实持{abs(held)}股({today})"
+                print(f"[hdstr] {sym} 部分覆盖,台账缩至{abs(held)}股")
+                held = 0
+                continue
+            if not covered:
+                p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
+                p["status"] = "closed"; p["close_date"] = today
+                closed_now.append(f"{sym}({p['close_via']})")
+            else:
+                held -= expect
+    return closed_now
+
+
 def open_batch():
     st = load(STATE, {"positions": [], "log": []})
     today = time.strftime("%Y-%m-%d")
@@ -217,6 +251,15 @@ def open_batch():
     acct = guard_account(ib)
     if not acct: ib.disconnect(); return
     harvest_fills(ib, acct)   # 开盘批先收割隔夜/当日成交(TRAIL夜里触发的在这里入账)
+
+    # ⓪先对账(2026-08-31:防收盘批missed后state过期→给已出场仓补挂幻影TRAIL)
+    real0 = {}
+    for p_ in ib.positions(acct):
+        real0[p_.contract.symbol] = real0.get(p_.contract.symbol, 0) + p_.position
+    pre_closed = reconcile_positions(st, real0, today)
+    if pre_closed:
+        save_state(st)
+        print(f"[hdstr] 开盘前对账补闭环: {pre_closed}")
 
     # ①自愈:先审计存量仓的TRAIL保护(主batch全局撤单会扫掉GTC;每晚必查必补)
     # closing_timeout(超时单已挂待成交)期间实股仍在手:占槽+享受TRAIL自愈,直到对账确认清仓
@@ -368,42 +411,9 @@ def close_batch():
     real = {}
     for p in ib.positions(acct):
         real[p.contract.symbol] = real.get(p.contract.symbol, 0) + p.position
-    closed_now, timeout_closed = [], []
-    # 同标的多笔支持(2026-08-27修:EZPW止损后当晚再入场,按symbol对账把新旧都当开着→幽灵仓):
-    # 按symbol汇总期望股数,与真实持仓比对;缺口按先进先出把最老的标记平仓
-    from collections import defaultdict
-    by_sym = defaultdict(list)
-    for p in st["positions"]:
-        if p["status"] in ("open", "closing_timeout"):
-            by_sym[p["ticker"]].append(p)
-    for sym, plist in by_sym.items():
-        plist.sort(key=lambda x: x["entry_date"], reverse=True)   # 新仓优先覆盖真实持仓→旧仓先关(幸存者的超时日期才正确)
-        held = real.get(sym, 0)
-        for p in plist:
-            expect = p["shares"] if p["action"] == "BUY" else -p["shares"]
-            # 方向不符或该笔股数已不被真实持仓覆盖 → 先进先出关最老的
-            if held == 0 or (expect > 0) != (held > 0):
-                covered = False
-            elif abs(held) >= abs(expect):
-                covered = True
-            else:
-                # 部分覆盖=部分成交/部分平仓(2026-08-27 EZPW限价单6股只成5股实炸):
-                # 台账缩到真实股数保留为存活仓,IB子单TRAIL会自动同步父单实成数
-                p["shares"] = abs(held)
-                p["partial_note"] = f"对账缩至实持{abs(held)}股({today})"
-                print(f"[hdstr] {sym} 部分覆盖,台账缩至{abs(held)}股")
-                held = 0
-                continue
-            if not covered:
-                p["close_via"] = "timeout" if p["status"] == "closing_timeout" else "trail/manual"
-                p["status"] = "closed"; p["close_date"] = today
-                closed_now.append(f"{sym}({p['close_via']})")
-            else:
-                held -= expect
-    for p in st["positions"]:
-        if p["status"] not in ("open", "closing_timeout"): continue
-        # 超时平仓下单已移至开盘批(2026-08-11:04:00=美东刚收盘,此处下单必被Error 201拒;
-        # 收盘批只做对账,到期仓由下一个开盘批在交易时段内平)
+    # FIFO对账走公共函数(2026-08-31提炼,开盘/收盘批共用);超时平仓下单在开盘批(04:00必遭Error201拒)
+    timeout_closed = []
+    closed_now = reconcile_positions(st, real, today)
     # 未知持仓警报(2026-08-24 BANR裸空实炸:孤儿单成交出的仓不在state里,对账循环只看在册→隐身12天):
     # 真实持仓中凡非在册、非指数核心的 → 强警报,人工核查
     known_now = {p["ticker"] for p in st["positions"] if p["status"] in ("open", "closing_timeout")} | {"QQQ", "QQQM"}
