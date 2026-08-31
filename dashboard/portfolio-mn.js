@@ -151,6 +151,56 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 205.88,
       "unrealized_pnl_usd": 12.7
+    },
+    {
+      "ticker": "SCSC",
+      "name": "施乐控股",
+      "action": "BUY",
+      "signal_date": "2026-08-28",
+      "entry_price": 56.55,
+      "allocated_usd": 500,
+      "shares": 8.8417,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 65.03,
+      "stop_loss": 55.42,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 56.42,
+          "high": 57.63,
+          "low": 55.59,
+          "close": 57.09,
+          "pnl_pct": 0.95
+        }
+      },
+      "position_usd": 196.65,
+      "unrealized_pnl_usd": 1.87
+    },
+    {
+      "ticker": "VIRT",
+      "name": "Virtu Financial",
+      "action": "BUY",
+      "signal_date": "2026-08-28",
+      "entry_price": 66.39,
+      "allocated_usd": 500,
+      "shares": 7.5313,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 76.35,
+      "stop_loss": 65.06,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 66.5,
+          "high": 67.67,
+          "low": 65.58,
+          "close": 65.64,
+          "pnl_pct": -1.13
+        }
+      },
+      "position_usd": 188.32,
+      "unrealized_pnl_usd": -2.13
     }
   ],
   "closed_positions": [
@@ -5279,15 +5329,15 @@ window.PORTFOLIO_MN = {
       "stop_loss": 33.72,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-31": {
-          "open": 32.7,
-          "high": 33.12,
-          "low": 31.86,
-          "close": 32.33,
+        "2026-08-28": {
+          "open": 34.5,
+          "high": 34.87,
+          "low": 32.8,
+          "close": 33.0,
           "pnl_pct": -2.01
         }
       },
-      "close_date": "2026-08-31",
+      "close_date": "2026-08-28",
       "close_price": 33.72,
       "final_pnl_pct": -2.01,
       "close_reason": "stop_loss",
@@ -5310,15 +5360,15 @@ window.PORTFOLIO_MN = {
       "stop_loss": 28.3,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-31": {
-          "open": 26.0,
-          "high": 26.8,
-          "low": 25.92,
-          "close": 26.78,
+        "2026-08-28": {
+          "open": 28.97,
+          "high": 28.97,
+          "low": 25.81,
+          "close": 26.06,
           "pnl_pct": -2.01
         }
       },
-      "close_date": "2026-08-31",
+      "close_date": "2026-08-28",
       "close_price": 28.3,
       "final_pnl_pct": -2.01,
       "close_reason": "stop_loss",
@@ -5328,29 +5378,29 @@ window.PORTFOLIO_MN = {
       "position_usd": 197.84
     },
     {
-      "ticker": "TWST",
-      "name": " Twist Bioscience",
+      "ticker": "SCSC",
+      "name": "Scansource",
       "action": "BUY",
       "signal_date": "2026-08-27",
-      "entry_price": 153.1,
+      "entry_price": 58.1,
       "allocated_usd": 500,
-      "shares": 3.2658,
-      "actual_position_usd": 499.99,
+      "shares": 8.6059,
+      "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 176.06,
-      "stop_loss": 150.04,
+      "take_profit": 66.81,
+      "stop_loss": 56.94,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-31": {
-          "open": 139.34,
-          "high": 140.58,
-          "low": 135.0,
-          "close": 135.94,
+        "2026-08-28": {
+          "open": 58.15,
+          "high": 59.31,
+          "low": 56.32,
+          "close": 56.55,
           "pnl_pct": -2.0
         }
       },
-      "close_date": "2026-08-31",
-      "close_price": 150.04,
+      "close_date": "2026-08-28",
+      "close_price": 56.94,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -5372,36 +5422,74 @@ window.PORTFOLIO_MN = {
       "stop_loss": 23.46,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
+        "2026-08-28": {
+          "open": 24.3,
+          "high": 25.33,
+          "low": 24.15,
+          "close": 24.74,
+          "pnl_pct": 3.34
+        },
         "2026-08-31": {
           "open": 24.57,
           "high": 25.0,
           "low": 24.26,
-          "close": 25.0,
-          "pnl_pct": 4.43
+          "close": 24.65,
+          "pnl_pct": 2.97
         }
       },
       "close_date": "2026-08-31",
-      "close_price": 25.0,
-      "final_pnl_pct": 4.43,
+      "close_price": 24.65,
+      "final_pnl_pct": 2.97,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.73,
+      "realized_pnl_usd": 5.18,
       "position_usd": 174.48
+    },
+    {
+      "ticker": "EZPW",
+      "name": "EZCORP",
+      "action": "BUY",
+      "signal_date": "2026-08-28",
+      "entry_price": 33.0,
+      "allocated_usd": 500,
+      "shares": 15.1515,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 37.95,
+      "stop_loss": 32.34,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 32.7,
+          "high": 33.12,
+          "low": 31.86,
+          "close": 32.32,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-31",
+      "close_price": 32.34,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.93,
+      "position_usd": 196.65
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 156,
+    "total_trades": 157,
     "win_trades": 40,
-    "win_rate": 25.6,
-    "total_realized_pnl_usd": -25.75,
-    "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 1998.89,
-    "total_commission_usd": 312.0,
-    "skipped_gap": 63,
+    "win_rate": 25.5,
+    "total_realized_pnl_usd": -32.23,
+    "open_unrealized_pnl_usd": 24.38,
+    "portfolio_value": 1992.15,
+    "total_commission_usd": 314.0,
+    "skipped_gap": 62,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 193,
+    "skipped_no_cash": 191,
     "updated_at": "2026-08-31"
   }
 };
