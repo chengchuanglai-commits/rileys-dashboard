@@ -1492,61 +1492,6 @@ window.PORTFOLIO_F = {
       "sl_unified": false
     },
     {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "t1_shares": 3,
-      "t2_shares": 4,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "take_profit_1": 60.36,
-      "take_profit_2": 55.46,
-      "stop_loss": 67.21,
-      "max_hold_date": "2026-07-14",
-      "day1_open": 65.33,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 65.33,
-          "high": 66.2,
-          "low": 65.31,
-          "close": 65.92,
-          "pnl_pct": -1.03
-        },
-        "2026-07-13": {
-          "open": 65.87,
-          "high": 66.52,
-          "low": 65.63,
-          "close": 66.11,
-          "pnl_pct": -1.32
-        },
-        "2026-07-14": {
-          "open": 66.16,
-          "high": 67.0,
-          "low": 65.47,
-          "close": 66.08,
-          "pnl_pct": -1.27
-        }
-      },
-      "t1_exit_date": "2026-07-14",
-      "t1_exit_price": 66.08,
-      "t1_exit_reason": "max_hold",
-      "t2_exit_date": "2026-07-14",
-      "t2_exit_price": 66.08,
-      "t2_exit_reason": "max_hold",
-      "t1_gross_pnl": -2.49,
-      "t2_gross_pnl": -3.32,
-      "close_date": "2026-07-14",
-      "close_reason": "max_hold+max_hold",
-      "final_pnl_pct": -1.27,
-      "commission_total": 3.0,
-      "realized_pnl_usd": -8.81,
-      "sl_unified": false
-    },
-    {
       "ticker": "TCBK",
       "name": "TCBK",
       "action": "SELL",
@@ -1714,14 +1659,14 @@ window.PORTFOLIO_F = {
   ],
   "_note": "Plan F 分档出场：TP+15%/2档/SL-3%/3日/1%跳空过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 33,
+    "total_trades": 32,
     "win_trades": 19,
-    "win_rate": 57.6,
-    "total_realized_pnl_usd": 274.05,
+    "win_rate": 59.4,
+    "total_realized_pnl_usd": 282.86,
     "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2277.36,
-    "total_commission_usd": 89.0,
-    "skipped_gap": 11,
+    "portfolio_value": 2286.17,
+    "total_commission_usd": 86.0,
+    "skipped_gap": 12,
     "skipped_zero_shares": 7,
     "updated_at": "2026-09-01"
   }

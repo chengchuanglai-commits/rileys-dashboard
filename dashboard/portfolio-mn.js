@@ -157,16 +157,16 @@ window.PORTFOLIO_MN = {
       "name": "Urban Outfitters",
       "action": "BUY",
       "signal_date": "2026-09-01",
-      "entry_price": 77.33,
+      "entry_price": 79.29,
       "allocated_usd": 500,
-      "shares": 6.4658,
+      "shares": 6.306,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 88.93,
-      "stop_loss": 75.78,
+      "take_profit": 91.18,
+      "stop_loss": 77.7,
       "max_hold_date": "2026-09-03",
       "daily_prices": {},
-      "position_usd": 196.26,
+      "position_usd": 196.78,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -174,16 +174,16 @@ window.PORTFOLIO_MN = {
       "name": "Team Inc.",
       "action": "BUY",
       "signal_date": "2026-09-01",
-      "entry_price": 24.92,
+      "entry_price": 24.75,
       "allocated_usd": 500,
-      "shares": 20.0642,
+      "shares": 20.202,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 28.66,
-      "stop_loss": 24.42,
+      "take_profit": 28.46,
+      "stop_loss": 24.25,
       "max_hold_date": "2026-09-03",
       "daily_prices": {},
-      "position_usd": 196.26,
+      "position_usd": 196.78,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -191,16 +191,16 @@ window.PORTFOLIO_MN = {
       "name": "Xencor",
       "action": "BUY",
       "signal_date": "2026-09-01",
-      "entry_price": 27.53,
+      "entry_price": 27.91,
       "allocated_usd": 500,
-      "shares": 18.162,
+      "shares": 17.9147,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 31.66,
-      "stop_loss": 26.98,
+      "take_profit": 32.1,
+      "stop_loss": 27.35,
       "max_hold_date": "2026-09-03",
       "daily_prices": {},
-      "position_usd": 196.26,
+      "position_usd": 196.78,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -208,16 +208,16 @@ window.PORTFOLIO_MN = {
       "name": "MVB Financial",
       "action": "BUY",
       "signal_date": "2026-09-01",
-      "entry_price": 30.08,
+      "entry_price": 30.25,
       "allocated_usd": 500,
-      "shares": 16.6223,
+      "shares": 16.5289,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 34.59,
-      "stop_loss": 29.48,
+      "take_profit": 34.79,
+      "stop_loss": 29.64,
       "max_hold_date": "2026-09-03",
       "daily_prices": {},
-      "position_usd": 163.38,
+      "position_usd": 167.06,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -5378,15 +5378,15 @@ window.PORTFOLIO_MN = {
       "stop_loss": 28.3,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-28": {
-          "open": 28.97,
-          "high": 28.97,
-          "low": 25.81,
-          "close": 26.06,
+        "2026-08-31": {
+          "open": 26.0,
+          "high": 27.64,
+          "low": 25.89,
+          "close": 27.26,
           "pnl_pct": -2.01
         }
       },
-      "close_date": "2026-08-28",
+      "close_date": "2026-08-31",
       "close_price": 28.3,
       "final_pnl_pct": -2.01,
       "close_reason": "stop_loss",
@@ -5396,29 +5396,29 @@ window.PORTFOLIO_MN = {
       "position_usd": 197.84
     },
     {
-      "ticker": "SCSC",
-      "name": "Scansource",
+      "ticker": "TWST",
+      "name": " Twist Bioscience",
       "action": "BUY",
       "signal_date": "2026-08-27",
-      "entry_price": 58.1,
+      "entry_price": 153.1,
       "allocated_usd": 500,
-      "shares": 8.6059,
-      "actual_position_usd": 500.0,
+      "shares": 3.2658,
+      "actual_position_usd": 499.99,
       "entry_commission": 1.0,
-      "take_profit": 66.81,
-      "stop_loss": 56.94,
+      "take_profit": 176.06,
+      "stop_loss": 150.04,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-28": {
-          "open": 58.15,
-          "high": 59.31,
-          "low": 56.32,
-          "close": 56.55,
+        "2026-08-31": {
+          "open": 139.99,
+          "high": 140.6,
+          "low": 135.0,
+          "close": 139.0,
           "pnl_pct": -2.0
         }
       },
-      "close_date": "2026-08-28",
-      "close_price": 56.94,
+      "close_date": "2026-08-31",
+      "close_price": 150.04,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -5440,13 +5440,6 @@ window.PORTFOLIO_MN = {
       "stop_loss": 23.46,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-28": {
-          "open": 24.3,
-          "high": 25.33,
-          "low": 24.15,
-          "close": 24.74,
-          "pnl_pct": 3.34
-        },
         "2026-08-31": {
           "open": 24.57,
           "high": 25.0,
@@ -5465,86 +5458,17 @@ window.PORTFOLIO_MN = {
       "position_usd": 174.48
     },
     {
-      "ticker": "EZPW",
-      "name": "EZCORP",
-      "action": "BUY",
-      "signal_date": "2026-08-28",
-      "entry_price": 33.0,
-      "allocated_usd": 500,
-      "shares": 15.1515,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 37.95,
-      "stop_loss": 32.34,
-      "max_hold_date": "2026-09-01",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 32.7,
-          "high": 33.13,
-          "low": 31.86,
-          "close": 32.32,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-08-31",
-      "close_price": 32.34,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -3.93,
-      "position_usd": 196.65
-    },
-    {
-      "ticker": "SCSC",
-      "name": "施乐控股",
-      "action": "BUY",
-      "signal_date": "2026-08-28",
-      "entry_price": 56.55,
-      "allocated_usd": 500,
-      "shares": 8.8417,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 65.03,
-      "stop_loss": 55.42,
-      "max_hold_date": "2026-09-01",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 56.42,
-          "high": 57.63,
-          "low": 55.59,
-          "close": 57.09,
-          "pnl_pct": 0.95
-        },
-        "2026-09-01": {
-          "open": 56.56,
-          "high": 57.09,
-          "low": 55.87,
-          "close": 56.14,
-          "pnl_pct": -0.73
-        }
-      },
-      "close_date": "2026-09-01",
-      "close_price": 56.14,
-      "final_pnl_pct": -0.73,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -1.44,
-      "position_usd": 196.65
-    },
-    {
       "ticker": "VIRT",
       "name": "Virtu Financial",
       "action": "BUY",
       "signal_date": "2026-08-28",
-      "entry_price": 66.39,
+      "entry_price": 65.64,
       "allocated_usd": 500,
-      "shares": 7.5313,
+      "shares": 7.6173,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 76.35,
-      "stop_loss": 65.06,
+      "take_profit": 75.49,
+      "stop_loss": 64.33,
       "max_hold_date": "2026-09-01",
       "daily_prices": {
         "2026-08-31": {
@@ -5552,38 +5476,38 @@ window.PORTFOLIO_MN = {
           "high": 67.67,
           "low": 65.58,
           "close": 65.64,
-          "pnl_pct": -1.13
+          "pnl_pct": 0.0
         },
         "2026-09-01": {
           "open": 65.38,
-          "high": 66.45,
+          "high": 66.47,
           "low": 63.64,
-          "close": 65.86,
+          "close": 65.36,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-09-01",
-      "close_price": 65.06,
+      "close_price": 64.33,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.77,
-      "position_usd": 188.32
+      "realized_pnl_usd": -3.88,
+      "position_usd": 193.87
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 159,
+    "total_trades": 157,
     "win_trades": 40,
-    "win_rate": 25.2,
-    "total_realized_pnl_usd": -37.43,
+    "win_rate": 25.5,
+    "total_realized_pnl_usd": -32.17,
     "open_unrealized_pnl_usd": 24.64,
-    "portfolio_value": 1987.21,
-    "total_commission_usd": 318.0,
-    "skipped_gap": 62,
+    "portfolio_value": 1992.47,
+    "total_commission_usd": 314.0,
+    "skipped_gap": 63,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 193,
+    "skipped_no_cash": 194,
     "updated_at": "2026-09-01"
   }
 };

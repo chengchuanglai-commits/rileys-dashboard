@@ -1407,6 +1407,59 @@ window.PORTFOLIO_C = {
       "position_usd": 213.94
     },
     {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "take_profit": 60.03,
+      "stop_loss": 67.86,
+      "max_hold_date": "2026-07-16",
+      "day1_open": 65.92,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.92,
+          "high": 66.8,
+          "low": 65.9,
+          "close": 66.52,
+          "pnl_pct": -1.95
+        },
+        "2026-07-13": {
+          "open": 66.47,
+          "high": 67.12,
+          "low": 66.22,
+          "close": 66.71,
+          "pnl_pct": -2.24
+        },
+        "2026-07-14": {
+          "open": 66.76,
+          "high": 67.61,
+          "low": 66.06,
+          "close": 66.68,
+          "pnl_pct": -2.19
+        },
+        "2026-07-15": {
+          "open": 67.4,
+          "high": 67.92,
+          "low": 66.28,
+          "close": 67.74,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-15",
+      "close_price": 67.86,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.58,
+      "position_usd": 214.58
+    },
+    {
       "ticker": "SKWD",
       "name": "SKWD",
       "action": "SELL",
@@ -1464,66 +1517,6 @@ window.PORTFOLIO_C = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 6.76,
-      "position_usd": 214.58
-    },
-    {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "take_profit": 60.03,
-      "stop_loss": 67.86,
-      "max_hold_date": "2026-07-16",
-      "day1_open": 65.33,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 65.33,
-          "high": 66.2,
-          "low": 65.31,
-          "close": 65.92,
-          "pnl_pct": -1.03
-        },
-        "2026-07-13": {
-          "open": 65.87,
-          "high": 66.52,
-          "low": 65.63,
-          "close": 66.11,
-          "pnl_pct": -1.32
-        },
-        "2026-07-14": {
-          "open": 66.16,
-          "high": 67.0,
-          "low": 65.47,
-          "close": 66.08,
-          "pnl_pct": -1.27
-        },
-        "2026-07-15": {
-          "open": 66.8,
-          "high": 67.31,
-          "low": 65.69,
-          "close": 67.13,
-          "pnl_pct": -2.88
-        },
-        "2026-07-16": {
-          "open": 67.48,
-          "high": 69.91,
-          "low": 67.48,
-          "close": 69.45,
-          "pnl_pct": -4.0
-        }
-      },
-      "close_date": "2026-07-16",
-      "close_price": 67.86,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -8.58,
       "position_usd": 214.58
     },
     {
@@ -1735,8 +1728,8 @@ window.PORTFOLIO_C = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 17.36,
-      "position_usd": 216.46
+      "realized_pnl_usd": 17.29,
+      "position_usd": 215.61
     }
   ],
   "_note": "Plan C 模拟盘：TP +8% / SL -4% / 最大5交易日 / 不利跳空>1.5%跳过 / IBKR佣金$0.005/股min$1",
@@ -1744,9 +1737,9 @@ window.PORTFOLIO_C = {
     "total_trades": 37,
     "win_trades": 24,
     "win_rate": 64.9,
-    "total_realized_pnl_usd": 176.79,
+    "total_realized_pnl_usd": 176.72,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2176.79,
+    "portfolio_value": 2176.72,
     "skipped_gap": 15,
     "updated_at": "2026-09-02"
   }
