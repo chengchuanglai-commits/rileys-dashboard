@@ -153,54 +153,72 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "SCSC",
-      "name": "施乐控股",
+      "ticker": "URBN",
+      "name": "Urban Outfitters",
       "action": "BUY",
-      "signal_date": "2026-08-28",
-      "entry_price": 56.55,
+      "signal_date": "2026-09-01",
+      "entry_price": 77.33,
       "allocated_usd": 500,
-      "shares": 8.8417,
+      "shares": 6.4658,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 65.03,
-      "stop_loss": 55.42,
-      "max_hold_date": "2026-09-01",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 56.42,
-          "high": 57.63,
-          "low": 55.59,
-          "close": 57.09,
-          "pnl_pct": 0.95
-        }
-      },
-      "position_usd": 196.65,
-      "unrealized_pnl_usd": 1.87
+      "take_profit": 88.93,
+      "stop_loss": 75.78,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {},
+      "position_usd": 196.26,
+      "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "VIRT",
-      "name": "Virtu Financial",
+      "ticker": "TISI",
+      "name": "Team Inc.",
       "action": "BUY",
-      "signal_date": "2026-08-28",
-      "entry_price": 66.39,
+      "signal_date": "2026-09-01",
+      "entry_price": 24.92,
       "allocated_usd": 500,
-      "shares": 7.5313,
+      "shares": 20.0642,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 76.35,
-      "stop_loss": 65.06,
-      "max_hold_date": "2026-09-01",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 66.5,
-          "high": 67.67,
-          "low": 65.58,
-          "close": 65.64,
-          "pnl_pct": -1.13
-        }
-      },
-      "position_usd": 188.32,
-      "unrealized_pnl_usd": -2.13
+      "take_profit": 28.66,
+      "stop_loss": 24.42,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {},
+      "position_usd": 196.26,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "XNCR",
+      "name": "Xencor",
+      "action": "BUY",
+      "signal_date": "2026-09-01",
+      "entry_price": 27.53,
+      "allocated_usd": 500,
+      "shares": 18.162,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 31.66,
+      "stop_loss": 26.98,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {},
+      "position_usd": 196.26,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVB Financial",
+      "action": "BUY",
+      "signal_date": "2026-09-01",
+      "entry_price": 30.08,
+      "allocated_usd": 500,
+      "shares": 16.6223,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 34.59,
+      "stop_loss": 29.48,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {},
+      "position_usd": 163.38,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -5462,7 +5480,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-08-31": {
           "open": 32.7,
-          "high": 33.12,
+          "high": 33.13,
           "low": 31.86,
           "close": 32.32,
           "pnl_pct": -2.0
@@ -5476,20 +5494,96 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.93,
       "position_usd": 196.65
+    },
+    {
+      "ticker": "SCSC",
+      "name": "施乐控股",
+      "action": "BUY",
+      "signal_date": "2026-08-28",
+      "entry_price": 56.55,
+      "allocated_usd": 500,
+      "shares": 8.8417,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 65.03,
+      "stop_loss": 55.42,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 56.42,
+          "high": 57.63,
+          "low": 55.59,
+          "close": 57.09,
+          "pnl_pct": 0.95
+        },
+        "2026-09-01": {
+          "open": 56.56,
+          "high": 57.09,
+          "low": 55.87,
+          "close": 56.14,
+          "pnl_pct": -0.73
+        }
+      },
+      "close_date": "2026-09-01",
+      "close_price": 56.14,
+      "final_pnl_pct": -0.73,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -1.44,
+      "position_usd": 196.65
+    },
+    {
+      "ticker": "VIRT",
+      "name": "Virtu Financial",
+      "action": "BUY",
+      "signal_date": "2026-08-28",
+      "entry_price": 66.39,
+      "allocated_usd": 500,
+      "shares": 7.5313,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 76.35,
+      "stop_loss": 65.06,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 66.5,
+          "high": 67.67,
+          "low": 65.58,
+          "close": 65.64,
+          "pnl_pct": -1.13
+        },
+        "2026-09-01": {
+          "open": 65.38,
+          "high": 66.45,
+          "low": 63.64,
+          "close": 65.86,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-09-01",
+      "close_price": 65.06,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.77,
+      "position_usd": 188.32
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 157,
+    "total_trades": 159,
     "win_trades": 40,
-    "win_rate": 25.5,
-    "total_realized_pnl_usd": -32.23,
-    "open_unrealized_pnl_usd": 24.38,
-    "portfolio_value": 1992.15,
-    "total_commission_usd": 314.0,
+    "win_rate": 25.2,
+    "total_realized_pnl_usd": -37.43,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 1987.21,
+    "total_commission_usd": 318.0,
     "skipped_gap": 62,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 191,
-    "updated_at": "2026-08-31"
+    "skipped_no_cash": 193,
+    "updated_at": "2026-09-01"
   }
 };

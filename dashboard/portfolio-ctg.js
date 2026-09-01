@@ -1371,6 +1371,64 @@ window.PORTFOLIO_CTG = {
       "position_usd": 215.45
     },
     {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-16",
+      "day1_open": 65.33,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.33,
+          "high": 66.2,
+          "low": 65.31,
+          "close": 65.92,
+          "pnl_pct": -1.03
+        },
+        "2026-07-13": {
+          "open": 65.87,
+          "high": 66.52,
+          "low": 65.63,
+          "close": 66.11,
+          "pnl_pct": -1.32
+        },
+        "2026-07-14": {
+          "open": 66.16,
+          "high": 67.0,
+          "low": 65.47,
+          "close": 66.08,
+          "pnl_pct": -1.27
+        },
+        "2026-07-15": {
+          "open": 66.8,
+          "high": 67.31,
+          "low": 65.69,
+          "close": 67.13,
+          "pnl_pct": -2.88
+        },
+        "2026-07-16": {
+          "open": 67.48,
+          "high": 69.91,
+          "low": 67.48,
+          "close": 69.45,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 67.86,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.62,
+      "position_usd": 215.45
+    },
+    {
       "ticker": "ITIC",
       "name": "ITIC",
       "action": "SELL",
@@ -1577,15 +1635,15 @@ window.PORTFOLIO_CTG = {
   ],
   "_note": "c-tight 变体:Plan C 出场(TP8/SL4/5天)+ 跳空过滤 >1.0% 跳过(比 c 更紧)",
   "stats": {
-    "total_trades": 35,
+    "total_trades": 36,
     "win_trades": 24,
-    "win_rate": 68.6,
-    "total_realized_pnl_usd": 194.24,
+    "win_rate": 66.7,
+    "total_realized_pnl_usd": 185.62,
     "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2194.24,
-    "total_commission_usd": 70.0,
-    "skipped_gap": 17,
+    "portfolio_value": 2185.62,
+    "total_commission_usd": 72.0,
+    "skipped_gap": 16,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-08-31"
+    "updated_at": "2026-09-01"
   }
 };

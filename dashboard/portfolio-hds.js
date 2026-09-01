@@ -121,56 +121,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "URBN",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-28",
-      "entry_price": 81.09,
-      "allocated_usd": 500,
-      "shares": 6.166,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 68.93,
-      "stop_loss": 82.71,
-      "max_hold_date": "2026-09-01",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 80.44,
-          "high": 81.33,
-          "low": 79.11,
-          "close": 80.69,
-          "pnl_pct": 0.49
-        }
-      },
-      "position_usd": 229.89,
-      "unrealized_pnl_usd": 1.13
-    },
-    {
-      "ticker": "ITIC",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-28",
-      "entry_price": 299.34,
-      "allocated_usd": 500,
-      "shares": 1.6703,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 254.44,
-      "stop_loss": 305.33,
-      "max_hold_date": "2026-09-01",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 297.7,
-          "high": 299.11,
-          "low": 292.05,
-          "close": 294.4,
-          "pnl_pct": 1.65
-        }
-      },
-      "position_usd": 229.89,
-      "unrealized_pnl_usd": 3.79
-    },
-    {
       "ticker": "TISI",
       "name": "",
       "action": "SELL",
@@ -183,25 +133,67 @@ window.PORTFOLIO_HDS = {
       "take_profit": 21.03,
       "stop_loss": 25.23,
       "max_hold_date": "2026-09-02",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-01": {
+          "open": 24.75,
+          "high": 25.19,
+          "low": 24.28,
+          "close": 24.92,
+          "pnl_pct": -0.73
+        }
+      },
       "position_usd": 231.37,
+      "unrealized_pnl_usd": -1.69
+    },
+    {
+      "ticker": "TISI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-01",
+      "entry_price": 24.7,
+      "allocated_usd": 500,
+      "shares": 20.2429,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 20.99,
+      "stop_loss": 25.19,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {},
+      "position_usd": 232.44,
       "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "MVBF",
       "name": "",
-      "action": "SELL",
-      "signal_date": "2026-08-31",
-      "entry_price": 30.43,
+      "action": "BUY",
+      "signal_date": "2026-09-01",
+      "entry_price": 30.07,
       "allocated_usd": 500,
-      "shares": 16.4312,
+      "shares": 16.6279,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 25.87,
-      "stop_loss": 31.04,
-      "max_hold_date": "2026-09-02",
+      "take_profit": 34.58,
+      "stop_loss": 29.47,
+      "max_hold_date": "2026-09-03",
       "daily_prices": {},
-      "position_usd": 231.37,
+      "position_usd": 232.44,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "IPGP",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-01",
+      "entry_price": 76.97,
+      "allocated_usd": 500,
+      "shares": 6.496,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 65.42,
+      "stop_loss": 78.51,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {},
+      "position_usd": 232.44,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4264,7 +4256,7 @@ window.PORTFOLIO_HDS = {
         },
         "2026-08-31": {
           "open": 5.48,
-          "high": 5.48,
+          "high": 5.6,
           "low": 5.25,
           "close": 5.25,
           "pnl_pct": 6.42
@@ -4278,20 +4270,127 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": 14.74,
       "position_usd": 229.56
+    },
+    {
+      "ticker": "URBN",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-28",
+      "entry_price": 81.09,
+      "allocated_usd": 500,
+      "shares": 6.166,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 68.93,
+      "stop_loss": 82.71,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 80.44,
+          "high": 81.33,
+          "low": 79.11,
+          "close": 80.69,
+          "pnl_pct": 0.49
+        },
+        "2026-09-01": {
+          "open": 80.5,
+          "high": 80.5,
+          "low": 76.9,
+          "close": 77.33,
+          "pnl_pct": 4.64
+        }
+      },
+      "close_date": "2026-09-01",
+      "close_price": 77.33,
+      "final_pnl_pct": 4.64,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 10.67,
+      "position_usd": 229.89
+    },
+    {
+      "ticker": "ITIC",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-28",
+      "entry_price": 299.34,
+      "allocated_usd": 500,
+      "shares": 1.6703,
+      "actual_position_usd": 499.99,
+      "entry_commission": 1.0,
+      "take_profit": 254.44,
+      "stop_loss": 305.33,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 297.7,
+          "high": 300.06,
+          "low": 291.05,
+          "close": 294.4,
+          "pnl_pct": 1.65
+        },
+        "2026-09-01": {
+          "open": 294.85,
+          "high": 298.32,
+          "low": 293.23,
+          "close": 293.23,
+          "pnl_pct": 2.04
+        }
+      },
+      "close_date": "2026-09-01",
+      "close_price": 293.23,
+      "final_pnl_pct": 2.04,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 4.69,
+      "position_usd": 229.89
+    },
+    {
+      "ticker": "URBN",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-08-31",
+      "entry_price": 81.09,
+      "allocated_usd": 500,
+      "shares": 6.166,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 93.25,
+      "stop_loss": 79.47,
+      "max_hold_date": "2026-09-02",
+      "daily_prices": {
+        "2026-09-01": {
+          "open": 80.5,
+          "high": 80.5,
+          "low": 76.9,
+          "close": 77.33,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-09-01",
+      "close_price": 79.47,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.63,
+      "position_usd": 231.37
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 114,
-    "win_trades": 60,
-    "win_rate": 52.6,
-    "total_realized_pnl_usd": 313.67,
-    "open_unrealized_pnl_usd": 18.42,
-    "portfolio_value": 2332.09,
-    "total_commission_usd": 228.0,
+    "total_trades": 117,
+    "win_trades": 62,
+    "win_rate": 53.0,
+    "total_realized_pnl_usd": 324.4,
+    "open_unrealized_pnl_usd": 11.82,
+    "portfolio_value": 2336.22,
+    "total_commission_usd": 234.0,
     "skipped_gap": 63,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 33,
-    "updated_at": "2026-08-31"
+    "skipped_no_cash": 34,
+    "updated_at": "2026-09-01"
   }
 };
