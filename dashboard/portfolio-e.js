@@ -1383,34 +1383,34 @@ window.PORTFOLIO_E = {
       "vix": 15.84,
       "daily_prices": {
         "2026-07-10": {
-          "open": 65.33,
-          "high": 66.2,
-          "low": 65.31,
-          "close": 65.92,
-          "pnl_pct": -1.03
+          "open": 65.92,
+          "high": 66.8,
+          "low": 65.9,
+          "close": 66.52,
+          "pnl_pct": -1.95
         },
         "2026-07-13": {
-          "open": 65.87,
-          "high": 66.52,
-          "low": 65.63,
-          "close": 66.11,
-          "pnl_pct": -1.32
+          "open": 66.47,
+          "high": 67.12,
+          "low": 66.22,
+          "close": 66.71,
+          "pnl_pct": -2.24
         },
         "2026-07-14": {
-          "open": 66.16,
-          "high": 67.0,
-          "low": 65.47,
-          "close": 66.08,
-          "pnl_pct": -1.27
+          "open": 66.76,
+          "high": 67.61,
+          "low": 66.06,
+          "close": 66.68,
+          "pnl_pct": -3.0
         }
       },
       "close_date": "2026-07-14",
-      "close_price": 66.08,
-      "final_pnl_pct": -1.27,
-      "close_reason": "max_hold",
+      "close_price": 67.21,
+      "final_pnl_pct": -3.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -7.8
+      "realized_pnl_usd": -15.7
     },
     {
       "ticker": "ITIC",
@@ -1599,9 +1599,9 @@ window.PORTFOLIO_E = {
     "total_trades": 37,
     "win_trades": 20,
     "win_rate": 54.1,
-    "total_realized_pnl_usd": 325.21,
+    "total_realized_pnl_usd": 317.31,
     "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2328.52,
+    "portfolio_value": 2320.62,
     "total_commission_usd": 74.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
