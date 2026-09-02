@@ -1063,6 +1063,36 @@
       "position_usd": 215.2
     },
     {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-10",
+      "day1_open": 65.92,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.92,
+          "high": 66.8,
+          "low": 65.9,
+          "close": 66.52,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-07-10",
+      "close_price": 66.56,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.35,
+      "position_usd": 216.61
+    },
+    {
       "ticker": "SKWD",
       "name": "SKWD",
       "action": "SELL",
@@ -1100,43 +1130,6 @@
       "position_usd": 216.61
     },
     {
-      "ticker": "PFIS",
-      "name": "PFIS",
-      "action": "SELL",
-      "signal_date": "2026-07-09",
-      "entry_price": 65.25,
-      "allocated_usd": 500,
-      "shares": 7,
-      "actual_position_usd": 456.75,
-      "entry_commission": 1.0,
-      "max_hold_date": "2026-07-13",
-      "day1_open": 65.33,
-      "daily_prices": {
-        "2026-07-10": {
-          "open": 65.33,
-          "high": 66.2,
-          "low": 65.31,
-          "close": 65.92,
-          "pnl_pct": -1.03
-        },
-        "2026-07-13": {
-          "open": 65.87,
-          "high": 66.52,
-          "low": 65.63,
-          "close": 66.11,
-          "pnl_pct": -1.32
-        }
-      },
-      "close_date": "2026-07-13",
-      "close_price": 66.11,
-      "final_pnl_pct": -1.32,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -2.86,
-      "position_usd": 216.61
-    },
-    {
       "ticker": "ITIC",
       "name": "ITIC",
       "action": "SELL",
@@ -1171,7 +1164,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 2.23,
-      "position_usd": 216.55
+      "position_usd": 216.4
     },
     {
       "ticker": "TCBK",
@@ -1208,7 +1201,7 @@
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.33,
-      "position_usd": 216.55
+      "position_usd": 216.4
     },
     {
       "ticker": "STRS",
@@ -1244,8 +1237,8 @@
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.69,
-      "position_usd": 216.55
+      "realized_pnl_usd": 2.68,
+      "position_usd": 216.4
     },
     {
       "ticker": "SMPL",
@@ -1281,8 +1274,8 @@
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 22.28,
-      "position_usd": 216.77
+      "realized_pnl_usd": 22.27,
+      "position_usd": 216.62
     }
   ],
   "_note": "c-H 变体:Plan H 出场(TP15/SL2/2天)+ 跳空过滤 1.5%(信号同 c)",
@@ -1290,9 +1283,9 @@
     "total_trades": 36,
     "win_trades": 20,
     "win_rate": 55.6,
-    "total_realized_pnl_usd": 188.34,
+    "total_realized_pnl_usd": 186.83,
     "open_unrealized_pnl_usd": 0.47,
-    "portfolio_value": 2188.81,
+    "portfolio_value": 2187.3,
     "total_commission_usd": 72.0,
     "skipped_gap": 15,
     "skipped_zero_shares": 1,
