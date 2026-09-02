@@ -926,20 +926,20 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-06",
       "daily_prices": {
         "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 3.12
+          "open": 29.12,
+          "high": 29.6,
+          "low": 28.54,
+          "close": 28.75,
+          "pnl_pct": 3.65
         }
       },
       "close_date": "2026-07-06",
-      "close_price": 28.91,
-      "final_pnl_pct": 3.12,
+      "close_price": 28.75,
+      "final_pnl_pct": 3.65,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 12.9
+      "realized_pnl_usd": 15.43
     },
     {
       "ticker": "DGII",
@@ -1053,27 +1053,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-07",
       "daily_prices": {
         "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 1.7
+          "open": 29.12,
+          "high": 29.6,
+          "low": 28.54,
+          "close": 28.75,
+          "pnl_pct": 2.24
         },
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
+          "close": 28.46,
+          "pnl_pct": 3.23
         }
       },
       "close_date": "2026-07-07",
-      "close_price": 28.62,
-      "final_pnl_pct": 2.69,
+      "close_price": 28.46,
+      "final_pnl_pct": 3.23,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 11.45
+      "realized_pnl_usd": 14.15
     },
     {
       "ticker": "LGND",
@@ -1127,27 +1127,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
+          "close": 28.46,
+          "pnl_pct": 3.23
         },
         "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 4.76
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 5.3
         }
       },
       "close_date": "2026-07-08",
-      "close_price": 28.01,
-      "final_pnl_pct": 4.76,
+      "close_price": 27.85,
+      "final_pnl_pct": 5.3,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 21.8
+      "realized_pnl_usd": 24.5
     },
     {
       "ticker": "SKWD",
@@ -1187,6 +1187,43 @@ window.PORTFOLIO_D = {
       "realized_pnl_usd": 2.88
     },
     {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "take_profit": 55.46,
+      "stop_loss": 67.21,
+      "max_hold_date": "2026-07-13",
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.33,
+          "high": 66.2,
+          "low": 65.31,
+          "close": 65.92,
+          "pnl_pct": -1.03
+        },
+        "2026-07-13": {
+          "open": 65.87,
+          "high": 66.52,
+          "low": 65.63,
+          "close": 66.11,
+          "pnl_pct": -1.32
+        }
+      },
+      "close_date": "2026-07-13",
+      "close_price": 66.11,
+      "final_pnl_pct": -1.32,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.03
+    },
+    {
       "ticker": "ITIC",
       "name": "ITIC",
       "action": "SELL",
@@ -1201,27 +1238,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-15",
       "daily_prices": {
         "2026-07-14": {
-          "open": 278.21,
-          "high": 281.14,
-          "low": 277.43,
-          "close": 278.72,
-          "pnl_pct": -0.99
+          "open": 277.78,
+          "high": 280.7,
+          "low": 277.0,
+          "close": 278.28,
+          "pnl_pct": -0.83
         },
         "2026-07-15": {
-          "open": 273.55,
-          "high": 279.3,
-          "low": 271.53,
-          "close": 273.6,
-          "pnl_pct": 0.87
+          "open": 273.12,
+          "high": 278.86,
+          "low": 271.11,
+          "close": 273.17,
+          "pnl_pct": 1.03
         }
       },
       "close_date": "2026-07-15",
-      "close_price": 273.6,
-      "final_pnl_pct": 0.87,
+      "close_price": 273.17,
+      "final_pnl_pct": 1.03,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 0.4
+      "realized_pnl_usd": 0.84
     },
     {
       "ticker": "TCBK",
@@ -1337,13 +1374,13 @@ window.PORTFOLIO_D = {
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 38,
+    "total_trades": 39,
     "win_trades": 23,
-    "win_rate": 60.5,
-    "total_realized_pnl_usd": 294.04,
+    "win_rate": 59.0,
+    "total_realized_pnl_usd": 294.38,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2294.04,
-    "skipped_gap": 14,
-    "updated_at": "2026-09-02"
+    "portfolio_value": 2294.38,
+    "skipped_gap": 13,
+    "updated_at": "2026-09-03"
   }
 };

@@ -1364,20 +1364,41 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-08",
       "daily_prices": {
         "2026-07-02": {
-          "open": 29.99,
-          "high": 30.23,
-          "low": 29.19,
-          "close": 29.41,
-          "pnl_pct": -4.0
+          "open": 29.82,
+          "high": 30.06,
+          "low": 29.03,
+          "close": 29.24,
+          "pnl_pct": -0.79
+        },
+        "2026-07-06": {
+          "open": 29.12,
+          "high": 29.6,
+          "low": 28.54,
+          "close": 28.75,
+          "pnl_pct": 0.9
+        },
+        "2026-07-07": {
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
+          "close": 28.46,
+          "pnl_pct": 1.9
+        },
+        "2026-07-08": {
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 4.0
         }
       },
-      "close_date": "2026-07-02",
-      "close_price": 30.17,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
+      "close_date": "2026-07-08",
+      "close_price": 27.85,
+      "final_pnl_pct": 4.0,
+      "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -21.73
+      "realized_pnl_usd": 17.73
     },
     {
       "ticker": "LGND",
@@ -1438,41 +1459,34 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-09",
       "daily_prices": {
         "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 3.12
+          "open": 29.12,
+          "high": 29.6,
+          "low": 28.54,
+          "close": 28.75,
+          "pnl_pct": 3.65
         },
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 4.09
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 6.13
-        },
-        "2026-07-09": {
-          "open": 28.0,
-          "high": 28.61,
-          "low": 27.92,
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
           "close": 28.46,
           "pnl_pct": 4.62
+        },
+        "2026-07-08": {
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 8.01
         }
       },
-      "close_date": "2026-07-09",
-      "close_price": 28.46,
-      "final_pnl_pct": 4.62,
-      "close_reason": "max_hold",
+      "close_date": "2026-07-08",
+      "close_price": 27.45,
+      "final_pnl_pct": 8.01,
+      "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 20.06
+      "realized_pnl_usd": 36.24
     },
     {
       "ticker": "DGII",
@@ -1635,48 +1649,48 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-10",
       "daily_prices": {
         "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 1.7
+          "open": 29.12,
+          "high": 29.6,
+          "low": 28.54,
+          "close": 28.75,
+          "pnl_pct": 2.24
         },
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 4.76
-        },
-        "2026-07-09": {
-          "open": 28.0,
-          "high": 28.61,
-          "low": 27.92,
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
           "close": 28.46,
           "pnl_pct": 3.23
         },
+        "2026-07-08": {
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 5.3
+        },
+        "2026-07-09": {
+          "open": 27.84,
+          "high": 28.45,
+          "low": 27.76,
+          "close": 28.3,
+          "pnl_pct": 3.77
+        },
         "2026-07-10": {
-          "open": 28.48,
-          "high": 29.47,
-          "low": 28.25,
-          "close": 28.66,
-          "pnl_pct": 2.55
+          "open": 28.32,
+          "high": 29.31,
+          "low": 28.09,
+          "close": 28.5,
+          "pnl_pct": 3.09
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 28.66,
-      "final_pnl_pct": 2.55,
+      "close_price": 28.5,
+      "final_pnl_pct": 3.09,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 10.75
+      "realized_pnl_usd": 13.45
     },
     {
       "ticker": "UTMD",
@@ -1802,48 +1816,48 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 4.76
-        },
-        "2026-07-09": {
-          "open": 28.0,
-          "high": 28.61,
-          "low": 27.92,
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
           "close": 28.46,
           "pnl_pct": 3.23
         },
+        "2026-07-08": {
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 5.3
+        },
+        "2026-07-09": {
+          "open": 27.84,
+          "high": 28.45,
+          "low": 27.76,
+          "close": 28.3,
+          "pnl_pct": 3.77
+        },
         "2026-07-10": {
-          "open": 28.48,
-          "high": 29.47,
-          "low": 28.25,
-          "close": 28.66,
-          "pnl_pct": 2.55
+          "open": 28.32,
+          "high": 29.31,
+          "low": 28.09,
+          "close": 28.5,
+          "pnl_pct": 3.09
         },
         "2026-07-13": {
-          "open": 28.16,
-          "high": 29.15,
-          "low": 28.16,
-          "close": 28.82,
-          "pnl_pct": 2.01
+          "open": 28.0,
+          "high": 28.99,
+          "low": 28.0,
+          "close": 28.66,
+          "pnl_pct": 2.55
         }
       },
       "close_date": "2026-07-13",
-      "close_price": 28.82,
-      "final_pnl_pct": 2.01,
+      "close_price": 28.66,
+      "final_pnl_pct": 2.55,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 8.05
+      "realized_pnl_usd": 10.75
     },
     {
       "ticker": "SKWD",
@@ -1918,35 +1932,42 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-10": {
-          "open": 65.92,
-          "high": 66.8,
-          "low": 65.9,
-          "close": 66.52,
-          "pnl_pct": -1.95
+          "open": 65.33,
+          "high": 66.2,
+          "low": 65.31,
+          "close": 65.92,
+          "pnl_pct": -1.03
         },
         "2026-07-13": {
-          "open": 66.47,
-          "high": 67.12,
-          "low": 66.22,
-          "close": 66.71,
-          "pnl_pct": -2.24
+          "open": 65.87,
+          "high": 66.52,
+          "low": 65.63,
+          "close": 66.11,
+          "pnl_pct": -1.32
         },
         "2026-07-14": {
-          "open": 66.76,
-          "high": 67.61,
-          "low": 66.06,
-          "close": 66.68,
-          "pnl_pct": -2.19
+          "open": 66.16,
+          "high": 67.0,
+          "low": 65.47,
+          "close": 66.08,
+          "pnl_pct": -1.27
         },
         "2026-07-15": {
-          "open": 67.4,
-          "high": 67.92,
-          "low": 66.28,
-          "close": 67.74,
+          "open": 66.8,
+          "high": 67.31,
+          "low": 65.69,
+          "close": 67.13,
+          "pnl_pct": -2.88
+        },
+        "2026-07-16": {
+          "open": 67.48,
+          "high": 69.91,
+          "low": 67.48,
+          "close": 69.45,
           "pnl_pct": -4.0
         }
       },
-      "close_date": "2026-07-15",
+      "close_date": "2026-07-16",
       "close_price": 67.86,
       "final_pnl_pct": -4.0,
       "close_reason": "stop_loss",
@@ -2027,31 +2048,31 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-20",
       "daily_prices": {
         "2026-07-14": {
-          "open": 278.21,
-          "high": 281.14,
-          "low": 277.43,
-          "close": 278.72,
-          "pnl_pct": -0.99
+          "open": 277.78,
+          "high": 280.7,
+          "low": 277.0,
+          "close": 278.28,
+          "pnl_pct": -0.83
         },
         "2026-07-15": {
-          "open": 273.55,
-          "high": 279.3,
-          "low": 271.53,
-          "close": 273.6,
-          "pnl_pct": 0.87
+          "open": 273.12,
+          "high": 278.86,
+          "low": 271.11,
+          "close": 273.17,
+          "pnl_pct": 1.03
         },
         "2026-07-16": {
-          "open": 277.65,
-          "high": 283.97,
-          "low": 277.65,
-          "close": 283.96,
-          "pnl_pct": -2.88
+          "open": 277.22,
+          "high": 283.53,
+          "low": 277.22,
+          "close": 283.52,
+          "pnl_pct": -2.72
         },
         "2026-07-17": {
-          "open": 283.1,
-          "high": 291.44,
-          "low": 283.1,
-          "close": 289.22,
+          "open": 282.66,
+          "high": 290.98,
+          "low": 282.66,
+          "close": 288.77,
           "pnl_pct": -4.0
         }
       },
@@ -2220,11 +2241,11 @@ window.PORTFOLIO_B = {
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 52,
-    "win_trades": 26,
-    "win_rate": 50.0,
-    "total_realized_pnl_usd": 122.92,
+    "win_trades": 27,
+    "win_rate": 51.9,
+    "total_realized_pnl_usd": 183.96,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2122.92,
-    "updated_at": "2026-09-02"
+    "portfolio_value": 2183.96,
+    "updated_at": "2026-09-03"
   }
 };

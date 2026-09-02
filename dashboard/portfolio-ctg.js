@@ -988,45 +988,38 @@ window.PORTFOLIO_CTG = {
       "shares": 16,
       "actual_position_usd": 477.44,
       "entry_commission": 1.0,
-      "max_hold_date": "2026-07-09",
-      "day1_open": 29.28,
+      "max_hold_date": "2026-07-08",
+      "day1_open": 29.12,
       "daily_prices": {
         "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 3.12
+          "open": 29.12,
+          "high": 29.6,
+          "low": 28.54,
+          "close": 28.75,
+          "pnl_pct": 3.65
         },
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 4.09
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 6.13
-        },
-        "2026-07-09": {
-          "open": 28.0,
-          "high": 28.61,
-          "low": 27.92,
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
           "close": 28.46,
           "pnl_pct": 4.62
+        },
+        "2026-07-08": {
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 8.01
         }
       },
-      "close_date": "2026-07-09",
-      "close_price": 28.46,
-      "final_pnl_pct": 4.62,
-      "close_reason": "max_hold",
+      "close_date": "2026-07-08",
+      "close_price": 27.45,
+      "final_pnl_pct": 8.01,
+      "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 9.92,
+      "realized_pnl_usd": 17.21,
       "position_usd": 214.8
     },
     {
@@ -1149,51 +1142,51 @@ window.PORTFOLIO_CTG = {
       "actual_position_usd": 499.97,
       "entry_commission": 1.0,
       "max_hold_date": "2026-07-10",
-      "day1_open": 29.28,
+      "day1_open": 29.12,
       "daily_prices": {
         "2026-07-06": {
-          "open": 29.28,
-          "high": 29.77,
-          "low": 28.7,
-          "close": 28.91,
-          "pnl_pct": 1.7
+          "open": 29.12,
+          "high": 29.6,
+          "low": 28.54,
+          "close": 28.75,
+          "pnl_pct": 2.24
         },
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 4.76
-        },
-        "2026-07-09": {
-          "open": 28.0,
-          "high": 28.61,
-          "low": 27.92,
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
           "close": 28.46,
           "pnl_pct": 3.23
         },
+        "2026-07-08": {
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 5.3
+        },
+        "2026-07-09": {
+          "open": 27.84,
+          "high": 28.45,
+          "low": 27.76,
+          "close": 28.3,
+          "pnl_pct": 3.77
+        },
         "2026-07-10": {
-          "open": 28.48,
-          "high": 29.47,
-          "low": 28.25,
-          "close": 28.66,
-          "pnl_pct": 2.55
+          "open": 28.32,
+          "high": 29.31,
+          "low": 28.09,
+          "close": 28.5,
+          "pnl_pct": 3.09
         }
       },
       "close_date": "2026-07-10",
-      "close_price": 28.66,
-      "final_pnl_pct": 2.55,
+      "close_price": 28.5,
+      "final_pnl_pct": 3.09,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.48,
+      "realized_pnl_usd": 6.64,
       "position_usd": 214.8
     },
     {
@@ -1265,51 +1258,51 @@ window.PORTFOLIO_CTG = {
       "actual_position_usd": 499.97,
       "entry_commission": 1.0,
       "max_hold_date": "2026-07-13",
-      "day1_open": 29.15,
+      "day1_open": 28.99,
       "daily_prices": {
         "2026-07-07": {
-          "open": 29.15,
-          "high": 29.31,
-          "low": 28.58,
-          "close": 28.62,
-          "pnl_pct": 2.69
-        },
-        "2026-07-08": {
-          "open": 28.49,
-          "high": 28.49,
-          "low": 27.61,
-          "close": 28.01,
-          "pnl_pct": 4.76
-        },
-        "2026-07-09": {
-          "open": 28.0,
-          "high": 28.61,
-          "low": 27.92,
+          "open": 28.99,
+          "high": 29.14,
+          "low": 28.41,
           "close": 28.46,
           "pnl_pct": 3.23
         },
+        "2026-07-08": {
+          "open": 28.33,
+          "high": 28.33,
+          "low": 27.45,
+          "close": 27.85,
+          "pnl_pct": 5.3
+        },
+        "2026-07-09": {
+          "open": 27.84,
+          "high": 28.45,
+          "low": 27.76,
+          "close": 28.3,
+          "pnl_pct": 3.77
+        },
         "2026-07-10": {
-          "open": 28.48,
-          "high": 29.47,
-          "low": 28.25,
-          "close": 28.66,
-          "pnl_pct": 2.55
+          "open": 28.32,
+          "high": 29.31,
+          "low": 28.09,
+          "close": 28.5,
+          "pnl_pct": 3.09
         },
         "2026-07-13": {
-          "open": 28.16,
-          "high": 29.15,
-          "low": 28.16,
-          "close": 28.82,
-          "pnl_pct": 2.01
+          "open": 28.0,
+          "high": 28.99,
+          "low": 28.0,
+          "close": 28.66,
+          "pnl_pct": 2.55
         }
       },
       "close_date": "2026-07-13",
-      "close_price": 28.82,
-      "final_pnl_pct": 2.01,
+      "close_price": 28.66,
+      "final_pnl_pct": 2.55,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.32,
+      "realized_pnl_usd": 5.48,
       "position_usd": 214.8
     },
     {
@@ -1367,8 +1360,66 @@ window.PORTFOLIO_CTG = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.79,
-      "position_usd": 215.45
+      "realized_pnl_usd": 6.81,
+      "position_usd": 216.17
+    },
+    {
+      "ticker": "PFIS",
+      "name": "PFIS",
+      "action": "SELL",
+      "signal_date": "2026-07-09",
+      "entry_price": 65.25,
+      "allocated_usd": 500,
+      "shares": 7,
+      "actual_position_usd": 456.75,
+      "entry_commission": 1.0,
+      "max_hold_date": "2026-07-16",
+      "day1_open": 65.33,
+      "daily_prices": {
+        "2026-07-10": {
+          "open": 65.33,
+          "high": 66.2,
+          "low": 65.31,
+          "close": 65.92,
+          "pnl_pct": -1.03
+        },
+        "2026-07-13": {
+          "open": 65.87,
+          "high": 66.52,
+          "low": 65.63,
+          "close": 66.11,
+          "pnl_pct": -1.32
+        },
+        "2026-07-14": {
+          "open": 66.16,
+          "high": 67.0,
+          "low": 65.47,
+          "close": 66.08,
+          "pnl_pct": -1.27
+        },
+        "2026-07-15": {
+          "open": 66.8,
+          "high": 67.31,
+          "low": 65.69,
+          "close": 67.13,
+          "pnl_pct": -2.88
+        },
+        "2026-07-16": {
+          "open": 67.48,
+          "high": 69.91,
+          "low": 67.48,
+          "close": 69.45,
+          "pnl_pct": -4.0
+        }
+      },
+      "close_date": "2026-07-16",
+      "close_price": 67.86,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -8.65,
+      "position_usd": 216.17
     },
     {
       "ticker": "ITIC",
@@ -1381,34 +1432,34 @@ window.PORTFOLIO_CTG = {
       "actual_position_usd": 276.0,
       "entry_commission": 1.0,
       "max_hold_date": "2026-07-17",
-      "day1_open": 278.21,
+      "day1_open": 277.78,
       "daily_prices": {
         "2026-07-14": {
-          "open": 278.21,
-          "high": 281.14,
-          "low": 277.43,
-          "close": 278.72,
-          "pnl_pct": -0.99
+          "open": 277.78,
+          "high": 280.7,
+          "low": 277.0,
+          "close": 278.28,
+          "pnl_pct": -0.83
         },
         "2026-07-15": {
-          "open": 273.55,
-          "high": 279.3,
-          "low": 271.53,
-          "close": 273.6,
-          "pnl_pct": 0.87
+          "open": 273.12,
+          "high": 278.86,
+          "low": 271.11,
+          "close": 273.17,
+          "pnl_pct": 1.03
         },
         "2026-07-16": {
-          "open": 277.65,
-          "high": 283.97,
-          "low": 277.65,
-          "close": 283.96,
-          "pnl_pct": -2.88
+          "open": 277.22,
+          "high": 283.53,
+          "low": 277.22,
+          "close": 283.52,
+          "pnl_pct": -2.72
         },
         "2026-07-17": {
-          "open": 283.1,
-          "high": 291.44,
-          "low": 283.1,
-          "close": 289.22,
+          "open": 282.66,
+          "high": 290.98,
+          "low": 282.66,
+          "close": 288.77,
           "pnl_pct": -4.0
         }
       },
@@ -1418,8 +1469,8 @@ window.PORTFOLIO_CTG = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -8.69,
-      "position_usd": 217.34
+      "realized_pnl_usd": -8.73,
+      "position_usd": 218.3
     },
     {
       "ticker": "TCBK",
@@ -1477,7 +1528,7 @@ window.PORTFOLIO_CTG = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 0.11,
-      "position_usd": 217.34
+      "position_usd": 218.3
     },
     {
       "ticker": "STRS",
@@ -1534,8 +1585,8 @@ window.PORTFOLIO_CTG = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.19,
-      "position_usd": 217.34
+      "realized_pnl_usd": 5.22,
+      "position_usd": 218.3
     },
     {
       "ticker": "SMPL",
@@ -1571,21 +1622,21 @@ window.PORTFOLIO_CTG = {
       "close_reason": "take_profit",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 17.43,
-      "position_usd": 217.34
+      "realized_pnl_usd": 17.51,
+      "position_usd": 218.3
     }
   ],
   "_note": "c-tight 变体:Plan C 出场(TP8/SL4/5天)+ 跳空过滤 >1.0% 跳过(比 c 更紧)",
   "stats": {
-    "total_trades": 35,
+    "total_trades": 36,
     "win_trades": 24,
-    "win_rate": 68.6,
-    "total_realized_pnl_usd": 194.24,
+    "win_rate": 66.7,
+    "total_realized_pnl_usd": 195.28,
     "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2194.24,
-    "total_commission_usd": 70.0,
-    "skipped_gap": 17,
+    "portfolio_value": 2195.28,
+    "total_commission_usd": 72.0,
+    "skipped_gap": 16,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-09-01"
+    "updated_at": "2026-09-02"
   }
 };
