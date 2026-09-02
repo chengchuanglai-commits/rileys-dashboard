@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-02",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "URBN",
+      "action": "BUY",
+      "current_price": 79.29,
+      "target_price": 87.22,
+      "stop_loss": 75.33
+    },
+    {
+      "ticker": "XNCR",
+      "action": "SELL",
+      "current_price": 27.91,
+      "target_price": 30.7,
+      "stop_loss": 26.51
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 24.75,
+      "target_price": 27.23,
+      "stop_loss": 23.51
+    },
+    {
+      "ticker": "MTRX",
+      "action": "BUY",
+      "current_price": 10.7,
+      "target_price": 11.77,
+      "stop_loss": 10.16
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "MVBF",
+      "action": "HOLD",
+      "current_price": 30.25,
+      "target_price": 33.28,
+      "stop_loss": 28.74
+    },
+    {
+      "ticker": "URBN",
+      "action": "BUY",
+      "current_price": 79.29,
+      "target_price": 87.22,
+      "stop_loss": 75.33
+    },
+    {
+      "ticker": "XNCR",
+      "action": "SELL",
+      "current_price": 27.91,
+      "target_price": 30.7,
+      "stop_loss": 26.51
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 24.75,
+      "target_price": 27.23,
+      "stop_loss": 23.51
+    },
+    {
+      "ticker": "VLGEA",
+      "action": "HOLD",
+      "current_price": 42.98,
+      "target_price": 47.28,
+      "stop_loss": 40.83
+    },
+    {
+      "ticker": "CDNA",
+      "action": "HOLD",
+      "current_price": 48.97,
+      "target_price": 53.87,
+      "stop_loss": 46.52
+    },
+    {
+      "ticker": "MTRX",
+      "action": "BUY",
+      "current_price": 10.7,
+      "target_price": 11.77,
+      "stop_loss": 10.16
+    },
+    {
+      "ticker": "INBK",
+      "action": "HOLD",
+      "current_price": 27.5,
+      "target_price": 30.25,
+      "stop_loss": 26.12
+    },
+    {
+      "ticker": "JBSS",
+      "action": "SELL",
+      "current_price": 73.88,
+      "target_price": 81.27,
+      "stop_loss": 70.19
+    },
+    {
+      "ticker": "IPGP",
+      "action": "SELL",
+      "current_price": 75.2,
+      "target_price": 82.72,
+      "stop_loss": 71.44
+    },
+    {
+      "ticker": "ITIC",
+      "action": "BUY",
+      "current_price": 293.51,
+      "target_price": 322.86,
+      "stop_loss": 278.83
+    },
+    {
+      "ticker": "LYTS",
+      "action": "SELL",
+      "current_price": 19.62,
+      "target_price": 21.58,
+      "stop_loss": 18.64
+    }
+  ]
+}
