@@ -174,7 +174,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": -0.68
         }
       },
-      "position_usd": 196.78,
+      "position_usd": 196.39,
       "unrealized_pnl_usd": -1.34
     },
     {
@@ -199,8 +199,8 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 7.15
         }
       },
-      "position_usd": 196.78,
-      "unrealized_pnl_usd": 14.07
+      "position_usd": 196.39,
+      "unrealized_pnl_usd": 14.04
     },
     {
       "ticker": "MVBF",
@@ -224,8 +224,8 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 1.98
         }
       },
-      "position_usd": 167.05,
-      "unrealized_pnl_usd": 3.31
+      "position_usd": 164.3,
+      "unrealized_pnl_usd": 3.25
     },
     {
       "ticker": "URBN",
@@ -241,7 +241,7 @@ window.PORTFOLIO_MN = {
       "stop_loss": 77.17,
       "max_hold_date": "2026-09-04",
       "daily_prices": {},
-      "position_usd": 192.83,
+      "position_usd": 192.44,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -5389,6 +5389,37 @@ window.PORTFOLIO_MN = {
       "position_usd": 197.84
     },
     {
+      "ticker": "SCSC",
+      "name": "Scansource",
+      "action": "BUY",
+      "signal_date": "2026-08-27",
+      "entry_price": 58.1,
+      "allocated_usd": 500,
+      "shares": 8.6059,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 66.81,
+      "stop_loss": 56.94,
+      "max_hold_date": "2026-08-31",
+      "daily_prices": {
+        "2026-08-28": {
+          "open": 58.15,
+          "high": 59.31,
+          "low": 56.32,
+          "close": 56.55,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-08-28",
+      "close_price": 56.94,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.96,
+      "position_usd": 197.84
+    },
+    {
       "ticker": "XNCR",
       "name": "Xencor",
       "action": "BUY",
@@ -5402,15 +5433,15 @@ window.PORTFOLIO_MN = {
       "stop_loss": 28.3,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
-        "2026-08-28": {
-          "open": 28.97,
-          "high": 28.97,
-          "low": 25.81,
-          "close": 26.06,
+        "2026-08-31": {
+          "open": 26.0,
+          "high": 27.64,
+          "low": 25.89,
+          "close": 27.26,
           "pnl_pct": -2.01
         }
       },
-      "close_date": "2026-08-28",
+      "close_date": "2026-08-31",
       "close_price": 28.3,
       "final_pnl_pct": -2.01,
       "close_reason": "stop_loss",
@@ -5433,6 +5464,13 @@ window.PORTFOLIO_MN = {
       "stop_loss": 23.46,
       "max_hold_date": "2026-08-31",
       "daily_prices": {
+        "2026-08-28": {
+          "open": 24.3,
+          "high": 25.33,
+          "low": 24.15,
+          "close": 24.74,
+          "pnl_pct": 3.34
+        },
         "2026-08-31": {
           "open": 24.57,
           "high": 25.0,
@@ -5447,38 +5485,7 @@ window.PORTFOLIO_MN = {
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.88,
-      "position_usd": 197.84
-    },
-    {
-      "ticker": "ITIC",
-      "name": "Investors Title",
-      "action": "BUY",
-      "signal_date": "2026-08-27",
-      "entry_price": 303.52,
-      "allocated_usd": 500,
-      "shares": 1.6473,
-      "actual_position_usd": 499.99,
-      "entry_commission": 1.0,
-      "take_profit": 349.05,
-      "stop_loss": 297.45,
-      "max_hold_date": "2026-08-31",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 297.23,
-          "high": 299.59,
-          "low": 290.6,
-          "close": 293.94,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-08-31",
-      "close_price": 297.45,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -3.49,
+      "realized_pnl_usd": 5.18,
       "position_usd": 174.44
     },
     {
@@ -5513,42 +5520,42 @@ window.PORTFOLIO_MN = {
       "position_usd": 197.04
     },
     {
-      "ticker": "SCSC",
-      "name": "施乐控股",
+      "ticker": "VIRT",
+      "name": "Virtu Financial",
       "action": "BUY",
       "signal_date": "2026-08-28",
-      "entry_price": 56.55,
+      "entry_price": 66.15,
       "allocated_usd": 500,
-      "shares": 8.8417,
+      "shares": 7.5586,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 65.03,
-      "stop_loss": 55.42,
+      "take_profit": 76.07,
+      "stop_loss": 64.83,
       "max_hold_date": "2026-09-01",
       "daily_prices": {
         "2026-08-31": {
-          "open": 56.42,
-          "high": 57.63,
-          "low": 55.59,
-          "close": 57.09,
-          "pnl_pct": 0.95
+          "open": 66.26,
+          "high": 67.42,
+          "low": 65.34,
+          "close": 65.4,
+          "pnl_pct": -1.13
         },
         "2026-09-01": {
-          "open": 56.56,
-          "high": 57.31,
-          "low": 55.79,
-          "close": 56.24,
-          "pnl_pct": -0.55
+          "open": 65.38,
+          "high": 66.47,
+          "low": 63.64,
+          "close": 65.32,
+          "pnl_pct": -2.0
         }
       },
       "close_date": "2026-09-01",
-      "close_price": 56.24,
-      "final_pnl_pct": -0.55,
-      "close_reason": "max_hold",
+      "close_price": 64.83,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -1.05,
-      "position_usd": 190.68
+      "realized_pnl_usd": -3.81,
+      "position_usd": 190.7
     },
     {
       "ticker": "XNCR",
@@ -5578,8 +5585,8 @@ window.PORTFOLIO_MN = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.96,
-      "position_usd": 196.78
+      "realized_pnl_usd": -3.95,
+      "position_usd": 196.39
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
@@ -5587,9 +5594,9 @@ window.PORTFOLIO_MN = {
     "total_trades": 159,
     "win_trades": 40,
     "win_rate": 25.2,
-    "total_realized_pnl_usd": -36.14,
-    "open_unrealized_pnl_usd": 40.68,
-    "portfolio_value": 2004.54,
+    "total_realized_pnl_usd": -40.06,
+    "open_unrealized_pnl_usd": 40.6,
+    "portfolio_value": 2000.54,
     "total_commission_usd": 318.0,
     "skipped_gap": 63,
     "skipped_zero_shares": 0,

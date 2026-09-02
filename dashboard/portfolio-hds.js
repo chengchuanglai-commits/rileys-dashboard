@@ -142,8 +142,8 @@ window.PORTFOLIO_HDS = {
           "pnl_pct": 2.59
         }
       },
-      "position_usd": 226.48,
-      "unrealized_pnl_usd": 5.87
+      "position_usd": 228.38,
+      "unrealized_pnl_usd": 5.91
     },
     {
       "ticker": "IPGP",
@@ -167,8 +167,8 @@ window.PORTFOLIO_HDS = {
           "pnl_pct": 0.64
         }
       },
-      "position_usd": 226.48,
-      "unrealized_pnl_usd": 1.45
+      "position_usd": 228.38,
+      "unrealized_pnl_usd": 1.46
     },
     {
       "ticker": "URBN",
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 77.7,
       "max_hold_date": "2026-09-04",
       "daily_prices": {},
-      "position_usd": 225.58,
+      "position_usd": 227.47,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 28.47,
       "max_hold_date": "2026-09-04",
       "daily_prices": {},
-      "position_usd": 225.58,
+      "position_usd": 227.47,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4242,37 +4242,6 @@ window.PORTFOLIO_HDS = {
       "position_usd": 226.55
     },
     {
-      "ticker": "URBN",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-08-27",
-      "entry_price": 82.95,
-      "allocated_usd": 500,
-      "shares": 6.0277,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 95.39,
-      "stop_loss": 81.29,
-      "max_hold_date": "2026-08-31",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 80.44,
-          "high": 81.33,
-          "low": 79.11,
-          "close": 80.69,
-          "pnl_pct": -2.0
-        }
-      },
-      "close_date": "2026-08-31",
-      "close_price": 81.29,
-      "final_pnl_pct": -2.0,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -4.52,
-      "position_usd": 226.1
-    },
-    {
       "ticker": "EZPW",
       "name": "",
       "action": "BUY",
@@ -4301,6 +4270,37 @@ window.PORTFOLIO_HDS = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.54,
+      "position_usd": 226.1
+    },
+    {
+      "ticker": "SELF",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-08-27",
+      "entry_price": 5.61,
+      "allocated_usd": 500,
+      "shares": 89.1266,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 4.77,
+      "stop_loss": 5.72,
+      "max_hold_date": "2026-08-31",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 5.48,
+          "high": 5.6,
+          "low": 5.25,
+          "close": 5.25,
+          "pnl_pct": 6.42
+        }
+      },
+      "close_date": "2026-08-31",
+      "close_price": 5.25,
+      "final_pnl_pct": 6.42,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 14.52,
       "position_usd": 226.1
     },
     {
@@ -4407,8 +4407,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.47,
-      "position_usd": 225.98
+      "realized_pnl_usd": -4.51,
+      "position_usd": 227.88
     },
     {
       "ticker": "MVBF",
@@ -4445,8 +4445,8 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.52,
-      "position_usd": 225.98
+      "realized_pnl_usd": -4.56,
+      "position_usd": 227.88
     },
     {
       "ticker": "TISI",
@@ -4476,22 +4476,22 @@ window.PORTFOLIO_HDS = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -4.48,
-      "position_usd": 226.48
+      "realized_pnl_usd": -4.52,
+      "position_usd": 228.38
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 120,
-    "win_trades": 59,
-    "win_rate": 49.2,
-    "total_realized_pnl_usd": 255.76,
-    "open_unrealized_pnl_usd": 20.82,
-    "portfolio_value": 2276.58,
+    "win_trades": 60,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 274.69,
+    "open_unrealized_pnl_usd": 20.88,
+    "portfolio_value": 2295.57,
     "total_commission_usd": 240.0,
-    "skipped_gap": 64,
+    "skipped_gap": 65,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 34,
+    "skipped_no_cash": 33,
     "updated_at": "2026-09-02"
   }
 };
