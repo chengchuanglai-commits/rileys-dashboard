@@ -153,95 +153,71 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 12.7
     },
     {
-      "ticker": "URBN",
-      "name": "Urban Outfitters",
+      "ticker": "CDNA",
+      "name": "CareDx",
       "action": "BUY",
-      "signal_date": "2026-09-01",
-      "entry_price": 79.29,
+      "signal_date": "2026-09-03",
+      "entry_price": 48.54,
       "allocated_usd": 500,
-      "shares": 6.306,
+      "shares": 10.3008,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 91.18,
-      "stop_loss": 77.7,
-      "max_hold_date": "2026-09-03",
-      "daily_prices": {
-        "2026-09-02": {
-          "open": 78.84,
-          "high": 79.58,
-          "low": 77.82,
-          "close": 78.75,
-          "pnl_pct": -0.68
-        }
-      },
-      "position_usd": 196.39,
-      "unrealized_pnl_usd": -1.34
-    },
-    {
-      "ticker": "TISI",
-      "name": "Team Inc.",
-      "action": "BUY",
-      "signal_date": "2026-09-01",
-      "entry_price": 24.75,
-      "allocated_usd": 500,
-      "shares": 20.202,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 28.46,
-      "stop_loss": 24.25,
-      "max_hold_date": "2026-09-03",
-      "daily_prices": {
-        "2026-09-02": {
-          "open": 24.59,
-          "high": 26.52,
-          "low": 24.3,
-          "close": 26.52,
-          "pnl_pct": 7.15
-        }
-      },
-      "position_usd": 196.39,
-      "unrealized_pnl_usd": 14.04
-    },
-    {
-      "ticker": "MVBF",
-      "name": "MVB Financial",
-      "action": "BUY",
-      "signal_date": "2026-09-01",
-      "entry_price": 30.25,
-      "allocated_usd": 500,
-      "shares": 16.5289,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 34.79,
-      "stop_loss": 29.64,
-      "max_hold_date": "2026-09-03",
-      "daily_prices": {
-        "2026-09-02": {
-          "open": 30.22,
-          "high": 31.26,
-          "low": 30.22,
-          "close": 30.85,
-          "pnl_pct": 1.98
-        }
-      },
-      "position_usd": 164.3,
-      "unrealized_pnl_usd": 3.25
-    },
-    {
-      "ticker": "URBN",
-      "name": "Urban Outfitters",
-      "action": "BUY",
-      "signal_date": "2026-09-02",
-      "entry_price": 78.75,
-      "allocated_usd": 500,
-      "shares": 6.3492,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 90.56,
-      "stop_loss": 77.17,
-      "max_hold_date": "2026-09-04",
+      "take_profit": 55.82,
+      "stop_loss": 47.57,
+      "max_hold_date": "2026-09-07",
       "daily_prices": {},
-      "position_usd": 192.44,
+      "position_usd": 198.08,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "XNCR",
+      "name": "Xencor",
+      "action": "BUY",
+      "signal_date": "2026-09-03",
+      "entry_price": 26.58,
+      "allocated_usd": 500,
+      "shares": 18.8111,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 30.57,
+      "stop_loss": 26.05,
+      "max_hold_date": "2026-09-07",
+      "daily_prices": {},
+      "position_usd": 198.08,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SMTC",
+      "name": "Semtech",
+      "action": "BUY",
+      "signal_date": "2026-09-03",
+      "entry_price": 133.03,
+      "allocated_usd": 500,
+      "shares": 3.7586,
+      "actual_position_usd": 500.01,
+      "entry_commission": 1.0,
+      "take_profit": 152.98,
+      "stop_loss": 130.37,
+      "max_hold_date": "2026-09-07",
+      "daily_prices": {},
+      "position_usd": 198.08,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "ANDE",
+      "name": "安德森斯",
+      "action": "BUY",
+      "signal_date": "2026-09-03",
+      "entry_price": 68.17,
+      "allocated_usd": 500,
+      "shares": 7.3346,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 78.4,
+      "stop_loss": 66.81,
+      "max_hold_date": "2026-09-07",
+      "daily_prices": {},
+      "position_usd": 176.15,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -1562,25 +1538,25 @@ window.PORTFOLIO_MN = {
       "name": "Old Dominion Freight Line Inc.",
       "action": "BUY",
       "signal_date": "2026-06-12",
-      "entry_price": 245.75,
+      "entry_price": 245.37,
       "allocated_usd": 500,
-      "shares": 2.0346,
-      "actual_position_usd": 500.0,
+      "shares": 2.0377,
+      "actual_position_usd": 499.99,
       "entry_commission": 1.0,
-      "take_profit": 282.61,
-      "stop_loss": 240.84,
+      "take_profit": 282.18,
+      "stop_loss": 240.46,
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
-          "open": 243.38,
-          "high": 244.39,
-          "low": 235.02,
-          "close": 237.42,
+          "open": 243.0,
+          "high": 244.01,
+          "low": 234.66,
+          "close": 237.05,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 240.84,
+      "close_price": 240.46,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -5389,6 +5365,37 @@ window.PORTFOLIO_MN = {
       "position_usd": 197.84
     },
     {
+      "ticker": "XNCR",
+      "name": "Xencor",
+      "action": "BUY",
+      "signal_date": "2026-08-27",
+      "entry_price": 28.88,
+      "allocated_usd": 500,
+      "shares": 17.313,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 33.21,
+      "stop_loss": 28.3,
+      "max_hold_date": "2026-08-31",
+      "daily_prices": {
+        "2026-08-28": {
+          "open": 28.97,
+          "high": 28.97,
+          "low": 25.81,
+          "close": 26.06,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-08-28",
+      "close_price": 28.3,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.98,
+      "position_usd": 197.84
+    },
+    {
       "ticker": "SCSC",
       "name": "Scansource",
       "action": "BUY",
@@ -5417,37 +5424,6 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.96,
-      "position_usd": 197.84
-    },
-    {
-      "ticker": "XNCR",
-      "name": "Xencor",
-      "action": "BUY",
-      "signal_date": "2026-08-27",
-      "entry_price": 28.88,
-      "allocated_usd": 500,
-      "shares": 17.313,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 33.21,
-      "stop_loss": 28.3,
-      "max_hold_date": "2026-08-31",
-      "daily_prices": {
-        "2026-08-31": {
-          "open": 26.0,
-          "high": 27.64,
-          "low": 25.89,
-          "close": 27.26,
-          "pnl_pct": -2.01
-        }
-      },
-      "close_date": "2026-08-31",
-      "close_price": 28.3,
-      "final_pnl_pct": -2.01,
-      "close_reason": "stop_loss",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -3.98,
       "position_usd": 197.84
     },
     {
@@ -5516,8 +5492,46 @@ window.PORTFOLIO_MN = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.94,
-      "position_usd": 197.04
+      "realized_pnl_usd": -3.93,
+      "position_usd": 196.65
+    },
+    {
+      "ticker": "SCSC",
+      "name": "施乐控股",
+      "action": "BUY",
+      "signal_date": "2026-08-28",
+      "entry_price": 56.55,
+      "allocated_usd": 500,
+      "shares": 8.8417,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 65.03,
+      "stop_loss": 55.42,
+      "max_hold_date": "2026-09-01",
+      "daily_prices": {
+        "2026-08-31": {
+          "open": 56.42,
+          "high": 57.63,
+          "low": 55.59,
+          "close": 57.09,
+          "pnl_pct": 0.95
+        },
+        "2026-09-01": {
+          "open": 56.56,
+          "high": 57.31,
+          "low": 55.79,
+          "close": 56.24,
+          "pnl_pct": -0.55
+        }
+      },
+      "close_date": "2026-09-01",
+      "close_price": 56.24,
+      "final_pnl_pct": -0.55,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -1.08,
+      "position_usd": 196.65
     },
     {
       "ticker": "VIRT",
@@ -5554,8 +5568,8 @@ window.PORTFOLIO_MN = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.81,
-      "position_usd": 190.7
+      "realized_pnl_usd": -3.77,
+      "position_usd": 188.31
     },
     {
       "ticker": "XNCR",
@@ -5586,21 +5600,166 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.95,
-      "position_usd": 196.39
+      "position_usd": 196.29
+    },
+    {
+      "ticker": "URBN",
+      "name": "Urban Outfitters",
+      "action": "BUY",
+      "signal_date": "2026-09-01",
+      "entry_price": 79.29,
+      "allocated_usd": 500,
+      "shares": 6.306,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 91.18,
+      "stop_loss": 77.7,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {
+        "2026-09-02": {
+          "open": 78.84,
+          "high": 79.59,
+          "low": 77.82,
+          "close": 78.75,
+          "pnl_pct": -0.68
+        },
+        "2026-09-03": {
+          "open": 79.93,
+          "high": 80.16,
+          "low": 78.41,
+          "close": 80.07,
+          "pnl_pct": 0.98
+        }
+      },
+      "close_date": "2026-09-03",
+      "close_price": 80.07,
+      "final_pnl_pct": 0.98,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 1.92,
+      "position_usd": 196.29
+    },
+    {
+      "ticker": "TISI",
+      "name": "Team Inc.",
+      "action": "BUY",
+      "signal_date": "2026-09-01",
+      "entry_price": 24.75,
+      "allocated_usd": 500,
+      "shares": 20.202,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 28.46,
+      "stop_loss": 24.25,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {
+        "2026-09-02": {
+          "open": 24.59,
+          "high": 26.76,
+          "low": 24.3,
+          "close": 26.52,
+          "pnl_pct": 7.15
+        },
+        "2026-09-03": {
+          "open": 26.6,
+          "high": 27.99,
+          "low": 26.6,
+          "close": 27.26,
+          "pnl_pct": 10.14
+        }
+      },
+      "close_date": "2026-09-03",
+      "close_price": 27.26,
+      "final_pnl_pct": 10.14,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 19.9,
+      "position_usd": 196.29
+    },
+    {
+      "ticker": "MVBF",
+      "name": "MVB Financial",
+      "action": "BUY",
+      "signal_date": "2026-09-01",
+      "entry_price": 30.25,
+      "allocated_usd": 500,
+      "shares": 16.5289,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 34.79,
+      "stop_loss": 29.64,
+      "max_hold_date": "2026-09-03",
+      "daily_prices": {
+        "2026-09-02": {
+          "open": 30.4,
+          "high": 31.26,
+          "low": 30.22,
+          "close": 30.85,
+          "pnl_pct": 1.98
+        },
+        "2026-09-03": {
+          "open": 31.11,
+          "high": 31.18,
+          "low": 30.84,
+          "close": 30.98,
+          "pnl_pct": 2.41
+        }
+      },
+      "close_date": "2026-09-03",
+      "close_price": 30.98,
+      "final_pnl_pct": 2.41,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 3.94,
+      "position_usd": 163.58
+    },
+    {
+      "ticker": "XNCR",
+      "name": "Xencor",
+      "action": "BUY",
+      "signal_date": "2026-09-02",
+      "entry_price": 26.9,
+      "allocated_usd": 500,
+      "shares": 18.5874,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 30.93,
+      "stop_loss": 26.36,
+      "max_hold_date": "2026-09-04",
+      "daily_prices": {
+        "2026-09-03": {
+          "open": 27.18,
+          "high": 27.23,
+          "low": 26.13,
+          "close": 26.58,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-09-03",
+      "close_price": 26.36,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.87,
+      "position_usd": 192.34
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 159,
-    "win_trades": 40,
-    "win_rate": 25.2,
-    "total_realized_pnl_usd": -40.06,
-    "open_unrealized_pnl_usd": 40.6,
-    "portfolio_value": 2000.54,
-    "total_commission_usd": 318.0,
-    "skipped_gap": 63,
+    "total_trades": 164,
+    "win_trades": 43,
+    "win_rate": 26.2,
+    "total_realized_pnl_usd": -19.18,
+    "open_unrealized_pnl_usd": 24.64,
+    "portfolio_value": 2005.46,
+    "total_commission_usd": 328.0,
+    "skipped_gap": 62,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 198,
-    "updated_at": "2026-09-02"
+    "skipped_no_cash": 200,
+    "updated_at": "2026-09-03"
   }
 };

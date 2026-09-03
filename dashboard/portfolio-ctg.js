@@ -1637,6 +1637,6 @@ window.PORTFOLIO_CTG = {
     "total_commission_usd": 72.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-09-02"
+    "updated_at": "2026-09-03"
   }
 };
