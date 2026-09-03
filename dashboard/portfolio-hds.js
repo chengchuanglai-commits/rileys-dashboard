@@ -138,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 79.93,
           "high": 81.37,
           "low": 78.41,
-          "close": 80.45,
-          "pnl_pct": 1.46
+          "close": 80.58,
+          "pnl_pct": 1.63
         }
       },
       "position_usd": 227.47,
-      "unrealized_pnl_usd": 3.32
+      "unrealized_pnl_usd": 3.71
     },
     {
       "ticker": "XNCR",
@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 27.18,
           "high": 27.23,
           "low": 26.08,
-          "close": 26.18,
-          "pnl_pct": 6.2
+          "close": 26.62,
+          "pnl_pct": 4.62
         }
       },
       "position_usd": 227.47,
-      "unrealized_pnl_usd": 14.1
+      "unrealized_pnl_usd": 10.51
     },
     {
       "ticker": "MTRX",
@@ -184,7 +184,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 10.64,
       "max_hold_date": "2026-09-07",
       "daily_prices": {},
-      "position_usd": 228.15,
+      "position_usd": 228.25,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +201,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 27.05,
       "max_hold_date": "2026-09-07",
       "daily_prices": {},
-      "position_usd": 228.15,
+      "position_usd": 228.25,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4511,17 +4511,17 @@ window.PORTFOLIO_HDS = {
           "open": 31.11,
           "high": 31.23,
           "low": 30.84,
-          "close": 31.04,
-          "pnl_pct": 3.23
+          "close": 30.91,
+          "pnl_pct": 2.79
         }
       },
       "close_date": "2026-09-03",
-      "close_price": 31.04,
-      "final_pnl_pct": 3.23,
+      "close_price": 30.91,
+      "final_pnl_pct": 2.79,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.38,
+      "realized_pnl_usd": 6.37,
       "position_usd": 228.37
     },
     {
@@ -4549,28 +4549,28 @@ window.PORTFOLIO_HDS = {
           "open": 76.48,
           "high": 77.86,
           "low": 75.18,
-          "close": 77.15,
-          "pnl_pct": -0.23
+          "close": 76.46,
+          "pnl_pct": 0.66
         }
       },
       "close_date": "2026-09-03",
-      "close_price": 77.15,
-      "final_pnl_pct": -0.23,
+      "close_price": 76.46,
+      "final_pnl_pct": 0.66,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -0.53,
+      "realized_pnl_usd": 1.51,
       "position_usd": 228.37
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
     "total_trades": 122,
-    "win_trades": 61,
-    "win_rate": 50.0,
-    "total_realized_pnl_usd": 281.52,
-    "open_unrealized_pnl_usd": 30.93,
-    "portfolio_value": 2312.45,
+    "win_trades": 62,
+    "win_rate": 50.8,
+    "total_realized_pnl_usd": 282.55,
+    "open_unrealized_pnl_usd": 27.72,
+    "portfolio_value": 2310.27,
     "total_commission_usd": 244.0,
     "skipped_gap": 67,
     "skipped_zero_shares": 0,
