@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-03",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "MTRX",
+      "action": "BUY",
+      "current_price": 10.86,
+      "target_price": 11.95,
+      "stop_loss": 10.32
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.52,
+      "target_price": 29.17,
+      "stop_loss": 25.19
+    },
+    {
+      "ticker": "POWI",
+      "action": "SELL",
+      "current_price": 50.3,
+      "target_price": 55.33,
+      "stop_loss": 47.78
+    },
+    {
+      "ticker": "DAKT",
+      "action": "SELL",
+      "current_price": 19.13,
+      "target_price": 21.04,
+      "stop_loss": 18.17
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "INBK",
+      "action": "HOLD",
+      "current_price": 28.46,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "URBN",
+      "action": "HOLD",
+      "current_price": 78.75,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "ANDE",
+      "action": "HOLD",
+      "current_price": 70.92,
+      "error": "No columns to parse from file"
+    },
+    {
+      "ticker": "SWKS",
+      "action": "HOLD",
+      "current_price": 71.67,
+      "target_price": 78.84,
+      "stop_loss": 68.09
+    },
+    {
+      "ticker": "PAHC",
+      "action": "HOLD",
+      "current_price": 39.92,
+      "error": "No market data for 'PAHC': latest row is 2025-07-31, 399 days before the requested 2026-09-03 (stale) — refusing to use it"
+    },
+    {
+      "ticker": "CHEF",
+      "action": "HOLD",
+      "current_price": 113.43,
+      "target_price": 124.77,
+      "stop_loss": 107.76
+    },
+    {
+      "ticker": "XNCR",
+      "action": "HOLD",
+      "current_price": 26.9,
+      "target_price": 29.59,
+      "stop_loss": 25.55
+    },
+    {
+      "ticker": "MTRX",
+      "action": "BUY",
+      "current_price": 10.86,
+      "target_price": 11.95,
+      "stop_loss": 10.32
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.52,
+      "target_price": 29.17,
+      "stop_loss": 25.19
+    },
+    {
+      "ticker": "POWI",
+      "action": "SELL",
+      "current_price": 50.3,
+      "target_price": 55.33,
+      "stop_loss": 47.78
+    },
+    {
+      "ticker": "VLGEA",
+      "action": "HOLD",
+      "current_price": 42.89,
+      "target_price": 47.18,
+      "stop_loss": 40.75
+    },
+    {
+      "ticker": "DAKT",
+      "action": "SELL",
+      "current_price": 19.13,
+      "target_price": 21.04,
+      "stop_loss": 18.17
+    }
+  ]
+}
