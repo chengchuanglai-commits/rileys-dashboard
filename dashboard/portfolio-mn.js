@@ -170,12 +170,12 @@ window.PORTFOLIO_MN = {
           "open": 138.71,
           "high": 147.79,
           "low": 136.24,
-          "close": 147.65,
-          "pnl_pct": 9.05
+          "close": 145.42,
+          "pnl_pct": 7.4
         }
       },
       "position_usd": 197.77,
-      "unrealized_pnl_usd": 17.9
+      "unrealized_pnl_usd": 14.63
     },
     {
       "ticker": "ANDE",
@@ -194,13 +194,13 @@ window.PORTFOLIO_MN = {
         "2026-09-04": {
           "open": 68.86,
           "high": 70.46,
-          "low": 68.86,
-          "close": 69.38,
-          "pnl_pct": -0.16
+          "low": 68.65,
+          "close": 68.88,
+          "pnl_pct": -0.88
         }
       },
       "position_usd": 197.77,
-      "unrealized_pnl_usd": -0.32
+      "unrealized_pnl_usd": -1.74
     },
     {
       "ticker": "MVBF",
@@ -219,26 +219,26 @@ window.PORTFOLIO_MN = {
         "2026-09-04": {
           "open": 30.88,
           "high": 31.15,
-          "low": 30.87,
-          "close": 31.02,
-          "pnl_pct": 0.36
+          "low": 30.83,
+          "close": 30.83,
+          "pnl_pct": -0.26
         }
       },
       "position_usd": 173.97,
-      "unrealized_pnl_usd": 0.63
+      "unrealized_pnl_usd": -0.45
     },
     {
       "ticker": "CHEF",
       "name": "Chefs' Warehouse",
       "action": "BUY",
       "signal_date": "2026-09-04",
-      "entry_price": 114.94,
+      "entry_price": 114.6,
       "allocated_usd": 500,
-      "shares": 4.3501,
+      "shares": 4.363,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 132.18,
-      "stop_loss": 112.64,
+      "take_profit": 131.79,
+      "stop_loss": 112.31,
       "max_hold_date": "2026-09-08",
       "daily_prices": {},
       "position_usd": 193.79,
@@ -5789,7 +5789,7 @@ window.PORTFOLIO_MN = {
           "open": 49.65,
           "high": 50.48,
           "low": 48.75,
-          "close": 49.81,
+          "close": 50.24,
           "pnl_pct": -2.01
         }
       },
@@ -5809,8 +5809,8 @@ window.PORTFOLIO_MN = {
     "win_trades": 43,
     "win_rate": 26.1,
     "total_realized_pnl_usd": -26.28,
-    "open_unrealized_pnl_usd": 42.84,
-    "portfolio_value": 2016.56,
+    "open_unrealized_pnl_usd": 37.08,
+    "portfolio_value": 2010.8,
     "total_commission_usd": 330.0,
     "skipped_gap": 63,
     "skipped_zero_shares": 0,
