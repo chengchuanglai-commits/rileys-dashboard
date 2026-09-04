@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-04",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "SWKS",
+      "action": "BUY",
+      "current_price": 73.48,
+      "target_price": 80.83,
+      "stop_loss": 69.81
+    },
+    {
+      "ticker": "AOUT",
+      "action": "BUY",
+      "current_price": 14.09,
+      "target_price": 15.5,
+      "stop_loss": 13.39
+    },
+    {
+      "ticker": "MTRX",
+      "action": "SELL",
+      "current_price": 10.31,
+      "target_price": 11.34,
+      "stop_loss": 9.79
+    },
+    {
+      "ticker": "DAKT",
+      "action": "SELL",
+      "current_price": 19.15,
+      "target_price": 21.07,
+      "stop_loss": 18.19
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "SWKS",
+      "action": "BUY",
+      "current_price": 73.48,
+      "target_price": 80.83,
+      "stop_loss": 69.81
+    },
+    {
+      "ticker": "SWBI",
+      "action": "HOLD",
+      "current_price": 13.03,
+      "target_price": 14.33,
+      "stop_loss": 12.38
+    },
+    {
+      "ticker": "AOUT",
+      "action": "BUY",
+      "current_price": 14.09,
+      "target_price": 15.5,
+      "stop_loss": 13.39
+    },
+    {
+      "ticker": "MTRX",
+      "action": "SELL",
+      "current_price": 10.31,
+      "target_price": 11.34,
+      "stop_loss": 9.79
+    },
+    {
+      "ticker": "DAKT",
+      "action": "SELL",
+      "current_price": 19.15,
+      "target_price": 21.07,
+      "stop_loss": 18.19
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 28.0,
+      "target_price": 30.8,
+      "stop_loss": 26.6
+    },
+    {
+      "ticker": "NTAP",
+      "action": "HOLD",
+      "current_price": 186.12,
+      "target_price": 204.73,
+      "stop_loss": 176.81
+    },
+    {
+      "ticker": "ANDE",
+      "action": "HOLD",
+      "current_price": 69.55,
+      "target_price": 76.51,
+      "stop_loss": 66.07
+    },
+    {
+      "ticker": "POWI",
+      "action": "HOLD",
+      "current_price": 50.19,
+      "target_price": 55.21,
+      "stop_loss": 47.68
+    },
+    {
+      "ticker": "PODD",
+      "action": "HOLD",
+      "current_price": 147.73,
+      "target_price": 162.5,
+      "stop_loss": 140.34
+    },
+    {
+      "ticker": "ENOV",
+      "action": "BUY",
+      "current_price": 19.17,
+      "target_price": 21.09,
+      "stop_loss": 18.21
+    },
+    {
+      "ticker": "WINA",
+      "action": "SELL",
+      "current_price": 321.53,
+      "target_price": 353.68,
+      "stop_loss": 305.45
+    }
+  ]
+}
