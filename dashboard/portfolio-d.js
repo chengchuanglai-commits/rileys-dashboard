@@ -688,27 +688,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-23",
       "daily_prices": {
         "2026-06-22": {
-          "open": 36.1,
-          "high": 36.85,
-          "low": 36.1,
-          "close": 36.7,
-          "pnl_pct": -1.13
+          "open": 35.77,
+          "high": 36.51,
+          "low": 35.77,
+          "close": 36.36,
+          "pnl_pct": -0.19
         },
         "2026-06-23": {
-          "open": 36.59,
-          "high": 37.36,
-          "low": 36.59,
-          "close": 37.28,
-          "pnl_pct": -2.73
+          "open": 36.25,
+          "high": 37.02,
+          "low": 36.25,
+          "close": 36.94,
+          "pnl_pct": -1.79
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 37.28,
-      "final_pnl_pct": -2.73,
+      "close_price": 36.94,
+      "final_pnl_pct": -1.79,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -14.88
+      "realized_pnl_usd": -10.44
     },
     {
       "ticker": "SWBI",
@@ -785,17 +785,17 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-23": {
-          "open": 36.59,
-          "high": 37.36,
-          "low": 36.59,
-          "close": 37.28,
-          "pnl_pct": -2.73
+          "open": 36.25,
+          "high": 37.02,
+          "low": 36.25,
+          "close": 36.94,
+          "pnl_pct": -1.79
         },
         "2026-06-24": {
-          "open": 37.28,
-          "high": 38.09,
-          "low": 36.92,
-          "close": 37.86,
+          "open": 36.94,
+          "high": 37.74,
+          "low": 36.58,
+          "close": 37.51,
           "pnl_pct": -3.0
         }
       },
@@ -859,27 +859,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-25": {
-          "open": 36.55,
-          "high": 37.19,
-          "low": 36.55,
-          "close": 36.89,
-          "pnl_pct": -1.07
+          "open": 36.38,
+          "high": 37.02,
+          "low": 36.38,
+          "close": 36.72,
+          "pnl_pct": -0.6
         },
         "2026-06-26": {
-          "open": 37.02,
-          "high": 37.71,
-          "low": 36.5,
-          "close": 36.95,
-          "pnl_pct": -2.99
+          "open": 36.85,
+          "high": 37.53,
+          "low": 36.33,
+          "close": 36.78,
+          "pnl_pct": -0.77
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 37.59,
-      "final_pnl_pct": -2.99,
-      "close_reason": "stop_loss",
+      "close_price": 36.78,
+      "final_pnl_pct": -0.77,
+      "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -16.19
+      "realized_pnl_usd": -5.65
     },
     {
       "ticker": "LGND",
@@ -1412,10 +1412,10 @@ window.PORTFOLIO_D = {
     "total_trades": 40,
     "win_trades": 23,
     "win_rate": 57.5,
-    "total_realized_pnl_usd": 291.38,
+    "total_realized_pnl_usd": 306.36,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2291.38,
+    "portfolio_value": 2306.36,
     "skipped_gap": 12,
-    "updated_at": "2026-09-05"
+    "updated_at": "2026-09-08"
   }
 };

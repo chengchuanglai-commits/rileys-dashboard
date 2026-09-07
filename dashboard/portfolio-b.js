@@ -943,24 +943,24 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-22": {
-          "open": 36.1,
-          "high": 36.85,
-          "low": 36.1,
-          "close": 36.7,
-          "pnl_pct": -1.13
+          "open": 35.77,
+          "high": 36.51,
+          "low": 35.77,
+          "close": 36.36,
+          "pnl_pct": -0.19
         },
         "2026-06-23": {
-          "open": 36.59,
-          "high": 37.36,
-          "low": 36.59,
-          "close": 37.28,
-          "pnl_pct": -2.73
+          "open": 36.25,
+          "high": 37.02,
+          "low": 36.25,
+          "close": 36.94,
+          "pnl_pct": -1.79
         },
         "2026-06-24": {
-          "open": 37.28,
-          "high": 38.09,
-          "low": 36.92,
-          "close": 37.86,
+          "open": 36.94,
+          "high": 37.74,
+          "low": 36.58,
+          "close": 37.51,
           "pnl_pct": -4.0
         }
       },
@@ -1047,17 +1047,17 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-29",
       "daily_prices": {
         "2026-06-23": {
-          "open": 36.59,
-          "high": 37.36,
-          "low": 36.59,
-          "close": 37.28,
-          "pnl_pct": -2.73
+          "open": 36.25,
+          "high": 37.02,
+          "low": 36.25,
+          "close": 36.94,
+          "pnl_pct": -1.79
         },
         "2026-06-24": {
-          "open": 37.28,
-          "high": 38.09,
-          "low": 36.92,
-          "close": 37.86,
+          "open": 36.94,
+          "high": 37.74,
+          "low": 36.58,
+          "close": 37.51,
           "pnl_pct": -4.0
         }
       },
@@ -1202,48 +1202,48 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-07-01",
       "daily_prices": {
         "2026-06-25": {
-          "open": 36.55,
-          "high": 37.19,
-          "low": 36.55,
-          "close": 36.89,
-          "pnl_pct": -1.07
+          "open": 36.38,
+          "high": 37.02,
+          "low": 36.38,
+          "close": 36.72,
+          "pnl_pct": -0.6
         },
         "2026-06-26": {
-          "open": 37.02,
-          "high": 37.71,
-          "low": 36.5,
-          "close": 36.95,
-          "pnl_pct": -1.23
-        },
-        "2026-06-29": {
-          "open": 36.97,
-          "high": 37.7,
-          "low": 36.67,
-          "close": 37.24,
-          "pnl_pct": -2.03
-        },
-        "2026-06-30": {
-          "open": 37.04,
-          "high": 37.4,
-          "low": 36.55,
+          "open": 36.85,
+          "high": 37.53,
+          "low": 36.33,
           "close": 36.78,
           "pnl_pct": -0.77
         },
+        "2026-06-29": {
+          "open": 36.8,
+          "high": 37.52,
+          "low": 36.5,
+          "close": 37.07,
+          "pnl_pct": -1.56
+        },
+        "2026-06-30": {
+          "open": 36.87,
+          "high": 37.22,
+          "low": 36.38,
+          "close": 36.61,
+          "pnl_pct": -0.3
+        },
         "2026-07-01": {
-          "open": 36.56,
-          "high": 37.97,
-          "low": 36.56,
-          "close": 37.64,
-          "pnl_pct": -4.0
+          "open": 36.39,
+          "high": 37.79,
+          "low": 36.39,
+          "close": 37.46,
+          "pnl_pct": -2.63
         }
       },
       "close_date": "2026-07-01",
-      "close_price": 37.96,
-      "final_pnl_pct": -4.0,
-      "close_reason": "stop_loss",
+      "close_price": 37.46,
+      "final_pnl_pct": -2.63,
+      "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -20.98
+      "realized_pnl_usd": -14.48
     },
     {
       "ticker": "SBFG",
@@ -2243,9 +2243,9 @@ window.PORTFOLIO_B = {
     "total_trades": 52,
     "win_trades": 27,
     "win_rate": 51.9,
-    "total_realized_pnl_usd": 183.96,
+    "total_realized_pnl_usd": 190.46,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2183.96,
-    "updated_at": "2026-09-05"
+    "portfolio_value": 2190.46,
+    "updated_at": "2026-09-08"
   }
 };
