@@ -228,20 +228,20 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 1.81
     },
     {
-      "ticker": "CHEF",
-      "name": "Chefs' Warehouse",
+      "ticker": "AOUT",
+      "name": "美国户外品牌",
       "action": "BUY",
-      "signal_date": "2026-09-04",
-      "entry_price": 114.36,
+      "signal_date": "2026-09-08",
+      "entry_price": 14.48,
       "allocated_usd": 500,
-      "shares": 4.3722,
+      "shares": 34.5304,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 131.51,
-      "stop_loss": 112.07,
-      "max_hold_date": "2026-09-08",
+      "take_profit": 16.65,
+      "stop_loss": 14.19,
+      "max_hold_date": "2026-09-10",
       "daily_prices": {},
-      "position_usd": 193.79,
+      "position_usd": 189.92,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -5801,20 +5801,51 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.98,
       "position_usd": 197.77
+    },
+    {
+      "ticker": "CHEF",
+      "name": "Chefs' Warehouse",
+      "action": "BUY",
+      "signal_date": "2026-09-04",
+      "entry_price": 114.36,
+      "allocated_usd": 500,
+      "shares": 4.3722,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 131.51,
+      "stop_loss": 112.07,
+      "max_hold_date": "2026-09-08",
+      "daily_prices": {
+        "2026-09-08": {
+          "open": 114.64,
+          "high": 115.05,
+          "low": 111.86,
+          "close": 112.12,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-09-08",
+      "close_price": 112.07,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.88,
+      "position_usd": 193.79
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 165,
+    "total_trades": 166,
     "win_trades": 43,
-    "win_rate": 26.1,
-    "total_realized_pnl_usd": -26.28,
+    "win_rate": 25.9,
+    "total_realized_pnl_usd": -30.15,
     "open_unrealized_pnl_usd": 44.17,
-    "portfolio_value": 2017.89,
-    "total_commission_usd": 330.0,
+    "portfolio_value": 2014.02,
+    "total_commission_usd": 332.0,
     "skipped_gap": 63,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 202,
-    "updated_at": "2026-09-07"
+    "skipped_no_cash": 214,
+    "updated_at": "2026-09-08"
   }
 };
