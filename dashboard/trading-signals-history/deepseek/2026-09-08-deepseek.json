@@ -1,0 +1,113 @@
+{
+  "date": "2026-09-08",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.73,
+      "target_price": 29.4,
+      "stop_loss": 25.39
+    },
+    {
+      "ticker": "ENOV",
+      "action": "SELL",
+      "current_price": 18.78,
+      "target_price": 20.66,
+      "stop_loss": 17.84
+    },
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 13.08,
+      "target_price": 14.39,
+      "stop_loss": 12.43
+    },
+    {
+      "ticker": "ANDE",
+      "action": "BUY",
+      "current_price": 71.23,
+      "target_price": 78.35,
+      "stop_loss": 67.67
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "DAKT",
+      "action": "HOLD",
+      "current_price": 19.84,
+      "target_price": 21.82,
+      "stop_loss": 18.85
+    },
+    {
+      "ticker": "MTRX",
+      "action": "HOLD",
+      "current_price": 10.8,
+      "target_price": 11.88,
+      "stop_loss": 10.26
+    },
+    {
+      "ticker": "AOUT",
+      "action": "HOLD",
+      "current_price": 14.18,
+      "target_price": 15.6,
+      "stop_loss": 13.47
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.73,
+      "target_price": 29.4,
+      "stop_loss": 25.39
+    },
+    {
+      "ticker": "ENOV",
+      "action": "SELL",
+      "current_price": 18.78,
+      "target_price": 20.66,
+      "stop_loss": 17.84
+    },
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 13.08,
+      "target_price": 14.39,
+      "stop_loss": 12.43
+    },
+    {
+      "ticker": "ANDE",
+      "action": "BUY",
+      "current_price": 71.23,
+      "target_price": 78.35,
+      "stop_loss": 67.67
+    },
+    {
+      "ticker": "WINA",
+      "action": "BUY",
+      "current_price": 310.53,
+      "target_price": 341.58,
+      "stop_loss": 295.0
+    },
+    {
+      "ticker": "POWI",
+      "action": "BUY",
+      "current_price": 51.6,
+      "target_price": 56.76,
+      "stop_loss": 49.02
+    },
+    {
+      "ticker": "AEHR",
+      "action": "SELL",
+      "current_price": 93.25,
+      "target_price": 102.58,
+      "stop_loss": 88.59
+    },
+    {
+      "ticker": "AMBA",
+      "action": "SELL",
+      "current_price": 64.82,
+      "target_price": 71.3,
+      "stop_loss": 61.58
+    }
+  ]
+}
