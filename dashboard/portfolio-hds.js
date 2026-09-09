@@ -121,40 +121,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "TISI",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-09-08",
-      "entry_price": 26.73,
-      "allocated_usd": 500,
-      "shares": 18.7056,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 22.72,
-      "stop_loss": 27.26,
-      "max_hold_date": "2026-09-10",
-      "daily_prices": {},
-      "position_usd": 230.82,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
-      "ticker": "ENOV",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-09-08",
-      "entry_price": 18.78,
-      "allocated_usd": 500,
-      "shares": 26.6241,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 15.96,
-      "stop_loss": 19.16,
-      "max_hold_date": "2026-09-10",
-      "daily_prices": {},
-      "position_usd": 230.82,
-      "unrealized_pnl_usd": 0.0
-    },
-    {
       "ticker": "SWBI",
       "name": "",
       "action": "SELL",
@@ -167,9 +133,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 11.12,
       "stop_loss": 13.34,
       "max_hold_date": "2026-09-10",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-09": {
+          "open": 13.12,
+          "high": 13.29,
+          "low": 13.04,
+          "close": 13.29,
+          "pnl_pct": -1.61
+        }
+      },
       "position_usd": 230.82,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -3.72
     },
     {
       "ticker": "ANDE",
@@ -184,6 +158,48 @@ window.PORTFOLIO_HDS = {
       "take_profit": 81.91,
       "stop_loss": 69.81,
       "max_hold_date": "2026-09-10",
+      "daily_prices": {
+        "2026-09-09": {
+          "open": 71.26,
+          "high": 72.0,
+          "low": 69.82,
+          "close": 70.21,
+          "pnl_pct": -1.43
+        }
+      },
+      "position_usd": 230.82,
+      "unrealized_pnl_usd": -3.3
+    },
+    {
+      "ticker": "ATRC",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-09",
+      "entry_price": 53.73,
+      "allocated_usd": 500,
+      "shares": 9.3058,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 45.67,
+      "stop_loss": 54.8,
+      "max_hold_date": "2026-09-11",
+      "daily_prices": {},
+      "position_usd": 230.82,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "SWBI",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-09-09",
+      "entry_price": 13.23,
+      "allocated_usd": 500,
+      "shares": 37.7929,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 15.21,
+      "stop_loss": 12.97,
+      "max_hold_date": "2026-09-11",
       "daily_prices": {},
       "position_usd": 230.82,
       "unrealized_pnl_usd": 0.0
@@ -4722,12 +4738,12 @@ window.PORTFOLIO_HDS = {
     "win_trades": 66,
     "win_rate": 52.0,
     "total_realized_pnl_usd": 308.18,
-    "open_unrealized_pnl_usd": 13.53,
-    "portfolio_value": 2321.71,
+    "open_unrealized_pnl_usd": 6.52,
+    "portfolio_value": 2314.7,
     "total_commission_usd": 254.0,
-    "skipped_gap": 73,
+    "skipped_gap": 75,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 38,
+    "skipped_no_cash": 36,
     "updated_at": "2026-09-09"
   }
 };

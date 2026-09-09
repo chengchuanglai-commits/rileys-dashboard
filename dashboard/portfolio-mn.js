@@ -228,20 +228,20 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 1.81
     },
     {
-      "ticker": "AOUT",
-      "name": "美国户外品牌",
+      "ticker": "SWBI",
+      "name": "史密斯威森",
       "action": "BUY",
-      "signal_date": "2026-09-08",
-      "entry_price": 14.77,
+      "signal_date": "2026-09-09",
+      "entry_price": 13.29,
       "allocated_usd": 500,
-      "shares": 33.8524,
+      "shares": 37.6223,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 16.99,
-      "stop_loss": 14.47,
-      "max_hold_date": "2026-09-10",
+      "take_profit": 15.28,
+      "stop_loss": 13.02,
+      "max_hold_date": "2026-09-11",
       "daily_prices": {},
-      "position_usd": 189.92,
+      "position_usd": 186.06,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -5818,7 +5818,7 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-09-08": {
           "open": 114.64,
-          "high": 115.05,
+          "high": 115.15,
           "low": 107.81,
           "close": 108.86,
           "pnl_pct": -2.0
@@ -5832,20 +5832,51 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.88,
       "position_usd": 193.79
+    },
+    {
+      "ticker": "AOUT",
+      "name": "美国户外品牌",
+      "action": "BUY",
+      "signal_date": "2026-09-08",
+      "entry_price": 14.77,
+      "allocated_usd": 500,
+      "shares": 33.8524,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 16.99,
+      "stop_loss": 14.47,
+      "max_hold_date": "2026-09-10",
+      "daily_prices": {
+        "2026-09-09": {
+          "open": 14.77,
+          "high": 14.8,
+          "low": 14.18,
+          "close": 14.49,
+          "pnl_pct": -2.03
+        }
+      },
+      "close_date": "2026-09-09",
+      "close_price": 14.47,
+      "final_pnl_pct": -2.03,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.86,
+      "position_usd": 189.92
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 166,
+    "total_trades": 167,
     "win_trades": 43,
-    "win_rate": 25.9,
-    "total_realized_pnl_usd": -30.15,
+    "win_rate": 25.7,
+    "total_realized_pnl_usd": -34.01,
     "open_unrealized_pnl_usd": 44.17,
-    "portfolio_value": 2014.02,
-    "total_commission_usd": 332.0,
+    "portfolio_value": 2010.16,
+    "total_commission_usd": 334.0,
     "skipped_gap": 63,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 214,
-    "updated_at": "2026-09-08"
+    "skipped_no_cash": 217,
+    "updated_at": "2026-09-09"
   }
 };
