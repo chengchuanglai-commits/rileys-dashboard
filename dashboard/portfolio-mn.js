@@ -5849,9 +5849,9 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-09-09": {
           "open": 14.77,
-          "high": 14.99,
+          "high": 15.0,
           "low": 14.18,
-          "close": 14.99,
+          "close": 15.0,
           "pnl_pct": -2.03
         }
       },

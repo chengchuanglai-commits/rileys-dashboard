@@ -138,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 71.26,
           "high": 72.0,
           "low": 69.82,
-          "close": 71.29,
-          "pnl_pct": 0.08
+          "close": 71.32,
+          "pnl_pct": 0.13
         }
       },
       "position_usd": 230.82,
-      "unrealized_pnl_usd": 0.18
+      "unrealized_pnl_usd": 0.3
     },
     {
       "ticker": "ATRC",
@@ -4741,7 +4741,7 @@ window.PORTFOLIO_HDS = {
           "open": 13.12,
           "high": 13.53,
           "low": 13.04,
-          "close": 13.38,
+          "close": 13.4,
           "pnl_pct": -1.99
         }
       },
@@ -4761,8 +4761,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 66,
     "win_rate": 51.6,
     "total_realized_pnl_usd": 303.59,
-    "open_unrealized_pnl_usd": 13.72,
-    "portfolio_value": 2317.31,
+    "open_unrealized_pnl_usd": 13.83,
+    "portfolio_value": 2317.42,
     "total_commission_usd": 256.0,
     "skipped_gap": 75,
     "skipped_zero_shares": 0,
