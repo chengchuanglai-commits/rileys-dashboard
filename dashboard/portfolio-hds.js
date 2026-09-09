@@ -121,31 +121,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "SWBI",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-09-08",
-      "entry_price": 13.08,
-      "allocated_usd": 500,
-      "shares": 38.2263,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 11.12,
-      "stop_loss": 13.34,
-      "max_hold_date": "2026-09-10",
-      "daily_prices": {
-        "2026-09-09": {
-          "open": 13.12,
-          "high": 13.29,
-          "low": 13.04,
-          "close": 13.29,
-          "pnl_pct": -1.61
-        }
-      },
-      "position_usd": 230.82,
-      "unrealized_pnl_usd": -3.72
-    },
-    {
       "ticker": "ANDE",
       "name": "",
       "action": "BUY",
@@ -163,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 71.26,
           "high": 72.0,
           "low": 69.82,
-          "close": 70.21,
-          "pnl_pct": -1.43
+          "close": 71.29,
+          "pnl_pct": 0.08
         }
       },
       "position_usd": 230.82,
-      "unrealized_pnl_usd": -3.3
+      "unrealized_pnl_usd": 0.18
     },
     {
       "ticker": "ATRC",
@@ -184,7 +159,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 54.8,
       "max_hold_date": "2026-09-11",
       "daily_prices": {},
-      "position_usd": 230.82,
+      "position_usd": 230.36,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -201,7 +176,24 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 12.97,
       "max_hold_date": "2026-09-11",
       "daily_prices": {},
-      "position_usd": 230.82,
+      "position_usd": 230.36,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "TISI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-09",
+      "entry_price": 27.0,
+      "allocated_usd": 500,
+      "shares": 18.5185,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 22.95,
+      "stop_loss": 27.54,
+      "max_hold_date": "2026-09-11",
+      "daily_prices": {},
+      "position_usd": 230.36,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4730,20 +4722,51 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.55,
       "position_usd": 230.04
+    },
+    {
+      "ticker": "SWBI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-08",
+      "entry_price": 13.08,
+      "allocated_usd": 500,
+      "shares": 38.2263,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 11.12,
+      "stop_loss": 13.34,
+      "max_hold_date": "2026-09-10",
+      "daily_prices": {
+        "2026-09-09": {
+          "open": 13.12,
+          "high": 13.53,
+          "low": 13.04,
+          "close": 13.38,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-09-09",
+      "close_price": 13.34,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.59,
+      "position_usd": 230.82
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 127,
+    "total_trades": 128,
     "win_trades": 66,
-    "win_rate": 52.0,
-    "total_realized_pnl_usd": 308.18,
-    "open_unrealized_pnl_usd": 6.52,
-    "portfolio_value": 2314.7,
-    "total_commission_usd": 254.0,
+    "win_rate": 51.6,
+    "total_realized_pnl_usd": 303.59,
+    "open_unrealized_pnl_usd": 13.72,
+    "portfolio_value": 2317.31,
+    "total_commission_usd": 256.0,
     "skipped_gap": 75,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 36,
+    "skipped_no_cash": 35,
     "updated_at": "2026-09-09"
   }
 };

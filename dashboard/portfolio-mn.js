@@ -232,13 +232,13 @@ window.PORTFOLIO_MN = {
       "name": "史密斯威森",
       "action": "BUY",
       "signal_date": "2026-09-09",
-      "entry_price": 13.29,
+      "entry_price": 13.4,
       "allocated_usd": 500,
-      "shares": 37.6223,
+      "shares": 37.3134,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 15.28,
-      "stop_loss": 13.02,
+      "take_profit": 15.41,
+      "stop_loss": 13.13,
       "max_hold_date": "2026-09-11",
       "daily_prices": {},
       "position_usd": 186.06,
@@ -5849,9 +5849,9 @@ window.PORTFOLIO_MN = {
       "daily_prices": {
         "2026-09-09": {
           "open": 14.77,
-          "high": 14.8,
+          "high": 14.99,
           "low": 14.18,
-          "close": 14.49,
+          "close": 14.99,
           "pnl_pct": -2.03
         }
       },
