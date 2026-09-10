@@ -231,13 +231,13 @@
       "name": "安可资本",
       "action": "BUY",
       "signal_date": "2026-09-10",
-      "entry_price": 97.55,
+      "entry_price": 97.93,
       "allocated_usd": 500,
-      "shares": 5.1256,
+      "shares": 5.1057,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 112.18,
-      "stop_loss": 95.6,
+      "take_profit": 112.62,
+      "stop_loss": 95.97,
       "max_hold_date": "2026-09-14",
       "daily_prices": {},
       "position_usd": 182.32,
@@ -5880,8 +5880,8 @@
         "2026-09-10": {
           "open": 13.31,
           "high": 13.34,
-          "low": 13.12,
-          "close": 13.12,
+          "low": 13.11,
+          "close": 13.18,
           "pnl_pct": -2.01
         }
       },

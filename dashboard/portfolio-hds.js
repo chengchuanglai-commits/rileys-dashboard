@@ -138,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 52.31,
           "high": 53.66,
           "low": 51.86,
-          "close": 53.1,
-          "pnl_pct": 1.17
+          "close": 53.0,
+          "pnl_pct": 1.36
         }
       },
       "position_usd": 230.36,
-      "unrealized_pnl_usd": 2.7
+      "unrealized_pnl_usd": 3.13
     },
     {
       "ticker": "SWBI",
@@ -162,13 +162,13 @@ window.PORTFOLIO_HDS = {
         "2026-09-10": {
           "open": 13.31,
           "high": 13.34,
-          "low": 13.12,
-          "close": 13.12,
-          "pnl_pct": -0.83
+          "low": 13.11,
+          "close": 13.21,
+          "pnl_pct": -0.15
         }
       },
       "position_usd": 230.36,
-      "unrealized_pnl_usd": -1.91
+      "unrealized_pnl_usd": -0.35
     },
     {
       "ticker": "TISI",
@@ -188,12 +188,12 @@ window.PORTFOLIO_HDS = {
           "open": 26.67,
           "high": 26.85,
           "low": 26.32,
-          "close": 26.76,
-          "pnl_pct": 0.89
+          "close": 26.52,
+          "pnl_pct": 1.78
         }
       },
       "position_usd": 230.36,
-      "unrealized_pnl_usd": 2.05
+      "unrealized_pnl_usd": 4.1
     },
     {
       "ticker": "ATRC",
@@ -209,7 +209,7 @@ window.PORTFOLIO_HDS = {
       "stop_loss": 54.09,
       "max_hold_date": "2026-09-14",
       "daily_prices": {},
-      "position_usd": 230.4,
+      "position_usd": 230.73,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4793,19 +4793,19 @@ window.PORTFOLIO_HDS = {
         },
         "2026-09-10": {
           "open": 71.48,
-          "high": 72.27,
+          "high": 72.69,
           "low": 70.98,
-          "close": 71.35,
-          "pnl_pct": 0.17
+          "close": 72.37,
+          "pnl_pct": 1.6
         }
       },
       "close_date": "2026-09-10",
-      "close_price": 71.35,
-      "final_pnl_pct": 0.17,
+      "close_price": 72.37,
+      "final_pnl_pct": 1.6,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 0.39,
+      "realized_pnl_usd": 3.69,
       "position_usd": 230.82
     }
   ],
@@ -4814,9 +4814,9 @@ window.PORTFOLIO_HDS = {
     "total_trades": 129,
     "win_trades": 67,
     "win_rate": 51.9,
-    "total_realized_pnl_usd": 303.98,
-    "open_unrealized_pnl_usd": 16.37,
-    "portfolio_value": 2320.35,
+    "total_realized_pnl_usd": 307.28,
+    "open_unrealized_pnl_usd": 20.42,
+    "portfolio_value": 2327.7,
     "total_commission_usd": 258.0,
     "skipped_gap": 76,
     "skipped_zero_shares": 0,
