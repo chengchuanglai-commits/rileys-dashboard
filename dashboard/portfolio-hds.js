@@ -121,31 +121,6 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "ANDE",
-      "name": "",
-      "action": "BUY",
-      "signal_date": "2026-09-08",
-      "entry_price": 71.23,
-      "allocated_usd": 500,
-      "shares": 7.0195,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 81.91,
-      "stop_loss": 69.81,
-      "max_hold_date": "2026-09-10",
-      "daily_prices": {
-        "2026-09-09": {
-          "open": 71.26,
-          "high": 72.0,
-          "low": 69.82,
-          "close": 71.32,
-          "pnl_pct": 0.13
-        }
-      },
-      "position_usd": 230.82,
-      "unrealized_pnl_usd": 0.3
-    },
-    {
       "ticker": "ATRC",
       "name": "",
       "action": "SELL",
@@ -158,9 +133,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 45.67,
       "stop_loss": 54.8,
       "max_hold_date": "2026-09-11",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-10": {
+          "open": 52.31,
+          "high": 53.66,
+          "low": 51.86,
+          "close": 53.1,
+          "pnl_pct": 1.17
+        }
+      },
       "position_usd": 230.36,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 2.7
     },
     {
       "ticker": "SWBI",
@@ -175,9 +158,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 15.21,
       "stop_loss": 12.97,
       "max_hold_date": "2026-09-11",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-10": {
+          "open": 13.31,
+          "high": 13.34,
+          "low": 13.12,
+          "close": 13.12,
+          "pnl_pct": -0.83
+        }
+      },
       "position_usd": 230.36,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -1.91
     },
     {
       "ticker": "TISI",
@@ -192,8 +183,33 @@ window.PORTFOLIO_HDS = {
       "take_profit": 22.95,
       "stop_loss": 27.54,
       "max_hold_date": "2026-09-11",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-10": {
+          "open": 26.67,
+          "high": 26.85,
+          "low": 26.32,
+          "close": 26.76,
+          "pnl_pct": 0.89
+        }
+      },
       "position_usd": 230.36,
+      "unrealized_pnl_usd": 2.05
+    },
+    {
+      "ticker": "ATRC",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-10",
+      "entry_price": 53.03,
+      "allocated_usd": 500,
+      "shares": 9.4286,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 45.08,
+      "stop_loss": 54.09,
+      "max_hold_date": "2026-09-14",
+      "daily_prices": {},
+      "position_usd": 230.4,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4753,20 +4769,58 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.59,
       "position_usd": 230.82
+    },
+    {
+      "ticker": "ANDE",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-09-08",
+      "entry_price": 71.23,
+      "allocated_usd": 500,
+      "shares": 7.0195,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 81.91,
+      "stop_loss": 69.81,
+      "max_hold_date": "2026-09-10",
+      "daily_prices": {
+        "2026-09-09": {
+          "open": 71.26,
+          "high": 72.0,
+          "low": 69.82,
+          "close": 71.32,
+          "pnl_pct": 0.13
+        },
+        "2026-09-10": {
+          "open": 71.48,
+          "high": 72.27,
+          "low": 70.98,
+          "close": 71.35,
+          "pnl_pct": 0.17
+        }
+      },
+      "close_date": "2026-09-10",
+      "close_price": 71.35,
+      "final_pnl_pct": 0.17,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 0.39,
+      "position_usd": 230.82
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 128,
-    "win_trades": 66,
-    "win_rate": 51.6,
-    "total_realized_pnl_usd": 303.59,
-    "open_unrealized_pnl_usd": 13.83,
-    "portfolio_value": 2317.42,
-    "total_commission_usd": 256.0,
-    "skipped_gap": 75,
+    "total_trades": 129,
+    "win_trades": 67,
+    "win_rate": 51.9,
+    "total_realized_pnl_usd": 303.98,
+    "open_unrealized_pnl_usd": 16.37,
+    "portfolio_value": 2320.35,
+    "total_commission_usd": 258.0,
+    "skipped_gap": 76,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 39,
+    "skipped_no_cash": 37,
     "updated_at": "2026-09-10"
   }
 };

@@ -2246,6 +2246,6 @@ window.PORTFOLIO_B = {
     "total_realized_pnl_usd": 190.46,
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2190.46,
-    "updated_at": "2026-09-10"
+    "updated_at": "2026-09-11"
   }
 };

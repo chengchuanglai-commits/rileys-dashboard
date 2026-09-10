@@ -1730,6 +1730,6 @@ window.PORTFOLIO_F = {
     "total_commission_usd": 90.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 7,
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-10"
   }
 };
