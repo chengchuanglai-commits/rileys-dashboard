@@ -208,7 +208,7 @@ def next_trading_days(start, n):
     return out
 
 
-def reconcile_positions(st, real, today):
+def reconcile_positions(st, real, today, skip_same_day=False):
     """FIFO持仓对账(公共):按symbol汇总期望股数vs真实,缺口新仓优先覆盖旧仓先关,部分覆盖缩股数。
     2026-08-31提炼:收盘批missed(网关离线)时state过期→开盘批自愈会给不存在的仓补挂幻影TRAIL(EZPW实炸),
     故开盘批heal前也必须先对账。返回closed列表。"""
@@ -222,6 +222,10 @@ def reconcile_positions(st, real, today):
         plist.sort(key=lambda x: x["entry_date"], reverse=True)
         held = real.get(sym, 0)
         for p in plist:
+            # 当日新仓豁免(2026-09-10:9/7三笔入场单还在DAY排队,23:05预对账把state误关;
+            # 当晚的成交与否交给次日04:00收盘对账裁,预对账只管隔夜遗留)
+            if skip_same_day and p.get("entry_date") == today:
+                continue
             expect = p["shares"] if p["action"] == "BUY" else -p["shares"]
             if held == 0 or (expect > 0) != (held > 0):
                 covered = False
@@ -256,7 +260,7 @@ def open_batch():
     real0 = {}
     for p_ in ib.positions(acct):
         real0[p_.contract.symbol] = real0.get(p_.contract.symbol, 0) + p_.position
-    pre_closed = reconcile_positions(st, real0, today)
+    pre_closed = reconcile_positions(st, real0, today, skip_same_day=True)
     if pre_closed:
         save_state(st)
         print(f"[hdstr] 开盘前对账补闭环: {pre_closed}")

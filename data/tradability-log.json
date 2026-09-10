@@ -269,5 +269,29 @@
  "2026-08-25": {
   "total": 4,
   "flagged": []
+ },
+ "2026-08-26": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "SELF",
+    "action": "SELL",
+    "why": "ADV$0.2M<5M"
+   }
+  ]
+ },
+ "2026-08-27": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "SELF",
+    "action": "SELL",
+    "why": "ADV$0.2M<5M"
+   }
+  ]
+ },
+ "2026-08-28": {
+  "total": 2,
+  "flagged": []
  }
 }

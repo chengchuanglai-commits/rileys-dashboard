@@ -1,1 +1,1 @@
-{"tunnel_fail": 0, "tunnel_alerted": false, "ib_fail": 0, "ib_alerted": false}
+{"tunnel_fail": 0, "tunnel_alerted": false, "ib_fail": 6, "ib_alerted": true, "last_kick_day": "2026-09-01"}

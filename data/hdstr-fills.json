@@ -124,6 +124,44 @@
    "shares": 3.0,
    "price": 56.0995,
    "slip_vs_ref_pct": 3.39
+  },
+  {
+   "exec_id": "0000f6f6.6a8eee0c.01.01",
+   "time": "2026-08-26 16:33:15+00:00",
+   "sym": "EZPW",
+   "side": "SLD",
+   "shares": 6.0,
+   "price": 34.25,
+   "slip_vs_ref_pct": 1.778
+  },
+  {
+   "exec_id": "00030e5e.6e79b948.01.01",
+   "time": "2026-08-26 19:57:06+00:00",
+   "sym": "OSIS",
+   "side": "BOT",
+   "shares": 1.0,
+   "price": 211.3995,
+   "slip_vs_ref_pct": 3.994
+  },
+  {
+   "exec_id": "exit-VIRT-2026-08-27",
+   "time": "2026-08-27 盘中",
+   "sym": "VIRT",
+   "side": "BOT",
+   "shares": 3,
+   "price": 66.35,
+   "src": "bars_estimate_未核实",
+   "note": "空头TRAIL触发,会话切换吞成交记录,低点63.80×1.04推算"
+  },
+  {
+   "exec_id": "exit-EZPW-2026-08-28",
+   "time": "2026-08-28 盘中",
+   "sym": "EZPW",
+   "side": "SLD",
+   "shares": 5,
+   "price": 34.48,
+   "src": "bars_estimate_未核实",
+   "note": "多头TRAIL触发,周五网关离线服务器端自动执行,峰值35.92×0.96推算"
   }
  ]
 }
