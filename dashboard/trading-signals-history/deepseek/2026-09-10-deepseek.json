@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-10",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "ATRC",
+      "action": "SELL",
+      "current_price": 53.03,
+      "target_price": 58.33,
+      "stop_loss": 50.38
+    },
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 13.4,
+      "target_price": 14.74,
+      "stop_loss": 12.73
+    },
+    {
+      "ticker": "AOUT",
+      "action": "BUY",
+      "current_price": 15.0,
+      "target_price": 16.5,
+      "stop_loss": 14.25
+    },
+    {
+      "ticker": "TBBK",
+      "action": "SELL",
+      "current_price": 50.03,
+      "target_price": 55.03,
+      "stop_loss": 47.53
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "ATRC",
+      "action": "SELL",
+      "current_price": 53.03,
+      "target_price": 58.33,
+      "stop_loss": 50.38
+    },
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 13.4,
+      "target_price": 14.74,
+      "stop_loss": 12.73
+    },
+    {
+      "ticker": "TISI",
+      "action": "HOLD",
+      "current_price": 26.67,
+      "target_price": 29.34,
+      "stop_loss": 25.34
+    },
+    {
+      "ticker": "MTRX",
+      "action": "HOLD",
+      "current_price": 10.68,
+      "target_price": 11.75,
+      "stop_loss": 10.15
+    },
+    {
+      "ticker": "AOUT",
+      "action": "BUY",
+      "current_price": 15.0,
+      "target_price": 16.5,
+      "stop_loss": 14.25
+    },
+    {
+      "ticker": "TBBK",
+      "action": "SELL",
+      "current_price": 50.03,
+      "target_price": 55.03,
+      "stop_loss": 47.53
+    },
+    {
+      "ticker": "HRMY",
+      "action": "BUY",
+      "current_price": 41.62,
+      "target_price": 45.78,
+      "stop_loss": 39.54
+    },
+    {
+      "ticker": "DAKT",
+      "action": "BUY",
+      "current_price": 19.05,
+      "target_price": 20.96,
+      "stop_loss": 18.1
+    },
+    {
+      "ticker": "AMBA",
+      "action": "HOLD",
+      "current_price": 68.8,
+      "target_price": 75.68,
+      "stop_loss": 65.36
+    },
+    {
+      "ticker": "ANDE",
+      "action": "BUY",
+      "current_price": 71.32,
+      "target_price": 78.45,
+      "stop_loss": 67.75
+    },
+    {
+      "ticker": "ENOV",
+      "action": "SELL",
+      "current_price": 19.03,
+      "target_price": 20.93,
+      "stop_loss": 18.08
+    },
+    {
+      "ticker": "INBK",
+      "action": "BUY",
+      "current_price": 28.69,
+      "target_price": 31.56,
+      "stop_loss": 27.26
+    }
+  ]
+}

@@ -4766,7 +4766,7 @@ window.PORTFOLIO_HDS = {
     "total_commission_usd": 256.0,
     "skipped_gap": 75,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 35,
-    "updated_at": "2026-09-09"
+    "skipped_no_cash": 39,
+    "updated_at": "2026-09-10"
   }
 };
