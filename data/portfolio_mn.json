@@ -239,9 +239,17 @@
       "take_profit": 112.63,
       "stop_loss": 95.98,
       "max_hold_date": "2026-09-14",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-11": {
+          "open": 99.3,
+          "high": 101.43,
+          "low": 98.15,
+          "close": 98.57,
+          "pnl_pct": 0.64
+        }
+      },
       "position_usd": 182.32,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 1.17
     }
   ],
   "closed_positions": [
@@ -281,32 +289,32 @@
       "name": "英伟达",
       "action": "BUY",
       "signal_date": "2026-05-19",
-      "entry_price": 220.35,
+      "entry_price": 220.11,
       "allocated_usd": 500,
-      "shares": 2.2691,
+      "shares": 2.2716,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 253.4,
-      "stop_loss": 215.94,
+      "take_profit": 253.13,
+      "stop_loss": 215.71,
       "max_hold_date": "2026-05-21",
       "daily_prices": {
         "2026-05-20": {
-          "open": 222.92,
-          "high": 225.87,
-          "low": 220.24,
-          "close": 223.21,
-          "pnl_pct": 1.3
+          "open": 222.67,
+          "high": 225.61,
+          "low": 220.0,
+          "close": 222.96,
+          "pnl_pct": 1.29
         },
         "2026-05-21": {
-          "open": 222.03,
-          "high": 227.14,
-          "low": 217.68,
-          "close": 219.25,
+          "open": 221.78,
+          "high": 226.88,
+          "low": 217.43,
+          "close": 219.01,
           "pnl_pct": -0.5
         }
       },
       "close_date": "2026-05-21",
-      "close_price": 219.25,
+      "close_price": 219.01,
       "final_pnl_pct": -0.5,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
@@ -795,25 +803,25 @@
       "name": "NVIDIA Corporation",
       "action": "BUY",
       "signal_date": "2026-06-02",
-      "entry_price": 222.56,
+      "entry_price": 222.31,
       "allocated_usd": 500,
-      "shares": 2.2466,
+      "shares": 2.2491,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 255.94,
-      "stop_loss": 218.11,
+      "take_profit": 255.66,
+      "stop_loss": 217.86,
       "max_hold_date": "2026-06-04",
       "daily_prices": {
         "2026-06-03": {
-          "open": 221.46,
-          "high": 222.56,
-          "low": 214.26,
-          "close": 214.5,
+          "open": 221.21,
+          "high": 222.31,
+          "low": 214.02,
+          "close": 214.26,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-03",
-      "close_price": 218.11,
+      "close_price": 217.86,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -5901,12 +5909,12 @@
     "win_trades": 43,
     "win_rate": 25.6,
     "total_realized_pnl_usd": -37.75,
-    "open_unrealized_pnl_usd": 44.17,
-    "portfolio_value": 2006.42,
+    "open_unrealized_pnl_usd": 45.33,
+    "portfolio_value": 2007.58,
     "total_commission_usd": 336.0,
     "skipped_gap": 64,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 222,
-    "updated_at": "2026-09-10"
+    "skipped_no_cash": 228,
+    "updated_at": "2026-09-11"
   }
 }
