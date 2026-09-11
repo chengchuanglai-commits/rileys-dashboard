@@ -121,95 +121,79 @@ window.PORTFOLIO_HDS = {
       "unrealized_pnl_usd": 0.0
     },
     {
-      "ticker": "ATRC",
+      "ticker": "SWBI",
       "name": "",
       "action": "SELL",
-      "signal_date": "2026-09-09",
-      "entry_price": 53.73,
+      "signal_date": "2026-09-10",
+      "entry_price": 13.4,
       "allocated_usd": 500,
-      "shares": 9.3058,
+      "shares": 37.3134,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 45.67,
-      "stop_loss": 54.8,
-      "max_hold_date": "2026-09-11",
+      "take_profit": 11.39,
+      "stop_loss": 13.67,
+      "max_hold_date": "2026-09-14",
       "daily_prices": {
-        "2026-09-10": {
-          "open": 52.31,
-          "high": 53.66,
-          "low": 51.86,
-          "close": 52.96,
-          "pnl_pct": 1.43
+        "2026-09-11": {
+          "open": 13.4,
+          "high": 13.44,
+          "low": 13.04,
+          "close": 13.09,
+          "pnl_pct": 2.31
         }
       },
-      "position_usd": 230.36,
-      "unrealized_pnl_usd": 3.29
+      "position_usd": 230.57,
+      "unrealized_pnl_usd": 5.33
     },
     {
       "ticker": "SWBI",
       "name": "",
-      "action": "BUY",
-      "signal_date": "2026-09-09",
-      "entry_price": 13.23,
+      "action": "SELL",
+      "signal_date": "2026-09-11",
+      "entry_price": 13.13,
       "allocated_usd": 500,
-      "shares": 37.7929,
+      "shares": 38.0807,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 15.21,
-      "stop_loss": 12.97,
-      "max_hold_date": "2026-09-11",
-      "daily_prices": {
-        "2026-09-10": {
-          "open": 13.31,
-          "high": 13.34,
-          "low": 13.11,
-          "close": 13.29,
-          "pnl_pct": 0.45
-        }
-      },
-      "position_usd": 230.36,
-      "unrealized_pnl_usd": 1.04
+      "take_profit": 11.16,
+      "stop_loss": 13.39,
+      "max_hold_date": "2026-09-15",
+      "daily_prices": {},
+      "position_usd": 229.41,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "AOUT",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-11",
+      "entry_price": 15.55,
+      "allocated_usd": 500,
+      "shares": 32.1543,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 13.22,
+      "stop_loss": 15.86,
+      "max_hold_date": "2026-09-15",
+      "daily_prices": {},
+      "position_usd": 229.41,
+      "unrealized_pnl_usd": 0.0
     },
     {
       "ticker": "TISI",
       "name": "",
       "action": "SELL",
-      "signal_date": "2026-09-09",
-      "entry_price": 27.0,
+      "signal_date": "2026-09-11",
+      "entry_price": 26.82,
       "allocated_usd": 500,
-      "shares": 18.5185,
+      "shares": 18.6428,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 22.95,
-      "stop_loss": 27.54,
-      "max_hold_date": "2026-09-11",
-      "daily_prices": {
-        "2026-09-10": {
-          "open": 26.67,
-          "high": 26.85,
-          "low": 26.32,
-          "close": 26.52,
-          "pnl_pct": 1.78
-        }
-      },
-      "position_usd": 230.36,
-      "unrealized_pnl_usd": 4.1
-    },
-    {
-      "ticker": "ATRC",
-      "name": "",
-      "action": "SELL",
-      "signal_date": "2026-09-10",
-      "entry_price": 53.03,
-      "allocated_usd": 500,
-      "shares": 9.4286,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 45.08,
-      "stop_loss": 54.09,
-      "max_hold_date": "2026-09-14",
+      "take_profit": 22.8,
+      "stop_loss": 27.36,
+      "max_hold_date": "2026-09-15",
       "daily_prices": {},
-      "position_usd": 230.57,
+      "position_usd": 229.41,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4807,20 +4791,134 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": 2.1,
       "position_usd": 230.82
+    },
+    {
+      "ticker": "ATRC",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-09",
+      "entry_price": 53.73,
+      "allocated_usd": 500,
+      "shares": 9.3058,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 45.67,
+      "stop_loss": 54.8,
+      "max_hold_date": "2026-09-11",
+      "daily_prices": {
+        "2026-09-10": {
+          "open": 52.31,
+          "high": 53.66,
+          "low": 51.86,
+          "close": 52.96,
+          "pnl_pct": 1.43
+        },
+        "2026-09-11": {
+          "open": 53.76,
+          "high": 55.16,
+          "low": 53.52,
+          "close": 54.29,
+          "pnl_pct": -1.99
+        }
+      },
+      "close_date": "2026-09-11",
+      "close_price": 54.8,
+      "final_pnl_pct": -1.99,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.58,
+      "position_usd": 230.36
+    },
+    {
+      "ticker": "SWBI",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-09-09",
+      "entry_price": 13.23,
+      "allocated_usd": 500,
+      "shares": 37.7929,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 15.21,
+      "stop_loss": 12.97,
+      "max_hold_date": "2026-09-11",
+      "daily_prices": {
+        "2026-09-10": {
+          "open": 13.31,
+          "high": 13.34,
+          "low": 13.11,
+          "close": 13.29,
+          "pnl_pct": 0.45
+        },
+        "2026-09-11": {
+          "open": 13.4,
+          "high": 13.44,
+          "low": 13.04,
+          "close": 13.09,
+          "pnl_pct": -1.06
+        }
+      },
+      "close_date": "2026-09-11",
+      "close_price": 13.09,
+      "final_pnl_pct": -1.06,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -2.44,
+      "position_usd": 230.36
+    },
+    {
+      "ticker": "TISI",
+      "name": "",
+      "action": "SELL",
+      "signal_date": "2026-09-09",
+      "entry_price": 27.0,
+      "allocated_usd": 500,
+      "shares": 18.5185,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 22.95,
+      "stop_loss": 27.54,
+      "max_hold_date": "2026-09-11",
+      "daily_prices": {
+        "2026-09-10": {
+          "open": 26.67,
+          "high": 26.85,
+          "low": 26.31,
+          "close": 26.52,
+          "pnl_pct": 1.78
+        },
+        "2026-09-11": {
+          "open": 27.54,
+          "high": 27.54,
+          "low": 26.67,
+          "close": 26.67,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-09-11",
+      "close_price": 27.54,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.61,
+      "position_usd": 230.36
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 129,
+    "total_trades": 132,
     "win_trades": 67,
-    "win_rate": 51.9,
-    "total_realized_pnl_usd": 305.69,
-    "open_unrealized_pnl_usd": 21.96,
-    "portfolio_value": 2327.65,
-    "total_commission_usd": 258.0,
-    "skipped_gap": 76,
+    "win_rate": 50.8,
+    "total_realized_pnl_usd": 294.05,
+    "open_unrealized_pnl_usd": 18.86,
+    "portfolio_value": 2312.91,
+    "total_commission_usd": 264.0,
+    "skipped_gap": 78,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 37,
-    "updated_at": "2026-09-10"
+    "skipped_no_cash": 36,
+    "updated_at": "2026-09-11"
   }
 };

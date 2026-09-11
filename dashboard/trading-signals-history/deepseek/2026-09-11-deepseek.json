@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-11",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 13.13,
+      "target_price": 14.44,
+      "stop_loss": 12.47
+    },
+    {
+      "ticker": "AOUT",
+      "action": "SELL",
+      "current_price": 15.55,
+      "target_price": 17.11,
+      "stop_loss": 14.77
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.82,
+      "target_price": 29.5,
+      "stop_loss": 25.48
+    },
+    {
+      "ticker": "TBBK",
+      "action": "BUY",
+      "current_price": 50.87,
+      "target_price": 55.96,
+      "stop_loss": 48.33
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "SWBI",
+      "action": "SELL",
+      "current_price": 13.13,
+      "target_price": 14.44,
+      "stop_loss": 12.47
+    },
+    {
+      "ticker": "AOUT",
+      "action": "SELL",
+      "current_price": 15.55,
+      "target_price": 17.11,
+      "stop_loss": 14.77
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.82,
+      "target_price": 29.5,
+      "stop_loss": 25.48
+    },
+    {
+      "ticker": "TBBK",
+      "action": "BUY",
+      "current_price": 50.87,
+      "target_price": 55.96,
+      "stop_loss": 48.33
+    },
+    {
+      "ticker": "ATRC",
+      "action": "HOLD",
+      "current_price": 54.35,
+      "target_price": 59.79,
+      "stop_loss": 51.63
+    },
+    {
+      "ticker": "AVAV",
+      "action": "BUY",
+      "current_price": 141.72,
+      "target_price": 155.89,
+      "stop_loss": 134.63
+    },
+    {
+      "ticker": "AMBA",
+      "action": "SELL",
+      "current_price": 66.8,
+      "target_price": 73.48,
+      "stop_loss": 63.46
+    },
+    {
+      "ticker": "UFCS",
+      "action": "HOLD",
+      "current_price": 54.69,
+      "target_price": 60.16,
+      "stop_loss": 51.96
+    },
+    {
+      "ticker": "LAKE",
+      "action": "SELL",
+      "current_price": 9.64,
+      "target_price": 10.6,
+      "stop_loss": 9.16
+    },
+    {
+      "ticker": "MTRX",
+      "action": "SELL",
+      "current_price": 10.62,
+      "target_price": 11.68,
+      "stop_loss": 10.09
+    },
+    {
+      "ticker": "ENOV",
+      "action": "SELL",
+      "current_price": 18.35,
+      "target_price": 20.19,
+      "stop_loss": 17.43
+    },
+    {
+      "ticker": "LOVE",
+      "action": "SELL",
+      "current_price": 13.76,
+      "target_price": 15.14,
+      "stop_loss": 13.07
+    }
+  ]
+}
