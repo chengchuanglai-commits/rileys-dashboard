@@ -138,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 13.15,
           "high": 13.22,
           "low": 12.93,
-          "close": 13.15,
-          "pnl_pct": -0.15
+          "close": 13.2,
+          "pnl_pct": -0.53
         }
       },
       "position_usd": 229.2,
-      "unrealized_pnl_usd": -0.34
+      "unrealized_pnl_usd": -1.21
     },
     {
       "ticker": "AOUT",
@@ -162,13 +162,13 @@ window.PORTFOLIO_HDS = {
         "2026-09-14": {
           "open": 15.67,
           "high": 15.68,
-          "low": 15.3,
-          "close": 15.39,
-          "pnl_pct": 1.03
+          "low": 15.14,
+          "close": 15.23,
+          "pnl_pct": 2.06
         }
       },
       "position_usd": 229.2,
-      "unrealized_pnl_usd": 2.36
+      "unrealized_pnl_usd": 4.72
     },
     {
       "ticker": "TISI",
@@ -186,14 +186,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-09-14": {
           "open": 25.61,
-          "high": 26.5,
+          "high": 26.9,
           "low": 25.75,
-          "close": 26.27,
-          "pnl_pct": 2.05
+          "close": 26.9,
+          "pnl_pct": -0.3
         }
       },
       "position_usd": 229.2,
-      "unrealized_pnl_usd": 4.7
+      "unrealized_pnl_usd": -0.69
     },
     {
       "ticker": "TBBK",
@@ -4971,7 +4971,7 @@ window.PORTFOLIO_HDS = {
           "open": 50.46,
           "high": 51.0,
           "low": 49.61,
-          "close": 50.09,
+          "close": 50.23,
           "pnl_pct": -2.01
         }
       },
@@ -4991,8 +4991,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 67,
     "win_rate": 50.0,
     "total_realized_pnl_usd": 287.39,
-    "open_unrealized_pnl_usd": 20.25,
-    "portfolio_value": 2307.64,
+    "open_unrealized_pnl_usd": 16.35,
+    "portfolio_value": 2303.74,
     "total_commission_usd": 268.0,
     "skipped_gap": 77,
     "skipped_zero_shares": 0,

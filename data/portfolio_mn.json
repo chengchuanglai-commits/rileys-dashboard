@@ -244,12 +244,12 @@
           "open": 71.17,
           "high": 72.17,
           "low": 70.52,
-          "close": 71.1,
-          "pnl_pct": 0.18
+          "close": 71.68,
+          "pnl_pct": 1.0
         }
       },
       "position_usd": 178.68,
-      "unrealized_pnl_usd": 0.32
+      "unrealized_pnl_usd": 1.79
     }
   ],
   "closed_positions": [
@@ -5940,8 +5940,8 @@
     "win_trades": 43,
     "win_rate": 25.4,
     "total_realized_pnl_usd": -41.31,
-    "open_unrealized_pnl_usd": 44.49,
-    "portfolio_value": 2003.18,
+    "open_unrealized_pnl_usd": 45.95,
+    "portfolio_value": 2004.64,
     "total_commission_usd": 338.0,
     "skipped_gap": 65,
     "skipped_zero_shares": 0,
