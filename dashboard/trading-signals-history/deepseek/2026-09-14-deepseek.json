@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-14",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "TBBK",
+      "action": "SELL",
+      "current_price": 50.63,
+      "target_price": 55.69,
+      "stop_loss": 48.1
+    },
+    {
+      "ticker": "SWKS",
+      "action": "SELL",
+      "current_price": 88.35,
+      "target_price": 97.19,
+      "stop_loss": 83.93
+    },
+    {
+      "ticker": "ATRC",
+      "action": "SELL",
+      "current_price": 54.54,
+      "target_price": 59.99,
+      "stop_loss": 51.81
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 25.86,
+      "target_price": 28.45,
+      "stop_loss": 24.57
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "TBBK",
+      "action": "SELL",
+      "current_price": 50.63,
+      "target_price": 55.69,
+      "stop_loss": 48.1
+    },
+    {
+      "ticker": "SWKS",
+      "action": "SELL",
+      "current_price": 88.35,
+      "target_price": 97.19,
+      "stop_loss": 83.93
+    },
+    {
+      "ticker": "ATRC",
+      "action": "SELL",
+      "current_price": 54.54,
+      "target_price": 59.99,
+      "stop_loss": 51.81
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 25.86,
+      "target_price": 28.45,
+      "stop_loss": 24.57
+    },
+    {
+      "ticker": "FEIM",
+      "action": "SELL",
+      "current_price": 88.38,
+      "target_price": 97.22,
+      "stop_loss": 83.96
+    },
+    {
+      "ticker": "AOUT",
+      "action": "SELL",
+      "current_price": 15.68,
+      "target_price": 17.25,
+      "stop_loss": 14.9
+    },
+    {
+      "ticker": "QRVO",
+      "action": "BUY",
+      "current_price": 116.65,
+      "target_price": 128.32,
+      "stop_loss": 110.82
+    },
+    {
+      "ticker": "SWBI",
+      "action": "BUY",
+      "current_price": 13.15,
+      "target_price": 14.47,
+      "stop_loss": 12.49
+    },
+    {
+      "ticker": "AMBA",
+      "action": "SELL",
+      "current_price": 67.86,
+      "target_price": 74.65,
+      "stop_loss": 64.47
+    },
+    {
+      "ticker": "AVAV",
+      "action": "HOLD",
+      "current_price": 146.71,
+      "target_price": 161.38,
+      "stop_loss": 139.37
+    },
+    {
+      "ticker": "LOVE",
+      "action": "SELL",
+      "current_price": 13.91,
+      "target_price": 15.3,
+      "stop_loss": 13.21
+    },
+    {
+      "ticker": "HRMY",
+      "action": "BUY",
+      "current_price": 41.52,
+      "target_price": 45.67,
+      "stop_loss": 39.44
+    }
+  ]
+}
