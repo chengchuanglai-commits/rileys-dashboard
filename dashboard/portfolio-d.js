@@ -1275,27 +1275,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-07-16",
       "daily_prices": {
         "2026-07-15": {
-          "open": 59.43,
-          "high": 59.93,
-          "low": 58.59,
-          "close": 59.43,
-          "pnl_pct": 1.07
+          "open": 59.03,
+          "high": 59.53,
+          "low": 58.2,
+          "close": 59.03,
+          "pnl_pct": 1.73
         },
         "2026-07-16": {
-          "open": 59.52,
-          "high": 61.71,
-          "low": 59.31,
-          "close": 61.62,
-          "pnl_pct": -2.58
+          "open": 59.12,
+          "high": 61.3,
+          "low": 58.91,
+          "close": 61.21,
+          "pnl_pct": -1.9
         }
       },
       "close_date": "2026-07-16",
-      "close_price": 61.62,
-      "final_pnl_pct": -2.58,
+      "close_price": 61.21,
+      "final_pnl_pct": -1.9,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -14.4
+      "realized_pnl_usd": -11.13
     },
     {
       "ticker": "STRS",
@@ -1377,10 +1377,10 @@ window.PORTFOLIO_D = {
     "total_trades": 39,
     "win_trades": 23,
     "win_rate": 59.0,
-    "total_realized_pnl_usd": 309.36,
+    "total_realized_pnl_usd": 312.63,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2309.36,
+    "portfolio_value": 2312.63,
     "skipped_gap": 13,
-    "updated_at": "2026-09-12"
+    "updated_at": "2026-09-15"
   }
 };

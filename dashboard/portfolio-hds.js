@@ -133,9 +133,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 11.16,
       "stop_loss": 13.39,
       "max_hold_date": "2026-09-15",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-14": {
+          "open": 13.15,
+          "high": 13.22,
+          "low": 12.93,
+          "close": 13.15,
+          "pnl_pct": -0.15
+        }
+      },
       "position_usd": 229.2,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": -0.34
     },
     {
       "ticker": "AOUT",
@@ -150,9 +158,17 @@ window.PORTFOLIO_HDS = {
       "take_profit": 13.22,
       "stop_loss": 15.86,
       "max_hold_date": "2026-09-15",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-14": {
+          "open": 15.67,
+          "high": 15.68,
+          "low": 15.3,
+          "close": 15.39,
+          "pnl_pct": 1.03
+        }
+      },
       "position_usd": 229.2,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 2.36
     },
     {
       "ticker": "TISI",
@@ -167,25 +183,33 @@ window.PORTFOLIO_HDS = {
       "take_profit": 22.8,
       "stop_loss": 27.36,
       "max_hold_date": "2026-09-15",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-14": {
+          "open": 25.61,
+          "high": 26.5,
+          "low": 25.75,
+          "close": 26.27,
+          "pnl_pct": 2.05
+        }
+      },
       "position_usd": 229.2,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 4.7
     },
     {
       "ticker": "TBBK",
       "name": "",
-      "action": "BUY",
-      "signal_date": "2026-09-11",
-      "entry_price": 50.87,
+      "action": "SELL",
+      "signal_date": "2026-09-14",
+      "entry_price": 50.63,
       "allocated_usd": 500,
-      "shares": 9.829,
+      "shares": 9.8756,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 58.5,
-      "stop_loss": 49.85,
-      "max_hold_date": "2026-09-15",
+      "take_profit": 43.04,
+      "stop_loss": 51.64,
+      "max_hold_date": "2026-09-16",
       "daily_prices": {},
-      "position_usd": 229.2,
+      "position_usd": 228.74,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4928,20 +4952,51 @@ window.PORTFOLIO_HDS = {
       "commission_total": 2.0,
       "realized_pnl_usd": -4.61,
       "position_usd": 230.72
+    },
+    {
+      "ticker": "TBBK",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-09-11",
+      "entry_price": 50.87,
+      "allocated_usd": 500,
+      "shares": 9.829,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 58.5,
+      "stop_loss": 49.85,
+      "max_hold_date": "2026-09-15",
+      "daily_prices": {
+        "2026-09-14": {
+          "open": 50.46,
+          "high": 51.0,
+          "low": 49.61,
+          "close": 50.09,
+          "pnl_pct": -2.01
+        }
+      },
+      "close_date": "2026-09-14",
+      "close_price": 49.85,
+      "final_pnl_pct": -2.01,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -4.61,
+      "position_usd": 229.2
     }
   ],
   "_note": "H-DS 模拟盘：DeepSeek(V4-pro) 信号 + H 出场规则(TP15/SL2/2日/gap1.0)。与 Plan H(Haiku信号+同规则)头对头比模型。仅A/B对比,不是真实交易方案。",
   "stats": {
-    "total_trades": 133,
+    "total_trades": 134,
     "win_trades": 67,
-    "win_rate": 50.4,
-    "total_realized_pnl_usd": 291.99,
-    "open_unrealized_pnl_usd": 13.53,
-    "portfolio_value": 2305.52,
-    "total_commission_usd": 266.0,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 287.39,
+    "open_unrealized_pnl_usd": 20.25,
+    "portfolio_value": 2307.64,
+    "total_commission_usd": 268.0,
     "skipped_gap": 77,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 40,
+    "skipped_no_cash": 39,
     "updated_at": "2026-09-14"
   }
 };
