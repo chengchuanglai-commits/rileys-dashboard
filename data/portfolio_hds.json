@@ -133,7 +133,7 @@
       "stop_loss": 110.14,
       "max_hold_date": "2026-09-17",
       "daily_prices": {},
-      "position_usd": 228.5,
+      "position_usd": 228.23,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -150,7 +150,7 @@
       "stop_loss": 56.91,
       "max_hold_date": "2026-09-17",
       "daily_prices": {},
-      "position_usd": 228.5,
+      "position_usd": 228.23,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -167,7 +167,7 @@
       "stop_loss": 51.23,
       "max_hold_date": "2026-09-17",
       "daily_prices": {},
-      "position_usd": 228.5,
+      "position_usd": 228.23,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -184,7 +184,7 @@
       "stop_loss": 87.21,
       "max_hold_date": "2026-09-17",
       "daily_prices": {},
-      "position_usd": 228.5,
+      "position_usd": 228.23,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -4983,18 +4983,18 @@
         "2026-09-15": {
           "open": 13.2,
           "high": 13.2,
-          "low": 12.95,
-          "close": 13.01,
-          "pnl_pct": 0.91
+          "low": 12.94,
+          "close": 13.1,
+          "pnl_pct": 0.23
         }
       },
       "close_date": "2026-09-15",
-      "close_price": 13.01,
-      "final_pnl_pct": 0.91,
+      "close_price": 13.1,
+      "final_pnl_pct": 0.23,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 2.09,
+      "realized_pnl_usd": 0.53,
       "position_usd": 229.2
     },
     {
@@ -5022,17 +5022,17 @@
           "open": 15.36,
           "high": 15.36,
           "low": 14.92,
-          "close": 15.23,
-          "pnl_pct": 2.06
+          "close": 15.31,
+          "pnl_pct": 1.54
         }
       },
       "close_date": "2026-09-15",
-      "close_price": 15.23,
-      "final_pnl_pct": 2.06,
+      "close_price": 15.31,
+      "final_pnl_pct": 1.54,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.72,
+      "realized_pnl_usd": 3.53,
       "position_usd": 229.2
     },
     {
@@ -5060,7 +5060,7 @@
           "open": 26.81,
           "high": 27.42,
           "low": 26.17,
-          "close": 26.68,
+          "close": 26.99,
           "pnl_pct": -2.01
         }
       },
@@ -5074,29 +5074,29 @@
       "position_usd": 229.2
     },
     {
-      "ticker": "ATRC",
+      "ticker": "SWKS",
       "name": "",
       "action": "SELL",
       "signal_date": "2026-09-14",
-      "entry_price": 54.54,
+      "entry_price": 88.35,
       "allocated_usd": 500,
-      "shares": 9.1676,
+      "shares": 5.6593,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 46.36,
-      "stop_loss": 55.63,
+      "take_profit": 75.1,
+      "stop_loss": 90.12,
       "max_hold_date": "2026-09-16",
       "daily_prices": {
         "2026-09-15": {
-          "open": 55.0,
-          "high": 56.78,
-          "low": 54.65,
-          "close": 56.58,
+          "open": 80.54,
+          "high": 90.31,
+          "low": 79.43,
+          "close": 90.0,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-09-15",
-      "close_price": 55.63,
+      "close_price": 90.12,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -5110,9 +5110,9 @@
     "total_trades": 138,
     "win_trades": 69,
     "win_rate": 50.0,
-    "total_realized_pnl_usd": 285.01,
+    "total_realized_pnl_usd": 282.26,
     "open_unrealized_pnl_usd": 13.53,
-    "portfolio_value": 2298.54,
+    "portfolio_value": 2295.79,
     "total_commission_usd": 276.0,
     "skipped_gap": 78,
     "skipped_zero_shares": 0,
