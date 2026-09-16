@@ -5964,8 +5964,8 @@ window.PORTFOLIO_MN = {
         "2026-09-16": {
           "open": 85.83,
           "high": 86.6,
-          "low": 82.96,
-          "close": 83.29,
+          "low": 82.51,
+          "close": 84.6,
           "pnl_pct": -2.0
         }
       },

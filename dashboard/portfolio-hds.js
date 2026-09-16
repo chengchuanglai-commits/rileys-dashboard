@@ -136,14 +136,14 @@ window.PORTFOLIO_HDS = {
       "daily_prices": {
         "2026-09-16": {
           "open": 50.37,
-          "high": 50.9,
-          "low": 49.81,
-          "close": 50.85,
-          "pnl_pct": -1.23
+          "high": 50.95,
+          "low": 49.8,
+          "close": 50.73,
+          "pnl_pct": -1.0
         }
       },
       "position_usd": 228.58,
-      "unrealized_pnl_usd": -2.81
+      "unrealized_pnl_usd": -2.29
     },
     {
       "ticker": "FEIM",
@@ -162,13 +162,13 @@ window.PORTFOLIO_HDS = {
         "2026-09-16": {
           "open": 85.83,
           "high": 86.6,
-          "low": 82.96,
-          "close": 83.29,
-          "pnl_pct": 2.58
+          "low": 82.51,
+          "close": 84.6,
+          "pnl_pct": 1.05
         }
       },
       "position_usd": 228.58,
-      "unrealized_pnl_usd": 5.9
+      "unrealized_pnl_usd": 2.4
     },
     {
       "ticker": "ATRC",
@@ -5108,7 +5108,7 @@ window.PORTFOLIO_HDS = {
           "open": 55.66,
           "high": 57.25,
           "low": 55.66,
-          "close": 56.74,
+          "close": 57.14,
           "pnl_pct": -2.01
         }
       },
@@ -5128,8 +5128,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 70,
     "win_rate": 50.7,
     "total_realized_pnl_usd": 281.19,
-    "open_unrealized_pnl_usd": 14.78,
-    "portfolio_value": 2295.97,
+    "open_unrealized_pnl_usd": 11.81,
+    "portfolio_value": 2293.0,
     "total_commission_usd": 276.0,
     "skipped_gap": 81,
     "skipped_zero_shares": 0,
