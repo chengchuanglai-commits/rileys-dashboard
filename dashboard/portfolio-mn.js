@@ -226,23 +226,6 @@ window.PORTFOLIO_MN = {
       },
       "position_usd": 174.02,
       "unrealized_pnl_usd": 1.81
-    },
-    {
-      "ticker": "FEIM",
-      "name": "频率电子公司",
-      "action": "BUY",
-      "signal_date": "2026-09-15",
-      "entry_price": 85.05,
-      "allocated_usd": 500,
-      "shares": 5.8789,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 97.81,
-      "stop_loss": 83.35,
-      "max_hold_date": "2026-09-17",
-      "daily_prices": {},
-      "position_usd": 179.43,
-      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -1424,32 +1407,32 @@ window.PORTFOLIO_MN = {
       "name": "Xcel Energy Inc",
       "action": "BUY",
       "signal_date": "2026-06-10",
-      "entry_price": 77.52,
+      "entry_price": 76.9,
       "allocated_usd": 500,
-      "shares": 6.4499,
+      "shares": 6.502,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 89.15,
-      "stop_loss": 75.97,
+      "take_profit": 88.44,
+      "stop_loss": 75.36,
       "max_hold_date": "2026-06-12",
       "daily_prices": {
         "2026-06-11": {
-          "open": 77.97,
-          "high": 78.73,
-          "low": 77.51,
-          "close": 77.68,
+          "open": 77.35,
+          "high": 78.1,
+          "low": 76.89,
+          "close": 77.06,
           "pnl_pct": 0.21
         },
         "2026-06-12": {
-          "open": 77.83,
-          "high": 78.7,
-          "low": 77.73,
-          "close": 78.63,
+          "open": 77.21,
+          "high": 78.07,
+          "low": 77.11,
+          "close": 78.0,
           "pnl_pct": 1.43
         }
       },
       "close_date": "2026-06-12",
-      "close_price": 78.63,
+      "close_price": 78.0,
       "final_pnl_pct": 1.43,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
@@ -4214,25 +4197,25 @@ window.PORTFOLIO_MN = {
       "name": "Merchants Bancorp",
       "action": "BUY",
       "signal_date": "2026-08-06",
-      "entry_price": 54.06,
+      "entry_price": 53.95,
       "allocated_usd": 500,
-      "shares": 9.249,
+      "shares": 9.2678,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 62.17,
-      "stop_loss": 52.98,
+      "take_profit": 62.04,
+      "stop_loss": 52.87,
       "max_hold_date": "2026-08-10",
       "daily_prices": {
         "2026-08-07": {
-          "open": 53.86,
-          "high": 54.67,
-          "low": 52.89,
-          "close": 54.25,
+          "open": 53.75,
+          "high": 54.56,
+          "low": 52.78,
+          "close": 54.14,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-08-07",
-      "close_price": 52.98,
+      "close_price": 52.87,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -5949,7 +5932,7 @@ window.PORTFOLIO_MN = {
         },
         "2026-09-15": {
           "open": 71.73,
-          "high": 72.45,
+          "high": 72.5,
           "low": 70.91,
           "close": 71.27,
           "pnl_pct": 0.42
@@ -5963,20 +5946,51 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": 0.75,
       "position_usd": 178.68
+    },
+    {
+      "ticker": "FEIM",
+      "name": "频率电子公司",
+      "action": "BUY",
+      "signal_date": "2026-09-15",
+      "entry_price": 85.05,
+      "allocated_usd": 500,
+      "shares": 5.8789,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 97.81,
+      "stop_loss": 83.35,
+      "max_hold_date": "2026-09-17",
+      "daily_prices": {
+        "2026-09-16": {
+          "open": 85.83,
+          "high": 86.6,
+          "low": 82.96,
+          "close": 83.29,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-09-16",
+      "close_price": 83.35,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.59,
+      "position_usd": 179.43
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 170,
+    "total_trades": 171,
     "win_trades": 44,
-    "win_rate": 25.9,
-    "total_realized_pnl_usd": -40.56,
+    "win_rate": 25.7,
+    "total_realized_pnl_usd": -44.15,
     "open_unrealized_pnl_usd": 44.17,
-    "portfolio_value": 2003.61,
-    "total_commission_usd": 340.0,
+    "portfolio_value": 2000.02,
+    "total_commission_usd": 342.0,
     "skipped_gap": 65,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 234,
-    "updated_at": "2026-09-15"
+    "updated_at": "2026-09-16"
   }
 };

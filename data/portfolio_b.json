@@ -1083,31 +1083,31 @@
       "max_hold_date": "2026-06-30",
       "daily_prices": {
         "2026-06-24": {
-          "open": 17.36,
-          "high": 17.61,
-          "low": 16.82,
-          "close": 17.05,
-          "pnl_pct": -0.29
+          "open": 17.22,
+          "high": 17.46,
+          "low": 16.68,
+          "close": 16.91,
+          "pnl_pct": 0.53
         },
         "2026-06-25": {
-          "open": 17.18,
-          "high": 17.44,
-          "low": 16.9,
-          "close": 17.15,
-          "pnl_pct": -0.88
+          "open": 17.04,
+          "high": 17.3,
+          "low": 16.76,
+          "close": 17.01,
+          "pnl_pct": -0.06
         },
         "2026-06-26": {
-          "open": 16.97,
-          "high": 17.41,
-          "low": 16.8,
-          "close": 17.1,
-          "pnl_pct": -0.59
+          "open": 16.83,
+          "high": 17.27,
+          "low": 16.66,
+          "close": 16.96,
+          "pnl_pct": 0.24
         },
         "2026-06-29": {
-          "open": 15.8,
-          "high": 17.36,
-          "low": 15.08,
-          "close": 17.03,
+          "open": 15.67,
+          "high": 17.22,
+          "low": 14.96,
+          "close": 16.89,
           "pnl_pct": 8.0
         }
       },
@@ -2245,6 +2245,6 @@
     "total_realized_pnl_usd": 193.68,
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2193.68,
-    "updated_at": "2026-09-16"
+    "updated_at": "2026-09-17"
   }
 }

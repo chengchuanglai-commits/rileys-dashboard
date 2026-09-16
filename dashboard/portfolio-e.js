@@ -832,6 +832,53 @@ window.PORTFOLIO_E = {
       "realized_pnl_usd": -16.15
     },
     {
+      "ticker": "HOFT",
+      "name": "HOFT",
+      "action": "SELL",
+      "signal_date": "2026-06-23",
+      "entry_price": 17.0,
+      "allocated_usd": 500,
+      "shares": 29,
+      "actual_position_usd": 493.0,
+      "entry_commission": 1.0,
+      "take_profit": 15.3,
+      "stop_loss": 17.51,
+      "max_hold_days": 3,
+      "max_hold_date": "2026-06-26",
+      "regime": "neutral",
+      "vix": 19.49,
+      "daily_prices": {
+        "2026-06-24": {
+          "open": 17.22,
+          "high": 17.46,
+          "low": 16.68,
+          "close": 16.91,
+          "pnl_pct": 0.53
+        },
+        "2026-06-25": {
+          "open": 17.04,
+          "high": 17.3,
+          "low": 16.76,
+          "close": 17.01,
+          "pnl_pct": -0.06
+        },
+        "2026-06-26": {
+          "open": 16.83,
+          "high": 17.27,
+          "low": 16.66,
+          "close": 16.96,
+          "pnl_pct": 0.24
+        }
+      },
+      "close_date": "2026-06-26",
+      "close_price": 16.96,
+      "final_pnl_pct": 0.24,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.82
+    },
+    {
       "ticker": "SWBI",
       "name": "SWBI",
       "action": "SELL",
@@ -1603,16 +1650,16 @@ window.PORTFOLIO_E = {
   ],
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
-    "total_trades": 37,
+    "total_trades": 38,
     "win_trades": 20,
-    "win_rate": 54.1,
-    "total_realized_pnl_usd": 343.63,
+    "win_rate": 52.6,
+    "total_realized_pnl_usd": 342.81,
     "open_unrealized_pnl_usd": 3.31,
-    "portfolio_value": 2346.94,
-    "total_commission_usd": 74.0,
+    "portfolio_value": 2346.12,
+    "total_commission_usd": 76.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
-    "skipped_gap": 9,
-    "updated_at": "2026-09-15"
+    "skipped_gap": 8,
+    "updated_at": "2026-09-16"
   }
 };
