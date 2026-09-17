@@ -225,6 +225,23 @@
       },
       "position_usd": 174.02,
       "unrealized_pnl_usd": 1.81
+    },
+    {
+      "ticker": "FEIM",
+      "name": "频率电子",
+      "action": "BUY",
+      "signal_date": "2026-09-17",
+      "entry_price": 84.61,
+      "allocated_usd": 500,
+      "shares": 5.9095,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 97.3,
+      "stop_loss": 82.92,
+      "max_hold_date": "2026-09-21",
+      "daily_prices": {},
+      "position_usd": 175.85,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -5989,7 +6006,7 @@
     "total_commission_usd": 342.0,
     "skipped_gap": 65,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 234,
-    "updated_at": "2026-09-16"
+    "skipped_no_cash": 237,
+    "updated_at": "2026-09-17"
   }
 }
