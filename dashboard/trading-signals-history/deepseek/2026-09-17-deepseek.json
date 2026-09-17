@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-17",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "FEIM",
+      "action": "BUY",
+      "current_price": 84.6,
+      "target_price": 93.06,
+      "stop_loss": 80.37
+    },
+    {
+      "ticker": "SRRK",
+      "action": "BUY",
+      "current_price": 49.37,
+      "target_price": 54.31,
+      "stop_loss": 46.9
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.92,
+      "target_price": 29.61,
+      "stop_loss": 25.57
+    },
+    {
+      "ticker": "QRVO",
+      "action": "BUY",
+      "current_price": 113.97,
+      "target_price": 125.37,
+      "stop_loss": 108.27
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "FEIM",
+      "action": "BUY",
+      "current_price": 84.6,
+      "target_price": 93.06,
+      "stop_loss": 80.37
+    },
+    {
+      "ticker": "SRRK",
+      "action": "BUY",
+      "current_price": 49.37,
+      "target_price": 54.31,
+      "stop_loss": 46.9
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 26.92,
+      "target_price": 29.61,
+      "stop_loss": 25.57
+    },
+    {
+      "ticker": "QRVO",
+      "action": "BUY",
+      "current_price": 113.97,
+      "target_price": 125.37,
+      "stop_loss": 108.27
+    },
+    {
+      "ticker": "SWKS",
+      "action": "BUY",
+      "current_price": 85.59,
+      "target_price": 94.15,
+      "stop_loss": 81.31
+    },
+    {
+      "ticker": "STNG",
+      "action": "BUY",
+      "current_price": 85.64,
+      "target_price": 94.2,
+      "stop_loss": 81.36
+    },
+    {
+      "ticker": "PFBC",
+      "action": "HOLD",
+      "current_price": 106.18,
+      "target_price": 116.8,
+      "stop_loss": 100.87
+    },
+    {
+      "ticker": "HRMY",
+      "action": "BUY",
+      "current_price": 42.21,
+      "target_price": 46.43,
+      "stop_loss": 40.1
+    },
+    {
+      "ticker": "ATRC",
+      "action": "BUY",
+      "current_price": 57.14,
+      "target_price": 62.85,
+      "stop_loss": 54.28
+    },
+    {
+      "ticker": "LOVE",
+      "action": "SELL",
+      "current_price": 14.63,
+      "target_price": 16.09,
+      "stop_loss": 13.9
+    },
+    {
+      "ticker": "MTRX",
+      "action": "BUY",
+      "current_price": 9.9,
+      "target_price": 10.89,
+      "stop_loss": 9.4
+    },
+    {
+      "ticker": "PSTL",
+      "action": "SELL",
+      "current_price": 24.01,
+      "target_price": 26.41,
+      "stop_loss": 22.81
+    }
+  ]
+}
