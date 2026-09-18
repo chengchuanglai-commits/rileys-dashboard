@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-18",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "SRRK",
+      "action": "SELL",
+      "current_price": 46.38,
+      "target_price": 51.02,
+      "stop_loss": 44.06
+    },
+    {
+      "ticker": "ATRC",
+      "action": "SELL",
+      "current_price": 58.79,
+      "target_price": 64.67,
+      "stop_loss": 55.85
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 27.35,
+      "target_price": 30.09,
+      "stop_loss": 25.98
+    },
+    {
+      "ticker": "STNG",
+      "action": "SELL",
+      "current_price": 88.47,
+      "target_price": 97.32,
+      "stop_loss": 84.05
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "PSTL",
+      "action": "HOLD",
+      "current_price": 24.01,
+      "target_price": 26.41,
+      "stop_loss": 22.81
+    },
+    {
+      "ticker": "SRRK",
+      "action": "SELL",
+      "current_price": 46.38,
+      "target_price": 51.02,
+      "stop_loss": 44.06
+    },
+    {
+      "ticker": "QRVO",
+      "action": "HOLD",
+      "current_price": 116.68,
+      "target_price": 128.35,
+      "stop_loss": 110.85
+    },
+    {
+      "ticker": "ATRC",
+      "action": "SELL",
+      "current_price": 58.79,
+      "target_price": 64.67,
+      "stop_loss": 55.85
+    },
+    {
+      "ticker": "TISI",
+      "action": "SELL",
+      "current_price": 27.35,
+      "target_price": 30.09,
+      "stop_loss": 25.98
+    },
+    {
+      "ticker": "STNG",
+      "action": "SELL",
+      "current_price": 88.47,
+      "target_price": 97.32,
+      "stop_loss": 84.05
+    },
+    {
+      "ticker": "EPRT",
+      "action": "SELL",
+      "current_price": 26.83,
+      "target_price": 29.51,
+      "stop_loss": 25.49
+    },
+    {
+      "ticker": "TWST",
+      "action": "HOLD",
+      "current_price": 161.04,
+      "target_price": 177.14,
+      "stop_loss": 152.99
+    },
+    {
+      "ticker": "NSIT",
+      "action": "BUY",
+      "current_price": 155.0,
+      "target_price": 170.5,
+      "stop_loss": 147.25
+    },
+    {
+      "ticker": "SWKS",
+      "action": "SELL",
+      "current_price": 88.09,
+      "target_price": 96.9,
+      "stop_loss": 83.69
+    },
+    {
+      "ticker": "PFBC",
+      "action": "BUY",
+      "current_price": 105.03,
+      "target_price": 115.53,
+      "stop_loss": 99.78
+    },
+    {
+      "ticker": "MTRX",
+      "action": "BUY",
+      "current_price": 9.86,
+      "target_price": 10.85,
+      "stop_loss": 9.37
+    }
+  ]
+}
