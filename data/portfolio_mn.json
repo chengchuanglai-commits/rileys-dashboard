@@ -228,28 +228,20 @@
     },
     {
       "ticker": "FEIM",
-      "name": "频率电子",
+      "name": "频率电子公司",
       "action": "BUY",
-      "signal_date": "2026-09-17",
-      "entry_price": 83.82,
+      "signal_date": "2026-09-18",
+      "entry_price": 85.53,
       "allocated_usd": 500,
-      "shares": 5.9652,
+      "shares": 5.8459,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 96.39,
-      "stop_loss": 82.14,
-      "max_hold_date": "2026-09-21",
-      "daily_prices": {
-        "2026-09-18": {
-          "open": 83.82,
-          "high": 86.14,
-          "low": 83.08,
-          "close": 84.85,
-          "pnl_pct": 1.23
-        }
-      },
-      "position_usd": 175.81,
-      "unrealized_pnl_usd": 2.16
+      "take_profit": 98.36,
+      "stop_loss": 83.82,
+      "max_hold_date": "2026-09-22",
+      "daily_prices": {},
+      "position_usd": 172.26,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -6001,20 +5993,51 @@
       "commission_total": 2.0,
       "realized_pnl_usd": -3.59,
       "position_usd": 179.4
+    },
+    {
+      "ticker": "PSTL",
+      "name": "邮政房地产信托",
+      "action": "BUY",
+      "signal_date": "2026-09-17",
+      "entry_price": 24.27,
+      "allocated_usd": 500,
+      "shares": 20.6016,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 27.91,
+      "stop_loss": 23.78,
+      "max_hold_date": "2026-09-21",
+      "daily_prices": {
+        "2026-09-18": {
+          "open": 24.27,
+          "high": 24.23,
+          "low": 23.54,
+          "close": 23.63,
+          "pnl_pct": -2.02
+        }
+      },
+      "close_date": "2026-09-18",
+      "close_price": 23.78,
+      "final_pnl_pct": -2.02,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.55,
+      "position_usd": 175.81
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 171,
+    "total_trades": 172,
     "win_trades": 44,
-    "win_rate": 25.7,
-    "total_realized_pnl_usd": -44.17,
-    "open_unrealized_pnl_usd": 46.33,
-    "portfolio_value": 2002.16,
-    "total_commission_usd": 342.0,
+    "win_rate": 25.6,
+    "total_realized_pnl_usd": -47.72,
+    "open_unrealized_pnl_usd": 44.17,
+    "portfolio_value": 1996.45,
+    "total_commission_usd": 344.0,
     "skipped_gap": 65,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 242,
+    "skipped_no_cash": 241,
     "updated_at": "2026-09-18"
   }
 }

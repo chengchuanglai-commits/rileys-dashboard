@@ -137,12 +137,12 @@
           "open": 83.82,
           "high": 86.14,
           "low": 83.08,
-          "close": 84.85,
-          "pnl_pct": 0.3
+          "close": 85.53,
+          "pnl_pct": 1.1
         }
       },
       "position_usd": 230.55,
-      "unrealized_pnl_usd": 0.69
+      "unrealized_pnl_usd": 2.54
     },
     {
       "ticker": "QRVO",
@@ -161,13 +161,13 @@
         "2026-09-18": {
           "open": 120.76,
           "high": 120.76,
-          "low": 116.1,
-          "close": 116.42,
-          "pnl_pct": 2.15
+          "low": 116.01,
+          "close": 117.18,
+          "pnl_pct": 2.82
         }
       },
       "position_usd": 230.55,
-      "unrealized_pnl_usd": 4.96
+      "unrealized_pnl_usd": 6.5
     },
     {
       "ticker": "SRRK",
@@ -5251,8 +5251,8 @@
         "2026-09-18": {
           "open": 92.0,
           "high": 92.05,
-          "low": 87.68,
-          "close": 87.91,
+          "low": 87.48,
+          "close": 88.76,
           "pnl_pct": -2.0
         }
       },
@@ -5272,8 +5272,8 @@
     "win_trades": 72,
     "win_rate": 50.7,
     "total_realized_pnl_usd": 300.87,
-    "open_unrealized_pnl_usd": 17.35,
-    "portfolio_value": 2318.22,
+    "open_unrealized_pnl_usd": 20.74,
+    "portfolio_value": 2321.61,
     "total_commission_usd": 284.0,
     "skipped_gap": 86,
     "skipped_zero_shares": 0,
