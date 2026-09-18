@@ -270,17 +270,17 @@ window.PORTFOLIO_E = {
       "vix": 16.06,
       "daily_prices": {
         "2026-06-04": {
-          "open": 103.85,
-          "high": 109.2,
-          "low": 102.88,
-          "close": 107.33,
-          "pnl_pct": 0.95
+          "open": 103.58,
+          "high": 108.92,
+          "low": 102.61,
+          "close": 107.05,
+          "pnl_pct": 1.21
         },
         "2026-06-05": {
-          "open": 103.72,
-          "high": 104.57,
-          "low": 97.16,
-          "close": 97.99,
+          "open": 103.45,
+          "high": 104.3,
+          "low": 96.91,
+          "close": 97.73,
           "pnl_pct": 10.0
         }
       },
@@ -743,10 +743,10 @@ window.PORTFOLIO_E = {
       "vix": 17.28,
       "daily_prices": {
         "2026-06-23": {
-          "open": 16.03,
-          "high": 17.35,
-          "low": 15.88,
-          "close": 16.53,
+          "open": 15.87,
+          "high": 17.18,
+          "low": 15.72,
+          "close": 16.36,
           "pnl_pct": -2.99
         }
       },
@@ -896,17 +896,17 @@ window.PORTFOLIO_E = {
       "vix": 18.63,
       "daily_prices": {
         "2026-06-25": {
-          "open": 16.05,
-          "high": 16.25,
-          "low": 15.48,
-          "close": 15.55,
-          "pnl_pct": 6.72
+          "open": 15.89,
+          "high": 16.09,
+          "low": 15.32,
+          "close": 15.4,
+          "pnl_pct": 7.62
         },
         "2026-06-26": {
-          "open": 15.42,
-          "high": 15.56,
-          "low": 14.71,
-          "close": 15.1,
+          "open": 15.26,
+          "high": 15.41,
+          "low": 14.57,
+          "close": 14.95,
           "pnl_pct": 10.02
         }
       },
@@ -1660,6 +1660,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 8,
-    "updated_at": "2026-09-17"
+    "updated_at": "2026-09-18"
   }
 };

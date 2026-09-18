@@ -230,20 +230,20 @@ window.PORTFOLIO_C = {
       "take_profit": 99.69,
       "stop_loss": 112.69,
       "max_hold_date": "2026-06-10",
-      "day1_open": 103.85,
+      "day1_open": 103.58,
       "daily_prices": {
         "2026-06-04": {
-          "open": 103.85,
-          "high": 109.2,
-          "low": 102.88,
-          "close": 107.33,
-          "pnl_pct": 0.95
+          "open": 103.58,
+          "high": 108.92,
+          "low": 102.61,
+          "close": 107.05,
+          "pnl_pct": 1.21
         },
         "2026-06-05": {
-          "open": 103.72,
-          "high": 104.57,
-          "low": 97.16,
-          "close": 97.99,
+          "open": 103.45,
+          "high": 104.3,
+          "low": 96.91,
+          "close": 97.73,
           "pnl_pct": 8.0
         }
       },
@@ -793,13 +793,13 @@ window.PORTFOLIO_C = {
       "take_profit": 14.79,
       "stop_loss": 16.72,
       "max_hold_date": "2026-06-29",
-      "day1_open": 16.03,
+      "day1_open": 15.87,
       "daily_prices": {
         "2026-06-23": {
-          "open": 16.03,
-          "high": 17.35,
-          "low": 15.88,
-          "close": 16.53,
+          "open": 15.87,
+          "high": 17.18,
+          "low": 15.72,
+          "close": 16.36,
           "pnl_pct": -3.98
         }
       },
@@ -949,24 +949,17 @@ window.PORTFOLIO_C = {
       "take_profit": 15.34,
       "stop_loss": 17.34,
       "max_hold_date": "2026-07-01",
-      "day1_open": 16.05,
+      "day1_open": 15.89,
       "daily_prices": {
         "2026-06-25": {
-          "open": 16.05,
-          "high": 16.25,
-          "low": 15.48,
-          "close": 15.55,
-          "pnl_pct": 6.72
-        },
-        "2026-06-26": {
-          "open": 15.42,
-          "high": 15.56,
-          "low": 14.71,
-          "close": 15.1,
+          "open": 15.89,
+          "high": 16.09,
+          "low": 15.32,
+          "close": 15.4,
           "pnl_pct": 7.98
         }
       },
-      "close_date": "2026-06-26",
+      "close_date": "2026-06-25",
       "close_price": 15.34,
       "final_pnl_pct": 7.98,
       "close_reason": "take_profit",
@@ -1794,6 +1787,6 @@ window.PORTFOLIO_C = {
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2208.52,
     "skipped_gap": 14,
-    "updated_at": "2026-09-18"
+    "updated_at": "2026-09-19"
   }
 };

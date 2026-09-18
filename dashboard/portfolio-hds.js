@@ -138,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 83.82,
           "high": 86.14,
           "low": 83.08,
-          "close": 83.47,
-          "pnl_pct": -1.34
+          "close": 84.32,
+          "pnl_pct": -0.33
         }
       },
       "position_usd": 230.55,
-      "unrealized_pnl_usd": -3.09
+      "unrealized_pnl_usd": -0.76
     },
     {
       "ticker": "QRVO",
@@ -162,13 +162,13 @@ window.PORTFOLIO_HDS = {
         "2026-09-18": {
           "open": 120.76,
           "high": 120.76,
-          "low": 116.49,
-          "close": 116.69,
-          "pnl_pct": 2.39
+          "low": 116.1,
+          "close": 117.18,
+          "pnl_pct": 2.82
         }
       },
       "position_usd": 230.55,
-      "unrealized_pnl_usd": 5.51
+      "unrealized_pnl_usd": 6.5
     },
     {
       "ticker": "SRRK",
@@ -5252,8 +5252,8 @@ window.PORTFOLIO_HDS = {
         "2026-09-18": {
           "open": 92.0,
           "high": 92.05,
-          "low": 87.86,
-          "close": 88.21,
+          "low": 87.68,
+          "close": 88.74,
           "pnl_pct": -2.0
         }
       },
@@ -5273,8 +5273,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 72,
     "win_rate": 50.7,
     "total_realized_pnl_usd": 300.87,
-    "open_unrealized_pnl_usd": 14.12,
-    "portfolio_value": 2314.99,
+    "open_unrealized_pnl_usd": 17.44,
+    "portfolio_value": 2318.31,
     "total_commission_usd": 284.0,
     "skipped_gap": 86,
     "skipped_zero_shares": 0,

@@ -204,27 +204,27 @@
       "max_hold_date": "2026-06-05",
       "daily_prices": {
         "2026-06-04": {
-          "open": 103.85,
-          "high": 109.2,
-          "low": 102.88,
-          "close": 107.33,
-          "pnl_pct": 0.95
+          "open": 103.58,
+          "high": 108.92,
+          "low": 102.61,
+          "close": 107.05,
+          "pnl_pct": 1.21
         },
         "2026-06-05": {
-          "open": 103.72,
-          "high": 104.57,
-          "low": 97.16,
-          "close": 97.99,
-          "pnl_pct": 9.57
+          "open": 103.45,
+          "high": 104.3,
+          "low": 96.91,
+          "close": 97.73,
+          "pnl_pct": 9.81
         }
       },
       "close_date": "2026-06-05",
-      "close_price": 97.99,
-      "final_pnl_pct": 9.57,
+      "close_price": 97.73,
+      "final_pnl_pct": 9.81,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 39.48
+      "realized_pnl_usd": 40.52
     },
     {
       "ticker": "LRCX",
@@ -724,10 +724,10 @@
       "max_hold_date": "2026-06-24",
       "daily_prices": {
         "2026-06-23": {
-          "open": 16.03,
-          "high": 17.35,
-          "low": 15.88,
-          "close": 16.53,
+          "open": 15.87,
+          "high": 17.18,
+          "low": 15.72,
+          "close": 16.36,
           "pnl_pct": -2.99
         }
       },
@@ -821,27 +821,27 @@
       "max_hold_date": "2026-06-26",
       "daily_prices": {
         "2026-06-25": {
-          "open": 16.05,
-          "high": 16.25,
-          "low": 15.48,
-          "close": 15.55,
-          "pnl_pct": 6.72
+          "open": 15.89,
+          "high": 16.09,
+          "low": 15.32,
+          "close": 15.4,
+          "pnl_pct": 7.62
         },
         "2026-06-26": {
-          "open": 15.42,
-          "high": 15.56,
-          "low": 14.71,
-          "close": 15.1,
-          "pnl_pct": 9.42
+          "open": 15.26,
+          "high": 15.41,
+          "low": 14.57,
+          "close": 14.95,
+          "pnl_pct": 10.32
         }
       },
       "close_date": "2026-06-26",
-      "close_price": 15.1,
-      "final_pnl_pct": 9.42,
+      "close_price": 14.95,
+      "final_pnl_pct": 10.32,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 43.54
+      "realized_pnl_usd": 47.89
     },
     {
       "ticker": "OBT",
@@ -1391,19 +1391,19 @@
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-09-17": {
-          "close": 49.02,
-          "pnl_pct": 10.87
+        "2026-09-18": {
+          "close": 46.79,
+          "pnl_pct": 14.93
         }
       },
       "gap_checked": true,
-      "day1_open": 49.52,
-      "day1_gap_pct": -9.96,
-      "close_date": "2026-09-17",
-      "close_price": 49.02,
-      "final_pnl_pct": 10.87,
+      "day1_open": 48.02,
+      "day1_gap_pct": -12.69,
+      "close_date": "2026-09-18",
+      "close_price": 46.79,
+      "final_pnl_pct": 14.93,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 54.36
+      "realized_pnl_usd": 74.64
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1411,10 +1411,10 @@
     "total_trades": 40,
     "win_trades": 24,
     "win_rate": 60.0,
-    "total_realized_pnl_usd": 366.99,
+    "total_realized_pnl_usd": 392.66,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2366.99,
+    "portfolio_value": 2392.66,
     "skipped_gap": 12,
-    "updated_at": "2026-09-18"
+    "updated_at": "2026-09-19"
   }
 }
