@@ -137,12 +137,12 @@
           "open": 58.23,
           "high": 59.1,
           "low": 56.97,
-          "close": 57.65,
-          "pnl_pct": 1.94
+          "close": 58.32,
+          "pnl_pct": 0.8
         }
       },
       "position_usd": 230.09,
-      "unrealized_pnl_usd": 4.46
+      "unrealized_pnl_usd": 1.84
     },
     {
       "ticker": "STNG",
@@ -162,12 +162,12 @@
           "open": 85.7,
           "high": 89.82,
           "low": 84.73,
-          "close": 87.15,
-          "pnl_pct": 1.49
+          "close": 86.21,
+          "pnl_pct": 2.55
         }
       },
       "position_usd": 230.09,
-      "unrealized_pnl_usd": 3.43
+      "unrealized_pnl_usd": 5.87
     },
     {
       "ticker": "HRMY",
@@ -183,7 +183,7 @@
       "stop_loss": 41.18,
       "max_hold_date": "2026-09-23",
       "daily_prices": {},
-      "position_usd": 232.01,
+      "position_usd": 231.94,
       "unrealized_pnl_usd": 0.0
     },
     {
@@ -200,7 +200,7 @@
       "stop_loss": 114.84,
       "max_hold_date": "2026-09-23",
       "daily_prices": {},
-      "position_usd": 232.01,
+      "position_usd": 231.94,
       "unrealized_pnl_usd": 0.0
     }
   ],
@@ -5290,17 +5290,17 @@
           "open": 85.68,
           "high": 89.6,
           "low": 85.54,
-          "close": 88.85,
-          "pnl_pct": 5.02
+          "close": 89.0,
+          "pnl_pct": 5.2
         }
       },
       "close_date": "2026-09-21",
-      "close_price": 88.85,
-      "final_pnl_pct": 5.02,
+      "close_price": 89.0,
+      "final_pnl_pct": 5.2,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 11.57,
+      "realized_pnl_usd": 11.99,
       "position_usd": 230.55
     },
     {
@@ -5328,17 +5328,17 @@
           "open": 118.15,
           "high": 119.89,
           "low": 116.66,
-          "close": 117.75,
-          "pnl_pct": 3.32
+          "close": 117.21,
+          "pnl_pct": 2.84
         }
       },
       "close_date": "2026-09-21",
-      "close_price": 117.75,
-      "final_pnl_pct": 3.32,
+      "close_price": 117.21,
+      "final_pnl_pct": 2.84,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.65,
+      "realized_pnl_usd": 6.55,
       "position_usd": 230.55
     }
   ],
@@ -5347,9 +5347,9 @@
     "total_trades": 144,
     "win_trades": 74,
     "win_rate": 51.4,
-    "total_realized_pnl_usd": 320.1,
-    "open_unrealized_pnl_usd": 19.59,
-    "portfolio_value": 2339.69,
+    "total_realized_pnl_usd": 319.41,
+    "open_unrealized_pnl_usd": 19.41,
+    "portfolio_value": 2338.82,
     "total_commission_usd": 288.0,
     "skipped_gap": 88,
     "skipped_zero_shares": 0,
