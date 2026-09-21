@@ -3,17 +3,17 @@ window.PORTFOLIO_SPY = {
   "capital_usd": 2000,
   "benchmark": "SPY 买入持有",
   "start_date": "2026-05-26",
-  "start_price": 748.66,
-  "current_price": 761.69,
-  "current_date": "2026-09-18",
+  "start_price": 746.81,
+  "current_price": 773.72,
+  "current_date": "2026-09-21",
   "open_positions": [
     {
       "ticker": "SPY",
       "name": "SPY 基准",
       "action": "BUY",
       "signal_date": "2026-05-26",
-      "entry_price": 748.66,
-      "shares": 2.6714,
+      "entry_price": 746.81,
+      "shares": 2.6781,
       "actual_position_usd": 2000
     }
   ],
@@ -23,11 +23,11 @@ window.PORTFOLIO_SPY = {
     "win_trades": 0,
     "win_rate": 0,
     "total_realized_pnl_usd": 0,
-    "open_unrealized_pnl_usd": 34.81,
-    "portfolio_value": 2034.81,
-    "total_return_pct": 1.74,
+    "open_unrealized_pnl_usd": 72.07,
+    "portfolio_value": 2072.07,
+    "total_return_pct": 3.6,
     "total_commission_usd": 1.0,
-    "updated_at": "2026-09-18"
+    "updated_at": "2026-09-21"
   },
   "_note": "SPY 买入持有基准：$2000 在起始日买入 SPY 持有至今。衡量各策略有没有跑赢大盘。收益全为未实现(总收益口径)。"
 };

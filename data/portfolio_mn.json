@@ -239,9 +239,17 @@
       "take_profit": 98.36,
       "stop_loss": 83.82,
       "max_hold_date": "2026-09-22",
-      "daily_prices": {},
+      "daily_prices": {
+        "2026-09-21": {
+          "open": 85.68,
+          "high": 89.6,
+          "low": 85.54,
+          "close": 88.85,
+          "pnl_pct": 3.88
+        }
+      },
       "position_usd": 172.26,
-      "unrealized_pnl_usd": 0.0
+      "unrealized_pnl_usd": 6.68
     }
   ],
   "closed_positions": [
@@ -6010,7 +6018,7 @@
       "daily_prices": {
         "2026-09-18": {
           "open": 24.27,
-          "high": 24.23,
+          "high": 24.46,
           "low": 23.54,
           "close": 23.63,
           "pnl_pct": -2.02
@@ -6032,12 +6040,12 @@
     "win_trades": 44,
     "win_rate": 25.6,
     "total_realized_pnl_usd": -47.72,
-    "open_unrealized_pnl_usd": 44.17,
-    "portfolio_value": 1996.45,
+    "open_unrealized_pnl_usd": 50.85,
+    "portfolio_value": 2003.13,
     "total_commission_usd": 344.0,
-    "skipped_gap": 65,
+    "skipped_gap": 69,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 241,
-    "updated_at": "2026-09-18"
+    "updated_at": "2026-09-21"
   }
 }
