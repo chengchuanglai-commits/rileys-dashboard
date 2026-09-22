@@ -33,27 +33,27 @@
         "shares": 1.0,
         "avg_price_usd": 721.46,
         "cost_usd": 721.46,
-        "now_usd": 741.47,
-        "value_usd": 741.47,
-        "pnl_usd": 20.01
+        "now_usd": 745.14,
+        "value_usd": 745.14,
+        "pnl_usd": 23.68
       },
       "QQQM": {
         "shares": 1,
         "avg_price_usd": 298.51,
         "cost_usd": 298.51,
-        "now_usd": 305.27,
-        "value_usd": 305.27,
-        "pnl_usd": 6.76
+        "now_usd": 306.85,
+        "value_usd": 306.85,
+        "pnl_usd": 8.34
       }
     },
     "cost_usd": 1019.97,
-    "value_usd": 1046.74,
-    "pnl_usd": 26.77,
-    "pnl_pct": 2.62,
-    "usdcad": 1.4032,
-    "cost_cad_approx": 1431.22,
-    "value_cad_approx": 1468.79,
-    "pnl_cad_approx": 37.56,
-    "updated_at": "2026-09-21 22:32"
+    "value_usd": 1051.99,
+    "pnl_usd": 32.02,
+    "pnl_pct": 3.14,
+    "usdcad": 1.4079,
+    "cost_cad_approx": 1436.02,
+    "value_cad_approx": 1481.1,
+    "pnl_cad_approx": 45.08,
+    "updated_at": "2026-09-22 17:36"
   }
 }
