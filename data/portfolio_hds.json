@@ -135,7 +135,7 @@
       "daily_prices": {
         "2026-09-21": {
           "open": 58.23,
-          "high": 59.1,
+          "high": 59.11,
           "low": 56.97,
           "close": 58.32,
           "pnl_pct": 0.8
@@ -5325,7 +5325,7 @@
           "pnl_pct": 2.82
         },
         "2026-09-21": {
-          "open": 118.15,
+          "open": 118.44,
           "high": 119.89,
           "low": 116.66,
           "close": 117.21,
@@ -5353,7 +5353,7 @@
     "total_commission_usd": 288.0,
     "skipped_gap": 88,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 38,
-    "updated_at": "2026-09-21"
+    "skipped_no_cash": 42,
+    "updated_at": "2026-09-22"
   }
 }

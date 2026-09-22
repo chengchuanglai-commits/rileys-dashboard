@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-22",
+  "model": "deepseek-v4-pro",
+  "signals": [
+    {
+      "ticker": "HRMY",
+      "action": "BUY",
+      "current_price": 42.1,
+      "target_price": 46.31,
+      "stop_loss": 39.99
+    },
+    {
+      "ticker": "STNG",
+      "action": "BUY",
+      "current_price": 86.21,
+      "target_price": 94.83,
+      "stop_loss": 81.9
+    },
+    {
+      "ticker": "NSIT",
+      "action": "BUY",
+      "current_price": 156.7,
+      "target_price": 172.37,
+      "stop_loss": 148.86
+    },
+    {
+      "ticker": "TISI",
+      "action": "BUY",
+      "current_price": 28.01,
+      "target_price": 30.81,
+      "stop_loss": 26.61
+    }
+  ],
+  "all_verdicts": [
+    {
+      "ticker": "AMRX",
+      "action": "HOLD",
+      "current_price": 20.16,
+      "target_price": 22.18,
+      "stop_loss": 19.15
+    },
+    {
+      "ticker": "HRMY",
+      "action": "BUY",
+      "current_price": 42.1,
+      "target_price": 46.31,
+      "stop_loss": 39.99
+    },
+    {
+      "ticker": "STNG",
+      "action": "BUY",
+      "current_price": 86.21,
+      "target_price": 94.83,
+      "stop_loss": 81.9
+    },
+    {
+      "ticker": "ATRC",
+      "action": "HOLD",
+      "current_price": 58.32,
+      "target_price": 64.15,
+      "stop_loss": 55.4
+    },
+    {
+      "ticker": "NSIT",
+      "action": "BUY",
+      "current_price": 156.7,
+      "target_price": 172.37,
+      "stop_loss": 148.86
+    },
+    {
+      "ticker": "TISI",
+      "action": "BUY",
+      "current_price": 28.01,
+      "target_price": 30.81,
+      "stop_loss": 26.61
+    },
+    {
+      "ticker": "QRVO",
+      "action": "SELL",
+      "current_price": 117.21,
+      "target_price": 128.93,
+      "stop_loss": 111.35
+    },
+    {
+      "ticker": "MBIN",
+      "action": "BUY",
+      "current_price": 52.35,
+      "target_price": 57.59,
+      "stop_loss": 49.73
+    },
+    {
+      "ticker": "PSTL",
+      "action": "HOLD",
+      "current_price": 23.62,
+      "target_price": 25.98,
+      "stop_loss": 22.44
+    },
+    {
+      "ticker": "PFBC",
+      "action": "SELL",
+      "current_price": 106.36,
+      "target_price": 117.0,
+      "stop_loss": 101.04
+    },
+    {
+      "ticker": "EAT",
+      "action": "SELL",
+      "current_price": 200.3,
+      "target_price": 220.33,
+      "stop_loss": 190.28
+    },
+    {
+      "ticker": "INFU",
+      "action": "HOLD",
+      "current_price": 12.8,
+      "target_price": 14.08,
+      "stop_loss": 12.16
+    }
+  ]
+}
