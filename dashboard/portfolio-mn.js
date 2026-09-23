@@ -228,21 +228,29 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 1.81
     },
     {
-      "ticker": "AMRX",
-      "name": "阿米瑞斯制药",
+      "ticker": "FEIM",
+      "name": "频率电子公司",
       "action": "BUY",
-      "signal_date": "2026-09-22",
-      "entry_price": 19.5,
+      "signal_date": "2026-09-18",
+      "entry_price": 85.53,
       "allocated_usd": 500,
-      "shares": 25.641,
+      "shares": 5.8459,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 22.42,
-      "stop_loss": 19.11,
-      "max_hold_date": "2026-09-24",
-      "daily_prices": {},
-      "position_usd": 171.3,
-      "unrealized_pnl_usd": 0.0
+      "take_profit": 98.36,
+      "stop_loss": 83.82,
+      "max_hold_date": "2026-09-22",
+      "daily_prices": {
+        "2026-09-21": {
+          "open": 85.68,
+          "high": 89.6,
+          "low": 85.54,
+          "close": 89.0,
+          "pnl_pct": 4.06
+        }
+      },
+      "position_usd": 172.26,
+      "unrealized_pnl_usd": 6.99
     }
   ],
   "closed_positions": [
@@ -6025,58 +6033,20 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.55,
       "position_usd": 175.81
-    },
-    {
-      "ticker": "FEIM",
-      "name": "频率电子公司",
-      "action": "BUY",
-      "signal_date": "2026-09-18",
-      "entry_price": 85.53,
-      "allocated_usd": 500,
-      "shares": 5.8459,
-      "actual_position_usd": 500.0,
-      "entry_commission": 1.0,
-      "take_profit": 98.36,
-      "stop_loss": 83.82,
-      "max_hold_date": "2026-09-22",
-      "daily_prices": {
-        "2026-09-21": {
-          "open": 85.68,
-          "high": 89.6,
-          "low": 85.54,
-          "close": 89.0,
-          "pnl_pct": 4.06
-        },
-        "2026-09-22": {
-          "open": 88.48,
-          "high": 89.52,
-          "low": 84.57,
-          "close": 85.05,
-          "pnl_pct": -0.56
-        }
-      },
-      "close_date": "2026-09-22",
-      "close_price": 85.05,
-      "final_pnl_pct": -0.56,
-      "close_reason": "max_hold",
-      "exit_commission": 1.0,
-      "commission_total": 2.0,
-      "realized_pnl_usd": -0.96,
-      "position_usd": 172.26
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 173,
+    "total_trades": 172,
     "win_trades": 44,
-    "win_rate": 25.4,
-    "total_realized_pnl_usd": -48.66,
-    "open_unrealized_pnl_usd": 44.17,
-    "portfolio_value": 1995.51,
-    "total_commission_usd": 346.0,
-    "skipped_gap": 68,
+    "win_rate": 25.6,
+    "total_realized_pnl_usd": -47.7,
+    "open_unrealized_pnl_usd": 51.16,
+    "portfolio_value": 2003.46,
+    "total_commission_usd": 344.0,
+    "skipped_gap": 69,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 248,
-    "updated_at": "2026-09-22"
+    "skipped_no_cash": 254,
+    "updated_at": "2026-09-23"
   }
 };
