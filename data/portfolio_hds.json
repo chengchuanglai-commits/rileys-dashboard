@@ -168,6 +168,40 @@
       },
       "position_usd": 230.09,
       "unrealized_pnl_usd": 5.87
+    },
+    {
+      "ticker": "INFU",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-09-24",
+      "entry_price": 12.7,
+      "allocated_usd": 500,
+      "shares": 39.3701,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 14.6,
+      "stop_loss": 12.45,
+      "max_hold_date": "2026-09-28",
+      "daily_prices": {},
+      "position_usd": 231.95,
+      "unrealized_pnl_usd": 0.0
+    },
+    {
+      "ticker": "MBIN",
+      "name": "",
+      "action": "BUY",
+      "signal_date": "2026-09-24",
+      "entry_price": 51.37,
+      "allocated_usd": 500,
+      "shares": 9.7333,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 59.08,
+      "stop_loss": 50.34,
+      "max_hold_date": "2026-09-28",
+      "daily_prices": {},
+      "position_usd": 231.95,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -5353,7 +5387,7 @@
       "max_hold_date": "2026-09-23",
       "daily_prices": {
         "2026-09-23": {
-          "open": 118.79,
+          "open": 118.44,
           "high": 121.09,
           "low": 117.84,
           "close": 119.59,
@@ -5381,7 +5415,7 @@
     "total_commission_usd": 292.0,
     "skipped_gap": 90,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 40,
-    "updated_at": "2026-09-23"
+    "skipped_no_cash": 42,
+    "updated_at": "2026-09-24"
   }
 }
