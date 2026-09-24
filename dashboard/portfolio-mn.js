@@ -1180,32 +1180,32 @@ window.PORTFOLIO_MN = {
       "name": "Lam Research Corporation",
       "action": "BUY",
       "signal_date": "2026-06-05",
-      "entry_price": 303.07,
+      "entry_price": 302.74,
       "allocated_usd": 500,
-      "shares": 1.6498,
-      "actual_position_usd": 500.0,
+      "shares": 1.6516,
+      "actual_position_usd": 500.01,
       "entry_commission": 1.0,
-      "take_profit": 348.53,
-      "stop_loss": 297.01,
+      "take_profit": 348.15,
+      "stop_loss": 296.69,
       "max_hold_date": "2026-06-09",
       "daily_prices": {
         "2026-06-08": {
-          "open": 318.33,
-          "high": 330.45,
-          "low": 314.78,
-          "close": 324.22,
+          "open": 317.99,
+          "high": 330.1,
+          "low": 314.44,
+          "close": 323.88,
           "pnl_pct": 6.98
         },
         "2026-06-09": {
-          "open": 335.26,
-          "high": 348.84,
-          "low": 305.79,
-          "close": 326.93,
+          "open": 334.91,
+          "high": 348.47,
+          "low": 305.47,
+          "close": 326.58,
           "pnl_pct": 15.0
         }
       },
       "close_date": "2026-06-09",
-      "close_price": 348.53,
+      "close_price": 348.15,
       "final_pnl_pct": 15.0,
       "close_reason": "take_profit",
       "exit_commission": 1.0,
@@ -6046,7 +6046,7 @@ window.PORTFOLIO_MN = {
     "total_commission_usd": 344.0,
     "skipped_gap": 69,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 254,
-    "updated_at": "2026-09-23"
+    "skipped_no_cash": 259,
+    "updated_at": "2026-09-24"
   }
 };

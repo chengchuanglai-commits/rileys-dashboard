@@ -285,27 +285,27 @@
       "max_hold_date": "2026-06-12",
       "daily_prices": {
         "2026-06-08": {
-          "open": 318.33,
-          "high": 330.45,
-          "low": 314.78,
-          "close": 324.22,
-          "pnl_pct": 1.8
+          "open": 317.99,
+          "high": 330.1,
+          "low": 314.44,
+          "close": 323.88,
+          "pnl_pct": 1.69
         },
         "2026-06-09": {
-          "open": 335.26,
-          "high": 348.84,
-          "low": 305.79,
-          "close": 326.93,
-          "pnl_pct": 8.0
+          "open": 334.91,
+          "high": 348.47,
+          "low": 305.47,
+          "close": 326.58,
+          "pnl_pct": -4.0
         }
       },
       "close_date": "2026-06-09",
-      "close_price": 343.98,
-      "final_pnl_pct": 8.0,
-      "close_reason": "take_profit",
+      "close_price": 305.76,
+      "final_pnl_pct": -4.0,
+      "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 23.48
+      "realized_pnl_usd": -14.74
     },
     {
       "ticker": "FLR",
@@ -2233,11 +2233,11 @@
   "_note": "Plan B 模拟盘：TP +8% / SL -4% / 最大5交易日 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 52,
-    "win_trades": 27,
-    "win_rate": 51.9,
-    "total_realized_pnl_usd": 193.68,
+    "win_trades": 26,
+    "win_rate": 50.0,
+    "total_realized_pnl_usd": 155.46,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2193.68,
-    "updated_at": "2026-09-24"
+    "portfolio_value": 2155.46,
+    "updated_at": "2026-09-25"
   }
 }
