@@ -138,12 +138,12 @@ window.PORTFOLIO_HDS = {
           "open": 12.69,
           "high": 12.8,
           "low": 12.47,
-          "close": 12.68,
-          "pnl_pct": -0.16
+          "close": 12.71,
+          "pnl_pct": 0.08
         }
       },
       "position_usd": 234.79,
-      "unrealized_pnl_usd": -0.38
+      "unrealized_pnl_usd": 0.19
     },
     {
       "ticker": "MBIN",
@@ -163,12 +163,12 @@ window.PORTFOLIO_HDS = {
           "open": 52.29,
           "high": 52.8,
           "low": 51.99,
-          "close": 52.26,
-          "pnl_pct": 1.73
+          "close": 52.1,
+          "pnl_pct": 1.42
         }
       },
       "position_usd": 234.79,
-      "unrealized_pnl_usd": 4.06
+      "unrealized_pnl_usd": 3.33
     },
     {
       "ticker": "TISI",
@@ -188,12 +188,12 @@ window.PORTFOLIO_HDS = {
           "open": 28.87,
           "high": 29.08,
           "low": 28.65,
-          "close": 28.7,
-          "pnl_pct": 0.69
+          "close": 29.06,
+          "pnl_pct": -0.55
         }
       },
       "position_usd": 234.79,
-      "unrealized_pnl_usd": 1.62
+      "unrealized_pnl_usd": -1.29
     }
   ],
   "closed_positions": [
@@ -5568,8 +5568,8 @@ window.PORTFOLIO_HDS = {
     "win_trades": 78,
     "win_rate": 52.0,
     "total_realized_pnl_usd": 347.87,
-    "open_unrealized_pnl_usd": 17.01,
-    "portfolio_value": 2364.88,
+    "open_unrealized_pnl_usd": 13.93,
+    "portfolio_value": 2361.8,
     "total_commission_usd": 300.0,
     "skipped_gap": 91,
     "skipped_zero_shares": 0,
