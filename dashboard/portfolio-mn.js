@@ -228,29 +228,21 @@ window.PORTFOLIO_MN = {
       "unrealized_pnl_usd": 1.81
     },
     {
-      "ticker": "FEIM",
-      "name": "频率电子公司",
+      "ticker": "ATRC",
+      "name": "AtriCure",
       "action": "BUY",
-      "signal_date": "2026-09-18",
-      "entry_price": 85.53,
+      "signal_date": "2026-09-25",
+      "entry_price": 59.65,
       "allocated_usd": 500,
-      "shares": 5.8459,
+      "shares": 8.3822,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 98.36,
-      "stop_loss": 83.82,
-      "max_hold_date": "2026-09-22",
-      "daily_prices": {
-        "2026-09-21": {
-          "open": 85.68,
-          "high": 89.6,
-          "low": 85.54,
-          "close": 89.0,
-          "pnl_pct": 4.06
-        }
-      },
-      "position_usd": 172.26,
-      "unrealized_pnl_usd": 6.99
+      "take_profit": 68.6,
+      "stop_loss": 58.46,
+      "max_hold_date": "2026-09-29",
+      "daily_prices": {},
+      "position_usd": 170.31,
+      "unrealized_pnl_usd": 0.0
     }
   ],
   "closed_positions": [
@@ -6033,20 +6025,127 @@ window.PORTFOLIO_MN = {
       "commission_total": 2.0,
       "realized_pnl_usd": -3.55,
       "position_usd": 175.81
+    },
+    {
+      "ticker": "FEIM",
+      "name": "频率电子公司",
+      "action": "BUY",
+      "signal_date": "2026-09-18",
+      "entry_price": 85.53,
+      "allocated_usd": 500,
+      "shares": 5.8459,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 98.36,
+      "stop_loss": 83.82,
+      "max_hold_date": "2026-09-22",
+      "daily_prices": {
+        "2026-09-21": {
+          "open": 85.68,
+          "high": 89.6,
+          "low": 85.54,
+          "close": 89.0,
+          "pnl_pct": 4.06
+        },
+        "2026-09-22": {
+          "open": 88.48,
+          "high": 89.52,
+          "low": 84.57,
+          "close": 85.05,
+          "pnl_pct": -0.56
+        }
+      },
+      "close_date": "2026-09-22",
+      "close_price": 85.05,
+      "final_pnl_pct": -0.56,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -0.96,
+      "position_usd": 172.26
+    },
+    {
+      "ticker": "AMRX",
+      "name": "阿米瑞斯制药",
+      "action": "BUY",
+      "signal_date": "2026-09-22",
+      "entry_price": 19.5,
+      "allocated_usd": 500,
+      "shares": 25.641,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 22.42,
+      "stop_loss": 19.11,
+      "max_hold_date": "2026-09-24",
+      "daily_prices": {
+        "2026-09-23": {
+          "open": 19.7,
+          "high": 20.17,
+          "low": 18.74,
+          "close": 19.33,
+          "pnl_pct": -2.0
+        }
+      },
+      "close_date": "2026-09-23",
+      "close_price": 19.11,
+      "final_pnl_pct": -2.0,
+      "close_reason": "stop_loss",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": -3.43,
+      "position_usd": 171.3
+    },
+    {
+      "ticker": "AMRX",
+      "name": "阿米瑞斯制药",
+      "action": "BUY",
+      "signal_date": "2026-09-23",
+      "entry_price": 19.33,
+      "allocated_usd": 500,
+      "shares": 25.8665,
+      "actual_position_usd": 500.0,
+      "entry_commission": 1.0,
+      "take_profit": 22.23,
+      "stop_loss": 18.94,
+      "max_hold_date": "2026-09-25",
+      "daily_prices": {
+        "2026-09-24": {
+          "open": 19.29,
+          "high": 19.86,
+          "low": 19.19,
+          "close": 19.81,
+          "pnl_pct": 2.48
+        },
+        "2026-09-25": {
+          "open": 20.0,
+          "high": 20.0,
+          "low": 19.33,
+          "close": 19.61,
+          "pnl_pct": 1.45
+        }
+      },
+      "close_date": "2026-09-25",
+      "close_price": 19.61,
+      "final_pnl_pct": 1.45,
+      "close_reason": "max_hold",
+      "exit_commission": 1.0,
+      "commission_total": 2.0,
+      "realized_pnl_usd": 2.43,
+      "position_usd": 167.87
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
   "stats": {
-    "total_trades": 172,
-    "win_trades": 44,
-    "win_rate": 25.6,
-    "total_realized_pnl_usd": -47.7,
-    "open_unrealized_pnl_usd": 51.16,
-    "portfolio_value": 2003.46,
-    "total_commission_usd": 344.0,
-    "skipped_gap": 69,
+    "total_trades": 175,
+    "win_trades": 45,
+    "win_rate": 25.7,
+    "total_realized_pnl_usd": -49.65,
+    "open_unrealized_pnl_usd": 44.17,
+    "portfolio_value": 1994.52,
+    "total_commission_usd": 350.0,
+    "skipped_gap": 68,
     "skipped_zero_shares": 0,
-    "skipped_no_cash": 259,
-    "updated_at": "2026-09-24"
+    "skipped_no_cash": 262,
+    "updated_at": "2026-09-25"
   }
 };
