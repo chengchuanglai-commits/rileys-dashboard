@@ -1682,17 +1682,17 @@
       "max_hold_date": "2026-07-13",
       "daily_prices": {
         "2026-07-10": {
-          "open": 273.3,
-          "high": 277.85,
-          "low": 271.41,
-          "close": 276.0,
-          "pnl_pct": -0.93
+          "open": 272.87,
+          "high": 277.42,
+          "low": 270.99,
+          "close": 275.57,
+          "pnl_pct": -0.78
         },
         "2026-07-13": {
-          "open": 276.0,
-          "high": 280.86,
-          "low": 269.46,
-          "close": 279.2,
+          "open": 275.57,
+          "high": 280.42,
+          "low": 269.04,
+          "close": 278.76,
           "pnl_pct": -2.0
         }
       },
@@ -5508,19 +5508,19 @@
         },
         "2026-09-28": {
           "open": 12.69,
-          "high": 12.83,
+          "high": 12.88,
           "low": 12.59,
-          "close": 12.76,
-          "pnl_pct": 0.47
+          "close": 12.83,
+          "pnl_pct": 1.02
         }
       },
       "close_date": "2026-09-28",
-      "close_price": 12.76,
-      "final_pnl_pct": 0.47,
+      "close_price": 12.83,
+      "final_pnl_pct": 1.02,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.1,
+      "realized_pnl_usd": 2.39,
       "position_usd": 234.79
     },
     {
@@ -5547,18 +5547,18 @@
         "2026-09-28": {
           "open": 51.94,
           "high": 52.14,
-          "low": 51.58,
-          "close": 51.63,
-          "pnl_pct": 0.51
+          "low": 51.46,
+          "close": 51.55,
+          "pnl_pct": 0.35
         }
       },
       "close_date": "2026-09-28",
-      "close_price": 51.63,
-      "final_pnl_pct": 0.51,
+      "close_price": 51.55,
+      "final_pnl_pct": 0.35,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 1.2,
+      "realized_pnl_usd": 0.82,
       "position_usd": 234.79
     },
     {
@@ -5586,17 +5586,17 @@
           "open": 28.7,
           "high": 29.01,
           "low": 28.0,
-          "close": 28.35,
-          "pnl_pct": 1.9
+          "close": 28.41,
+          "pnl_pct": 1.7
         }
       },
       "close_date": "2026-09-28",
-      "close_price": 28.35,
-      "final_pnl_pct": 1.9,
+      "close_price": 28.41,
+      "final_pnl_pct": 1.7,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.46,
+      "realized_pnl_usd": 3.99,
       "position_usd": 234.79
     }
   ],
@@ -5605,9 +5605,9 @@
     "total_trades": 153,
     "win_trades": 81,
     "win_rate": 52.9,
-    "total_realized_pnl_usd": 354.64,
+    "total_realized_pnl_usd": 355.08,
     "open_unrealized_pnl_usd": 11.7,
-    "portfolio_value": 2366.34,
+    "portfolio_value": 2366.78,
     "total_commission_usd": 306.0,
     "skipped_gap": 91,
     "skipped_zero_shares": 0,
