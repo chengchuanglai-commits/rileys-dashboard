@@ -293,5 +293,95 @@
  "2026-08-28": {
   "total": 2,
   "flagged": []
+ },
+ "2026-09-01": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.7M<5M"
+   },
+   {
+    "ticker": "MVBF",
+    "action": "BUY",
+    "why": "ADV$1.8M<5M"
+   }
+  ]
+ },
+ "2026-09-02": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.8M<5M"
+   },
+   {
+    "ticker": "MTRX",
+    "action": "BUY",
+    "why": "ADV$2.5M<5M"
+   }
+  ]
+ },
+ "2026-09-03": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "MTRX",
+    "action": "BUY",
+    "why": "ADV$2.9M<5M"
+   },
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.8M<5M"
+   }
+  ]
+ },
+ "2026-09-04": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "AOUT",
+    "action": "BUY",
+    "why": "ADV$3.8M<5M"
+   },
+   {
+    "ticker": "MTRX",
+    "action": "SELL",
+    "why": "ADV$3.1M<5M"
+   }
+  ]
+ },
+ "2026-09-07": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.9M<5M"
+   }
+  ]
+ },
+ "2026-09-08": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$1.0M<5M"
+   }
+  ]
+ },
+ "2026-09-09": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$0.8M<5M"
+   }
+  ]
  }
 }

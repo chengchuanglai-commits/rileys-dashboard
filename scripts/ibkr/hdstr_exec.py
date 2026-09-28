@@ -260,6 +260,17 @@ def open_batch():
     real0 = {}
     for p_ in ib.positions(acct):
         real0[p_.contract.symbol] = real0.get(p_.contract.symbol, 0) + p_.position
+    # 空响应守卫(2026-09-28实炸:半死API返回空持仓被当真→3仓误判出场+TRAIL被当孤儿撤→裸奔11天亏$15):
+    # 空列表+在册有仓 → 连续第2次才信(真全清仓极少一夜发生)
+    has_open = any(p["status"] in ("open", "closing_timeout") for p in st["positions"])
+    if not real0 and has_open:
+        st["_empty_streak"] = st.get("_empty_streak", 0) + 1
+        if st["_empty_streak"] < 2:
+            save_state(st)
+            notify("⚠️ hdstr:持仓查询返回空但在册有仓,疑API同步失败,本轮跳过对账与孤儿清扫(连续2次才采信)")
+            ib.disconnect(); return
+    else:
+        st["_empty_streak"] = 0
     pre_closed = reconcile_positions(st, real0, today, skip_same_day=True)
     if pre_closed:
         save_state(st)

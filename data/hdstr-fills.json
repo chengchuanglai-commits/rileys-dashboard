@@ -162,6 +162,139 @@
    "price": 34.48,
    "src": "bars_estimate_未核实",
    "note": "多头TRAIL触发,周五网关离线服务器端自动执行,峰值35.92×0.96推算"
+  },
+  {
+   "exec_id": "entry-DAKT-2026-09-03",
+   "time": "2026-09-03 21:30:54",
+   "sym": "DAKT",
+   "side": "SLD",
+   "shares": 10,
+   "price": 19.23,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": -0.261
+  },
+  {
+   "exec_id": "0002264f.6a9975e5.01.01",
+   "time": "2026-09-03 13:30:51+00:00",
+   "sym": "DAKT",
+   "side": "SLD",
+   "shares": 10.0,
+   "price": 19.23,
+   "slip_vs_ref_pct": -0.261
+  },
+  {
+   "exec_id": "00030e5e.6e9b87a8.01.01",
+   "time": "2026-09-08 13:54:36+00:00",
+   "sym": "DAKT",
+   "side": "BOT",
+   "shares": 10.0,
+   "price": 19.735,
+   "slip_vs_ref_pct": 2.894
+  },
+  {
+   "exec_id": "entry-HRMY-2026-09-09",
+   "time": "2026-09-09 23:05:59",
+   "sym": "HRMY",
+   "side": "BOT",
+   "shares": 4,
+   "price": 42.13,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": 0.238
+  },
+  {
+   "exec_id": "entry-ATRC-2026-09-10",
+   "time": "2026-09-10 21:42:16",
+   "sym": "ATRC",
+   "side": "SLD",
+   "shares": 3,
+   "price": 52.7,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": 0.622
+  },
+  {
+   "exec_id": "entry-SWBI-2026-09-10",
+   "time": "2026-09-10 21:42:16",
+   "sym": "SWBI",
+   "side": "SLD",
+   "shares": 15,
+   "price": 13.245,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": 0.787
+  },
+  {
+   "exec_id": "00015e71.6aa2c9c3.01.01",
+   "time": "2026-09-10 13:42:03+00:00",
+   "sym": "ATRC",
+   "side": "SLD",
+   "shares": 3.0,
+   "price": 52.7,
+   "slip_vs_ref_pct": 0.622
+  },
+  {
+   "exec_id": "00030e5e.6ea56612.01.01",
+   "time": "2026-09-10 13:42:06+00:00",
+   "sym": "SWBI",
+   "side": "SLD",
+   "shares": 15.0,
+   "price": 13.245,
+   "slip_vs_ref_pct": 0.787
+  },
+  {
+   "exec_id": "entry-TBBK-2026-09-10",
+   "time": "2026-09-10 23:05:31",
+   "sym": "TBBK",
+   "side": "SLD",
+   "shares": 4,
+   "price": 50.81,
+   "src": "order_status@place",
+   "slip_vs_ref_pct": 0.138
+  },
+  {
+   "exec_id": "00015e71.6aa42601.01.01",
+   "time": "2026-09-11 13:51:44+00:00",
+   "sym": "ATRC",
+   "side": "BOT",
+   "shares": 3.0,
+   "price": 54.72,
+   "slip_vs_ref_pct": 3.187
+  },
+  {
+   "exec_id": "0000e95f.6ab2b043.01.01",
+   "time": "2026-09-22 14:28:29+00:00",
+   "sym": "QQQM",
+   "side": "BOT",
+   "shares": 1.0,
+   "price": 307.084
+  },
+  {
+   "exec_id": "liquidate-HRMY-2026-09-28",
+   "time": "2026-09-28 23:36",
+   "sym": "HRMY",
+   "side": "SLD",
+   "shares": 4,
+   "price": 40.125,
+   "src": "order_status_已核实",
+   "note": "Riley清仓指令+裸奔仓位纠偏(9/17空响应误判出场,TRAIL被误撤)"
+  },
+  {
+   "exec_id": "liquidate-SWBI-2026-09-28",
+   "time": "2026-09-28 23:36",
+   "sym": "SWBI",
+   "side": "BOT",
+   "shares": 15,
+   "price": 14.0365,
+   "src": "order_status_已核实",
+   "note": "Riley清仓指令+裸奔仓位纠偏(9/17空响应误判出场,TRAIL被误撤)"
+  },
+  {
+   "exec_id": "liquidate-TBBK-2026-09-28",
+   "time": "2026-09-28 23:36",
+   "sym": "TBBK",
+   "side": "BOT",
+   "shares": 4,
+   "price": 49.41,
+   "src": "order_status_已核实",
+   "note": "Riley清仓指令+裸奔仓位纠偏(9/17空响应误判出场,TRAIL被误撤)"
   }
  ]
 }
