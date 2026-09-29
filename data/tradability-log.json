@@ -383,5 +383,20 @@
     "why": "ADV$0.8M<5M"
    }
   ]
+ },
+ "2026-09-24": {
+  "total": 4,
+  "flagged": [
+   {
+    "ticker": "INFU",
+    "action": "BUY",
+    "why": "ADV$1.8M<5M"
+   },
+   {
+    "ticker": "TISI",
+    "action": "SELL",
+    "why": "ADV$1.2M<5M"
+   }
+  ]
  }
 }

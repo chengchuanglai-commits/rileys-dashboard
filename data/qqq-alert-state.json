@@ -1,9 +1,9 @@
 {
   "bear": false,
   "breakout": false,
-  "reclaim": false,
-  "last_px": 711.79,
-  "last_check": "2026-09-10 23:00:08",
+  "reclaim": true,
+  "last_px": 737.25,
+  "last_check": "2026-09-29 03:30:08",
   "breakdown": false,
   "lev_state": "1.5x"
 }
