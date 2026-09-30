@@ -15,7 +15,7 @@ mkdir -p data/exec-log
 echo "[$(date '+%F %T')] === run $1 ===" >> data/exec-log/launchd.log
 # review batch(收盘后)前先回填模拟盘——这时当天日bar已出,各腿对照才是当天收盘最新值(否则慢一天)
 if [ "$1" = "review" ]; then
-  export FMP_API_KEY="pOJlglH08lKz9RUmFeO5yYxOc87v5HzA"
+  source "$HOME/claude-whatsapp/.secrets/fmp.env"
   # 🪦 hds/hdstr/kimi 全线退役(2026-09-29 Riley终审叫停:真钱19笔前向≈-1.1%/笔,
   # 理想化影子+2.6%的edge未在真钱兑现,折价~3pp/笔系统性存在;结论在legs_tested_summary记忆)。
   # 台账/信号归档/裁决记录全部冻结留档;信号workflow已disable;复活=enable workflow+加回循环
