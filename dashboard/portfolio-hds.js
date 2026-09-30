@@ -5613,6 +5613,6 @@ window.PORTFOLIO_HDS = {
     "skipped_gap": 91,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 38,
-    "updated_at": "2026-09-29"
+    "updated_at": "2026-09-30"
   }
 };

@@ -6160,6 +6160,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 70,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 260,
-    "updated_at": "2026-09-29"
+    "updated_at": "2026-09-30"
   }
 };
