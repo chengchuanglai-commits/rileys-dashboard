@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import pandas as pd
 from lev_engine import simulate_leverage
 
-FMP_KEY = os.environ.get("FMP_API_KEY", "pOJlglH08lKz9RUmFeO5yYxOc87v5HzA")
+FMP_KEY = os.environ.get("FMP_API_KEY", "")
 CONFIGS = [("1x基准", dict(base_lev=1.0)),
            ("1.5x+闸门(选定)", dict(base_lev=1.5)),
            ("2x+闸门(对照)", dict(base_lev=2.0))]

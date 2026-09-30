@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import pandas as pd
 from lev_engine import simulate_leverage
 
-FMP_KEY = os.environ.get("FMP_API_KEY", "pOJlglH08lKz9RUmFeO5yYxOc87v5HzA")
+FMP_KEY = os.environ.get("FMP_API_KEY", "")
 START_DATE = "2020-01-01"   # 回填起点(含2020崩盘+2022熊市,给足历史看回撤)
 FWD_START = "2026-07-13"    # 前向锚点(收盘):此后=真前向paper,此前=回测参考。别改,改=前向作废重开
 INIT = 2000.0
