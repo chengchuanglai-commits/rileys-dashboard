@@ -376,14 +376,21 @@ window.PORTFOLIO_E = {
       "vix": 18.92,
       "daily_prices": {
         "2026-06-09": {
-          "open": 39.2,
-          "high": 40.69,
-          "low": 39.14,
-          "close": 39.47,
+          "open": 38.98,
+          "high": 40.47,
+          "low": 38.92,
+          "close": 39.25,
+          "pnl_pct": 0.2
+        },
+        "2026-06-10": {
+          "open": 39.55,
+          "high": 41.02,
+          "low": 38.81,
+          "close": 40.89,
           "pnl_pct": -3.0
         }
       },
-      "close_date": "2026-06-09",
+      "close_date": "2026-06-10",
       "close_price": 40.51,
       "final_pnl_pct": -3.0,
       "close_reason": "stop_loss",
@@ -1660,6 +1667,6 @@ window.PORTFOLIO_E = {
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 8,
-    "updated_at": "2026-10-01"
+    "updated_at": "2026-10-02"
   }
 };

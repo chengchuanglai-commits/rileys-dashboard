@@ -386,20 +386,20 @@ window.PORTFOLIO_C = {
       "take_profit": 36.18,
       "stop_loss": 40.9,
       "max_hold_date": "2026-06-15",
-      "day1_open": 39.2,
+      "day1_open": 38.98,
       "daily_prices": {
         "2026-06-09": {
-          "open": 39.2,
-          "high": 40.69,
-          "low": 39.14,
-          "close": 39.47,
-          "pnl_pct": -0.36
+          "open": 38.98,
+          "high": 40.47,
+          "low": 38.92,
+          "close": 39.25,
+          "pnl_pct": 0.2
         },
         "2026-06-10": {
-          "open": 39.77,
-          "high": 41.25,
-          "low": 39.02,
-          "close": 41.12,
+          "open": 39.55,
+          "high": 41.02,
+          "low": 38.81,
+          "close": 40.89,
           "pnl_pct": -3.99
         }
       },
@@ -1787,6 +1787,6 @@ window.PORTFOLIO_C = {
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2184.63,
     "skipped_gap": 14,
-    "updated_at": "2026-10-02"
+    "updated_at": "2026-10-03"
   }
 };
