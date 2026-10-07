@@ -4,12 +4,25 @@
 去重:同一故障只飞书一次(state文件),恢复时报一次"已恢复"。
 不碰登录密码;Gateway没开=可能Riley主动关的,不打扰(只管"开着却断了"这个真故障)。
 """
-import os, json, subprocess, time, urllib.request
+import os, re, glob, json, subprocess, time, urllib.request
 
 REPO = "/Users/apple/claude-whatsapp"
+GW_GLOB = "/Users/apple/Applications/IB Gateway */IB Gateway *.app"
 STATE = os.path.join(REPO, "data/net-watchdog-state.json")
 WEBHOOK = os.environ.get("NOTIFY_WEBHOOK", "")
 
+
+def gateway_app(ps_out=None):
+    """重踢时要重开的网关 .app:优先正在跑的那个(重踢不换版本),否则本机已装的最新版。
+    2026-10-07:原写死 10.45 路径,升级 10.50 后会把新版杀掉重开旧版,故改为自动解析。"""
+    if ps_out is None:
+        try: ps_out = subprocess.run(["ps", "-axwwo", "command"], capture_output=True, text=True).stdout
+        except Exception: ps_out = ""
+    m = re.search(r"(/.*?/IB Gateway [^/]*\.app)/Contents/MacOS/JavaApplicationStub", ps_out)
+    if m and os.path.isdir(m.group(1)): return m.group(1)
+    apps = [p for p in glob.glob(GW_GLOB) if "Uninstaller" not in p]
+    ver = lambda p: [int(x) for x in re.findall(r"\d+", os.path.basename(p))]
+    return max(apps, key=ver) if apps else None
 
 def load():
     try: return json.load(open(STATE))
@@ -93,12 +106,12 @@ def main():
             # 会话有效期内网关会自动重登;失败也只是回到登录页(与不踢等价)。避开14:45-15:45自身重启窗(2026-09-01重启时刻改到15:00)。
             hhmm = time.strftime("%H%M")
             if st["ib_fail"] >= 6 and not ("1445" <= hhmm <= "1545") and st.get("last_kick_day") != time.strftime("%F"):
+                app = gateway_app()   # 必须在 pkill 之前解析:杀掉后就看不到在跑的是哪个版本了
                 subprocess.run(["pkill", "-f", "JavaApplicationStub"], capture_output=True)
                 time.sleep(8)
-                subprocess.run(["open", "-a",
-                    "/Users/apple/Applications/IB Gateway 10.45/IB Gateway 10.45-1.app"], capture_output=True)
+                if app: subprocess.run(["open", "-a", app], capture_output=True)
                 st["last_kick_day"] = time.strftime("%F")   # 每天最多踢一次,防循环风暴
-                feishu("🔁 看门狗已自动重踢 IB Gateway(半死30分钟)。若15分钟后仍未恢复=需要人工登录。")
+                feishu(f"🔁 看门狗已自动重踢 IB Gateway(半死30分钟,重开 {os.path.basename(app) if app else '❌未找到网关app'})。若15分钟后仍未恢复=需要人工登录。")
         else:
             if st.get("ib_alerted"):
                 feishu(f"✅ IB Gateway 已恢复连接(NAV ${nav:,.0f})。")
