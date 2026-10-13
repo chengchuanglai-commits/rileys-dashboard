@@ -1,7 +1,7 @@
 // 金融晨报数据 — 每日 07:30 自动更新
 window.MORNING_NOTE = {
-  "date": "2026-10-10",
-  "generated_at": "2026-10-10T10:31:00",
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T11:42:00",
   "market_status": "pre-market",
   "market": {
     "sp500_futures_pct": 0,
