@@ -810,25 +810,25 @@ window.PORTFOLIO_MN = {
       "name": "Micron Technology",
       "action": "BUY",
       "signal_date": "2026-06-02",
-      "entry_price": 1063.94,
+      "entry_price": 1063.77,
       "allocated_usd": 500,
       "shares": 0.47,
-      "actual_position_usd": 500.05,
+      "actual_position_usd": 499.97,
       "entry_commission": 1.0,
-      "take_profit": 1223.53,
-      "stop_loss": 1042.66,
+      "take_profit": 1223.34,
+      "stop_loss": 1042.49,
       "max_hold_date": "2026-06-04",
       "daily_prices": {
         "2026-06-03": {
-          "open": 1078.84,
-          "high": 1089.12,
-          "low": 1038.34,
-          "close": 1079.4,
+          "open": 1078.67,
+          "high": 1088.95,
+          "low": 1038.18,
+          "close": 1079.23,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-06-03",
-      "close_price": 1042.66,
+      "close_price": 1042.49,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -6160,6 +6160,6 @@ window.PORTFOLIO_MN = {
     "skipped_gap": 70,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 260,
-    "updated_at": "2026-10-14"
+    "updated_at": "2026-10-15"
   }
 };
