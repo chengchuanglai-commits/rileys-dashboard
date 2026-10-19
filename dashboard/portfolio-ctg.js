@@ -431,13 +431,13 @@ window.PORTFOLIO_CTG = {
       "actual_position_usd": 486.4,
       "entry_commission": 1.0,
       "max_hold_date": "2026-06-12",
-      "day1_open": 14.79,
+      "day1_open": 14.7,
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.79,
-          "high": 15.35,
-          "low": 13.64,
-          "close": 15.35,
+          "open": 14.7,
+          "high": 15.26,
+          "low": 13.55,
+          "close": 15.26,
           "pnl_pct": 8.03
         }
       },
@@ -1630,6 +1630,6 @@ window.PORTFOLIO_CTG = {
     "total_commission_usd": 72.0,
     "skipped_gap": 16,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-10-16"
+    "updated_at": "2026-10-19"
   }
 };

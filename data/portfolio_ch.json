@@ -412,20 +412,20 @@
       "actual_position_usd": 486.4,
       "entry_commission": 1.0,
       "max_hold_date": "2026-06-15",
-      "day1_open": 14.79,
+      "day1_open": 14.7,
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.79,
-          "high": 15.35,
-          "low": 13.64,
-          "close": 15.35,
-          "pnl_pct": -0.99
+          "open": 14.7,
+          "high": 15.26,
+          "low": 13.55,
+          "close": 15.26,
+          "pnl_pct": -0.39
         },
         "2026-06-15": {
-          "open": 15.98,
-          "high": 16.78,
-          "low": 15.13,
-          "close": 15.13,
+          "open": 15.88,
+          "high": 16.68,
+          "low": 15.04,
+          "close": 15.04,
           "pnl_pct": -1.97
         }
       },
@@ -1326,6 +1326,6 @@
     "total_commission_usd": 74.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-10-16"
+    "updated_at": "2026-10-19"
   }
 }

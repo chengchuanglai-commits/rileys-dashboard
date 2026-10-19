@@ -567,21 +567,21 @@ window.PORTFOLIO_F = {
       "take_profit_2": 12.92,
       "stop_loss": 15.66,
       "max_hold_date": "2026-06-16",
-      "day1_open": 14.79,
+      "day1_open": 14.7,
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.79,
-          "high": 15.35,
-          "low": 13.64,
-          "close": 15.35,
-          "pnl_pct": -0.99
+          "open": 14.7,
+          "high": 15.26,
+          "low": 13.55,
+          "close": 15.26,
+          "pnl_pct": -0.39
         },
         "2026-06-15": {
-          "open": 15.98,
-          "high": 16.78,
-          "low": 15.13,
-          "close": 15.13,
-          "pnl_pct": 0.46
+          "open": 15.88,
+          "high": 16.68,
+          "low": 15.04,
+          "close": 15.04,
+          "pnl_pct": 1.05
         }
       },
       "t1_exit_date": "2026-06-12",
@@ -783,18 +783,18 @@ window.PORTFOLIO_F = {
       "day1_open": null,
       "daily_prices": {
         "2026-06-22": {
-          "open": 16.29,
-          "high": 16.3,
-          "low": 15.81,
-          "close": 16.1,
-          "pnl_pct": -1.64
-        },
-        "2026-06-23": {
-          "open": 15.68,
-          "high": 16.96,
-          "low": 15.68,
+          "open": 16.19,
+          "high": 16.2,
+          "low": 15.72,
           "close": 16.0,
           "pnl_pct": -1.01
+        },
+        "2026-06-23": {
+          "open": 15.59,
+          "high": 16.86,
+          "low": 15.59,
+          "close": 15.9,
+          "pnl_pct": -0.38
         }
       },
       "t1_exit_date": "2026-06-23",
@@ -1737,6 +1737,6 @@ window.PORTFOLIO_F = {
     "total_commission_usd": 90.0,
     "skipped_gap": 11,
     "skipped_zero_shares": 7,
-    "updated_at": "2026-10-16"
+    "updated_at": "2026-10-19"
   }
 };

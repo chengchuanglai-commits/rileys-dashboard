@@ -413,17 +413,17 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-12": {
-          "open": 14.79,
-          "high": 15.35,
-          "low": 13.64,
-          "close": 15.35,
-          "pnl_pct": -0.99
+          "open": 14.7,
+          "high": 15.26,
+          "low": 13.55,
+          "close": 15.26,
+          "pnl_pct": -0.39
         },
         "2026-06-15": {
-          "open": 15.98,
-          "high": 16.78,
-          "low": 15.13,
-          "close": 15.13,
+          "open": 15.88,
+          "high": 16.68,
+          "low": 15.04,
+          "close": 15.04,
           "pnl_pct": -3.03
         }
       },
@@ -635,20 +635,20 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-22",
       "daily_prices": {
         "2026-06-22": {
-          "open": 16.29,
-          "high": 16.3,
-          "low": 15.81,
-          "close": 16.1,
-          "pnl_pct": -1.64
+          "open": 16.19,
+          "high": 16.2,
+          "low": 15.72,
+          "close": 16.0,
+          "pnl_pct": -1.01
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 16.1,
-      "final_pnl_pct": -1.64,
+      "close_price": 16.0,
+      "final_pnl_pct": -1.01,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -10.05
+      "realized_pnl_usd": -6.96
     },
     {
       "ticker": "SBFG",
@@ -1399,19 +1399,19 @@ window.PORTFOLIO_D = {
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-10-16": {
-          "close": 39.9,
-          "pnl_pct": 27.45
+        "2026-10-19": {
+          "close": 40.58,
+          "pnl_pct": 26.22
         }
       },
       "gap_checked": true,
-      "day1_open": 40.61,
-      "day1_gap_pct": -26.16,
-      "close_date": "2026-10-16",
-      "close_price": 39.9,
-      "final_pnl_pct": 27.45,
+      "day1_open": 40.08,
+      "day1_gap_pct": -27.13,
+      "close_date": "2026-10-19",
+      "close_price": 40.58,
+      "final_pnl_pct": 26.22,
       "close_reason": "take_profit",
-      "realized_pnl_usd": 137.27
+      "realized_pnl_usd": 131.09
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1419,10 +1419,10 @@ window.PORTFOLIO_D = {
     "total_trades": 40,
     "win_trades": 24,
     "win_rate": 60.0,
-    "total_realized_pnl_usd": 460.2,
+    "total_realized_pnl_usd": 457.11,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2460.2,
+    "portfolio_value": 2457.11,
     "skipped_gap": 12,
-    "updated_at": "2026-10-17"
+    "updated_at": "2026-10-20"
   }
 };
