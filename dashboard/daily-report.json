@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-20",
-  "generated_at": "2026-10-20T07:02:00",
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T01:51:00",
   "pipeline": {
     "morning_note_found": false,
     "signal_file_found": false,
@@ -10,12 +10,12 @@
     {
       "check": "晨报文件",
       "pass": false,
-      "detail": "2026-10-20"
+      "detail": "2026-10-21"
     },
     {
       "check": "信号文件",
       "pass": false,
-      "detail": "2026-10-20"
+      "detail": "2026-10-21"
     },
     {
       "check": "昨日准确率填充",
@@ -30,7 +30,7 @@
   ],
   "signals_today": [],
   "accuracy_update": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "total": 0,
     "note": "无历史信号文件"
   },
@@ -1205,8 +1205,8 @@
     ]
   },
   "warnings": [
-    "晨报文件不存在: dashboard/morning-note-history/2026-10-20.json（周末/节假日正常）",
-    "信号文件不存在: dashboard/trading-signals-history/2026-10-20.json"
+    "晨报文件不存在: dashboard/morning-note-history/2026-10-21.json（周末/节假日正常）",
+    "信号文件不存在: dashboard/trading-signals-history/2026-10-21.json"
   ],
   "api_cost_usd": 0.0
 }

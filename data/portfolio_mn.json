@@ -3034,25 +3034,25 @@
       "name": "WD-40公司",
       "action": "BUY",
       "signal_date": "2026-07-17",
-      "entry_price": 246.79,
+      "entry_price": 245.53,
       "allocated_usd": 500,
-      "shares": 2.026,
+      "shares": 2.0364,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 283.81,
-      "stop_loss": 241.85,
+      "take_profit": 282.36,
+      "stop_loss": 240.62,
       "max_hold_date": "2026-07-21",
       "daily_prices": {
         "2026-07-20": {
-          "open": 246.35,
-          "high": 247.32,
-          "low": 238.08,
-          "close": 239.59,
+          "open": 245.09,
+          "high": 246.06,
+          "low": 236.87,
+          "close": 238.37,
           "pnl_pct": -2.0
         }
       },
       "close_date": "2026-07-20",
-      "close_price": 241.85,
+      "close_price": 240.62,
       "final_pnl_pct": -2.0,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
@@ -6159,6 +6159,6 @@
     "skipped_gap": 70,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 260,
-    "updated_at": "2026-10-19"
+    "updated_at": "2026-10-20"
   }
 }
