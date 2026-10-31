@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T10:36:00",
+  "market_status": "pre-market",
+  "market": {
+    "sp500_futures_pct": 0,
+    "treasury_10y": 0,
+    "treasury_10y_change_bps": 0,
+    "eps_beat_rate": 0
+  },
+  "note": {
+    "market_overview": "⚠️ Anthropic API 余额不足，请前往 console.anthropic.com/billing 充值后恢复。",
+    "macro": "",
+    "earnings": "",
+    "trade_ideas": ""
+  },
+  "stock_picks": [],
+  "api_cost_usd": 0,
+  "balance_warning": true,
+  "estimated_days_left": 0,
+  "cumulative_cost_usd": 0,
+  "avg_daily_cost_usd": 0,
+  "budget_usd": 5.0
+}
