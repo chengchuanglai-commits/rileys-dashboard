@@ -16,6 +16,8 @@ RECLAIM = 722.0     # DeepSeek(2026-07-08反转为Underweight后)新加仓触发
 BREAKDOWN = 700.0   # 破位警告:跌破$700(布林下轨$695在下面)=加速下跌,别抄底该减
 ADD_USD = 300       # 每次加仓建议额
 # 注:2026-07-08 DeepSeek 从"低买$707"反转为"收复$722才买/跌破$700是危险"。旧的$707抄底逻辑已弃用。
+BACKSTOP = 648.43   # Riley 2026-11-03 定的防线 B:52周高点 762.86 × 0.85(−15%)。只提醒,不自动下单
+FAIL_ALERT_N = 3    # 连续取价失败几次就飞书报警(每 30 分钟一次,3 次≈1.5 小时没人盯防线)
 
 
 def levels():
@@ -36,20 +38,78 @@ def levels():
             return px, day_low, ma50, ma200, rsi, c
         except Exception:
             time.sleep(3)
-    raise RuntimeError("取价失败(重试3次)")
+    return levels_fmp()
+
+
+def _fmp(path):
+    """FMP stable API。key 从仓库外的 .secrets/fmp.env 读(launchd 环境里没有这个变量)。"""
+    import urllib.request
+    key = os.environ.get("FMP_API_KEY", "")
+    if not key and os.path.exists(".secrets/fmp.env"):
+        key = open(".secrets/fmp.env").read().split('FMP_API_KEY="')[1].split('"')[0]
+    url = f"https://financialmodelingprep.com/stable/{path}&apikey={key}"
+    return json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=30))
+
+
+def levels_fmp():
+    """yfinance 失败时的备用源(2026-11-03 加:yfinance 近月频繁返回空,防线不能因此失明)。"""
+    import datetime, pandas as pd
+    since = (datetime.date.today() - datetime.timedelta(days=420)).isoformat()
+    h = pd.DataFrame(_fmp(f"historical-price-eod/full?symbol={TICKER}&from={since}"))
+    h["date"] = pd.to_datetime(h["date"]); h = h.set_index("date").sort_index()
+    c, lo = h["close"].astype(float), h["low"].astype(float)
+    q = _fmp(f"quote?symbol={TICKER}")[0]
+    day = pd.Timestamp(datetime.datetime.fromtimestamp(q["timestamp"]).date())
+    c.loc[day], lo.loc[day] = float(q["price"]), float(q["dayLow"])   # 盘中报价覆盖/追加当天
+    if len(c) < 200:
+        raise RuntimeError("FMP 数据太短")
+    px, day_low = float(c.iloc[-1]), float(lo.iloc[-1])
+    ma50 = float(c.rolling(50).mean().iloc[-1]); ma200 = float(c.rolling(200).mean().iloc[-1])
+    delta = c.diff(); up = delta.clip(lower=0).rolling(14).mean(); dn = (-delta.clip(upper=0)).rolling(14).mean()
+    rsi = float((100 - 100 / (1 + up / dn)).iloc[-1])
+    return px, day_low, ma50, ma200, rsi, c
+
+
+def confirm_low(day_low):
+    """防线命中时用另一个源交叉验证(铁律:行情必须交叉验证,防 yfinance 那种脏数据误报)。
+    返回另一源的今日低点;取不到返回 None(此时照常报警,但注明单一来源)。"""
+    try:
+        return float(_fmp(f"quote?symbol={TICKER}")[0]["dayLow"])
+    except Exception:
+        return None
 
 
 def run():
-    try:
-        px, day_low, ma50, ma200, rsi, c = levels()
-    except Exception as e:
-        print(f"[qqq-alert] 取价失败,跳过: {e}"); return
     st = {}
     if os.path.exists(STATE):
         try: st = json.load(open(STATE))
         except Exception: pass
+    try:
+        px, day_low, ma50, ma200, rsi, c = levels()
+    except Exception as e:
+        st["fail_n"] = st.get("fail_n", 0) + 1
+        print(f"[qqq-alert] 取价失败(连续第{st['fail_n']}次),跳过: {e}")
+        if st["fail_n"] == FAIL_ALERT_N:
+            notify(f"⚠️ QQQ 价格提醒连续 {FAIL_ALERT_N} 次取价失败(yfinance 和 FMP 都取不到),"
+                   f"${BACKSTOP:.0f} 防线暂时没人盯。系统没有做任何交易;恢复后会自动继续。")
+        json.dump(st, open(STATE, "w"), ensure_ascii=False, indent=2)
+        return
+    st["fail_n"] = 0
 
     alerts = []
+    # 防线 B(Riley 2026-11-03):用今日低点判断,盘中探到也算;回到防线上方 3% 才重新武装
+    if day_low <= BACKSTOP and not st.get("backstop"):
+        other = confirm_low(day_low)
+        if other is not None and other > BACKSTOP * 1.01:
+            print(f"[qqq-alert] 防线疑似误报:主源今日低 ${day_low:.2f},FMP 今日低 ${other:.2f},不报警")
+        else:
+            src = f"FMP 交叉验证今日低 ${other:.2f}" if other is not None else "⚠️只有单一数据源,请在 IBKR 核对"
+            alerts.append(f"🛑 QQQ 触及防线 ${BACKSTOP:.0f}(现 ${px:.2f},今日低 ${day_low:.2f};{src})\n"
+                          f"   这是你 11/3 定的防线 B(距52周高点 −15%):应降杠杆到约 1 倍=卖 3 股 QQQM 还借款。\n"
+                          f"   系统没有自动下单,等你回复批准后执行。")
+            st["backstop"] = True
+    if px >= BACKSTOP * 1.03:
+        st["backstop"] = False
     # 跌破200日线=转熊,暂停买入(最高优先)
     if px < ma200 and not st.get("bear"):
         alerts.append(f"🐻 QQQ ${px:.2f} 跌破200日线 ${ma200:.2f} → 趋势转熊,暂停买入(等站回200线上)")
@@ -90,7 +150,7 @@ def run():
         elif cur_lev != prev_lev:
             if g["target"] < 1.5:
                 why = "跌破200日线" if not g["above_ma"] else ("波动>30%" if g["highv"] else f"未连站{g['confirm_days']}天")
-                alerts.append(f"⚙️🔻 杠杆闸门 降杠→1.0x({why};QQQ ${g['price']}/200线 ${g['ma']},20日波动 {g['vol_ann']*100:.0f}%)\n   动作:1.5x仓降回1x——卖约1/3 QQQ还掉保证金借款")
+                alerts.append(f"⚙️🔻 杠杆闸门 降杠→1.0x({why};QQQ ${g['price']}/200线 ${g['ma']},20日波动 {g['vol_ann']*100:.0f}%)\n   Riley 11/3 决定:闸门触发先不卖,以 ${BACKSTOP:.0f} 防线为准(仅提醒)")
             else:
                 armed = "★这就是启动真钱小步上杠的绿灯(前提:IBKR保证金账户已开+你确认扛得住深坑)" if not st.get("lev_realmoney") else "已在杠杆:借0.5x加仓QQQ回到1.5x"
                 alerts.append(f"⚙️🚀🟢 杠杆闸门 →1.5x(连站200线{g['streak']}天+波动{g['vol_ann']*100:.0f}%正常)\n   {armed}")
@@ -105,7 +165,10 @@ def run():
     if not alerts:
         print(f"[qqq-alert] QQQ ${px:.2f}(今日低${day_low:.2f}) 收复${RECLAIM:.0f}加/破${BREAKDOWN:.0f}减/突破${BREAKOUT:.0f},无新信号-等待")
         return
-    msg = "\n".join(["📥 QQQ 入场提醒"] + alerts + ["（入场价格提醒·交易信号系统）"])
+    notify("\n".join(["📥 QQQ 入场提醒"] + alerts + ["（入场价格提醒·交易信号系统）"]))
+
+
+def notify(msg):
     print(msg)
     if os.environ.get("NOTIFY_WEBHOOK"):
         os.environ["NOTIFY_MESSAGE"] = msg
