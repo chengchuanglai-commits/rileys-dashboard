@@ -399,30 +399,30 @@ window.PORTFOLIO_CTR = {
       "actual_position_usd": 471.96,
       "entry_commission": 1.0,
       "max_hold_date": "2026-06-10",
-      "day1_open": 38.98,
+      "day1_open": 39.2,
       "daily_prices": {
         "2026-06-09": {
-          "open": 38.98,
-          "high": 40.47,
-          "low": 38.92,
-          "close": 39.25,
-          "pnl_pct": 0.2
+          "open": 39.2,
+          "high": 40.69,
+          "low": 39.14,
+          "close": 39.47,
+          "pnl_pct": -0.36
         },
         "2026-06-10": {
-          "open": 39.55,
-          "high": 41.02,
-          "low": 38.81,
-          "close": 40.89,
-          "pnl_pct": -2.92
+          "open": 39.77,
+          "high": 41.25,
+          "low": 39.02,
+          "close": 41.12,
+          "pnl_pct": -3.51
         }
       },
       "close_date": "2026-06-10",
-      "close_price": 40.48,
-      "final_pnl_pct": -2.92,
+      "close_price": 40.71,
+      "final_pnl_pct": -3.51,
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -6.04,
+      "realized_pnl_usd": -7.26,
       "position_usd": 206.71
     },
     {
@@ -532,7 +532,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 15.04,
-      "position_usd": 206.09
+      "position_usd": 205.97
     },
     {
       "ticker": "MFIN",
@@ -603,8 +603,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.63,
-      "position_usd": 206.09
+      "realized_pnl_usd": 5.62,
+      "position_usd": 205.97
     },
     {
       "ticker": "ARCB",
@@ -682,8 +682,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 31.86,
-      "position_usd": 206.09
+      "realized_pnl_usd": 31.84,
+      "position_usd": 205.97
     },
     {
       "ticker": "MFIN",
@@ -740,8 +740,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 4.03,
-      "position_usd": 207.59
+      "realized_pnl_usd": 4.02,
+      "position_usd": 207.47
     },
     {
       "ticker": "AMRX",
@@ -785,7 +785,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -1.54,
-      "position_usd": 207.59
+      "position_usd": 207.47
     },
     {
       "ticker": "CTRE",
@@ -829,7 +829,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 1.68,
-      "position_usd": 207.59
+      "position_usd": 207.47
     },
     {
       "ticker": "WSBC",
@@ -873,7 +873,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -5.28,
-      "position_usd": 210.47
+      "position_usd": 210.35
     },
     {
       "ticker": "SWBI",
@@ -902,8 +902,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -8.38,
-      "position_usd": 210.49
+      "realized_pnl_usd": -8.37,
+      "position_usd": 210.37
     },
     {
       "ticker": "WSBC",
@@ -939,8 +939,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -8.19,
-      "position_usd": 210.49
+      "realized_pnl_usd": -8.18,
+      "position_usd": 210.37
     },
     {
       "ticker": "SNEX",
@@ -983,8 +983,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 70.07,
-      "position_usd": 210.49
+      "realized_pnl_usd": 70.03,
+      "position_usd": 210.37
     },
     {
       "ticker": "HOFT",
@@ -1041,8 +1041,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 17.84,
-      "position_usd": 210.62
+      "realized_pnl_usd": 17.83,
+      "position_usd": 210.49
     },
     {
       "ticker": "SWBI",
@@ -1085,8 +1085,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 19.09,
-      "position_usd": 209.27
+      "realized_pnl_usd": 19.07,
+      "position_usd": 209.15
     },
     {
       "ticker": "OBT",
@@ -1143,8 +1143,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -7.35,
-      "position_usd": 209.27
+      "realized_pnl_usd": -7.34,
+      "position_usd": 209.15
     },
     {
       "ticker": "TRVI",
@@ -1174,7 +1174,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -8.82,
-      "position_usd": 219.46
+      "position_usd": 219.33
     },
     {
       "ticker": "SRRK",
@@ -1210,8 +1210,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.56,
-      "position_usd": 221.54
+      "realized_pnl_usd": 6.55,
+      "position_usd": 221.41
     },
     {
       "ticker": "DGII",
@@ -1261,8 +1261,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 7.89,
-      "position_usd": 221.54
+      "realized_pnl_usd": 7.88,
+      "position_usd": 221.41
     },
     {
       "ticker": "MVBF",
@@ -1319,8 +1319,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 9.57,
-      "position_usd": 221.54
+      "realized_pnl_usd": 9.56,
+      "position_usd": 221.41
     },
     {
       "ticker": "LGND",
@@ -1364,7 +1364,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.94,
-      "position_usd": 221.54
+      "position_usd": 221.41
     },
     {
       "ticker": "MVBF",
@@ -1422,7 +1422,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 6.47,
-      "position_usd": 221.54
+      "position_usd": 221.41
     },
     {
       "ticker": "LGND",
@@ -1458,8 +1458,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.96,
-      "position_usd": 222.19
+      "realized_pnl_usd": -3.95,
+      "position_usd": 222.06
     },
     {
       "ticker": "MVBF",
@@ -1509,8 +1509,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.49,
-      "position_usd": 222.19
+      "realized_pnl_usd": 6.48,
+      "position_usd": 222.06
     },
     {
       "ticker": "SKWD",
@@ -1568,7 +1568,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 7.33,
-      "position_usd": 222.19
+      "position_usd": 222.06
     },
     {
       "ticker": "PFIS",
@@ -1625,8 +1625,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -8.89,
-      "position_usd": 222.19
+      "realized_pnl_usd": -8.88,
+      "position_usd": 222.06
     },
     {
       "ticker": "ITIC",
@@ -1670,7 +1670,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -4.85,
-      "position_usd": 224.45
+      "position_usd": 224.32
     },
     {
       "ticker": "TCBK",
@@ -1707,7 +1707,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -1.73,
-      "position_usd": 224.45
+      "position_usd": 224.32
     },
     {
       "ticker": "STRS",
@@ -1744,7 +1744,7 @@ window.PORTFOLIO_CTR = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -0.31,
-      "position_usd": 224.45
+      "position_usd": 224.32
     },
     {
       "ticker": "SMPL",
@@ -1801,8 +1801,8 @@ window.PORTFOLIO_CTR = {
       "close_reason": "trail_stop",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 22.0,
-      "position_usd": 224.45
+      "realized_pnl_usd": 21.98,
+      "position_usd": 224.32
     }
   ],
   "_note": "c-trail 变体:移动止损(初始-4%/棘轮4%/最多10天)+ 跳空过滤 1.5%(信号同 c)",
@@ -1810,12 +1810,12 @@ window.PORTFOLIO_CTR = {
     "total_trades": 38,
     "win_trades": 22,
     "win_rate": 57.9,
-    "total_realized_pnl_usd": 258.01,
+    "total_realized_pnl_usd": 256.69,
     "open_unrealized_pnl_usd": 0.0,
-    "portfolio_value": 2258.01,
+    "portfolio_value": 2256.69,
     "total_commission_usd": 76.0,
     "skipped_gap": 14,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-11-03"
+    "updated_at": "2026-11-04"
   }
 };

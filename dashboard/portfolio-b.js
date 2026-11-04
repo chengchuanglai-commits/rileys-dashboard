@@ -397,17 +397,17 @@ window.PORTFOLIO_B = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-09": {
-          "open": 38.98,
-          "high": 40.47,
-          "low": 38.92,
-          "close": 39.25,
-          "pnl_pct": 0.2
+          "open": 39.2,
+          "high": 40.69,
+          "low": 39.14,
+          "close": 39.47,
+          "pnl_pct": -0.36
         },
         "2026-06-10": {
-          "open": 39.55,
-          "high": 41.02,
-          "low": 38.81,
-          "close": 40.89,
+          "open": 39.77,
+          "high": 41.25,
+          "low": 39.02,
+          "close": 41.12,
           "pnl_pct": -3.99
         }
       },
