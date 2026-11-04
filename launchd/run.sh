@@ -12,6 +12,24 @@ export NOTIFY_WEBHOOK="https://open.feishu.cn/open-apis/bot/v2/hook/c540b4d3-476
 export IBKR_LIVE=1   # 自动交易开(2026-06-22,两bug验完):自动batch全权管paper 10仓
 export IBKR_NOTIONAL=20000
 mkdir -p data/exec-log
+# 冬夏令时双排程(2026-11-04):每个批次的 plist 在深圳时间排了夏令时+冬令时两个点,
+# 这里换算成美东时间只放行落在窗口内的那一个;也挡住睡眠唤醒后补跑的过期批次。手动补跑加 RUN_FORCE=1。
+ET=$(TZ=America/New_York date +%H%M)
+case "$1" in
+  preflight)   WIN="0900-0925" ;;
+  trade_open)  WIN="0928-0959 1100-1130" ;;   # 开盘批(美东 09:30)+ 补跑批(11:05)
+  trade_close) WIN="1555-1630" ;;
+  review)      WIN="1625-1700" ;;
+  *)           WIN="0000-2359" ;;
+esac
+OK=0
+for w in ${=WIN}; do
+  (( 10#$ET >= 10#${w%-*} && 10#$ET <= 10#${w#*-} )) && OK=1
+done
+if [ $OK = 0 ] && [ -z "$RUN_FORCE" ]; then
+  echo "[$(date '+%F %T')] ⏭️ skip $1:美东 $ET 不在窗口 $WIN(另一个时点会执行)" >> data/exec-log/launchd.log
+  exit 0
+fi
 echo "[$(date '+%F %T')] === run $1 ===" >> data/exec-log/launchd.log
 # review batch(收盘后)前先回填模拟盘——这时当天日bar已出,各腿对照才是当天收盘最新值(否则慢一天)
 if [ "$1" = "review" ]; then
