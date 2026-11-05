@@ -14,6 +14,7 @@ MIN_MCAP_MUSD = 10000      # 市值 > 100 亿美元(IBKR 扫描器单位:百万�
 MAX_MOVERS = {"full": 20, "lite": 10}
 XCHECK_TOL = 0.002         # QQQ 收盘两源相差 > 0.2% 标红
 TIMEOUT_SEC = 4500         # 整个 AI 段 75 分钟强杀
+WS_SNAPSHOT_NAME = "snapshot.json"   # AI 没有列目录的工具,工作区快照用固定文件名(归档仍按日期)
 ANALYSTS = ("macro", "catalysts", "qqq_tech", "qqq_fund")
 ALLOWED_AGENT_TOOLS = {"WebSearch", "WebFetch", "Read"}
 SECRET_PATTERNS = [

@@ -9,7 +9,7 @@ import pandas as pd
 
 from scripts.lev_engine import gate_signal
 from scripts.market_intel.config import (BACKSTOP, XCHECK_TOL, IB_PORT, IB_CLIENT_ID, SCAN_CODES, SCAN_ROWS,
-                                         MIN_PRICE, MIN_MCAP_MUSD, MAX_MOVERS, paths)
+                                         MIN_PRICE, MIN_MCAP_MUSD, MAX_MOVERS, WS_SNAPSHOT_NAME, paths)
 
 SESSION_CLOSE = dtime(16, 15)   # 美东 16:15 前,当天那根日线视为未收盘
 
@@ -267,9 +267,10 @@ def main():
     if snap is None:
         print(f"[snapshot] skip:没有比 {last_done} 更新的交易日(休市或已处理)")
         return 3
-    for d in (p.ws_snapshot, p.archive_snapshots):
-        d.mkdir(parents=True, exist_ok=True)
-        (d / f"{snap['session_date']}.json").write_text(json.dumps(snap, ensure_ascii=False, indent=2))
+    body = json.dumps(snap, ensure_ascii=False, indent=2)
+    for f in (p.ws_snapshot / WS_SNAPSHOT_NAME, p.archive_snapshots / f"{snap['session_date']}.json"):
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(body)
     prev = p.state / "fundamentals_latest.md"
     if not snap["run_fundamentals"] and prev.exists():
         shutil.copy(prev, p.ws_snapshot / "fundamentals_prev.md")
