@@ -42,6 +42,21 @@ def test_assets_have_no_secrets():
     assert assert_no_secrets(ASSETS) == []
 
 
+def test_runner_flags():
+    sh = (ASSETS.parent / "run_intel.sh").read_text()
+    m = re.search(r"CLAUDE_FLAGS=\((.*?--disallowedTools[^\n]*)\)\n", sh, re.S)
+    assert m, "run_intel.sh 里找不到 CLAUDE_FLAGS 数组"
+    flags = m.group(1)
+    for s in ("--permission-mode dontAsk", "--strict-mcp-config", "--setting-sources project",
+              "--disallowedTools Bash", '"Write(./out/**)"', '"Write(./reports/**)"'):
+        assert s in flags, s
+    tools = re.search(r'--tools "([^"]*)"', flags).group(1).split(",")
+    assert "Bash" not in tools and "Edit" not in tools
+    assert "env -u NOTIFY_WEBHOOK -u FMP_API_KEY" in sh
+    assert sh.count("$CLAUDE_FLAGS") >= 2                 # 正式运行和探针共用同一组权限
+    assert "--bare" not in sh                              # bare 模式不读订阅令牌
+
+
 if __name__ == "__main__":
     for n, f in list(globals().items()):
         if n.startswith("test_"): f(); print(f"  ok {n}")
