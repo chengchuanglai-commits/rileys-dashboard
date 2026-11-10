@@ -450,27 +450,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-15",
       "daily_prices": {
         "2026-06-12": {
-          "open": 9.59,
-          "high": 9.83,
-          "low": 9.59,
-          "close": 9.69,
-          "pnl_pct": 2.02
+          "open": 9.46,
+          "high": 9.69,
+          "low": 9.46,
+          "close": 9.55,
+          "pnl_pct": 3.44
         },
         "2026-06-15": {
-          "open": 9.7,
-          "high": 9.8,
-          "low": 9.64,
-          "close": 9.73,
-          "pnl_pct": 1.62
+          "open": 9.56,
+          "high": 9.66,
+          "low": 9.51,
+          "close": 9.59,
+          "pnl_pct": 3.03
         }
       },
       "close_date": "2026-06-15",
-      "close_price": 9.73,
-      "final_pnl_pct": 1.62,
+      "close_price": 9.59,
+      "final_pnl_pct": 3.03,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 6.01
+      "realized_pnl_usd": 12.98
     },
     {
       "ticker": "ARCB",
@@ -524,27 +524,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-17",
       "daily_prices": {
         "2026-06-16": {
-          "open": 9.78,
-          "high": 9.97,
-          "low": 9.7,
-          "close": 9.75,
-          "pnl_pct": 0.61
+          "open": 9.64,
+          "high": 9.83,
+          "low": 9.56,
+          "close": 9.61,
+          "pnl_pct": 2.04
         },
         "2026-06-17": {
-          "open": 9.77,
-          "high": 9.81,
-          "low": 9.35,
-          "close": 9.4,
-          "pnl_pct": 4.18
+          "open": 9.63,
+          "high": 9.67,
+          "low": 9.22,
+          "close": 9.27,
+          "pnl_pct": 5.5
         }
       },
       "close_date": "2026-06-17",
-      "close_price": 9.4,
-      "final_pnl_pct": 4.18,
+      "close_price": 9.27,
+      "final_pnl_pct": 5.5,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 18.5
+      "realized_pnl_usd": 24.98
     },
     {
       "ticker": "AMRX",
@@ -1399,19 +1399,19 @@ window.PORTFOLIO_D = {
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-11-09": {
-          "close": 51.55,
-          "pnl_pct": 6.27
+        "2026-11-10": {
+          "close": 48.42,
+          "pnl_pct": 11.96
         }
       },
       "gap_checked": true,
-      "day1_open": 47.9,
-      "day1_gap_pct": -12.91,
-      "close_date": "2026-11-09",
-      "close_price": 51.55,
-      "final_pnl_pct": 6.27,
+      "day1_open": 52.03,
+      "day1_gap_pct": -5.4,
+      "close_date": "2026-11-10",
+      "close_price": 48.42,
+      "final_pnl_pct": 11.96,
       "close_reason": "max_hold",
-      "realized_pnl_usd": 31.36
+      "realized_pnl_usd": 59.82
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
@@ -1419,10 +1419,10 @@ window.PORTFOLIO_D = {
     "total_trades": 40,
     "win_trades": 24,
     "win_rate": 60.0,
-    "total_realized_pnl_usd": 357.38,
+    "total_realized_pnl_usd": 399.29,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": 2357.38,
+    "portfolio_value": 2399.29,
     "skipped_gap": 12,
-    "updated_at": "2026-11-10"
+    "updated_at": "2026-11-11"
   }
 };

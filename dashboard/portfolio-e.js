@@ -482,34 +482,34 @@ window.PORTFOLIO_E = {
       "vix": 19.44,
       "daily_prices": {
         "2026-06-12": {
-          "open": 9.59,
-          "high": 9.83,
-          "low": 9.59,
-          "close": 9.69,
-          "pnl_pct": 2.02
+          "open": 9.46,
+          "high": 9.69,
+          "low": 9.46,
+          "close": 9.55,
+          "pnl_pct": 3.44
         },
         "2026-06-15": {
-          "open": 9.7,
-          "high": 9.8,
-          "low": 9.64,
-          "close": 9.73,
-          "pnl_pct": 1.62
+          "open": 9.56,
+          "high": 9.66,
+          "low": 9.51,
+          "close": 9.59,
+          "pnl_pct": 3.03
         },
         "2026-06-16": {
-          "open": 9.78,
-          "high": 9.97,
-          "low": 9.7,
-          "close": 9.75,
-          "pnl_pct": 1.42
+          "open": 9.64,
+          "high": 9.83,
+          "low": 9.56,
+          "close": 9.61,
+          "pnl_pct": 2.83
         }
       },
       "close_date": "2026-06-16",
-      "close_price": 9.75,
-      "final_pnl_pct": 1.42,
+      "close_price": 9.61,
+      "final_pnl_pct": 2.83,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 5.02
+      "realized_pnl_usd": 11.99
     },
     {
       "ticker": "ARCB",
@@ -576,34 +576,34 @@ window.PORTFOLIO_E = {
       "vix": 16.2,
       "daily_prices": {
         "2026-06-16": {
-          "open": 9.78,
-          "high": 9.97,
-          "low": 9.7,
-          "close": 9.75,
-          "pnl_pct": 0.61
+          "open": 9.64,
+          "high": 9.83,
+          "low": 9.56,
+          "close": 9.61,
+          "pnl_pct": 2.04
         },
         "2026-06-17": {
-          "open": 9.77,
-          "high": 9.81,
-          "low": 9.35,
-          "close": 9.4,
-          "pnl_pct": 4.18
+          "open": 9.63,
+          "high": 9.67,
+          "low": 9.22,
+          "close": 9.27,
+          "pnl_pct": 5.5
         },
         "2026-06-18": {
-          "open": 9.47,
-          "high": 9.57,
-          "low": 9.27,
-          "close": 9.41,
-          "pnl_pct": 4.08
+          "open": 9.34,
+          "high": 9.44,
+          "low": 9.14,
+          "close": 9.28,
+          "pnl_pct": 5.4
         }
       },
       "close_date": "2026-06-18",
-      "close_price": 9.41,
-      "final_pnl_pct": 4.08,
+      "close_price": 9.28,
+      "final_pnl_pct": 5.4,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 18.01
+      "realized_pnl_usd": 24.49
     },
     {
       "ticker": "PBHC",
@@ -1660,13 +1660,13 @@ window.PORTFOLIO_E = {
     "total_trades": 38,
     "win_trades": 20,
     "win_rate": 52.6,
-    "total_realized_pnl_usd": 342.81,
+    "total_realized_pnl_usd": 356.26,
     "open_unrealized_pnl_usd": 8.22,
-    "portfolio_value": 2351.03,
+    "portfolio_value": 2364.48,
     "total_commission_usd": 76.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 8,
-    "updated_at": "2026-11-09"
+    "updated_at": "2026-11-10"
   }
 };
