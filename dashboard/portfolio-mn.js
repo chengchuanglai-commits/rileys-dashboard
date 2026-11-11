@@ -174,8 +174,8 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 9.22
         }
       },
-      "position_usd": 197.77,
-      "unrealized_pnl_usd": 18.23
+      "position_usd": 197.78,
+      "unrealized_pnl_usd": 18.24
     },
     {
       "ticker": "ANDE",
@@ -199,7 +199,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": -0.26
         }
       },
-      "position_usd": 197.77,
+      "position_usd": 197.78,
       "unrealized_pnl_usd": -0.51
     },
     {
@@ -224,7 +224,7 @@ window.PORTFOLIO_MN = {
           "pnl_pct": 1.04
         }
       },
-      "position_usd": 174.0,
+      "position_usd": 174.03,
       "unrealized_pnl_usd": 1.81
     }
   ],
@@ -5083,30 +5083,30 @@ window.PORTFOLIO_MN = {
       "name": "West Bancorporation",
       "action": "BUY",
       "signal_date": "2026-08-20",
-      "entry_price": 28.46,
+      "entry_price": 28.22,
       "allocated_usd": 500,
-      "shares": 17.5685,
+      "shares": 17.7179,
       "actual_position_usd": 500.0,
       "entry_commission": 1.0,
-      "take_profit": 32.73,
-      "stop_loss": 27.89,
+      "take_profit": 32.45,
+      "stop_loss": 27.66,
       "max_hold_date": "2026-08-24",
       "daily_prices": {
         "2026-08-21": {
-          "open": 28.62,
-          "high": 28.75,
-          "low": 27.58,
-          "close": 28.54,
-          "pnl_pct": -2.0
+          "open": 28.38,
+          "high": 28.51,
+          "low": 27.35,
+          "close": 28.3,
+          "pnl_pct": -1.98
         }
       },
       "close_date": "2026-08-21",
-      "close_price": 27.89,
-      "final_pnl_pct": -2.0,
+      "close_price": 27.66,
+      "final_pnl_pct": -1.98,
       "close_reason": "stop_loss",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -3.99,
+      "realized_pnl_usd": -3.95,
       "position_usd": 199.52
     },
     {
@@ -5276,7 +5276,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 0.78,
-      "position_usd": 181.01
+      "position_usd": 181.04
     },
     {
       "ticker": "XNCR",
@@ -5307,7 +5307,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.96,
-      "position_usd": 197.98
+      "position_usd": 197.99
     },
     {
       "ticker": "TCMD",
@@ -5369,7 +5369,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.98,
-      "position_usd": 197.84
+      "position_usd": 197.85
     },
     {
       "ticker": "XNCR",
@@ -5400,7 +5400,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.98,
-      "position_usd": 197.84
+      "position_usd": 197.85
     },
     {
       "ticker": "SCSC",
@@ -5431,7 +5431,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.96,
-      "position_usd": 197.84
+      "position_usd": 197.85
     },
     {
       "ticker": "TISI",
@@ -5469,7 +5469,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 5.18,
-      "position_usd": 174.49
+      "position_usd": 174.52
     },
     {
       "ticker": "EZPW",
@@ -5500,7 +5500,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.93,
-      "position_usd": 196.65
+      "position_usd": 196.66
     },
     {
       "ticker": "SCSC",
@@ -5538,7 +5538,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -1.08,
-      "position_usd": 196.65
+      "position_usd": 196.66
     },
     {
       "ticker": "VIRT",
@@ -5607,7 +5607,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.95,
-      "position_usd": 196.29
+      "position_usd": 196.3
     },
     {
       "ticker": "URBN",
@@ -5645,7 +5645,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 3.2,
-      "position_usd": 196.29
+      "position_usd": 196.3
     },
     {
       "ticker": "TISI",
@@ -5683,7 +5683,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 15.86,
-      "position_usd": 196.29
+      "position_usd": 196.3
     },
     {
       "ticker": "MVBF",
@@ -5721,7 +5721,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 3.57,
-      "position_usd": 163.63
+      "position_usd": 163.66
     },
     {
       "ticker": "XNCR",
@@ -5783,7 +5783,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.98,
-      "position_usd": 197.77
+      "position_usd": 197.78
     },
     {
       "ticker": "CHEF",
@@ -5845,7 +5845,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.86,
-      "position_usd": 189.92
+      "position_usd": 189.93
     },
     {
       "ticker": "SWBI",
@@ -5945,7 +5945,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": 0.75,
-      "position_usd": 178.64
+      "position_usd": 178.65
     },
     {
       "ticker": "FEIM",
@@ -5976,7 +5976,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.59,
-      "position_usd": 179.39
+      "position_usd": 179.4
     },
     {
       "ticker": "PSTL",
@@ -6145,7 +6145,7 @@ window.PORTFOLIO_MN = {
       "exit_commission": 1.0,
       "commission_total": 2.0,
       "realized_pnl_usd": -3.43,
-      "position_usd": 171.69
+      "position_usd": 171.7
     }
   ],
   "_note": "Plan H-广池 模拟盘：信号源=晨报中大盘精选，出场=H规则(TP+15%/SL-2%/2交易日/跳空>1%过滤)。与 H/H-DS 控制变量对照(只差信号来源)。",
@@ -6153,11 +6153,11 @@ window.PORTFOLIO_MN = {
     "total_trades": 176,
     "win_trades": 45,
     "win_rate": 25.6,
-    "total_realized_pnl_usd": -51.77,
+    "total_realized_pnl_usd": -51.73,
     "open_unrealized_pnl_usd": 44.09,
-    "portfolio_value": 1992.32,
+    "portfolio_value": 1992.36,
     "total_commission_usd": 352.0,
-    "skipped_gap": 71,
+    "skipped_gap": 72,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 258,
     "updated_at": "2026-11-11"
