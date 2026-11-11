@@ -6157,9 +6157,9 @@ window.PORTFOLIO_MN = {
     "open_unrealized_pnl_usd": 44.09,
     "portfolio_value": 1992.32,
     "total_commission_usd": 352.0,
-    "skipped_gap": 72,
+    "skipped_gap": 71,
     "skipped_zero_shares": 0,
     "skipped_no_cash": 258,
-    "updated_at": "2026-11-10"
+    "updated_at": "2026-11-11"
   }
 };
