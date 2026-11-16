@@ -64,27 +64,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-05-29",
       "daily_prices": {
         "2026-05-28": {
-          "open": 18.72,
-          "high": 18.81,
-          "low": 18.02,
-          "close": 18.08,
-          "pnl_pct": 6.56
+          "open": 18.64,
+          "high": 18.73,
+          "low": 17.94,
+          "close": 18.0,
+          "pnl_pct": 6.98
         },
         "2026-05-29": {
-          "open": 18.13,
-          "high": 18.3,
-          "low": 17.75,
-          "close": 17.87,
-          "pnl_pct": 7.65
+          "open": 18.05,
+          "high": 18.22,
+          "low": 17.68,
+          "close": 17.79,
+          "pnl_pct": 8.06
         }
       },
       "close_date": "2026-05-29",
-      "close_price": 17.87,
-      "final_pnl_pct": 7.65,
+      "close_price": 17.79,
+      "final_pnl_pct": 8.06,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 35.01
+      "realized_pnl_usd": 36.99
     },
     {
       "ticker": "MXL",
@@ -487,27 +487,27 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-16",
       "daily_prices": {
         "2026-06-15": {
-          "open": 172.36,
-          "high": 172.64,
-          "low": 162.18,
-          "close": 163.95,
-          "pnl_pct": 5.56
+          "open": 172.2,
+          "high": 172.48,
+          "low": 162.03,
+          "close": 163.81,
+          "pnl_pct": 5.64
         },
         "2026-06-16": {
-          "open": 165.03,
-          "high": 166.79,
-          "low": 159.08,
-          "close": 159.66,
-          "pnl_pct": 8.03
+          "open": 164.89,
+          "high": 166.64,
+          "low": 158.94,
+          "close": 159.52,
+          "pnl_pct": 8.11
         }
       },
       "close_date": "2026-06-16",
-      "close_price": 159.66,
-      "final_pnl_pct": 8.03,
+      "close_price": 159.52,
+      "final_pnl_pct": 8.11,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 25.88
+      "realized_pnl_usd": 26.16
     },
     {
       "ticker": "MFIN",
@@ -665,20 +665,20 @@ window.PORTFOLIO_D = {
       "max_hold_date": "2026-06-22",
       "daily_prices": {
         "2026-06-22": {
-          "open": 22.88,
-          "high": 22.94,
-          "low": 22.41,
-          "close": 22.9,
-          "pnl_pct": -1.73
+          "open": 22.75,
+          "high": 22.82,
+          "low": 22.28,
+          "close": 22.77,
+          "pnl_pct": -1.16
         }
       },
       "close_date": "2026-06-22",
-      "close_price": 22.9,
-      "final_pnl_pct": -1.73,
+      "close_price": 22.77,
+      "final_pnl_pct": -1.16,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -10.57
+      "realized_pnl_usd": -7.74
     },
     {
       "ticker": "WSBC",
@@ -1399,30 +1399,30 @@ window.PORTFOLIO_D = {
           "close": 54.88,
           "pnl_pct": 0.22
         },
-        "2026-11-13": {
-          "close": NaN,
-          "pnl_pct": NaN
+        "2026-11-16": {
+          "close": 44.54,
+          "pnl_pct": 19.02
         }
       },
       "gap_checked": true,
-      "day1_open": NaN,
-      "day1_gap_pct": NaN,
-      "close_date": "2026-11-13",
-      "close_price": NaN,
-      "final_pnl_pct": NaN,
-      "close_reason": "max_hold",
-      "realized_pnl_usd": NaN
+      "day1_open": 43.15,
+      "day1_gap_pct": -21.55,
+      "close_date": "2026-11-16",
+      "close_price": 44.54,
+      "final_pnl_pct": 19.02,
+      "close_reason": "take_profit",
+      "realized_pnl_usd": 95.09
     }
   ],
   "_note": "Plan D 模拟盘：TP +15% / SL -3% / 最大2交易日 / 不利跳空>1%过滤 / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 40,
-    "win_trades": 23,
-    "win_rate": 57.5,
-    "total_realized_pnl_usd": NaN,
+    "win_trades": 24,
+    "win_rate": 60.0,
+    "total_realized_pnl_usd": 439.65,
     "open_unrealized_pnl_usd": 0,
-    "portfolio_value": NaN,
+    "portfolio_value": 2439.65,
     "skipped_gap": 12,
-    "updated_at": "2026-11-14"
+    "updated_at": "2026-11-17"
   }
 };

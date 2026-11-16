@@ -110,34 +110,34 @@ window.PORTFOLIO_E = {
       "vix": 16.29,
       "daily_prices": {
         "2026-05-28": {
-          "open": 18.72,
-          "high": 18.81,
-          "low": 18.02,
-          "close": 18.08,
-          "pnl_pct": 6.56
+          "open": 18.64,
+          "high": 18.73,
+          "low": 17.94,
+          "close": 18.0,
+          "pnl_pct": 6.98
         },
         "2026-05-29": {
-          "open": 18.13,
-          "high": 18.3,
-          "low": 17.75,
-          "close": 17.87,
-          "pnl_pct": 7.65
+          "open": 18.05,
+          "high": 18.22,
+          "low": 17.68,
+          "close": 17.79,
+          "pnl_pct": 8.06
         },
         "2026-06-01": {
-          "open": 18.08,
-          "high": 18.38,
-          "low": 17.8,
-          "close": 18.32,
-          "pnl_pct": 5.32
+          "open": 18.0,
+          "high": 18.3,
+          "low": 17.72,
+          "close": 18.24,
+          "pnl_pct": 5.74
         }
       },
       "close_date": "2026-06-01",
-      "close_price": 18.32,
-      "final_pnl_pct": 5.32,
+      "close_price": 18.24,
+      "final_pnl_pct": 5.74,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": 23.74
+      "realized_pnl_usd": 25.77
     },
     {
       "ticker": "MXL",
@@ -529,24 +529,24 @@ window.PORTFOLIO_E = {
       "vix": 17.68,
       "daily_prices": {
         "2026-06-15": {
-          "open": 172.36,
-          "high": 172.64,
-          "low": 162.18,
-          "close": 163.95,
-          "pnl_pct": 5.56
+          "open": 172.2,
+          "high": 172.48,
+          "low": 162.03,
+          "close": 163.81,
+          "pnl_pct": 5.64
         },
         "2026-06-16": {
-          "open": 165.03,
-          "high": 166.79,
-          "low": 159.08,
-          "close": 159.66,
-          "pnl_pct": 8.03
+          "open": 164.89,
+          "high": 166.64,
+          "low": 158.94,
+          "close": 159.52,
+          "pnl_pct": 8.11
         },
         "2026-06-17": {
-          "open": 159.78,
-          "high": 160.04,
-          "low": 144.5,
-          "close": 145.72,
+          "open": 159.64,
+          "high": 159.9,
+          "low": 144.37,
+          "close": 145.59,
           "pnl_pct": 10.0
         }
       },
@@ -663,27 +663,27 @@ window.PORTFOLIO_E = {
       "vix": 16.4,
       "daily_prices": {
         "2026-06-22": {
-          "open": 22.88,
-          "high": 22.94,
-          "low": 22.41,
-          "close": 22.9,
-          "pnl_pct": -1.73
+          "open": 22.75,
+          "high": 22.82,
+          "low": 22.28,
+          "close": 22.77,
+          "pnl_pct": -1.16
         },
         "2026-06-23": {
-          "open": 22.8,
-          "high": 23.15,
-          "low": 22.67,
-          "close": 23.01,
-          "pnl_pct": -2.22
+          "open": 22.67,
+          "high": 23.02,
+          "low": 22.54,
+          "close": 22.88,
+          "pnl_pct": -1.64
         }
       },
       "close_date": "2026-06-23",
-      "close_price": 23.01,
-      "final_pnl_pct": -2.22,
+      "close_price": 22.88,
+      "final_pnl_pct": -1.64,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -12.99
+      "realized_pnl_usd": -10.12
     },
     {
       "ticker": "WSBC",
@@ -1660,13 +1660,13 @@ window.PORTFOLIO_E = {
     "total_trades": 38,
     "win_trades": 20,
     "win_rate": 52.6,
-    "total_realized_pnl_usd": 356.26,
+    "total_realized_pnl_usd": 361.16,
     "open_unrealized_pnl_usd": 8.22,
-    "portfolio_value": 2364.48,
+    "portfolio_value": 2369.38,
     "total_commission_usd": 76.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 8,
-    "updated_at": "2026-11-14"
+    "updated_at": "2026-11-16"
   }
 };
