@@ -1538,34 +1538,34 @@ window.PORTFOLIO_E = {
       "vix": 16.5,
       "daily_prices": {
         "2026-07-15": {
-          "open": 59.03,
-          "high": 59.53,
-          "low": 58.2,
-          "close": 59.03,
-          "pnl_pct": 1.73
+          "open": 58.62,
+          "high": 59.11,
+          "low": 57.79,
+          "close": 58.62,
+          "pnl_pct": 2.41
         },
         "2026-07-16": {
-          "open": 59.12,
-          "high": 61.3,
-          "low": 58.91,
-          "close": 61.21,
-          "pnl_pct": -1.9
+          "open": 58.71,
+          "high": 60.87,
+          "low": 58.5,
+          "close": 60.78,
+          "pnl_pct": -1.18
         },
         "2026-07-17": {
-          "open": 60.79,
-          "high": 61.09,
-          "low": 59.85,
-          "close": 60.11,
-          "pnl_pct": -0.07
+          "open": 60.37,
+          "high": 60.66,
+          "low": 59.43,
+          "close": 59.7,
+          "pnl_pct": 0.62
         }
       },
       "close_date": "2026-07-17",
-      "close_price": 60.11,
-      "final_pnl_pct": -0.07,
+      "close_price": 59.7,
+      "final_pnl_pct": 0.62,
       "close_reason": "max_hold",
       "exit_commission": 1.0,
       "commission_total": 2.0,
-      "realized_pnl_usd": -2.34
+      "realized_pnl_usd": 0.98
     },
     {
       "ticker": "STRS",
@@ -1658,15 +1658,15 @@ window.PORTFOLIO_E = {
   "_note": "Plan E 智能市场适应：VIX自适应仓位+方向过滤，规则来自 Livermore/Jones/Druckenmiller/Minervini / IBKR佣金$0.005/股min$1",
   "stats": {
     "total_trades": 38,
-    "win_trades": 20,
-    "win_rate": 52.6,
-    "total_realized_pnl_usd": 361.16,
+    "win_trades": 21,
+    "win_rate": 55.3,
+    "total_realized_pnl_usd": 364.48,
     "open_unrealized_pnl_usd": 8.22,
-    "portfolio_value": 2369.38,
+    "portfolio_value": 2372.7,
     "total_commission_usd": 76.0,
     "skipped_fear": 0,
     "skipped_direction": 5,
     "skipped_gap": 8,
-    "updated_at": "2026-11-16"
+    "updated_at": "2026-11-17"
   }
 };
