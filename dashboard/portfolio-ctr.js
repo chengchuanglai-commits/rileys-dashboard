@@ -1860,6 +1860,6 @@ window.PORTFOLIO_CTR = {
     "total_commission_usd": 78.0,
     "skipped_gap": 13,
     "skipped_zero_shares": 1,
-    "updated_at": "2026-11-20"
+    "updated_at": "2026-11-24"
   }
 };
