@@ -1833,6 +1833,6 @@ window.PORTFOLIO_C = {
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2183.14,
     "skipped_gap": 13,
-    "updated_at": "2026-11-25"
+    "updated_at": "2026-11-26"
   }
 };
