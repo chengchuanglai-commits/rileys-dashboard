@@ -1405,8 +1405,8 @@ window.PORTFOLIO_D = {
         }
       },
       "gap_checked": true,
-      "day1_open": 53.14,
-      "day1_gap_pct": -3.38,
+      "day1_open": 52.78,
+      "day1_gap_pct": -4.04,
       "close_date": "2026-11-25",
       "close_price": 53.21,
       "final_pnl_pct": 3.25,
@@ -1423,6 +1423,6 @@ window.PORTFOLIO_D = {
     "open_unrealized_pnl_usd": 0,
     "portfolio_value": 2364.29,
     "skipped_gap": 12,
-    "updated_at": "2026-11-26"
+    "updated_at": "2026-11-27"
   }
 };
